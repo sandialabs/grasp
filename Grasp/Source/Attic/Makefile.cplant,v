@@ -1,0 +1,627 @@
+head	2.8;
+access;
+symbols
+	PreMonaco:2.8
+	cjkimme_version:2.7.0.2;
+locks; strict;
+comment	@# @;
+
+
+2.8
+date	2004.02.12.00.13.00;	author athomps;	state dead;
+branches;
+next	2.7;
+
+2.7
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.7.2.1;
+next	2.6;
+
+2.6
+date	2003.11.04.00.24.35;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.11.03.23.52.04;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.10.31.21.00.11;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.10.21.23.51.54;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.10.21.23.47.19;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	;
+
+2.7.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.8
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@#-----------------------------------------------------------------------
+#
+#   G R A S P
+#   ____________
+#   \           \
+#    \ General   \
+#     \ Reactive  \
+#      \ Atomistic \
+#       \ Simulation\
+#        \ Program   \
+#         \___________\
+#
+#    Timestamp: 8 January 2004
+#
+#    Author: Aidan P. Thompson
+#
+#    e-mail: athomps@@sandia.gov
+#   
+#    Copyright (2004) Sandia National Laboratories
+#   
+#    Sandia is a multiprogram laboratory operated by 
+#    Sandia Corporation, a Lockheed Martin company,
+#    for the United States Department of Energy under contract
+#    No. DE-AC04-94AL-85000.
+#
+#------------------------------------------------------------------------ 
+#///:EOH~
+
+SHELL = /bin/tcsh
+#
+# Makefile for Grasp code.
+#
+# To tar the distribution, type
+#
+#	tar -zcvf grasp_dist.tar.gz Makefile Depend.pl *.cpp *.h
+#
+SRC = constants.cpp grasp_run.cpp controller.cpp input.cpp stepper.cpp box.cpp particletypelist.cpp particlelist.cpp forcefieldlist.cpp output.cpp input_string.cpp particle.cpp forcefield.cpp force_twobody.cpp force_threebody.cpp force_external.cpp fixed_object.cpp profile.cpp neighbor.cpp comm.cpp log.cpp minimizer.cpp fix_temp_rescale.cpp fix_none.cpp fixlist.cpp
+OBJ = $(SRC:.cpp=.o)
+#
+#	Cplant version
+#
+GRASPDIR = ~/athomps/Grasp
+TESTDIR = $(GRASPDIR)/Testing
+SRCDIR = $(GRASPDIR)/Source
+ENFSDIR = /enfs/tmp/athomps/ross/Grasp/Testing
+
+MPI_PATH = /usr/local/cplant/ross/current
+USRLIB = -lmpi -lcpml
+PREPROC_FLAGS = -UDEBUG_ALLOCATION -UDEBUG_TWOBODY -UDEBUG_THREEBODY \
+		-D__USE_STD_IOSTREAM
+C = $(MPI_PATH)/bin/gcc
+CPP = $(MPI_PATH)/bin/c++
+
+INCLUDE_PATH = $(MPI_PATH)/include
+INCLUDE_FLAG = -I$(INCLUDE_PATH)
+
+USRLIB_PATH = $(MPI_PATH)/lib
+USRLIB_FLAG = -L$(USRLIB_PATH)
+
+CFLAGS = -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+
+#CPPFLAGS = -pg -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+#CPPFLAGS = -g $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+CPPFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+
+#OFLAG = -pg -O2 
+#OFLAG = -g $(USRLIB_FLAG)
+OFLAG = -O2 $(USRLIB_FLAG)
+.SUFFIXES : .o .cpp .c
+# inference rule to get .o targets from .cpp prerequisites
+.cpp.o :
+	$(CPP) $(CPPFLAGS) -c $<
+# inference rule to get .o targets from .c prerequisites
+.c.o :
+	$(C) $(CFLAGS) -c $<
+
+# The target 'all' is updated if no other one is specified,
+# because it is first.
+# It links all executables.
+all: grasp.exe
+
+# Target rules for executables specify prerequisite objects
+# and linking command.
+
+grasp.exe: $(OBJ)
+	$(CPP) $(OFLAG) $(OBJ) $(USRLIB) -o grasp.exe  
+
+# The targets 'test[all,a,b,c,..]' links all executables and runs them.
+CLEAN_TEST = 	echo '*** Cleaning test space ***'; \
+	if -e inp.dat rm inp.dat; \
+	if -e types.in rm types.in; \
+	if -e config.in rm config.in; \
+	if -e twobody.in rm twobody.in; \
+	if -e threebody.in rm threebody.in; \
+	if -e out.dat rm out.dat; \
+	if -e grasp.out rm grasp.out; \
+	if -e config.out rm config.out; \
+	if -e vel.out rm vel.out; \
+	if -e force.out rm force.out; \
+	if -e density_profile.out rm density_profile.out; \
+	if -e nodefile_0000.out rm nodefile_0000.out; \
+	if -e nodefile_0001.out rm nodefile_0001.out; \
+        echo '*** Pausing to let compute node synchronize ***'; \
+        sleep 30;
+testa: all
+	@@echo '*** Performing testa ***'; 
+	@@echo '*** Starting 4 atom run ***';
+	@@cd $(ENFSDIR)/testa; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_4.in config.in; \
+	cp inp_4.dat inp.dat; \
+	/cplant/bin/yod -sz 2 \
+	   	$(SRCDIR)/grasp.exe >& out.dat;  \
+	cat grasp.out; \
+	mv grasp.out grasp_4.dat; \
+	cat out.dat; \
+	mv out.dat out_4.dat; \
+	mv config.out config_4.out; \
+	mv vel.out vel_4.out;
+	@@echo '*** Finishing 4 atom run ***'; 
+testb: all 
+	@@echo '*** Performing testb ***'; 
+	@@echo '*** Starting 1372 atom run ***';
+	@@cd $(ENFSDIR)/testb; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_1372.in config.in; \
+	cp inp_1372.dat inp.dat; \
+	/cplant/bin/yod -sz 2 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_1372.dat; \
+	cat out.dat; \
+	mv out.dat out_1372.dat; \
+	mv config.out config_1372.out; \
+	mv vel.out vel_1372.out;
+	@@echo '*** Finishing 1372 atom run ***';
+testc: all 
+	@@echo '*** Performing testc ***'; 
+	@@echo '*** Starting 1372 atom minimg run ***';
+	@@cd $(ENFSDIR)/testc; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp twobody_lj_cut_minimg.in twobody.in; \
+	cp config_1372.in config.in; \
+	cp inp_1372_minimg.dat inp.dat; \
+	/cplant/bin/yod -sz 1 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_1372_minimg.dat; \
+	cat out.dat; \
+	mv out.dat out_1372_minimg.dat; \
+	mv config.out config_1372_minimg.out; \
+	mv vel.out vel_1372_minimg.out;
+	@@echo '*** Finishing 1372 atom minimg run ***';
+testd: all 
+	@@echo '*** Performing testd ***'; 
+	@@echo '*** Starting 250 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(ENFSDIR)/testd; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_250tet.in config.in; \
+	cp inp_250tet_threebody.dat inp.dat; \
+	/cplant/bin/yod -sz 2 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_250tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_250tet_sw_cut.dat; \
+	mv config.out config_250tet_sw_cut.out; \
+	mv vel.out vel_250tet_sw_cut.out;
+	@@echo '*** Finishing 250 atom tetrahedral Stillinger-Weber run ***';
+teste: all 
+	@@echo '*** Performing teste ***'; 
+	@@echo '*** Starting 54 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(ENFSDIR)/teste; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_54tet_delta.in config.in; \
+	cp inp_54tet_threebody.dat inp.dat; \
+	/cplant/bin/yod -sz 2 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_54tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_54tet_sw_cut.dat; \
+	mv config.out config_54tet_sw_cut.out; \
+	mv vel.out vel_54tet_sw_cut.out;
+	@@echo '*** Finishing 54 atom tetrahedral Stillinger-Weber run ***';
+testf: all 
+	@@echo '*** Performing testf ***'; 
+	@@echo '*** Starting 128 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(ENFSDIR)/testf; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_128tet_delta.in config.in; \
+	cp inp_128tet_threebody.dat inp.dat; \
+	/cplant/bin/yod -sz 2 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_128tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_128tet_sw_cut.dat; \
+	mv config.out config_128tet_sw_cut.out; \
+	mv vel.out vel_128tet_sw_cut.out;
+	@@echo '*** Finishing 128 atom tetrahedral Stillinger-Weber run ***';
+testg: all 
+	@@echo '*** Performing testg ***'; 
+	@@echo '*** Starting 4 atom lj93 wall run ***';
+	@@cd $(ENFSDIR)/testg; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp external_lj93.in external.in; \
+	cp config_lj93.in config.in; \
+	cp inp_lj93.dat inp.dat; \
+	/cplant/bin/yod -sz 1 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_lj93.dat; \
+	cat out.dat; \
+	mv out.dat out_lj93.dat; \
+	mv config.out config_lj93.out; \
+	mv vel.out vel_lj93.out;
+	@@echo '*** Finishing 4 atom lj93 wall run ***';
+testh: all 
+	@@echo '*** Performing testh ***'; 
+	@@echo '*** Starting dft run ***';
+	@@cd $(ENFSDIR)/testh; \
+	$(CLEAN_TEST); \
+	cp types_dft.in types.in; \
+	cp twobody_dft.in twobody.in; \
+	cp external_dft.in external.in; \
+	cp config_dft.in config.in; \
+	cp inp_dft.dat inp.dat; \
+	/cplant/bin/yod -sz 2 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_dft.dat; \
+	cat out.dat; \
+	mv out.dat out_dft.dat; \
+	mv config.out config_dft.out; \
+	mv vel.out vel_dft.out; \
+	mv density_profile.out density_dft.out;
+	@@echo '*** Finishing dft run ***';
+testi: all 
+	@@echo '*** Performing testi ***'; 
+	@@echo '*** Starting multinode relaxation run ***';
+	@@cd $(ENFSDIR)/testi; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_relax.in config.in; \
+	cp inp_relax.dat inp.dat; \
+	/cplant/bin/yod -sz 2 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_relax.dat; \
+	cat out.dat; \
+	mv out.dat out_relax.dat; \
+	mv config.out config_relax.out; \
+	mv force.out force_relax.out;
+	@@echo '*** Finishing multinode relaxation run ***';
+testj: all 
+	@@echo '*** Performing testj ***'; 
+	@@echo '*** Starting 2 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(ENFSDIR)/testj; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_2tet.in config.in; \
+	cp inp_2tet_threebody.dat inp.dat; \
+	/cplant/bin/yod -sz 2 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_2tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_2tet_sw_cut.dat; \
+	mv config.out config_2tet_sw_cut.out; \
+	mv vel.out vel_2tet_sw_cut.out;
+	@@echo '*** Finishing 2 atom tetrahedral Stillinger-Weber run ***';
+testk: all 
+	@@echo '*** Performing testk ***'; 
+	@@echo '*** Starting fix run ***';
+	@@cd $(ENFSDIR)/testk; \
+	$(CLEAN_TEST); \
+	cp types_fix.in types.in; \
+	cp twobody_fix.in twobody.in; \
+	cp config_fix.in config.in; \
+	cp inp_fix.dat inp.dat; \
+	/cplant/bin/yod -sz 2 \
+	   $(SRCDIR)/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_fix.dat; \
+	cat out.dat; \
+	mv out.dat out_fix.dat; 
+	@@echo '*** Finishing fix run ***';
+testall: testa testb testc testd teste testf testg testh testi testj testk
+
+# The target 'bugs' queries any bugs
+bugs: 
+	@@echo No compiler bugs in this directory!
+
+# The target 'clean' cleans out all objects and executables
+# 
+clean:
+	rm Makefile.depend
+	rm *.o
+	rm grasp.exe
+
+# Target rules for objects specify only prerequisites. The
+# inference rules are used to update objects. 
+# Note that inference rule creates object with same root
+# as first prerequisite file.
+#
+#This is all taken care of by perl script Depend.pl
+
+include Makefile.depend
+
+Makefile.depend:
+	Depend.pl $(SRC);cat Makefile.depend
+
+# Use this target if you just want to build Makefile.depend
+depend:
+	Depend.pl $(SRC);cat Makefile.depend
+
+
+
+@
+
+
+2.7
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@@
+
+
+2.7.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@@
+
+
+2.6
+log
+@Created README file and update Makefile.cplant
+@
+text
+@d1 28
+@
+
+
+2.5
+log
+@Pushed examples down into subdirectories.
+@
+text
+@d18 1
+@
+
+
+2.4
+log
+@Updated Cplant Makefile
+@
+text
+@a9 1
+
+d14 4
+a17 1
+TESTDIR = /enfs/tmp/athomps/ross/Grasp/Testing
+d60 1
+a60 2
+CLEAN_TEST = 	@@echo '*** Cleaning test space ***'; \
+	cd $(TESTDIR); \
+d72 2
+a77 1
+	$(CLEAN_TEST)
+d79 2
+a80 1
+	cd $(TESTDIR); \
+d86 1
+a86 1
+	   	~/Grasp/Source/grasp.exe >& out.dat;  \
+a95 1
+	$(CLEAN_TEST)
+d97 2
+a98 1
+	cd $(TESTDIR); \
+d104 1
+a104 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+a113 1
+	$(CLEAN_TEST)
+d115 2
+a116 1
+	@@cd $(TESTDIR); \
+d122 1
+a122 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+a131 1
+	$(CLEAN_TEST)
+d133 2
+a134 1
+	@@cd $(TESTDIR); \
+d140 1
+a140 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+a149 1
+	$(CLEAN_TEST)
+d151 2
+a152 1
+	@@cd $(TESTDIR); \
+d158 1
+a158 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+a167 1
+	$(CLEAN_TEST)
+d169 2
+a170 1
+	@@cd $(TESTDIR); \
+d176 1
+a176 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+a185 1
+	$(CLEAN_TEST)
+d187 2
+a188 1
+	@@cd $(TESTDIR); \
+d194 1
+a194 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+a203 1
+	$(CLEAN_TEST)
+d205 2
+a206 1
+	@@cd $(TESTDIR); \
+d213 1
+a213 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+a223 1
+	$(CLEAN_TEST)
+d225 2
+a226 1
+	@@cd $(TESTDIR); \
+d232 1
+a232 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+a241 1
+	$(CLEAN_TEST)
+d243 2
+a244 1
+	@@cd $(TESTDIR); \
+d250 1
+a250 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+a259 1
+	$(CLEAN_TEST)
+d261 2
+a262 1
+	@@cd $(TESTDIR); \
+d268 1
+a268 1
+	   ~/Grasp/Source/grasp.exe >& out.dat; \
+d274 1
+a274 1
+testall: testa testb testc testd teste testf testg testh testi testj
+@
+
+
+2.3
+log
+@Slight change
+@
+text
+@d9 2
+a10 1
+SRC = constants.cpp grasp_run.cpp controller.cpp input.cpp stepper.cpp box.cpp particletypelist.cpp particlelist.cpp forcefieldlist.cpp thermo.cpp output.cpp input_string.cpp particle.cpp forcefield.cpp force_twobody.cpp force_threebody.cpp force_external.cpp fixed_object.cpp profile.cpp neighbor.cpp comm.cpp log.cpp minimizer.cpp
+d255 16
+@
+
+
+2.2
+log
+@Removed ssh from Makefile.cplant, so that test suites needs
+to be run from ross, not ross-comp.
+
+
+@
+text
+@d117 1
+a117 1
+	/cplant/bin/yod -sz 2 \
+@
+
+
+2.1
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@d81 2
+a82 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 2 \
+	   	~/Grasp/Source/grasp.exe >& out.dat';  \
+d99 2
+a100 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 2 \
+	   ~/Grasp/Source/grasp.exe >& out.dat'; \
+d117 2
+a118 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 1 \
+	   ~/Grasp/Source/grasp.exe >& out.dat'; \
+d135 2
+a136 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 2 \
+	   ~/Grasp/Source/grasp.exe >& out.dat'; \
+d153 2
+a154 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 2 \
+	   ~/Grasp/Source/grasp.exe >& out.dat'; \
+d171 2
+a172 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 2 \
+	   ~/Grasp/Source/grasp.exe >& out.dat'; \
+d189 2
+a190 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 1 \
+	   ~/Grasp/Source/grasp.exe >& out.dat'; \
+d208 2
+a209 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 2 \
+	   ~/Grasp/Source/grasp.exe >& out.dat'; \
+d227 2
+a228 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 2 \
+	   ~/Grasp/Source/grasp.exe >& out.dat'; \
+d245 2
+a246 2
+	ssh ross 'cd $(TESTDIR);/cplant/bin/yod -sz 2 \
+	   ~/Grasp/Source/grasp.exe >& out.dat'; \
+@
+

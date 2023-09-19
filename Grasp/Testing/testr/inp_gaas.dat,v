@@ -1,0 +1,39 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2005.10.28.17.57.55;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Added GaAs force field example in testr.
+@
+text
+@# GaAs Tersoff input data for 2-atom simulation
+#
+units metal
+forcefield tersoff 	tersoff.in Tersoff
+timestep 		0.000125
+nsteps 			800
+box dimensions 		0.00000000  2.82645  2.82645 \
+			2.82645  0.00000000  2.82645 \
+			 2.82645  2.82645  0.00000000
+box origin 		0.0  0.0   0.0
+initialize temperature 	500.0 		256
+thermo 			40
+dump particles 		800
+dump velocities 	800
+dump forces 		800
+neighbor		bin  10 0.1
+@

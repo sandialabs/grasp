@@ -1,0 +1,61 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.11.03.23.24.20;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Moved examples into subdirectories.
+@
+text
+@#
+#	This is the most dense system treated by TOWHEE.
+#
+#	The TOWHEE energy is -13867.87102 [kcal/mol]
+#	This corresponds to  -290.11586 [kJ/mol/particle]
+#
+#	The GRASP number is  -290.11583 [kJ/mol/particle]
+#
+# primitive lattice vectors  1  1  1
+#   0.00000000  2.35960000  2.35960000
+#   2.35960000  0.00000000  2.35960000
+#   2.35960000  2.35960000  0.00000000
+# number of atoms in unit cell
+#   2
+# Total volume of unit cell =   26.275147    
+# Total density of unit cell =  0.76117556E-01
+# atom, id, color, charge, position vector
+       1    A                 1      0.00000000  0.00000000  0.00000000  0.00000000
+       2    A                 2      0.00000000  1.17980000  1.17980000  1.17980000
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@@
+

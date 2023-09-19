@@ -1,0 +1,181 @@
+head	4.1;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoTesting:3.0.0.6
+	InitialGraspTesting:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:1.2.2.1
+	cjkimme_version:1.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.1
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.05.20.22.11.35;	author athomps;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2004.01.28.20.37.01;	author athomps;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.1
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@# Timestep 0
+# 
+# Unit cell lattice vectors:
+# 3.520000000 0.000000000 0.000000000
+# 0.000000000 3.520000000 0.000000000
+# 0.000000000 0.000000000 3.520000000
+# 
+# Unit cell origin:
+# 0.000000000 0.000000000 0.000000000
+# 
+# Number of particles 4
+# 
+# Particle positions 
+         1          28         1         0.000000000         0.01000000000         0.02000000000         0.03000000000
+         2          28         2         0.000000000         1.760000000         1.760000000         0.000000000
+         3          28         3         0.000000000         1.760000000         0.000000000         1.760000000
+         4          28         4         0.000000000         0.000000000         1.760000000         1.760000000
+# 
+# Timestep 10
+# 
+# Particle positions 
+         1          28         1         0.000000000         0.009130904866         0.01826227931         0.02739459927
+         3          28         3         0.000000000         1.760465965         3.519876857         1.761393713
+         4          28         4         0.000000000         3.519938298         1.760932244         1.761395752
+         2          28         2         0.000000000         1.760464832         1.760928619         3.519815936
+# 
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d14 4
+a17 4
+       1        28       1         0.000000000       0.01000000000       0.02000000000       0.03000000000
+       2        28       2         0.000000000         1.760000000         1.760000000         0.000000000
+       3        28       3         0.000000000         1.760000000         0.000000000         1.760000000
+       4        28       4         0.000000000         0.000000000         1.760000000         1.760000000
+d22 4
+a25 4
+       1        28       1         0.000000000      0.009130904866       0.01826227931       0.02739459927
+       3        28       3         0.000000000         1.760465965         3.519876857         1.761393713
+       4        28       4         0.000000000         3.519938298         1.760932244         1.761395752
+       2        28       2         0.000000000         1.760464832         1.760928619         3.519815936
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@@
+
+
+1.2
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@@
+
+
+1.2.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.1
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d1 2
+d4 3
+a6 3
+# 3.52 0 0
+# 0 3.52 0
+# 0 0 3.52
+d9 1
+a9 3
+# 0 0 0
+# 
+# Timestep 0
+a19 2
+# 
+# Number of particles 4
+@
+

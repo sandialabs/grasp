@@ -1,0 +1,93 @@
+head	4.2;
+access;
+symbols
+	ReverseComm_branch:4.0.0.16
+	ADTools_branch:4.0.0.14
+	Monaco_Aidan:4.0.0.12
+	Root-of-Monaco_Aidan:4.0
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0;
+locks; strict;
+comment	@# @;
+
+
+4.2
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2006.12.12.06.57.32;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.2
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@ 
+       
+      common
+     $/cbksrthb/ vhb1(nhbtym),vhb2(nhbtym),rhb(nhbtym),
+     $           dehb(nhbtym),ihb(nhbmax,8),nhb,
+     $           nphb(nsort),nhbs(nhbtym,3),nhbty,hbcut
+
+
+@
+
+
+4.1
+log
+@Upgraded ReaxFF in Grasp to latest version
+@
+text
+@d6 2
+a7 1
+     $           nphb(nsort),nhbs(nhbtym,3),nhbty
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d5 1
+a5 1
+     $           dehb(nhbtym),ihb(nhbmax,6),nhb,
+@
+
+
+1.1
+log
+@Merged REAX version with main version
+@
+text
+@@
+

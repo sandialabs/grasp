@@ -1,0 +1,198 @@
+head	4.3;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoTesting:3.0.0.6
+	InitialGraspTesting:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:1.2.2.1
+	cjkimme_version:1.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.3
+date	2007.06.02.03.27.22;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2006.08.28.23.28.22;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.09.30.18.46.12;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.07.30.20.18.56;	author athomps;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2004.07.13.21.21.21;	author athomps;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.3
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@# Timestep 0
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+         3         0.1594758574         0.05674962695         0.6886427278
+         4         -0.02548936424         0.0004266139447         -0.4600744064
+         1         -0.01142991520         -0.2948873520         -0.1198589255
+         2         -0.1225565779         0.2377111111         -0.1087093959
+# 
+# Timestep 1000
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+         3         -0.006358333881         0.2217230572         0.06564271395
+         1         0.03831351070         -0.2596593282         -0.2440305876
+         4         -0.1263978084         -0.3040330355         -0.02017347802
+         2         0.09444263163         0.3419693066         0.1985613516
+# 
+@
+
+
+4.2
+log
+@New PRNG caused new initial conditions
+@
+text
+@d6 4
+a9 4
+       3        0.1594758574       0.05674962695        0.6886427278
+       4      -0.02548936424     0.0004266139447       -0.4600744064
+       1      -0.01142991520       -0.2948873520       -0.1198589255
+       2       -0.1225565779        0.2377111111       -0.1087093959
+d16 4
+a19 4
+       3     -0.006358333881        0.2217230572       0.06564271395
+       1       0.03831351070       -0.2596593282       -0.2440305876
+       4       -0.1263978084       -0.3040330355      -0.02017347802
+       2       0.09444263163        0.3419693066        0.1985613516
+@
+
+
+4.1
+log
+@Modified definition for NPT conserved energy and time constant
+@
+text
+@d6 4
+a9 4
+       3     -0.003303983677       -0.2283792413       -0.2058423674
+       4        0.3008422018        0.2884691903       -0.1944454651
+       1       0.04562517955       0.02989523632        0.6388820927
+       2       -0.3431633977      -0.08998518525       -0.2385942602
+d16 4
+a19 4
+       2        0.3117162907      -0.04396703692        0.1074653918
+       3       -0.4282835702       -0.2642572540        0.1774909989
+       1       0.08401583188        0.1673775841       -0.2345244082
+       4       0.03255144763        0.1408467068      -0.05043198258
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d16 4
+a19 4
+       2        0.2828215571      -0.07419907195       0.04851675872
+       3       -0.3473550809       -0.2670007357        0.1941392063
+       1       0.06258752973        0.2060955914       -0.1867598935
+       4      0.001945994135        0.1351042162      -0.05589607156
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@@
+
+
+1.2
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@@
+
+
+1.2.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.1
+log
+@Added NPT ensemble
+@
+text
+@d11 1
+a11 1
+# Timestep 10000
+d16 4
+a19 4
+       3      -0.03069858720       0.04491569296        0.7977712529
+       1       0.07885446307        0.1362734721       -0.5585646307
+       4        0.3516326001        0.1422298110       -0.4323962598
+       2       -0.3997884760       -0.3234189760        0.1931896376
+@
+

@@ -1,0 +1,1206 @@
+head	4.11;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.12.0.2
+	cjkimme_version_merge_from_trunk_1:2.8.2.3
+	cjkimme_version:2.8.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.11
+date	2008.05.22.17.23.38;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.11.15.21.31.40;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.03.31.01.06.13;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.03.16.06.18.30;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.10.11.01.40.34;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.4.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.03.20.00.15.36;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.8.2.1;
+next	2.7;
+
+2.7
+date	2004.01.15.20.12.28;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.03.03.20.32.39;	author athomps;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.02.25.23.06.37;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.05.00.32.02;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.04.00.12.41;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.01.18.00.20.49;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.08.23.25.53;	author athomps;	state Exp;
+branches;
+next	;
+
+4.3.4.1
+date	2005.06.16.22.23.41;	author pscrozi;	state Exp;
+branches;
+next	;
+
+2.8.2.1
+date	2004.05.14.16.12.58;	author cjkimme;	state Exp;
+branches;
+next	2.8.2.2;
+
+2.8.2.2
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.8.2.3;
+
+2.8.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.11
+log
+@Fixed error in pressure control full for non-zero origin
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef BOX_H
+#define BOX_H
+
+class Box {
+ public:
+ private:
+  bool Lorthorhombic;
+  bool Lremap;
+  bool perflaga,perflagb,perflagc,perflag,perflagall;
+  // Box lattice vectors a,b,c.
+  double uc_lva[3],uc_lvb[3],uc_lvc[3],uc_origin[3];
+  // Box reciprocal lattice vectors h,k,l, where e.g h = (b x c)/v.
+  double uc_rvh[3],uc_rvk[3],uc_rvl[3],volume;
+  // Pointers to three box reciprocal lattice vectors 
+  double* uc_rv[3];
+  // Spacing between lattice planes wh,wk,wl, where e.g. wh = 1/|h|.
+  double uc_wh,uc_wk,uc_wl;
+  // Area of faces in lattice planes ah,ak,al, where e.g. ah = v/|wh|.
+  double uc_ah,uc_ak,uc_al;
+  // These are only used for an orthorhombic box
+  double xboundlo,xboundhi,yboundlo,yboundhi,zboundlo,zboundhi;
+  double xprd,yprd,zprd,half_xprd,half_yprd,half_zprd;
+  double xmid,ymid,zmid;
+  double uc_origin_eps[3];
+  double dielectric;
+ public:
+  Box();
+  ~Box();
+  bool get_Lorthorhombic() const;
+  bool get_Lremap() const;
+  void set_Lremap(bool);
+  bool get_perflag() const;
+  bool get_perflagall() const;
+  bool get_perflag(bool&, bool&, bool&) const;
+  void get_perflag(bool[]) const;
+  void get_lv(double[], double[], double[]) const;
+  void get_o(double[]) const;
+  void get_o_user(double[]) const;
+  void get_lw(double&, double&, double&) const;
+  void get_lw(double[]) const;
+  void get_la(double&, double&, double&) const;
+  double get_volume() const;
+  void Setup(Comm*);
+  void SetupBox(const double[] = NULL);
+  void Minimg_Diff(const double[], const double[], double[]) const;
+  void Minimg_Diff_Shift(const double[], double[]) const;
+  void Minimg_Pos(double[], double[], int[]) const;
+  void Minimg_Pos_Full(double[], double*, int[]) const;
+  void Scale_Pos(double[], const double[]) const;
+  void Scale_Vel(double[], const double[]) const;
+  void Scale_Vel(double v[], const double deformation[3][3]) const;
+  double Fractional(const int&, const double[]) const;
+  void Fractional(const double [], double []) const;
+  void FractionalVelocity(const double [], double []) const;
+  void InverseFractional(const double [], double []) const;
+  double FractionalDiag(const int&, const double[], ofstream&) const;
+  void input_box_dimensions(const string&);
+  void input_box_origin(const string&);
+  void input_box_perflag(const string& buf);
+  double get_lmin() const;
+  double get_dielectric() const;
+  void BoxDilate(const double[]);
+  void BoxDeform(const double deformation[3][3],Comm*,bool=true);
+  void Scaled_Deform(double r[], const double deformation[3][3]) const;
+  void XYZ2ABC(const double [][3], double []) const;
+  void ReflectPosVel(double[], double[]) const;
+};
+#endif
+@
+
+
+4.10
+log
+@Added 'output sum momentum' command
+@
+text
+@d96 1
+@
+
+
+4.9
+log
+@Modifed fix deformation to correctly remap vectors
+@
+text
+@d107 1
+a107 1
+  void BoxDeform(const double deformation[3][3],Comm*);
+@
+
+
+4.8
+log
+@Added commands to carry box dimensions in restart file and to output stress tensor
+@
+text
+@d53 1
+d75 2
+d107 1
+a107 1
+  void BoxDeform(const double deformation[3][3]);
+@
+
+
+4.7
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@d86 1
+a86 1
+  void SetupBox();
+@
+
+
+4.6
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d104 2
+@
+
+
+4.5
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d53 1
+a53 1
+  bool perflaga,perflagb,perflagc,perflag;
+d75 1
+d100 1
+d105 1
+@
+
+
+4.4
+log
+@Added some new barostats and thermostats.
+@
+text
+@d88 2
+a89 2
+  void Minimg_Pos(double[], double[]) const;
+  void Minimg_Pos_Full(double[], double*) const;
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d91 1
+d102 1
+@
+
+
+4.3.4.1
+log
+@latest additions to the PPPM FF
+@
+text
+@a100 1
+  friend class Force_PPPM;
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.2
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d72 2
+a73 2
+  void Minimg_Pos(double[]) const;
+  void Minimg_Pos_Full(double[]) const;
+d77 1
+@
+
+
+2.12
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.11
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.10
+log
+@Various
+@
+text
+@d73 1
+d82 1
+@
+
+
+2.9
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.8
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d52 1
+d80 1
+@
+
+
+2.8.2.1
+log
+@Keeping track of displacements for each particle.
+@
+text
+@d70 2
+a71 2
+  void Minimg_Pos(double[], double[]) const;
+  void Minimg_Pos_Full(double[], double*) const;
+@
+
+
+2.8.2.2
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a73 1
+  void FractionalVelocity(const double [], double []) const;
+@
+
+
+2.8.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a51 1
+  double dielectric;
+a71 1
+  void Scale_Pos(double[], const double[]) const;
+a79 2
+  double get_dielectric() const;
+  void BoxDilate(const double[]);
+@
+
+
+2.7
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@d51 1
+d61 1
+@
+
+
+2.6
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d76 1
+@
+
+
+2.5
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.4
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d36 1
+a36 1
+  void Setup(const Input*, Comm*);
+d44 1
+d46 2
+@
+
+
+2.3
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d43 1
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d43 1
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d35 1
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d13 2
+d17 2
+d28 2
+d33 3
+a35 1
+  void Setup(const Input*);
+d41 1
+@
+
+
+1.9
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d4 1
+a4 10
+// Incomplete declarations reduce dependence on relative 
+// ordering of headers for class declarations in source files.
+class Neighbor;
+class Particle;
+class Forcefield;
+class Particle_Types;
+class Profile;
+
+class Box
+{
+d8 11
+a18 37
+  Particle_Types* ptypes;
+  vector <Forcefield*> forcefield_list;
+  vector<Particle> particles;
+   int nparticles,npairs;
+   double temp_current;
+   double pressa_target,pressa_current,pressb_target;
+   double pressb_current,pressc_target,pressc_current;
+   bool perflaga,perflagb,perflagc,perflag;
+   double xboundlo,xboundhi,yboundlo,yboundhi,zboundlo,zboundhi;
+   // Box lattice vectors a,b,c.
+   double uc_lva[3],uc_lvb[3],uc_lvc[3],uc_origin[3];
+   // Box reciprocal lattice vectors h,k,l, where e.g h = (b x c)/v.
+   double uc_rvh[3],uc_rvk[3],uc_rvl[3],volume;
+   // Spacing between lattice planes wh,wk,wl, where e.g. wh = 1/|h|.
+   double uc_wh,uc_wk,uc_wl;
+   // These are only used for an orthorhombic box
+   double xprd,yprd,zprd,half_xprd,half_yprd,half_zprd;
+   double xmid,ymid,zmid;
+   double e_potential,e_kinetic,e_potential_init,e_kinetic_init;
+   Profile* density_profile;
+   int units_style;
+   /*
+     We use a private constructor which forces construction to occur
+     via the "Singleton" method used by the static function Box::get.
+     This allows anybody to access the member functions of the
+     sole-existing box by first getting the reference from Box::get.
+     See Advanced C++ Notes (Slide 30 in Chap. 5), or else see
+     static member functions in Chapter 10 of Eckel.
+   */
+   Box(const double[],
+       const double[],
+       const double[],
+       const double[],
+       const bool&, const bool&, const bool&, const int&);
+   // We also make the copy constructor private to prevent
+   // new copies being made
+   Box(const Box&);
+d20 13
+a32 53
+   // Declaring a static function as first public member
+   // mysteriously suppresses compiler warning about private constructors.
+   // This is convenient, since we use the static member function Box::get
+   // to create and access a reference to the single instance of this class.
+   // Warning: the arguments only have effect on the first call to Box::get.
+   static Box& get(const double[] = 0,
+		   const double[] = 0,
+		   const double[] = 0,
+		   const double[] = 0,
+		   const bool& = 0, const bool& = 0, const bool& = 0,
+		   const int& = 0);      
+   ~Box();
+   // Add using copy constructor
+   void AddParticle(const Particle&);
+   // Add using type, tag, id, color, position [and charge] constructor 
+   void AddParticle(const int&, const int&, 
+		    const string&, const int&, 
+		    const double[], const double& = 0.0);
+   void RemoveParticle(const int&);
+   void ReadConfig();
+   void SetupVelocities(const double&, int& iseed);
+   void ZeroMomentum();
+   void RescaleTemperature(const double& temp_init);
+   int get_nparticles() const;
+   bool get_Lorthorhombic() const;
+   void get_lv(double[], double[], double[]) const;
+   void get_o(double[]) const;
+   void get_lw(double&, double&, double&) const;
+   void AddCapacity(const int&);
+   void StepVelocity(const double& timestep);
+   void StepPosition(const double& timestep);
+   void ResetPosition(const bool&);
+   void ComputeForce(const bool&);
+   void OutputParticles(const int&, const bool&);
+   void OutputVelocities(const int&, const bool&);
+   void OutputThermo(const int&, const bool&);
+   void SetupDensityProfile(const int&, const int&);
+   void SampleDensityProfile();
+   void OutputDensityProfile(const int&, const bool&);
+   void Minimg_Diff(const double[], const double[], double[]) const;
+   void Minimg_Diff_Shift(const double[], double[]) const;
+   void Minimg_Pos(double[]) const;
+   void Minimg_Pos_Full(double[]) const;
+   void SetupTypes_Particle();
+   void Neighboring();
+   void ForcefieldSetup(const int&, const double&, 
+		 const vector<int>, const vector<string>);
+   void Summary();
+   void ReadParticleTypes();
+   void SetupTypes_Force();
+   void SetupBox();
+   void ComputeTemperature() ;
+   void TemperatureControlRescale(const double&, const double&, const double&);
+a33 1
+
+@
+
+
+1.8
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d10 2
+d14 1
+a15 1
+  bool Ltwobody,Lthreebody,Lexternal;
+d21 3
+a23 2
+   double t_target,t_current;
+   double pa_target,pa_current,pb_target,pb_current,pc_target,pc_current;
+a24 1
+   int ensemble;
+d26 1
+a26 1
+   // Simulation box lattice vectors
+d28 4
+a31 2
+   // Simulation box reciprocal lattice vectors
+   double uc_rvh[3],uc_rvk[3],uc_rvl[3],uc_vol,uc_wa,uc_wb,uc_wc;
+d36 2
+d50 1
+a50 2
+       const bool&, const bool&, const bool&,
+       const bool&, const bool&, const bool&);
+d59 1
+a59 2
+   // Warning: the arguments only have effect
+   // on the first call to Box::get.
+d65 1
+a65 2
+		   const bool& = 1, const bool& = 0, const bool& = 0);
+      
+d79 1
+d82 1
+d87 1
+a87 1
+   void ComputeForce();
+d91 3
+d100 2
+a101 1
+   void ForcefieldSetup();
+d107 1
+a107 1
+
+@
+
+
+1.7
+log
+@Added configuration output routine to Box.
+Added shifted origin to minimg routines.
+Cleaned up minimg routines to consistently
+Deal with following issues:
+	orthorhombic versus triclinic
+	inner-loop Minimig_Dist functions only perform single box shift,
+		as it is more efficient than general shift.
+	For this reason, standard Minimg_Pos function also only
+		performs single box shift, but also checks that
+		aparticles have not strayed too far.
+	Initial config may require more than single box shift, and
+		so for this we use Minimg_Full_pos.
+Treatment of equality conditions:
+	Positions on )0,1[ are mapped onto [0,1).
+	Positions on [0,1) are left alone.
+	Distances on )-1,1( should not occur
+	Distances on )-0.5,0.5( are mapped (-0.5,0.5).
+	Distances on [-0.5,0.5] are left alone.
+@
+text
+@d13 1
+a13 1
+  bool Ltwobody,Lthreebody;
+d45 1
+a45 1
+       const bool&, const bool&);
+d61 1
+a61 1
+		   const bool& = 1, const bool& = 0);
+d72 3
+d84 1
+@
+
+
+1.6
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@d30 1
+d78 1
+a78 1
+   void ResetPosition();
+d80 1
+d85 1
+@
+
+
+1.5
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d14 1
+d20 2
+a21 2
+   double px_target,px_current,py_target,py_current,pz_target,pz_current;
+   bool perflagx,perflagy,perflagz,perflag;
+d28 1
+d30 1
+a30 1
+   double energy;
+d67 1
+a67 1
+		    const int&, const int&, 
+a73 2
+   void get_prdbox(double& xprd_out, 
+		   double& yprd_out, double& zprd_out);
+d79 1
+a79 1
+   void OutputThermo();
+d89 3
+@
+
+
+1.4
+log
+@Got rid of gratuituous "friend" declaration for class Neighobr in class Box.
+@
+text
+@d4 1
+a4 1
+// Incomplete declarations eliminate dependence on relative 
+d8 2
+a9 1
+
+d13 4
+a16 1
+   vector<Particle> particles;
+d41 2
+a42 1
+       const bool&, const bool&, const bool&);
+d57 2
+a58 1
+		   const bool& = 0, const bool& = 0, const bool& = 0);
+d73 1
+a73 6
+		   double& yprd_out, double& zprd_out)
+     {
+       xprd_out = xprd;
+       yprd_out = yprd;
+       zprd_out = zprd;
+     }
+d81 1
+d84 5
+a88 3
+   void Neighboring(const bool&, const bool&);
+   void ForcefieldSetup(const bool&, const bool&);
+   void Summary(const bool&, const bool&);
+@
+
+
+1.3
+log
+@
+
+Added neighbor list object.
+@
+text
+@d13 1
+a13 1
+   int nparticles;
+d82 3
+a84 3
+
+   friend void Neighbor::SetupNeighborListNsq();
+
+@
+
+
+1.2
+log
+@
+Added ReadParticleTypes, and improved organization of input,
+including error checking.
+@
+text
+@d6 1
+a7 1
+class Box;
+d19 4
+d33 4
+a36 3
+   Box(const double&, const double&, 
+       const double&, const double&, 
+       const double&, const double&,
+d46 1
+a46 1
+   // Warning: the arguments (default or otherwise) only have effect
+d48 4
+a51 3
+   static Box& get(const double& = 0.0, const double& = 1.0, 
+		   const double& = 0.0, const double& = 1.0, 
+		   const double& = 0.0, const double& = 1.0,
+d53 1
+a53 1
+   
+d64 2
+d76 1
+d82 3
+@
+
+
+1.1
+log
+@Starting source distribution for Grasp.
+Basic molecular dynamics code with twobody interactions
+@
+text
+@d19 1
+a19 1
+   double xprd,yprd,zprd,rxprd,ryprd,rzprd;
+d58 2
+a59 2
+   void get_prdbox(double& xprd_out, double& yprd_out, double& zprd_out,
+		     double& rxprd_out, double& ryprd_out, double& rzprd_out)
+a63 3
+       rxprd_out = rxprd;
+       ryprd_out = ryprd;
+       rzprd_out = rzprd;
+d72 1
+a72 1
+   void SetupTypes();
+a73 34
+
+inline void Box::Minimg_Diff(const double r1[], const double r2[], double delr[]) const
+{
+  double tmp;
+
+  tmp = (r1[0]-r2[0])*rxprd;
+  if (tmp > 0.5) {
+    tmp = tmp - 1.0;
+  } 
+  else if (tmp < -0.5) {
+    tmp = tmp + 1.0;
+  }
+  delr[0] = tmp*xprd;
+
+  tmp = (r1[1]-r2[1])*ryprd;
+  if (tmp > 0.5) {
+    tmp = tmp - 1.0;
+  } 
+  else if (tmp < -0.5) {
+    tmp = tmp + 1.0;
+  }
+  delr[1] = tmp*yprd;
+
+  tmp = (r1[2]-r2[2])*rzprd;
+  if (tmp > 0.5) {
+    tmp = tmp - 1.0;
+  } 
+  else if (tmp < -0.5) {
+    tmp = tmp + 1.0;
+  }
+  delr[2] = tmp*zprd;
+
+  return;
+}
+@
+

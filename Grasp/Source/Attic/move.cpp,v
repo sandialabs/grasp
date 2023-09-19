@@ -1,0 +1,802 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.6.1.0.2
+	Root-of-Monaco_Aidan:1.1.6.1
+	Monaco:1.1.0.6
+	PreMonaco:1.1
+	PMONACO:1.1.0.4
+	P_MonacoSource:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2005.03.01.19.00.24;	author saubry;	state dead;
+branches
+	1.1.2.1
+	1.1.4.1
+	1.1.6.1;
+next	;
+
+1.1.2.1
+date	2005.03.01.19.00.24;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2005.04.12.22.58.05;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.6.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches
+	1.1.6.1.2.1;
+next	;
+
+1.1.6.1.2.1
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.6.1.2.2;
+
+1.1.6.1.2.2
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.6.1.2.3;
+
+1.1.6.1.2.3
+date	2005.11.01.21.17.20;	author saubry;	state Exp;
+branches;
+next	1.1.6.1.2.4;
+
+1.1.6.1.2.4
+date	2005.11.17.20.43.30;	author athomps;	state Exp;
+branches;
+next	1.1.6.1.2.5;
+
+1.1.6.1.2.5
+date	2005.11.28.23.08.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.1.2.6;
+
+1.1.6.1.2.6
+date	2005.11.30.19.51.20;	author athomps;	state Exp;
+branches;
+next	1.1.6.1.2.7;
+
+1.1.6.1.2.7
+date	2005.12.09.18.35.27;	author athomps;	state Exp;
+branches;
+next	1.1.6.1.2.8;
+
+1.1.6.1.2.8
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	1.1.6.1.2.9;
+
+1.1.6.1.2.9
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file move.cpp was initially added on branch P_MonacoSource.
+@
+text
+@@
+
+
+1.1.6.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 136
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+// Added saubry (02-28-05)
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "move.h"
+#include "constants.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+Move::Move()
+{
+  // initialization
+  MoveMethod = 0;
+
+  Boost.resize(3);
+  Boost[0] = 1.0;
+  Boost[1] = 1.0;
+  Boost[2] = 1.0;
+
+  Seed = 12345;
+  MaxMove = 1.0;
+}
+
+
+void Move::Setup(int movemethod,int movetype,vector<int> movetypetable,int lenghttypetable)
+{
+  MoveMethod = movemethod;
+
+  if (MoveMethod == 1)
+    {
+      MoveType   = movetype;
+    }
+  else if (MoveMethod > 1)
+    {
+      SizeTypeTable = lenghttypetable;
+      MoveTypeTable.resize(SizeTypeTable);
+      for (int i = 0;i<SizeTypeTable;i++) 
+	{
+	  MoveTypeTable[i] = movetypetable[i];
+	  ProposeMove(MoveTypeTable);
+	}
+    }
+  
+}
+
+void Move::ProposeMove()
+{
+  // rand() returns a number between 0 and RAND_MAX
+
+  srand( (unsigned)Seed );
+
+  Boost[0] = (rand()/(RAND_MAX*1.0) -.5)*MaxMove;
+  Boost[1] = (rand()/(RAND_MAX*1.0) -.5)*MaxMove;
+  Boost[2] = (rand()/(RAND_MAX*1.0) -.5)*MaxMove;
+}
+
+void Move::ProposeMove(int MoveType)
+{}
+
+
+void Move::ProposeMove(vector <int> MoveTypeTable)
+{}
+
+void Move::Run() 
+{
+  if (MoveMethod == 1)
+    {
+      ProposeMove(MoveType);
+    }
+  else if (MoveMethod > 1)
+    {
+      ProposeMove(MoveTypeTable);
+    }
+  else
+    ProposeMove();
+
+}
+@
+
+
+1.1.6.1.2.1
+log
+@Correct several bugs
+@
+text
+@d60 3
+a62 3
+#include "vec3.h"
+#include "box.h"
+#include "box_inline.h"
+a65 1
+#include "random.h"
+a72 14
+  MoveType = 0;
+  Seed = 12345;
+  MaxMove[0] = 0.0; MaxMove[1] = 0.0; MaxMove[2] = 0.0;
+}
+
+void Move::Setup(const Box* b,int pbin[3], double binsize[3])
+{
+  // calculate max_move: 1/10 of the size of an octant
+  double w[3];
+  b->get_lw(w);   
+
+  MaxMove[0] = 0.1*pbin[0]*binsize[0]*w[0]*0.5;
+  MaxMove[1] = 0.1*pbin[1]*binsize[1]*w[1]*0.5;
+  MaxMove[2] = 0.1*pbin[2]*binsize[2]*w[2]*0.5;
+a73 1
+  // calculate atom move
+d75 3
+a77 3
+  Boost[0] = gausslc(Seed);
+  Boost[1] = gausslc(Seed);
+  Boost[2] = gausslc(Seed);
+d79 2
+d84 1
+a84 2
+void Move::Setup(int movemethod,int movetype,vector<int> movetypetable,
+		 int lengthtypetable)
+d94 1
+a94 1
+      SizeTypeTable = lengthtypetable;
+d105 1
+a105 1
+void Move::ProposeMove(int MoveType)
+d107 7
+a113 4
+  if (MoveType == 0)
+    {
+      
+    }
+d116 3
+d133 2
+a136 27
+
+
+void Move::CheckPBC(double x[3],const Box *b)
+{
+  // Assumed PBC only
+  int i;
+  double xx[3],X[3];
+  xx[0] = x[0]; xx[1] = x[1]; xx[2] = x[2];
+  i = 0; X[0] = b->Fractional(i,xx);
+  i = 1; X[1] = b->Fractional(i,xx);
+  i = 2; X[2] = b->Fractional(i,xx);
+  
+  if(X[0]<0.0) X[0] += 1.0;
+  if(X[1]<0.0) X[1] += 1.0;
+  if(X[2]<0.0) X[2] += 1.0;
+
+  if(X[0]>1.0) X[0] -= 1.0;
+  if(X[1]>1.0) X[1] -= 1.0;
+  if(X[2]>1.0) X[2] -= 1.0;
+
+
+  b->InverseFractional(X,x);
+}
+
+
+
+
+@
+
+
+1.1.6.1.2.2
+log
+@Correct a few things.
+@
+text
+@a66 6
+
+#include "particle.h"
+#include "bin.h"
+#include "binlist.h"
+#include "octant.h"
+#include "octantlist.h"
+d79 1
+a79 1
+void Move::Setup()
+d81 8
+d94 1
+d97 1
+a148 2
+
+  double X[3];
+d150 6
+a155 4
+  i = 0;X[0] = b->Fractional(i,x);
+  i = 1;X[1] = b->Fractional(i,x);
+  i = 2;X[2] = b->Fractional(i,x);
+
+d164 1
+a167 41
+void Move::MoveParticle(OctantList* ol,const Box *b,Comm *comm)
+{
+  //octant a: 
+  int n = 0;
+  double x[3];
+
+  vector <Bin *> binlist;
+  binlist = ol->octants[n].get_my_binlist();
+
+  if (comm->get_Lnodefile()) 
+    comm->get_nodefile() << "in MoveParticle: " << binlist.size() << "\n";
+
+  // each proc moves its particles for a given octant (0)
+  //for (int i = 0; i < binlist.size(); i++)
+  
+  int i = 10 ;
+    {
+      int partsize = binlist[i]->particles.size();
+      if (comm->get_Lnodefile()) comm->get_nodefile() << partsize << endl;
+
+      for (int j = 0; j < partsize; j++)
+	{
+	  binlist[i]->particles[j].get_x(x);
+	  if (comm->get_Lnodefile()) 
+	   comm->get_nodefile() << x[0] << "\t" << x[1] << "\t" << x[2] << endl;
+ 
+	  
+	      x[0] += Boost[0];
+	      x[1] += Boost[1];
+	      x[2] += Boost[2];
+	      CheckPBC(x,b);
+	      binlist[i]->particles[j].set_x(x);	
+	}
+    }
+
+  if (comm->get_Lnodefile()) 
+    comm->get_nodefile() << "\n\n";
+
+}
+
+
+@
+
+
+1.1.6.1.2.3
+log
+@Add a pointer to particle instead of an array of particle.
+
+Bug in particles coordinates.
+@
+text
+@a167 1
+  int id;
+d175 4
+a178 2
+  // each proc moves its particles for a given octant (0 here for the moment)
+  for (int i = 0; i < binlist.size(); i++)
+d180 2
+a181 2
+      int partsize = binlist[i]->get_nparticles();
+      //if (comm->get_Lnodefile()) comm->get_nodefile() << partsize << endl;
+d185 4
+a188 9
+	  binlist[i]->get_particles()[j]->get_x(x);
+	  id = binlist[i]->get_id();
+	  if (comm->get_Lnodefile())
+	   {
+	     comm->get_nodefile() << id << "\t" << binlist[i]->get_binx() << "\t"
+				  <<  binlist[i]->get_biny() << "\t"
+				  <<  binlist[i]->get_binz() << "\t\t";
+	     comm->get_nodefile() << x[0] << "\t" << x[1] << "\t" << x[2] << endl;
+	   }
+d190 5
+a194 5
+	  //x[0] += Boost[0];
+	  //x[1] += Boost[1];
+	  //x[2] += Boost[2];
+	  //CheckPBC(x,b);
+	  //binlist[i]->particles[j].set_x(x);	
+@
+
+
+1.1.6.1.2.4
+log
+@Latest additions to Monte Carlo branch
+@
+text
+@d180 2
+a181 4
+      id = binlist[i]->get_id();
+      comm->get_nodefile() << "Bin " << id << "\t" << binlist[i]->get_binx() << "\t"
+			   <<  binlist[i]->get_biny() << "\t"
+			   <<  binlist[i]->get_binz() << "\n";
+d185 1
+d188 4
+a191 2
+	     comm->get_nodefile() << binlist[i]->get_particles()[j]->get_tag() << "\t" << 
+	       x[0] << "\t" << x[1] << "\t" << x[2] << endl;
+@
+
+
+1.1.6.1.2.5
+log
+@Correct a few bugs.
+Segmentation fault when domain is not squared.
+@
+text
+@d181 3
+a183 1
+
+d187 11
+a197 5
+	  x[0] += Boost[0];
+	  x[1] += Boost[1];
+	  x[2] += Boost[2];
+	  CheckPBC(x,b);
+	  binlist[i]->particles[j]->set_x(x);	
+d200 4
+@
+
+
+1.1.6.1.2.6
+log
+@Latest additions to Monaco branch
+@
+text
+@d166 1
+a166 1
+  int n = 1;
+@
+
+
+1.1.6.1.2.7
+log
+@Tweaked Monaco branch
+@
+text
+@d89 3
+a91 9
+//   Boost[0] = gausslc(Seed);
+//   Boost[1] = gausslc(Seed);
+//   Boost[2] = gausslc(Seed);
+  Boost[0] = 0.0001;
+  Boost[1] = 0.0001;
+  Boost[2] = 0.0001;
+  //  Boost[0] = 10.0;
+  //  Boost[1] = 10.0;
+  //  Boost[2] = 10.0;
+@
+
+
+1.1.6.1.2.8
+log
+@Bin Communication fixed
+@
+text
+@a58 1
+#include "particle.h"
+a59 1
+#include "particlelist_inline.h"
+d183 4
+d188 10
+a197 14
+  // This section needs to be redone with new Bin::particles data structure
+//   for (int i = 0; i < binlist.size(); i++) {
+//     int partsize = binlist[i]->get_nparticles();
+//     id = binlist[i]->get_id();
+    
+//     for (int j = 0; j < partsize; j++) {
+//       binlist[i]->get_particles()[j]->get_x(x);
+//       x[0] += Boost[0];
+//       x[1] += Boost[1];
+//       x[2] += Boost[2];
+//       CheckPBC(x,b);
+//       binlist[i]->particles[j]->set_x(x);	
+//     }
+//   }
+@
+
+
+1.1.6.1.2.9
+log
+@Added EAM energy change calculation
+@
+text
+@d121 1
+@
+
+
+1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a0 120
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+// Added saubry (02-28-05)
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "move.h"
+#include "constants.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+Move::Move()
+{
+  // initialization
+  MoveMethod = 0;
+
+  Boost.resize(3);
+  Boost[0] = 1.0;
+  Boost[1] = 1.0;
+  Boost[2] = 1.0;
+
+  Seed = 12345;
+  MaxMove = 1.0;
+}
+
+
+void Move::Setup(int movemethod,int movetype,vector<int> movetypetable,int lenghttypetable)
+{
+  MoveMethod = movemethod;
+
+  if (MoveMethod == 1)
+    {
+      MoveType   = movetype;
+    }
+  else if (MoveMethod > 1)
+    {
+      SizeTypeTable = lenghttypetable;
+      MoveTypeTable.resize(SizeTypeTable);
+      for (int i = 0;i<SizeTypeTable;i++) 
+	{
+	  MoveTypeTable[i] = movetypetable[i];
+	  ProposeMove(MoveTypeTable);
+	}
+    }
+  
+}
+
+void Move::ProposeMove()
+{
+  // rand() returns a number between 0 and RAND_MAX
+
+  srand( (unsigned)Seed );
+
+  Boost[0] = (rand()/(RAND_MAX*1.0) -.5)*MaxMove;
+  Boost[1] = (rand()/(RAND_MAX*1.0) -.5)*MaxMove;
+  Boost[2] = (rand()/(RAND_MAX*1.0) -.5)*MaxMove;
+}
+
+void Move::ProposeMove(int MoveType)
+{}
+
+
+void Move::ProposeMove(vector <int> MoveTypeTable)
+{}
+
+void Move::Run() 
+{
+  if (MoveMethod == 1)
+    {
+      ProposeMove(MoveType);
+    }
+  else if (MoveMethod > 1)
+    {
+      ProposeMove(MoveTypeTable);
+    }
+  else
+    ProposeMove();
+
+}
+@
+
+
+1.1.2.1
+log
+@Add move class.
+Start setting  up P-Monaco.
+
+Sylvie Aubry (03-01-05).
+@
+text
+@a0 120
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+// Added saubry (02-28-05)
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "move.h"
+#include "constants.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+Move::Move()
+{
+  // initialization
+  MoveMethod = 0;
+
+  Boost.resize(3);
+  Boost[0] = 1.0;
+  Boost[1] = 1.0;
+  Boost[2] = 1.0;
+
+  Seed = 12345;
+  MaxMove = 1.0;
+}
+
+
+void Move::Setup(int movemethod,int movetype,vector<int> movetypetable,int lenghttypetable)
+{
+  MoveMethod = movemethod;
+
+  if (MoveMethod == 1)
+    {
+      MoveType   = movetype;
+    }
+  else if (MoveMethod > 1)
+    {
+      SizeTypeTable = lenghttypetable;
+      MoveTypeTable.resize(SizeTypeTable);
+      for (int i = 0;i<SizeTypeTable;i++) 
+	{
+	  MoveTypeTable[i] = movetypetable[i];
+	  ProposeMove(MoveTypeTable);
+	}
+    }
+  
+}
+
+void Move::ProposeMove()
+{
+  // rand() returns a number between 0 and RAND_MAX
+
+  srand( (unsigned)Seed );
+
+  Boost[0] = (rand()/(RAND_MAX*1.0) -.5)*MaxMove;
+  Boost[1] = (rand()/(RAND_MAX*1.0) -.5)*MaxMove;
+  Boost[2] = (rand()/(RAND_MAX*1.0) -.5)*MaxMove;
+}
+
+void Move::ProposeMove(int MoveType)
+{}
+
+
+void Move::ProposeMove(vector <int> MoveTypeTable)
+{}
+
+void Move::Run() 
+{
+  if (MoveMethod == 1)
+    {
+      ProposeMove(MoveType);
+    }
+  else if (MoveMethod > 1)
+    {
+      ProposeMove(MoveTypeTable);
+    }
+  else
+    ProposeMove();
+
+}
+@
+

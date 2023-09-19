@@ -1,0 +1,576 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.6.2.0.2
+	Root-of-Monaco_Aidan:1.1.6.2
+	Monaco:1.1.0.6
+	PreMonaco:1.1
+	PMONACO:1.1.0.4
+	P_MonacoSource:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.04.07.00.04.52;	author saubry;	state dead;
+branches
+	1.1.2.1
+	1.1.4.1
+	1.1.6.1;
+next	;
+
+1.1.2.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.04.12.16.31.04;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2005.04.12.22.58.05;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.6.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	1.1.6.2;
+
+1.1.6.2
+date	2005.05.10.23.31.54;	author saubry;	state Exp;
+branches
+	1.1.6.2.2.1;
+next	;
+
+1.1.6.2.2.1
+date	2005.07.08.23.16.36;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.2;
+
+1.1.6.2.2.2
+date	2005.07.20.23.18.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.3;
+
+1.1.6.2.2.3
+date	2005.07.28.23.17.30;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.4;
+
+1.1.6.2.2.4
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.5;
+
+1.1.6.2.2.5
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.6;
+
+1.1.6.2.2.6
+date	2005.11.01.21.17.20;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.7;
+
+1.1.6.2.2.7
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	1.1.6.2.2.8;
+
+1.1.6.2.2.8
+date	2006.02.06.19.15.25;	author athomps;	state Exp;
+branches;
+next	1.1.6.2.2.9;
+
+1.1.6.2.2.9
+date	2006.02.08.23.43.02;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file bin.h was initially added on branch P_MonacoSource.
+@
+text
+@@
+
+
+1.1.6.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 98
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef BIN_H
+#define BIN_H
+
+#include <vector>
+using namespace std;
+
+class Bin
+{
+ public:
+  Bin();
+  
+  std::vector<Particle> particles;
+
+ protected: 
+  int id;
+  int binx,biny,binz; // coordinates in the bin grid.
+  int ghost;
+  double binregion[6];
+
+  
+  vector<Particle>:: iterator part_i;
+  vector<Bin *>::iterator nbr_bin_i;
+  vector<Bin *> neighbors;  // neighbors of a given bin
+
+ public:
+  inline void set_id(int i){id = i;};
+  inline void set_binx(int ix) {binx = ix;};
+  inline void set_biny(int iy) {biny = iy;};
+  inline void set_binz(int iz) {binz = iz;};
+  inline void set_ghost(int i) {ghost = i;};
+
+  inline void set_binregion(double in[6]){
+    for (int i=0;i<6;i++) binregion[i] = in[i];
+  };
+
+  void set_nbrs(vector <Bin *>);
+
+ public:
+  int get_id()   {return id;};
+  int get_binx() {return binx;};
+  int get_biny() {return biny;};
+  int get_binz() {return binz;}; 
+  int get_ghost() {return ghost;};
+
+  inline void get_binregion(double fcb[6]) {
+    for (int i = 0; i < 6; i++) fcb[i] = binregion[i];
+  };
+
+  vector<Bin *> get_nbrs(){return neighbors;};
+ 
+};
+
+#endif
+@
+
+
+1.1.6.2
+log
+@Alex's algorithm implemented. Need more checks in parallel
+@
+text
+@d62 1
+d64 1
+d75 1
+d88 1
+@
+
+
+1.1.6.2.2.1
+log
+@Implement correctly bin and ghost bin lists
+@
+text
+@a62 1
+  int perbin;
+a72 1
+  inline void set_perbin(int ip) {perbin = ip;};
+a84 1
+  int get_perbin() {return perbin;}
+@
+
+
+1.1.6.2.2.2
+log
+@Implementation of 2 routines:
+1./ Return ghost bins of an octant on the proc. of that octant.
+2./ Return bins of a given translated region.
+@
+text
+@d63 1
+a63 1
+  int ghostbin;
+d74 1
+a74 1
+  inline void set_ghostbin(int ip) {ghostbin = ip;};
+d87 1
+a87 1
+  int get_ghostbin() {return ghostbin;}
+@
+
+
+1.1.6.2.2.3
+log
+@Implemented tools for bins lists:
+  - intersection
+  - union
+  - copy constructor
+
+Created a new class:  BinTools.
+Tested these tools.
+
+Seems to work ok in serial and parallel.
+@
+text
+@d56 2
+a57 2
+  Bin(const Bin&);
+  vector<Particle> particles;
+@
+
+
+1.1.6.2.2.4
+log
+@Correct several bugs
+@
+text
+@d54 5
+d64 1
+a64 2
+
+ protected:
+a69 7
+  vector<Particle> particles;
+
+ public:
+  Bin();
+  Bin(const Bin&);
+
+ public:
+a75 2
+  void set_particles(const Particle part);
+
+a88 3
+  void get_particles(vector<Particle*> part){
+    for (int i = 0; i < particles.size(); i++) part[i] = &particles[i];};
+
+@
+
+
+1.1.6.2.2.5
+log
+@Correct a few things.
+@
+text
+@d61 1
+d66 1
+a66 1
+  vector<Particle > particles;
+@
+
+
+1.1.6.2.2.6
+log
+@Add a pointer to particle instead of an array of particle.
+
+Bug in particles coordinates.
+@
+text
+@d65 1
+a65 1
+  vector<Particle *> particles;
+d78 1
+a78 1
+  void set_particles(Particle *);
+d93 2
+a94 2
+  int get_nparticles() {return particles.size();};
+  vector <Particle *> get_particles(){return particles;};
+@
+
+
+1.1.6.2.2.7
+log
+@Bin Communication fixed
+@
+text
+@d65 1
+a65 1
+  vector<int> particles;
+d78 1
+a78 1
+  void set_particles(const int&);
+d94 1
+a94 2
+  //  vector <Particle *> get_particles(){return particles;};
+  const int* get_particles() const {return &particles[0];};
+d96 1
+a96 1
+  inline void get_binregion(double fcb[6]) const {
+@
+
+
+1.1.6.2.2.8
+log
+@Added in bin reallocation in montecarlo.cpp
+@
+text
+@a96 2
+  void clear_particles() {particles.clear();};
+
+@
+
+
+1.1.6.2.2.9
+log
+@Added bin-based energy calc
+@
+text
+@d93 1
+a93 1
+  int get_nparticles() const {return particles.size();};
+d103 1
+a103 1
+  vector<Bin *> get_nbrs() const {return neighbors;};
+@
+
+
+1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a0 78
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#ifndef BIN_H
+#define BIN_H
+
+#include <vector>
+using namespace std;
+
+class Bin
+{
+ public:
+  Bin();
+  
+  std::vector<Particle> particles;
+
+ protected: 
+  int id;
+  int binx,biny,binz; // coordinates in the bin grid.
+  
+  vector<Particle>:: iterator part_i;
+  vector<Bin *>::iterator nbr_bin_i;
+  vector<Bin > neighbors;  // neighbors of a given bin
+  
+  double binregion[6];
+
+ public:
+  inline void set_id(int i){id = i;};
+  inline void set_binx(int ix) {binx = ix;};
+  inline void set_biny(int iy) {biny = iy;};
+  inline void set_binz(int iz) {binz = iz;};
+
+  inline void set_binregion(double in[6]){
+    for (int i=0;i<6;i++) binregion[i] = in[i];
+  };
+
+  void set_nbrs(int []);
+
+ public:
+  int get_id()   {return id;};
+  int get_binx() {return binx;};
+  int get_biny() {return biny;};
+  int get_binz() {return binz;}; 
+  inline void get_binregion(double fcb[6]) {
+    for (int i = 0; i < 6; i++) fcb[i] = binregion[i];
+  };
+
+  vector<Bin > get_nbrs(){return neighbors;};
+ 
+};
+
+#endif
+@
+
+
+1.1.2.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a0 79
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#ifndef BIN_H
+#define BIN_H
+
+#include <vector>
+using namespace std;
+
+class Bin
+{
+ public:
+  Bin();
+  
+  std::vector<Particle> particles;
+
+ protected: 
+  int id;
+  int binx,biny,binz; // coordinates in the bin grid.
+  
+  vector<Particle>:: iterator part_i;
+  vector<Bin *>::iterator nbr_bin_i;
+  vector<Bin *> neighbors;  // neighbors of a given bin
+  
+  double binregion[6];
+
+ public:
+  inline void set_id(int ident){id = ident;};
+  inline void set_binx(int ix) {binx = ix;};
+  inline void set_biny(int iy) {biny = iy;};
+  inline void set_binz(int iz) {binz = iz;};
+
+  inline void set_binregion(double in[6]){
+    for (int i=0;i<6;i++) binregion[i] = in[i];
+  };
+
+  inline void set_nbrs(vector<Bin *> nbrs){
+    for (int i=0;i<26;i++) neighbors[i] = nbrs[i];};
+
+ public:
+  int get_id()   {return id;};
+  int get_binx() {return binx;};
+  int get_biny() {return biny;};
+  int get_binz() {return binz;}; 
+  inline void get_binregion(double fcb[6]) {
+    for (int i = 0; i < 6; i++) fcb[i] = binregion[i];
+  };
+
+  vector<Bin *> get_nbrs(){return neighbors;};
+  
+};
+
+#endif
+@
+
+
+1.1.2.2
+log
+@Correct binparticles routine.
+Add map index.
+
+saubry 04-12-05
+@
+text
+@d54 1
+a54 1
+  inline void set_id(int i){id = i;};
+@
+
+

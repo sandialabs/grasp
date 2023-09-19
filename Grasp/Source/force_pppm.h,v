@@ -1,0 +1,449 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.1.0.6
+	ADTools_branch:4.1.0.4
+	PPPM_Crozier2:4.1.0.2
+	PPPM_Crozier:4.1
+	Root-of-PPPM_Crozier:4.1;
+locks; strict;
+comment	@ * @;
+
+
+4.4
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.1.2.1
+	4.1.6.1;
+next	;
+
+4.1.2.1
+date	2005.06.16.22.23.41;	author pscrozi;	state Exp;
+branches;
+next	4.1.2.2;
+
+4.1.2.2
+date	2005.06.16.22.48.56;	author athomps;	state Exp;
+branches;
+next	4.1.2.3;
+
+4.1.2.3
+date	2005.06.20.22.19.05;	author pscrozi;	state Exp;
+branches;
+next	4.1.2.4;
+
+4.1.2.4
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.1.2.5;
+
+4.1.2.5
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	4.1.2.6;
+
+4.1.2.6
+date	2005.06.22.17.44.58;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.1.6.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCE_PPPM_H
+#define FORCE_PPPM_H
+
+class Particle_Types;
+class Box;
+
+// Data structure for electrostatic force field
+// using PPPM method.
+class Force_PPPM: public ForceField {
+ public:
+  // enum class for force field types
+  enum ForceFieldTypes {standard};
+ private:
+  vector<int> kxvecs,kyvecs,kzvecs;
+  // Arrays for pre-computed PPPM coefficients
+  vector<double> ug;
+  vector<double*> eg,vg;
+  // Array for electric field at each atom
+  vector<double*> ek;
+  // Arrays for total structure factor
+  vector<double> sfacrl,sfacim,sfacrl_all,sfacim_all;
+  // Arrays for structure factor for each particle
+  vector<double**> cs,sn;
+  double g_ewald,precision,realspace_cutoff,gsqmx;
+  double volume,uc_wh,uc_wk,uc_wl;
+  double unitk[3];
+  int kmax,maxlocal,kcount,kmax3d;
+  int nparticles;
+  double prefactor;
+
+ public:
+
+  Force_PPPM(const string);
+  ~Force_PPPM();
+
+  int get_entry(const int&, const int&) const;
+
+  // We need to inline this so that an entry in Vtable is created
+  void SetupCutNeighSq(const double&, Comm*){};
+  void ReadInteractions(Comm*);
+  void SetupInteractions(const Box*, const double&, Comm*);
+  void force_standard(const double[], const double[],
+		      const double&, const double&,
+		    double[], double&,
+		    const int&) const;
+  void eik_dot_r();
+  void Coeffs();
+  void SetupKSpace(const ParticleList*, const Box*, Comm*);
+  void allocate_karrays();
+  void deallocate_karrays();
+  void allocate_narrays();
+  void deallocate_narrays();
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+		  const Box*, Comm*);
+
+  void SetupNeighbor(const string&, const int&,const double&, 
+                        double&, double&, const Box*, Comm*);
+  void Compute(const bool&, const bool&, ParticleList*, Comm*);
+  void Eik_dot_r(ParticleList*);
+  void SetupTypes(const ParticleTypeList*);
+  double get_g_ewald() const;
+};
+
+#endif
+
+@
+
+
+4.3
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@a101 2
+  void Neighboring(ParticleList*, 
+			int*, const Box*, Comm*);
+@
+
+
+4.2
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d105 1
+a105 1
+                        double&, const Box*, Comm*);
+@
+
+
+4.1
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d98 2
+a99 1
+  void ApplyForce(const bool&, const bool&, ParticleList*, 
+@
+
+
+4.1.6.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d98 1
+a98 2
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+@
+
+
+4.1.2.1
+log
+@latest additions to the PPPM FF
+@
+text
+@a45 2
+// from force_ewald.h in GRASP
+
+d69 2
+a70 2
+  double realspace_cutoff,gsqmx;
+  double uc_wh,uc_wk,uc_wl;
+d72 1
+a72 1
+  int kmax,kcount,kmax3d;
+a75 68
+// from kspace.h in LAMMPS
+
+  double energy;
+  double virial[6];
+
+  double g_ewald;
+  double slab_volfactor;
+  int gridflag;
+  int nx_pppm,ny_pppm,nz_pppm;
+  int order;
+  int slabflag;
+
+// from pppm.h in LAMMPS
+    
+  int me,nprocs;
+  double PI;
+  double precision;
+  int nfactors;
+  int *factors;
+  double qsum,qsqsum;
+  double qqrd2e;
+  double cutoff;
+  double volume;
+  double delxinv,delyinv,delzinv,delvolinv;
+  double shift,shiftone;
+
+  int nxlo_in,nylo_in,nzlo_in,nxhi_in,nyhi_in,nzhi_in;
+  int nxlo_out,nylo_out,nzlo_out,nxhi_out,nyhi_out,nzhi_out;
+  int nxlo_ghost,nxhi_ghost,nylo_ghost,nyhi_ghost,nzlo_ghost,nzhi_ghost;
+  int nxlo_fft,nylo_fft,nzlo_fft,nxhi_fft,nyhi_fft,nzhi_fft;
+  int nlower,nupper;
+  int ngrid,nfft,nbuf,nfft_both;
+
+  double ***density_brick;
+  double ***vdx_brick,***vdy_brick,***vdz_brick;
+  double *greensfn;
+//  double **vg;
+  double *fkx,*fky,*fkz;
+  double *density_fft;
+  double *work1,*work2;
+  double *buf1,*buf2;
+
+  double *gf_b;
+  double **rho1d,**rho_coeff;
+
+//  FFT3d *fft1,*fft2;
+//  Remap *remap;
+
+  int **part2grid;                    // storage for particle -> grid mapping
+  int maxlocal;
+
+//  void set_grid();
+//  void allocate();
+//  void deallocate();
+  int factorable(int);
+//  void compute_gf_denom();
+  double gf_denom(double, double, double);
+  void particle_map();
+  void make_rho();
+  void brick2fft();
+  void fillbrick();
+  void poisson(int, int);
+  void fieldforce();
+//  void procs2grid2d(int,int,int,int *, int*);
+  void compute_rho1d(double, double, double);
+//  void compute_rho_coeff();
+  void slabcorr(int);
+  
+d93 1
+a93 1
+  void SetupKSpace(ParticleList*, const Box*, Comm*);
+@
+
+
+4.1.2.2
+log
+@Added rskin to Force_PPPM
+@
+text
+@a128 3
+  // neighboring rskin distance needed for pppm setup
+  double rskin;
+
+a178 1
+  double set_rskin(const double&);
+@
+
+
+4.1.2.3
+log
+@latest version of PPPM for Grasp
+@
+text
+@d46 2
+a52 3
+class Memory;
+class FFT3d;
+class Remap;
+d61 10
+d74 1
+d98 1
+d114 1
+a114 1
+  double **vg;
+d123 2
+a124 2
+  FFT3d *fft1,*fft2;
+  Remap *remap;
+d129 6
+a134 2
+  void allocate();
+  void deallocate();
+d136 1
+a136 1
+  void compute_gf_denom();
+d138 7
+a144 7
+  void particle_map(ParticleList*, const Box*);
+  void make_rho(ParticleList*, const Box*);
+  void brick2fft(Comm*);
+  void fillbrick(Comm*);
+  void poisson(const bool&, const bool&);
+  void fieldforce(ParticleList*, const Box*);
+  void procs2grid2d(int,int,int,int *, int*);
+d146 2
+a147 4
+  void compute_rho_coeff();
+  void slabcorr(const bool&);
+
+// added variables not in PPPM of LAMMPS or original PPPM of GRASP
+a148 6
+  double rskin;
+  double dielectric;
+  double xprd,yprd,zprd;
+  Memory *memory; 
+  MPI_Comm world;
+    
+d164 2
+d167 4
+d178 2
+a179 2
+  void Compute(const bool&, const bool&, ParticleList*, 
+               const Box*, Comm*);
+a182 2
+  void set_grid();
+  void setup(const Box*);
+@
+
+
+4.1.2.4
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d152 1
+a152 1
+  void SetupInteractions(const ParticleList*, const Box*, const double&, Comm*);
+@
+
+
+4.1.2.5
+log
+@Latest PPPM version
+@
+text
+@d73 1
+d152 1
+a152 1
+  void SetupInteractions(ParticleList*, const Box*, double&, Comm*);
+d157 1
+a157 1
+  void SetupKSpace(ParticleList*, const Box*, double&, Comm*);
+d159 1
+a159 1
+		  const Box*, double&, Comm*);
+d166 1
+a166 1
+               const Box*, double& g_ewald, Comm*);
+d168 1
+d170 2
+a171 1
+  void set_grid(double&);
+@
+
+
+4.1.2.6
+log
+@latest version of PPPM
+@
+text
+@a151 1
+  void SetupPPPM(ParticleList*, const Box*, double&, Comm*);
+@
+
+

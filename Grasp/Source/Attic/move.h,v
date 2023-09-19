@@ -1,0 +1,335 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.6.1.0.2
+	Root-of-Monaco_Aidan:1.1.6.1
+	Monaco:1.1.0.6
+	PreMonaco:1.1
+	PMONACO:1.1.0.4
+	P_MonacoSource:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.03.01.19.00.53;	author saubry;	state dead;
+branches
+	1.1.2.1
+	1.1.4.1
+	1.1.6.1;
+next	;
+
+1.1.2.1
+date	2005.03.01.19.00.53;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2005.04.12.22.58.05;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.6.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches
+	1.1.6.1.2.1;
+next	;
+
+1.1.6.1.2.1
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.6.1.2.2;
+
+1.1.6.1.2.2
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file move.h was initially added on branch P_MonacoSource.
+@
+text
+@@
+
+
+1.1.6.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 74
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+
+// added saubry (02-28-05)
+#ifndef MOVE_H
+#define MOVE_H
+
+class Move 
+{
+ public:
+  int MoveMethod;
+  int Seed;
+  double MaxMove;
+  vector <double> Boost;
+
+  int MoveType;
+  int SizeTypeTable;
+  vector <int> MoveTypeTable;
+
+ public:
+  Move();
+  void Setup(int,int,vector<int>,int);
+  void Run();
+  
+ protected:
+  void ProposeMove();
+  void ProposeMove(int);
+  void ProposeMove(vector <int>);
+};
+  
+#endif
+@
+
+
+1.1.6.1.2.1
+log
+@Correct several bugs
+@
+text
+@d56 1
+a56 1
+  double MaxMove[3];
+a64 1
+  void Setup(const Box*,int [3], double [3]);
+a66 6
+
+  void get_Boost(double b[3]){
+  for(int i=0;i<3; i++) b[i] = Boost[i];};
+
+  void get_MaxMove(double mm[3]){
+    for (int i=0;i<3;i++) mm[i] = MaxMove[i];};
+a67 2
+  void CheckPBC(double [3],const Box *);
+
+d69 1
+a72 1
+
+a74 11
+
+
+
+
+
+
+
+
+
+
+
+@
+
+
+1.1.6.1.2.2
+log
+@Correct a few things.
+@
+text
+@d65 1
+a65 1
+  void Setup();
+a66 1
+	      
+a68 4
+  void CheckPBC(double [3],const Box *);
+  void MoveParticle(OctantList*,const Box*,Comm* comm);
+
+ public:
+d75 2
+@
+
+
+1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a0 58
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+
+// added saubry (02-28-05)
+#ifndef MOVE_H
+#define MOVE_H
+
+class Move 
+{
+ public:
+  int MoveMethod;
+  int Seed;
+  double MaxMove;
+  vector <double> Boost;
+
+  int MoveType;
+  int SizeTypeTable;
+  vector <int> MoveTypeTable;
+
+ public:
+  Move();
+  void Setup(int,int,vector<int>,int);
+  void Run();
+  
+ protected:
+  void ProposeMove();
+  void ProposeMove(int);
+  void ProposeMove(vector <int>);
+};
+  
+#endif
+@
+
+
+1.1.2.1
+log
+@Add move class.
+
+Sylvie Aubry (03-01-05).
+@
+text
+@a0 58
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+
+// added saubry (02-28-05)
+#ifndef MOVE_H
+#define MOVE_H
+
+class Move 
+{
+ public:
+  int MoveMethod;
+  int Seed;
+  double MaxMove;
+  vector <double> Boost;
+
+  int MoveType;
+  int SizeTypeTable;
+  vector <int> MoveTypeTable;
+
+ public:
+  Move();
+  void Setup(int,int,vector<int>,int);
+  void Run();
+  
+ protected:
+  void ProposeMove();
+  void ProposeMove(int);
+  void ProposeMove(vector <int>);
+};
+  
+#endif
+@
+

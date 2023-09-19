@@ -1,0 +1,1686 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.3;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2005.03.24.21.11.35;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.03.12.01.55.31;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.03.11.18.06.31;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@/home/athomps/Grasp/Testing/testf_mix/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /home/athomps/Grasp/Testing/testf_mix/
+PATH_MAX is 4096
+
+
+
+Entering Input::ReadInput()
+forcefield threebody threebodyaaa.in SW-AAA
+forcefield threebody threebodyaab.in SW-AAB
+forcefield threebody threebodyaac.in SW-AAC
+forcefield threebody threebodyabb.in SW-ABB
+forcefield threebody threebodyabc.in SW-ABC
+forcefield threebody threebodyacc.in SW-ACC
+forcefield threebody threebodybaa.in SW-BAA
+forcefield threebody threebodybab.in SW-BAB
+forcefield threebody threebodybac.in SW-BAC
+forcefield threebody threebodybbb.in SW-BBB
+forcefield threebody threebodybbc.in SW-BBC
+forcefield threebody threebodybcc.in SW-BCC
+forcefield threebody threebodycaa.in SW-CAA
+forcefield threebody threebodycab.in SW-CAB
+forcefield threebody threebodycac.in SW-CAC
+forcefield threebody threebodycbb.in SW-CBB
+forcefield threebody threebodycbc.in SW-CBC
+forcefield threebody threebodyccc.in SW-CCC
+timestep 0.0100000000
+nsteps 100
+box dimensions	0.0000000000	10.4000000000	10.4000000000 \
+			10.4000000000	0.0000000000	10.4000000000 \
+			10.4000000000	10.4000000000	0.0000000000
+box origin	0.0000000000	0.0000000000	0.0000000000
+initialize temperature 0.0000000000 256
+thermo 100
+neighbor bin 10 0.1000000000
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 3
+A 10.0000000000
+B 10.0000000000
+C 10.0000000000
+
+
+
+Reading SW-AAA from file threebodyaaa.in
+
+
+
+Reading SW-AAB from file threebodyaab.in
+
+
+
+Reading SW-AAC from file threebodyaac.in
+
+
+
+Reading SW-ABB from file threebodyabb.in
+
+
+
+Reading SW-ABC from file threebodyabc.in
+
+
+
+Reading SW-ACC from file threebodyacc.in
+
+
+
+Reading SW-BAA from file threebodybaa.in
+
+
+
+Reading SW-BAB from file threebodybab.in
+
+
+
+Reading SW-BAC from file threebodybac.in
+
+
+
+Reading SW-BBB from file threebodybbb.in
+
+
+
+Reading SW-BBC from file threebodybbc.in
+
+
+
+Reading SW-BCC from file threebodybcc.in
+
+
+
+Reading SW-CAA from file threebodycaa.in
+
+
+
+Reading SW-CAB from file threebodycab.in
+
+
+
+Reading SW-CAC from file threebodycac.in
+
+
+
+Reading SW-CBB from file threebodycbb.in
+
+
+
+Reading SW-CBC from file threebodycbc.in
+
+
+
+Reading SW-CCC from file threebodyccc.in
+
+
+
+Setting up force field class 1 called SW-AAA
+
+id1	id2	id3	t 	n       p            p            p            p     
+A	A	A	0	15        3.771        2.514      -0.3333        4393.        8786.        14.22        4.000        0.000        2.095    6.845e+04        0.000    3.585e+04        3090.    1.711e+04        1475.
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-AAB
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+A	A	B	0	6        3.771        2.514      -0.3333        4414.        8828.        14.22
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,B)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-AAC
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+A	A	C	0	6        3.771        2.514      -0.3333        4435.        8870.        14.22
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,C)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-ABB
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,A,B)
+****************************************************
+A	B	B	0	15        3.771        2.514      -0.3333        4456.        8912.        14.22        4.000        0.000        2.095    6.943e+04        0.000    3.637e+04        3134.    1.736e+04        1496.
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,B)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-ABC
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,A,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,A,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,B)
+****************************************************
+A	B	C	0	6        3.771        2.514      -0.3333        4477.        8954.        14.22
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,B,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,C)
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-ACC
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,A,C)
+****************************************************
+A	C	C	0	15        3.771        2.514      -0.3333        4498.        8996.        14.22        4.000        0.000        2.095    7.008e+04        0.000    3.671e+04        3164.    1.752e+04        1510.
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,C)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-BAA
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,B,A)
+****************************************************
+B	A	A	0	15        3.771        2.514      -0.3333        4519.        9038.        14.22        4.000        0.000        2.095    7.041e+04        0.000    3.688e+04        3178.    1.760e+04        1517.
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,A)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-BAB
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+B	B	A	0	6        3.771        2.514      -0.3333        4540.        9080.        14.22
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,A)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-BAC
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,B,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,B,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,A)
+****************************************************
+B	A	C	0	6        3.771        2.514      -0.3333        4561.        9122.        14.22
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,A,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,C)
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-BBB
+
+id1	id2	id3	t 	n       p            p            p            p     
+B	B	B	0	15        3.771        2.514      -0.3333        4582.        9164.        14.22        4.000        0.000        2.095    7.139e+04        0.000    3.739e+04        3223.    1.785e+04        1538.
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-BBC
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+B	B	C	0	6        3.771        2.514      -0.3333        4603.        9206.        14.22
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,C)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-BCC
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,B,C)
+****************************************************
+B	C	C	0	15        3.771        2.514      -0.3333        4624.        9248.        14.22        4.000        0.000        2.095    7.205e+04        0.000    3.774e+04        3252.    1.801e+04        1552.
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,C)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-CAA
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,C,A)
+****************************************************
+C	A	A	0	15        3.771        2.514      -0.3333        4645.        9290.        14.22        4.000        0.000        2.095    7.237e+04        0.000    3.791e+04        3267.    1.809e+04        1559.
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,A)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-CAB
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,C,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,C,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,A)
+****************************************************
+C	A	B	0	6        3.771        2.514      -0.3333        4666.        9332.        14.22
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,A,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,A,B)
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-CAC
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+C	C	A	0	6        3.771        2.514      -0.3333        4687.        9374.        14.22
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,A,A)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (A,C,A)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-CBB
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,C,B)
+****************************************************
+C	B	B	0	15        3.771        2.514      -0.3333        4708.        9416.        14.22        4.000        0.000        2.095    7.336e+04        0.000    3.842e+04        3311.    1.834e+04        1581.
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,B)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-CBC
+
+id1	id2	id3	t 	n       p            p            p            p     
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+C	C	B	0	6        3.771        2.514      -0.3333        4729.        9458.        14.22
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (C,B,B)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,C)
+****************************************************
+****************************************************
+Warning: Force_Threebody::SetupInteractions:
+Missing pure entry for this cross triple
+No interaction for this cross triple (B,C,B)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Setting up force field class 1 called SW-CCC
+
+id1	id2	id3	t 	n       p            p            p            p     
+C	C	C	0	15        3.771        2.514      -0.3333        4750.        9500.        14.22        4.000        0.000        2.095    7.401e+04        0.000    3.876e+04        3341.    1.850e+04        1595.
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Entering ParticleList::ReadConfig()
+Will not read an initial velocity file 
+Will not read an initial displacement file 
+Total particles read = 128
+
+
+
+Entering Output::Setup()
+
+
+
+Entering FixList::Setup()
+
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+SW-AAA:
+   Twobody          =    -11575.8467702696
+   Threebody        =        34.5826644721
+SW-AAB:
+   Twobody          =         0.0000000000
+   Threebody        =         9.0116714582
+SW-AAC:
+   Twobody          =         0.0000000000
+   Threebody        =        13.8280890004
+SW-ABB:
+   Twobody          =      -845.3195332967
+   Threebody        =         2.5892925563
+SW-ABC:
+   Twobody          =         0.0000000000
+   Threebody        =         1.9550161030
+SW-ACC:
+   Twobody          =      -826.6128372162
+   Threebody        =         1.5421375721
+SW-BAA:
+   Twobody          =     -4500.6690498229
+   Threebody        =         3.2823736568
+SW-BAB:
+   Twobody          =         0.0000000000
+   Threebody        =         4.6545961636
+SW-BAC:
+   Twobody          =         0.0000000000
+   Threebody        =         5.3021934514
+SW-BBB:
+   Twobody          =    -13948.0830815047
+   Threebody        =        49.0455361193
+SW-BBC:
+   Twobody          =         0.0000000000
+   Threebody        =         7.8674440979
+SW-BCC:
+   Twobody          =     -1069.0643244026
+   Threebody        =         2.0151822489
+SW-CAA:
+   Twobody          =     -5011.6471407372
+   Threebody        =         2.2665038636
+SW-CAB:
+   Twobody          =         0.0000000000
+   Threebody        =         0.6835118923
+SW-CAC:
+   Twobody          =         0.0000000000
+   Threebody        =        14.6137758729
+SW-CBB:
+   Twobody          =     -4465.6133880796
+   Threebody        =         2.7373565944
+SW-CBC:
+   Twobody          =         0.0000000000
+   Threebody        =        11.5102880718
+SW-CCC:
+   Twobody          =    -11657.6851276763
+   Threebody        =        32.9612820996
+Potential Energy    =    -53700.0923377108
+Kinetic Energy      =         0.0000000000
+Extended Energy     =         0.0000000000
+Total Energy        =    -53700.0923377108
+Pressure            =     17184.6000540758
+Temperature         =         0.0000000000
+Total Particles     =                  128
+Volume              =      2249.7280000000
+--------------- Step       100 ---- CPU =     1.3972 (sec) ---------------
+SW-AAA:
+   Twobody          =    -11583.4374716016
+   Threebody        =        33.0312043875
+SW-AAB:
+   Twobody          =         0.0000000000
+   Threebody        =         8.6554769174
+SW-AAC:
+   Twobody          =         0.0000000000
+   Threebody        =        13.2530995284
+SW-ABB:
+   Twobody          =      -845.0788082164
+   Threebody        =         2.4858440073
+SW-ABC:
+   Twobody          =         0.0000000000
+   Threebody        =         1.8753286432
+SW-ACC:
+   Twobody          =      -826.9526048365
+   Threebody        =         1.4731494818
+SW-BAA:
+   Twobody          =     -4499.4168457125
+   Threebody        =         3.1508866631
+SW-BAB:
+   Twobody          =         0.0000000000
+   Threebody        =         4.4643375448
+SW-BAC:
+   Twobody          =         0.0000000000
+   Threebody        =         5.0865307260
+SW-BBB:
+   Twobody          =    -13957.6525720150
+   Threebody        =        46.7849131424
+SW-BBC:
+   Twobody          =         0.0000000000
+   Threebody        =         7.5307750503
+SW-BCC:
+   Twobody          =     -1069.3691948351
+   Threebody        =         1.9318721611
+SW-CAA:
+   Twobody          =     -5011.4766350662
+   Threebody        =         2.1687016900
+SW-CAB:
+   Twobody          =         0.0000000000
+   Threebody        =         0.6557488134
+SW-CAC:
+   Twobody          =         0.0000000000
+   Threebody        =        13.9815972449
+SW-CBB:
+   Twobody          =     -4464.3258376031
+   Threebody        =         2.6239707410
+SW-CBC:
+   Twobody          =         0.0000000000
+   Threebody        =        11.0151737827
+SW-CCC:
+   Twobody          =    -11665.9079862148
+   Threebody        =        31.3591349030
+Potential Energy    =    -53732.0902106728
+Kinetic Energy      =        31.9978369522
+Extended Energy     =         0.0000000000
+Total Energy        =    -53700.0923737206
+Pressure            =     17178.8832266855
+Temperature         =        20.2018418058
+
+
+
+Loop time: 1.3971154163 on 2 processors for 128 particles
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    1.0416     74.55
+          Neigh Time    0.0662      4.74
+           Comm Time    0.0269      1.92
+       Exchange Time    0.0134      0.96
+        Revcomm Time    0.0627      4.49
+        Barrier Time    0.1829     13.09
+          Other Time    0.0035      0.25
+          Total Time    1.3971    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+SW-AAA                  0.1037 (   100)     0.0025 (    10) 
+SW-AAB                  0.0708 (   100)     0.0039 (    10) 
+SW-AAC                  0.0799 (   100)     0.0036 (    10) 
+SW-ABB                  0.0227 (   100)     0.0032 (    10) 
+SW-ABC                  0.0308 (   100)     0.0052 (    10) 
+SW-ACC                  0.0219 (   100)     0.0032 (    10) 
+SW-BAA                  0.0201 (   100)     0.0034 (    10) 
+SW-BAB                  0.0788 (   100)     0.0034 (    10) 
+SW-BAC                  0.0232 (   100)     0.0052 (    10) 
+SW-BBB                  0.1299 (   100)     0.0019 (    10) 
+SW-BBC                  0.0855 (   100)     0.0035 (    10) 
+SW-BCC                  0.0211 (   100)     0.0034 (    10) 
+SW-CAA                  0.0188 (   100)     0.0034 (    10) 
+SW-CAB                  0.0349 (   100)     0.0052 (    10) 
+SW-CAC                  0.0808 (   100)     0.0034 (    10) 
+SW-CBB                  0.0221 (   100)     0.0033 (    10) 
+SW-CBC                  0.0758 (   100)     0.0035 (    10) 
+SW-CCC                  0.1142 (   100)     0.0018 (    10) 
+
+
+
+Finished 
+@
+
+
+1.3
+log
+@Added a bunch of test case for mixing force fields
+@
+text
+@@
+
+
+1.2
+log
+@Changed some of the warning messages
+@
+text
+@d993 1
+a993 1
+--------------- Step       100 ---- CPU =     1.3727 (sec) ---------------
+d1057 1
+a1057 1
+Loop time: 1.3731260262 on 2 processors for 128 particles
+d1063 8
+a1070 8
+          Force Time    1.0390     75.67
+          Neigh Time    0.0661      4.81
+           Comm Time    0.0297      2.16
+       Exchange Time    0.0116      0.84
+        Revcomm Time    0.0613      4.46
+        Barrier Time    0.1619     11.79
+          Other Time    0.0036      0.26
+          Total Time    1.3731    100.00
+d1076 18
+a1093 18
+SW-AAA                  0.1034 (   100)     0.0024 (    10) 
+SW-AAB                  0.0728 (   100)     0.0036 (    10) 
+SW-AAC                  0.0823 (   100)     0.0035 (    10) 
+SW-ABB                  0.0226 (   100)     0.0033 (    10) 
+SW-ABC                  0.0314 (   100)     0.0052 (    10) 
+SW-ACC                  0.0220 (   100)     0.0033 (    10) 
+SW-BAA                  0.0206 (   100)     0.0033 (    10) 
+SW-BAB                  0.0816 (   100)     0.0034 (    10) 
+SW-BAC                  0.0241 (   100)     0.0052 (    10) 
+SW-BBB                  0.1259 (   100)     0.0019 (    10) 
+SW-BBC                  0.0859 (   100)     0.0036 (    10) 
+SW-BCC                  0.0209 (   100)     0.0033 (    10) 
+SW-CAA                  0.0184 (   100)     0.0033 (    10) 
+SW-CAB                  0.0345 (   100)     0.0055 (    10) 
+SW-CAC                  0.0817 (   100)     0.0034 (    10) 
+SW-CBB                  0.0219 (   100)     0.0033 (    10) 
+SW-CBC                  0.0722 (   100)     0.0037 (    10) 
+SW-CCC                  0.1097 (   100)     0.0018 (    10) 
+@
+
+
+1.1
+log
+@Added example of mixing threebody force fields
+@
+text
+@d121 4
+d129 1
+a129 1
+Particle id has no ff match
+a130 1
+-1 B
+d133 1
+a133 1
+Particle id has no ff match
+a134 1
+-1 C
+d140 4
+d147 1
+a147 1
+Type has no pure entry
+d151 1
+a151 1
+Type has no pure entry
+d156 2
+a157 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d161 2
+a162 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d166 2
+a167 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d171 1
+a171 1
+Particle id has no ff match
+a172 1
+-1 C
+d178 4
+d185 1
+a185 1
+Type has no pure entry
+d189 1
+a189 1
+Type has no pure entry
+d194 2
+a195 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d199 2
+a200 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d204 2
+a205 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d209 1
+a209 1
+Particle id has no ff match
+a210 1
+-1 B
+d216 4
+d223 1
+a223 1
+Type has no pure entry
+d227 1
+a227 1
+Type has no pure entry
+d231 2
+a232 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d237 2
+a238 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d242 2
+a243 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d247 1
+a247 1
+Particle id has no ff match
+a248 1
+-1 C
+d254 4
+d261 1
+a261 1
+Type has no pure entry
+d265 1
+a265 1
+Type has no pure entry
+d269 1
+a269 1
+Type has no pure entry
+d273 2
+a274 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d278 2
+a279 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d283 2
+a284 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d289 2
+a290 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d294 2
+a295 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d299 2
+a300 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d304 2
+a305 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d309 2
+a310 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d314 2
+a315 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d319 2
+a320 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d324 2
+a325 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d329 2
+a330 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d334 2
+a335 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d339 2
+a340 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d347 4
+d354 1
+a354 1
+Type has no pure entry
+d358 1
+a358 1
+Type has no pure entry
+d362 2
+a363 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d368 2
+a369 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d373 2
+a374 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d378 1
+a378 1
+Particle id has no ff match
+a379 1
+-1 B
+d385 4
+d392 1
+a392 1
+Type has no pure entry
+d396 1
+a396 1
+Type has no pure entry
+d400 2
+a401 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d406 2
+a407 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d411 2
+a412 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d416 1
+a416 1
+Particle id has no ff match
+a417 1
+-1 C
+d423 4
+d430 1
+a430 1
+Type has no pure entry
+d434 1
+a434 1
+Type has no pure entry
+d439 2
+a440 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d444 2
+a445 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d449 2
+a450 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d454 1
+a454 1
+Particle id has no ff match
+a455 1
+-1 C
+d461 4
+d468 1
+a468 1
+Type has no pure entry
+d472 1
+a472 1
+Type has no pure entry
+d476 1
+a476 1
+Type has no pure entry
+d480 2
+a481 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d485 2
+a486 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d490 2
+a491 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d496 2
+a497 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d501 2
+a502 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d506 2
+a507 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d511 2
+a512 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d516 2
+a517 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d521 2
+a522 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d526 2
+a527 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d531 2
+a532 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d536 2
+a537 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d541 2
+a542 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d546 2
+a547 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d554 4
+d562 1
+a562 1
+Particle id has no ff match
+a563 1
+-1 A
+d566 1
+a566 1
+Particle id has no ff match
+a567 1
+-1 C
+d573 4
+d580 1
+a580 1
+Type has no pure entry
+d584 1
+a584 1
+Type has no pure entry
+d589 2
+a590 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d594 2
+a595 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d599 2
+a600 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d604 1
+a604 1
+Particle id has no ff match
+a605 1
+-1 A
+d611 4
+d618 1
+a618 1
+Type has no pure entry
+d622 1
+a622 1
+Type has no pure entry
+d626 2
+a627 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d632 2
+a633 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d637 2
+a638 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d642 1
+a642 1
+Particle id has no ff match
+a643 1
+-1 A
+d649 4
+d656 1
+a656 1
+Type has no pure entry
+d660 1
+a660 1
+Type has no pure entry
+d664 2
+a665 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d670 2
+a671 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d675 2
+a676 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d680 1
+a680 1
+Particle id has no ff match
+a681 1
+-1 B
+d687 4
+d694 1
+a694 1
+Type has no pure entry
+d698 1
+a698 1
+Type has no pure entry
+d702 1
+a702 1
+Type has no pure entry
+d706 2
+a707 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d711 2
+a712 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d716 2
+a717 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d722 2
+a723 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d727 2
+a728 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d732 2
+a733 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d737 2
+a738 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d742 2
+a743 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d747 2
+a748 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d752 2
+a753 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d757 2
+a758 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d762 2
+a763 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d767 2
+a768 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d772 2
+a773 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d780 4
+d787 1
+a787 1
+Type has no pure entry
+d791 1
+a791 1
+Type has no pure entry
+d796 2
+a797 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d801 2
+a802 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d806 2
+a807 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d811 1
+a811 1
+Particle id has no ff match
+a812 1
+-1 B
+d818 4
+d825 1
+a825 1
+Type has no pure entry
+d829 1
+a829 1
+Type has no pure entry
+d833 2
+a834 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d839 2
+a840 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d844 2
+a845 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d849 1
+a849 1
+Particle id has no ff match
+a850 1
+-1 A
+d856 4
+d863 1
+a863 1
+Type has no pure entry
+d867 1
+a867 1
+Type has no pure entry
+d872 2
+a873 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d877 2
+a878 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d882 2
+a883 1
+Missing pure entry for this cross tripleNo interaction for this cross triple
+d887 1
+a887 1
+Particle id has no ff match
+a888 1
+-1 A
+d894 4
+d902 1
+a902 1
+Particle id has no ff match
+a903 1
+-1 A
+d906 1
+a906 1
+Particle id has no ff match
+a907 1
+-1 B
+d993 1
+a993 1
+--------------- Step       100 ---- CPU =     1.4569 (sec) ---------------
+d1057 1
+a1057 1
+Loop time: 1.4567919636 on 2 processors for 128 particles
+d1063 8
+a1070 8
+          Force Time    1.0607     72.81
+          Neigh Time    0.0666      4.57
+           Comm Time    0.0310      2.13
+       Exchange Time    0.0131      0.90
+        Revcomm Time    0.0656      4.50
+        Barrier Time    0.2162     14.84
+          Other Time    0.0035      0.24
+          Total Time    1.4568    100.00
+d1076 18
+a1093 18
+SW-AAA                  0.1024 (   100)     0.0024 (    10) 
+SW-AAB                  0.0750 (   100)     0.0037 (    10) 
+SW-AAC                  0.0815 (   100)     0.0035 (    10) 
+SW-ABB                  0.0229 (   100)     0.0032 (    10) 
+SW-ABC                  0.0313 (   100)     0.0052 (    10) 
+SW-ACC                  0.0242 (   100)     0.0032 (    10) 
+SW-BAA                  0.0200 (   100)     0.0033 (    10) 
+SW-BAB                  0.0821 (   100)     0.0035 (    10) 
+SW-BAC                  0.0236 (   100)     0.0053 (    10) 
+SW-BBB                  0.1341 (   100)     0.0019 (    10) 
+SW-BBC                  0.0857 (   100)     0.0037 (    10) 
+SW-BCC                  0.0208 (   100)     0.0034 (    10) 
+SW-CAA                  0.0178 (   100)     0.0040 (    10) 
+SW-CAB                  0.0364 (   100)     0.0052 (    10) 
+SW-CAC                  0.0782 (   100)     0.0034 (    10) 
+SW-CBB                  0.0266 (   100)     0.0033 (    10) 
+SW-CBC                  0.0750 (   100)     0.0034 (    10) 
+SW-CCC                  0.1152 (   100)     0.0018 (    10) 
+@
+

@@ -1,0 +1,94 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.04.05.15;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.17.15.57.22;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.12.17.15.57.22;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@#
+#
+C   C   lj_cut  1.0 1.0  7.0
+C   N   lj_cut  1.5 1.0 7.0
+C   O   lj_cut  2.0 1.0 7.0
+N   N   lj_cut  2.0 1.0 7.0
+O   O   lj_cut  3.0 1.0 7.0
+@
+
+
+1.2
+log
+@Trying again to clean up testreax
+@
+text
+@@
+
+
+1.1
+log
+@file twobody_reax.in was initially added on branch REAXFF.
+@
+text
+@d1 7
+@
+
+
+1.1.2.1
+log
+@Added testreax example to REAXFF branch
+@
+text
+@a0 7
+#
+#
+C   C   lj_cut  1.0 1.0  7.0
+C   N   lj_cut  1.5 1.0 7.0
+C   O   lj_cut  2.0 1.0 7.0
+N   N   lj_cut  2.0 1.0 7.0
+O   O   lj_cut  3.0 1.0 7.0
+@
+

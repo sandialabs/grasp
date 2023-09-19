@@ -1,0 +1,4972 @@
+head	4.9;
+access;
+symbols
+	ReverseComm_branch:4.5.0.4
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.0.2.1
+	P_MonacoSource:3.0.0.6
+	GraspSource:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.14.0.2
+	cjkimme_version_merge_from_trunk_1:2.2.2.1
+	cjkimme_version:2.2.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.9
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.5.4.1;
+next	4.4;
+
+4.4
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.03.08.18.08.52;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches
+	3.0.2.1
+	3.0.6.1;
+next	2.14;
+
+2.14
+date	2004.08.24.16.21.02;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.08.24.15.32.11;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.08.02.18.00.47;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.07.13.21.21.16;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.03.20.00.15.37;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.03.02.17.49.47;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	2.2.2.1;
+next	2.1;
+
+2.1
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches;
+next	;
+
+2.2.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.0.2.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.0.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.0.6.2;
+
+3.0.6.2
+date	2005.02.23.19.34.30;	author saubry;	state Exp;
+branches;
+next	3.0.6.3;
+
+3.0.6.3
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.0.6.4;
+
+3.0.6.4
+date	2005.02.26.00.35.18;	author saubry;	state Exp;
+branches;
+next	3.0.6.5;
+
+3.0.6.5
+date	2005.03.01.19.00.24;	author saubry;	state Exp;
+branches;
+next	3.0.6.6;
+
+3.0.6.6
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	3.0.6.7;
+
+3.0.6.7
+date	2005.04.08.00.04.39;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2005.11.28.23.08.47;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2005.12.09.18.35.27;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.4;
+
+4.3.2.1.2.4
+date	2006.01.18.23.57.58;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.5;
+
+4.3.2.1.2.5
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.6;
+
+4.3.2.1.2.6
+date	2006.02.03.19.07.28;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.7;
+
+4.3.2.1.2.7
+date	2006.02.06.19.15.25;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.8;
+
+4.3.2.1.2.8
+date	2006.02.08.23.43.02;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.9;
+
+4.3.2.1.2.9
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.10;
+
+4.3.2.1.2.10
+date	2006.02.28.00.53.03;	author saubry;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.5.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.9
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+// This implementation of EAM is based on the PairEAM class written
+// by Steve Plimpton (LAMMPS 2003).
+// 
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+
+using namespace std;
+
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_eam.h"
+#include "force_eam_inline.h"
+#include "constants.h"
+#include "box.h"
+#include "box_inline.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "particletypelist.h"
+#include "comm.h"
+#include "log.h"
+
+extern Log glog;
+extern Constants constants;
+
+Force_Eam::Force_Eam(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = eam;
+  timeforce = 0.0;
+  nforce = 0;
+  npieces = 2;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "Embedding";
+  label_piece[1] = "Pair";
+  ntypes = 0;
+  rcutmax = 0.0;
+  rcutneighsq_table = NULL;
+}
+
+Force_Eam::~Force_Eam() {
+// Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+  for (int itype=0;itype<=ntypes;itype++) {
+    delete []frho_0[itype];
+    delete []frho_1[itype];
+    delete []frho_2[itype];
+    delete []frho_3[itype];
+    delete []frho_4[itype];
+    delete []frho_5[itype];
+    delete []frho_6[itype];
+    delete []rhor_0[itype];
+    delete []rhor_1[itype];
+    delete []rhor_2[itype];
+    delete []rhor_3[itype];
+    delete []rhor_4[itype];
+    delete []rhor_5[itype];
+    delete []rhor_6[itype];
+    for (int jtype=0;jtype<=ntypes;jtype++) {
+      delete []z2r_0[itype][jtype];
+      delete []z2r_1[itype][jtype];
+      delete []z2r_2[itype][jtype];
+      delete []z2r_3[itype][jtype];
+      delete []z2r_4[itype][jtype];
+      delete []z2r_5[itype][jtype];
+      delete []z2r_6[itype][jtype];
+    }
+    delete []z2r_0[itype];
+    delete []z2r_1[itype];
+    delete []z2r_2[itype];
+    delete []z2r_3[itype];
+    delete []z2r_4[itype];
+    delete []z2r_5[itype];
+    delete []z2r_6[itype];
+  }
+}
+
+void Force_Eam::ApplyForce(
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+		    const Box* b, Comm* comm) {
+
+  int itype,jtype;
+  int j;
+  double xi[3],xj[3],f[3];
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int nparticles,nghost_particles;
+  int* neighptr;
+  double rhoi,rhoj,fpi,fpj;
+  double energy_ij,energy_i;
+  double virial_ij[nvirial];
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+    energy_piece[1] = 0.0;
+  }
+
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  // Purely to satisfy compiler uninitialized data checks
+  energy_i = energy_ij = 0.0;
+
+  // extend size of nlocal-dependent arrays if necessary,
+  // and initialize to zero;
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  ZeroArrays(nparticles+nghost_particles);
+
+  if (Lneighbor) {
+
+    for (int i=0;i<nparticles;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()]+1;
+      i_pnt->get_x(xi);
+      neighptr = neighbor->first_ptr[i];
+
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()]+1;
+	j_pnt->get_x(xj);
+
+	rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+
+	rho[i]+=rhoi;
+	rho[j]+=rhoj;
+      }
+
+    }
+
+  } else {
+    glog.error("Force_Eam::ApplyForce:\n"
+	       "Eam density only implemented with neighbor list");
+  }
+
+  comm->reverse_comm_double_add(rho);
+
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    itype = type_index[i_pnt->get_type()]+1;
+    if (itype != 0) {
+      rhoi = rho[i];
+      fp_standard(rhoi,fpi,Lenergy,energy_i,itype);
+      fp[i]+=fpi;
+      if (Lenergy) {
+	energy_piece[0]+=energy_i;
+      }
+    }
+  }
+
+  comm->comm_double_add(fp);
+
+  if (Lneighbor) {
+
+    for (int i=0;i<nparticles;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()]+1;
+      i_pnt->get_x(xi);
+      neighptr = neighbor->first_ptr[i];
+      fpi = fp[i];
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()]+1;
+	j_pnt->get_x(xj);
+	fpj = fp[j];
+
+	force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+		       energy_ij,virial_ij,itype,jtype);
+	i_pnt->increment_f(f);
+	j_pnt->decrement_f(f);
+	if (Lenergy) {
+	  energy_piece[1]+=energy_ij;
+	}
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+      }
+
+    }
+
+  } else {
+    glog.error("Force_Eam::ApplyForce:\n"
+	       "Eam force only implemented with neighbor list");
+  }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+}
+
+void Force_Eam::ReadInteractions(Comm* comm) {
+  string id,str_tmp,buf;
+  string forcefieldname;
+  string filename;
+  bool match;
+  ifstream infile;
+  int node,isize,itype,jtype,ntypes_tmp;
+  double* ipnt_tmp;
+  double** ipnt2d_tmp;
+  MPI_Comm world;
+  node = comm->get_node();
+  world = comm->get_world();
+  std::istringstream* buf_in_eam;
+
+  std::istringstream buf_in(arg_string);
+
+  node = comm->get_node();
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Eam::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Eam::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  glog.get_logfile() << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+
+  str_tmp = glog.path_str + filename;
+  if (node == 0) {
+    infile.open(str_tmp.c_str()); 
+  
+    if (!infile) {
+      infile.close();
+      infile.open(str_tmp.c_str()); 
+      if (!infile) {
+	glog.abort("Force_Eam::ReadInteractions:\n"
+		   "Failed to open " + str_tmp,comm);
+      }
+    }
+  }
+
+  if (node==0) {
+    
+    input_string_get(infile,buf);
+    input_string_get(infile,buf);
+    input_string_get(infile,buf);
+    input_string_get(infile,buf);
+    buf_in_eam = new std::istringstream(buf);
+    *buf_in_eam >> ntypes_tmp;
+    if (buf_in_eam->fail()) {
+      glog.abort("Force_Eam::ReadInteractions:\n"
+		 "Read error in " + str_tmp + " header");
+    }
+    delete buf_in_eam;
+
+    input_string_get(infile,buf);
+    buf_in_eam = new std::istringstream(buf);
+    *buf_in_eam >> nrho >> drho >> nr >> dr>> rcutmax;
+    if (buf_in_eam->fail()) {
+      glog.abort("Force_Eam::ReadInteractions:\n"
+		 "Read error in " + str_tmp + " header");
+    }
+    delete buf_in_eam;
+  }
+  
+  MPI_Bcast(&ntypes_tmp,1,MPI_INT,0,world);
+  MPI_Bcast(&nrho,1,MPI_INT,0,world);
+  MPI_Bcast(&drho,1,MPI_DOUBLE,0,world);
+  MPI_Bcast(&nr,1,MPI_INT,0,world);
+  MPI_Bcast(&dr,1,MPI_DOUBLE,0,world);
+  MPI_Bcast(&rcutmax,1,MPI_DOUBLE,0,world);
+
+  // create 3 input arrays
+  // note: fortran convention on indices used (1 to n),
+  //       so all dimensions have to have one extra entry
+
+  for (itype=0;itype<=ntypes_tmp;itype++) {
+    ipnt_tmp = new double[nrho+1];
+    frho.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nr+1];
+    rhor.push_back(ipnt_tmp);
+    ipnt2d_tmp = new double*[ntypes_tmp+1];
+    z2r.push_back(ipnt2d_tmp);
+    for (jtype=0;jtype<=ntypes_tmp;jtype++) {
+      z2r[itype][jtype] = new double[nr+1];
+    }
+  }
+
+  // read 3 arrays
+  // frho and rhor are one per type
+  // z2r for each i <= j pair
+
+  int tmp;
+  double mass;
+
+  for (int i = 1; i <= ntypes_tmp; i++) {
+    if (node == 0) {
+      input_string_get(infile,buf);
+      buf_in_eam = new std::istringstream(buf);
+      *buf_in_eam >> id >> mass;
+      if (buf_in_eam->fail()) {
+	glog.abort("Force_Eam::ReadInteractions:\n"
+		   "Read error in " + str_tmp + " id");
+      }
+      isize = id.size();
+      delete buf_in_eam;
+    }
+    MPI_Bcast(&isize,1,MPI_INT,0,world);
+    if (node != 0) id.resize(isize);
+    MPI_Bcast(&id[0],isize,MPI_CHAR,0,world);
+    MPI_Bcast(&mass,1,MPI_DOUBLE,0,world);
+    glog.get_logfile() << "id = " << id << endl;
+    match = find_id(id,itype);
+    if (!match) {
+      ntypes++;
+      itype = ntypes-1;
+      id_index.push_back(id);
+      mass_index.push_back(mass);
+    } else {
+      glog.error("Force_Eam::ReadInteractions:\n"
+		 "Duplicated id string in file " + str_tmp);
+    }
+    if (node == 0) {
+      grab(infile,nrho,&frho[i][1]);
+      if (!infile) {
+	glog.abort("Force_Eam::ReadInteractions:\n"
+		   "Read error in " + str_tmp + " frho");
+      }
+    }
+    MPI_Bcast(&frho[i][1],nrho,MPI_DOUBLE,0,world);
+
+    if (node == 0) {
+      grab(infile,nr,&rhor[i][1]);
+      if (!infile) {
+	glog.abort("Force_Eam::ReadInteractions:\n"
+		   "Read error in " + str_tmp + " rhor");
+      }
+    }
+    MPI_Bcast(&rhor[i][1],nr,MPI_DOUBLE,0,world);
+    
+  }
+
+  for (int i = 1; i <= ntypes_tmp; i++) {
+    for (int j = 1; j <= i;j++) {
+      if (node == 0) {
+	grab(infile,nr,&z2r[i][j][1]);
+	if (!infile) {
+	  glog.abort("Force_Eam::ReadInteractions:\n"
+		     "Read error in " + str_tmp + " z2r");
+	}
+      }
+      MPI_Bcast(&z2r[i][j][1],nr,MPI_DOUBLE,0,world);
+      for (int ir = 1;ir<=nr;ir++) {
+	z2r[j][i][ir] = z2r[i][j][ir];
+      }
+    }
+  }
+  
+  // close the potential file
+
+  if (node == 0) infile.close();
+
+}
+
+// Read n double values from input filestream infile into array x.
+// After reading n values (over one or more lines), jump to end-of-line.
+// 
+void Force_Eam::grab(ifstream& infile,const int& n, double x[]) {
+
+  for (int i=0;i<n;i++) {
+    if(!(infile >> x[i])) break;
+  }
+  infile.ignore(1000,'\n');
+}    
+
+void Force_Eam::SetupInteractions(const Box* b, 
+                                      const double& g_ewald, 
+				      Comm* comm) {
+  int node,nprocs;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  Lnocut = false;
+
+  rcutmaxsq = rcutmax*rcutmax;
+
+  Interpolate();
+
+}
+
+/* interpolate EAM potentials */
+
+void Force_Eam::Interpolate()
+{
+  int m,i,j,itype,jtype;
+  // interpolation settings
+  double* ipnt_tmp;
+  double** ipnt2d_tmp;
+
+  rdr = 1.0/dr;
+  rdrho = 1.0/drho;
+
+  // allocate coeff arrays
+
+  // create rho, f and z2 spline coefficient arrays
+  // note: fortran convention on indices used (1 to n),
+  //       so all dimensions have to have one extra entry
+
+  for (itype=0;itype<=ntypes;itype++) {
+    ipnt_tmp = new double[nrho+1];
+    frho_0.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nrho+1];
+    frho_1.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nrho+1];
+    frho_2.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nrho+1];
+    frho_3.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nrho+1];
+    frho_4.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nrho+1];
+    frho_5.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nrho+1];
+    frho_6.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nr+1];
+    rhor_0.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nr+1];
+    rhor_1.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nr+1];
+    rhor_2.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nr+1];
+    rhor_3.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nr+1];
+    rhor_4.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nr+1];
+    rhor_5.push_back(ipnt_tmp);
+    ipnt_tmp = new double[nr+1];
+    rhor_6.push_back(ipnt_tmp);
+    ipnt2d_tmp = new double*[ntypes+1];
+    z2r_0.push_back(ipnt2d_tmp);
+    ipnt2d_tmp = new double*[ntypes+1];
+    z2r_1.push_back(ipnt2d_tmp);
+    ipnt2d_tmp = new double*[ntypes+1];
+    z2r_2.push_back(ipnt2d_tmp);
+    ipnt2d_tmp = new double*[ntypes+1];
+    z2r_3.push_back(ipnt2d_tmp);
+    ipnt2d_tmp = new double*[ntypes+1];
+    z2r_4.push_back(ipnt2d_tmp);
+    ipnt2d_tmp = new double*[ntypes+1];
+    z2r_5.push_back(ipnt2d_tmp);
+    ipnt2d_tmp = new double*[ntypes+1];
+    z2r_6.push_back(ipnt2d_tmp);
+    for (jtype=0;jtype<=ntypes;jtype++) {
+      z2r_0[itype][jtype] = new double[nr+1];
+      z2r_1[itype][jtype] = new double[nr+1];
+      z2r_2[itype][jtype] = new double[nr+1];
+      z2r_3[itype][jtype] = new double[nr+1];
+      z2r_4[itype][jtype] = new double[nr+1];
+      z2r_5[itype][jtype] = new double[nr+1];
+      z2r_6[itype][jtype] = new double[nr+1];
+    }
+  }
+
+  // frho interpolation
+  // (originally developed by Stephen Foiles for Dynamo code)
+  // Functions are fit to cubic polynomials, not splines.
+  // Each polynomial is fit to the two knot values
+  // and estimates of the slope at the two knot points.
+  // The slopes are estimated using a second-order 
+  // central difference formula.
+  //
+  // The slopes at the edges are calculated using central,
+  // forward, or backward difference, as appropriate.
+  //
+  // The second and third derivatives at the uppermost
+  // point are set to zero.
+  //
+  // For rhor and z2r, the first derivative at the uppermost
+  // point is also set to zero.
+  //
+  // The knot values at the boundaries should be set to zero
+  // in all cases except the uppermost frho point.
+  //
+  for (i = 1; i <= ntypes; i++) {
+    for (m = 1; m <= nrho; m++) frho_0[i][m] = 
+				  constants.evfactor*frho[i][m];
+
+    frho_1[i][1] = frho_0[i][2]-frho_0[i][1];
+    frho_1[i][2] = 0.5*(frho_0[i][3]-frho_0[i][1]);
+    frho_1[i][nrho-1] = 0.5*(frho_0[i][nrho]-frho_0[i][nrho-2]);
+    frho_1[i][nrho] = frho_0[i][nrho]-frho_0[i][nrho-1];
+
+    for (m = 3; m <= nrho-2; m++)
+      frho_1[i][m] = ((frho_0[i][m-2]-frho_0[i][m+2]) + 
+		       8.0*(frho_0[i][m+1]-frho_0[i][m-1]))/12.0;
+
+    for (m = 1; m <= nrho-1; m++) {
+      frho_2[i][m] = 3.*(frho_0[i][m+1]-frho_0[i][m]) - 
+	2.0*frho_1[i][m] - frho_1[i][m+1];
+      frho_3[i][m] = frho_1[i][m] + frho_1[i][m+1] - 
+	2.0*(frho_0[i][m+1]-frho_0[i][m]);
+    }
+
+    frho_2[i][nrho] = 0.0;
+    frho_3[i][nrho] = 0.0;
+
+    for (m = 1; m <= nrho; m++) {
+      frho_4[i][m] = frho_1[i][m]/drho;
+      frho_5[i][m] = 2.0*frho_2[i][m]/drho;
+      frho_6[i][m] = 3.0*frho_3[i][m]/drho;
+    }
+  }
+
+  // rhor interpolation
+
+  for (i = 1; i <= ntypes; i++) {
+    for (m = 1; m <= nr; m++) {
+      rhor_0[i][m] = rhor[i][m];
+    }
+
+    rhor_1[i][1] = rhor_0[i][2]-rhor_0[i][1];
+    rhor_1[i][2] = 0.5*(rhor_0[i][3]-rhor_0[i][1]);
+    rhor_1[i][nr-1] = 0.5*(rhor_0[i][nr]-rhor_0[i][nr-2]);
+    rhor_1[i][nr] = 0.0;
+
+    for (m = 3; m <= nr-2; m++)
+      rhor_1[i][m] = ((rhor_0[i][m-2]-rhor_0[i][m+2]) + 
+		       8.0*(rhor_0[i][m+1]-rhor_0[i][m-1]))/12.;
+
+    for (m = 1; m <= nr-1; m++) {
+      rhor_2[i][m] = 3.0*(rhor_0[i][m+1]-rhor_0[i][m]) - 
+	2.0*rhor_1[i][m] - rhor_1[i][m+1];
+      rhor_3[i][m] = rhor_1[i][m] + rhor_1[i][m+1] - 
+	2.0*(rhor_0[i][m+1]-rhor_0[i][m]);
+    }
+
+    rhor_2[i][nr] = 0.0;
+    rhor_3[i][nr] = 0.0;
+
+    for (m = 1; m <= nr; m++) {
+      rhor_4[i][m] = rhor_1[i][m]/dr;
+      rhor_5[i][m] = 2.0*rhor_2[i][m]/dr;
+      rhor_6[i][m] = 3.0*rhor_3[i][m]/dr;
+    }
+  }
+
+  // z2r interpolation
+
+  for (i = 1; i <= ntypes; i++) {
+    for (j = 1; j <= ntypes; j++) {
+      for (m = 1; m <= nr; m++) z2r_0[i][j][m] = 
+				  constants.evfactor*z2r[i][j][m];
+
+      z2r_1[i][j][1] = z2r_0[i][j][2]-z2r_0[i][j][1];
+      z2r_1[i][j][2] = 0.5*(z2r_0[i][j][3]-z2r_0[i][j][1]);
+      z2r_1[i][j][nr-1] = 0.5*(z2r_0[i][j][nr]-z2r_0[i][j][nr-2]);
+      z2r_1[i][j][nr] = 0.0;
+
+      for (m = 3; m <= nr-2; m++) 
+	z2r_1[i][j][m] = ((z2r_0[i][j][m-2]-z2r_0[i][j][m+2]) + 
+			   8.0*(z2r_0[i][j][m+1]-z2r_0[i][j][m-1]))/12.;
+
+      for (m = 1; m <= nr-1; m++) {
+	z2r_2[i][j][m] = 3.0*(z2r_0[i][j][m+1]-z2r_0[i][j][m]) - 
+	  2.0*z2r_1[i][j][m] - z2r_1[i][j][m+1];
+	z2r_3[i][j][m] = z2r_1[i][j][m] + z2r_1[i][j][m+1] - 
+	  2.0*(z2r_0[i][j][m+1]-z2r_0[i][j][m]);
+      }
+
+      z2r_2[i][j][nr] = 0.0;
+      z2r_3[i][j][nr] = 0.0;
+
+      for (m = 1; m <= nr; m++) {
+	z2r_4[i][j][m] = z2r_1[i][j][m]/dr;
+	z2r_5[i][j][m] = 2.0*z2r_2[i][j][m]/dr;
+	z2r_6[i][j][m] = 3.0*z2r_3[i][j][m]/dr;
+      }
+    }
+  }
+
+  // free 3 input arrays;
+  // set to NULL so won't be re-freed when class is destructed
+
+  for (itype=0;itype<=ntypes;itype++) {
+    ipnt_tmp = frho[itype];
+    delete []ipnt_tmp;
+    ipnt_tmp = rhor[itype];
+    delete []ipnt_tmp;
+    for (jtype=0;jtype<=ntypes;jtype++) {
+      ipnt_tmp = z2r[itype][jtype];
+      delete []ipnt_tmp;
+    }
+    ipnt2d_tmp = z2r[itype];
+    delete []ipnt2d_tmp;
+  }
+  frho.clear();
+  rhor.clear();
+  z2r.clear();
+}
+
+void Force_Eam::SetupCutNeighSq(const double& rskin, Comm* comm) {
+  int itype,jtype,i;
+  ForceFieldTypes type;
+  int node;
+
+  node = comm->get_node();
+
+
+  // Allocate ntypes x ntypes array rcutneighsq_table
+  rcutneighsq_table = new double*[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    rcutneighsq_table[itype] = new double[ntypes];
+  }
+
+  // Assign values to rcutneighsq_table[][] using force field parameters
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      rcutneighsq_table[itype][jtype] = pow(rcutmax+rskin,2);
+    }
+  }
+}
+
+void Force_Eam::CheckMasses(const ParticleTypeList* t) {
+  int itype,itype_ff,nparticletypes;
+
+  nparticletypes = t->get_ntypes();
+
+  for (itype = 0; itype < nparticletypes; itype++) {
+    itype_ff = type_index[itype];
+    if (itype_ff != -1) {
+      if (t->get_type_mass(itype) != mass_index[itype_ff]) {
+	glog.error("Force_Eam::CheckMasses:\n"
+		     "ff type mass does not equal particle type mass");
+      }
+    } else {
+      glog.warning("Force_Eam::CheckMasses:\n"
+		 "Particle type " + t->get_id(itype) +
+		 " not in EAM force field " + label);
+    }
+  }
+}
+
+void Force_Eam::ZeroArrays(const int& nparticles) {
+  rho.resize(nparticles);
+  fp.resize(nparticles);
+  for (int i=0;i<nparticles;i++) {
+    rho[i] = 0.0;
+    fp[i] = 0.0;
+  }
+}
+
+void Force_Eam::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+			      double& rcutcomm,
+       const Box* b, Comm* comm){
+  int node,nprocs;
+  bool Ltwoway,Ltwoway_ghost;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Ltwoway = false;
+    Ltwoway_ghost = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else if (neighbor_style == "bin") {
+    Ltwoway = false;
+    Ltwoway_ghost = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_Eam::SetupNeighbor:\n"
+	       "Invalid neighbor style");
+  }
+
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_Eam::SetupNeighbor:\n"
+	       "Can not use nocut types with neighboring");
+  }
+
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_Eam::SetupNeighbor:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_Eam::SetupNeighbor:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+  }
+
+  rcutneighmax = 0.0;
+  if (Lneighbor) {
+    rcutneighmax = rcutmax + neighbor_rskin;
+    rcutcomm = rcutmax + neighbor_rskin;
+    neighbor->set_rcutneighmax(rcutneighmax);
+    SetupCutNeighSq(neighbor_rskin,comm);
+    if (node == 0) {
+      glog.get_logfile() << "Cutoffs for this forcefield" << endl;
+      glog.get_logfile() << "rcutmax = " << rcutmax << endl;
+      glog.get_logfile() << "rskin = " << neighbor_rskin << endl;
+      glog.get_logfile() << "rcutneighmax = " << rcutneighmax << endl;
+    }
+  }
+}
+
+@
+
+
+4.8
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d144 1
+a144 1
+  int i,j;
+d165 3
+@
+
+
+4.7
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d782 1
+a782 1
+    rcutneighmax = rcutcomm + neighbor_rskin;
+@
+
+
+4.6
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d732 1
+d782 1
+@
+
+
+4.5
+log
+@Added multiple replica feature.
+@
+text
+@d138 3
+a140 2
+		    const bool& Lenergy, const bool& Lvirial, 
+                    ParticleList* p, 
+@
+
+
+4.5.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d138 2
+a139 3
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+@
+
+
+4.4
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d289 1
+a289 1
+    glog.logfile << endl;
+d296 1
+a296 1
+    glog.logfile << endl;
+d301 1
+a301 1
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+d388 1
+a388 1
+    glog.logfile << "id = " << id << endl;
+d783 4
+a786 4
+      glog.logfile << "Cutoffs for this forcefield" << endl;
+      glog.logfile << "rcutmax = " << rcutmax << endl;
+      glog.logfile << "rskin = " << neighbor_rskin << endl;
+      glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+@
+
+
+4.4.2.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d452 1
+a452 2
+void Force_Eam::SetupInteractions(const ParticleList* p, 
+				      const Box* b, 
+@
+
+
+4.4.2.2
+log
+@Latest PPPM version
+@
+text
+@d140 1
+a140 1
+		    const Box* b, double& g_ewald, Comm* comm) {
+d452 1
+a452 1
+void Force_Eam::SetupInteractions(ParticleList* p, 
+d454 1
+a454 1
+                                      double& g_ewald, 
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d453 2
+a454 1
+                const Force_Ewald* ff_ewald, Comm* comm) {
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a789 170
+
+// P-Monaco Routines
+// added saubry (02-17-05)
+void Force_Eam::EnergyChange(int* atom, vector <double> boost,
+			     const bool& Lenergy,ParticleList* p,
+			     const Box* b, Comm* comm)
+{
+  int j;
+  int itype,jtype;
+  double xi[3],xj[3];
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int nparticles,nghost_particles;
+  double rhoi,rhoj;
+  int* neighptr;
+  double energy_ij,energy_i;
+
+  vector<double> nrg;
+  double xold[3],xnew[3];
+  double rhoa,dist;
+  Particle* at_pnt;
+  int typea;
+
+  npieces = 2;
+  nrg.resize(npieces);
+  nrg[0] = 0.0;nrg[1] = 0.0;
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  // define atom
+  at_pnt = p->get_particle(*atom);
+  at_pnt->get_x(xold);
+  typea= type_index[at_pnt->get_type()]+1;
+
+  xnew[0] = xold[0] + boost[0];
+  xnew[1] = xold[1] + boost[1];
+  xnew[2] = xold[2] + boost[2];
+
+  vector<double> oldrho,newrho;
+  oldrho.resize(nparticles + nghost_particles);
+  newrho.resize(nparticles + nghost_particles);
+
+  for (int i=0;i<nparticles+ nghost_particles;i++)
+    {
+      oldrho[i] = 0.0;
+      newrho[i] = 0.0;
+    }
+
+  // rho
+  if (Lneighbor)
+    {
+      for (int i=0;i<nparticles;i++)
+        {
+	  i_pnt = p->get_particle(i);
+	  itype = type_index[i_pnt->get_type()]+1;
+	  i_pnt->get_x(xi);
+	  neighptr = neighbor->first_ptr[i];
+
+	  for (int ineigh=0;
+	       ineigh<neighbor->nneigh_list[i];ineigh++)
+	    {
+	      j = neighptr[ineigh];
+	      j_pnt = p->get_particle(j);
+	      jtype = type_index[j_pnt->get_type()]+1;
+	      j_pnt->get_x(xj);
+
+	      rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+
+	      oldrho[i]+=rhoi;
+	      oldrho[j]+=rhoj;
+
+	      if ((i == *atom)&&(j != *atom))
+		{
+		  rho_standard(xnew,xj,rhoi,rhoj,itype,jtype);
+
+		  newrho[*atom]+=rhoi;
+		  newrho[j]+=rhoj;
+		}
+	      else if ((i != *atom)&&(j == *atom))
+		{
+		  rho_standard(xi,xnew,rhoi,rhoj,itype,jtype);
+
+		  newrho[i]+=rhoi;
+		  newrho[*atom]+=rhoj;
+		}
+	      else
+		{
+		  rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+		  newrho[i]+=rhoi;
+		  newrho[j]+=rhoj;
+		}
+
+	    }
+        }
+    }
+
+  comm->reverse_comm_double_add(oldrho);
+  comm->reverse_comm_double_add(newrho);
+
+  // f(rho)
+  for (int i=0;i<nparticles+ nghost_particles;i++)
+    {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()]+1;
+      i_pnt->get_x(xi);
+
+      if ( fabs(oldrho[i] - newrho[i]) >= 1.e-6)
+	{
+	  fp_energy(oldrho[i],Lenergy,energy_i,itype);
+	  if (Lenergy) nrg[0]-=energy_i;
+
+	  fp_energy(newrho[i],Lenergy,energy_i,itype);
+	  if (Lenergy) nrg[0]+=energy_i;
+	}
+    }
+
+
+  // phi
+  if (Lneighbor)
+    {
+      for (int i=0; i<nparticles+nghost_particles;i++)
+	{
+	  i_pnt = p->get_particle(i);
+	  itype = type_index[i_pnt->get_type()]+1;
+	  i_pnt->get_x(xi);
+
+	  if (i != *atom)
+	    {
+	      energy_standard(xi,xold,Lenergy,energy_ij,itype,typea);
+	      if (Lenergy) nrg[1]-=energy_ij;
+
+
+	      energy_standard(xi,xnew,Lenergy,energy_ij,itype,typea);
+	      if (Lenergy) nrg[1]+=energy_ij;
+	    }
+	}
+    }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+
+  int node;
+  node = comm->get_node();
+  if (node == 0)
+    {
+      glog.logfile << "\nBoost is " << boost[0] << " " << boost[1] << " " << boost[2] << "\n";
+      glog.logfile << "Energy Change (2) :"<< nrg[1]+nrg[0] << "\n" ;
+      glog.logfile << "      Embedding = " << nrg[0] << "\n";
+      glog.logfile << "      Pair      = " << nrg[1] << "\n";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d792 2
+a793 1
+void Force_Eam::EnergyChange(int* atom, double boost[3],
+@
+
+
+4.3.2.1.2.2
+log
+@Correct a few bugs.
+Segmentation fault when domain is not squared.
+@
+text
+@d940 1
+a940 2
+      glog.logfile << "\nBoost is " << boost[0] << " " << boost[1] << " " 
+		   << boost[2] << "\n\n";
+@
+
+
+4.3.2.1.2.3
+log
+@Tweaked Monaco branch
+@
+text
+@a210 3
+// this is just a test case
+// !!!!!!!!REMOVE!!!!!!!!!!
+	energy_piece[0]+=rhoi;
+d794 2
+a795 1
+			     const Box* b, Comm* comm) {
+d808 1
+d810 1
+a810 1
+  int atag;
+d821 6
+a826 1
+  atag = at_pnt->get_tag();
+d832 5
+a836 4
+  for (int i=0;i<nparticles+ nghost_particles;i++) {
+    oldrho[i] = 0.0;
+    newrho[i] = 0.0;
+  }
+d839 45
+a883 30
+  if (Lneighbor) {
+    for (int i=0;i<nparticles;i++){
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()]+1;
+      i_pnt->get_x(xi);
+      neighptr = neighbor->first_ptr[i];
+	
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()]+1;
+	j_pnt->get_x(xj);
+	
+	rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+	
+	oldrho[i]+=rhoi;
+	oldrho[j]+=rhoj;
+
+	if (i_pnt->get_tag() == atag) {
+	  vec3_add(xi,boost,xnew);
+	  rho_standard(xnew,xj,rhoi,rhoj,itype,jtype);
+	} else if (j_pnt->get_tag() == atag) {
+	  vec3_add(xj,boost,xnew);
+	  rho_standard(xi,xnew,rhoi,rhoj,itype,jtype);
+	} 
+	newrho[i]+=rhoi;
+	newrho[j]+=rhoj;
+	
+      }
+a884 1
+  }
+d890 10
+a899 2
+  // Just loop over local particles
+  for (int i=0;i<nparticles;i++) {
+d901 4
+a904 19
+// this is just a test case
+// !!!!!!!!REMOVE!!!!!!!!!!
+    nrg[0] += newrho[i]-oldrho[i];
+//    nrg[0] += newrho[i];
+//    nrg[0] += oldrho[i];
+
+//     i_pnt = p->get_particle(i);
+//     itype = type_index[i_pnt->get_type()]+1;
+
+//     // This number needs to be small enough to capture all
+//     // real density changes, but ignoring changes due to 
+//     // finite machine precision.
+//     if ( fabs(oldrho[i] - newrho[i]) >= 1.e-10) {
+//       fp_energy(oldrho[i],Lenergy,energy_i,itype);
+//       if (Lenergy) nrg[0]-=energy_i;
+      
+//       fp_energy(newrho[i],Lenergy,energy_i,itype);
+//       if (Lenergy) nrg[0]+=energy_i;
+//     }
+a905 1
+  }
+d908 19
+a926 5
+  // This is an O(N) approach that does not use neighbor list
+  // !!!!!!!!!!! Won't always word !!!!!!!!!!!!!!!!!!!
+  int typea = type_index[at_pnt->get_type()]+1;
+  at_pnt->get_x(xold);
+  vec3_add(xold,boost,xnew);
+d928 5
+a932 11
+  for (int i=0; i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    itype = type_index[i_pnt->get_type()]+1;
+    i_pnt->get_x(xi);
+    
+    if (i != *atom) {
+      energy_standard(xi,xold,Lenergy,energy_ij,itype,typea);
+      if (Lenergy) nrg[1]-=energy_ij;
+      energy_standard(xi,xnew,Lenergy,energy_ij,itype,typea);
+      if (Lenergy) nrg[1]+=energy_ij;
+    }
+a934 4
+  vector<double> nrg_all(npieces);
+  MPI_Allreduce(&nrg[0],&nrg_all[0],npieces,MPI_DOUBLE,
+		MPI_SUM,comm->get_world());
+  nrg.swap(nrg_all);
+d938 8
+a945 7
+  if (node == 0) {
+    glog.logfile << "\nBoost is " << boost[0] << " " << boost[1] << " " 
+		 << boost[2] << "\n\n";
+    glog.logfile << "Energy Change (2) :"<< nrg[1]+nrg[0] << "\n" ;
+    glog.logfile << "      Embedding = " << nrg[0] << "\n";
+    glog.logfile << "      Pair      = " << nrg[1] << "\n";
+  }
+@
+
+
+4.3.2.1.2.4
+log
+@Add EAM funcfl format.
+@
+text
+@a92 1
+  npotentials = 0;
+a271 1
+// Add setfl read in format - saubry (01-17-06)
+d290 51
+a340 7
+  // Read in funcfl/setfl
+  buf_in >> npotentials;
+  if (buf_in.fail()) 
+    {
+      glog.logfile << endl;
+      glog.error("Force_Eam::ReadInteractions:\n"
+		 "Read error in input string - specify potential input file format");
+d342 2
+d345 56
+a400 166
+  if(npotentials==0) 
+    glog.logfile <<"\nSetfl potential format"<< endl;
+  else
+    glog.logfile <<"\nFuncfl potential format"<< endl;
+  
+  
+  if (npotentials > 0)
+    {
+      // Read funcfl format
+      buf_in >> label;
+      if (buf_in.fail()) 
+	{
+	  glog.logfile << endl;
+	  glog.error("Force_Eam::ReadInteractions:\n"
+		     "Read error in input string - wrong label");
+	}
+      
+      nrhoin  = new int[npotentials+1];
+      nrin    = new int[npotentials+1];
+      drhoin  = new double[npotentials+1];
+      drin    = new double[npotentials+1];
+      rdrin   = new double[npotentials+1];
+      rdrhoin = new double[npotentials+1];
+      rcutin  = new double[npotentials+1];
+
+      frhoin.resize(npotentials+1);
+      rhorin.resize(npotentials+1);
+      zrin.resize(npotentials+1);
+
+      frhoin[0] = new double[nrhoin[0]+1];
+      rhorin[0] = new double[nrin[0]+1];
+      zrin[0]   = new double[nrin[0]+1];
+
+
+      for (int ipot = 1; ipot <= npotentials; ipot++)
+	{ 
+	  buf_in >> filename;
+	  if (buf_in.fail()) 
+	    {
+	      glog.logfile << endl;
+	      glog.error("Force_Eam::ReadInteractions:\n"
+			 "Read error in input string - name not found");
+	    }
+	  
+	  glog.logfile << "\n\n\nReading " << label << " from file " <<
+	    filename << endl;
+	  
+	  
+	  str_tmp = glog.path_str + filename;
+	  if (node == 0) 
+	    {
+	      infile.open(str_tmp.c_str()); 
+	      
+	      if (!infile) 
+		{
+		  infile.close();
+		  infile.open(str_tmp.c_str()); 
+		  if (!infile) 
+		    {
+		      glog.abort("Force_Eam::ReadInteractions:\n"
+				 "Failed to open " + str_tmp,comm);
+		    }
+		}
+	    }
+	  
+	  double mass;
+	  
+	  if (node==0) 
+	    {
+	      input_string_get(infile,buf);
+	      input_string_get(infile,buf);
+	      buf_in_eam = new std::istringstream(buf);
+	      *buf_in_eam >> id >> mass;
+	      if (buf_in_eam->fail()) 
+		{
+		  glog.abort("Force_Eam::ReadInteractions:\n"
+			     "Read error in " + str_tmp + " id");
+		}
+	      
+	      isize = id.size();
+	      delete buf_in_eam;	      
+	    }
+	  MPI_Bcast(&isize,1,MPI_INT,0,world);
+	  if (node != 0) id.resize(isize);
+	  MPI_Bcast(&id[0],isize,MPI_CHAR,0,world);
+	  MPI_Bcast(&mass,1,MPI_DOUBLE,0,world);
+	  glog.logfile << "id = " << id << endl;
+	  match = find_id(id,itype);
+	  if (!match) 
+	    {
+	      ntypes++;
+	      itype = ntypes-1;
+	      id_index.push_back(id);
+	      mass_index.push_back(mass);
+	    } 
+	  else 
+	    {
+	      glog.error("Force_Eam::ReadInteractions:\n"
+			 "Duplicated id string in file " + str_tmp);
+	    }
+
+	  if (node==0)
+	    {
+	      input_string_get(infile,buf);
+	      buf_in_eam = new std::istringstream(buf);
+	      *buf_in_eam >> nrhoin[ipot] >> drhoin[ipot]    >> nrin[ipot] 
+			  >> drin[ipot]   >> rcutin[ipot];
+	      if (buf_in_eam->fail()) 
+		{
+		  glog.abort("Force_Eam::ReadInteractions:\n"
+			     "Read error in " + str_tmp + " header");
+		}
+	      delete buf_in_eam;
+	    }
+	  MPI_Bcast(&nrhoin[ipot],1,MPI_INT,0,world);
+	  MPI_Bcast(&drhoin[ipot],1,MPI_DOUBLE,0,world);
+	  MPI_Bcast(&nrin[ipot],1,MPI_INT,0,world);
+	  MPI_Bcast(&drin[ipot],1,MPI_DOUBLE,0,world);
+	  MPI_Bcast(&rcutin[ipot],1,MPI_DOUBLE,0,world);
+	  
+	  // create 3 input arrays
+	  // note: fortran convention on indices used (1 to n),
+	  //       so all dimensions have to have one extra entry
+	  
+	  frhoin[ipot] = new double[nrhoin[ipot]+1];
+	  rhorin[ipot] = new double[nrin[ipot]+1];
+	  zrin[ipot]   = new double[nrin[ipot]+1];
+
+	  // read 3 arrays
+	  // frhoin, rhorin and zrin are one per type
+	  if (node == 0)
+	    {
+	      grab(infile,nrhoin[ipot],&frhoin[ipot][1]);
+	      if (!infile) 
+		{
+		  glog.abort("Force_Eam::ReadInteractions:\n"
+			     "Read error in " + str_tmp + " frhoin");
+		}
+	    }
+	  MPI_Bcast(&frhoin[ipot][1],nrhoin[ipot],MPI_DOUBLE,0,world);
+	  
+	  if (node == 0) 
+	    {
+	      grab(infile,nrin[ipot],&zrin[ipot][1]);
+	      if (!infile) 
+		{
+		  glog.abort("Force_Eam::ReadInteractions:\n"
+			     "Read error in " + str_tmp + " zrin");
+		}
+	    }
+	  MPI_Bcast(&zrin[ipot][1],nrin[ipot],MPI_DOUBLE,0,world);
+	  
+	  if (node == 0) 
+	    {
+	      grab(infile,nrin[ipot],&rhorin[ipot][1]);
+	      if (!infile) 
+		{
+		  glog.abort("Force_Eam::ReadInteractions:\n"
+			     "Read error in " + str_tmp + " rhorin");
+		}
+	    }
+	  MPI_Bcast(&rhorin[ipot][1],nrin[ipot],MPI_DOUBLE,0,world);
+	  
+	  // close the potential file
+	  if (node == 0) infile.close();
+	}
+d402 5
+a406 8
+  else
+    {
+      // Read setfl format 
+      buf_in >> label;
+      if (buf_in.fail()) {
+	glog.logfile << endl;
+	glog.error("Force_Eam::ReadInteractions:\n"
+		   "Read error in input string - wrong label");
+d408 2
+d411 5
+a415 5
+      buf_in >> filename;
+      if (buf_in.fail()) {
+	glog.logfile << endl;
+	glog.error("Force_Eam::ReadInteractions:\n"
+		   "Read error in input string - name not found");
+d417 12
+a428 19
+      
+      glog.logfile << "\n\n\nReading " << label << " from file " <<
+	filename << endl;
+   
+      str_tmp = glog.path_str + filename;
+      if (node == 0) 
+	{
+	  infile.open(str_tmp.c_str()); 
+	  
+	  if (!infile) 
+	    {
+	      infile.close();
+	      infile.open(str_tmp.c_str()); 
+	      if (!infile) 
+		{
+		  glog.abort("Force_Eam::ReadInteractions:\n"
+			     "Failed to open " + str_tmp,comm);
+		}
+	    }
+a429 26
+      
+      if (node==0) 
+	{
+	  input_string_get(infile,buf);
+	  input_string_get(infile,buf);
+	  input_string_get(infile,buf);
+	  input_string_get(infile,buf);
+
+	  buf_in_eam = new std::istringstream(buf);
+	  *buf_in_eam >> ntypes_tmp;
+	  if (buf_in_eam->fail()) 
+	    {
+	      glog.abort("Force_Eam::ReadInteractions:\n"
+			 "Read error in " + str_tmp + " header");
+	    }
+	  delete buf_in_eam;
+	  
+	  input_string_get(infile,buf);
+	  buf_in_eam = new std::istringstream(buf);
+	  *buf_in_eam >> nrho >> drho >> nr >> dr>> rcutmax;
+	  if (buf_in_eam->fail()) 
+	    {
+	      glog.abort("Force_Eam::ReadInteractions:\n"
+			 "Read error in " + str_tmp + " header");
+	    }
+	  delete buf_in_eam;
+d431 4
+a434 110
+      
+      MPI_Bcast(&ntypes_tmp,1,MPI_INT,0,world);
+      MPI_Bcast(&nrho,1,MPI_INT,0,world);
+      MPI_Bcast(&drho,1,MPI_DOUBLE,0,world);
+      MPI_Bcast(&nr,1,MPI_INT,0,world);
+      MPI_Bcast(&dr,1,MPI_DOUBLE,0,world);
+      MPI_Bcast(&rcutin,1,MPI_DOUBLE,0,world);
+      
+      // create 3 input arrays
+      // note: fortran convention on indices used (1 to n),
+      //       so all dimensions have to have one extra entry
+      
+      for (itype=0;itype<=ntypes_tmp;itype++) 
+	{
+	  ipnt_tmp = new double[nrho+1];
+	  frho.push_back(ipnt_tmp);
+	  ipnt_tmp = new double[nr+1];
+	  rhor.push_back(ipnt_tmp);
+	  ipnt2d_tmp = new double*[ntypes_tmp+1];
+	  z2r.push_back(ipnt2d_tmp);
+	  for (jtype=0;jtype<=ntypes_tmp;jtype++) 
+	    z2r[itype][jtype] = new double[nr+1];
+	}
+      
+      // read 3 arrays
+      // frho and rhor are one per type
+      // z2r for each i <= j pair
+      
+      int tmp;
+      double mass;
+      
+      for (int i = 1; i <= ntypes_tmp; i++) 
+	{
+	  if (node == 0) 
+	    {
+	      input_string_get(infile,buf);
+	      buf_in_eam = new std::istringstream(buf);
+	      *buf_in_eam >> id >> mass;
+	      if (buf_in_eam->fail()) 
+		{
+		  glog.abort("Force_Eam::ReadInteractions:\n"
+			     "Read error in " + str_tmp + " id");
+		}
+	      isize = id.size();
+	      delete buf_in_eam;
+	    }
+	  MPI_Bcast(&isize,1,MPI_INT,0,world);
+	  if (node != 0) id.resize(isize);
+	  MPI_Bcast(&id[0],isize,MPI_CHAR,0,world);
+	  MPI_Bcast(&mass,1,MPI_DOUBLE,0,world);
+	  glog.logfile << "id = " << id << endl;
+	  match = find_id(id,itype);
+	  if (!match) 
+	    {
+	      ntypes++;
+	      itype = ntypes-1;
+	      id_index.push_back(id);
+	      mass_index.push_back(mass);
+	    } 
+	  else 
+	    {
+	      glog.error("Force_Eam::ReadInteractions:\n"
+			 "Duplicated id string in file " + str_tmp);
+	    }
+	  if (node == 0) 
+	    {
+	      grab(infile,nrho,&frho[i][1]);
+	      if (!infile) 
+		{
+		  glog.abort("Force_Eam::ReadInteractions:\n"
+			     "Read error in " + str_tmp + " frho");
+		}
+	    }
+	  MPI_Bcast(&frho[i][1],nrho,MPI_DOUBLE,0,world);
+	  
+	  if (node == 0) 
+	    {
+	      grab(infile,nr,&rhor[i][1]);
+	      if (!infile) 
+		{
+		  glog.abort("Force_Eam::ReadInteractions:\n"
+			     "Read error in " + str_tmp + " rhor");
+		}
+	    }
+	  MPI_Bcast(&rhor[i][1],nr,MPI_DOUBLE,0,world);
+	  
+	}
+      
+      for (int i = 1; i <= ntypes_tmp; i++) 
+	{
+	  for (int j = 1; j <= i;j++) 
+	    {
+	      if (node == 0) 
+		{
+		  grab(infile,nr,&z2r[i][j][1]);
+		  if (!infile) 
+		    {
+		      glog.abort("Force_Eam::ReadInteractions:\n"
+				 "Read error in " + str_tmp + " z2r");
+		    }
+		}
+	      MPI_Bcast(&z2r[i][j][1],nr,MPI_DOUBLE,0,world);
+	      for (int ir = 1;ir<=nr;ir++) 
+		{
+		  z2r[j][i][ir] = z2r[i][j][ir];
+		}
+	    }
+	}
+      // close the potential file
+      if (node == 0) infile.close();
+d436 6
+d464 2
+d479 2
+a480 126
+  if (npotentials > 0)
+    {
+      // funcfl format
+
+      if (npotentials != ntypes)
+	{
+	  glog.abort("Force_Eam::Interpolate:\n"
+		     "Wrong set up of number of types");
+	}
+      double rmax,rhomax,rhomaxi,rmaxi;
+      vector <double*> zrtemp;
+      zrtemp.resize(npotentials+1);
+      for(int ipot=0; ipot<=npotentials; ipot++)
+	zrtemp[ipot] = new double[nrin[ipot]+1];
+      
+      dr = drin[1];
+      drho = drhoin[1];
+      rmax = (nrin[1]-1)*drin[1];
+      rhomax = (nrhoin[1]-1)*drhoin[1];
+      rcutmax = rcutin[1];
+      for(int i=2; i<=npotentials; i++)
+	{
+	  dr = max(dr,drin[i]);
+	  drho = max(drho,drhoin[i]);
+	  rmaxi = (nrin[i]-1)*drin[i];
+	  rhomaxi = (nrhoin[i]-1)*drhoin[i];
+	  rmax = max(rmax,rmaxi);
+	  rhomax = max(rhomax,rhomaxi);
+	  rcutmax = max(rcutmax,rcutin[i]);
+	}
+      nr = nint(rmax/dr);
+      nrho = nint(rhomax/drho);
+      if (rcutmax==0.0) rcutmax = 5.0;
+ 
+      double* ipnt_tmp;
+      double** ipnt2d_tmp;
+      for (int ipot=0;ipot<=npotentials;ipot++) 
+	{
+	  ipnt_tmp = new double[nrho+1];
+	  frho.push_back(ipnt_tmp);
+	  ipnt_tmp = new double[nr+1];
+	  rhor.push_back(ipnt_tmp);
+	  ipnt2d_tmp = new double*[npotentials+1];
+	  z2r.push_back(ipnt2d_tmp);
+	  for (int jpot=0;jpot<=npotentials;jpot++) 
+	    z2r[ipot][jpot] = new double[nr+1];
+	}
+
+      for (int i1 = 1; i1 <= npotentials; i1++)
+	{
+	  for (int j = 1; j <= nr; j++)
+	    {
+	      double r = (j-1)*dr;
+	      double p = r/drin[i1] + 1.0;
+	      int k = static_cast<int>(p);
+	      k = min(k,nrin[i1]-2);
+	      k = max(k,2);
+	      p = p - k;
+	      double constant = 2.0;
+	      p = min(p,constant);
+	      double cof1 = -0.166666667*p*(p-1.0)*(p-2.0);
+	      double cof2 = 0.5*(p*p-1.0)*(p-2.0);
+	      double cof3 = -0.5*p*(p+1.0)*(p-2.0);
+	      double cof4 = 0.166666667*p*(p*p-1.0);
+
+	      rhor[i1][j] = cof1*rhorin[i1][k-1]
+		+ cof2*rhorin[i1][k] + cof3*rhorin[i1][k+1]
+		+ cof4*rhorin[i1][k+2]; 
+	      zrtemp[i1][j] = cof1*zrin[i1][k-1]
+		+ cof2*zrin[i1][k] + cof3*zrin[i1][k+1]
+		+ cof4*zrin[i1][k+2];
+	    }
+	}
+               
+      for(int i1=1; i1<=npotentials; i1++)
+	{
+	  for(int j=1; j<=nrho; j++)
+	    {
+	      double r = (j-1)*drho;
+	      double p = r/drhoin[i1] + 1.0;
+	      int k =  static_cast<int>(p);
+	      k = min(k,nrhoin[i1]-2);
+	      k = max(k,2);
+	      p = p - k;
+	      double constant = 2.0;
+	      p = min(p,constant);
+	      double cof1 = -0.166666667*p*(p-1.0)*(p-2.0);
+	      double cof2 = 0.5*(p*p-1.0)*(p-2.0);
+	      double cof3 = -0.5*p*(p+1.0)*(p-2.0);
+	      double cof4 = 0.166666667*p*(p*p-1.0);
+
+	      frho[i1][j] = cof1*frhoin[i1][k-1]
+		+ cof2*frhoin[i1][k] + cof3*frhoin[i1][k+1]
+		+ cof4*frhoin[i1][k+2];
+	    }
+	}
+         
+      for(int i1=1; i1<=npotentials; i1++)
+	for(int i2=1; i2<=npotentials; i2++)
+	  for(int j=1; j<=nr; j++)
+	    z2r[i1][i2][j] = 27.2*0.529*zrtemp[i1][j]*zrtemp[i2][j];
+
+
+      // Comparisons
+      /*
+      cout << "rhor:\n";
+      for(int i1=1; i1<=npotentials; i1++)
+	for(int j=1; j<=nr; j++)
+          cout << rhor[i1][j] << endl;
+      
+      cout << "frho:\n";
+      for(int i1=1; i1<=npotentials; i1++)
+	for(int j=1; j<=nrho; j++)
+	  cout << frho[i1][j] << endl;
+      
+      cout << "z2r:\n";
+      for(int i1=1; i1<=npotentials; i1++)
+	for(int i2=1; i2<=npotentials; i2++)
+	  for(int j=1; j<=nr; j++)
+	    cout << z2r[i1][i2][j] << endl;
+      exit(0);
+      */
+    }
+
+
+  // Common to both format now:
+a487 7
+
+  rcutmaxsq = rcutmax*rcutmax;
+
+  rdr = 1.0/dr;
+  rdrho = 1.0/drho;
+
+
+@
+
+
+4.3.2.1.2.5
+log
+@Added EAM energy change calculation
+@
+text
+@a86 1
+  energy_save.resize(npieces);
+a207 2
+      // Assign rho to atom
+      i_pnt->set_rho(rhoi);
+d212 3
+d1142 1
+d1203 15
+a1217 12
+    nrg[0] += newrho[i];
+    nrg[0] += oldrho[i];
+
+    i_pnt = p->get_particle(i);
+    itype = type_index[i_pnt->get_type()]+1;
+   
+    // This number needs to be small enough to capture all
+    // real density changes, but ignoring changes due to 
+    // finite machine precision.
+    if ( fabs(oldrho[i] - newrho[i]) >= 1.e-10) {
+      fp_energy(oldrho[i],Lenergy,energy_i,itype);
+      if (Lenergy) nrg[0]-=energy_i;
+d1219 3
+a1221 3
+      fp_energy(newrho[i],Lenergy,energy_i,itype);
+      if (Lenergy) nrg[0]+=energy_i;
+    }
+d1227 1
+a1227 1
+  // !!!!!!!!!!! Won't always work !!!!!!!!!!!!!!!!!!!
+a1260 116
+// This function computes the energy of removing particle i.
+// It also decrements all the rho values accordingly
+
+double Force_Eam::EnergyParticleRemove(const int& i, 
+			     ParticleList* p, const Box* b, Comm* comm) {
+  int j;
+  int itype,jtype;
+  double xi[3],xj[3],f[3];
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int nparticles,nghost_particles;
+  double rhoi,rhoj;
+  double energy_ij,energy_i,energy_j;
+  double energy;
+  double fpi,fpj;
+  bool Lenergy,Lvirial;
+  double virial_ij[nvirial];
+  vector<double> energy_change(npieces);
+
+  energy_change.assign(npieces,0.0);
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  i_pnt = p->get_particle(i);
+  itype = type_index[i_pnt->get_type()]+1;
+
+  i_pnt->get_x(xi);
+  
+  // First subtract off the embedding energy including particle i.
+  // This is based on existing values of rho.
+
+  // need to change this to a loop over bins
+  for (j=0;j<nparticles+nghost_particles;j++) {
+    j_pnt = p->get_particle(j);
+    jtype = type_index[j_pnt->get_type()]+1;
+    j_pnt->get_x(xj);
+
+    fpj = 0.0;
+    Lenergy = true;
+    fp_standard(j_pnt->get_rho(),fpj,Lenergy,energy_j,jtype);
+    energy_change[0] -= energy_j;
+  }
+
+  // Add on embedding energies with particle i
+  // This is based on decremented rho values.
+  // Pair interactions with i are also subtracted.
+
+  // need to change this to a loop over bins
+  for (j=0;j<nparticles+nghost_particles;j++) {
+    if (j!=i) {
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+    
+      rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+
+      i_pnt->increment_rho(-rhoi);
+      j_pnt->increment_rho(-rhoj);
+
+      fpj = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpj,Lenergy,energy_j,jtype);
+      energy_change[0] += energy_j;
+
+      fpi = 0.0;
+      fpj = 0.0;
+      Lenergy = true;
+      Lvirial = true;
+      force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+		     energy_ij,virial_ij,itype,jtype);
+      energy_change[1] -= energy_ij;
+    }
+  }
+
+  if (fabs(i_pnt->get_rho()) >= 1.0e-7) {
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile()<< "Force_Eam::EnergyParticleRemove" <<
+	" Density of Removed Particle = " << i_pnt->get_rho() << endl;
+    }
+    glog.error("Force_Eam::EnergyParticleRemove:\n"
+	       "Density of removed particle not zero");
+  }
+
+  energy = 0.0;
+  for (int ipiece=0;ipiece<npieces;ipiece++) {
+    energy_piece[ipiece] += energy_change[ipiece];
+    energy += energy_change[ipiece];
+  }
+
+  return energy;
+}
+
+// This function computes the energy of adding particle i.
+// It also increments all the rho values accordingly
+
+double Force_Eam::EnergyParticleAdd(const int& i, 
+			     ParticleList* p, const Box* b, Comm* comm) {
+  int j;
+  int itype,jtype;
+  double xi[3],xj[3],f[3];
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int nparticles,nghost_particles;
+  double rhoi,rhoj;
+  double energy_ij,energy_i,energy_j;
+  double energy;
+  double fpi,fpj;
+  bool Lenergy,Lvirial;
+  double virial_ij[nvirial];
+  vector<double> energy_change(npieces);
+
+  energy_change.assign(npieces,0.0);
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+a1261 2
+  i_pnt = p->get_particle(i);
+  itype = type_index[i_pnt->get_type()]+1;
+a1262 1
+  i_pnt->get_x(xi);
+a1263 2
+  // First subtract off the embedding energy without particle i.
+  // This is based on existing values of rho.
+a1264 13
+  // need to change this to a loop over bins
+  for (j=0;j<nparticles+nghost_particles;j++) {
+    if (j!=i) {
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+
+      fpj = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpj,Lenergy,energy_j,jtype);
+      energy_change[0] -= energy_j;
+    }
+  }
+a1265 12
+  // Add on embedding energies with particle i
+  // This is based on incremented rho values.
+  // Pair interactions with i are also added.
+
+  // need to change this to a loop over bins
+  for (j=0;j<nparticles+nghost_particles;j++) {
+    if (j!=i) {
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+    
+      rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+a1266 2
+      i_pnt->increment_rho(rhoi);
+      j_pnt->increment_rho(rhoj);
+a1267 4
+      fpi = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpi,Lenergy,energy_j,jtype);
+      energy_change[0] += energy_j;
+a1268 9
+      fpi = 0.0;
+      fpj = 0.0;
+      Lenergy = true;
+      Lvirial = true;
+      force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+		     energy_ij,virial_ij,itype,jtype);
+      energy_change[1] += energy_ij;
+    }
+  }
+a1269 5
+  // Add in the embedding energy for particle i
+  fpi = 0.0;
+  Lenergy = true;
+  fp_standard(i_pnt->get_rho(),fpi,Lenergy,energy_i,itype);
+  energy_change[0] += energy_i;
+a1270 5
+  energy = 0.0;
+  for (int ipiece=0;ipiece<npieces;ipiece++) {
+    energy_piece[ipiece] += energy_change[ipiece];
+    energy += energy_change[ipiece];
+  }
+a1271 1
+  return energy;
+a1272 1
+}
+@
+
+
+4.3.2.1.2.6
+log
+@Added Metropolis acceptance criterion
+@
+text
+@d307 166
+a472 5
+  if (npotentials > 0) {
+    // Read funcfl format
+    buf_in >> label;
+    if (buf_in.fail()) 
+      {
+a476 17
+      
+    nrhoin  = new int[npotentials+1];
+    nrin    = new int[npotentials+1];
+    drhoin  = new double[npotentials+1];
+    drin    = new double[npotentials+1];
+    rdrin   = new double[npotentials+1];
+    rdrhoin = new double[npotentials+1];
+    rcutin  = new double[npotentials+1];
+
+    frhoin.resize(npotentials+1);
+    rhorin.resize(npotentials+1);
+    zrin.resize(npotentials+1);
+
+    frhoin[0] = new double[nrhoin[0]+1];
+    rhorin[0] = new double[nrin[0]+1];
+    zrin[0]   = new double[nrin[0]+1];
+
+a477 1
+    for (int ipot = 1; ipot <= npotentials; ipot++) { 
+d484 1
+a484 1
+	  
+d487 1
+a487 2
+	  
+	  
+d489 2
+a490 5
+      if (node == 0) {
+	infile.open(str_tmp.c_str()); 
+	
+	if (!infile) {
+	  infile.close();
+a491 6
+	  if (!infile) {
+	    glog.abort("Force_Eam::ReadInteractions:\n"
+		       "Failed to open " + str_tmp,comm);
+	  }
+	}
+      }
+d493 10
+a502 72
+      double mass;
+	  
+      if (node==0) {
+	input_string_get(infile,buf);
+	input_string_get(infile,buf);
+	buf_in_eam = new std::istringstream(buf);
+	*buf_in_eam >> id >> mass;
+	if (buf_in_eam->fail()) {
+	  glog.abort("Force_Eam::ReadInteractions:\n"
+		     "Read error in " + str_tmp + " id");
+	}
+	      
+	isize = id.size();
+	delete buf_in_eam;	      
+      }
+      MPI_Bcast(&isize,1,MPI_INT,0,world);
+      if (node != 0) id.resize(isize);
+      MPI_Bcast(&id[0],isize,MPI_CHAR,0,world);
+      MPI_Bcast(&mass,1,MPI_DOUBLE,0,world);
+      glog.logfile << "id = " << id << endl;
+      match = find_id(id,itype);
+      if (!match) {
+	ntypes++;
+	itype = ntypes-1;
+	id_index.push_back(id);
+	mass_index.push_back(mass);
+      } else {
+	glog.error("Force_Eam::ReadInteractions:\n"
+		   "Duplicated id string in file " + str_tmp);
+      }
+
+      if (node==0) {
+	input_string_get(infile,buf);
+	buf_in_eam = new std::istringstream(buf);
+	*buf_in_eam >> nrhoin[ipot] >> drhoin[ipot]    >> nrin[ipot] 
+		    >> drin[ipot]   >> rcutin[ipot];
+	if (buf_in_eam->fail()) {
+	  glog.abort("Force_Eam::ReadInteractions:\n"
+		     "Read error in " + str_tmp + " header");
+	}
+	delete buf_in_eam;
+      }
+      MPI_Bcast(&nrhoin[ipot],1,MPI_INT,0,world);
+      MPI_Bcast(&drhoin[ipot],1,MPI_DOUBLE,0,world);
+      MPI_Bcast(&nrin[ipot],1,MPI_INT,0,world);
+      MPI_Bcast(&drin[ipot],1,MPI_DOUBLE,0,world);
+      MPI_Bcast(&rcutin[ipot],1,MPI_DOUBLE,0,world);
+	  
+      // create 3 input arrays
+      // note: fortran convention on indices used (1 to n),
+      //       so all dimensions have to have one extra entry
+	  
+      frhoin[ipot] = new double[nrhoin[ipot]+1];
+      rhorin[ipot] = new double[nrin[ipot]+1];
+      zrin[ipot]   = new double[nrin[ipot]+1];
+
+      // read 3 arrays
+      // frhoin, rhorin and zrin are one per type
+      if (node == 0) {
+	grab(infile,nrhoin[ipot],&frhoin[ipot][1]);
+	if (!infile) {
+	  glog.abort("Force_Eam::ReadInteractions:\n"
+		     "Read error in " + str_tmp + " frhoin");
+	}
+      }
+      MPI_Bcast(&frhoin[ipot][1],nrhoin[ipot],MPI_DOUBLE,0,world);
+	  
+      if (node == 0) {
+	grab(infile,nrin[ipot],&zrin[ipot][1]);
+	if (!infile) {
+	  glog.abort("Force_Eam::ReadInteractions:\n"
+		     "Read error in " + str_tmp + " zrin");
+a503 2
+      }
+      MPI_Bcast(&zrin[ipot][1],nrin[ipot],MPI_DOUBLE,0,world);
+d505 6
+a510 20
+      if (node == 0) {
+	grab(infile,nrin[ipot],&rhorin[ipot][1]);
+	if (!infile) {
+	  glog.abort("Force_Eam::ReadInteractions:\n"
+		     "Read error in " + str_tmp + " rhorin");
+	}
+      }
+      MPI_Bcast(&rhorin[ipot][1],nrin[ipot],MPI_DOUBLE,0,world);
+	  
+      // close the potential file
+      if (node == 0) infile.close();
+    }
+  } else {
+    // Read setfl format 
+    buf_in >> label;
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Force_Eam::ReadInteractions:\n"
+		 "Read error in input string - wrong label");
+    }
+d512 8
+a519 37
+    buf_in >> filename;
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Force_Eam::ReadInteractions:\n"
+		   "Read error in input string - name not found");
+    }
+      
+    glog.logfile << "\n\n\nReading " << label << " from file " <<
+      filename << endl;
+    
+    str_tmp = glog.path_str + filename;
+    if (node == 0) {
+      infile.open(str_tmp.c_str()); 
+      
+      if (!infile) {
+	infile.close();
+	infile.open(str_tmp.c_str()); 
+	if (!infile) {
+	  glog.abort("Force_Eam::ReadInteractions:\n"
+		     "Failed to open " + str_tmp,comm);
+	}
+      }
+    }
+      
+    if (node==0) {
+      input_string_get(infile,buf);
+      input_string_get(infile,buf);
+      input_string_get(infile,buf);
+      input_string_get(infile,buf);
+
+      buf_in_eam = new std::istringstream(buf);
+      *buf_in_eam >> ntypes_tmp;
+      if (buf_in_eam->fail()) {
+	glog.abort("Force_Eam::ReadInteractions:\n"
+		   "Read error in " + str_tmp + " header");
+      }
+      delete buf_in_eam;
+d521 9
+a529 8
+      input_string_get(infile,buf);
+      buf_in_eam = new std::istringstream(buf);
+      *buf_in_eam >> nrho >> drho >> nr >> dr>> rcutmax;
+      if (buf_in_eam->fail()) {
+	glog.abort("Force_Eam::ReadInteractions:\n"
+		   "Read error in " + str_tmp + " header");
+      }
+      delete buf_in_eam;
+d537 1
+a537 1
+      MPI_Bcast(&rcutmax,1,MPI_DOUBLE,0,world);
+d543 11
+a553 10
+      for (itype=0;itype<=ntypes_tmp;itype++) {
+	ipnt_tmp = new double[nrho+1];
+	frho.push_back(ipnt_tmp);
+	ipnt_tmp = new double[nr+1];
+	rhor.push_back(ipnt_tmp);
+	ipnt2d_tmp = new double*[ntypes_tmp+1];
+	z2r.push_back(ipnt2d_tmp);
+	for (jtype=0;jtype<=ntypes_tmp;jtype++) 
+	  z2r[itype][jtype] = new double[nr+1];
+      }
+d562 54
+a615 36
+      for (int i = 1; i <= ntypes_tmp; i++) {
+	if (node == 0) {
+	  input_string_get(infile,buf);
+	  buf_in_eam = new std::istringstream(buf);
+	  *buf_in_eam >> id >> mass;
+	  if (buf_in_eam->fail()) {
+	    glog.abort("Force_Eam::ReadInteractions:\n"
+		       "Read error in " + str_tmp + " id");
+	  }
+	  isize = id.size();
+	  delete buf_in_eam;
+	}
+	MPI_Bcast(&isize,1,MPI_INT,0,world);
+	if (node != 0) id.resize(isize);
+	MPI_Bcast(&id[0],isize,MPI_CHAR,0,world);
+	MPI_Bcast(&mass,1,MPI_DOUBLE,0,world);
+	glog.logfile << "id = " << id << endl;
+	match = find_id(id,itype);
+	if (!match) {
+	  ntypes++;
+	  itype = ntypes-1;
+	  id_index.push_back(id);
+	  mass_index.push_back(mass);
+	} 
+	else {
+	  glog.error("Force_Eam::ReadInteractions:\n"
+		     "Duplicated id string in file " + str_tmp);
+	}
+	if (node == 0) {
+	  grab(infile,nrho,&frho[i][1]);
+	  if (!infile) {
+	    glog.abort("Force_Eam::ReadInteractions:\n"
+		       "Read error in " + str_tmp + " frho");
+	  }
+	}
+	MPI_Bcast(&frho[i][1],nrho,MPI_DOUBLE,0,world);
+a616 6
+	if (node == 0) {
+	  grab(infile,nr,&rhor[i][1]);
+	  if (!infile) {
+	    glog.abort("Force_Eam::ReadInteractions:\n"
+		       "Read error in " + str_tmp + " rhor");
+	  }
+a617 3
+	MPI_Bcast(&rhor[i][1],nr,MPI_DOUBLE,0,world);
+	
+      }
+d619 18
+a636 7
+      for (int i = 1; i <= ntypes_tmp; i++) {
+	for (int j = 1; j <= i;j++) {
+	  if (node == 0) {
+	    grab(infile,nr,&z2r[i][j][1]);
+	    if (!infile) {
+	      glog.abort("Force_Eam::ReadInteractions:\n"
+			 "Read error in " + str_tmp + " z2r");
+a637 5
+	  }
+	  MPI_Bcast(&z2r[i][j][1],nr,MPI_DOUBLE,0,world);
+	  for (int ir = 1;ir<=nr;ir++) {
+	    z2r[j][i][ir] = z2r[i][j][ir];
+	  }
+a638 1
+      }
+d641 1
+a641 1
+  }
+@
+
+
+4.3.2.1.2.7
+log
+@Added in bin reallocation in montecarlo.cpp
+@
+text
+@a0 1
+
+d1295 2
+a1296 2
+    glog.abort("Force_Eam::EnergyParticleRemove:\n"
+	       "Density of removed particle not zero",comm);
+@
+
+
+4.3.2.1.2.8
+log
+@Added bin-based energy calc
+@
+text
+@d1 1
+a76 2
+#include "bin.h"
+
+d1248 1
+a1259 5
+//   if (comm->get_Lnodefile()) {
+//     comm->get_nodefile()<< "Force_Eam::EnergyParticleRemove" <<
+//       " Embedding Energy of Removed Particle " << i << " = " << energy_change[0] << endl;
+//   }
+
+d1264 1
+d1296 2
+a1297 2
+    glog.warning("Force_Eam::EnergyParticleRemove:\n"
+	       "Density of removed particle not zero");
+d1312 1
+a1312 1
+double Force_Eam::EnergyParticleAdd(const int& i,
+d1341 1
+d1359 1
+a1400 299
+
+// This function computes the energy of removing particle i.
+// It also decrements all the rho values accordingly
+
+double Force_Eam::EnergyParticleRemove(const int& i, const Bin* bp, 
+			     ParticleList* p, const Box* b, Comm* comm) {
+  int j;
+  int itype,jtype;
+  double xi[3],xj[3],f[3];
+  Particle* i_pnt;
+  Particle* j_pnt;
+  double rhoi,rhoj;
+  double energy_ij,energy_i,energy_j;
+  double energy;
+  double fpi,fpj;
+  bool Lenergy,Lvirial;
+  double virial_ij[nvirial];
+  vector<double> energy_change(npieces);
+
+  energy_change.assign(npieces,0.0);
+
+  i_pnt = p->get_particle(i);
+  itype = type_index[i_pnt->get_type()]+1;
+
+  i_pnt->get_x(xi);
+  
+  // First subtract off the embedding energy including particle i.
+  // This is based on existing values of rho.
+
+  // First loop over local bin
+  int nparticles = bp->get_nparticles();
+  const int* pp0 = bp->get_particles();
+  for (int jj = 0; jj < nparticles; jj++) {
+    j = pp0[jj];
+    j_pnt = p->get_particle(j);
+    jtype = type_index[j_pnt->get_type()]+1;
+    j_pnt->get_x(xj);
+
+    fpj = 0.0;
+    Lenergy = true;
+    fp_standard(j_pnt->get_rho(),fpj,Lenergy,energy_j,jtype);
+    energy_change[0] -= energy_j;
+  }
+
+  // Now loop over neighbor bins
+  vector <Bin*> nbrs = bp->get_nbrs();
+  int nnbrs = nbrs.size();
+  for (int inbr = 0; inbr < nnbrs; inbr++) {
+    // Note that these definitions of pp0 and nparticles 
+    // are local to the loop over neighbors
+    int nparticles = nbrs[inbr]->get_nparticles();
+    const int* pp0 = nbrs[inbr]->get_particles();
+    for (int jj = 0; jj < nparticles; jj++) {
+      j = pp0[jj];
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+      
+      fpj = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpj,Lenergy,energy_j,jtype);
+      energy_change[0] -= energy_j;
+    }
+  }
+
+//   if (comm->get_Lnodefile()) {
+//     comm->get_nodefile()<< "Force_Eam::EnergyParticleRemove" <<
+//       " Embedding Energy of Removed Particle " << i << " = " << energy_change[0] << endl;
+//   }
+
+  // Add on embedding energies.
+  // This is based on decremented rho values.
+  // Pair interactions with i are also subtracted.
+
+  // First loop over local bin
+  for (int jj = 0; jj < nparticles; jj++) {
+    j = pp0[jj];
+    if (j!=i) {
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+    
+      rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+
+      i_pnt->increment_rho(-rhoi);
+      j_pnt->increment_rho(-rhoj);
+
+      fpj = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpj,Lenergy,energy_j,jtype);
+      energy_change[0] += energy_j;
+
+      fpi = 0.0;
+      fpj = 0.0;
+      Lenergy = true;
+      Lvirial = true;
+      force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+		     energy_ij,virial_ij,itype,jtype);
+      energy_change[1] -= energy_ij;
+    }
+  }
+
+  // Now loop over neighbor bins
+  for (int inbr = 0; inbr < nnbrs; inbr++) {
+    // Note that these definitions of pp0 and nparticles 
+    // are local to the loop over neighbors
+    int nparticles = nbrs[inbr]->get_nparticles();
+    const int* pp0 = nbrs[inbr]->get_particles();
+    nparticles = nbrs[inbr]->get_nparticles();
+    for (int jj = 0; jj < nparticles; jj++) {
+      j = pp0[jj];
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+    
+      rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+      
+      i_pnt->increment_rho(-rhoi);
+      j_pnt->increment_rho(-rhoj);
+
+      fpj = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpj,Lenergy,energy_j,jtype);
+      energy_change[0] += energy_j;
+
+      fpi = 0.0;
+      fpj = 0.0;
+      Lenergy = true;
+      Lvirial = true;
+      force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+		     energy_ij,virial_ij,itype,jtype);
+      energy_change[1] -= energy_ij;
+    }
+  }
+
+  if (fabs(i_pnt->get_rho()) >= 1.0e-7) {
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile()<< "Force_Eam::EnergyParticleRemove" <<
+	" Density of Removed Particle = " << i_pnt->get_rho() << endl;
+    }
+    glog.warning("Force_Eam::EnergyParticleRemove:\n"
+	       "Density of removed particle not zero");
+  }
+
+  energy = 0.0;
+  for (int ipiece=0;ipiece<npieces;ipiece++) {
+    energy_piece[ipiece] += energy_change[ipiece];
+    energy += energy_change[ipiece];
+  }
+
+  return energy;
+}
+
+// This function computes the energy of adding particle i.
+// It also increments all the rho values accordingly
+
+double Force_Eam::EnergyParticleAdd(const int& i, const Bin* bp,
+			     ParticleList* p, const Box* b, Comm* comm) {
+  int j;
+  int itype,jtype;
+  double xi[3],xj[3],f[3];
+  Particle* i_pnt;
+  Particle* j_pnt;
+  double rhoi,rhoj;
+  double energy_ij,energy_i,energy_j;
+  double energy;
+  double fpi,fpj;
+  bool Lenergy,Lvirial;
+  double virial_ij[nvirial];
+  vector<double> energy_change(npieces);
+
+  energy_change.assign(npieces,0.0);
+
+  i_pnt = p->get_particle(i);
+  itype = type_index[i_pnt->get_type()]+1;
+
+  i_pnt->get_x(xi);
+
+  // First subtract off the embedding energy without particle i.
+  // This is based on existing values of rho.
+
+  // First loop over local bin
+  int nparticles = bp->get_nparticles();
+  const int* pp0 = bp->get_particles();
+  for (int jj = 0; jj < nparticles; jj++) {
+    j = pp0[jj];
+    if (j!=i) {
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+
+      fpj = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpj,Lenergy,energy_j,jtype);
+      energy_change[0] -= energy_j;
+    }
+  }
+
+  // Now loop over neighbor bins
+  vector <Bin*> nbrs = bp->get_nbrs();
+  int nnbrs = nbrs.size();
+  for (int inbr = 0; inbr < nnbrs; inbr++) {
+    // Note that these definitions of pp0 and nparticles 
+    // are local to the loop over neighbors
+    int nparticles = nbrs[inbr]->get_nparticles();
+    const int* pp0 = nbrs[inbr]->get_particles();
+    for (int jj = 0; jj < nparticles; jj++) {
+      j = pp0[jj];
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+
+      fpj = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpj,Lenergy,energy_j,jtype);
+      energy_change[0] -= energy_j;
+    }
+  }
+
+  // Add on embedding energies with particle i
+  // This is based on incremented rho values.
+  // Pair interactions with i are also added.
+
+  // First loop over local bin
+  for (int jj = 0; jj < nparticles; jj++) {
+    j = pp0[jj];
+    if (j!=i) {
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+    
+      rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+
+      i_pnt->increment_rho(rhoi);
+      j_pnt->increment_rho(rhoj);
+
+      fpi = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpi,Lenergy,energy_j,jtype);
+      energy_change[0] += energy_j;
+
+      fpi = 0.0;
+      fpj = 0.0;
+      Lenergy = true;
+      Lvirial = true;
+      force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+		     energy_ij,virial_ij,itype,jtype);
+      energy_change[1] += energy_ij;
+    }
+  }
+
+  // Now loop over neighbor bins
+  for (int inbr = 0; inbr < nnbrs; inbr++) {
+    // Note that these definitions of pp0 and nparticles 
+    // are local to the loop over neighbors
+    int nparticles = nbrs[inbr]->get_nparticles();
+    const int* pp0 = nbrs[inbr]->get_particles();
+    for (int jj = 0; jj < nparticles; jj++) {
+      j = pp0[jj];
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()]+1;
+      j_pnt->get_x(xj);
+    
+      rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+
+      i_pnt->increment_rho(rhoi);
+      j_pnt->increment_rho(rhoj);
+
+      fpi = 0.0;
+      Lenergy = true;
+      fp_standard(j_pnt->get_rho(),fpi,Lenergy,energy_j,jtype);
+      energy_change[0] += energy_j;
+
+      fpi = 0.0;
+      fpj = 0.0;
+      Lenergy = true;
+      Lvirial = true;
+      force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+		     energy_ij,virial_ij,itype,jtype);
+      energy_change[1] += energy_ij;
+    }
+  }
+
+
+  // Add in the embedding energy for particle i
+  fpi = 0.0;
+  Lenergy = true;
+  fp_standard(i_pnt->get_rho(),fpi,Lenergy,energy_i,itype);
+  energy_change[0] += energy_i;
+
+  energy = 0.0;
+  for (int ipiece=0;ipiece<npieces;ipiece++) {
+    energy_piece[ipiece] += energy_change[ipiece];
+    energy += energy_change[ipiece];
+  }
+
+  return energy;
+
+}
+@
+
+
+4.3.2.1.2.9
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@a89 1
+  energy_save_particles.resize(npieces);
+d1084 132
+a1701 127
+
+// This function saves the forcefield-specific properties of
+// all particles. It also saves the forcefield energy 
+// in energy_save_particles, to distinguish it from the
+// values saved by SaveEnergy(); 
+
+void Force_Eam::SaveParticles(ParticleList* p, const Box* b, Comm* comm) {
+  Particle* i_pnt;
+  int nparticles,nghost_particles;
+
+  energy_save_particles = energy_piece;
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  rho_save.resize(nparticles+nghost_particles);
+
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    rho_save[i] = i_pnt->get_rho();
+  }
+}
+
+// This function restores the forcefield-specific properties of
+// all particles. It also restores the forcefield energy 
+// in energy_save_particles
+
+void Force_Eam::RestoreParticles(ParticleList* p, const Box* b, Comm* comm) {
+  Particle* i_pnt;
+  int nparticles,nghost_particles;
+
+  energy_piece = energy_save_particles;
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->set_rho(rho_save[i]);
+  }
+}
+
+// This function saves the forcefield-specific properties of
+// all particles. It also saves the forcefield energy 
+// in energy_save_particles, to distinguish it from the
+// values saved by SaveEnergy(); 
+
+void Force_Eam::SaveParticles(const Bin* bp,
+			      ParticleList* p, const Box* b, Comm* comm) {
+  Particle* i_pnt;
+  int i;
+
+  // Save energy
+  energy_save_particles = energy_piece;
+
+  // Get neighboring cells
+  vector <Bin*> nbrs = bp->get_nbrs();
+  int nnbrs = nbrs.size();
+
+  // Sum up total number of particles to be saved
+  int nparticles_tot = bp->get_nparticles();
+  for (int inbr = 0; inbr < nnbrs; inbr++) {
+    nparticles_tot += nbrs[inbr]->get_nparticles();
+  }
+  rho_save.resize(nparticles_tot);
+
+  // First loop over local bin
+  int nparticles = bp->get_nparticles();
+  int icount = 0;
+  const int* pp0 = bp->get_particles();
+  for (int ii = 0; ii < nparticles; ii++) {
+    i = pp0[ii];
+    i_pnt = p->get_particle(i);
+    rho_save[icount++] = i_pnt->get_rho();
+  }
+
+  // Now loop over neighbor bins
+  for (int inbr = 0; inbr < nnbrs; inbr++) {
+    // Note that these definitions of pp0 and nparticles 
+    // are local to the loop over neighbors
+    int nparticles = nbrs[inbr]->get_nparticles();
+    const int* pp0 = nbrs[inbr]->get_particles();
+    for (int ii = 0; ii < nparticles; ii++) {
+      i = pp0[ii];
+      i_pnt = p->get_particle(i);
+      rho_save[icount++] = i_pnt->get_rho();
+    }
+  }
+}
+
+// This function restores the forcefield-specific properties of
+// all particles. It also restores the forcefield energy 
+// in energy_save_particles
+
+void Force_Eam::RestoreParticles(const Bin* bp,
+				 ParticleList* p, const Box* b, Comm* comm) {
+  Particle* i_pnt;
+  int i;
+
+  energy_piece = energy_save_particles;
+
+  // First loop over local bin
+  int nparticles = bp->get_nparticles();
+  const int* pp0 = bp->get_particles();
+  int icount = 0;
+  for (int ii = 0; ii < nparticles; ii++) {
+    i = pp0[ii];
+    i_pnt = p->get_particle(i);
+    i_pnt->set_rho(rho_save[icount++]);
+  }
+
+  // Now loop over neighbor bins
+  vector <Bin*> nbrs = bp->get_nbrs();
+  int nnbrs = nbrs.size();
+  for (int inbr = 0; inbr < nnbrs; inbr++) {
+    // Note that these definitions of pp0 and nparticles 
+    // are local to the loop over neighbors
+    int nparticles = nbrs[inbr]->get_nparticles();
+    const int* pp0 = nbrs[inbr]->get_particles();
+    for (int ii = 0; ii < nparticles; ii++) {
+      i = pp0[ii];
+      i_pnt = p->get_particle(i);
+      i_pnt->set_rho(rho_save[icount++]);
+    }
+  }
+}
+
+@
+
+
+4.3.2.1.2.10
+log
+@Correct an initialization error.
+@
+text
+@d332 4
+a335 3
+    frhoin[0] = new double[1];
+    rhorin[0] = new double[1];
+    zrin[0]   = new double[1];
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d196 2
+a197 2
+    glog.error("Force_Eam::Applyforce:\n"
+	       "Eam force field only implemented with neighbor list");
+d200 1
+a200 1
+  comm->reverse_comm_double(rho);
+d205 7
+a211 6
+    rhoi = rho[i];
+
+    fp_standard(rhoi,fpi,Lenergy,energy_i,itype);
+    fp[i]+=fpi;
+    if (Lenergy) {
+      energy_piece[0]+=energy_i;
+d215 1
+a215 1
+  comm->comm_double(fp);
+d250 2
+a251 2
+    glog.error("Force_Eam::Applyforce:\n"
+	       "Eam force field only implemented with neighbor list");
+d707 1
+a707 1
+	glog.error("Force_Eam::SetupTypes:\n"
+d710 4
+a789 170
+// P-Monaco Routines
+// added saubry (02-17-05)
+void Force_Eam::EnergyChange(int* atom, vector <double> boost,
+			     const bool& Lenergy,ParticleList* p,
+			     const Box* b, Comm* comm) 
+{
+  int j;
+  int itype,jtype;
+  double xi[3],xj[3];
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int nparticles,nghost_particles;
+  double rhoi,rhoj;
+  int* neighptr;
+  double energy_ij,energy_i;
+
+  vector<double> nrg;
+  double xold[3],xnew[3];
+  double rhoa,dist;
+  Particle* at_pnt;
+  int typea;
+
+  npieces = 2;
+  nrg.resize(npieces);
+  nrg[0] = 0.0;nrg[1] = 0.0;
+  
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  // define atom
+  at_pnt = p->get_particle(*atom);
+  at_pnt->get_x(xold);
+  typea= type_index[at_pnt->get_type()]+1;
+
+  xnew[0] = xold[0] + boost[0];
+  xnew[1] = xold[1] + boost[1];
+  xnew[2] = xold[2] + boost[2];
+
+  vector<double> oldrho,newrho;
+  oldrho.resize(nparticles + nghost_particles);
+  newrho.resize(nparticles + nghost_particles);
+
+  for (int i=0;i<nparticles+ nghost_particles;i++) 
+    {
+      oldrho[i] = 0.0;
+      newrho[i] = 0.0;
+    }
+
+  // rho
+ if (Lneighbor) 
+   {
+     for (int i=0;i<nparticles;i++) 
+       {
+	 i_pnt = p->get_particle(i);
+	 itype = type_index[i_pnt->get_type()]+1;
+	 i_pnt->get_x(xi);
+	 neighptr = neighbor->first_ptr[i];
+	 
+	 for (int ineigh=0;
+	      ineigh<neighbor->nneigh_list[i];ineigh++) 
+	   {
+	     j = neighptr[ineigh];
+	     j_pnt = p->get_particle(j);
+	     jtype = type_index[j_pnt->get_type()]+1;
+	     j_pnt->get_x(xj);
+	     
+	     rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+	     
+	     oldrho[i]+=rhoi;
+	     oldrho[j]+=rhoj;
+
+	     if ((i == *atom)&&(j != *atom))
+	       {
+		 rho_standard(xnew,xj,rhoi,rhoj,itype,jtype);
+		 
+		 newrho[*atom]+=rhoi;
+		 newrho[j]+=rhoj;
+	       }
+	     else if ((i != *atom)&&(j == *atom))
+	       {
+		 rho_standard(xi,xnew,rhoi,rhoj,itype,jtype);
+		 
+		 newrho[i]+=rhoi;
+		 newrho[*atom]+=rhoj;
+	       }
+	     else
+	       {
+		 rho_standard(xi,xj,rhoi,rhoj,itype,jtype);		 
+		 newrho[i]+=rhoi;
+		 newrho[j]+=rhoj;
+	       }
+
+	   }
+       }
+   }
+    
+  comm->reverse_comm_double(oldrho);
+  comm->reverse_comm_double(newrho);
+
+  // f(rho)
+  for (int i=0;i<nparticles+ nghost_particles;i++) 
+    {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()]+1;
+      i_pnt->get_x(xi);
+
+      if ( fabs(oldrho[i] - newrho[i]) >= 1.e-6)
+	{
+	  fp_energy(oldrho[i],Lenergy,energy_i,itype);
+	  if (Lenergy) nrg[0]-=energy_i;  
+
+	  fp_energy(newrho[i],Lenergy,energy_i,itype);
+	  if (Lenergy) nrg[0]+=energy_i;  
+	}    
+    }
+
+
+  // phi
+  if (Lneighbor) 
+    {
+      for (int i=0; i<nparticles+nghost_particles;i++) 
+	{
+	  i_pnt = p->get_particle(i);
+	  itype = type_index[i_pnt->get_type()]+1;
+	  i_pnt->get_x(xi);
+	  
+	  if (i != *atom)
+	    {		      
+	      energy_standard(xi,xold,Lenergy,energy_ij,itype,typea);	  
+	      if (Lenergy) nrg[1]-=energy_ij;
+
+
+	      energy_standard(xi,xnew,Lenergy,energy_ij,itype,typea);	  
+	      if (Lenergy) nrg[1]+=energy_ij;
+	    }
+	}
+    }
+  
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+
+  int node;
+  node = comm->get_node();
+  if (node == 0)
+    {
+      glog.logfile << "\nBoost is " << boost[0] << " " << boost[1] << " " << boost[2] << "\n";
+      glog.logfile << "Energy Change (2) :"<< nrg[1]+nrg[0] << "\n" ;
+      glog.logfile << "      Embedding = " << nrg[0] << "\n";
+      glog.logfile << "      Pair      = " << nrg[1] << "\n";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d180 2
+a181 2
+    glog.error("Force_Eam::ApplyForce:\n"
+	       "Eam density only implemented with neighbor list");
+d184 1
+a184 1
+  comm->reverse_comm_double_add(rho);
+d189 6
+a194 7
+    if (itype != 0) {
+      rhoi = rho[i];
+      fp_standard(rhoi,fpi,Lenergy,energy_i,itype);
+      fp[i]+=fpi;
+      if (Lenergy) {
+	energy_piece[0]+=energy_i;
+      }
+d198 1
+a198 1
+  comm->comm_double_add(fp);
+d233 2
+a234 2
+    glog.error("Force_Eam::ApplyForce:\n"
+	       "Eam force only implemented with neighbor list");
+d690 1
+a690 1
+	glog.error("Force_Eam::CheckMasses:\n"
+a692 4
+    } else {
+      glog.warning("Force_Eam::CheckMasses:\n"
+		 "Particle type " + t->get_id(itype) +
+		 " not in EAM force field " + label);
+d769 170
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d184 1
+a184 1
+  comm->reverse_comm_double(rho);
+d199 1
+a199 1
+  comm->comm_double(fp);
+@
+
+
+3.1
+log
+@Fixed several typos in force field classes.
+CV ----------------------------------------------------------------------
+@
+text
+@d180 2
+a181 2
+    glog.error("Force_Eam::Applyforce:\n"
+	       "Eam force field only implemented with neighbor list");
+d189 7
+a195 6
+    rhoi = rho[i];
+
+    fp_standard(rhoi,fpi,Lenergy,energy_i,itype);
+    fp[i]+=fpi;
+    if (Lenergy) {
+      energy_piece[0]+=energy_i;
+d234 2
+a235 2
+    glog.error("Force_Eam::Applyforce:\n"
+	       "Eam force field only implemented with neighbor list");
+d691 1
+a691 1
+	glog.error("Force_Eam::SetupTypes:\n"
+d694 4
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d690 1
+a690 1
+	glog.error("ForceFieldList::SetupTypes:\n"
+@
+
+
+3.0.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a251 211
+// added saubry (02-17-05)
+void Force_Eam::EnergyChange(int* atom, vector <double> boost,
+		    const bool& Lenergy, const bool& Lvirial, 
+                    ParticleList* p, 
+		    const Box* b, Comm* comm) 
+{
+  
+  int itype,jtype;
+  int i,j;
+  double xi[3],xj[3],f[3];
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int nparticles,nghost_particles;
+  int* neighptr;
+  double rhoi,rhoj,fpi,fpj;
+  double energy_ij,energy_i;
+  double virial_ij[nvirial];
+
+  vector<double> energy;
+  double xold[3],xnew[3];
+  double at_rho;
+  Particle* at_pnt;
+  int at_type;
+  npieces = 2;
+  energy.resize(npieces);
+
+  if (Lenergy) 
+    {
+      energy[0] = 0.0;
+      energy[1] = 0.0;
+    }
+  
+  // extend size of nlocal-dependent arrays if necessary,
+  // and initialize to zero;
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  ZeroArrays(nparticles+nghost_particles);
+
+
+  // define atom
+  at_pnt = p->get_particle(*atom);
+  at_pnt->get_x(xold);
+  at_type= type_index[at_pnt->get_type()]+1;
+
+  xnew[0] = xold[0] + boost[0];
+  xnew[1] = xold[1] + boost[1];
+  xnew[2] = xold[2] + boost[2];
+
+  // remove old rho
+  if (Lneighbor) 
+    {
+      for (int i=0; i<nparticles ;i++) 
+	{
+	  if ( i != *atom)
+	    {
+	      i_pnt = p->get_particle(i);
+	      itype = type_index[i_pnt->get_type()]+1;
+	      i_pnt->get_x(xi);
+	      neighptr = neighbor->first_ptr[i];
+	      
+	      double diff[3];
+	      diff[0] = xold[0] - xi[0];
+	      diff[1] = xold[1] - xi[1];
+	      diff[2] = xold[2] - xi[2];
+	      double dist = sqrt(vec3_norm(diff));
+	      
+	      if (dist < rcutmax) 
+		{
+		  rho_standard(xi,xold,rhoi,at_rho,itype,at_type);
+		  rho[i]-=rhoi;
+		  rho[*atom]-=at_rho;
+		}
+	    }
+	}
+    } 
+  else 
+    {
+      glog.error("Force_Eam::Applyforce:\n"
+		 "Eam force field only implemented with neighbor list");
+    }
+
+  // add new rho
+  if (Lneighbor) 
+    {
+      for (int i=0; i<nparticles ;i++) 
+	{
+	  if ( i != *atom)
+	    {
+	      i_pnt = p->get_particle(i);
+	      itype = type_index[i_pnt->get_type()]+1;
+	      i_pnt->get_x(xi);
+	      neighptr = neighbor->first_ptr[i];
+	      
+	      double diff[3];
+	      diff[0] = xnew[0] - xi[0];
+	      diff[1] = xnew[1] - xi[1];
+	      diff[2] = xnew[2] - xi[2];
+	      double dist = sqrt(vec3_norm(diff));
+	      
+	      if (dist < rcutmax) 
+		{
+		  rho_standard(xi,xnew,rhoi,at_rho,itype,at_type);
+		  rho[i]+=rhoi;
+		  rho[*atom]+=at_rho;
+		}
+	    }
+	}
+    } 
+  else 
+    {
+      glog.error("Force_Eam::Applyforce:\n"
+		 "Eam force field only implemented with neighbor list");
+    }
+
+
+  // communicate densities
+  comm->reverse_comm_double(rho);
+
+
+  // calculate f(rho) with new rho
+  for (int i=0;i<nparticles;i++) 
+    {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()]+1;
+      rhoi = rho[i];
+
+      fp_energy(rhoi,Lenergy,energy_i,itype);
+      if (Lenergy) energy[0]+=energy_i;
+    }
+
+  comm->comm_double(fp);
+
+
+  // remove old phi
+  if (Lneighbor) 
+    {
+      
+      for (int i=0; i<nparticles;i++) 
+	{
+	  if ( i != *atom)
+	    {
+	      i_pnt = p->get_particle(i);
+	      itype = type_index[i_pnt->get_type()]+1;
+	      i_pnt->get_x(xi);
+	      neighptr = neighbor->first_ptr[i];
+	      
+	      double diff[3];
+	      diff[0] = xold[0] - xi[0];
+	      diff[1] = xold[1] - xi[1];
+	      diff[2] = xold[2] - xi[2];
+	      double dist = sqrt(vec3_norm(diff));
+	      
+	      if (dist < rcutmax)  energy_standard(xi,xnew,Lenergy,energy_ij,itype,at_type);	  
+	      if (Lenergy) 
+		energy[1]-=energy_ij;
+	    }
+	}
+    } 
+  else 
+    {
+      glog.error("Force_Eam::EnergyChange:\n"
+		 "Eam energy change only implemented with neighbor list");
+    }
+
+
+  // add new phi
+  if (Lneighbor) 
+    {
+      
+      for (int i=0; i<nparticles;i++) 
+	{
+	  if ( i != *atom)
+	    {
+	      i_pnt = p->get_particle(i);
+	      itype = type_index[i_pnt->get_type()]+1;
+	      i_pnt->get_x(xi);
+	      neighptr = neighbor->first_ptr[i];
+	      
+	      double diff[3];
+	      diff[0] = xnew[0] - xi[0];
+	      diff[1] = xnew[1] - xi[1];
+	      diff[2] = xnew[2] - xi[2];
+	      double dist = sqrt(vec3_norm(diff));
+	      
+	      cout << "dist: " << dist << "\n";
+	      
+	      if (dist < rcutmax)  energy_standard(xi,xnew,Lenergy,energy_ij,itype,at_type);	  
+	      if (Lenergy) 
+		energy[1]+=energy_ij;
+	    }
+	}
+    } 
+  else 
+    {
+      glog.error("Force_Eam::EnergyChange:\n"
+		 "Eam energy change only implemented with neighbor list");
+    }
+
+  if (Lenergy) {
+    vector<double> energy_all(npieces);
+    MPI_Allreduce(&energy[0],&energy_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy.swap(energy_all);
+  }
+
+  cout << "Energy Change: " << energy[0] + energy[1] << "\n";
+}
+
+
+@
+
+
+3.0.6.2
+log
+@Corrections to the energy change routines.
+@
+text
+@a174 1
+
+d252 210
+a979 142
+
+// P-Monaco Routines
+// added saubry (02-17-05)
+void Force_Eam::EnergyChange(int* atom, vector <double> boost,
+		    const bool& Lenergy, const bool& Lvirial, 
+                    ParticleList* p,const Box* b, Comm* comm) 
+{
+  int j;
+  int itype,jtype;
+  double xi[3],xj[3];
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int nparticles,nghost_particles;
+  double rhoi,rhoj;
+  int* neighptr;
+  double energy_ij,energy_i;
+
+  vector<double> energy;
+  double xold[3],xnew[3];
+  double rhoa,dist;
+  Particle* at_pnt;
+  int typea;
+
+  npieces = 2;
+  energy.resize(npieces);
+  energy[0] = 0.0;energy[1] = 0.0;
+  
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  // define atom
+  at_pnt = p->get_particle(*atom);
+  at_pnt->get_x(xold);
+  typea= type_index[at_pnt->get_type()]+1;
+
+  xnew[0] = xold[0] + boost[0];
+  xnew[1] = xold[1] + boost[1];
+  xnew[2] = xold[2] + boost[2];
+
+
+  vector<double> oldrho,newrho,fp;
+  oldrho.resize(nparticles + nghost_particles);
+  newrho.resize(nparticles + nghost_particles);
+
+  for (int i=0;i<nparticles+ nghost_particles;i++) 
+    {
+      oldrho[i] = 0.0;
+      newrho[i] = 0.0;
+    }
+
+  // rho
+  if (Lneighbor) 
+    {
+            
+      for (int i=0;i<nparticles + nghost_particles;i++) 
+	{
+	  i_pnt = p->get_particle(i);
+	  itype = type_index[i_pnt->get_type()]+1;
+	  i_pnt->get_x(xi);
+	  
+	  if (i != *atom)
+	    {		  
+	      rho_standard(xi,xold,rhoi,rhoa,itype,typea);
+	      oldrho[i]+=rhoi;
+	      oldrho[*atom]+=rhoa;
+	      
+	      rho_standard(xi,xnew,rhoi,rhoa,itype,typea);
+	      newrho[i]+=rhoi;
+	      newrho[*atom]+=rhoa;	  
+	    }
+	}
+    }
+  
+  comm->reverse_comm_double(oldrho);
+  comm->reverse_comm_double(newrho);
+
+  // f(rho)
+  fp_energy(oldrho[*atom],Lenergy,energy_i,typea);
+  if(Lenergy) energy[0]-=energy_i;
+  
+  fp_energy(newrho[*atom],Lenergy,energy_i,typea);
+  if(Lenergy) energy[0]+=energy_i;
+
+
+  for (int i=0;i<nparticles + nghost_particles;i++) 
+    {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()]+1;
+      i_pnt->get_x(xi);
+
+      if (i != *atom)
+	{
+	 rho_standard(xi,xold,rhoi,rhoa,itype,typea);
+	 fp_energy(rhoa,Lenergy,energy_i,typea);
+	 energy[0]-=energy_i;
+
+	 rho_standard(xi,xnew,rhoi,rhoa,itype,typea);
+	 fp_energy(rhoa,Lenergy,energy_i,typea);
+	 energy[0]+=energy_i;
+	}
+    }
+
+
+  // phi
+  if (Lneighbor) 
+    {
+      for (int i=0; i<nparticles + nghost_particles;i++) 
+	{
+	  i_pnt = p->get_particle(i);
+	  itype = type_index[i_pnt->get_type()]+1;
+	  i_pnt->get_x(xi);
+	  
+	  if (i != *atom)
+	    {	
+	      energy_standard(xi,xold,Lenergy,energy_ij,itype,typea);	  
+	      if (Lenergy) energy[1]-=energy_ij;
+	      
+	      energy_standard(xi,xnew,Lenergy,energy_ij,itype,typea);	  
+	      if (Lenergy) energy[1]+=energy_ij;
+	    }
+	}
+    }
+  
+  cout << "Energy Change (2) : "<< energy[1]+energy[0] << "\n" ;
+  cout << "      Embedding energy: " << energy[0] << "\n";
+  cout << "      Pair      energy: " << energy[1] << "\n";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@
+
+
+3.0.6.3
+log
+@Update changes.
+@
+text
+@d775 2
+a776 2
+			     const bool& Lenergy,ParticleList* p,
+			     const Box* b, Comm* comm) 
+d811 1
+a811 1
+  vector<double> oldrho,newrho;
+d877 1
+a877 1
+      for (int i=0; i<nparticles+nghost_particles;i++) 
+d884 1
+a884 1
+	    {		      
+d887 1
+a887 2
+
+
+@
+
+
+3.0.6.4
+log
+@Correct problem in local energy change.
+Need to define bigger box dimensions in input file.
+
+Sylvie Aubry - 02/05/05.
+@
+text
+@d788 1
+a788 1
+  vector<double> nrg;
+d795 2
+a796 2
+  nrg.resize(npieces);
+  nrg[0] = 0.0;nrg[1] = 0.0;
+a800 2
+  cout << "nghost_particles =" << nghost_particles<< "\n";
+
+d810 1
+d822 22
+a843 47
+ if (Lneighbor) 
+   {
+     for (int i=0;i<nparticles;i++) 
+       {
+	 i_pnt = p->get_particle(i);
+	 itype = type_index[i_pnt->get_type()]+1;
+	 i_pnt->get_x(xi);
+	 neighptr = neighbor->first_ptr[i];
+	 
+	 for (int ineigh=0;
+	      ineigh<neighbor->nneigh_list[i];ineigh++) 
+	   {
+	     j = neighptr[ineigh];
+	     j_pnt = p->get_particle(j);
+	     jtype = type_index[j_pnt->get_type()]+1;
+	     j_pnt->get_x(xj);
+	     
+	     rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+	     
+	     oldrho[i]+=rhoi;
+	     oldrho[j]+=rhoj;
+
+	     if ((i == *atom)&&(j != *atom))
+	       {
+		 rho_standard(xnew,xj,rhoi,rhoj,itype,jtype);
+		 
+		 newrho[*atom]+=rhoi;
+		 newrho[j]+=rhoj;
+	       }
+	     else if ((i != *atom)&&(j == *atom))
+	       {
+		 rho_standard(xi,xnew,rhoi,rhoj,itype,jtype);
+		 
+		 newrho[i]+=rhoi;
+		 newrho[*atom]+=rhoj;
+	       }
+	     else
+	       {
+		 rho_standard(xi,xj,rhoi,rhoj,itype,jtype);		 
+		 newrho[i]+=rhoi;
+		 newrho[j]+=rhoj;
+	       }
+
+	   }
+       }
+   }
+    
+d848 8
+a855 1
+  for (int i=0;i<nparticles+ nghost_particles;i++) 
+d861 1
+a861 1
+      if ( fabs(oldrho[i] - newrho[i]) >= 1.e-6)
+d863 8
+a870 6
+	  fp_energy(oldrho[i],Lenergy,energy_i,itype);
+	  if (Lenergy) nrg[0]-=energy_i;  
+
+	  fp_energy(newrho[i],Lenergy,energy_i,itype);
+	  if (Lenergy) nrg[0]+=energy_i;  
+	}    
+d886 1
+a886 1
+	      if (Lenergy) nrg[1]-=energy_ij;
+d890 1
+a890 1
+	      if (Lenergy) nrg[1]+=energy_ij;
+d895 3
+a897 11
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+
+  cout << "Energy Change (2) :"<< nrg[1]+nrg[0] << "\n" ;
+  cout << "      Embedding = " << nrg[0] << "\n";
+  cout << "      Pair      = " << nrg[1] << "\n";
+@
+
+
+3.0.6.5
+log
+@Add move class.
+Start setting  up P-Monaco.
+
+Sylvie Aubry (03-01-05).
+@
+text
+@d801 2
+d919 1
+a919 1
+  cout << "\nBoost is " << boost[0] << " " << boost[1] << " " << boost[2] << "\n";
+@
+
+
+3.0.6.6
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d175 1
+d253 1
+d692 1
+a692 1
+	glog.error("Force_Eam::SetupTypes:\n"
+d771 1
+@
+
+
+3.0.6.7
+log
+@Modify binlist to create bins array locally (to each proc).
+Begin implementing octantlist.
+
+saubry (04-07-05).
+@
+text
+@d914 4
+a918 9
+  int node;
+  node = comm->get_node();
+  if (node == 0)
+    {
+      glog.logfile << "\nBoost is " << boost[0] << " " << boost[1] << " " << boost[2] << "\n";
+      glog.logfile << "Energy Change (2) :"<< nrg[1]+nrg[0] << "\n" ;
+      glog.logfile << "      Embedding = " << nrg[0] << "\n";
+      glog.logfile << "      Pair      = " << nrg[1] << "\n";
+    }
+@
+
+
+3.0.2.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@d184 1
+a184 1
+  comm->reverse_comm_double_add(rho);
+d198 1
+a198 1
+  comm->comm_double_add(fp);
+@
+
+
+2.14
+log
+@After testing a real problem on Liberty (an seeing an overall
+run-time of 2.1 s with Ltwoway_ghost = true, versus 1.4 s
+with the old method, I decided to switch back. But I have
+kept the Ltwoway_ghost flag in the Neighbor class in case
+I need it in the future.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.13
+log
+@Added a new variant of the neighbor list, invoked by
+Ltwoway = false
+Ltwoway_ghost = true
+
+This is the same as what LAMMPS uses when Newton's Law is not used.
+
+The new variant is used in by the Force_Eam class, in order
+to eliminate the communication of fp.
+
+It was more of an experiment than anything. It works, and for
+examples with lots of ghost atoms, seems to speed things up, but
+I doubt that it is dramatic.
+@
+text
+@a56 1
+#include "machine.h"
+a134 3
+  bool Lskip_pair;
+  int jtag,itag;
+  double rsq,delr[3];
+a158 1
+      itag = i_pnt->get_tag();
+a166 12
+
+	//Since Ltwoway_ghost=true, need to avoid double counting.
+	if (j >= nparticles) {
+	  jtag = j_pnt->get_tag();
+
+	  if (itag > jtag) {
+	    if ((itag+jtag)%2 == 0) continue;
+	  } else if (itag < jtag) {
+	    if ((itag+jtag)%2 == 1) continue;
+	  }
+	}
+
+d170 1
+a170 15
+	  //Since Ltwoway=true, need to avoid double counting.
+	if (j >= nparticles) {
+	  if (itag == jtag) {
+	    rsq = vec3_distsq(xi,xj,delr);
+	    if (delr[2] > small) {
+	      continue;
+	    } else if (fabs(delr[2]) < small) {
+	      if (delr[1] > small) {
+	        continue;
+	      } else if (fabs(delr[1]) < small) {
+		if (delr[0] > small) continue;
+	      }
+	    }
+	  }
+	}
+a171 1
+	rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+d197 2
+a202 1
+      itag = i_pnt->get_tag();
+a210 13
+
+	//Since Ltwoway_ghost=true, need to avoid double counting.
+	Lskip_pair = false;
+	if (j >= nparticles) {
+	  jtag = j_pnt->get_tag();
+
+	  if (itag > jtag) {
+	    if ((itag+jtag)%2 == 0) Lskip_pair = true;
+	  } else if (itag < jtag) {
+	    if ((itag+jtag)%2 == 1) Lskip_pair = true;
+	  }
+	}
+
+d213 1
+d215 6
+a220 14
+	  //Since Ltwoway=true, need to avoid double counting.
+	if (j >= nparticles) {
+	  if (itag == jtag) {
+	    rsq = vec3_distsq(xi,xj,delr);
+	    if (delr[2] > small) {
+	      Lskip_pair = true;
+	    } else if (fabs(delr[2]) < small) {
+	      if (delr[1] > small) {
+		Lskip_pair = true;
+	      } else if (fabs(delr[1]) < small) {
+		if (delr[0] > small) Lskip_pair = true;
+	      }
+	    }
+	  }
+d222 3
+a224 45
+
+	if (j >= nparticles) {
+	  if (itag == jtag) {
+	    if (!Lskip_pair) {
+	      force_standard(xi,xj,fpi,fpi,f,Lenergy,Lvirial,
+			     energy_ij,virial_ij,itype,jtype);
+	      i_pnt->increment_f(f);
+	      j_pnt->decrement_f(f);
+	      
+	      if (Lenergy) {
+		energy_piece[1]+=energy_ij;
+	      }
+	      if (Lvirial) {
+		for (int ivirial=0;ivirial<nvirial;ivirial++) {
+		  virial[ivirial] += virial_ij[ivirial];
+		}
+	      }
+	    }
+	  } else {
+	    force_ghost(xi,xj,fpi,f,Lenergy,Lvirial,
+			energy_ij,virial_ij,itype,jtype,Lskip_pair);
+	    i_pnt->increment_f(f);
+	    j_pnt->decrement_f(f);
+	    if (Lenergy) {
+	      energy_piece[1]+=energy_ij;
+	    }
+	    if (Lvirial) {
+	      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+		virial[ivirial] += virial_ij[ivirial];
+	      }
+	    }
+	  }
+	} else {
+	  fpj = fp[j];
+	  force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+			 energy_ij,virial_ij,itype,jtype);
+	  i_pnt->increment_f(f);
+	  j_pnt->decrement_f(f);
+	  if (Lenergy) {
+	    energy_piece[1]+=energy_ij;
+	  }
+	  if (Lvirial) {
+	    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	      virial[ivirial] += virial_ij[ivirial];
+	    }
+d228 1
+d719 1
+a719 1
+    Ltwoway_ghost = true;
+d726 1
+a726 1
+    Ltwoway_ghost = true;
+@
+
+
+2.12
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d57 1
+d136 3
+d163 1
+d172 12
+d187 16
+a203 1
+
+a228 2
+  comm->comm_double(fp);
+
+d233 1
+d242 13
+a256 1
+	fpj = fp[j];
+d258 14
+a271 6
+	force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+		       energy_ij,virial_ij,itype,jtype);
+	i_pnt->increment_f(f);
+	j_pnt->decrement_f(f);
+	if (Lenergy) {
+	  energy_piece[1]+=energy_ij;
+d273 45
+a317 3
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+a320 1
+
+d796 64
+@
+
+
+2.11
+log
+@Fixed problem with virial in class Force_External
+@
+text
+@d75 43
+@
+
+
+2.10
+log
+@Updated header
+@
+text
+@a74 1
+  virial.resize(nvirial);
+@
+
+
+2.9
+log
+@Added NPT ensemble
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.8
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d41 1
+d59 1
+a111 3
+
+  //  p->ZeroRhoEam();
+  //  p->ZeroFpEam();
+@
+
+
+2.7
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d73 1
+d90 1
+d92 10
+a101 2
+  energy_piece[0] = 0.0;
+  energy_piece[1] = 0.0;
+d149 1
+a149 1
+    fp_standard(rhoi,fpi,energy_i,itype);
+d151 3
+a153 2
+    energy_piece[0]+=energy_i;
+
+d174 2
+a175 1
+	force_standard(xi,xj,fpi,fpj,f,energy_ij,itype,jtype);
+d178 8
+a185 1
+	energy_piece[1]+=energy_ij;
+d200 7
+@
+
+
+2.6
+log
+@Various
+@
+text
+@d85 1
+a85 1
+  int nparticles;
+d93 2
+a94 2
+  p->ZeroRhoEam();
+  p->ZeroFpEam();
+d97 6
+d121 2
+a122 2
+	i_pnt->increment_rho_eam(rhoi);
+	j_pnt->increment_rho_eam(rhoj);
+d132 1
+a132 1
+  comm->reverse_comm_rho(p);
+d137 2
+a138 2
+    rhoi = i_pnt->get_rho_eam();
+    
+d140 1
+a140 1
+    i_pnt->increment_fp_eam(fpi);
+d145 1
+a145 1
+  comm->comm_embed(p);
+d154 1
+a154 2
+      fpi = i_pnt->get_fp_eam();
+
+d161 1
+a161 1
+	fpj = j_pnt->get_fp_eam();
+a570 87
+//   // Begin debugging stuff
+//   double r,p,rhoi,energyi,fp,rhoip,rhojp,z2,z2p,recip;
+
+//   glog.logfile << setprecision(20);
+//   itype = 1;
+//   jtype = 1;
+
+//   glog.logfile << "Density for Species " << jtype << endl;
+//   glog.logfile << "   r   " << "   rho   " << endl;
+//   for (r = -2*dr;r<rcutmax+2*dr;r+=dr/1000.0) {
+//     if (r <= rcutmax) {
+    
+//       p = r*rdr + 1.0;
+//       if (p>1.0) {
+// 	m = static_cast<int> (p);
+// 	m = min(m,nr-1);
+//       } else if (p>0.0) {
+// 	m = 1;
+//       } else {
+// 	continue;
+//       }
+//       p -= m;
+//       p = min(p,1.0);
+//       rhoi = ((rhor_3[jtype][m]*p + rhor_2[jtype][m])*p +
+// 	      rhor_1[jtype][m])*p + rhor_0[jtype][m];
+//     }  else {
+//       rhoi = 0.0;
+//     }
+
+//     glog.logfile << r << " " << rhoi << endl;
+//   }
+
+//   glog.logfile << "Embedding Energy for Species " << jtype << endl;
+//   glog.logfile << "   rho   " << "   Eembed (K)   " << endl;
+//   for (rhoi = -2*drho;rhoi<nrho*drho+2*drho;rhoi+=drho/1000.0) {
+//     p = rhoi*rdrho + 1.0;
+//     if (p>1.0) {
+//       m = static_cast<int> (p);
+//       m = max(1,min(m,nrho-1));
+//     } else if (p>0.0) {
+//       m = 1;
+//     } else {
+//       continue;
+//     }
+//     p -= m;
+//     fp = (frho_6[itype][m]*p + frho_5[itype][m])*p + frho_4[itype][m];
+//     energyi = ((frho_3[itype][m]*p + frho_2[itype][m])*p + 
+// 	      frho_1[itype][m])*p + frho_0[itype][m];
+    
+//     glog.logfile << rhoi << " " << energyi/constants.boltz << endl;
+//   }
+
+//   glog.logfile << "Pair Energy for Species " << itype << " and " << 
+//     jtype << endl;
+//   glog.logfile << "   r   " << "   Epair (K)   " << endl;
+//   for (r = -2*dr;r<rcutmax+2*dr;r+=dr/1000.0) {
+//     if (r <= rcutmax) {
+//       if (fabs(r) < 1.0e-6) continue;
+//       p = r*rdr + 1.0;
+//       if (p>1.0) {
+// 	m = static_cast<int> (p);
+// 	m = min(m,nr-1);
+//       } else if (p>0.0) {
+// 	m = 1;
+//       } else {
+// 	continue;
+//       }
+//       p -= m;
+//       p = min(p,1.0);
+//       rhoip = (rhor_6[itype][m]*p + rhor_5[itype][m])*p + 
+// 	rhor_4[itype][m];
+//       rhojp = (rhor_6[jtype][m]*p + rhor_5[jtype][m])*p + 
+// 	rhor_4[jtype][m];
+//       z2 = ((z2r_3[itype][jtype][m]*p + z2r_2[itype][jtype][m])*p + 
+// 	    z2r_1[itype][jtype][m])*p + z2r_0[itype][jtype][m];
+//       z2p = (z2r_6[itype][jtype][m]*p + z2r_5[itype][jtype][m])*p + 
+// 	z2r_4[itype][jtype][m];
+//       energyi = z2;
+//     }  else {
+//       energyi = 0.0;
+//     }
+
+//     glog.logfile << r << " " << energyi/constants.boltz << endl;
+//   }
+
+//   // End debugging stuff
+
+d629 8
+@
+
+
+2.5
+log
+@Updated documentation
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+a133 1
+    
+d136 1
+a158 1
+
+d371 2
+a374 2
+  rcutmaxsq = rcutmax*rcutmax;
+
+d450 19
+a468 1
+
+d565 87
+@
+
+
+2.4
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d363 2
+a364 1
+void Force_Eam::SetupInteractions(const Box* b, Comm* comm) {
+@
+
+
+2.3
+log
+@Added Ewald sum example
+@
+text
+@d192 1
+a192 1
+  stringstream* buf_in_eam;
+d194 1
+a194 1
+  stringstream buf_in(arg_string);
+d202 1
+a202 1
+	       "Read error in input stringstream");
+d209 1
+a209 1
+	       "Read error in input stringstream");
+d235 1
+a235 1
+    buf_in_eam = new stringstream(buf);
+d244 1
+a244 1
+    buf_in_eam = new stringstream(buf);
+d286 1
+a286 1
+      buf_in_eam = new stringstream(buf);
+@
+
+
+2.2
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@d29 3
+d61 2
+a62 5
+Force_Eam::Force_Eam(const string& neighbor_style,
+			     const int& neighbor_freq,
+			     const double& neighbor_rskin) {
+  bool Lasymm;
+
+a63 17
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Lasymm = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+			    Lasymm,neighbor_freq,neighbor_rskin);
+  } else if (neighbor_style == "bin") {
+    Lasymm = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+			    Lasymm,neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_Eam::Force_Eam:\n"
+	       "Invalid neighbor style");
+  }
+
+d72 1
+d76 1
+d78 1
+a78 1
+		    const Box* b, const int type_index[], Comm* comm) {
+d172 6
+d180 1
+a180 4
+void Force_Eam::ReadInteractions(
+                    const string& filename, 
+		    const string& label_in, Comm* comm)
+{
+d183 1
+d192 1
+a192 1
+  stringstream* buf_in;
+d194 20
+a213 1
+  label = label_in;
+d235 3
+a237 3
+    buf_in = new stringstream(buf);
+    *buf_in >> ntypes_tmp;
+    if (buf_in->fail()) {
+d241 1
+a241 1
+    delete buf_in;
+d244 3
+a246 3
+    buf_in = new stringstream(buf);
+    *buf_in >> nrho >> drho >> nr >> dr>> rcutmax;
+    if (buf_in->fail()) {
+d250 1
+a250 1
+    delete buf_in;
+d286 3
+a288 3
+      buf_in = new stringstream(buf);
+      *buf_in >> id >> mass;
+      if (buf_in->fail()) {
+d293 1
+a293 1
+      delete buf_in;
+d363 1
+a363 2
+void Force_Eam::SetupInteractions(const Box* b, Comm* comm)
+{
+a374 12
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_Eam::SetupInteractions:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_Eam::SetupInteractions:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+  }
+d590 1
+a590 2
+void Force_Eam::CheckMasses(const int type_index[], 
+                            const ParticleTypeList* t) {
+@
+
+
+2.2.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a28 3
+// This implementation of EAM is based on the PairEAM class written
+// by Steve Plimpton (LAMMPS 2003).
+// 
+a37 1
+
+a54 1
+
+d58 5
+a62 2
+Force_Eam::Force_Eam(const string arg_string_in) {
+  arg_string = arg_string_in;
+d64 17
+a88 44
+  rcutmax = 0.0;
+  rcutneighsq_table = NULL;
+}
+
+Force_Eam::~Force_Eam() {
+// Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+  for (int itype=0;itype<=ntypes;itype++) {
+    delete []frho_0[itype];
+    delete []frho_1[itype];
+    delete []frho_2[itype];
+    delete []frho_3[itype];
+    delete []frho_4[itype];
+    delete []frho_5[itype];
+    delete []frho_6[itype];
+    delete []rhor_0[itype];
+    delete []rhor_1[itype];
+    delete []rhor_2[itype];
+    delete []rhor_3[itype];
+    delete []rhor_4[itype];
+    delete []rhor_5[itype];
+    delete []rhor_6[itype];
+    for (int jtype=0;jtype<=ntypes;jtype++) {
+      delete []z2r_0[itype][jtype];
+      delete []z2r_1[itype][jtype];
+      delete []z2r_2[itype][jtype];
+      delete []z2r_3[itype][jtype];
+      delete []z2r_4[itype][jtype];
+      delete []z2r_5[itype][jtype];
+      delete []z2r_6[itype][jtype];
+    }
+    delete []z2r_0[itype];
+    delete []z2r_1[itype];
+    delete []z2r_2[itype];
+    delete []z2r_3[itype];
+    delete []z2r_4[itype];
+    delete []z2r_5[itype];
+    delete []z2r_6[itype];
+  }
+a91 1
+		    const bool& Lenergy, const bool& Lvirial, 
+d93 1
+a93 1
+		    const Box* b, Comm* comm) {
+d100 1
+a100 1
+  int nparticles,nghost_particles;
+a103 6
+  double virial_ij[nvirial];
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+    energy_piece[1] = 0.0;
+  }
+d105 2
+a106 5
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+d108 2
+a109 2
+  // extend size of nlocal-dependent arrays if necessary,
+  // and initialize to zero;
+a111 3
+  nghost_particles = p->get_nghost_particles();
+
+  ZeroArrays(nparticles+nghost_particles);
+d130 2
+a131 2
+	rho[i]+=rhoi;
+	rho[j]+=rhoj;
+d141 1
+a141 1
+  comm->reverse_comm_double(rho);
+d146 6
+a151 7
+    rhoi = rho[i];
+
+    fp_standard(rhoi,fpi,Lenergy,energy_i,itype);
+    fp[i]+=fpi;
+    if (Lenergy) {
+      energy_piece[0]+=energy_i;
+    }
+d154 1
+a154 1
+  comm->comm_double(fp);
+d163 2
+a164 1
+      fpi = fp[i];
+d171 3
+a173 1
+	fpj = fp[j];
+a174 2
+	force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+		       energy_ij,virial_ij,itype,jtype);
+d177 1
+a177 8
+	if (Lenergy) {
+	  energy_piece[1]+=energy_ij;
+	}
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+a186 13
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+d189 4
+a192 1
+void Force_Eam::ReadInteractions(Comm* comm) {
+a194 1
+  string filename;
+d203 1
+a203 1
+  std::istringstream* buf_in_eam;
+d205 1
+a205 20
+  std::istringstream buf_in(arg_string);
+
+  node = comm->get_node();
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_Eam::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_Eam::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+d227 3
+a229 3
+    buf_in_eam = new std::istringstream(buf);
+    *buf_in_eam >> ntypes_tmp;
+    if (buf_in_eam->fail()) {
+d233 1
+a233 1
+    delete buf_in_eam;
+d236 3
+a238 3
+    buf_in_eam = new std::istringstream(buf);
+    *buf_in_eam >> nrho >> drho >> nr >> dr>> rcutmax;
+    if (buf_in_eam->fail()) {
+d242 1
+a242 1
+    delete buf_in_eam;
+d278 3
+a280 3
+      buf_in_eam = new std::istringstream(buf);
+      *buf_in_eam >> id >> mass;
+      if (buf_in_eam->fail()) {
+d285 1
+a285 1
+      delete buf_in_eam;
+d355 2
+a356 2
+void Force_Eam::SetupInteractions(const Box* b, 
+                const Force_Ewald* ff_ewald, Comm* comm) {
+d364 2
+d368 4
+a371 1
+  Interpolate();
+d373 7
+d455 1
+a455 19
+  // (originally developed by Stephen Foiles for Dynamo code)
+  // Functions are fit to cubic polynomials, not splines.
+  // Each polynomial is fit to the two knot values
+  // and estimates of the slope at the two knot points.
+  // The slopes are estimated using a second-order 
+  // central difference formula.
+  //
+  // The slopes at the edges are calculated using central,
+  // forward, or backward difference, as appropriate.
+  //
+  // The second and third derivatives at the uppermost
+  // point are set to zero.
+  //
+  // For rhor and z2r, the first derivative at the uppermost
+  // point is also set to zero.
+  //
+  // The knot values at the boundaries should be set to zero
+  // in all cases except the uppermost frho point.
+  //
+d595 2
+a596 1
+void Force_Eam::CheckMasses(const ParticleTypeList* t) {
+a607 72
+    }
+  }
+}
+
+void Force_Eam::ZeroArrays(const int& nparticles) {
+  rho.resize(nparticles);
+  fp.resize(nparticles);
+  for (int i=0;i<nparticles;i++) {
+    rho[i] = 0.0;
+    fp[i] = 0.0;
+  }
+}
+
+void Force_Eam::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+       const Box* b, Comm* comm){
+  int node,nprocs;
+  bool Ltwoway,Ltwoway_ghost;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Ltwoway = false;
+    Ltwoway_ghost = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else if (neighbor_style == "bin") {
+    Ltwoway = false;
+    Ltwoway_ghost = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_Eam::SetupNeighbor:\n"
+	       "Invalid neighbor style");
+  }
+
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_Eam::SetupNeighbor:\n"
+	       "Can not use nocut types with neighboring");
+  }
+
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_Eam::SetupNeighbor:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_Eam::SetupNeighbor:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+  }
+
+  rcutneighmax = 0.0;
+  if (Lneighbor) {
+    rcutneighmax = rcutmax + neighbor_rskin;
+    neighbor->set_rcutneighmax(rcutneighmax);
+    SetupCutNeighSq(neighbor_rskin,comm);
+    if (node == 0) {
+      glog.logfile << "Cutoffs for this forcefield" << endl;
+      glog.logfile << "rcutmax = " << rcutmax << endl;
+      glog.logfile << "rskin = " << neighbor_rskin << endl;
+      glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+@
+
+
+2.1
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d88 1
+d203 1
+d227 8
+a234 2
+    stringstream buf_in(buf);
+    buf_in >> ntypes_tmp;
+d236 3
+a238 3
+    buf_in.str(buf);
+    buf_in >> nrho >> drho >> nr >> dr>> rcutmax;
+    if (buf_in.fail()) {
+d240 1
+a240 1
+		 "Read error in " + str_tmp);
+d242 1
+d244 1
+a244 1
+
+d278 6
+a283 2
+      stringstream buf_in(buf);
+      buf_in >> id >> mass;
+d285 1
+d289 1
+a289 1
+    MPI_Bcast(&id[0],isize,MPI_CHARACTER,0,world);
+d291 1
+a291 1
+
+d306 1
+a306 1
+		   "Read error in " + str_tmp);
+d315 1
+a315 1
+		   "Read error in " + str_tmp);
+d328 1
+a328 1
+		     "Read error in " + str_tmp);
+d566 1
+a566 1
+    delete []ipnt_tmp;
+d570 1
+a570 1
+  z2r.clear;
+@
+

@@ -1,0 +1,67 @@
+head	1.1;
+access;
+symbols
+	PreMonaco:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2004.12.23.03.26.06;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.12.23.03.26.06;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.01.04.00.33.04;	author athomps;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file types.in was initially added on branch REAXFF.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added 600 atom example to REAXFF branch
+@
+text
+@a0 11
+# Specification of particle id's.
+#
+# Currently, these must be entered in the same order as
+# they appear in the ReaxFF ffield file
+#
+C    atom  12.0000
+H    atom   1.0080
+O    atom  15.9990
+N    atom  14.0000
+
+
+@
+
+
+1.1.2.2
+log
+@This is an 621 particle rdx example that matches the energies, forces and trajectory
+from Adri's March code very well. See also directory testrdx_reax.
+@
+text
+@@
+
+

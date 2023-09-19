@@ -1,0 +1,906 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.13.0.2
+	cjkimme_version_merge_from_trunk_1:2.10.2.2
+	cjkimme_version:2.10.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.03.20.00.15.39;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	2.10.2.1;
+next	2.9;
+
+2.9
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+2.10.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.10.2.2;
+
+2.10.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <vector>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "input_string.h"
+#include "particletypelist.h"
+#include "comm.h"
+#include "log.h"
+
+extern Log glog;
+
+ParticleTypeList::ParticleTypeList() {
+  ntypes = 0;
+  return;
+}
+
+ParticleTypeList::~ParticleTypeList() {
+  return;
+}
+
+void ParticleTypeList::Setup(Comm* comm) {
+  int node;
+
+  node = comm->get_node();
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering ParticleTypeList::Setup()" << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ParticleTypeList::Setup()" << endl;
+  }
+
+  ReadParticleTypes(comm);
+}
+
+int ParticleTypeList::get_ntypes() const {
+  return ntypes;
+}
+
+void ParticleTypeList::ReadParticleTypes(Comm* comm) {
+  string buf;
+  string id;
+  string particleclass;
+  double mass;
+  int itype;
+  int isize;
+  bool match;
+  int node;
+  MPI_Comm world;
+  string str_tmp;
+  ifstream infile;
+
+  node = comm->get_node();
+  world = comm->get_world();
+
+  //str_tmp = glog.path_str + "types.in";
+  str_tmp = "types.in";
+  if (node == 0) {
+
+    infile.open(str_tmp.c_str()); 
+  
+    if (!infile) {
+      infile.close();
+      infile.open(str_tmp.c_str()); 
+      if (!infile) {
+	glog.abort("ParticleTypeList::ReadParticleTypes:\n"
+	"Failed to open "+str_tmp,comm);
+      }
+    }
+  }
+
+  do {
+    if (node==0) {
+      if(input_string_get(infile,buf)) {
+	if(buf != "End of Input") {
+	  glog.abort("ParticleTypeList::ReadParticleTypes:\n"
+		     "Read error in "+str_tmp,comm);
+	}
+      }
+      isize = buf.size();
+    }
+
+    MPI_Bcast(&isize,1,MPI_INT,0,world);
+    if (node != 0) buf.resize(isize);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << isize << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,world);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << buf << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,world);
+
+    if (input_string_match(buf,"End of Input")) {
+      break;
+    }
+     
+    std::istringstream buf_in(buf);
+    
+    // Construct index for ids on the fly
+    buf_in >> id;
+
+    match = find_id(id,itype);
+
+    if (!match) {
+      ntypes++;
+      itype = ntypes-1;
+      id_index.push_back(id);
+    } else if (match) {
+      glog.error("ParticleTypeList::ReadParticleTypes:\n"
+		 "Particle id " + id + "previously read");
+    }
+
+    buf_in >> particleclass;
+    if (particleclass == "atom") {
+      buf_in >> mass;
+      mass_list.push_back(mass);
+    } else {
+      glog.error("ParticleTypeList::ReadParticleTypes:\n" 
+		 "Invalid particle class name");
+    }
+
+    if (buf_in.fail()) {
+      glog.error("ParticleTypeList::ReadParticleTypes:\n"
+		 "Read error in "+str_tmp);
+    }
+  } while (!input_string_match(buf,"End of Input"));
+
+  if (node == 0) {
+    glog.get_logfile() << "ntypes = " << ntypes << endl;
+    for (itype=0;itype<ntypes;itype++) {
+      glog.get_logfile() << id_index[itype] << " " << mass_list[itype] << endl;
+    }
+  }
+
+  if (ntypes == 0) {
+    glog.error("ParticleTypeList::ReadParticleTypes:\n"
+		 "Zero types read from "+str_tmp);
+  }
+    
+}
+
+bool ParticleTypeList::find_id(const string& id, int& itype) const {
+  bool match;
+  match = false;
+  for (itype=0;(itype < ntypes) 
+	 && !match ; itype++) {
+    if (id == id_index[itype]) {
+      match = true;
+      break;
+    }
+  }
+  return match;
+}
+
+double ParticleTypeList::get_type_mass(const int& itype) const {
+  return mass_list[itype];
+}
+
+string ParticleTypeList::get_id(const int& i) const {
+  return id_index[i];
+}
+
+
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d76 2
+a77 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering ParticleTypeList::Setup()" << endl;
+d185 1
+a185 1
+    glog.logfile << "ntypes = " << ntypes << endl;
+d187 1
+a187 1
+      glog.logfile << id_index[itype] << " " << mass_list[itype] << endl;
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d63 5
+a67 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering ParticleTypeList::Setup()" << endl;
+#endif
+d120 4
+a123 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << isize << endl;
+#endif
+d126 4
+a129 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << buf << endl;
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d63 1
+d65 1
+d89 2
+a90 1
+  str_tmp = glog.path_str + "types.in";
+d118 1
+d120 1
+d123 1
+a123 1
+
+d125 1
+@
+
+
+2.13
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.12
+log
+@Various
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.11
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.10
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@d126 1
+a126 1
+    stringstream buf_in(buf);
+@
+
+
+2.10.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a61 1
+#ifdef USE_NODEFILES
+a62 1
+#endif
+d86 1
+a86 2
+  //str_tmp = glog.path_str + "types.in";
+  str_tmp = "types.in";
+a113 1
+#ifdef USE_NODEFILES
+a114 1
+#endif
+d117 1
+a117 1
+#ifdef USE_NODEFILES
+a118 1
+#endif
+@
+
+
+2.10.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d132 1
+a132 1
+    std::istringstream buf_in(buf);
+@
+
+
+2.9
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d116 1
+a116 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+d120 1
+a120 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+@
+
+
+2.8
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d112 1
+a112 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,world);
+@
+
+
+2.7
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.6
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@a10 1
+#include "input.h"
+d26 1
+a26 1
+void ParticleTypeList::Setup(const Input* inp, Comm* comm) {
+@
+
+
+2.5
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d15 1
+d59 1
+d61 1
+a61 1
+    str_tmp = glog.path_str + "types.in";
+d65 6
+a70 1
+      glog.abort("Failed to open types.in",comm);
+d78 1
+a78 1
+	  glog.abort("Input::ReadInput:\n"
+d126 1
+a126 1
+		 "Read error in types.in");
+d137 5
+@
+
+
+2.4
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d43 1
+a43 1
+  string buf,buf2;
+d69 4
+a72 12
+      if (!getline(infile,buf)) {
+	buf = "End of Input";
+      } else {
+	// Concatenate continuation lines, if requested.
+	if (buf[buf.size()-1] == '\\') {
+	  buf2 = buf;
+	  while (buf2[buf2.size()-1] == '\\') {
+	    buf.replace(buf.size()-1,1," ");
+	    // buf.replace(buf.size()-1,1,&char_tmp);
+	    getline(infile,buf2);
+	    buf+=buf2;
+	  }
+a89 4
+    } else if (input_string_match(buf,"")) {
+      continue;
+    } else if (input_string_match(buf,"#")) {
+      continue;
+a92 3
+    // Skip lines with only whitespace
+    buf_in >> ws;
+    if (buf_in.eof()) continue;
+@
+
+
+2.3
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d30 4
+a33 1
+  if (node == 0) glog.logfile << "Entering ParticleTypeList::Setup()" << endl;
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d49 1
+d56 2
+a57 1
+    infile.open("types.in"); 
+d60 1
+a60 1
+      glog.abort("Failed to open types.in");
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d14 2
+a15 1
+extern ofstream logfile;
+d30 1
+a30 1
+  if (node == 0) logfile << "Entering ParticleTypeList::Setup()" << endl;
+d58 1
+a58 2
+      logfile << "Failed to open types.in" << endl;
+      exit(0);
+d114 2
+a115 5
+      if (node == 0) {
+	logfile << "Error: ReadParticleTypes: Particle id previously read" << endl;
+	logfile << id << endl;
+      }
+      exit(0);
+d123 2
+a124 4
+      if (node == 0) {
+	logfile << "Error:Invalid particle class name" << endl;
+      }
+      exit(0);
+d128 2
+a129 4
+      if (node == 0) {
+	logfile << "Read error in types.in" << endl;
+      }
+      exit(0);
+d134 1
+a134 1
+    logfile << "ntypes = " << ntypes << endl;
+d136 1
+a136 1
+      logfile << id_index[itype] << " " << mass_list[itype] << endl;
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d8 1
+d10 1
+d13 2
+d25 7
+a31 2
+void ParticleTypeList::Setup(const Input* inp) {
+  ReadParticleTypes();
+d38 2
+a39 2
+void ParticleTypeList::ReadParticleTypes() {
+  string buf;
+d44 1
+d46 6
+d53 2
+a54 1
+  ifstream infile("types.in"); 
+d56 4
+a59 3
+  if (!infile) {
+    cout << "Failed to open types.in" << endl;
+    exit(0);
+d62 18
+a79 1
+  while (getline(infile,buf)){
+d81 18
+a98 2
+    // Skip empty or comment lines
+    if (buf.empty() || buf[0]=='#') continue;
+d103 1
+a103 1
+
+d114 4
+a117 2
+      cout << "Error: ReadParticleTypes: Particle id previously read" << endl;
+      cout << id << endl;
+d125 5
+a129 3
+    } 
+    else {
+      cerr << "Invalid particle class name" << endl;
+d133 3
+a135 1
+      cout << "Read error in types.in" << endl;
+d138 1
+a138 1
+  }
+d140 5
+a144 3
+  cout << "ntypes = " << ntypes << endl;
+  for (itype=0;itype<ntypes;itype++) {
+    cout << id_index[itype] << " " << mass_list[itype] << endl;
+@
+

@@ -1,0 +1,922 @@
+head	4.6;
+access;
+symbols
+	ReverseComm_branch:4.4.0.6
+	ADTools_branch:4.4.0.4
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoSource:3.0.0.6
+	GraspSource:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.9.0.2
+	cjkimme_version_merge_from_trunk_1:2.1.2.1
+	cjkimme_version:2.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.6
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.4.2.1
+	4.4.6.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches
+	3.0.6.1;
+next	2.9;
+
+2.9
+date	2004.08.24.15.32.11;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.03.02.17.49.47;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.1.2.1;
+next	;
+
+2.1.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.0.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.0.6.2;
+
+3.0.6.2
+date	2005.02.23.19.34.30;	author saubry;	state Exp;
+branches;
+next	3.0.6.3;
+
+3.0.6.3
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.0.6.4;
+
+3.0.6.4
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2006.01.18.23.57.58;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.4;
+
+4.3.2.1.2.4
+date	2006.02.08.23.43.02;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.5;
+
+4.3.2.1.2.5
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.4.6.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.6
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCE_EAM_H
+#define FORCE_EAM_H
+
+class Particle_Types;
+class Box;
+
+// Data structure for EAM force fields
+class Force_Eam: public ForceField {
+ public:
+  // enum class for force field types
+  enum ForceFieldTypes {standard};
+ private:
+  int nrho,nr;
+  double drho,dr,rdr,rdrho;
+  // Arrays containing input tables of EAM functions
+  vector<double*> frho;
+  vector<double*> rhor;
+  vector<double**> z2r;
+  // Arrays containing spline coefficients of EAM functions
+  vector<double*> frho_0,frho_1,frho_2,frho_3,frho_4,frho_5,frho_6;
+  vector<double*> rhor_0,rhor_1,rhor_2,rhor_3,rhor_4,rhor_5,rhor_6;
+  vector<double**> z2r_0,z2r_1,z2r_2,z2r_3,z2r_4,z2r_5,z2r_6;
+  //2-D array of pointers to pair functions, 
+  // indexed by two particle types
+  int** pair_input_index;
+  //2-D array of pointers to pair functions
+  // indexed by two particle types
+  int** pair_index;
+  double rcutmaxsq;
+  // Arrays for density and embedding function
+  vector<double> rho,fp;
+ public:
+
+  Force_Eam(const string);
+  ~Force_Eam();
+
+  void SetupCutNeighSq(const double&, Comm*);
+
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+		  const Box*, Comm*);
+  void ReadInteractions(Comm*);
+  void SetupInteractions(const Box*, const double&, Comm*);
+  void SetupNeighbor(const string&, const int&,const double&, 
+                        double&, double&, const Box*, Comm*);
+
+  void force_standard(const double[], const double[], 
+		      const double&, const double&,
+		      double[], 
+		      const bool&, const bool&,
+		      double&, double[], 
+		      const int&, const int&) const;
+
+  void force_ghost(const double[], const double[], 
+		      const double&,
+		    double[],
+		      const bool&, const bool&,
+		      double&, double[], 
+		      const int&, const int&, const bool&) const;
+
+  void rho_standard(const double[], const double[], 
+		    double&, double&, 
+		    const int&, const int&) const;
+
+  void fp_standard(const double&,  double&, const bool&, 
+		   double&, const int&) const;
+
+  void grab(ifstream&, const int&, double[]);
+
+  void Interpolate();
+
+  void CheckMasses(const ParticleTypeList*);
+
+  void ZeroArrays(const int&);
+};
+
+#endif
+
+@
+
+
+4.5
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d90 1
+a90 1
+                        double&, const Box*, Comm*);
+@
+
+
+4.4
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d84 2
+a85 1
+  void ApplyForce(const bool&, const bool&, ParticleList*, 
+@
+
+
+4.4.6.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d84 1
+a84 2
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+@
+
+
+4.4.2.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d87 1
+a87 1
+  void SetupInteractions(const ParticleList*, const Box*, const double&, Comm*);
+@
+
+
+4.4.2.2
+log
+@Latest PPPM version
+@
+text
+@d85 1
+a85 1
+		  const Box*, double&, Comm*);
+d87 1
+a87 1
+  void SetupInteractions(ParticleList*, const Box*, double&, Comm*);
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d87 1
+a87 1
+  void SetupInteractions(const Box*, const Force_Ewald*, Comm*);
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a85 6
+
+  // added saubry (01-14-05)
+  void EnergyChange(int*, vector <double>,const bool&, 
+		    ParticleList*,const Box*, Comm*);
+
+
+a90 5
+  // added saubry 01-14-05
+  void energy_standard(const double xi[], const double xj[], 
+		       const bool& Lenergy,double& energy,
+		       const int& itype,const int& jtype) const;
+
+a108 5
+  // added saubry 01-14-05
+  void fp_energy(const double& rhoi,
+		 const bool& Lenergy, 
+		 double& energy, const int& itype) const;
+
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d88 1
+a88 1
+  void EnergyChange(int*, double [3],const bool&, 
+@
+
+
+4.3.2.1.2.2
+log
+@Add EAM funcfl format.
+@
+text
+@a63 9
+
+// Added saubry (01-17-06)
+  int npotentials;
+  int *nrhoin,*nrin;
+  double *drhoin,*drin,*rdrin,*rdrhoin,*rcutin;
+  vector<double*> frhoin;
+  vector<double*> rhorin;
+  vector<double*> zrin;
+
+@
+
+
+4.3.2.1.2.3
+log
+@Added EAM energy change calculation
+@
+text
+@a98 2
+  double EnergyParticleRemove(const int&,ParticleList*,const Box*, Comm*);
+  double EnergyParticleAdd(const int&,ParticleList*,const Box*, Comm*);
+@
+
+
+4.3.2.1.2.4
+log
+@Added bin-based energy calc
+@
+text
+@a98 1
+  // Brute force energy functions
+a100 3
+  // Bin-based energy functions
+  double EnergyParticleRemove(const int&,const Bin*,ParticleList*,const Box*, Comm*);
+  double EnergyParticleAdd(const int&,const Bin*,ParticleList*,const Box*, Comm*);
+@
+
+
+4.3.2.1.2.5
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@a85 1
+  vector<double> rho_save;
+d96 3
+a104 4
+  void SaveParticles(ParticleList*, const Box*, Comm*);
+  void RestoreParticles(ParticleList*, const Box*, Comm*);
+  void SaveParticles(const Bin*, ParticleList*, const Box*, Comm*);
+  void RestoreParticles(const Bin*, ParticleList*, const Box*, Comm*);
+d112 1
+d135 1
+a149 1
+
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+a85 6
+
+  // added saubry (01-14-05)
+  void EnergyChange(int*, vector <double>,const bool&, 
+		    ParticleList*,const Box*, Comm*);
+
+
+a90 5
+  // added saubry 01-14-05
+  void energy_standard(const double xi[], const double xj[], 
+		       const bool& Lenergy,double& energy,
+		       const int& itype,const int& jtype) const;
+
+a108 5
+  // added saubry 01-14-05
+  void fp_energy(const double& rhoi,
+		 const bool& Lenergy, 
+		 double& energy, const int& itype) const;
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d70 6
+d81 5
+d104 5
+@
+
+
+3.1
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.0.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a69 6
+
+  // added saubry (01-14-05)
+  void EnergyChange(int*, vector <double>,
+		    const bool&, const bool&, ParticleList*, 
+		    const Box*, Comm*);
+
+a74 5
+  // added saubry 01-14-05
+  void energy_standard(const double xi[], const double xj[], 
+		       const bool& Lenergy,double& energy,
+		       const int& itype,const int& jtype) const;
+
+a81 6
+  // added saubry 01-14-05
+  void energy_ghost(const double xi[], const double xj[], 
+		    const bool& Lenergy, double& energy,
+		    const int& itype,const int& jtype, 
+		    const bool& Lskip_pair) const;
+
+d83 5
+a87 5
+		   const double&,
+		   double[],
+		   const bool&, const bool&,
+		   double&, double[], 
+		   const int&, const int&, const bool&) const;
+a92 5
+  // added saubry 01-14-05
+  void fp_energy(const double& rhoi,
+		 const bool& Lenergy, 
+		 double& energy, const int& itype) const;
+    
+@
+
+
+3.0.6.2
+log
+@Corrections to the energy change routines.
+@
+text
+@d93 6
+@
+
+
+3.0.6.3
+log
+@Update changes.
+@
+text
+@d72 3
+a74 2
+  void EnergyChange(int*, vector <double>,const bool&, 
+		    ParticleList*,const Box*, Comm*);
+@
+
+
+3.0.6.4
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a74 1
+
+d93 5
+a97 5
+		      const double&,
+		    double[],
+		      const bool&, const bool&,
+		      double&, double[], 
+		      const int&, const int&, const bool&) const;
+d107 1
+a107 1
+
+@
+
+
+2.9
+log
+@Added a new variant of the neighbor list, invoked by
+Ltwoway = false
+Ltwoway_ghost = true
+
+This is the same as what LAMMPS uses when Newton's Law is not used.
+
+The new variant is used in by the Force_Eam class, in order
+to eliminate the communication of fp.
+
+It was more of an experiment than anything. It works, and for
+examples with lots of ghost atoms, seems to speed things up, but
+I doubt that it is dramatic.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.8
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d71 2
+d80 7
+@
+
+
+2.7
+log
+@Updated header
+@
+text
+@d63 1
+@
+
+
+2.6
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.5
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d73 4
+a76 2
+		    double[], double&, 
+		    const int&, const int&) const;
+d82 2
+a83 1
+  void fp_standard(const double&,  double&, double&, const int&) const;
+@
+
+
+2.4
+log
+@Various
+@
+text
+@d58 2
+a59 1
+
+d87 2
+@
+
+
+2.3
+log
+@Updated documentation
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.2
+log
+@Added Ewald sum example
+@
+text
+@d68 1
+a68 1
+  void SetupInteractions(const Box*, Comm*);
+@
+
+
+2.1
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d35 1
+a35 2
+// Data structure for two-body force fields
+// Derived from ForceField base class.
+d61 1
+a61 1
+  Force_Eam(const string&, const int&, const double&);
+d65 3
+a67 3
+  void ApplyForce(ParticleList*, 
+		  const Box*, const int[], Comm*);
+  void ReadInteractions(const string&, const string&, Comm*);
+d85 1
+a85 1
+  void CheckMasses(const int [], const ParticleTypeList*);
+@
+
+
+2.1.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d35 2
+a36 1
+// Data structure for EAM force fields
+d59 1
+a59 2
+  // Arrays for density and embedding function
+  vector<double> rho,fp;
+d62 1
+a62 2
+  Force_Eam(const string);
+  ~Force_Eam();
+d66 4
+a69 6
+  void ApplyForce(const bool&, const bool&, ParticleList*, 
+		  const Box*, Comm*);
+  void ReadInteractions(Comm*);
+  void SetupInteractions(const Box*, const Force_Ewald*, Comm*);
+  void SetupNeighbor(const string&, const int&,const double&, 
+                        double&, const Box*, Comm*);
+d73 2
+a74 11
+		      double[], 
+		      const bool&, const bool&,
+		      double&, double[], 
+		      const int&, const int&) const;
+
+  void force_ghost(const double[], const double[], 
+		      const double&,
+		    double[],
+		      const bool&, const bool&,
+		      double&, double[], 
+		      const int&, const int&, const bool&) const;
+d80 1
+a80 2
+  void fp_standard(const double&,  double&, const bool&, 
+		   double&, const int&) const;
+d86 1
+a86 3
+  void CheckMasses(const ParticleTypeList*);
+
+  void ZeroArrays(const int&);
+@
+
+

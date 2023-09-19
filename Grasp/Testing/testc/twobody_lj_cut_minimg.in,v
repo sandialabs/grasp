@@ -1,0 +1,139 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.0
+	P_MonacoTesting:3.0.0.6
+	InitialGraspTesting:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:1.2.2.1
+	cjkimme_version:1.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.03.24.21.11.35;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.01.15.20.13.33;	author athomps;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2003.11.03.23.34.10;	author athomps;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@#
+#	Combination of truncated and untruncated 
+#	Lennard-Jones interactions. Results in 
+#	use of minimum image convention and suppression 
+#	of neighbor list use.
+#
+#	Mixing rule required for B/C interaction.
+#
+A   A   lj_cut  1.0 1.0  3.0
+A   B   lj_nocut  1.5 15.0
+A   C   lj_nocut  2.0 20.0
+B   B   lj_nocut  2.0 20.0
+C   C   lj_nocut  3.0 30.0
+@
+
+
+3.1
+log
+@Added a bunch of test case for mixing force fields
+@
+text
+@@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d9 1
+a9 1
+A   A   lj_cut  1.0 1.0  7.0
+@
+
+
+1.2
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@@
+
+
+1.2.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.1
+log
+@Pushed the examples down into directories.
+@
+text
+@d9 1
+a9 1
+A   A   lj_cut  1.0 1.0  10.00
+@
+

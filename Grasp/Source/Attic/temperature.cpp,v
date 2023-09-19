@@ -1,0 +1,184 @@
+head	2.1;
+access;
+symbols
+	PreMonaco:2.1;
+locks; strict;
+comment	@// @;
+
+
+2.1
+date	2003.09.23.16.01.59;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.03.20.32.39;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.1
+log
+@Redoing temperature functions. Not finished yet.
+@
+text
+@#include <math.h>
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include "particle.h"
+#include "box.h"
+#include "vec3.h"
+#include "random.h"
+#include "constants.h"
+
+using namespace std;
+
+void Box::ComputeTemperature()
+{
+  double sum_mvsq,tfac;
+
+  sum_mvsq = 0.0;
+  for (int i=0;i<nparticles;i++) {
+    sum_mvsq+=particles[i].get_mvsq();
+  }
+  e_kinetic = 0.5*sum_mvsq;
+  switch(units_style) {
+  case real_units:
+    tfac = 1.0/(3.0*nparticles*boltz_real);
+    break;
+  case reduced_units:
+    tfac = 1.0/(3.0*nparticles*boltz_reduced);
+    break;
+  default:
+    tfac = 0.0;
+    break;
+  }
+  temp_current = sum_mvsq*tfac;
+}
+
+void Box::SetupVelocities(const double& temp_init, int& iseed)
+  // Velocities are generated as follows:
+  // 1. Velocities are initially selected from a normalized Gaussian
+  //    distribution
+  // 2. Equipartition achieved by applying a weighting of 1/sqrt(mass)
+  // 3. Total momentum is set to zero by subtracting mass-weighted 
+  //    average velocity.
+  // 4. Temperature is set to the temp_init by rescaling.
+{
+  double v_tmp[3];
+  double factor;
+
+  for (int i=0;i<nparticles;i++) {
+    factor = 1.0/sqrt(particles[i].get_mass());
+    v_tmp[0] = gausslc(iseed)*factor;
+    v_tmp[1] = gausslc(iseed)*factor;
+    v_tmp[2] = gausslc(iseed)*factor;
+    particles[i].set_v(v_tmp);
+  }
+  ZeroMomentum();
+  RescaleTemperature(temp_init);
+}
+
+void Box::ZeroMomentum()
+{
+  double v_tmp[3];
+  double msum,psum[3];
+
+  msum = 0.0;
+  psum[0] = 0.0;
+  psum[1] = 0.0;
+  psum[2] = 0.0;
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_v(v_tmp);
+    psum[0]+=v_tmp[0];
+    psum[1]+=v_tmp[1];
+    psum[2]+=v_tmp[2];
+    msum+=particles[i].get_mass(); 
+  }
+
+  psum[0] = psum[0]/msum;
+  psum[1] = psum[1]/msum;
+  psum[2] = psum[2]/msum;
+
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_v(v_tmp);
+    v_tmp[0] = v_tmp[0] - psum[0];
+    v_tmp[1] = v_tmp[1] - psum[1];
+    v_tmp[2] = v_tmp[2] - psum[2];
+    particles[i].set_v(v_tmp);
+  }
+}
+
+void Box::RescaleTemperature(const double& temp_init)
+{
+  double v_tmp[3];
+  double factor;
+  ComputeTemperature();
+  factor = sqrt(temp_init/temp_current);
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_v(v_tmp);
+    vec3_scale(factor,v_tmp,v_tmp);
+    particles[i].set_v(v_tmp);
+  }
+}
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.2
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@@
+
+
+1.1
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d18 1
+a18 1
+  double sum_mvsq;
+d25 12
+a36 1
+  t_current = sum_mvsq/(3.0*nparticles*boltz);
+d97 1
+a97 1
+  factor = sqrt(temp_init/t_current);
+@
+

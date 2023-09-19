@@ -1,0 +1,1173 @@
+head	4.8;
+access;
+symbols
+	ReverseComm_branch:4.5.0.2
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.17.0.2
+	cjkimme_version_merge_from_trunk_1:2.8.2.3
+	cjkimme_version:2.8.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.8
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.10.15.20.52.10;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.08.26.02.04.29;	author athomps;	state Exp;
+branches
+	4.5.2.1;
+next	4.4;
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.08.13.22.54.43;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.05.20.22.11.34;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.02.13.18.04.42;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.02.12.23.57.39;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.02.12.23.36.09;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.8.2.1;
+next	2.7;
+
+2.7
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.10.31.20.20.43;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	;
+
+2.8.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.8.2.2;
+
+2.8.2.2
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.8.2.3;
+
+2.8.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	2.8.2.4;
+
+2.8.2.4
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+4.5.2.1
+date	2006.09.07.19.49.27;	author athomps;	state Exp;
+branches;
+next	4.5.2.2;
+
+4.5.2.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.8
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "minimizer.h"
+#include "constants.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+Minimizer::Minimizer() {
+}
+
+void Minimizer::Setup(const string input_string,
+                Comm* comm) {
+
+  int node,nprocs;
+  string str_tmp;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering Minimizer::Setup()" << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Minimizer::Setup()" << endl;
+  }
+
+
+  nprocs = comm->get_nprocs();
+
+  if (nprocs > 1) {
+    glog.error("Minimizer::Setup:\n"
+	       "Minimizer only setup for single process");
+  }
+
+
+  nprocs = comm->get_nprocs();
+
+  if (nprocs > 1) {
+    glog.error("Minimizer::Setup:\n"
+	       "Minimizer only setup for single process");
+  }
+
+  glog.get_logfile() << "minimize";
+
+  std::istringstream buf_in(input_string);
+  buf_in >> str_tmp;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Minimizer::input_minimize:\n"
+	       "Read error in input string");
+  }
+  glog.get_logfile() << " " << str_tmp;
+  if (str_tmp == "steepest_descent") {
+    minimize_style = minimize_steepest_descent;
+    buf_in >> relax_coord[0] >> relax_coord[1] >> relax_coord[2];
+    buf_in >> maxstep;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Minimizer::input_minimize:\n"
+		 "Read error in input string");
+    }
+    glog.get_logfile() << " " << relax_coord[0] << " " << relax_coord[1] << 
+      " " << relax_coord[2] << " " << maxstep <<endl;
+
+  } else if (str_tmp == "conjugate_gradient") {
+    minimize_style = minimize_conjugate_gradient;
+    buf_in >> relax_coord[0] >> relax_coord[1] >> relax_coord[2];
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Minimizer::input_minimize:\n"
+                 "Read error in input string");
+    }
+    glog.get_logfile() << " " << relax_coord[0] << " " << relax_coord[1] <<
+      " " << relax_coord[2] << " " << endl;
+  } else {
+    glog.error("Minimizer::Setup: Invalid minimizer style");
+  }
+}
+
+void Minimizer::Run(const int nsteps, const double timestep,
+           Box* b, ParticleTypeList* t,
+           ParticleList* p,ForceFieldList* ff,
+           Output* outp, FixList* fix_list, Comm* comm) {
+  double t0,t1,t2,t3;
+  bool Lmaxstep;
+  double timestepsq;
+  bool Lenergy,Lvirial,Latomvirial;
+  double epot, epot_old;
+  valarray<double> rsave;
+  double fsq,fsqtot;
+
+  // For dimensional consistency, delx+=0.5*(F/m)*delt^2
+  timestepsq = timestep*timestep;
+  double timestepsqmin = timestepsq;
+  int nuphill = 0;
+
+  t0 = MPI_Wtime();
+  epot_old =  ff->get_epot();
+  
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << epot_old << " " << timestepsq << " " << 
+      Lmaxstep << " " << maxstep << endl;
+  }
+
+  for (int istep=1;istep<=nsteps;istep++) {
+
+    Lenergy = true;
+    if (outp->Need_Thermo()) {
+      Lvirial = true;
+    } else {
+      Lvirial = false;
+    }
+    if (outp->Need_AtomVirial()) {
+      Latomvirial = true;
+    } else {
+      Latomvirial = false;
+    }
+
+    //    p->SavePositionCharge(rsave);
+    p->StepPositionForce(timestepsq,relax_coord,Lmaxstep,fsq,maxstep);
+    MPI_Allreduce(&fsq,&fsqtot,1,MPI_DOUBLE,MPI_SUM,comm->get_world());
+    // true argument forces reneighboring every timestep
+    ff->Neighboring(p,b,comm,false,true);
+    ff->ComputeForce(Lenergy,Lvirial,Latomvirial,b,t,p,comm);
+    epot =  ff->get_epot();
+
+    // Reduce stepsize if energy increases or maximum step size is exceeeded
+//     if (epot > epot_old) {
+//       if (nuphill<1) {
+// 	nuphill++;
+// 	// This suppresses uphill energy changes.
+// 	// Uphill moves can create oscillations,
+// 	// which can force timestepsq to very low values
+// 	p->RestorePositionCharge(rsave);
+// 	// Need to recompute old forces and energies, 
+// 	// just in case needed for output.
+// 	ff->Neighboring(p,b,comm,false,true);
+// 	ff->ComputeForce(Lenergy,Lvirial,Latomvirial,b,t,p,comm);
+// 	epot = epot_old;
+// 	timestepsq = 0.5*timestepsq;
+// 	timestepsq = max(timestepsq,timestepsqmin);
+// 	// If problem persists, just let it go.
+//       } else { 
+// 	nuphill++;
+// 	timestepsq = 0.5*timestepsq;
+// 	timestepsq = max(timestepsq,timestepsqmin);
+//       }
+    if (epot > epot_old) {
+      nuphill++;
+      timestepsq = 0.5*timestepsq;
+      timestepsq = max(timestepsq,timestepsqmin);
+    } else {
+      nuphill = 0;
+      if (Lmaxstep) {
+	timestepsq = 0.5*timestepsq;
+	timestepsq = max(timestepsq,timestepsqmin);
+      } else {
+	timestepsq = 1.05*timestepsq;
+      }
+    }
+    
+    epot_old = epot;
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Steepest Descent " << istep << " " << epot << " " << timestepsq << " " << 
+	Lmaxstep << " " << fsqtot << endl;
+    }
+
+    t1 = MPI_Wtime();
+    glog.timetotal = t1-t0;
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,0,false,false,NULL);
+
+  }
+
+}
+
+@
+
+
+4.7
+log
+@Improved stability of steepest descent minimizer
+@
+text
+@d231 1
+a231 1
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,0,false,false);
+@
+
+
+4.6
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d149 2
+d154 2
+d160 5
+a166 4
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "epot_old = " << epot_old << 
+	" timestepsq = " << timestepsq << endl;
+    }
+a172 1
+
+d179 5
+a183 4
+
+    p->StepPositionForce(timestepsq,relax_coord,Lmaxstep,maxstep);
+
+    ff->Neighboring(p,b,comm,false);
+d185 1
+d188 22
+a209 2
+    epot =  ff->get_epot();
+    if (epot > epot_old || Lmaxstep) {
+d211 1
+d213 7
+a219 1
+      timestepsq = 1.1*timestepsq;
+d224 5
+@
+
+
+4.5
+log
+@Added damping constant commands for Nose-Hoover barostats and thermostats
+@
+text
+@d147 1
+a147 2
+  bool Lenergy;
+  ForceFieldList::VirialStyles Lvirial;
+d164 1
+a164 1
+      Lvirial = ForceFieldList::all_particles;
+d166 1
+a166 1
+      Lvirial = ForceFieldList::none;
+d169 7
+d179 1
+a179 1
+    ff->ComputeForce(Lenergy,Lvirial,b,t,p,comm);
+@
+
+
+4.5.2.1
+log
+@Implemented ri*Fi pressure calc
+@
+text
+@d147 2
+a148 1
+  bool Lenergy,Lvirial;
+d165 1
+a165 1
+      Lvirial = true;
+d167 1
+a167 1
+      Lvirial = false;
+@
+
+
+4.5.2.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d147 1
+a147 1
+  bool Lenergy,Lvirial,Latomvirial;
+a168 7
+    if (outp->Need_AtomVirial()) {
+      Latomvirial = true;
+    } else {
+      Latomvirial = false;
+    }
+
+
+d172 1
+a172 1
+    ff->ComputeForce(Lenergy,Lvirial,Latomvirial,b,t,p,comm);
+@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@d115 2
+d123 2
+a124 1
+      " " << relax_coord[2] << " " << endl;
+d149 1
+d151 2
+a152 1
+  timestepsq = timestep;
+d155 2
+d159 5
+a164 1
+      Lenergy = true;
+a166 1
+      Lenergy = false;
+d170 1
+a170 1
+    p->StepPositionForce(timestepsq,relax_coord,Lmaxstep,0.077);
+d172 6
+a177 1
+    if (Lmaxstep) {
+d182 2
+a184 2
+    ff->Neighboring(p,b,comm,false);
+    ff->ComputeForce(Lenergy,Lvirial,b,t,p,comm);
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d78 2
+a79 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Minimizer::Setup()" << endl;
+d102 1
+a102 1
+  glog.logfile << "minimize";
+d107 1
+a107 1
+    glog.logfile << endl;
+d111 1
+a111 1
+  glog.logfile << " " << str_tmp;
+d116 1
+a116 1
+      glog.logfile << endl;
+d120 1
+a120 1
+    glog.logfile << " " << relax_coord[0] << " " << relax_coord[1] << 
+d126 1
+a126 1
+      glog.logfile << endl;
+d130 1
+a130 1
+    glog.logfile << " " << relax_coord[0] << " " << relax_coord[1] <<
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d65 4
+a68 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Minimizer::Setup()" << endl;
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d65 6
+d72 4
+a75 1
+  comm->get_nodefile() << "Entering Minimizer::Setup()" << endl;
+d105 10
+d127 2
+a128 1
+  bool Lenergy,Lvirial;
+d137 1
+a137 1
+      Lvirial = true;
+d140 1
+a140 1
+      Lvirial = false;
+d144 1
+@
+
+
+2.17
+log
+@Fixed bug in minimixer.cpp, and tweaked parameters to
+improve performance. Result very sensitive to maxstep.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.16
+log
+@Updated header
+@
+text
+@d55 1
+a55 1
+  int node;
+d67 8
+d122 1
+a122 1
+    p->StepPositionForce(timestepsq,relax_coord,Lmaxstep,0.1);
+d124 1
+d126 1
+a126 1
+      timestepsq = 2.0*timestepsq;
+@
+
+
+2.15
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.14
+log
+@Various
+@
+text
+@d120 1
+a120 1
+    ff->Neighboring(p,b,comm);
+d124 1
+a124 1
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,0);
+@
+
+
+2.13
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.12
+log
+@Added Ewald sum example
+@
+text
+@d69 1
+a69 1
+  stringstream buf_in(input_string);
+@
+
+
+2.11
+log
+@Removed frequency junk from ParticleList and added cplant_debug
+and cplant_west _ARCH options
+@
+text
+@d99 1
+d106 8
+d121 1
+a121 1
+    ff->ComputeForce(b,t,p,comm);
+@
+
+
+2.10
+log
+@Fixed up a problem with nodefile output.
+@
+text
+@a99 2
+  Lmaxstep = true;
+
+a101 4
+  Lmaxstep = true;
+
+  p->SaveForce();
+
+a112 2
+    p->ComputeFreq(comm);
+    p->SaveForce();
+@
+
+
+2.9
+log
+@This might be the value round of clean-up on the make files.
+Now it works on Cplant and everything.
+@
+text
+@d104 2
+@
+
+
+2.8
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d100 2
+@
+
+
+2.8.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@d64 1
+a64 1
+#ifdef USE_NODEFILES
+a65 1
+#endif
+@
+
+
+2.8.2.2
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a87 10
+  } else if (str_tmp == "conjugate_gradient") {
+    minimize_style = minimize_conjugate_gradient;
+    buf_in >> relax_coord[0] >> relax_coord[1] >> relax_coord[2];
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Minimizer::input_minimize:\n"
+                 "Read error in input string");
+    }
+    glog.logfile << " " << relax_coord[0] << " " << relax_coord[1] <<
+      " " << relax_coord[2] << " " << endl;
+@
+
+
+2.8.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d55 1
+a55 1
+  int node,nprocs;
+a67 8
+
+  nprocs = comm->get_nprocs();
+
+  if (nprocs > 1) {
+    glog.error("Minimizer::Setup:\n"
+	       "Minimizer only setup for single process");
+  }
+
+d70 1
+a70 1
+  std::istringstream buf_in(input_string);
+a109 1
+  bool Lenergy,Lvirial;
+d113 2
+d118 1
+a118 9
+    if (outp->Need_Thermo()) {
+      Lenergy = true;
+      Lvirial = true;
+    } else {
+      Lenergy = false;
+      Lvirial = false;
+    }
+
+    p->StepPositionForce(timestepsq,relax_coord,Lmaxstep,0.077);
+a119 1
+      timestepsq = 0.5*timestepsq;
+d121 1
+a121 1
+      timestepsq = 1.1*timestepsq;
+d124 4
+a127 2
+    ff->Neighboring(p,b,comm,false);
+    ff->ComputeForce(Lenergy,Lvirial,b,t,p,comm);
+d130 1
+a130 1
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,0,false,false);
+@
+
+
+2.8.2.4
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d118 1
+a118 2
+  bool Lenergy;
+  ForceFieldList::VirialStyles Lvirial;
+d127 1
+a127 1
+      Lvirial = ForceFieldList::all_particles;
+d130 1
+a130 1
+      Lvirial = ForceFieldList::none;
+@
+
+
+2.7
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.6
+log
+@Removed Thermo class
+@
+text
+@d6 1
+a9 1
+#include "input.h"
+d24 2
+a25 1
+void Minimizer::Setup(const Input* inp, Comm* comm) {
+d32 5
+a36 1
+  if (node == 0) glog.logfile << "Entering Minimizer::Setup()" << endl;
+d39 1
+a39 6
+  timestep = inp->timestep/constants.tfactor;
+
+  timestepsq = timestep;
+  nsteps = inp->nsteps;
+
+  str_tmp = inp->minimize_style;
+d41 8
+d51 8
+a61 10
+
+  switch(minimize_style) {
+  case minimize_steepest_descent:
+    relax_coord[0] = inp->relax_coord[0];
+    relax_coord[1] = inp->relax_coord[1];
+    relax_coord[2] = inp->relax_coord[2];
+    break;
+  default:
+    glog.error("Minimizer::Setup: Invalid minimizer style");
+  }
+d64 2
+a65 1
+void Minimizer::Run(Box* b, ParticleTypeList* t,
+d69 6
+d79 5
+a83 1
+    p->StepPositionForce(timestepsq,relax_coord);
+d87 2
+a88 1
+
+@
+
+
+2.5
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d60 1
+a60 1
+           Thermo* thermo,Output* outp,Comm* comm) {
+d73 1
+a73 1
+    outp->WriteOutput(istep,p,b,t,comm,ff,0);
+@
+
+
+2.4
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d73 1
+a73 1
+    outp->WriteOutput(istep,p,b,t,comm,ff);
+@
+
+
+2.3
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d13 1
+d19 1
+d27 1
+d34 2
+a35 10
+  switch(inp->units_style) {
+  case (real_units):
+    timestep = inp->timestep/tfactor_real;
+    break;
+  case (reduced_units):
+    timestep = inp->timestep/tfactor_reduced;
+    break;
+  default:
+    glog.error("Minimizer::Setup: Invalid units_style");
+  }
+d38 9
+a46 1
+  minimize_style = inp->minimize_style;
+@
+
+
+2.2
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d58 1
+a58 1
+  float telapse,telapse0;
+d60 1
+a60 1
+  telapse0 = clock()/float(CLOCKS_PER_SEC);
+d66 5
+a70 4
+    ff->ComputeForce(true,b,t,p,comm);
+  
+    telapse = clock()/float(CLOCKS_PER_SEC)-telapse0;
+    outp->WriteOutput(istep,p,b,t,comm,telapse);
+@
+
+
+2.1
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d58 1
+d60 1
+d68 2
+a69 1
+    outp->WriteOutput(istep,p,b,t,comm);
+@
+

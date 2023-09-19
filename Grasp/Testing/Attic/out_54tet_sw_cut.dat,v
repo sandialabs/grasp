@@ -1,0 +1,4720 @@
+head	2.3;
+access;
+symbols
+	PreMonaco:2.3;
+locks; strict;
+comment	@# @;
+
+
+2.3
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.04.28.15.48.48;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.04.24.16.46.53;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.03.12.23.27.06;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.03.12.20.06.45;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.03.03.20.28.04;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.25.22.51.36;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.21.23.04.33;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.3
+log
+@Moved examples into subdirectories.
+@
+text
+@Warning: your default path uses the automounter; this may
+cause some problems if you use other NFS-connected systems.
+@
+
+
+2.2
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@@
+
+
+2.1
+log
+@Switchtched the primary output file from out_*.dat to graps_*.dat.
+@
+text
+@d1 2
+a2 541
+#  threebody 54-particle tetrahedral input data
+forcefield threebody threebody.in
+timestep 0.0100000
+nsteps 100
+box dimensions	0.00000	7.80000	7.80000 \
+			7.80000	0.00000	7.80000 \
+			7.80000	7.80000	0.00000
+box origin	0.00000	0.00000	0.00000
+initialize temperature 0.00000 256
+thermo 1
+dump atoms 100
+dump velocities 100
+neighbor none
+volume = 949.104
+widths = 9.00666 9.00666 9.00666
+lva = 0.00000 7.80000 7.80000
+lvb = 7.80000 0.00000 7.80000
+lvc = 7.80000 7.80000 0.00000
+rvh = -0.0641026 0.0641026 0.0641026
+rvk = 0.0641026 -0.0641026 0.0641026
+rvl = 0.0641026 0.0641026 -0.0641026
+ntypes = 3
+A 10.0000
+B 2.00000
+C 3.00000
+Resetting particles in box 
+
+i 	ii 	id 	t 	n       p            p            p            p     
+0	0	A	0	15      3.77118      2.51412    -0.333333      4393.20      8786.40      14.2218      4.00000      0.00000      2.09510      68448.0      0.00000      35851.4      3089.78      17112.0      1474.77
+
+i 	ii 	jj 	id1 	id2 	t 	n       p            p            p            p     
+
+Warning: Particle id has no ff match
+-1 B 0
+Warning: Particle id has no ff match
+-1 C 0
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.5
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.5
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.5
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.6
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.6
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.6
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.7
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.7
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.8
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.8
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.9
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.0
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.0
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.1
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.1
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.2
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.4
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.5
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.6
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.7
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.7
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.8
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.9
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.0
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.1
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.2
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.5
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.6
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.7
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.8
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.0
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.1
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.2
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.3
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.6
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.7
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.8
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.0
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.1
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.2
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.5
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.7
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.8
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.0
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.1
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.6
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.8
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.9
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.1
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.6
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.8
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.0
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.2
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.3
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.5
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.7
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.9
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.1
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.5
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.7
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.9
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21725.1
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21725.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21725.5
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21725.8
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.0
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.2
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.4
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.6
+Forcefield force time [s] = 0.0400000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.9
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21727.1
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21727.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21727.6
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21727.8
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21728.0
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21728.3
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21728.5
+Forcefield force time [s] = 0.0300000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21728.8
+Forcefield force time [s] = 0.0300000
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.6
+log
+@This is final update of version 1, before switching to version 2
+This is final update of version 1 before switching to verison 2
+This is final update of version 1 before switching to verison 2
+@
+text
+@d26 1
+a32 1
+Finished ForcefieldSetup
+a36 6
+Number of particles in box = 54
+Number of particle types = 3
+Number of Forcefield particle types = 1
+
+****************************************************
+Timestep = 0
+d41 1
+a41 10
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.000000000
+Kinetic Energy [kJ/mol/particle] = 0.000000000
+Potential Energy [kJ/mol/particle] = -402.1533511
+Total Energy [kJ/mol/particle] = -402.1533511
+****************************************************
+
+****************************************************
+Timestep = 1
+a47 13
+Temperature [K] = 0.001880186970
+Kinetic Energy [kJ/mol/particle] = 2.344914287e-05
+Potential Energy [kJ/mol/particle] = -402.1533745
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 2.34491e-05
+Change in Potential Energy [kJ/mol/particle] = -2.34492e-05
+Change in Total Energy [kJ/mol/particle] = -2.24442e-11
+Error in Total Energy [%] = -9.57143e-05
+****************************************************
+
+****************************************************
+Timestep = 2
+
+d51 1
+a51 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.007520715449
+Kinetic Energy [kJ/mol/particle] = 9.379616703e-05
+Potential Energy [kJ/mol/particle] = -402.1534449
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 9.37962e-05
+Change in Potential Energy [kJ/mol/particle] = -9.37963e-05
+Change in Total Energy [kJ/mol/particle] = -1.11366e-10
+Error in Total Energy [%] = -0.000118732
+****************************************************
+
+****************************************************
+Timestep = 3
+a57 13
+Temperature [K] = 0.01692148815
+Kinetic Energy [kJ/mol/particle] = 0.0002110398591
+Potential Energy [kJ/mol/particle] = -402.1535621
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.000211040
+Change in Potential Energy [kJ/mol/particle] = -0.000211040
+Change in Total Energy [kJ/mol/particle] = -2.34649e-10
+Error in Total Energy [%] = -0.000111187
+****************************************************
+
+****************************************************
+Timestep = 4
+
+a62 13
+Temperature [K] = 0.03008234293
+Kinetic Energy [kJ/mol/particle] = 0.0003751781969
+Potential Energy [kJ/mol/particle] = -402.1537263
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.000375178
+Change in Potential Energy [kJ/mol/particle] = -0.000375179
+Change in Total Energy [kJ/mol/particle] = -4.06426e-10
+Error in Total Energy [%] = -0.000108329
+****************************************************
+
+****************************************************
+Timestep = 5
+
+d66 1
+a66 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.04700305278
+Kinetic Energy [kJ/mol/particle] = 0.0005862083494
+Potential Energy [kJ/mol/particle] = -402.1539373
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.000586208
+Change in Potential Energy [kJ/mol/particle] = -0.000586209
+Change in Total Energy [kJ/mol/particle] = -6.41099e-10
+Error in Total Energy [%] = -0.000109364
+****************************************************
+
+****************************************************
+Timestep = 6
+a72 13
+Temperature [K] = 0.06768332586
+Kinetic Energy [kJ/mol/particle] = 0.0008441266766
+Potential Energy [kJ/mol/particle] = -402.1541952
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.000844127
+Change in Potential Energy [kJ/mol/particle] = -0.000844128
+Change in Total Energy [kJ/mol/particle] = -9.06742e-10
+Error in Total Energy [%] = -0.000107418
+****************************************************
+
+****************************************************
+Timestep = 7
+
+d76 1
+a76 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.09212280547
+Kinetic Energy [kJ/mol/particle] = 0.001148928730
+Potential Energy [kJ/mol/particle] = -402.1545000
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00114893
+Change in Potential Energy [kJ/mol/particle] = -0.00114893
+Change in Total Energy [kJ/mol/particle] = -1.23868e-09
+Error in Total Energy [%] = -0.000107812
+****************************************************
+
+****************************************************
+Timestep = 8
+a82 13
+Temperature [K] = 0.1203210701
+Kinetic Energy [kJ/mol/particle] = 0.001500609252
+Potential Energy [kJ/mol/particle] = -402.1548517
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00150061
+Change in Potential Energy [kJ/mol/particle] = -0.00150061
+Change in Total Energy [kJ/mol/particle] = -1.62599e-09
+Error in Total Energy [%] = -0.000108356
+****************************************************
+
+****************************************************
+Timestep = 9
+
+d86 1
+a86 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.1522776333
+Kinetic Energy [kJ/mol/particle] = 0.001899162178
+Potential Energy [kJ/mol/particle] = -402.1552502
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00189916
+Change in Potential Energy [kJ/mol/particle] = -0.00189916
+Change in Total Energy [kJ/mol/particle] = -2.04648e-09
+Error in Total Energy [%] = -0.000107757
+****************************************************
+
+****************************************************
+Timestep = 10
+a92 13
+Temperature [K] = 0.1879919440
+Kinetic Energy [kJ/mol/particle] = 0.002344580632
+Potential Energy [kJ/mol/particle] = -402.1556957
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00234458
+Change in Potential Energy [kJ/mol/particle] = -0.00234458
+Change in Total Energy [kJ/mol/particle] = -2.53645e-09
+Error in Total Energy [%] = -0.000108184
+****************************************************
+
+****************************************************
+Timestep = 11
+
+d96 1
+a96 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.2274633861
+Kinetic Energy [kJ/mol/particle] = 0.002836856932
+Potential Energy [kJ/mol/particle] = -402.1561879
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00283686
+Change in Potential Energy [kJ/mol/particle] = -0.00283686
+Change in Total Energy [kJ/mol/particle] = -3.06558e-09
+Error in Total Energy [%] = -0.000108062
+****************************************************
+
+****************************************************
+Timestep = 12
+d101 1
+a101 14
+Forcefield force time [s] = 0.0300000
+
+Temperature [K] = 0.2706912788
+Kinetic Energy [kJ/mol/particle] = 0.003375982587
+Potential Energy [kJ/mol/particle] = -402.1567271
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00337598
+Change in Potential Energy [kJ/mol/particle] = -0.00337599
+Change in Total Energy [kJ/mol/particle] = -3.63826e-09
+Error in Total Energy [%] = -0.000107769
+****************************************************
+
+****************************************************
+Timestep = 13
+d106 1
+a106 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.3176748765
+Kinetic Energy [kJ/mol/particle] = 0.003961948299
+Potential Energy [kJ/mol/particle] = -402.1573130
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00396195
+Change in Potential Energy [kJ/mol/particle] = -0.00396195
+Change in Total Energy [kJ/mol/particle] = -4.27699e-09
+Error in Total Energy [%] = -0.000107952
+****************************************************
+
+****************************************************
+Timestep = 14
+a112 13
+Temperature [K] = 0.3684133689
+Kinetic Energy [kJ/mol/particle] = 0.004594743960
+Potential Energy [kJ/mol/particle] = -402.1579458
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00459474
+Change in Potential Energy [kJ/mol/particle] = -0.00459475
+Change in Total Energy [kJ/mol/particle] = -4.96287e-09
+Error in Total Energy [%] = -0.000108012
+****************************************************
+
+****************************************************
+Timestep = 15
+
+d116 1
+a116 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.4229058808
+Kinetic Energy [kJ/mol/particle] = 0.005274358656
+Potential Energy [kJ/mol/particle] = -402.1586254
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00527436
+Change in Potential Energy [kJ/mol/particle] = -0.00527436
+Change in Total Energy [kJ/mol/particle] = -5.68841e-09
+Error in Total Energy [%] = -0.000107850
+****************************************************
+
+****************************************************
+Timestep = 16
+d121 1
+a121 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.4811514722
+Kinetic Energy [kJ/mol/particle] = 0.006000780665
+Potential Energy [kJ/mol/particle] = -402.1593519
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00600078
+Change in Potential Energy [kJ/mol/particle] = -0.00600079
+Change in Total Energy [kJ/mol/particle] = -6.46640e-09
+Error in Total Energy [%] = -0.000107759
+****************************************************
+
+****************************************************
+Timestep = 17
+a127 13
+Temperature [K] = 0.5431491386
+Kinetic Energy [kJ/mol/particle] = 0.006773997457
+Potential Energy [kJ/mol/particle] = -402.1601251
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00677400
+Change in Potential Energy [kJ/mol/particle] = -0.00677400
+Change in Total Energy [kJ/mol/particle] = -7.30511e-09
+Error in Total Energy [%] = -0.000107840
+****************************************************
+
+****************************************************
+Timestep = 18
+
+d131 1
+a131 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.6088978106
+Kinetic Energy [kJ/mol/particle] = 0.007593995695
+Potential Energy [kJ/mol/particle] = -402.1609451
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00759400
+Change in Potential Energy [kJ/mol/particle] = -0.00759400
+Change in Total Energy [kJ/mol/particle] = -8.18910e-09
+Error in Total Energy [%] = -0.000107837
+****************************************************
+
+****************************************************
+Timestep = 19
+a137 13
+Temperature [K] = 0.6783963541
+Kinetic Energy [kJ/mol/particle] = 0.008460761236
+Potential Energy [kJ/mol/particle] = -402.1618118
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00846076
+Change in Potential Energy [kJ/mol/particle] = -0.00846077
+Change in Total Energy [kJ/mol/particle] = -9.11818e-09
+Error in Total Energy [%] = -0.000107770
+****************************************************
+
+****************************************************
+Timestep = 20
+
+a142 13
+Temperature [K] = 0.7516435704
+Kinetic Energy [kJ/mol/particle] = 0.009374279130
+Potential Energy [kJ/mol/particle] = -402.1627254
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.00937428
+Change in Potential Energy [kJ/mol/particle] = -0.00937429
+Change in Total Energy [kJ/mol/particle] = -1.01094e-08
+Error in Total Energy [%] = -0.000107842
+****************************************************
+
+****************************************************
+Timestep = 21
+
+a147 13
+Temperature [K] = 0.8286381961
+Kinetic Energy [kJ/mol/particle] = 0.01033453362
+Potential Energy [kJ/mol/particle] = -402.1636856
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0103345
+Change in Potential Energy [kJ/mol/particle] = -0.0103345
+Change in Total Energy [kJ/mol/particle] = -1.11567e-08
+Error in Total Energy [%] = -0.000107955
+****************************************************
+
+****************************************************
+Timestep = 22
+
+d151 1
+a151 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 0.9093789033
+Kinetic Energy [kJ/mol/particle] = 0.01134150814
+Potential Energy [kJ/mol/particle] = -402.1646926
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0113415
+Change in Potential Energy [kJ/mol/particle] = -0.0113415
+Change in Total Energy [kJ/mol/particle] = -1.22506e-08
+Error in Total Energy [%] = -0.000108016
+****************************************************
+
+****************************************************
+Timestep = 23
+a157 13
+Temperature [K] = 0.9938642991
+Kinetic Energy [kJ/mol/particle] = 0.01239518533
+Potential Energy [kJ/mol/particle] = -402.1657463
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0123952
+Change in Potential Energy [kJ/mol/particle] = -0.0123952
+Change in Total Energy [kJ/mol/particle] = -1.33867e-08
+Error in Total Energy [%] = -0.000107999
+****************************************************
+
+****************************************************
+Timestep = 24
+
+d161 1
+a161 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 1.082092926
+Kinetic Energy [kJ/mol/particle] = 0.01349554701
+Potential Energy [kJ/mol/particle] = -402.1668466
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0134955
+Change in Potential Energy [kJ/mol/particle] = -0.0134956
+Change in Total Energy [kJ/mol/particle] = -1.45687e-08
+Error in Total Energy [%] = -0.000107952
+****************************************************
+
+****************************************************
+Timestep = 25
+a167 13
+Temperature [K] = 1.174063263
+Kinetic Energy [kJ/mol/particle] = 0.01464257419
+Potential Energy [kJ/mol/particle] = -402.1679937
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0146426
+Change in Potential Energy [kJ/mol/particle] = -0.0146426
+Change in Total Energy [kJ/mol/particle] = -1.57998e-08
+Error in Total Energy [%] = -0.000107903
+****************************************************
+
+****************************************************
+Timestep = 26
+
+a172 13
+Temperature [K] = 1.269773724
+Kinetic Energy [kJ/mol/particle] = 0.01583624711
+Potential Energy [kJ/mol/particle] = -402.1691873
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0158362
+Change in Potential Energy [kJ/mol/particle] = -0.0158363
+Change in Total Energy [kJ/mol/particle] = -1.70983e-08
+Error in Total Energy [%] = -0.000107970
+****************************************************
+
+****************************************************
+Timestep = 27
+
+d176 1
+a176 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 1.369222656
+Kinetic Energy [kJ/mol/particle] = 0.01707654516
+Potential Energy [kJ/mol/particle] = -402.1704276
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0170765
+Change in Potential Energy [kJ/mol/particle] = -0.0170766
+Change in Total Energy [kJ/mol/particle] = -1.84334e-08
+Error in Total Energy [%] = -0.000107946
+****************************************************
+
+****************************************************
+Timestep = 28
+a182 13
+Temperature [K] = 1.472408346
+Kinetic Energy [kJ/mol/particle] = 0.01836344695
+Potential Energy [kJ/mol/particle] = -402.1717145
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0183634
+Change in Potential Energy [kJ/mol/particle] = -0.0183635
+Change in Total Energy [kJ/mol/particle] = -1.98143e-08
+Error in Total Energy [%] = -0.000107901
+****************************************************
+
+****************************************************
+Timestep = 29
+
+d186 1
+a186 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 1.579329013
+Kinetic Energy [kJ/mol/particle] = 0.01969693029
+Potential Energy [kJ/mol/particle] = -402.1730480
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0196969
+Change in Potential Energy [kJ/mol/particle] = -0.0196970
+Change in Total Energy [kJ/mol/particle] = -2.12492e-08
+Error in Total Energy [%] = -0.000107881
+****************************************************
+
+****************************************************
+Timestep = 30
+d191 1
+a191 14
+Forcefield force time [s] = 0.0300000
+
+Temperature [K] = 1.689982813
+Kinetic Energy [kJ/mol/particle] = 0.02107697217
+Potential Energy [kJ/mol/particle] = -402.1744281
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0210770
+Change in Potential Energy [kJ/mol/particle] = -0.0210770
+Change in Total Energy [kJ/mol/particle] = -2.27377e-08
+Error in Total Energy [%] = -0.000107879
+****************************************************
+
+****************************************************
+Timestep = 31
+d196 1
+a196 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 1.804367838
+Kinetic Energy [kJ/mol/particle] = 0.02250354880
+Potential Energy [kJ/mol/particle] = -402.1758547
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0225035
+Change in Potential Energy [kJ/mol/particle] = -0.0225036
+Change in Total Energy [kJ/mol/particle] = -2.42825e-08
+Error in Total Energy [%] = -0.000107905
+****************************************************
+
+****************************************************
+Timestep = 32
+a202 13
+Temperature [K] = 1.922482114
+Kinetic Energy [kJ/mol/particle] = 0.02397663556
+Potential Energy [kJ/mol/particle] = -402.1773277
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0239766
+Change in Potential Energy [kJ/mol/particle] = -0.0239767
+Change in Total Energy [kJ/mol/particle] = -2.58667e-08
+Error in Total Energy [%] = -0.000107883
+****************************************************
+
+****************************************************
+Timestep = 33
+
+d206 1
+a206 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 2.044323603
+Kinetic Energy [kJ/mol/particle] = 0.02549620704
+Potential Energy [kJ/mol/particle] = -402.1788473
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0254962
+Change in Potential Energy [kJ/mol/particle] = -0.0254962
+Change in Total Energy [kJ/mol/particle] = -2.75047e-08
+Error in Total Energy [%] = -0.000107878
+****************************************************
+
+****************************************************
+Timestep = 34
+a212 13
+Temperature [K] = 2.169890206
+Kinetic Energy [kJ/mol/particle] = 0.02706223704
+Potential Energy [kJ/mol/particle] = -402.1804133
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0270622
+Change in Potential Energy [kJ/mol/particle] = -0.0270623
+Change in Total Energy [kJ/mol/particle] = -2.91933e-08
+Error in Total Energy [%] = -0.000107875
+****************************************************
+
+****************************************************
+Timestep = 35
+
+d216 1
+a216 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 2.299179755
+Kinetic Energy [kJ/mol/particle] = 0.02867469854
+Potential Energy [kJ/mol/particle] = -402.1820258
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0286747
+Change in Potential Energy [kJ/mol/particle] = -0.0286747
+Change in Total Energy [kJ/mol/particle] = -3.09220e-08
+Error in Total Energy [%] = -0.000107837
+****************************************************
+
+****************************************************
+Timestep = 36
+d221 1
+a221 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 2.432190020
+Kinetic Energy [kJ/mol/particle] = 0.03033356373
+Potential Energy [kJ/mol/particle] = -402.1836847
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0303336
+Change in Potential Energy [kJ/mol/particle] = -0.0303336
+Change in Total Energy [kJ/mol/particle] = -3.27108e-08
+Error in Total Energy [%] = -0.000107837
+****************************************************
+
+****************************************************
+Timestep = 37
+a227 13
+Temperature [K] = 2.568918707
+Kinetic Energy [kJ/mol/particle] = 0.03203880399
+Potential Energy [kJ/mol/particle] = -402.1853899
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0320388
+Change in Potential Energy [kJ/mol/particle] = -0.0320388
+Change in Total Energy [kJ/mol/particle] = -3.45519e-08
+Error in Total Energy [%] = -0.000107844
+****************************************************
+
+****************************************************
+Timestep = 38
+
+a232 13
+Temperature [K] = 2.709363458
+Kinetic Energy [kJ/mol/particle] = 0.03379038991
+Potential Energy [kJ/mol/particle] = -402.1871415
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0337904
+Change in Potential Energy [kJ/mol/particle] = -0.0337904
+Change in Total Energy [kJ/mol/particle] = -3.64499e-08
+Error in Total Energy [%] = -0.000107871
+****************************************************
+
+****************************************************
+Timestep = 39
+
+a237 13
+Temperature [K] = 2.853521850
+Kinetic Energy [kJ/mol/particle] = 0.03558829129
+Potential Energy [kJ/mol/particle] = -402.1889394
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0355883
+Change in Potential Energy [kJ/mol/particle] = -0.0355883
+Change in Total Energy [kJ/mol/particle] = -3.83878e-08
+Error in Total Energy [%] = -0.000107866
+****************************************************
+
+****************************************************
+Timestep = 40
+
+d241 1
+a241 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 3.001391397
+Kinetic Energy [kJ/mol/particle] = 0.03743247709
+Potential Energy [kJ/mol/particle] = -402.1907836
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0374325
+Change in Potential Energy [kJ/mol/particle] = -0.0374325
+Change in Total Energy [kJ/mol/particle] = -4.03695e-08
+Error in Total Energy [%] = -0.000107846
+****************************************************
+
+****************************************************
+Timestep = 41
+a247 13
+Temperature [K] = 3.152969547
+Kinetic Energy [kJ/mol/particle] = 0.03932291552
+Potential Energy [kJ/mol/particle] = -402.1926740
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0393229
+Change in Potential Energy [kJ/mol/particle] = -0.0393230
+Change in Total Energy [kJ/mol/particle] = -4.24053e-08
+Error in Total Energy [%] = -0.000107839
+****************************************************
+
+****************************************************
+Timestep = 42
+
+d251 1
+a251 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 3.308253686
+Kinetic Energy [kJ/mol/particle] = 0.04125957397
+Potential Energy [kJ/mol/particle] = -402.1946107
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0412596
+Change in Potential Energy [kJ/mol/particle] = -0.0412596
+Change in Total Energy [kJ/mol/particle] = -4.44979e-08
+Error in Total Energy [%] = -0.000107849
+****************************************************
+
+****************************************************
+Timestep = 43
+a257 13
+Temperature [K] = 3.467241137
+Kinetic Energy [kJ/mol/particle] = 0.04324241902
+Potential Energy [kJ/mol/particle] = -402.1965935
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0432424
+Change in Potential Energy [kJ/mol/particle] = -0.0432425
+Change in Total Energy [kJ/mol/particle] = -4.66424e-08
+Error in Total Energy [%] = -0.000107863
+****************************************************
+
+****************************************************
+Timestep = 44
+
+d261 1
+a261 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 3.629929155
+Kinetic Energy [kJ/mol/particle] = 0.04527141648
+Potential Energy [kJ/mol/particle] = -402.1986225
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0452714
+Change in Potential Energy [kJ/mol/particle] = -0.0452715
+Change in Total Energy [kJ/mol/particle] = -4.88269e-08
+Error in Total Energy [%] = -0.000107854
+****************************************************
+
+****************************************************
+Timestep = 45
+d266 1
+a266 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 3.796314935
+Kinetic Energy [kJ/mol/particle] = 0.04734653135
+Potential Energy [kJ/mol/particle] = -402.2006977
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0473465
+Change in Potential Energy [kJ/mol/particle] = -0.0473466
+Change in Total Energy [kJ/mol/particle] = -5.10628e-08
+Error in Total Energy [%] = -0.000107849
+****************************************************
+
+****************************************************
+Timestep = 46
+a272 13
+Temperature [K] = 3.966395607
+Kinetic Energy [kJ/mol/particle] = 0.04946772783
+Potential Energy [kJ/mol/particle] = -402.2028189
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0494677
+Change in Potential Energy [kJ/mol/particle] = -0.0494678
+Change in Total Energy [kJ/mol/particle] = -5.33472e-08
+Error in Total Energy [%] = -0.000107842
+****************************************************
+
+****************************************************
+Timestep = 47
+
+d276 1
+a276 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 4.140168237
+Kinetic Energy [kJ/mol/particle] = 0.05163496933
+Potential Energy [kJ/mol/particle] = -402.2049861
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0516350
+Change in Potential Energy [kJ/mol/particle] = -0.0516350
+Change in Total Energy [kJ/mol/particle] = -5.56791e-08
+Error in Total Energy [%] = -0.000107832
+****************************************************
+
+****************************************************
+Timestep = 48
+a282 13
+Temperature [K] = 4.317629828
+Kinetic Energy [kJ/mol/particle] = 0.05384821847
+Potential Energy [kJ/mol/particle] = -402.2071994
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0538482
+Change in Potential Energy [kJ/mol/particle] = -0.0538483
+Change in Total Energy [kJ/mol/particle] = -5.80728e-08
+Error in Total Energy [%] = -0.000107845
+****************************************************
+
+****************************************************
+Timestep = 49
+
+a287 13
+Temperature [K] = 4.498777318
+Kinetic Energy [kJ/mol/particle] = 0.05610743706
+Potential Energy [kJ/mol/particle] = -402.2094586
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0561074
+Change in Potential Energy [kJ/mol/particle] = -0.0561075
+Change in Total Energy [kJ/mol/particle] = -6.05049e-08
+Error in Total Energy [%] = -0.000107838
+****************************************************
+
+****************************************************
+Timestep = 50
+
+a292 13
+Temperature [K] = 4.683607582
+Kinetic Energy [kJ/mol/particle] = 0.05841258615
+Potential Energy [kJ/mol/particle] = -402.2117637
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0584126
+Change in Potential Energy [kJ/mol/particle] = -0.0584126
+Change in Total Energy [kJ/mol/particle] = -6.29943e-08
+Error in Total Energy [%] = -0.000107844
+****************************************************
+
+****************************************************
+Timestep = 51
+
+d296 1
+a296 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 4.872117432
+Kinetic Energy [kJ/mol/particle] = 0.06076362596
+Potential Energy [kJ/mol/particle] = -402.2141148
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0607636
+Change in Potential Energy [kJ/mol/particle] = -0.0607637
+Change in Total Energy [kJ/mol/particle] = -6.55298e-08
+Error in Total Energy [%] = -0.000107844
+****************************************************
+
+****************************************************
+Timestep = 52
+a302 13
+Temperature [K] = 5.064303617
+Kinetic Energy [kJ/mol/particle] = 0.06316051594
+Potential Energy [kJ/mol/particle] = -402.2165117
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0631605
+Change in Potential Energy [kJ/mol/particle] = -0.0631606
+Change in Total Energy [kJ/mol/particle] = -6.81224e-08
+Error in Total Energy [%] = -0.000107856
+****************************************************
+
+****************************************************
+Timestep = 53
+
+d306 1
+a306 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 5.260162821
+Kinetic Energy [kJ/mol/particle] = 0.06560321474
+Potential Energy [kJ/mol/particle] = -402.2189544
+Total Energy [kJ/mol/particle] = -402.1533511
+Change in Kinetic Energy [kJ/mol/particle] = 0.0656032
+Change in Potential Energy [kJ/mol/particle] = -0.0656033
+Change in Total Energy [kJ/mol/particle] = -7.07502e-08
+Error in Total Energy [%] = -0.000107846
+****************************************************
+
+****************************************************
+Timestep = 54
+d311 1
+a311 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 5.459691665
+Kinetic Energy [kJ/mol/particle] = 0.06809168022
+Potential Energy [kJ/mol/particle] = -402.2214428
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0680917
+Change in Potential Energy [kJ/mol/particle] = -0.0680918
+Change in Total Energy [kJ/mol/particle] = -7.34312e-08
+Error in Total Energy [%] = -0.000107842
+****************************************************
+
+****************************************************
+Timestep = 55
+a317 13
+Temperature [K] = 5.662886708
+Kinetic Energy [kJ/mol/particle] = 0.07062586946
+Potential Energy [kJ/mol/particle] = -402.2239770
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0706259
+Change in Potential Energy [kJ/mol/particle] = -0.0706259
+Change in Total Energy [kJ/mol/particle] = -7.61593e-08
+Error in Total Energy [%] = -0.000107835
+****************************************************
+
+****************************************************
+Timestep = 56
+
+d321 1
+a321 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 5.869744445
+Kinetic Energy [kJ/mol/particle] = 0.07320573875
+Potential Energy [kJ/mol/particle] = -402.2265569
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0732057
+Change in Potential Energy [kJ/mol/particle] = -0.0732058
+Change in Total Energy [kJ/mol/particle] = -7.89479e-08
+Error in Total Energy [%] = -0.000107844
+****************************************************
+
+****************************************************
+Timestep = 57
+a327 13
+Temperature [K] = 6.080261306
+Kinetic Energy [kJ/mol/particle] = 0.07583124357
+Potential Energy [kJ/mol/particle] = -402.2291824
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0758312
+Change in Potential Energy [kJ/mol/particle] = -0.0758313
+Change in Total Energy [kJ/mol/particle] = -8.17733e-08
+Error in Total Energy [%] = -0.000107836
+****************************************************
+
+****************************************************
+Timestep = 58
+
+d331 1
+a331 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 6.294433661
+Kinetic Energy [kJ/mol/particle] = 0.07850233865
+Potential Energy [kJ/mol/particle] = -402.2318535
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0785023
+Change in Potential Energy [kJ/mol/particle] = -0.0785024
+Change in Total Energy [kJ/mol/particle] = -8.46602e-08
+Error in Total Energy [%] = -0.000107844
+****************************************************
+
+****************************************************
+Timestep = 59
+d336 1
+a336 14
+Forcefield force time [s] = 0.0300000
+
+Temperature [K] = 6.512257815
+Kinetic Energy [kJ/mol/particle] = 0.08121897789
+Potential Energy [kJ/mol/particle] = -402.2345701
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0812190
+Change in Potential Energy [kJ/mol/particle] = -0.0812191
+Change in Total Energy [kJ/mol/particle] = -8.75858e-08
+Error in Total Energy [%] = -0.000107839
+****************************************************
+
+****************************************************
+Timestep = 60
+d341 1
+a341 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 6.733730010
+Kinetic Energy [kJ/mol/particle] = 0.08398111443
+Potential Energy [kJ/mol/particle] = -402.2373323
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0839811
+Change in Potential Energy [kJ/mol/particle] = -0.0839812
+Change in Total Energy [kJ/mol/particle] = -9.05641e-08
+Error in Total Energy [%] = -0.000107839
+****************************************************
+
+****************************************************
+Timestep = 61
+a347 13
+Temperature [K] = 6.958846425
+Kinetic Energy [kJ/mol/particle] = 0.08678870064
+Potential Energy [kJ/mol/particle] = -402.2401399
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0867887
+Change in Potential Energy [kJ/mol/particle] = -0.0867888
+Change in Total Energy [kJ/mol/particle] = -9.35945e-08
+Error in Total Energy [%] = -0.000107842
+****************************************************
+
+****************************************************
+Timestep = 62
+
+d351 1
+a351 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 7.187603178
+Kinetic Energy [kJ/mol/particle] = 0.08964168806
+Potential Energy [kJ/mol/particle] = -402.2429929
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0896417
+Change in Potential Energy [kJ/mol/particle] = -0.0896418
+Change in Total Energy [kJ/mol/particle] = -9.66749e-08
+Error in Total Energy [%] = -0.000107846
+****************************************************
+
+****************************************************
+Timestep = 63
+d356 1
+a356 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 7.419996322
+Kinetic Energy [kJ/mol/particle] = 0.09254002749
+Potential Energy [kJ/mol/particle] = -402.2458912
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0925400
+Change in Potential Energy [kJ/mol/particle] = -0.0925401
+Change in Total Energy [kJ/mol/particle] = -9.97984e-08
+Error in Total Energy [%] = -0.000107844
+****************************************************
+
+****************************************************
+Timestep = 64
+a362 13
+Temperature [K] = 7.656021848
+Kinetic Energy [kJ/mol/particle] = 0.09548366893
+Potential Energy [kJ/mol/particle] = -402.2488349
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0954837
+Change in Potential Energy [kJ/mol/particle] = -0.0954838
+Change in Total Energy [kJ/mol/particle] = -1.02968e-07
+Error in Total Energy [%] = -0.000107839
+****************************************************
+
+****************************************************
+Timestep = 65
+
+d366 1
+a366 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 7.895675684
+Kinetic Energy [kJ/mol/particle] = 0.09847256159
+Potential Energy [kJ/mol/particle] = -402.2518237
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0984726
+Change in Potential Energy [kJ/mol/particle] = -0.0984727
+Change in Total Energy [kJ/mol/particle] = -1.06197e-07
+Error in Total Energy [%] = -0.000107845
+****************************************************
+
+****************************************************
+Timestep = 66
+a372 13
+Temperature [K] = 8.138953696
+Kinetic Energy [kJ/mol/particle] = 0.1015066539
+Potential Energy [kJ/mol/particle] = -402.2548578
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.101507
+Change in Potential Energy [kJ/mol/particle] = -0.101507
+Change in Total Energy [kJ/mol/particle] = -1.09467e-07
+Error in Total Energy [%] = -0.000107842
+****************************************************
+
+****************************************************
+Timestep = 67
+
+a377 13
+Temperature [K] = 8.385851687
+Kinetic Energy [kJ/mol/particle] = 0.1045858936
+Potential Energy [kJ/mol/particle] = -402.2579371
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.104586
+Change in Potential Energy [kJ/mol/particle] = -0.104586
+Change in Total Energy [kJ/mol/particle] = -1.12790e-07
+Error in Total Energy [%] = -0.000107845
+****************************************************
+
+****************************************************
+Timestep = 68
+
+a382 13
+Temperature [K] = 8.636365397
+Kinetic Energy [kJ/mol/particle] = 0.1077102274
+Potential Energy [kJ/mol/particle] = -402.2610614
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.107710
+Change in Potential Energy [kJ/mol/particle] = -0.107710
+Change in Total Energy [kJ/mol/particle] = -1.16157e-07
+Error in Total Energy [%] = -0.000107842
+****************************************************
+
+****************************************************
+Timestep = 69
+
+d386 1
+a386 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 8.890490505
+Kinetic Energy [kJ/mol/particle] = 0.1108796016
+Potential Energy [kJ/mol/particle] = -402.2642308
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.110880
+Change in Potential Energy [kJ/mol/particle] = -0.110880
+Change in Total Energy [kJ/mol/particle] = -1.19577e-07
+Error in Total Energy [%] = -0.000107844
+****************************************************
+
+****************************************************
+Timestep = 70
+a392 13
+Temperature [K] = 9.148222627
+Kinetic Energy [kJ/mol/particle] = 0.1140939613
+Potential Energy [kJ/mol/particle] = -402.2674452
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.114094
+Change in Potential Energy [kJ/mol/particle] = -0.114094
+Change in Total Energy [kJ/mol/particle] = -1.23045e-07
+Error in Total Energy [%] = -0.000107845
+****************************************************
+
+****************************************************
+Timestep = 71
+
+d396 1
+a396 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 9.409557317
+Kinetic Energy [kJ/mol/particle] = 0.1173532513
+Potential Energy [kJ/mol/particle] = -402.2707045
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.117353
+Change in Potential Energy [kJ/mol/particle] = -0.117353
+Change in Total Energy [kJ/mol/particle] = -1.26553e-07
+Error in Total Energy [%] = -0.000107839
+****************************************************
+
+****************************************************
+Timestep = 72
+d401 1
+a401 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 9.674490065
+Kinetic Energy [kJ/mol/particle] = 0.1206574151
+Potential Energy [kJ/mol/particle] = -402.2740086
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.120657
+Change in Potential Energy [kJ/mol/particle] = -0.120658
+Change in Total Energy [kJ/mol/particle] = -1.30121e-07
+Error in Total Energy [%] = -0.000107843
+****************************************************
+
+****************************************************
+Timestep = 73
+a407 13
+Temperature [K] = 9.943016302
+Kinetic Energy [kJ/mol/particle] = 0.1240063960
+Potential Energy [kJ/mol/particle] = -402.2773576
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.124006
+Change in Potential Energy [kJ/mol/particle] = -0.124007
+Change in Total Energy [kJ/mol/particle] = -1.33730e-07
+Error in Total Energy [%] = -0.000107841
+****************************************************
+
+****************************************************
+Timestep = 74
+
+d411 1
+a411 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 10.21513139
+Kinetic Energy [kJ/mol/particle] = 0.1274001359
+Potential Energy [kJ/mol/particle] = -402.2807514
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.127400
+Change in Potential Energy [kJ/mol/particle] = -0.127400
+Change in Total Energy [kJ/mol/particle] = -1.37382e-07
+Error in Total Energy [%] = -0.000107835
+****************************************************
+
+****************************************************
+Timestep = 75
+d416 1
+a416 14
+Forcefield force time [s] = 0.0300000
+
+Temperature [K] = 10.49083065
+Kinetic Energy [kJ/mol/particle] = 0.1308385765
+Potential Energy [kJ/mol/particle] = -402.2841898
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.130839
+Change in Potential Energy [kJ/mol/particle] = -0.130839
+Change in Total Energy [kJ/mol/particle] = -1.41074e-07
+Error in Total Energy [%] = -0.000107823
+****************************************************
+
+****************************************************
+Timestep = 76
+d421 1
+a421 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 10.77010931
+Kinetic Energy [kJ/mol/particle] = 0.1343216584
+Potential Energy [kJ/mol/particle] = -402.2876729
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.134322
+Change in Potential Energy [kJ/mol/particle] = -0.134322
+Change in Total Energy [kJ/mol/particle] = -1.44833e-07
+Error in Total Energy [%] = -0.000107826
+****************************************************
+
+****************************************************
+Timestep = 77
+a427 13
+Temperature [K] = 11.05296255
+Kinetic Energy [kJ/mol/particle] = 0.1378493215
+Potential Energy [kJ/mol/particle] = -402.2912005
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.137849
+Change in Potential Energy [kJ/mol/particle] = -0.137849
+Change in Total Energy [kJ/mol/particle] = -1.48638e-07
+Error in Total Energy [%] = -0.000107827
+****************************************************
+
+****************************************************
+Timestep = 78
+
+d431 1
+a431 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 11.33938550
+Kinetic Energy [kJ/mol/particle] = 0.1414215049
+Potential Energy [kJ/mol/particle] = -402.2947727
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.141422
+Change in Potential Energy [kJ/mol/particle] = -0.141422
+Change in Total Energy [kJ/mol/particle] = -1.52483e-07
+Error in Total Energy [%] = -0.000107822
+****************************************************
+
+****************************************************
+Timestep = 79
+d436 1
+a436 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 11.62937322
+Kinetic Energy [kJ/mol/particle] = 0.1450381470
+Potential Energy [kJ/mol/particle] = -402.2983894
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.145038
+Change in Potential Energy [kJ/mol/particle] = -0.145038
+Change in Total Energy [kJ/mol/particle] = -1.56379e-07
+Error in Total Energy [%] = -0.000107820
+****************************************************
+
+****************************************************
+Timestep = 80
+a442 13
+Temperature [K] = 11.92292069
+Kinetic Energy [kJ/mol/particle] = 0.1486991854
+Potential Energy [kJ/mol/particle] = -402.3020504
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.148699
+Change in Potential Energy [kJ/mol/particle] = -0.148699
+Change in Total Energy [kJ/mol/particle] = -1.60332e-07
+Error in Total Energy [%] = -0.000107823
+****************************************************
+
+****************************************************
+Timestep = 81
+
+d446 1
+a446 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 12.22002287
+Kinetic Energy [kJ/mol/particle] = 0.1524045570
+Potential Energy [kJ/mol/particle] = -402.3057558
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.152405
+Change in Potential Energy [kJ/mol/particle] = -0.152405
+Change in Total Energy [kJ/mol/particle] = -1.64338e-07
+Error in Total Energy [%] = -0.000107830
+****************************************************
+
+****************************************************
+Timestep = 82
+a452 13
+Temperature [K] = 12.52067462
+Kinetic Energy [kJ/mol/particle] = 0.1561541978
+Potential Energy [kJ/mol/particle] = -402.3095054
+Total Energy [kJ/mol/particle] = -402.1533512
+Change in Kinetic Energy [kJ/mol/particle] = 0.156154
+Change in Potential Energy [kJ/mol/particle] = -0.156154
+Change in Total Energy [kJ/mol/particle] = -1.68384e-07
+Error in Total Energy [%] = -0.000107832
+****************************************************
+
+****************************************************
+Timestep = 83
+
+a457 13
+Temperature [K] = 12.82487075
+Kinetic Energy [kJ/mol/particle] = 0.1599480431
+Potential Energy [kJ/mol/particle] = -402.3132993
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.159948
+Change in Potential Energy [kJ/mol/particle] = -0.159948
+Change in Total Energy [kJ/mol/particle] = -1.72484e-07
+Error in Total Energy [%] = -0.000107837
+****************************************************
+
+****************************************************
+Timestep = 84
+
+a462 13
+Temperature [K] = 13.13260601
+Kinetic Energy [kJ/mol/particle] = 0.1637860275
+Potential Energy [kJ/mol/particle] = -402.3171373
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.163786
+Change in Potential Energy [kJ/mol/particle] = -0.163786
+Change in Total Energy [kJ/mol/particle] = -1.76621e-07
+Error in Total Energy [%] = -0.000107836
+****************************************************
+
+****************************************************
+Timestep = 85
+
+d466 1
+a466 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 13.44387510
+Kinetic Energy [kJ/mol/particle] = 0.1676680847
+Potential Energy [kJ/mol/particle] = -402.3210193
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.167668
+Change in Potential Energy [kJ/mol/particle] = -0.167668
+Change in Total Energy [kJ/mol/particle] = -1.80788e-07
+Error in Total Energy [%] = -0.000107825
+****************************************************
+
+****************************************************
+Timestep = 86
+a472 13
+Temperature [K] = 13.75867265
+Kinetic Energy [kJ/mol/particle] = 0.1715941478
+Potential Energy [kJ/mol/particle] = -402.3249454
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.171594
+Change in Potential Energy [kJ/mol/particle] = -0.171594
+Change in Total Energy [kJ/mol/particle] = -1.85025e-07
+Error in Total Energy [%] = -0.000107827
+****************************************************
+
+****************************************************
+Timestep = 87
+
+d476 1
+a476 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 14.07699323
+Kinetic Energy [kJ/mol/particle] = 0.1755641490
+Potential Energy [kJ/mol/particle] = -402.3289154
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.175564
+Change in Potential Energy [kJ/mol/particle] = -0.175564
+Change in Total Energy [kJ/mol/particle] = -1.89302e-07
+Error in Total Energy [%] = -0.000107825
+****************************************************
+
+****************************************************
+Timestep = 88
+d481 1
+a481 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 14.39883133
+Kinetic Energy [kJ/mol/particle] = 0.1795780199
+Potential Energy [kJ/mol/particle] = -402.3329293
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.179578
+Change in Potential Energy [kJ/mol/particle] = -0.179578
+Change in Total Energy [kJ/mol/particle] = -1.93635e-07
+Error in Total Energy [%] = -0.000107828
+****************************************************
+
+****************************************************
+Timestep = 89
+a487 13
+Temperature [K] = 14.72418141
+Kinetic Energy [kJ/mol/particle] = 0.1836356911
+Potential Energy [kJ/mol/particle] = -402.3369870
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.183636
+Change in Potential Energy [kJ/mol/particle] = -0.183636
+Change in Total Energy [kJ/mol/particle] = -1.98016e-07
+Error in Total Energy [%] = -0.000107831
+****************************************************
+
+****************************************************
+Timestep = 90
+
+d491 1
+a491 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 15.05303786
+Kinetic Energy [kJ/mol/particle] = 0.1877370928
+Potential Energy [kJ/mol/particle] = -402.3410884
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.187737
+Change in Potential Energy [kJ/mol/particle] = -0.187737
+Change in Total Energy [kJ/mol/particle] = -2.02438e-07
+Error in Total Energy [%] = -0.000107831
+****************************************************
+
+****************************************************
+Timestep = 91
+d496 1
+a496 14
+Forcefield force time [s] = 0.0300000
+
+Temperature [K] = 15.38539500
+Kinetic Energy [kJ/mol/particle] = 0.1918821540
+Potential Energy [kJ/mol/particle] = -402.3452334
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.191882
+Change in Potential Energy [kJ/mol/particle] = -0.191882
+Change in Total Energy [kJ/mol/particle] = -2.06903e-07
+Error in Total Energy [%] = -0.000107828
+****************************************************
+
+****************************************************
+Timestep = 92
+d501 1
+a501 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 15.72124710
+Kinetic Energy [kJ/mol/particle] = 0.1960708033
+Potential Energy [kJ/mol/particle] = -402.3494221
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.196071
+Change in Potential Energy [kJ/mol/particle] = -0.196071
+Change in Total Energy [kJ/mol/particle] = -2.11427e-07
+Error in Total Energy [%] = -0.000107832
+****************************************************
+
+****************************************************
+Timestep = 93
+a507 13
+Temperature [K] = 16.06058836
+Kinetic Energy [kJ/mol/particle] = 0.2003029684
+Potential Energy [kJ/mol/particle] = -402.3536543
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.200303
+Change in Potential Energy [kJ/mol/particle] = -0.200303
+Change in Total Energy [kJ/mol/particle] = -2.15991e-07
+Error in Total Energy [%] = -0.000107832
+****************************************************
+
+****************************************************
+Timestep = 94
+
+d511 1
+a511 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 16.40341293
+Kinetic Energy [kJ/mol/particle] = 0.2045785763
+Potential Energy [kJ/mol/particle] = -402.3579299
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.204579
+Change in Potential Energy [kJ/mol/particle] = -0.204579
+Change in Total Energy [kJ/mol/particle] = -2.20603e-07
+Error in Total Energy [%] = -0.000107833
+****************************************************
+
+****************************************************
+Timestep = 95
+a517 13
+Temperature [K] = 16.74971489
+Kinetic Energy [kJ/mol/particle] = 0.2088975531
+Potential Energy [kJ/mol/particle] = -402.3622489
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.208898
+Change in Potential Energy [kJ/mol/particle] = -0.208898
+Change in Total Energy [kJ/mol/particle] = -2.25260e-07
+Error in Total Energy [%] = -0.000107833
+****************************************************
+
+****************************************************
+Timestep = 96
+
+d521 1
+a521 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 17.09948826
+Kinetic Energy [kJ/mol/particle] = 0.2132598245
+Potential Energy [kJ/mol/particle] = -402.3666111
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.213260
+Change in Potential Energy [kJ/mol/particle] = -0.213260
+Change in Total Energy [kJ/mol/particle] = -2.29951e-07
+Error in Total Energy [%] = -0.000107827
+****************************************************
+
+****************************************************
+Timestep = 97
+d526 1
+a526 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 17.45272701
+Kinetic Energy [kJ/mol/particle] = 0.2176653151
+Potential Energy [kJ/mol/particle] = -402.3710166
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.217665
+Change in Potential Energy [kJ/mol/particle] = -0.217666
+Change in Total Energy [kJ/mol/particle] = -2.34699e-07
+Error in Total Energy [%] = -0.000107826
+****************************************************
+
+****************************************************
+Timestep = 98
+a532 13
+Temperature [K] = 17.80942505
+Kinetic Energy [kJ/mol/particle] = 0.2221139489
+Potential Energy [kJ/mol/particle] = -402.3754653
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.222114
+Change in Potential Energy [kJ/mol/particle] = -0.222114
+Change in Total Energy [kJ/mol/particle] = -2.39503e-07
+Error in Total Energy [%] = -0.000107829
+****************************************************
+
+****************************************************
+Timestep = 99
+
+d536 1
+a536 14
+Forcefield force time [s] = 0.0400000
+
+Temperature [K] = 18.16957622
+Kinetic Energy [kJ/mol/particle] = 0.2266056492
+Potential Energy [kJ/mol/particle] = -402.3799570
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.226606
+Change in Potential Energy [kJ/mol/particle] = -0.226606
+Change in Total Energy [kJ/mol/particle] = -2.44340e-07
+Error in Total Energy [%] = -0.000107826
+****************************************************
+
+****************************************************
+Timestep = 100
+a541 11
+
+Temperature [K] = 18.53317431
+Kinetic Energy [kJ/mol/particle] = 0.2311403383
+Potential Energy [kJ/mol/particle] = -402.3844917
+Total Energy [kJ/mol/particle] = -402.1533513
+Change in Kinetic Energy [kJ/mol/particle] = 0.231140
+Change in Potential Energy [kJ/mol/particle] = -0.231141
+Change in Total Energy [kJ/mol/particle] = -2.49227e-07
+Error in Total Energy [%] = -0.000107825
+****************************************************
+Total run time is 3.59000
+@
+
+
+1.5
+log
+@This is another example demonstrating use of reduced units
+and LJ93 walls and density profile to compare with dft
+calculations.
+@
+text
+@d79 1
+a79 1
+Forcefield force time [s] = 0.0300000
+d97 1
+a97 1
+Forcefield force time [s] = 0.0400000
+d133 1
+a133 1
+Forcefield force time [s] = 0.0300000
+d511 1
+a511 1
+Forcefield force time [s] = 0.0400000
+d529 1
+a529 1
+Forcefield force time [s] = 0.0300000
+d547 1
+a547 1
+Forcefield force time [s] = 0.0400000
+d565 1
+a565 1
+Forcefield force time [s] = 0.0300000
+d583 1
+a583 1
+Forcefield force time [s] = 0.0400000
+d601 1
+a601 1
+Forcefield force time [s] = 0.0300000
+d619 1
+a619 1
+Forcefield force time [s] = 0.0400000
+d691 1
+a691 1
+Forcefield force time [s] = 0.0300000
+d709 1
+a709 1
+Forcefield force time [s] = 0.0400000
+d727 1
+a727 1
+Forcefield force time [s] = 0.0300000
+d745 1
+a745 1
+Forcefield force time [s] = 0.0400000
+d763 1
+a763 1
+Forcefield force time [s] = 0.0300000
+d781 1
+a781 1
+Forcefield force time [s] = 0.0400000
+d799 1
+a799 1
+Forcefield force time [s] = 0.0300000
+d817 1
+a817 1
+Forcefield force time [s] = 0.0400000
+d835 1
+a835 1
+Forcefield force time [s] = 0.0300000
+d871 1
+a871 1
+Forcefield force time [s] = 0.0400000
+d889 1
+a889 1
+Forcefield force time [s] = 0.0300000
+d907 1
+a907 1
+Forcefield force time [s] = 0.0400000
+d925 1
+a925 1
+Forcefield force time [s] = 0.0300000
+d943 1
+a943 1
+Forcefield force time [s] = 0.0400000
+d961 1
+a961 1
+Forcefield force time [s] = 0.0300000
+d979 1
+a979 1
+Forcefield force time [s] = 0.0400000
+d1015 1
+a1015 1
+Forcefield force time [s] = 0.0300000
+d1033 1
+a1033 1
+Forcefield force time [s] = 0.0400000
+d1051 1
+a1051 1
+Forcefield force time [s] = 0.0300000
+d1069 1
+a1069 1
+Forcefield force time [s] = 0.0400000
+d1087 1
+a1087 1
+Forcefield force time [s] = 0.0300000
+d1105 1
+a1105 1
+Forcefield force time [s] = 0.0400000
+d1177 1
+a1177 1
+Forcefield force time [s] = 0.0300000
+d1195 1
+a1195 1
+Forcefield force time [s] = 0.0400000
+d1213 1
+a1213 1
+Forcefield force time [s] = 0.0300000
+d1231 1
+a1231 1
+Forcefield force time [s] = 0.0400000
+d1249 1
+a1249 1
+Forcefield force time [s] = 0.0300000
+d1267 1
+a1267 1
+Forcefield force time [s] = 0.0400000
+d1285 1
+a1285 1
+Forcefield force time [s] = 0.0300000
+d1303 1
+a1303 1
+Forcefield force time [s] = 0.0400000
+d1321 1
+a1321 1
+Forcefield force time [s] = 0.0300000
+d1375 1
+a1375 1
+Forcefield force time [s] = 0.0300000
+d1393 1
+a1393 1
+Forcefield force time [s] = 0.0400000
+d1411 1
+a1411 1
+Forcefield force time [s] = 0.0300000
+d1501 1
+a1501 1
+Forcefield force time [s] = 0.0300000
+d1519 1
+a1519 1
+Forcefield force time [s] = 0.0400000
+d1627 1
+a1627 1
+Forcefield force time [s] = 0.0300000
+d1645 1
+a1645 1
+Forcefield force time [s] = 0.0400000
+d1681 1
+a1681 1
+Forcefield force time [s] = 0.0400000
+d1699 1
+a1699 1
+Forcefield force time [s] = 0.0300000
+d1717 1
+a1717 1
+Forcefield force time [s] = 0.0400000
+d1735 1
+a1735 1
+Forcefield force time [s] = 0.0300000
+d1753 1
+a1753 1
+Forcefield force time [s] = 0.0400000
+d1771 1
+a1771 1
+Forcefield force time [s] = 0.0300000
+d1843 1
+a1843 1
+Forcefield force time [s] = 0.0400000
+d1854 1
+a1854 1
+Total run time is 3.58000
+@
+
+
+1.4
+log
+@New input and output for old examples reflects two important changes:
+
+1. Created a full command interface with input commands echoed to output.
+2. Fixed bug in evaluation of kinetic energy so that report error
+	in total energy is now much, much smaller. Before we were
+	evaluating kinetic energy at t-delt/2 and potential energy at t.
+@
+text
+@d5 2
+a6 2
+box dimensions	0.00000	7.80000	7.80000\
+			7.80000	0.00000	7.80000\
+d13 1
+d47 1
+a47 1
+Forcefield force time [s] = 0.0300000
+d79 1
+a79 1
+Forcefield force time [s] = 0.0400000
+d97 1
+a97 1
+Forcefield force time [s] = 0.0300000
+d151 1
+a151 1
+Forcefield force time [s] = 0.0400000
+d169 1
+a169 1
+Forcefield force time [s] = 0.0300000
+d187 1
+a187 1
+Forcefield force time [s] = 0.0400000
+d205 1
+a205 1
+Forcefield force time [s] = 0.0300000
+d223 1
+a223 1
+Forcefield force time [s] = 0.0400000
+d241 1
+a241 1
+Forcefield force time [s] = 0.0300000
+d259 1
+a259 1
+Forcefield force time [s] = 0.0400000
+d277 1
+a277 1
+Forcefield force time [s] = 0.0300000
+d295 1
+a295 1
+Forcefield force time [s] = 0.0400000
+d331 1
+a331 1
+Forcefield force time [s] = 0.0300000
+d349 1
+a349 1
+Forcefield force time [s] = 0.0400000
+d367 1
+a367 1
+Forcefield force time [s] = 0.0300000
+d385 1
+a385 1
+Forcefield force time [s] = 0.0400000
+d403 1
+a403 1
+Forcefield force time [s] = 0.0300000
+d421 1
+a421 1
+Forcefield force time [s] = 0.0400000
+d439 1
+a439 1
+Forcefield force time [s] = 0.0300000
+d457 1
+a457 1
+Forcefield force time [s] = 0.0400000
+d475 1
+a475 1
+Forcefield force time [s] = 0.0300000
+d493 1
+a493 1
+Forcefield force time [s] = 0.0400000
+d637 1
+a637 1
+Forcefield force time [s] = 0.0300000
+d655 1
+a655 1
+Forcefield force time [s] = 0.0400000
+d673 1
+a673 1
+Forcefield force time [s] = 0.0300000
+d691 1
+a691 1
+Forcefield force time [s] = 0.0400000
+d709 1
+a709 1
+Forcefield force time [s] = 0.0300000
+d727 1
+a727 1
+Forcefield force time [s] = 0.0400000
+d745 1
+a745 1
+Forcefield force time [s] = 0.0300000
+d763 1
+a763 1
+Forcefield force time [s] = 0.0400000
+d781 1
+a781 1
+Forcefield force time [s] = 0.0300000
+d799 1
+a799 1
+Forcefield force time [s] = 0.0400000
+d817 1
+a817 1
+Forcefield force time [s] = 0.0300000
+d835 1
+a835 1
+Forcefield force time [s] = 0.0400000
+d871 1
+a871 1
+Forcefield force time [s] = 0.0300000
+d889 1
+a889 1
+Forcefield force time [s] = 0.0400000
+d907 1
+a907 1
+Forcefield force time [s] = 0.0300000
+d925 1
+a925 1
+Forcefield force time [s] = 0.0400000
+d943 1
+a943 1
+Forcefield force time [s] = 0.0300000
+d961 1
+a961 1
+Forcefield force time [s] = 0.0400000
+d979 1
+a979 1
+Forcefield force time [s] = 0.0300000
+d1087 1
+a1087 1
+Forcefield force time [s] = 0.0400000
+d1105 1
+a1105 1
+Forcefield force time [s] = 0.0300000
+d1321 1
+a1321 1
+Forcefield force time [s] = 0.0400000
+d1339 1
+a1339 1
+Forcefield force time [s] = 0.0300000
+d1357 1
+a1357 1
+Forcefield force time [s] = 0.0400000
+d1429 1
+a1429 1
+Forcefield force time [s] = 0.0400000
+d1447 1
+a1447 1
+Forcefield force time [s] = 0.0300000
+d1501 1
+a1501 1
+Forcefield force time [s] = 0.0400000
+d1519 1
+a1519 1
+Forcefield force time [s] = 0.0300000
+d1627 1
+a1627 1
+Forcefield force time [s] = 0.0400000
+d1645 1
+a1645 1
+Forcefield force time [s] = 0.0300000
+d1681 1
+a1681 1
+Forcefield force time [s] = 0.0300000
+d1699 1
+a1699 1
+Forcefield force time [s] = 0.0400000
+d1717 1
+a1717 1
+Forcefield force time [s] = 0.0300000
+d1735 1
+a1735 1
+Forcefield force time [s] = 0.0400000
+d1843 1
+a1843 1
+Forcefield force time [s] = 0.0300000
+@
+
+
+1.3
+log
+@Implemented a new forcefield type: Class Force_External
+This is designed primarily for external force fields with
+simple geometric forms, such as the Lennard-Jones 9-3 wall,
+although it might also be used for a set of fixed atoms.
+
+Currently, the only types implemented are lj93_cut and lj93_cut_shift.
+These work for both arbitrary cut-off neighbor list and also
+within the minimum image convention (although this is not used
+by external force field with only truncated interactions.
+
+Periodic boundary conditions are applied in all directions.
+
+Initialization and output of velocities have also been added.
+@
+text
+@d1 12
+a12 22
+Input Ltwobody:
+Input Lthreebody:
+Input Lexternal:
+Input timestep size [fs]:
+Input number of timesteps:
+Input unit cell lattice vector a [A]:
+Input unit cell lattice vector b [A]:
+Input unit cell lattice vector c [A]:
+Input unit cell origin [A]:
+Input velocity initialization temperature [K]
+Input velocity initialization seed [-]
+Ltwobody = false
+Lthreebody = true
+Lexternal = true
+Timestep size [fs] = 0.0100000
+Number of timesteps = 100
+Lattice vector a [A] = 0.00000 7.80000 7.80000 
+Lattice vector b [A] = 7.80000 0.00000 7.80000 
+Lattice vector c [A] = 7.80000 7.80000 0.00000 
+Unit cell origin [A] = 0.00000 0.00000 0.00000 
+Velocity initialization temperature [K] = 0.00000
+Velocity initialization seed [-] = 256
+a24 20
+-------------------------------------------
+id1 = A
+id2 = A
+id3 = A
+forcefieldname = sw_cut
+eps = 209.200
+sigma = 2.09510
+littlea = 1.80000
+lambda = 21.0000
+gamma = 1.20000
+costheta = -0.333333
+biga = 7.04956
+bigb = 0.602225
+powerp = 4.00000
+powerq = 0.00000
+itype = 0
+jtype = 0
+ktype = 0
+
+0	0	10	209.200	2.09510	1.80000	21.0000	1.20000	-0.333333	7.04956	0.602225	4.00000	0.00000		
+a35 1
+Lneighbor threebody = 0
+d38 1
+a38 2
+Number of threebody force types = 1
+Number of threebody force pairs = 1431
+d42 6
+a47 3
+Threebody energy [kJ/mol] = -21716.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+d56 8
+a63 5
+Threebody energy [kJ/mol] = -21716.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.0004700477558
+Kinetic Energy [kJ/mol/particle] = 5.862298357e-06
+d65 2
+a66 2
+Total Energy [kJ/mol/particle] = -402.1533687
+Change in Kinetic Energy [kJ/mol/particle] = 5.86230e-06
+d68 2
+a69 2
+Change in Total Energy [kJ/mol/particle] = -1.75869e-05
+Error in Total Energy [%] = -300.000
+d74 8
+a81 5
+Threebody energy [kJ/mol] = -21716.3
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 0.004230417641
+Kinetic Energy [kJ/mol/particle] = 5.276053354e-05
+d83 2
+a84 2
+Total Energy [kJ/mol/particle] = -402.1533921
+Change in Kinetic Energy [kJ/mol/particle] = 5.27605e-05
+d86 2
+a87 2
+Change in Total Energy [kJ/mol/particle] = -4.10357e-05
+Error in Total Energy [%] = -77.7774
+d92 8
+a99 5
+Threebody energy [kJ/mol] = -21716.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.01175109255
+Kinetic Energy [kJ/mol/particle] = 0.0001465561950
+d101 2
+a102 2
+Total Energy [kJ/mol/particle] = -402.1534156
+Change in Kinetic Energy [kJ/mol/particle] = 0.000146556
+d104 2
+a105 2
+Change in Total Energy [kJ/mol/particle] = -6.44839e-05
+Error in Total Energy [%] = -43.9994
+d110 8
+a117 5
+Threebody energy [kJ/mol] = -21716.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.02303194277
+Kinetic Energy [kJ/mol/particle] = 0.0002872476650
+d119 2
+a120 2
+Total Energy [kJ/mol/particle] = -402.1534390
+Change in Kinetic Energy [kJ/mol/particle] = 0.000287248
+d122 2
+a123 2
+Change in Total Energy [kJ/mol/particle] = -8.79309e-05
+Error in Total Energy [%] = -30.6115
+d128 8
+a135 5
+Threebody energy [kJ/mol] = -21716.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.03807277373
+Kinetic Energy [kJ/mol/particle] = 0.0004748325167
+d137 2
+a138 2
+Total Energy [kJ/mol/particle] = -402.1534625
+Change in Kinetic Energy [kJ/mol/particle] = 0.000474833
+d140 2
+a141 2
+Change in Total Energy [kJ/mol/particle] = -0.000111376
+Error in Total Energy [%] = -23.4559
+d146 8
+a153 5
+Threebody energy [kJ/mol] = -21716.3
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 0.05687332600
+Kinetic Energy [kJ/mol/particle] = 0.0007093075149
+d155 2
+a156 2
+Total Energy [kJ/mol/particle] = -402.1534859
+Change in Kinetic Energy [kJ/mol/particle] = 0.000709308
+d158 2
+a159 2
+Change in Total Energy [kJ/mol/particle] = -0.000134820
+Error in Total Energy [%] = -19.0073
+d164 8
+a171 5
+Threebody energy [kJ/mol] = -21716.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.07943327530
+Kinetic Energy [kJ/mol/particle] = 0.0009906686151
+d173 2
+a174 2
+Total Energy [kJ/mol/particle] = -402.1535093
+Change in Kinetic Energy [kJ/mol/particle] = 0.000990669
+d176 2
+a177 2
+Change in Total Energy [kJ/mol/particle] = -0.000158261
+Error in Total Energy [%] = -15.9752
+d182 8
+a189 5
+Threebody energy [kJ/mol] = -21716.4
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.1057522325
+Kinetic Energy [kJ/mol/particle] = 0.001318910964
+d191 2
+a192 2
+Total Energy [kJ/mol/particle] = -402.1535328
+Change in Kinetic Energy [kJ/mol/particle] = 0.00131891
+d194 2
+a195 2
+Change in Total Energy [kJ/mol/particle] = -0.000181700
+Error in Total Energy [%] = -13.7765
+d200 8
+a207 5
+Threebody energy [kJ/mol] = -21716.4
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.1358297437
+Kinetic Energy [kJ/mol/particle] = 0.001694028901
+d209 2
+a210 2
+Total Energy [kJ/mol/particle] = -402.1535562
+Change in Kinetic Energy [kJ/mol/particle] = 0.00169403
+d212 2
+a213 2
+Change in Total Energy [kJ/mol/particle] = -0.000205135
+Error in Total Energy [%] = -12.1093
+d218 8
+a225 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21716.4
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.1696652901
+Kinetic Energy [kJ/mol/particle] = 0.002116015956
+d227 2
+a228 2
+Total Energy [kJ/mol/particle] = -402.1535796
+Change in Kinetic Energy [kJ/mol/particle] = 0.00211602
+d230 2
+a231 2
+Change in Total Energy [kJ/mol/particle] = -0.000228567
+Error in Total Energy [%] = -10.8018
+d236 8
+a243 5
+Threebody energy [kJ/mol] = -21716.4
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.2072582881
+Kinetic Energy [kJ/mol/particle] = 0.002584864849
+d245 2
+a246 2
+Total Energy [kJ/mol/particle] = -402.1536031
+Change in Kinetic Energy [kJ/mol/particle] = 0.00258486
+d248 2
+a249 2
+Change in Total Energy [kJ/mol/particle] = -0.000251995
+Error in Total Energy [%] = -9.74887
+d254 8
+a261 5
+Threebody energy [kJ/mol] = -21716.5
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 0.2486080892
+Kinetic Energy [kJ/mol/particle] = 0.003100567495
+d263 2
+a264 2
+Total Energy [kJ/mol/particle] = -402.1536265
+Change in Kinetic Energy [kJ/mol/particle] = 0.00310057
+d266 2
+a267 2
+Change in Total Energy [kJ/mol/particle] = -0.000275419
+Error in Total Energy [%] = -8.88285
+d272 8
+a279 5
+Threebody energy [kJ/mol] = -21716.5
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.2937139803
+Kinetic Energy [kJ/mol/particle] = 0.003663114998
+d281 2
+a282 2
+Total Energy [kJ/mol/particle] = -402.1536499
+Change in Kinetic Energy [kJ/mol/particle] = 0.00366311
+d284 2
+a285 2
+Change in Total Energy [kJ/mol/particle] = -0.000298838
+Error in Total Energy [%] = -8.15802
+d290 8
+a297 5
+Threebody energy [kJ/mol] = -21716.5
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.3425751834
+Kinetic Energy [kJ/mol/particle] = 0.004272497655
+d299 2
+a300 2
+Total Energy [kJ/mol/particle] = -402.1536733
+Change in Kinetic Energy [kJ/mol/particle] = 0.00427250
+d302 2
+a303 2
+Change in Total Energy [kJ/mol/particle] = -0.000322251
+Error in Total Energy [%] = -7.54246
+d308 8
+a315 5
+Threebody energy [kJ/mol] = -21716.6
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.3951908556
+Kinetic Energy [kJ/mol/particle] = 0.004928704956
+d317 2
+a318 2
+Total Energy [kJ/mol/particle] = -402.1536967
+Change in Kinetic Energy [kJ/mol/particle] = 0.00492870
+d320 2
+a321 2
+Change in Total Energy [kJ/mol/particle] = -0.000345659
+Error in Total Energy [%] = -7.01319
+d326 8
+a333 5
+Threebody energy [kJ/mol] = -21716.6
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 0.4515600896
+Kinetic Energy [kJ/mol/particle] = 0.005631725582
+d335 2
+a336 2
+Total Energy [kJ/mol/particle] = -402.1537201
+Change in Kinetic Energy [kJ/mol/particle] = 0.00563173
+d338 2
+a339 2
+Change in Total Energy [kJ/mol/particle] = -0.000369062
+Error in Total Energy [%] = -6.55326
+d344 8
+a351 5
+Threebody energy [kJ/mol] = -21716.6
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.5116819129
+Kinetic Energy [kJ/mol/particle] = 0.006381547407
+d353 2
+a354 2
+Total Energy [kJ/mol/particle] = -402.1537435
+Change in Kinetic Energy [kJ/mol/particle] = 0.00638155
+d356 2
+a357 2
+Change in Total Energy [kJ/mol/particle] = -0.000392457
+Error in Total Energy [%] = -6.14988
+d362 8
+a369 5
+Threebody energy [kJ/mol] = -21716.7
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.5755552887
+Kinetic Energy [kJ/mol/particle] = 0.007178157498
+d371 2
+a372 2
+Total Energy [kJ/mol/particle] = -402.1537669
+Change in Kinetic Energy [kJ/mol/particle] = 0.00717816
+d374 2
+a375 2
+Change in Total Energy [kJ/mol/particle] = -0.000415846
+Error in Total Energy [%] = -5.79322
+d380 8
+a387 5
+Threebody energy [kJ/mol] = -21716.7
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.6431791151
+Kinetic Energy [kJ/mol/particle] = 0.008021542116
+d389 2
+a390 2
+Total Energy [kJ/mol/particle] = -402.1537903
+Change in Kinetic Energy [kJ/mol/particle] = 0.00802154
+d392 2
+a393 2
+Change in Total Energy [kJ/mol/particle] = -0.000439228
+Error in Total Energy [%] = -5.47561
+d398 8
+a405 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21716.8
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.7145522259
+Kinetic Energy [kJ/mol/particle] = 0.008911686712
+d407 2
+a408 2
+Total Energy [kJ/mol/particle] = -402.1538137
+Change in Kinetic Energy [kJ/mol/particle] = 0.00891169
+d410 2
+a411 2
+Change in Total Energy [kJ/mol/particle] = -0.000462603
+Error in Total Energy [%] = -5.19096
+d416 8
+a423 5
+Threebody energy [kJ/mol] = -21716.8
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.7896733899
+Kinetic Energy [kJ/mol/particle] = 0.009848575934
+d425 2
+a426 2
+Total Energy [kJ/mol/particle] = -402.1538370
+Change in Kinetic Energy [kJ/mol/particle] = 0.00984858
+d428 2
+a429 2
+Change in Total Energy [kJ/mol/particle] = -0.000485969
+Error in Total Energy [%] = -4.93441
+d434 8
+a441 5
+Threebody energy [kJ/mol] = -21716.9
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 0.8685413114
+Kinetic Energy [kJ/mol/particle] = 0.01083219362
+d443 2
+a444 2
+Total Energy [kJ/mol/particle] = -402.1538604
+Change in Kinetic Energy [kJ/mol/particle] = 0.0108322
+d446 2
+a447 2
+Change in Total Energy [kJ/mol/particle] = -0.000509327
+Error in Total Energy [%] = -4.70197
+d452 8
+a459 5
+Threebody energy [kJ/mol] = -21717.0
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 0.9511546300
+Kinetic Energy [kJ/mol/particle] = 0.01186252281
+d461 2
+a462 2
+Total Energy [kJ/mol/particle] = -402.1538838
+Change in Kinetic Energy [kJ/mol/particle] = 0.0118625
+d464 2
+a465 2
+Change in Total Energy [kJ/mol/particle] = -0.000532676
+Error in Total Energy [%] = -4.49041
+d470 8
+a477 5
+Threebody energy [kJ/mol] = -21717.0
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 1.037511921
+Kinetic Energy [kJ/mol/particle] = 0.01293954572
+d479 2
+a480 2
+Total Energy [kJ/mol/particle] = -402.1539071
+Change in Kinetic Energy [kJ/mol/particle] = 0.0129395
+d482 2
+a483 2
+Change in Total Energy [kJ/mol/particle] = -0.000556016
+Error in Total Energy [%] = -4.29703
+d488 8
+a495 5
+Threebody energy [kJ/mol] = -21717.1
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 1.127611694
+Kinetic Energy [kJ/mol/particle] = 0.01406324379
+d497 2
+a498 2
+Total Energy [kJ/mol/particle] = -402.1539304
+Change in Kinetic Energy [kJ/mol/particle] = 0.0140632
+d500 2
+a501 2
+Change in Total Energy [kJ/mol/particle] = -0.000579346
+Error in Total Energy [%] = -4.11958
+d506 8
+a513 5
+Threebody energy [kJ/mol] = -21717.1
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 1.221452397
+Kinetic Energy [kJ/mol/particle] = 0.01523359763
+d515 2
+a516 2
+Total Energy [kJ/mol/particle] = -402.1539537
+Change in Kinetic Energy [kJ/mol/particle] = 0.0152336
+d518 2
+a519 2
+Change in Total Energy [kJ/mol/particle] = -0.000602667
+Error in Total Energy [%] = -3.95617
+d524 8
+a531 5
+Threebody energy [kJ/mol] = -21717.2
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 1.319032409
+Kinetic Energy [kJ/mol/particle] = 0.01645058704
+d533 2
+a534 2
+Total Energy [kJ/mol/particle] = -402.1539771
+Change in Kinetic Energy [kJ/mol/particle] = 0.0164506
+d536 2
+a537 2
+Change in Total Energy [kJ/mol/particle] = -0.000625977
+Error in Total Energy [%] = -3.80519
+d542 8
+a549 5
+Threebody energy [kJ/mol] = -21717.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 1.420350048
+Kinetic Energy [kJ/mol/particle] = 0.01771419105
+d551 2
+a552 2
+Total Energy [kJ/mol/particle] = -402.1540004
+Change in Kinetic Energy [kJ/mol/particle] = 0.0177142
+d554 2
+a555 2
+Change in Total Energy [kJ/mol/particle] = -0.000649276
+Error in Total Energy [%] = -3.66529
+d560 8
+a567 5
+Threebody energy [kJ/mol] = -21717.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 1.525403566
+Kinetic Energy [kJ/mol/particle] = 0.01902438785
+d569 2
+a570 2
+Total Energy [kJ/mol/particle] = -402.1540236
+Change in Kinetic Energy [kJ/mol/particle] = 0.0190244
+d572 2
+a573 2
+Change in Total Energy [kJ/mol/particle] = -0.000672564
+Error in Total Energy [%] = -3.53527
+d578 8
+a585 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21717.4
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 1.634191151
+Kinetic Energy [kJ/mol/particle] = 0.02038115485
+d587 2
+a588 2
+Total Energy [kJ/mol/particle] = -402.1540469
+Change in Kinetic Energy [kJ/mol/particle] = 0.0203812
+d590 2
+a591 2
+Change in Total Energy [kJ/mol/particle] = -0.000695840
+Error in Total Energy [%] = -3.41413
+d596 8
+a603 5
+Threebody energy [kJ/mol] = -21717.5
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 1.746710927
+Kinetic Energy [kJ/mol/particle] = 0.02178446865
+d605 2
+a606 2
+Total Energy [kJ/mol/particle] = -402.1540702
+Change in Kinetic Energy [kJ/mol/particle] = 0.0217845
+d608 2
+a609 2
+Change in Total Energy [kJ/mol/particle] = -0.000719104
+Error in Total Energy [%] = -3.30100
+d614 8
+a621 5
+Threebody energy [kJ/mol] = -21717.6
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 1.862960953
+Kinetic Energy [kJ/mol/particle] = 0.02323430503
+d623 2
+a624 2
+Total Energy [kJ/mol/particle] = -402.1540934
+Change in Kinetic Energy [kJ/mol/particle] = 0.0232343
+d626 2
+a627 2
+Change in Total Energy [kJ/mol/particle] = -0.000742356
+Error in Total Energy [%] = -3.19509
+d632 8
+a639 5
+Threebody energy [kJ/mol] = -21717.7
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 1.982939224
+Kinetic Energy [kJ/mol/particle] = 0.02473063899
+d641 2
+a642 2
+Total Energy [kJ/mol/particle] = -402.1541167
+Change in Kinetic Energy [kJ/mol/particle] = 0.0247306
+d644 2
+a645 2
+Change in Total Energy [kJ/mol/particle] = -0.000765596
+Error in Total Energy [%] = -3.09574
+d650 8
+a657 5
+Threebody energy [kJ/mol] = -21717.7
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 2.106643670
+Kinetic Energy [kJ/mol/particle] = 0.02627344472
+d659 2
+a660 2
+Total Energy [kJ/mol/particle] = -402.1541399
+Change in Kinetic Energy [kJ/mol/particle] = 0.0262734
+d662 2
+a663 2
+Change in Total Energy [kJ/mol/particle] = -0.000788822
+Error in Total Energy [%] = -3.00235
+d668 8
+a675 5
+Threebody energy [kJ/mol] = -21717.8
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 2.234072158
+Kinetic Energy [kJ/mol/particle] = 0.02786269561
+d677 2
+a678 2
+Total Energy [kJ/mol/particle] = -402.1541631
+Change in Kinetic Energy [kJ/mol/particle] = 0.0278627
+d680 2
+a681 2
+Change in Total Energy [kJ/mol/particle] = -0.000812034
+Error in Total Energy [%] = -2.91441
+d686 8
+a693 5
+Threebody energy [kJ/mol] = -21717.9
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 2.365222489
+Kinetic Energy [kJ/mol/particle] = 0.02949836424
+d695 2
+a696 2
+Total Energy [kJ/mol/particle] = -402.1541863
+Change in Kinetic Energy [kJ/mol/particle] = 0.0294984
+d698 2
+a699 2
+Change in Total Energy [kJ/mol/particle] = -0.000835232
+Error in Total Energy [%] = -2.83145
+d704 8
+a711 5
+Threebody energy [kJ/mol] = -21718.0
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 2.500092402
+Kinetic Energy [kJ/mol/particle] = 0.03118042241
+d713 2
+a714 2
+Total Energy [kJ/mol/particle] = -402.1542095
+Change in Kinetic Energy [kJ/mol/particle] = 0.0311804
+d716 2
+a717 2
+Change in Total Energy [kJ/mol/particle] = -0.000858416
+Error in Total Energy [%] = -2.75306
+d722 8
+a729 5
+Threebody energy [kJ/mol] = -21718.1
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 2.638679569
+Kinetic Energy [kJ/mol/particle] = 0.03290884109
+d731 2
+a732 2
+Total Energy [kJ/mol/particle] = -402.1542327
+Change in Kinetic Energy [kJ/mol/particle] = 0.0329088
+d734 2
+a735 2
+Change in Total Energy [kJ/mol/particle] = -0.000881585
+Error in Total Energy [%] = -2.67887
+d740 8
+a747 5
+Threebody energy [kJ/mol] = -21718.2
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 2.780981601
+Kinetic Energy [kJ/mol/particle] = 0.03468359048
+d749 2
+a750 2
+Total Energy [kJ/mol/particle] = -402.1542558
+Change in Kinetic Energy [kJ/mol/particle] = 0.0346836
+d752 2
+a753 2
+Change in Total Energy [kJ/mol/particle] = -0.000904739
+Error in Total Energy [%] = -2.60855
+d758 8
+a765 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21718.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 2.926996042
+Kinetic Energy [kJ/mol/particle] = 0.03650463996
+d767 2
+a768 2
+Total Energy [kJ/mol/particle] = -402.1542790
+Change in Kinetic Energy [kJ/mol/particle] = 0.0365046
+d770 2
+a771 2
+Change in Total Energy [kJ/mol/particle] = -0.000927878
+Error in Total Energy [%] = -2.54181
+d776 8
+a783 5
+Threebody energy [kJ/mol] = -21718.4
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 3.076720375
+Kinetic Energy [kJ/mol/particle] = 0.03837195812
+d785 2
+a786 2
+Total Energy [kJ/mol/particle] = -402.1543021
+Change in Kinetic Energy [kJ/mol/particle] = 0.0383720
+d788 2
+a789 2
+Change in Total Energy [kJ/mol/particle] = -0.000951000
+Error in Total Energy [%] = -2.47837
+d794 8
+a801 5
+Threebody energy [kJ/mol] = -21718.5
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 3.230152016
+Kinetic Energy [kJ/mol/particle] = 0.04028551274
+d803 2
+a804 2
+Total Energy [kJ/mol/particle] = -402.1543252
+Change in Kinetic Energy [kJ/mol/particle] = 0.0402855
+d806 2
+a807 2
+Change in Total Energy [kJ/mol/particle] = -0.000974106
+Error in Total Energy [%] = -2.41801
+d812 8
+a819 5
+Threebody energy [kJ/mol] = -21718.6
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 3.387288319
+Kinetic Energy [kJ/mol/particle] = 0.04224527083
+d821 2
+a822 2
+Total Energy [kJ/mol/particle] = -402.1543483
+Change in Kinetic Energy [kJ/mol/particle] = 0.0422453
+d824 2
+a825 2
+Change in Total Energy [kJ/mol/particle] = -0.000997195
+Error in Total Energy [%] = -2.36049
+d830 8
+a837 5
+Threebody energy [kJ/mol] = -21718.7
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 3.548126574
+Kinetic Energy [kJ/mol/particle] = 0.04425119858
+d839 2
+a840 2
+Total Energy [kJ/mol/particle] = -402.1543713
+Change in Kinetic Energy [kJ/mol/particle] = 0.0442512
+d842 2
+a843 2
+Change in Total Energy [kJ/mol/particle] = -0.00102027
+Error in Total Energy [%] = -2.30563
+d848 8
+a855 5
+Threebody energy [kJ/mol] = -21718.8
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 3.712664005
+Kinetic Energy [kJ/mol/particle] = 0.04630326138
+d857 2
+a858 2
+Total Energy [kJ/mol/particle] = -402.1543944
+Change in Kinetic Energy [kJ/mol/particle] = 0.0463033
+d860 2
+a861 2
+Change in Total Energy [kJ/mol/particle] = -0.00104332
+Error in Total Energy [%] = -2.25323
+d866 8
+a873 5
+Threebody energy [kJ/mol] = -21719.0
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 3.880897776
+Kinetic Energy [kJ/mol/particle] = 0.04840142384
+d875 2
+a876 2
+Total Energy [kJ/mol/particle] = -402.1544174
+Change in Kinetic Energy [kJ/mol/particle] = 0.0484014
+d878 2
+a879 2
+Change in Total Energy [kJ/mol/particle] = -0.00106636
+Error in Total Energy [%] = -2.20315
+d884 8
+a891 5
+Threebody energy [kJ/mol] = -21719.1
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 4.052824983
+Kinetic Energy [kJ/mol/particle] = 0.05054564976
+d893 2
+a894 2
+Total Energy [kJ/mol/particle] = -402.1544405
+Change in Kinetic Energy [kJ/mol/particle] = 0.0505456
+d896 2
+a897 2
+Change in Total Energy [kJ/mol/particle] = -0.00108938
+Error in Total Energy [%] = -2.15523
+d902 8
+a909 5
+Threebody energy [kJ/mol] = -21719.2
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 4.228442661
+Kinetic Energy [kJ/mol/particle] = 0.05273590216
+d911 2
+a912 2
+Total Energy [kJ/mol/particle] = -402.1544635
+Change in Kinetic Energy [kJ/mol/particle] = 0.0527359
+d914 2
+a915 2
+Change in Total Energy [kJ/mol/particle] = -0.00111237
+Error in Total Energy [%] = -2.10933
+d920 8
+a927 5
+Threebody energy [kJ/mol] = -21719.3
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 4.407747781
+Kinetic Energy [kJ/mol/particle] = 0.05497214326
+d929 2
+a930 2
+Total Energy [kJ/mol/particle] = -402.1544864
+Change in Kinetic Energy [kJ/mol/particle] = 0.0549721
+d932 2
+a933 2
+Change in Total Energy [kJ/mol/particle] = -0.00113535
+Error in Total Energy [%] = -2.06533
+d938 8
+a945 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21719.4
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 4.590737250
+Kinetic Energy [kJ/mol/particle] = 0.05725433449
+d947 2
+a948 2
+Total Energy [kJ/mol/particle] = -402.1545094
+Change in Kinetic Energy [kJ/mol/particle] = 0.0572543
+d950 2
+a951 2
+Change in Total Energy [kJ/mol/particle] = -0.00115831
+Error in Total Energy [%] = -2.02310
+d956 8
+a963 5
+Threebody energy [kJ/mol] = -21719.6
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 4.777407911
+Kinetic Energy [kJ/mol/particle] = 0.05958243646
+d965 2
+a966 2
+Total Energy [kJ/mol/particle] = -402.1545323
+Change in Kinetic Energy [kJ/mol/particle] = 0.0595824
+d968 2
+a969 2
+Change in Total Energy [kJ/mol/particle] = -0.00118126
+Error in Total Energy [%] = -1.98256
+d974 8
+a981 5
+Threebody energy [kJ/mol] = -21719.7
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 4.967756544
+Kinetic Energy [kJ/mol/particle] = 0.06195640904
+d983 2
+a984 2
+Total Energy [kJ/mol/particle] = -402.1545553
+Change in Kinetic Energy [kJ/mol/particle] = 0.0619564
+d986 2
+a987 2
+Change in Total Energy [kJ/mol/particle] = -0.00120418
+Error in Total Energy [%] = -1.94358
+d992 8
+a999 5
+Threebody energy [kJ/mol] = -21719.8
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 5.161779866
+Kinetic Energy [kJ/mol/particle] = 0.06437621125
+d1001 2
+a1002 2
+Total Energy [kJ/mol/particle] = -402.1545782
+Change in Kinetic Energy [kJ/mol/particle] = 0.0643762
+d1004 2
+a1005 2
+Change in Total Energy [kJ/mol/particle] = -0.00122707
+Error in Total Energy [%] = -1.90610
+d1010 8
+a1017 5
+Threebody energy [kJ/mol] = -21720.0
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 5.359474530
+Kinetic Energy [kJ/mol/particle] = 0.06684180137
+d1019 2
+a1020 2
+Total Energy [kJ/mol/particle] = -402.1546010
+Change in Kinetic Energy [kJ/mol/particle] = 0.0668418
+d1022 2
+a1023 2
+Change in Total Energy [kJ/mol/particle] = -0.00124995
+Error in Total Energy [%] = -1.87002
+d1028 8
+a1035 5
+Threebody energy [kJ/mol] = -21720.1
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 5.560837125
+Kinetic Energy [kJ/mol/particle] = 0.06935313686
+d1037 2
+a1038 2
+Total Energy [kJ/mol/particle] = -402.1546239
+Change in Kinetic Energy [kJ/mol/particle] = 0.0693531
+d1040 2
+a1041 2
+Change in Total Energy [kJ/mol/particle] = -0.00127281
+Error in Total Energy [%] = -1.83526
+d1046 8
+a1053 5
+Threebody energy [kJ/mol] = -21720.2
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 5.765864178
+Kinetic Energy [kJ/mol/particle] = 0.07191017439
+d1055 2
+a1056 2
+Total Energy [kJ/mol/particle] = -402.1546467
+Change in Kinetic Energy [kJ/mol/particle] = 0.0719102
+d1058 2
+a1059 2
+Change in Total Energy [kJ/mol/particle] = -0.00129564
+Error in Total Energy [%] = -1.80175
+d1064 8
+a1071 5
+Threebody energy [kJ/mol] = -21720.4
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 5.974552152
+Kinetic Energy [kJ/mol/particle] = 0.07451286986
+d1073 2
+a1074 2
+Total Energy [kJ/mol/particle] = -402.1546695
+Change in Kinetic Energy [kJ/mol/particle] = 0.0745129
+d1076 2
+a1077 2
+Change in Total Energy [kJ/mol/particle] = -0.00131846
+Error in Total Energy [%] = -1.76943
+d1082 8
+a1089 5
+Threebody energy [kJ/mol] = -21720.5
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 6.186897447
+Kinetic Energy [kJ/mol/particle] = 0.07716117838
+d1091 2
+a1092 2
+Total Energy [kJ/mol/particle] = -402.1546923
+Change in Kinetic Energy [kJ/mol/particle] = 0.0771612
+d1094 2
+a1095 2
+Change in Total Energy [kJ/mol/particle] = -0.00134124
+Error in Total Energy [%] = -1.73824
+d1100 8
+a1107 5
+Threebody energy [kJ/mol] = -21720.7
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 6.402896399
+Kinetic Energy [kJ/mol/particle] = 0.07985505425
+d1109 2
+a1110 2
+Total Energy [kJ/mol/particle] = -402.1547151
+Change in Kinetic Energy [kJ/mol/particle] = 0.0798551
+d1112 2
+a1113 2
+Change in Total Energy [kJ/mol/particle] = -0.00136401
+Error in Total Energy [%] = -1.70811
+d1118 8
+a1125 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21720.8
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 6.622545284
+Kinetic Energy [kJ/mol/particle] = 0.08259445100
+d1127 2
+a1128 2
+Total Energy [kJ/mol/particle] = -402.1547378
+Change in Kinetic Energy [kJ/mol/particle] = 0.0825945
+d1130 2
+a1131 2
+Change in Total Energy [kJ/mol/particle] = -0.00138675
+Error in Total Energy [%] = -1.67899
+d1136 8
+a1143 5
+Threebody energy [kJ/mol] = -21721.0
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 6.845840312
+Kinetic Energy [kJ/mol/particle] = 0.08537932139
+d1145 2
+a1146 2
+Total Energy [kJ/mol/particle] = -402.1547606
+Change in Kinetic Energy [kJ/mol/particle] = 0.0853793
+d1148 2
+a1149 2
+Change in Total Energy [kJ/mol/particle] = -0.00140947
+Error in Total Energy [%] = -1.65084
+d1154 8
+a1161 5
+Threebody energy [kJ/mol] = -21721.1
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 7.072777630
+Kinetic Energy [kJ/mol/particle] = 0.08820961735
+d1163 2
+a1164 2
+Total Energy [kJ/mol/particle] = -402.1547832
+Change in Kinetic Energy [kJ/mol/particle] = 0.0882096
+d1166 2
+a1167 2
+Change in Total Energy [kJ/mol/particle] = -0.00143217
+Error in Total Energy [%] = -1.62360
+d1172 8
+a1179 5
+Threebody energy [kJ/mol] = -21721.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 7.303353325
+Kinetic Energy [kJ/mol/particle] = 0.09108529008
+d1181 2
+a1182 2
+Total Energy [kJ/mol/particle] = -402.1548059
+Change in Kinetic Energy [kJ/mol/particle] = 0.0910853
+d1184 2
+a1185 2
+Change in Total Energy [kJ/mol/particle] = -0.00145484
+Error in Total Energy [%] = -1.59723
+d1190 8
+a1197 5
+Threebody energy [kJ/mol] = -21721.4
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 7.537563417
+Kinetic Energy [kJ/mol/particle] = 0.09400628997
+d1199 2
+a1200 2
+Total Energy [kJ/mol/particle] = -402.1548286
+Change in Kinetic Energy [kJ/mol/particle] = 0.0940063
+d1202 2
+a1203 2
+Change in Total Energy [kJ/mol/particle] = -0.00147748
+Error in Total Energy [%] = -1.57168
+d1208 8
+a1215 5
+Threebody energy [kJ/mol] = -21721.6
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 7.775403867
+Kinetic Energy [kJ/mol/particle] = 0.09697256661
+d1217 2
+a1218 2
+Total Energy [kJ/mol/particle] = -402.1548512
+Change in Kinetic Energy [kJ/mol/particle] = 0.0969726
+d1220 2
+a1221 2
+Change in Total Energy [kJ/mol/particle] = -0.00150010
+Error in Total Energy [%] = -1.54693
+d1226 8
+a1233 5
+Threebody energy [kJ/mol] = -21721.8
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 8.016870572
+Kinetic Energy [kJ/mol/particle] = 0.09998406885
+d1235 2
+a1236 2
+Total Energy [kJ/mol/particle] = -402.1548738
+Change in Kinetic Energy [kJ/mol/particle] = 0.0999841
+d1238 2
+a1239 2
+Change in Total Energy [kJ/mol/particle] = -0.00152269
+Error in Total Energy [%] = -1.52294
+d1244 8
+a1251 5
+Threebody energy [kJ/mol] = -21721.9
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 8.261959366
+Kinetic Energy [kJ/mol/particle] = 0.1030407447
+d1253 2
+a1254 2
+Total Energy [kJ/mol/particle] = -402.1548963
+Change in Kinetic Energy [kJ/mol/particle] = 0.103041
+d1256 2
+a1257 2
+Change in Total Energy [kJ/mol/particle] = -0.00154526
+Error in Total Energy [%] = -1.49966
+d1262 8
+a1269 5
+Threebody energy [kJ/mol] = -21722.1
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 8.510666021
+Kinetic Energy [kJ/mol/particle] = 0.1061425415
+d1271 2
+a1272 2
+Total Energy [kJ/mol/particle] = -402.1549189
+Change in Kinetic Energy [kJ/mol/particle] = 0.106143
+d1274 2
+a1275 2
+Change in Total Energy [kJ/mol/particle] = -0.00156780
+Error in Total Energy [%] = -1.47707
+d1280 8
+a1287 5
+Threebody energy [kJ/mol] = -21722.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 8.762986247
+Kinetic Energy [kJ/mol/particle] = 0.1092894057
+d1289 2
+a1290 2
+Total Energy [kJ/mol/particle] = -402.1549414
+Change in Kinetic Energy [kJ/mol/particle] = 0.109289
+d1292 2
+a1293 2
+Change in Total Energy [kJ/mol/particle] = -0.00159032
+Error in Total Energy [%] = -1.45514
+d1298 8
+a1305 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21722.4
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 9.018915690
+Kinetic Energy [kJ/mol/particle] = 0.1124812830
+d1307 2
+a1308 2
+Total Energy [kJ/mol/particle] = -402.1549639
+Change in Kinetic Energy [kJ/mol/particle] = 0.112481
+d1310 2
+a1311 2
+Change in Total Energy [kJ/mol/particle] = -0.00161280
+Error in Total Energy [%] = -1.43384
+d1316 8
+a1323 5
+Threebody energy [kJ/mol] = -21722.6
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 9.278449935
+Kinetic Energy [kJ/mol/particle] = 0.1157181183
+d1325 2
+a1326 2
+Total Energy [kJ/mol/particle] = -402.1549863
+Change in Kinetic Energy [kJ/mol/particle] = 0.115718
+d1328 2
+a1329 2
+Change in Total Energy [kJ/mol/particle] = -0.00163526
+Error in Total Energy [%] = -1.41314
+d1334 8
+a1341 5
+Threebody energy [kJ/mol] = -21722.8
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 9.541584505
+Kinetic Energy [kJ/mol/particle] = 0.1189998558
+d1343 2
+a1344 2
+Total Energy [kJ/mol/particle] = -402.1550088
+Change in Kinetic Energy [kJ/mol/particle] = 0.119000
+d1346 2
+a1347 2
+Change in Total Energy [kJ/mol/particle] = -0.00165769
+Error in Total Energy [%] = -1.39302
+d1352 8
+a1359 5
+Threebody energy [kJ/mol] = -21723.0
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 9.808314861
+Kinetic Energy [kJ/mol/particle] = 0.1223264389
+d1361 2
+a1362 2
+Total Energy [kJ/mol/particle] = -402.1550312
+Change in Kinetic Energy [kJ/mol/particle] = 0.122326
+d1364 2
+a1365 2
+Change in Total Energy [kJ/mol/particle] = -0.00168009
+Error in Total Energy [%] = -1.37345
+d1370 8
+a1377 5
+Threebody energy [kJ/mol] = -21723.2
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 10.07863640
+Kinetic Energy [kJ/mol/particle] = 0.1256978102
+d1379 2
+a1380 2
+Total Energy [kJ/mol/particle] = -402.1550535
+Change in Kinetic Energy [kJ/mol/particle] = 0.125698
+d1382 2
+a1383 2
+Change in Total Energy [kJ/mol/particle] = -0.00170246
+Error in Total Energy [%] = -1.35441
+d1388 8
+a1395 5
+Threebody energy [kJ/mol] = -21723.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 10.35254446
+Kinetic Energy [kJ/mol/particle] = 0.1291139115
+d1397 2
+a1398 2
+Total Energy [kJ/mol/particle] = -402.1550759
+Change in Kinetic Energy [kJ/mol/particle] = 0.129114
+d1400 2
+a1401 2
+Change in Total Energy [kJ/mol/particle] = -0.00172481
+Error in Total Energy [%] = -1.33588
+d1406 8
+a1413 5
+Threebody energy [kJ/mol] = -21723.5
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 10.63003431
+Kinetic Energy [kJ/mol/particle] = 0.1325746840
+d1415 2
+a1416 2
+Total Energy [kJ/mol/particle] = -402.1550982
+Change in Kinetic Energy [kJ/mol/particle] = 0.132575
+d1418 2
+a1419 2
+Change in Total Energy [kJ/mol/particle] = -0.00174712
+Error in Total Energy [%] = -1.31784
+d1424 8
+a1431 5
+Threebody energy [kJ/mol] = -21723.7
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 10.91110117
+Kinetic Energy [kJ/mol/particle] = 0.1360800678
+d1433 2
+a1434 2
+Total Energy [kJ/mol/particle] = -402.1551205
+Change in Kinetic Energy [kJ/mol/particle] = 0.136080
+d1436 2
+a1437 2
+Change in Total Energy [kJ/mol/particle] = -0.00176940
+Error in Total Energy [%] = -1.30027
+d1442 8
+a1449 5
+Threebody energy [kJ/mol] = -21723.9
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 11.19574019
+Kinetic Energy [kJ/mol/particle] = 0.1396300025
+d1451 2
+a1452 2
+Total Energy [kJ/mol/particle] = -402.1551427
+Change in Kinetic Energy [kJ/mol/particle] = 0.139630
+d1454 2
+a1455 2
+Change in Total Energy [kJ/mol/particle] = -0.00179165
+Error in Total Energy [%] = -1.28314
+d1460 8
+a1467 5
+Threebody energy [kJ/mol] = -21724.1
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 11.48394646
+Kinetic Energy [kJ/mol/particle] = 0.1432244269
+d1469 2
+a1470 2
+Total Energy [kJ/mol/particle] = -402.1551650
+Change in Kinetic Energy [kJ/mol/particle] = 0.143224
+d1472 2
+a1473 2
+Change in Total Energy [kJ/mol/particle] = -0.00181388
+Error in Total Energy [%] = -1.26646
+d1478 8
+a1485 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21724.3
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 11.77571500
+Kinetic Energy [kJ/mol/particle] = 0.1468632789
+d1487 2
+a1488 2
+Total Energy [kJ/mol/particle] = -402.1551871
+Change in Kinetic Energy [kJ/mol/particle] = 0.146863
+d1490 2
+a1491 2
+Change in Total Energy [kJ/mol/particle] = -0.00183607
+Error in Total Energy [%] = -1.25019
+d1496 8
+a1503 5
+Threebody energy [kJ/mol] = -21724.5
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 12.07104078
+Kinetic Energy [kJ/mol/particle] = 0.1505464959
+d1505 2
+a1506 2
+Total Energy [kJ/mol/particle] = -402.1552093
+Change in Kinetic Energy [kJ/mol/particle] = 0.150546
+d1508 2
+a1509 2
+Change in Total Energy [kJ/mol/particle] = -0.00185823
+Error in Total Energy [%] = -1.23432
+d1514 8
+a1521 5
+Threebody energy [kJ/mol] = -21724.7
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 12.36991871
+Kinetic Energy [kJ/mol/particle] = 0.1542740141
+d1523 2
+a1524 2
+Total Energy [kJ/mol/particle] = -402.1552314
+Change in Kinetic Energy [kJ/mol/particle] = 0.154274
+d1526 2
+a1527 2
+Change in Total Energy [kJ/mol/particle] = -0.00188035
+Error in Total Energy [%] = -1.21884
+d1532 8
+a1539 5
+Threebody energy [kJ/mol] = -21724.9
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 12.67234362
+Kinetic Energy [kJ/mol/particle] = 0.1580457693
+d1541 2
+a1542 2
+Total Energy [kJ/mol/particle] = -402.1552535
+Change in Kinetic Energy [kJ/mol/particle] = 0.158046
+d1544 2
+a1545 2
+Change in Total Energy [kJ/mol/particle] = -0.00190245
+Error in Total Energy [%] = -1.20373
+d1550 8
+a1557 5
+Threebody energy [kJ/mol] = -21725.1
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 12.97831031
+Kinetic Energy [kJ/mol/particle] = 0.1618616965
+d1559 2
+a1560 2
+Total Energy [kJ/mol/particle] = -402.1552756
+Change in Kinetic Energy [kJ/mol/particle] = 0.161862
+d1562 2
+a1563 2
+Change in Total Energy [kJ/mol/particle] = -0.00192451
+Error in Total Energy [%] = -1.18898
+d1568 8
+a1575 5
+Threebody energy [kJ/mol] = -21725.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 13.28781349
+Kinetic Energy [kJ/mol/particle] = 0.1657217298
+d1577 2
+a1578 2
+Total Energy [kJ/mol/particle] = -402.1552976
+Change in Kinetic Energy [kJ/mol/particle] = 0.165722
+d1580 2
+a1581 2
+Change in Total Energy [kJ/mol/particle] = -0.00194654
+Error in Total Energy [%] = -1.17458
+d1586 8
+a1593 5
+Threebody energy [kJ/mol] = -21725.5
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 13.60084783
+Kinetic Energy [kJ/mol/particle] = 0.1696258026
+d1595 2
+a1596 2
+Total Energy [kJ/mol/particle] = -402.1553196
+Change in Kinetic Energy [kJ/mol/particle] = 0.169626
+d1598 2
+a1599 2
+Change in Total Energy [kJ/mol/particle] = -0.00196853
+Error in Total Energy [%] = -1.16051
+d1604 8
+a1611 5
+Threebody energy [kJ/mol] = -21725.8
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 13.91740791
+Kinetic Energy [kJ/mol/particle] = 0.1735738476
+d1613 2
+a1614 2
+Total Energy [kJ/mol/particle] = -402.1553416
+Change in Kinetic Energy [kJ/mol/particle] = 0.173574
+d1616 2
+a1617 2
+Change in Total Energy [kJ/mol/particle] = -0.00199049
+Error in Total Energy [%] = -1.14677
+d1622 8
+a1629 5
+Threebody energy [kJ/mol] = -21726.0
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 14.23748828
+Kinetic Energy [kJ/mol/particle] = 0.1775657965
+d1631 2
+a1632 2
+Total Energy [kJ/mol/particle] = -402.1553635
+Change in Kinetic Energy [kJ/mol/particle] = 0.177566
+d1634 2
+a1635 2
+Change in Total Energy [kJ/mol/particle] = -0.00201242
+Error in Total Energy [%] = -1.13334
+d1640 8
+a1647 5
+Threebody energy [kJ/mol] = -21726.2
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 14.56108343
+Kinetic Energy [kJ/mol/particle] = 0.1816015806
+d1649 2
+a1650 2
+Total Energy [kJ/mol/particle] = -402.1553854
+Change in Kinetic Energy [kJ/mol/particle] = 0.181602
+d1652 2
+a1653 2
+Change in Total Energy [kJ/mol/particle] = -0.00203431
+Error in Total Energy [%] = -1.12020
+d1658 8
+a1665 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21726.4
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 14.88818775
+Kinetic Energy [kJ/mol/particle] = 0.1856811303
+d1667 2
+a1668 2
+Total Energy [kJ/mol/particle] = -402.1554072
+Change in Kinetic Energy [kJ/mol/particle] = 0.185681
+d1670 2
+a1671 2
+Change in Total Energy [kJ/mol/particle] = -0.00205616
+Error in Total Energy [%] = -1.10736
+d1676 8
+a1683 5
+Threebody energy [kJ/mol] = -21726.6
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 15.21879561
+Kinetic Energy [kJ/mol/particle] = 0.1898043750
+d1685 2
+a1686 2
+Total Energy [kJ/mol/particle] = -402.1554291
+Change in Kinetic Energy [kJ/mol/particle] = 0.189804
+d1688 2
+a1689 2
+Change in Total Energy [kJ/mol/particle] = -0.00207799
+Error in Total Energy [%] = -1.09480
+d1694 8
+a1701 5
+Threebody energy [kJ/mol] = -21726.9
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 15.55290132
+Kinetic Energy [kJ/mol/particle] = 0.1939712438
+d1703 2
+a1704 2
+Total Energy [kJ/mol/particle] = -402.1554508
+Change in Kinetic Energy [kJ/mol/particle] = 0.193971
+d1706 2
+a1707 2
+Change in Total Energy [kJ/mol/particle] = -0.00209977
+Error in Total Energy [%] = -1.08252
+d1712 8
+a1719 5
+Threebody energy [kJ/mol] = -21727.1
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 15.89049909
+Kinetic Energy [kJ/mol/particle] = 0.1981816646
+d1721 2
+a1722 2
+Total Energy [kJ/mol/particle] = -402.1554726
+Change in Kinetic Energy [kJ/mol/particle] = 0.198182
+d1724 2
+a1725 2
+Change in Total Energy [kJ/mol/particle] = -0.00212152
+Error in Total Energy [%] = -1.07049
+d1730 8
+a1737 5
+Threebody energy [kJ/mol] = -21727.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 16.23158310
+Kinetic Energy [kJ/mol/particle] = 0.2024355648
+d1739 2
+a1740 2
+Total Energy [kJ/mol/particle] = -402.1554943
+Change in Kinetic Energy [kJ/mol/particle] = 0.202436
+d1742 2
+a1743 2
+Change in Total Energy [kJ/mol/particle] = -0.00214323
+Error in Total Energy [%] = -1.05872
+d1748 8
+a1755 5
+Threebody energy [kJ/mol] = -21727.6
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 16.57614748
+Kinetic Energy [kJ/mol/particle] = 0.2067328711
+d1757 2
+a1758 2
+Total Energy [kJ/mol/particle] = -402.1555160
+Change in Kinetic Energy [kJ/mol/particle] = 0.206733
+d1760 2
+a1761 2
+Change in Total Energy [kJ/mol/particle] = -0.00216491
+Error in Total Energy [%] = -1.04720
+d1766 8
+a1773 5
+Threebody energy [kJ/mol] = -21727.8
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 16.92418627
+Kinetic Energy [kJ/mol/particle] = 0.2110735093
+d1775 2
+a1776 2
+Total Energy [kJ/mol/particle] = -402.1555376
+Change in Kinetic Energy [kJ/mol/particle] = 0.211074
+d1778 2
+a1779 2
+Change in Total Energy [kJ/mol/particle] = -0.00218655
+Error in Total Energy [%] = -1.03592
+d1784 8
+a1791 5
+Threebody energy [kJ/mol] = -21728.0
+Threebody force time [s] = 0.0400000
+Threebody force-pair time [s/pair] = 2.79525e-05
+Temperature [K] = 17.27569347
+Kinetic Energy [kJ/mol/particle] = 0.2154574045
+d1793 2
+a1794 2
+Total Energy [kJ/mol/particle] = -402.1555592
+Change in Kinetic Energy [kJ/mol/particle] = 0.215457
+d1796 2
+a1797 2
+Change in Total Energy [kJ/mol/particle] = -0.00220815
+Error in Total Energy [%] = -1.02486
+d1802 8
+a1809 5
+Threebody energy [kJ/mol] = -21728.3
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 17.63066302
+Kinetic Energy [kJ/mol/particle] = 0.2198844810
+d1811 2
+a1812 2
+Total Energy [kJ/mol/particle] = -402.1555808
+Change in Kinetic Energy [kJ/mol/particle] = 0.219884
+d1814 2
+a1815 2
+Change in Total Energy [kJ/mol/particle] = -0.00222971
+Error in Total Energy [%] = -1.01404
+d1820 8
+a1827 5
+Threebody energy [kJ/mol] = -21728.5
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 17.98908878
+Kinetic Energy [kJ/mol/particle] = 0.2243546625
+d1829 2
+a1830 2
+Total Energy [kJ/mol/particle] = -402.1556023
+Change in Kinetic Energy [kJ/mol/particle] = 0.224355
+d1832 2
+a1833 2
+Change in Total Energy [kJ/mol/particle] = -0.00225123
+Error in Total Energy [%] = -1.00343
+d1838 8
+a1845 6
+Lneighbor threebody = 0
+Threebody energy [kJ/mol] = -21728.8
+Threebody force time [s] = 0.0300000
+Threebody force-pair time [s/pair] = 2.09644e-05
+Temperature [K] = 18.35096458
+Kinetic Energy [kJ/mol/particle] = 0.2288678718
+d1847 2
+a1848 2
+Total Energy [kJ/mol/particle] = -402.1556238
+Change in Kinetic Energy [kJ/mol/particle] = 0.228868
+d1850 2
+a1851 2
+Change in Total Energy [kJ/mol/particle] = -0.00227272
+Error in Total Energy [%] = -0.993025
+d1853 1
+a1853 1
+Total run time is 3.27000
+@
+
+
+1.2
+log
+@Added config.out files for the test runs to the repository.
+Shifted the origin on some of the examples.
+@
+text
+@d3 1
+d10 2
+d14 1
+d20 3
+a22 1
+Unit cell origin = 0.00000 0.00000 0.00000 
+d61 1
+d74 3
+a76 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d85 3
+a87 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d100 3
+a102 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d115 3
+a117 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d130 3
+a132 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d145 3
+a147 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d160 3
+a162 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d175 3
+a177 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d190 3
+a192 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d205 3
+a207 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d221 3
+a223 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d236 3
+a238 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d251 3
+a253 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d266 3
+a268 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d281 3
+a283 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d296 3
+a298 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d311 3
+a313 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d326 3
+a328 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d341 3
+a343 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d356 3
+a358 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d372 3
+a374 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d387 3
+a389 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d402 3
+a404 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d417 3
+a419 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d432 3
+a434 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d447 3
+a449 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d462 3
+a464 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d477 3
+a479 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d492 3
+a494 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d507 3
+a509 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d523 3
+a525 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d538 3
+a540 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d553 3
+a555 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d568 3
+a570 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d583 3
+a585 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d598 3
+a600 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d613 3
+a615 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d628 3
+a630 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d643 3
+a645 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d658 3
+a660 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d674 3
+a676 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d689 3
+a691 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d704 3
+a706 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d719 3
+a721 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d734 3
+a736 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d749 3
+a751 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d764 3
+a766 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d779 3
+a781 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d794 3
+a796 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d809 3
+a811 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d825 3
+a827 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d840 3
+a842 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d855 3
+a857 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d870 3
+a872 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d885 3
+a887 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d900 3
+a902 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d915 3
+a917 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d930 3
+a932 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d945 3
+a947 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d960 3
+a962 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d976 3
+a978 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d991 3
+a993 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1006 3
+a1008 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1021 3
+a1023 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1036 3
+a1038 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1051 3
+a1053 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1066 3
+a1068 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1081 3
+a1083 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1096 3
+a1098 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1111 3
+a1113 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1127 3
+a1129 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1142 3
+a1144 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1157 3
+a1159 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1172 3
+a1174 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1187 3
+a1189 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1202 3
+a1204 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1217 3
+a1219 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1232 3
+a1234 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1247 3
+a1249 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1262 3
+a1264 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1278 3
+a1280 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1293 3
+a1295 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1308 3
+a1310 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1323 3
+a1325 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1338 3
+a1340 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1353 3
+a1355 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1368 3
+a1370 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1383 3
+a1385 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1398 3
+a1400 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1413 3
+a1415 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1429 3
+a1431 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1444 3
+a1446 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1459 3
+a1461 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1474 3
+a1476 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1489 3
+a1491 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1504 3
+a1506 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1519 3
+a1521 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1534 3
+a1536 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1549 3
+a1551 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1564 3
+a1566 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1580 3
+a1582 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+@
+
+
+1.1
+log
+@Finally finished implementing Stillinger-Weber forcefield
+Increased number of examples to six. The LJ and SW force
+fields have been tested for energy conservation, and so are
+have high confidence.
+
+The first three are short MD runs using perturbed FCC LJ systems.
+The fourth is an energy evaluation of a dense tetrahedral
+Stillinger-Weber Silicon crystal, which matches a TOWHEE example
+to seven decimal places.
+The fifth and sixth are short MD runs using perturbed tetrahedral
+Stillinger-Weber Silicon.
+@
+text
+@d67 2
+a68 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d91 2
+a92 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d105 2
+a106 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d147 2
+a148 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d175 2
+a176 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d288 2
+a289 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d316 2
+a317 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d330 2
+a331 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d387 2
+a388 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d401 2
+a402 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d457 2
+a458 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d471 2
+a472 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d528 2
+a529 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d542 2
+a543 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d641 2
+a642 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d669 2
+a670 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d697 2
+a698 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d753 2
+a754 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d768 2
+a769 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d810 2
+a811 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d880 2
+a881 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d894 2
+a895 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d937 2
+a938 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d951 2
+a952 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1078 2
+a1079 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1092 2
+a1093 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1134 2
+a1135 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1162 2
+a1163 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1205 2
+a1206 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1219 2
+a1220 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1261 2
+a1262 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1332 2
+a1333 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1360 2
+a1361 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1374 2
+a1375 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1430 2
+a1431 2
+Threebody force time is 0.0400000
+Threebody force-pair time is 2.79525e-05
+d1444 2
+a1445 2
+Threebody force time is 0.0300000
+Threebody force-pair time is 2.09644e-05
+d1484 1
+a1484 1
+Total run time is 3.24000
+@
+

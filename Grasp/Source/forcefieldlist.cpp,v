@@ -1,0 +1,4851 @@
+head	4.17;
+access;
+symbols
+	ReverseComm_branch:4.7.0.2
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.5
+	REAX-2:3.3.2.3
+	P_MonacoSource:3.3.0.6
+	GraspSource:3.3
+	P_Monaco:3.3.0.4
+	InitialGrasp:3.3
+	REAXFF:3.3.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.26.0.2
+	cjkimme_version_merge_from_trunk_1:2.11.2.2
+	cjkimme_version:2.11.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.17
+date	2007.10.15.20.52.10;	author athomps;	state Exp;
+branches;
+next	4.16;
+
+4.16
+date	2007.09.09.20.58.36;	author athomps;	state Exp;
+branches;
+next	4.15;
+
+4.15
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.08.24.17.17.49;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.04.02.19.30.02;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.01.16.21.56.22;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.08.26.02.04.29;	author athomps;	state Exp;
+branches
+	4.7.2.1;
+next	4.6;
+
+4.6
+date	2006.06.29.14.27.21;	author foiles;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.6;
+
+3.6
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.02.18.16.46.40;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2004.12.16.21.07.08;	author athomps;	state Exp;
+branches
+	3.3.2.1
+	3.3.6.1;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.28;
+
+2.28
+date	2004.09.22.17.14.40;	author athomps;	state Exp;
+branches;
+next	2.27;
+
+2.27
+date	2004.09.22.16.57.39;	author athomps;	state Exp;
+branches;
+next	2.26;
+
+2.26
+date	2004.09.21.23.18.28;	author athomps;	state Exp;
+branches
+	2.26.2.1;
+next	2.25;
+
+2.25
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.24;
+
+2.24
+date	2004.08.02.21.10.26;	author athomps;	state Exp;
+branches;
+next	2.23;
+
+2.23
+date	2004.07.30.20.18.47;	author athomps;	state Exp;
+branches;
+next	2.22;
+
+2.22
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.07.22.23.56.26;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.07.22.23.15.01;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.07.21.17.46.50;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.07.19.17.05.38;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.03.02.17.49.47;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.11.2.1;
+next	2.10;
+
+2.10
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.31.20.20.43;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+2.11.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.11.2.2;
+
+2.11.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	2.11.2.3;
+
+2.11.2.3
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+2.26.2.1
+date	2004.09.22.20.47.54;	author athomps;	state Exp;
+branches;
+next	;
+
+3.3.2.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	3.3.2.2;
+
+3.3.2.2
+date	2005.01.16.21.56.05;	author athomps;	state Exp;
+branches;
+next	3.3.2.3;
+
+3.3.2.3
+date	2005.03.30.23.32.07;	author athomps;	state Exp;
+branches;
+next	;
+
+3.3.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.3.6.2;
+
+3.3.6.2
+date	2005.02.23.19.34.30;	author saubry;	state Exp;
+branches;
+next	3.3.6.3;
+
+3.3.6.3
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.3.6.4;
+
+3.3.6.4
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2005.12.09.18.35.27;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.4;
+
+4.3.2.1.2.4
+date	2006.02.03.19.07.28;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.5;
+
+4.3.2.1.2.5
+date	2006.02.06.19.15.25;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.6;
+
+4.3.2.1.2.6
+date	2006.02.08.23.43.02;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.7;
+
+4.3.2.1.2.7
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.16.22.23.41;	author pscrozi;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.16.22.48.56;	author athomps;	state Exp;
+branches;
+next	4.4.2.3;
+
+4.4.2.3
+date	2005.06.20.22.19.05;	author pscrozi;	state Exp;
+branches;
+next	4.4.2.4;
+
+4.4.2.4
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.4.2.5;
+
+4.4.2.5
+date	2005.06.20.22.52.40;	author athomps;	state Exp;
+branches;
+next	4.4.2.6;
+
+4.4.2.6
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.7.2.1
+date	2006.09.06.18.46.13;	author athomps;	state Exp;
+branches;
+next	4.7.2.2;
+
+4.7.2.2
+date	2006.09.07.19.49.27;	author athomps;	state Exp;
+branches;
+next	4.7.2.3;
+
+4.7.2.3
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	4.7.2.4;
+
+4.7.2.4
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.17
+log
+@Improved stability of steepest descent minimizer
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <fstream>
+#include <vector>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "forcefield.h"
+#include "neighbor.h"
+#include "force_twobody.h"
+#include "force_threebody.h"
+#include "force_external.h"
+#include "force_eam.h"
+#include "force_ewald.h"
+#include "force_tersoff.h"
+#include "force_pppm.h"
+#include "force_veldependent.h"
+#ifdef USE_REAX
+#include "force_reax.h"
+#endif
+#include "force_chargeequil.h"
+#include "forcefieldlist.h"
+#include "particle.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "input.h"
+#include "comm.h"
+#include "constants.h"
+#include "log.h"
+#include "machine.h"
+
+
+extern Log glog;
+
+ForceFieldList::ForceFieldList() {
+  virial.resize(ForceField::nvirial);
+  // Default values
+  virial_style = particle_sum;
+  Lmidpoint = true;
+  // Dummy defaults
+  reax_iprune = -1;
+  reax_ihb = -1;
+  reax_hbcut = -1.0;
+}
+
+ForceFieldList::~ForceFieldList() {
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    delete forcefield_list[iff];
+  }
+  virial.clear();
+}
+
+void ForceFieldList::Setup(
+    Box* b, ParticleTypeList* t, ParticleList* p,
+    Comm* comm) {
+
+  int node;
+
+  node = comm->get_node();
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ForceFieldList::Setup()" << endl;
+  }
+
+  ForceFieldSetup(b,t,comm);
+}
+
+void ForceFieldList::ComputeForce(
+    const bool& Lenergy, const bool& Lvirial, const bool& Latomvirial, 
+    Box* b, ParticleTypeList* t, ParticleList* p, Comm* comm) {
+  double t1,t2,t3;
+
+  p->ZeroForce();
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    t1 = MPI_Wtime();	
+    ForceField* ff = forcefield_list[iff];
+    ff->nforce++;
+    switch(virial_style) {
+    case none: 
+      ff->ApplyForce(Lenergy,false,Latomvirial,p,b,comm);
+      break;
+    case all_particles:
+      ff->ApplyForce(Lenergy,Lvirial,Latomvirial,p,b,comm);
+      break;
+    case free_particles:
+      ff->ApplyPartialForce(Lenergy,Latomvirial,Lvirial,p,b,comm);
+      break;
+    case particle_sum:
+      ff->ApplyForce(Lenergy,false,Latomvirial,p,b,comm);
+    }
+
+//     //    alternate force routine for performance comparison
+//     (static_cast<Force_Twobody*>(ff))->
+//       ApplyForceLJCutFast(Lenergy,Lvirial,p,b,comm);
+//     (static_cast<Force_Twobody*>(ff))->
+//       ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+
+    t2 = MPI_Wtime();
+    // Barriers used to improving timing measurements
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t2;
+    }
+    ff->timeforce += t2-t1;
+    glog.timeforce+=t2-t1;
+  }
+
+  ComputeVirial(p,Lvirial,comm);
+
+  t1 = MPI_Wtime();
+  comm->reverse_communicate(p);
+  t2 = MPI_Wtime();
+  glog.timerevcomm+=t2-t1;
+  if (glog.Ltimebarrier) {
+    MPI_Barrier(comm->get_world());
+    t3 = MPI_Wtime();
+    glog.timebarrier+=t3-t2;
+  }
+}
+
+void ForceFieldList::ComputeForceInitial(
+    const bool& Lenergy, const bool& Lvirial, const bool& Latomvirial, 
+    Box* b, ParticleTypeList* t, ParticleList* p, Comm* comm) {
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ForceFieldList::ComputeForceInitial()" << endl;
+  }
+
+  p->ZeroForce();
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    switch(virial_style) {
+    case none: 
+      ff->ApplyForce(Lenergy,false,Latomvirial,p,b,comm);
+      break;
+    case all_particles:
+      ff->ApplyForce(Lenergy,Lvirial,Latomvirial,p,b,comm);
+      break;
+    case free_particles:
+      ff->ApplyPartialForce(Lenergy,Lvirial,Latomvirial,p,b,comm);
+      break;
+    case particle_sum:
+      ff->ApplyForce(Lenergy,false,Latomvirial,p,b,comm);
+    }
+    // alternate force routine for performance comparison
+    //    (static_cast<Force_Twobody*>(ff))->
+      //      ApplyForceLJCutFast(Lenergy,Lvirial,p,b,comm);
+    //      (static_cast<Force_Twobody*>(ff))->
+    //            ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+  }
+
+  ComputeVirial(p,Lvirial,comm);
+
+  comm->reverse_communicate(p);
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exiting ForceFieldList::ComputeForceInitial()" << endl;
+  }
+
+}
+
+void ForceFieldList::ComputeVirial(ParticleList* p, 
+				   const bool& Lvirial, Comm* comm) {
+  Particle* i_pnt;
+  vector <double> virial_tmp(ForceField::nvirial);
+  double x[3],f[3];
+
+  switch(virial_style) {
+  case none: 
+    virial[0] = 0.0;
+    virial[1] = 0.0;
+    virial[2] = 0.0;
+    virial[3] = 0.0;
+    virial[4] = 0.0;
+    virial[5] = 0.0;
+    break;
+  case all_particles:
+    for (int iff = 0;iff<forcefield_list.size();iff++) {
+      ForceField* ff = forcefield_list[iff];
+      ff->get_virial(virial_tmp);
+      if (iff == 0) {
+	virial = virial_tmp;
+      } else {
+	for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+	  virial[ivirial] += virial_tmp[ivirial];
+	}
+      }
+    }
+    break;
+  case free_particles:
+    for (int iff = 0;iff<forcefield_list.size();iff++) {
+      ForceField* ff = forcefield_list[iff];
+      ff->get_virial(virial_tmp);
+      if (iff == 0) {
+	virial = virial_tmp;
+      } else {
+	for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+	  virial[ivirial] += virial_tmp[ivirial];
+	}
+      }
+    }
+    break;
+  case particle_sum:
+    virial[0] = 0.0;
+    virial[1] = 0.0;
+    virial[2] = 0.0;
+    virial[3] = 0.0;
+    virial[4] = 0.0;
+    virial[5] = 0.0;
+    for (int i=0;i<p->get_nparticles()+p->get_nghost_particles();i++) {
+      i_pnt = p->get_particle(i);
+      i_pnt->get_x(x);
+      i_pnt->get_f(f);
+      virial[0] += x[0]*f[0];
+      virial[1] += x[1]*f[1];
+      virial[2] += x[2]*f[2];
+      virial[3] += x[0]*f[1];
+      virial[4] += x[0]*f[2];
+      virial[5] += x[1]*f[2];
+    }
+
+    MPI_Allreduce(&virial[0],&virial_tmp[0],ForceField::nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_tmp);
+    break;
+  }
+
+//   // *** Start Diagnostics for ReaxFF virial ***
+
+//   glog.get_logfile() << "Total Virial = ";
+//   for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+//     glog.get_logfile() << virial[ivirial] << " ";
+//   }
+//   glog.get_logfile() << endl;
+
+//   for (int iff = 0;iff<forcefield_list.size();iff++) {
+//     ForceField* ff = forcefield_list[iff];
+//     if (ff->get_classname() == ForceField::reax) {
+//       glog.get_logfile().setf(ios::scientific,ios::floatfield);
+//       glog.get_logfile() << "ReaxFF Virial Error = ";
+//       ff->get_virial(virial_tmp);
+//       for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+// 	glog.get_logfile() << virial[ivirial]-virial_tmp[ivirial] << " ";
+//       }
+//       glog.get_logfile() << endl;
+//       glog.get_logfile().setf(ios::fixed,ios::floatfield);
+//     }
+//   }
+
+//   // *** End Diagnostics for ReaxFF virial ***
+}
+
+void ForceFieldList::Neighboring(
+                     ParticleList* p, const Box* b, Comm* comm, 
+		     const bool& Lvolume, bool Lreneigh) {
+  ForceField* ff;
+  bool nflag;
+  double t1,t2,t3;
+  int ff_classname;
+
+  nflag = false;
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    if (ff->Lneighbor) {
+      t1 = MPI_Wtime();
+      if(ff->neighbor->NeighboringCheck(Lreneigh)) {
+	nflag = true;
+	ff->neighbor->inc_ntimeneigh();
+      }
+      t2 = MPI_Wtime();
+      if (glog.Ltimebarrier) {
+	MPI_Barrier(comm->get_world());
+	t3 = MPI_Wtime();
+	glog.timebarrier+=t3-t2;
+      }
+      ff->neighbor->inc_timeneigh(t2-t1);
+      glog.timeneigh+=t2-t1;
+    }
+  }
+
+  if (nflag) {
+    t1 = MPI_Wtime();
+    // Barriers used to improve timing measurements
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t1;
+      t1 = t3;
+    }
+    p->ResetPosition(b,false);
+    if (Lvolume) {
+      comm->Setup(b,this);
+    }
+    comm->exchange(b,p);
+    comm->borders(b,p);
+    t2 = MPI_Wtime();
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t2;
+    }
+    glog.timeexchange+= t2-t1;
+  } else {
+    t1 = MPI_Wtime();
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t1;
+      t1 = t3;
+    }
+    comm->communicate(b,p);
+    t2 = MPI_Wtime();
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t2;
+    }
+    glog.timecomm+= t2-t1;
+  }
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    if (ff->Lneighbor) {
+      t1 = MPI_Wtime();
+      ff->Neighboring(p,b,comm);
+      t2 = MPI_Wtime();
+      ff->neighbor->inc_timeneigh(t2-t1);
+      if (glog.Ltimebarrier) {
+	MPI_Barrier(comm->get_world());
+	t3 = MPI_Wtime();
+	glog.timebarrier+=t3-t2;
+      }
+      glog.timeneigh+=t2-t1;
+    }
+  }
+}
+
+void ForceFieldList::NeighboringInitial(
+                     ParticleList* p, const Box* b, Comm* comm) {
+  ForceField* ff;
+  bool nflag;
+  int ff_classname;
+  
+  comm->borders(b,p);
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << ff->get_label() << "::Lneighbor " << ff->Lneighbor << endl;
+    }
+    if (ff->Lneighbor) {
+      ff->Neighboring(p,b,comm);
+    }
+  }
+}
+
+void ForceFieldList::ForceFieldSetup(
+     Box* b, ParticleTypeList* t, Comm* comm) {
+  ForceField* ff;
+  int node;
+  string str_tmp;
+  ForceField::ClassTypes classname;
+  double rcutneighmax;
+  double rcutcomm;
+  ForceField* ff_ewald;
+  double g_ewald;
+  int iff_reax,iff_chargeequil;
+
+  node = comm->get_node();
+
+  ff_ewald = NULL;
+  g_ewald=0.0;
+  Lreax = false;
+  iff_reax = -1;
+  iff_chargeequil = -1;
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    ff->ReadInteractions(comm);
+    if (ff->get_classname() == ForceField::ewald ||
+	ff->get_classname() == ForceField::pppm ) {
+      if (ff_ewald == NULL) {
+	ff_ewald = ff;
+        g_ewald = ff_ewald->get_g_ewald();
+	if (comm->get_Lnodefile()) {
+	  comm->get_nodefile() << "Found ff_ewald" << endl;
+	  comm->get_nodefile() << "g_ewald = " << 
+	    g_ewald << endl;
+	}
+      } else {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "More than one instance of Force_Ewald "
+                    "and/or Force_PPPM not allowed");
+      }
+    }
+
+#ifdef USE_REAX
+    if (ff->get_classname() == ForceField::reax) {
+      if (iff_reax == -1) {
+	iff_reax = iff;
+	Lreax = true;
+
+	if (comm->get_Lnodefile()) {
+	  comm->get_nodefile() << "Found ff_reax" << endl;
+	}
+      } else {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "More than one instance of Force_Reax not allowed");
+      }
+      static_cast<Force_Reax*>(
+	 forcefield_list[iff_reax])->set_Lmidpoint(Lmidpoint);
+      if (reax_iprune >= 0) {
+	static_cast<Force_Reax*>(
+	   forcefield_list[iff_reax])->set_iprune(reax_iprune);
+      }
+      if (reax_ihb >= 0) {
+	static_cast<Force_Reax*>(
+	   forcefield_list[iff_reax])->set_ihb(reax_ihb);
+      }
+      if (reax_hbcut >= 0.0) {
+	static_cast<Force_Reax*>(
+	   forcefield_list[iff_reax])->set_hbcut(reax_hbcut);
+      }
+    }
+#endif
+
+    if (ff->get_classname() == ForceField::chargeequil) {
+      if (iff_chargeequil == -1) {
+	iff_chargeequil = iff;
+
+	if (comm->get_Lnodefile()) {
+	  comm->get_nodefile() << "Found ff_chargeequil" << endl;
+	}
+      } else {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "More than one instance of Force_Chargeequil not allowed");
+      }
+    }
+  }
+
+  // Check consistency of reax and chargeequil force fields
+  if (iff_chargeequil != -1) {
+    if (static_cast<Force_ChargeEquil*>(
+        forcefield_list[iff_chargeequil])->get_Linputreax()) {
+      if (iff_reax == -1) {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "Currently REAXFF force field required for\n "
+		   "charge equilibration with REAX flag in input file");
+      }
+    }
+    static_cast<Force_ChargeEquil*>(
+	  forcefield_list[iff_chargeequil])->set_Lmidpoint(Lmidpoint);
+    if (iff_reax != -1) {
+      if (iff_chargeequil > iff_reax) {
+	ff = forcefield_list[iff_reax];
+	forcefield_list[iff_reax] = forcefield_list[iff_chargeequil];
+	forcefield_list[iff_chargeequil] = ff;
+      }
+    }
+  }
+
+  rcutneighmaxall = 0.0;
+  rcutmaxall = 0.0;
+  rcutcommall = 0.0;
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    glog.get_logfile() << "\n\n\nSetting up force field class " << 
+      ff->get_classname()
+		 << " called " << ff->get_label() << endl;
+    ff->SetupInteractions(b,g_ewald,comm);
+    ff->SetupTypes(t);
+    ff->SetupNeighbor(neighbor_style,neighbor_freq,neighbor_rskin,
+		      rcutneighmax,rcutcomm,b,comm);
+    rcutneighmaxall = max(rcutneighmaxall,rcutneighmax);
+    rcutmaxall = max(rcutmaxall,ff->get_rcutmax());
+    rcutcommall = max(rcutcommall,rcutcomm);
+  }
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    if (ff->get_Lneighbor()) {
+      ff->set_rcutneighmaxall(rcutneighmaxall);
+    }
+  }
+}
+
+double ForceFieldList::get_rcutneighmaxall() const {
+  return rcutneighmaxall;
+}
+
+double ForceFieldList::get_rcutmaxall() const {
+  return rcutmaxall;
+}
+
+double ForceFieldList::get_rcutcommall() const {
+  return rcutcommall;
+}
+
+ForceField* const* ForceFieldList::get_forcefields() const {
+  return &forcefield_list[0];
+}
+
+int ForceFieldList::get_nforcefields() const {
+  return forcefield_list.size();
+}
+
+void ForceFieldList::input_neighbor(const string& buf)
+{
+  string str_tmp;
+
+  std::istringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ForceFieldList::input_neighbor:\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << str_tmp;
+
+  if (str_tmp == "none") {
+    neighbor_style = str_tmp;
+    glog.get_logfile() << endl;
+  } else if (str_tmp == "nsq") {
+    neighbor_style = str_tmp;
+
+    buf_in >> neighbor_freq;
+    buf_in >> neighbor_rskin;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("ForceFieldList::input_neighbor:\n"
+		 "Read error in input file");
+    }
+    glog.get_logfile() << " " << neighbor_freq << " " << neighbor_rskin  << endl;
+
+    if (neighbor_freq <= 0 || neighbor_rskin <= 0.0) {
+      glog.error("ForceFieldList::input_neighbor:\n"
+		 "Invalid input parameter");
+    }
+  } else if (str_tmp == "bin") {
+    neighbor_style = str_tmp;
+
+    buf_in >> neighbor_freq;
+    buf_in >> neighbor_rskin;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("ForceFieldList::input_neighbor:\n"
+		 "Read error in input file");
+    }
+    glog.get_logfile() << " " << neighbor_freq << " " << neighbor_rskin  << endl;
+
+    if (neighbor_freq <= 0 || neighbor_rskin <= 0.0) {
+      glog.error("ForceFieldList::input_neighbor:\n"
+		 "Invalid input parameter");
+    }
+  } else {
+    glog.error("ForceFieldList::input_neighbor:\n"
+               "Unrecognized neighbor style");
+  }
+}
+
+void ForceFieldList::input_forcefield(const string& buf)
+{
+  string ffname,arg_string;
+  ForceField* ff;
+
+  std::istringstream buf_in(buf);
+
+  buf_in >> ffname;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ForceFieldList::input_forcefield:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << ffname; 
+  getline(buf_in,arg_string);
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ForceFieldList::input_forcefield:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << arg_string << endl; 
+  if (ffname == "twobody") {
+    ff = new Force_Twobody(arg_string);
+  } else if (ffname == "threebody") {
+    ff = new Force_Threebody(arg_string);
+  } else if (ffname == "external") {
+    ff = new Force_External(arg_string);
+  } else if (ffname == "eam") {
+    ff = new Force_Eam(arg_string);
+  } else if (ffname == "ewald") {
+    ff = new Force_Ewald(arg_string);
+  } else if (ffname == "tersoff") {
+    ff = new Force_Tersoff(arg_string);
+  } else if (ffname == "pppm") {
+    ff = new Force_PPPM(arg_string);
+#ifdef USE_REAX
+  } else if (ffname == "reax") {
+    ff = new Force_Reax(arg_string);
+#endif
+  } else if (ffname == "chargeequil") {
+    ff = new Force_ChargeEquil(arg_string);
+  } else if (ffname == "veldependent") {
+    ff = new Force_Veldependent(arg_string);
+  } else {
+    glog.error("ForceFieldList::input_forcefield: \n"
+               "Invalid forcefield class type "+ffname);
+  }
+  forcefield_list.push_back(ff);
+}
+
+double ForceFieldList::get_virial() const {
+  double virial_tmp = (virial[0]+virial[1]+virial[2])/3.0;
+  return virial_tmp;
+}
+
+void ForceFieldList::get_virial(vector <double>& virial_out) const {
+  virial_out = virial;
+}
+
+double ForceFieldList::get_epot() const {
+  vector<double> e_ff;
+  double epot = 0.0;
+  int npieces;
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    npieces = ff->get_npieces();
+    e_ff = ff->get_energy();
+    if (npieces == 1) {
+      epot+=e_ff[0];
+    } else {
+      for (int ipiece=0;ipiece<npieces;ipiece++) {
+	epot+=e_ff[ipiece];
+      }
+    }
+  }
+
+  return epot;
+}
+
+void ForceFieldList::input_virial_style(const string& buf)
+{
+  string str_tmp;
+
+  std::istringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ForceFieldList::input_virial style():\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << str_tmp << endl;
+
+  if (str_tmp == "none") {
+    virial_style = none;
+    glog.get_logfile() << endl;
+  } else if (str_tmp == "all_particles") {
+    virial_style = all_particles;
+
+  } else if (str_tmp == "particle_sum") {
+    virial_style = particle_sum;
+
+  } else {
+    glog.error("ForceFieldList::input_virial:\n"
+               "Unrecognized virial style");
+  }
+}
+
+void ForceFieldList::input_reax_iprune(const string& buf)
+{
+  std::istringstream buf_in(buf);
+
+  buf_in >> reax_iprune;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ForceFieldList::input_reax_iprune():\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << reax_iprune << endl;
+
+}
+
+void ForceFieldList::input_reax_ihb(const string& buf)
+{
+  std::istringstream buf_in(buf);
+
+  buf_in >> reax_ihb;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ForceFieldList::input_reax_ihb():\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << reax_ihb << endl;
+
+}
+
+void ForceFieldList::input_reax_hbcut(const string& buf)
+{
+  std::istringstream buf_in(buf);
+
+  buf_in >> reax_hbcut;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ForceFieldList::input_reax_hbcut():\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << reax_hbcut << endl;
+
+}
+
+void ForceFieldList::input_midpoint(const string& buf)
+{
+  int iflag;
+  std::istringstream buf_in(buf);
+
+  buf_in >> iflag;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Comm::input_nodefile:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " "  << iflag << endl;
+  if (iflag) {
+    Lmidpoint = true;
+  } else { 
+    Lmidpoint = false;
+  }
+}
+@
+
+
+4.16
+log
+@Fixed problem with hbonds in ReaxFF implementation. Now matches pre-midpoint results
+@
+text
+@d635 1
+a635 1
+    ff = dynamic_cast<ForceField*> (new Force_Twobody(arg_string));
+d637 1
+a637 1
+    ff = dynamic_cast<ForceField*> (new Force_Threebody(arg_string));
+d639 1
+a639 1
+    ff = dynamic_cast<ForceField*> (new Force_External(arg_string));
+d641 1
+a641 1
+    ff = dynamic_cast<ForceField*> (new Force_Eam(arg_string));
+d643 1
+a643 1
+    ff = dynamic_cast<ForceField*> (new Force_Ewald(arg_string));
+d645 1
+a645 1
+    ff = dynamic_cast<ForceField*> (new Force_Tersoff(arg_string));
+d647 1
+a647 1
+    ff = dynamic_cast<ForceField*> (new Force_PPPM(arg_string));
+d650 1
+a650 1
+    ff = dynamic_cast<ForceField*> (new Force_Reax(arg_string));
+d653 1
+a653 1
+    ff = dynamic_cast<ForceField*> (new Force_ChargeEquil(arg_string));
+d655 1
+a655 1
+    ff = dynamic_cast<ForceField*> (new Force_Veldependent(arg_string));
+@
+
+
+4.15
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@d707 1
+a707 1
+  glog.get_logfile() << " " << str_tmp;
+@
+
+
+4.14
+log
+@Added Makefile settings for development.sandia.gov
+@
+text
+@d86 1
+a86 1
+  bool Lmidpoint = true;
+d112 1
+a112 2
+  ForceFieldSetup(neighbor_style,neighbor_freq,neighbor_rskin,
+		  b,t,comm);
+d124 1
+a144 1
+    ff->nforce++;
+d406 1
+a406 3
+     const string& neighbor_style, 
+     const int& neighbor_freq, const double& neighbor_rskin, Box* b,
+     ParticleTypeList* t, Comm* comm) {
+d420 1
+a420 1
+  g_ewald=NULL;
+@
+
+
+4.13
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d447 1
+d475 1
+@
+
+
+4.12
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d84 1
+d86 5
+d459 14
+d499 2
+d724 67
+@
+
+
+4.11
+log
+@Fixed problem with invalid neighbor list with fix deformation.
+@
+text
+@d409 1
+d490 1
+d499 1
+a499 1
+		      rcutneighmax,b,comm);
+d502 1
+d521 4
+@
+
+
+4.10
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d298 1
+a298 1
+		     const bool& Lvolume) {
+d309 1
+a309 1
+      if(ff->neighbor->NeighboringCheck()) {
+@
+
+
+4.9
+log
+@Added nstep_prev command.
+@
+text
+@d167 5
+d198 5
+@
+
+
+4.8
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@a210 6
+    // No virial available yet for ReaxFF
+    if (Lreax) {
+      glog.error("ForceFieldList::get_virial:\n"
+		 "Virial tensor not available yet for ReaxFF");
+    }
+
+a223 6
+    // No virial available yet for ReaxFF
+    if (Lreax) {
+      glog.error("ForceFieldList::get_virial:\n"
+		 "Virial tensor not available yet for ReaxFF");
+    }
+
+d261 1
+a261 1
+  // *** Start Diagnostics for ReaxFF virial ***
+d283 1
+a283 1
+  // *** End Diagnostics for ReaxFF virial ***
+@
+
+
+4.7
+log
+@Added damping constant commands for Nose-Hoover barostats and thermostats
+@
+text
+@d72 1
+d83 2
+d91 1
+d111 1
+a111 1
+    const bool& Lenergy, const VirialStyles& Lvirial, 
+d119 12
+a130 4
+    if (Lvirial != free_particles) {
+      ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+    } else { 
+      ff->ApplyPartialForce(Lenergy,Lvirial,p,b,comm);
+d132 4
+a135 3
+    // alternate force routine for performance comparison
+    //    (static_cast<Force_Twobody*>(ff))->
+      //      ApplyForceLJCutFast(Lenergy,Lvirial,p,b,comm);
+d137 2
+a138 1
+//     ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+d150 3
+d154 1
+a154 3
+  if (!Lreax) {
+    comm->reverse_communicate(p);
+  }
+d165 1
+a165 1
+    const bool& Lenergy, const VirialStyles& Lvirial, 
+d170 13
+a182 1
+    ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+d189 107
+a295 3
+  if (!Lreax) {
+    comm->reverse_communicate(p);
+  }
+d638 2
+a639 13
+  double virial = 0.0;
+
+  // No virial available yet for ReaxFF
+  if (Lreax) {
+    return double_nan;
+  }
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    virial+=ff->get_virial();
+  }
+
+  return virial;
+d642 2
+a643 22
+void ForceFieldList::get_virial(vector <double>& virial) const {
+  vector <double> virial_tmp;
+  int nvirial;
+
+  // No virial available yet for ReaxFF
+  if (Lreax) {
+    glog.error("ForceFieldList::get_virial:\n"
+	       "Virial tensor not available yet for ReaxFF");
+  }
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    ff->get_virial(virial_tmp);
+    if (iff == 0) {
+      virial = virial_tmp;
+      nvirial = virial.size();
+    } else {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial[ivirial] += virial_tmp[ivirial];
+      }
+    }
+  }
+d666 31
+@
+
+
+4.7.2.1
+log
+@Reverse comm seems to be working for ReaxFF
+@
+text
+@d137 1
+a137 1
+//   if (!Lreax) {
+d139 1
+a139 1
+//   }
+d162 1
+a162 1
+//   if (!Lreax) {
+d164 1
+a164 1
+//   }
+@
+
+
+4.7.2.2
+log
+@Implemented ri*Fi pressure calc
+@
+text
+@a71 1
+#include "particlelist_inline.h"
+a81 2
+  virial.resize(ForceField::nvirial);
+  virial_style = particle_sum;
+a87 1
+  virial.clear();
+d107 1
+a107 1
+    const bool& Lenergy, const bool& Lvirial, 
+d115 1
+a115 5
+    switch(virial_style) {
+    case none: 
+      ff->ApplyForce(Lenergy,false,p,b,comm);
+      break;
+    case all_particles:
+d117 1
+a117 2
+      break;
+    case free_particles:
+a118 3
+      break;
+    case particle_sum:
+      ff->ApplyForce(Lenergy,false,p,b,comm);
+d120 3
+a122 2
+
+//     //    alternate force routine for performance comparison
+d124 1
+a124 4
+//       ApplyForceLJCutFast(Lenergy,Lvirial,p,b,comm);
+//     (static_cast<Force_Twobody*>(ff))->
+//       ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+
+a135 3
+
+  ComputeVirial(p,Lvirial,comm);
+
+d137 3
+a139 1
+  comm->reverse_communicate(p);
+d150 1
+a150 1
+    const bool& Lenergy, const bool& Lvirial, 
+d155 1
+a155 13
+    switch(virial_style) {
+    case none: 
+      ff->ApplyForce(Lenergy,false,p,b,comm);
+      break;
+    case all_particles:
+      ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+      break;
+    case free_particles:
+      ff->ApplyPartialForce(Lenergy,false,p,b,comm);
+      break;
+    case particle_sum:
+      ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+    }
+d162 3
+a164 84
+
+  ComputeVirial(p,Lvirial,comm);
+
+  comm->reverse_communicate(p);
+}
+
+void ForceFieldList::ComputeVirial(ParticleList* p, 
+				   const bool& Lvirial, Comm* comm) {
+  Particle* i_pnt;
+  vector <double> virial_tmp(ForceField::nvirial);
+  double x[3],f[3];
+
+
+  switch(virial_style) {
+  case none: 
+    virial[0] = 0.0;
+    virial[1] = 0.0;
+    virial[2] = 0.0;
+    virial[3] = 0.0;
+    virial[4] = 0.0;
+    virial[5] = 0.0;
+    break;
+  case all_particles:
+    // No virial available yet for ReaxFF
+    if (Lreax) {
+      glog.error("ForceFieldList::get_virial:\n"
+		 "Virial tensor not available yet for ReaxFF");
+    }
+
+    for (int iff = 0;iff<forcefield_list.size();iff++) {
+      ForceField* ff = forcefield_list[iff];
+      ff->get_virial(virial_tmp);
+      if (iff == 0) {
+	virial = virial_tmp;
+      } else {
+	for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+	  virial[ivirial] += virial_tmp[ivirial];
+	}
+      }
+    }
+    break;
+  case free_particles:
+    // No virial available yet for ReaxFF
+    if (Lreax) {
+      glog.error("ForceFieldList::get_virial:\n"
+		 "Virial tensor not available yet for ReaxFF");
+    }
+
+    for (int iff = 0;iff<forcefield_list.size();iff++) {
+      ForceField* ff = forcefield_list[iff];
+      ff->get_virial(virial_tmp);
+      if (iff == 0) {
+	virial = virial_tmp;
+      } else {
+	for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+	  virial[ivirial] += virial_tmp[ivirial];
+	}
+      }
+    }
+    break;
+  case particle_sum:
+    virial[0] = 0.0;
+    virial[1] = 0.0;
+    virial[2] = 0.0;
+    virial[3] = 0.0;
+    virial[4] = 0.0;
+    virial[5] = 0.0;
+    for (int i=0;i<p->get_nparticles()+p->get_nghost_particles();i++) {
+      i_pnt = p->get_particle(i);
+      i_pnt->get_x(x);
+      i_pnt->get_f(f);
+      virial[0] += x[0]*f[0];
+      virial[1] += x[1]*f[1];
+      virial[2] += x[2]*f[2];
+      virial[3] += x[0]*f[1];
+      virial[4] += x[0]*f[2];
+      virial[5] += x[1]*f[2];
+    }
+
+    MPI_Allreduce(&virial[0],&virial_tmp[0],ForceField::nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_tmp);
+    break;
+  }
+d507 13
+a519 2
+  double virial_tmp = (virial[0]+virial[1]+virial[2])/3.0;
+  return virial_tmp;
+d522 22
+a543 2
+void ForceFieldList::get_virial(vector <double>& virial_out) const {
+  virial_out = virial;
+a565 31
+
+void ForceFieldList::input_virial_style(const string& buf)
+{
+  string str_tmp;
+
+  std::istringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ForceFieldList::input_virial style():\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << str_tmp;
+
+  if (str_tmp == "none") {
+    virial_style = none;
+    glog.get_logfile() << endl;
+  } else if (str_tmp == "all_particles") {
+    virial_style = all_particles;
+
+  } else if (str_tmp == "particle_sum") {
+    virial_style = particle_sum;
+
+  } else {
+    glog.error("ForceFieldList::input_virial:\n"
+               "Unrecognized virial style");
+  }
+}
+@
+
+
+4.7.2.3
+log
+@Added atom stress for ReaxFF
+@
+text
+@d201 1
+a272 24
+
+  // *** Start Diagnostics for ReaxFF virial ***
+
+  glog.get_logfile() << "Total Virial = ";
+  for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+    glog.get_logfile() << virial[ivirial] << " ";
+  }
+  glog.get_logfile() << endl;
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    if (ff->get_classname() == ForceField::reax) {
+      glog.get_logfile().setf(ios::scientific,ios::floatfield);
+      glog.get_logfile() << "ReaxFF Virial Error = ";
+      ff->get_virial(virial_tmp);
+      for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+	glog.get_logfile() << virial[ivirial]-virial_tmp[ivirial] << " ";
+      }
+      glog.get_logfile() << endl;
+      glog.get_logfile().setf(ios::fixed,ios::floatfield);
+    }
+  }
+
+  // *** End Diagnostics for ReaxFF virial ***
+@
+
+
+4.7.2.4
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d111 1
+a111 1
+    const bool& Lenergy, const bool& Lvirial, const bool& Latomvirial, 
+d121 1
+a121 1
+      ff->ApplyForce(Lenergy,false,Latomvirial,p,b,comm);
+d124 1
+a124 1
+      ff->ApplyForce(Lenergy,Lvirial,Latomvirial,p,b,comm);
+d127 1
+a127 1
+      ff->ApplyPartialForce(Lenergy,Latomvirial,Lvirial,p,b,comm);
+d130 1
+a130 1
+      ff->ApplyForce(Lenergy,false,Latomvirial,p,b,comm);
+d165 1
+a165 1
+    const bool& Lenergy, const bool& Lvirial, const bool& Latomvirial, 
+d172 1
+a172 1
+      ff->ApplyForce(Lenergy,false,Latomvirial,p,b,comm);
+d175 1
+a175 1
+      ff->ApplyForce(Lenergy,Lvirial,Latomvirial,p,b,comm);
+d178 1
+a178 1
+      ff->ApplyPartialForce(Lenergy,Lvirial,Latomvirial,p,b,comm);
+d181 1
+a181 1
+      ff->ApplyForce(Lenergy,false,Latomvirial,p,b,comm);
+d275 19
+a293 19
+//   glog.get_logfile() << "Total Virial = ";
+//   for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+//     glog.get_logfile() << virial[ivirial] << " ";
+//   }
+//   glog.get_logfile() << endl;
+
+//   for (int iff = 0;iff<forcefield_list.size();iff++) {
+//     ForceField* ff = forcefield_list[iff];
+//     if (ff->get_classname() == ForceField::reax) {
+//       glog.get_logfile().setf(ios::scientific,ios::floatfield);
+//       glog.get_logfile() << "ReaxFF Virial Error = ";
+//       ff->get_virial(virial_tmp);
+//       for (int ivirial=0;ivirial<ForceField::nvirial;ivirial++) {
+// 	glog.get_logfile() << virial[ivirial]-virial_tmp[ivirial] << " ";
+//       }
+//       glog.get_logfile() << endl;
+//       glog.get_logfile().setf(ios::fixed,ios::floatfield);
+//     }
+//   }
+@
+
+
+4.6
+log
+@add the files for the veldependent forcefiled along with modifications
+in other files (vec3.h Makefile forcefield.h forcefieldlist.cpp ) needed to
+support the new forcefield
+@
+text
+@d545 21
+@
+
+
+4.5
+log
+@Added multiple replica feature.
+@
+text
+@d64 1
+d497 2
+@
+
+
+4.4
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d361 1
+a361 1
+    glog.logfile << "\n\n\nSetting up force field class " << 
+d405 1
+a405 1
+    glog.logfile << endl;
+d410 1
+a410 1
+  glog.logfile << " " << str_tmp;
+d414 1
+a414 1
+    glog.logfile << endl;
+d422 1
+a422 1
+      glog.logfile << endl;
+d426 1
+a426 1
+    glog.logfile << " " << neighbor_freq << " " << neighbor_rskin  << endl;
+d439 1
+a439 1
+      glog.logfile << endl;
+d443 1
+a443 1
+    glog.logfile << " " << neighbor_freq << " " << neighbor_rskin  << endl;
+d464 1
+a464 1
+    glog.logfile << endl;
+d468 1
+a468 1
+  glog.logfile << " " << ffname; 
+d471 1
+a471 1
+    glog.logfile << endl;
+d475 1
+a475 1
+  glog.logfile << arg_string << endl; 
+@
+
+
+4.4.2.1
+log
+@latest additions to the PPPM FF
+@
+text
+@d286 1
+a286 1
+//  g_ewald=NULL;
+@
+
+
+4.4.2.2
+log
+@Added rskin to Force_PPPM
+@
+text
+@a356 5
+  // Provide pppm force field with rskin
+  if (ff_ewald->get_classname() == ForceField::pppm) {
+    (static_cast<Force_PPPM*>(ff_ewald))->set_rskin(neighbor_rskin);
+  }
+
+@
+
+
+4.4.2.3
+log
+@latest version of PPPM for Grasp
+@
+text
+@d286 1
+a286 1
+  g_ewald = 0.0;
+@
+
+
+4.4.2.4
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d90 1
+a90 1
+    const Box* b, const ParticleTypeList* t, const ParticleList* p,
+d102 1
+a102 1
+		  p,b,t,comm);
+d272 2
+a273 3
+     const int& neighbor_freq, const double& neighbor_rskin, 
+     const ParticleList* p, const Box* b,
+     const ParticleTypeList* t, Comm* comm) {
+d369 1
+a369 1
+    ff->SetupInteractions(p,b,g_ewald,comm);
+@
+
+
+4.4.2.5
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d282 1
+a282 1
+  int iff_reax,iff_chargeequil,iff_ewald;
+a290 1
+  iff_ewald = -1;
+a297 1
+	iff_ewald = iff;
+a358 1
+  // Also make pppm the first force field
+a360 2
+    forcefield_list[iff_ewald] = forcefield_list[0];
+    forcefield_list[0] = ff_ewald;
+@
+
+
+4.4.2.6
+log
+@Latest PPPM version
+@
+text
+@d90 1
+a90 1
+    const Box* b, const ParticleTypeList* t, ParticleList* p,
+d115 1
+a115 1
+      ff->ApplyForce(Lenergy,Lvirial,p,b,g_ewald,comm);
+d154 1
+a154 1
+    ff->ApplyForce(Lenergy,Lvirial,p,b,g_ewald,comm);
+d273 1
+a273 1
+     ParticleList* p, const Box* b,
+d281 1
+d287 1
+d300 1
+a359 6
+  // Make ewald the first force field
+  if (ff_ewald->get_classname() == ForceField::ewald) {
+    forcefield_list[iff_ewald] = forcefield_list[0];
+    forcefield_list[0] = ff_ewald;
+  }
+  
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d63 1
+d279 2
+a280 1
+  Force_Ewald* ff_ewald;
+d286 1
+d293 2
+a294 1
+    if (ff->get_classname() == ForceField::ewald) {
+d296 2
+a297 2
+	ff_ewald = static_cast<Force_Ewald*>(ff);
+
+d301 1
+a301 1
+	    ff_ewald->get_g_ewald() << endl;
+d305 2
+a306 1
+		   "More than one instance of Force_Ewald not allowed");
+d364 1
+a364 1
+    ff->SetupInteractions(b,ff_ewald,comm);
+d488 2
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a146 32
+// added saubry (01/25/05) 
+void ForceFieldList::ComputeEnergyChange(int* atom, vector <double> boost,
+					 const bool& Lenergy,Box* b, 
+					 ParticleTypeList* t, ParticleList* p, 
+					 Comm* comm) {
+  double t1,t2,t3,t4,t5,t6,t7;
+
+  t3 = MPI_Wtime();
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) 
+    {
+      ForceField* ff = forcefield_list[iff];
+      t1 = MPI_Wtime();	
+      ff->EnergyChange(atom,boost,Lenergy,p,b,comm);
+      t2 = MPI_Wtime();
+      ff->timeforce += t2-t1;
+      ff->nforce++;
+    }
+  t4 = MPI_Wtime();
+  
+  MPI_Barrier(comm->get_world());
+  t5 = MPI_Wtime();
+  comm->reverse_communicate(p);
+  t6 = MPI_Wtime();
+  glog.timeforce+=t4-t3;
+  glog.timerevcomm+=t6-t5;
+  MPI_Barrier(comm->get_world());
+  t7 = MPI_Wtime();
+  glog.timebarrier+=t5-t4;
+  glog.timebarrier+=t7-t6;
+}
+
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d106 1
+a106 1
+    const Box* b, ParticleTypeList* t, ParticleList* p, Comm* comm) {
+d147 3
+a149 2
+void ForceFieldList::ComputeEnergyChange(int* atom, double boost[3],
+					 const bool& Lenergy,const Box* b, 
+@
+
+
+4.3.2.1.2.2
+log
+@Tweaked Monaco branch
+@
+text
+@a223 3
+  // !!!!!!!!!REMOVE THIS !!!!!!!!!!!!
+  nflag = true;
+
+@
+
+
+4.3.2.1.2.3
+log
+@Added EAM energy change calculation
+@
+text
+@a177 69
+double ForceFieldList::ComputeEnergyRemove(const int& i, ParticleList* p, 
+					      const Box* b, Comm* comm) {
+  double t1,t2,t3,t4,t5,t6,t7;
+  double energy;
+
+  t3 = MPI_Wtime();
+
+  energy = 0.0;
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) 
+    {
+      ForceField* ff = forcefield_list[iff];
+      t1 = MPI_Wtime();	
+      energy += ff->EnergyParticleRemove(i,p,b,comm);
+      t2 = MPI_Wtime();
+      ff->timeforce += t2-t1;
+      ff->nforce++;
+    }
+  t4 = MPI_Wtime();
+  
+  MPI_Barrier(comm->get_world());
+  t5 = MPI_Wtime();
+  comm->reverse_communicate(p);
+  t6 = MPI_Wtime();
+  glog.timeforce+=t4-t3;
+  glog.timerevcomm+=t6-t5;
+  MPI_Barrier(comm->get_world());
+  t7 = MPI_Wtime();
+  glog.timebarrier+=t5-t4;
+  glog.timebarrier+=t7-t6;
+
+  return energy;
+}
+
+double ForceFieldList::ComputeEnergyAdd(const int& i, ParticleList* p, 
+					      const Box* b, Comm* comm) {
+  double t1,t2,t3,t4,t5,t6,t7;
+  double energy;
+
+  t3 = MPI_Wtime();
+
+  energy = 0.0;
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) 
+    {
+      ForceField* ff = forcefield_list[iff];
+      t1 = MPI_Wtime();	
+      energy += ff->EnergyParticleAdd(i,p,b,comm);
+      t2 = MPI_Wtime();
+      ff->timeforce += t2-t1;
+      ff->nforce++;
+    }
+  t4 = MPI_Wtime();
+  
+  MPI_Barrier(comm->get_world());
+  t5 = MPI_Wtime();
+  comm->reverse_communicate(p);
+  t6 = MPI_Wtime();
+  glog.timeforce+=t4-t3;
+  glog.timerevcomm+=t6-t5;
+  MPI_Barrier(comm->get_world());
+  t7 = MPI_Wtime();
+  glog.timebarrier+=t5-t4;
+  glog.timebarrier+=t7-t6;
+
+  return energy;
+}
+
+
+d224 3
+a568 21
+
+void ForceFieldList::SaveEnergy() {
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    ff->SaveEnergy();
+  }
+}
+
+void ForceFieldList::ZeroEnergy() {
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    ff->ZeroEnergy();
+  }
+}
+
+void ForceFieldList::RestoreEnergy(Comm* comm) {
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    ff->RestoreEnergy(comm);
+  }
+}
+@
+
+
+4.3.2.1.2.4
+log
+@Added Metropolis acceptance criterion
+@
+text
+@d180 1
+a180 1
+  double t1,t2,t3,t4;
+d198 4
+d203 5
+d214 1
+a214 1
+  double t1,t2,t3,t4;
+d232 4
+d237 5
+@
+
+
+4.3.2.1.2.5
+log
+@Added in bin reallocation in montecarlo.cpp
+@
+text
+@a273 2
+  // !!!!!!! Need to make this argument !!!!!
+  nflag = true;
+@
+
+
+4.3.2.1.2.6
+log
+@Added bin-based energy calc
+@
+text
+@a228 50
+double ForceFieldList::ComputeEnergyRemove(const int& i, const Bin* bp, ParticleList* p, 
+					      const Box* b, Comm* comm) {
+  double t1,t2,t3,t4;
+  double energy;
+
+  t3 = MPI_Wtime();
+
+  energy = 0.0;
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) 
+    {
+      ForceField* ff = forcefield_list[iff];
+      t1 = MPI_Wtime();	
+      energy += ff->EnergyParticleRemove(i,bp,p,b,comm);
+      t2 = MPI_Wtime();
+      ff->timeforce += t2-t1;
+      ff->nforce++;
+    }
+  t4 = MPI_Wtime();
+  
+  glog.timeforce+=t4-t3;
+
+  return energy;
+}
+
+double ForceFieldList::ComputeEnergyAdd(const int& i, const Bin* bp, ParticleList* p, 
+					      const Box* b, Comm* comm) {
+  double t1,t2,t3,t4;
+  double energy;
+
+  t3 = MPI_Wtime();
+
+  energy = 0.0;
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) 
+    {
+      ForceField* ff = forcefield_list[iff];
+      t1 = MPI_Wtime();	
+      energy += ff->EnergyParticleAdd(i,bp,p,b,comm);
+      t2 = MPI_Wtime();
+      ff->timeforce += t2-t1;
+      ff->nforce++;
+    }
+  t4 = MPI_Wtime();
+  
+  glog.timeforce+=t4-t3;
+
+  return energy;
+}
+
+@
+
+
+4.3.2.1.2.7
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d147 31
+d187 9
+a195 8
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    t1 = MPI_Wtime();	
+    energy += ff->EnergyParticleRemove(i,p,b,comm);
+    t2 = MPI_Wtime();
+    ff->timeforce += t2-t1;
+    ff->nforce++;
+  }
+d212 9
+a220 8
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    t1 = MPI_Wtime();	
+    energy += ff->EnergyParticleAdd(i,p,b,comm);
+    t2 = MPI_Wtime();
+    ff->timeforce += t2-t1;
+    ff->nforce++;
+  }
+d238 9
+a246 8
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    t1 = MPI_Wtime();	
+    energy += ff->EnergyParticleRemove(i,bp,p,b,comm);
+    t2 = MPI_Wtime();
+    ff->timeforce += t2-t1;
+    ff->nforce++;
+  }
+d263 9
+a271 8
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    t1 = MPI_Wtime();	
+    energy += ff->EnergyParticleAdd(i,bp,p,b,comm);
+    t2 = MPI_Wtime();
+    ff->timeforce += t2-t1;
+    ff->nforce++;
+  }
+d299 1
+a299 1
+		     const bool& Lvolume, const bool& Lforce) {
+d305 7
+a311 6
+  if (Lforce) {
+    nflag = true;
+    for (int iff = 0;iff<forcefield_list.size();iff++) {
+      ff = forcefield_list[iff];
+      if (ff->Lneighbor) {
+	ff->neighbor->set_nflag(true);
+d314 5
+a318 19
+    }
+  } else {
+    nflag = false;
+    for (int iff = 0;iff<forcefield_list.size();iff++) {
+      ff = forcefield_list[iff];
+      if (ff->Lneighbor) {
+	t1 = MPI_Wtime();
+	if(ff->neighbor->NeighboringCheck()) {
+	  nflag = true;
+	  ff->neighbor->inc_ntimeneigh();
+	}
+	t2 = MPI_Wtime();
+	if (glog.Ltimebarrier) {
+	  MPI_Barrier(comm->get_world());
+	  t3 = MPI_Wtime();
+	  glog.timebarrier+=t3-t2;
+	}
+	ff->neighbor->inc_timeneigh(t2-t1);
+	glog.timeneigh+=t2-t1;
+d320 2
+d324 2
+d525 2
+a526 1
+void ForceFieldList::input_neighbor(const string& buf) {
+d528 1
+a528 1
+  
+d584 2
+a585 1
+void ForceFieldList::input_forcefield(const string& buf) {
+a689 28
+
+void ForceFieldList::SaveParticles(ParticleList* p, const Box* b, Comm* comm) {
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    ff->SaveParticles(p,b,comm);
+  }
+}
+
+void ForceFieldList::RestoreParticles(ParticleList* p, const Box* b, Comm* comm) {
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    ff->RestoreParticles(p,b,comm);
+  }
+}
+
+void ForceFieldList::SaveParticles(const Bin* bp, ParticleList* p, const Box* b, Comm* comm) {
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    ff->SaveParticles(bp,p,b,comm);
+  }
+}
+
+void ForceFieldList::RestoreParticles(const Bin* bp, ParticleList* p, const Box* b, Comm* comm) {
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    ff->RestoreParticles(bp,p,b,comm);
+  }
+}
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d63 4
+d74 3
+d107 1
+a107 1
+  double t1,t2,t3,t4,t5,t6,t7;
+a108 1
+  t3 = MPI_Wtime();
+d111 1
+d113 1
+a113 2
+    t1 = MPI_Wtime();	
+    if (Lvirial != free_particles)
+d115 1
+a115 1
+    else 
+d117 1
+d123 1
+d125 6
+d132 12
+a143 1
+    ff->nforce++;
+a144 44
+  t4 = MPI_Wtime();
+
+  MPI_Barrier(comm->get_world());
+  t5 = MPI_Wtime();
+  comm->reverse_communicate(p);
+  t6 = MPI_Wtime();
+  glog.timeforce+=t4-t3;
+  glog.timerevcomm+=t6-t5;
+  MPI_Barrier(comm->get_world());
+  t7 = MPI_Wtime();
+  glog.timebarrier+=t5-t4;
+  glog.timebarrier+=t7-t6;
+}
+
+// added saubry (01/25/05) 
+void ForceFieldList::ComputeEnergyChange(int* atom, vector <double> boost,
+					 const bool& Lenergy,Box* b, 
+					 ParticleTypeList* t, ParticleList* p, 
+					 Comm* comm) {
+  double t1,t2,t3,t4,t5,t6,t7;
+
+  t3 = MPI_Wtime();
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) 
+    {
+      ForceField* ff = forcefield_list[iff];
+      t1 = MPI_Wtime();	
+      ff->EnergyChange(atom,boost,Lenergy,p,b,comm);
+      t2 = MPI_Wtime();
+      ff->timeforce += t2-t1;
+      ff->nforce++;
+    }
+  t4 = MPI_Wtime();
+  
+  MPI_Barrier(comm->get_world());
+  t5 = MPI_Wtime();
+  comm->reverse_communicate(p);
+  t6 = MPI_Wtime();
+  glog.timeforce+=t4-t3;
+  glog.timerevcomm+=t6-t5;
+  MPI_Barrier(comm->get_world());
+  t7 = MPI_Wtime();
+  glog.timebarrier+=t5-t4;
+  glog.timebarrier+=t7-t6;
+a146 1
+
+d160 3
+a162 1
+  comm->reverse_communicate(p);
+d170 1
+a170 1
+  double t1,t2,t3,t4,t5,t6;
+a172 1
+  t3 = MPI_Wtime();
+d183 5
+d189 1
+a191 2
+  t4 = MPI_Wtime();
+  glog.timeneigh+=t4-t3;
+d194 8
+a205 4
+    // Barriers used to improving timing measurements
+    t5 = MPI_Wtime();
+    MPI_Barrier(comm->get_world());
+    t1 = MPI_Wtime();
+d209 5
+a213 2
+    MPI_Barrier(comm->get_world());
+    t6 = MPI_Wtime();
+a214 1
+    glog.timebarrier+= t1-t5 + t6-t2;
+a215 3
+    // Barriers used to improving timing measurements
+    t5 = MPI_Wtime();
+    MPI_Barrier(comm->get_world());
+d217 6
+d225 5
+a229 2
+    MPI_Barrier(comm->get_world());
+    t6 = MPI_Wtime();
+a230 1
+    glog.timebarrier+= t1-t5 + t6-t2;
+a232 1
+  t3 = MPI_Wtime();
+d240 6
+a247 2
+  t4 = MPI_Wtime();
+  glog.timeneigh+=t4-t3;
+d260 3
+d279 1
+d284 3
+d304 46
+d356 3
+d483 6
+d491 1
+a491 1
+               "Invalid forcefield class type");
+d498 6
+d508 1
+d516 6
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+a46 4
+#ifdef USE_REAX
+#include "force_reax.h"
+#endif
+#include "force_chargeequil.h"
+a53 3
+#include "machine.h"
+
+
+d84 1
+a84 1
+  double t1,t2,t3;
+d86 1
+d89 1
+d91 1
+a91 2
+    ForceField* ff = forcefield_list[iff];
+    if (Lvirial != free_particles) {
+d93 1
+a93 1
+    } else { 
+a94 1
+    }
+a99 1
+    ff->nforce++;
+a100 6
+    // Barriers used to improving timing measurements
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t2;
+    }
+d102 1
+a102 12
+    glog.timeforce+=t2-t1;
+  }
+  t1 = MPI_Wtime();
+  if (!Lreax) {
+    comm->reverse_communicate(p);
+  }
+  t2 = MPI_Wtime();
+  glog.timerevcomm+=t2-t1;
+  if (glog.Ltimebarrier) {
+    MPI_Barrier(comm->get_world());
+    t3 = MPI_Wtime();
+    glog.timebarrier+=t3-t2;
+d104 44
+d150 1
+d164 1
+a164 3
+  if (!Lreax) {
+    comm->reverse_communicate(p);
+  }
+d172 1
+a172 1
+  double t1,t2,t3;
+d175 1
+a185 5
+      if (glog.Ltimebarrier) {
+	MPI_Barrier(comm->get_world());
+	t3 = MPI_Wtime();
+	glog.timebarrier+=t3-t2;
+      }
+a186 1
+      glog.timeneigh+=t2-t1;
+d189 2
+a192 8
+    t1 = MPI_Wtime();
+    // Barriers used to improve timing measurements
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t1;
+      t1 = t3;
+    }
+d197 4
+d204 2
+a205 5
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t2;
+    }
+d207 1
+d209 3
+a212 6
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t1;
+      t1 = t3;
+    }
+d215 2
+a216 5
+    if (glog.Ltimebarrier) {
+      MPI_Barrier(comm->get_world());
+      t3 = MPI_Wtime();
+      glog.timebarrier+=t3-t2;
+    }
+d218 1
+d221 1
+a228 6
+      if (glog.Ltimebarrier) {
+	MPI_Barrier(comm->get_world());
+	t3 = MPI_Wtime();
+	glog.timebarrier+=t3-t2;
+      }
+      glog.timeneigh+=t2-t1;
+d231 2
+a244 3
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << ff->get_label() << "::Lneighbor " << ff->Lneighbor << endl;
+    }
+a260 1
+  int iff_reax,iff_chargeequil;
+a264 3
+  Lreax = false;
+  iff_reax = -1;
+  iff_chargeequil = -1;
+a281 46
+
+    if (ff->get_classname() == ForceField::reax) {
+      if (iff_reax == -1) {
+	iff_reax = iff;
+	Lreax = true;
+
+	if (comm->get_Lnodefile()) {
+	  comm->get_nodefile() << "Found ff_reax" << endl;
+	}
+      } else {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "More than one instance of Force_Reax not allowed");
+      }
+    }
+
+    if (ff->get_classname() == ForceField::chargeequil) {
+      if (iff_chargeequil == -1) {
+	iff_chargeequil = iff;
+
+	if (comm->get_Lnodefile()) {
+	  comm->get_nodefile() << "Found ff_chargeequil" << endl;
+	}
+      } else {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "More than one instance of Force_Chargeequil not allowed");
+      }
+    }
+  }
+
+  // Check consistency of reax and chargeequil force fields
+  if (iff_chargeequil != -1) {
+    if (static_cast<Force_ChargeEquil*>(
+        forcefield_list[iff_chargeequil])->get_Linputreax()) {
+      if (iff_reax == -1) {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "Currently REAXFF force field required for\n "
+		   "charge equilibration with REAX flag in input file");
+      }
+    }
+    if (iff_reax != -1) {
+      if (iff_chargeequil > iff_reax) {
+	ff = forcefield_list[iff_reax];
+	forcefield_list[iff_reax] = forcefield_list[iff_chargeequil];
+	forcefield_list[iff_chargeequil] = ff;
+      }
+    }
+a287 3
+    glog.logfile << "\n\n\nSetting up force field class " << 
+      ff->get_classname()
+		 << " called " << ff->get_label() << endl;
+a411 6
+#ifdef USE_REAX
+  } else if (ffname == "reax") {
+    ff = dynamic_cast<ForceField*> (new Force_Reax(arg_string));
+#endif
+  } else if (ffname == "chargeequil") {
+    ff = dynamic_cast<ForceField*> (new Force_ChargeEquil(arg_string));
+d414 1
+a414 1
+               "Invalid forcefield class type "+ffname);
+a420 6
+
+  // No virial available yet for ReaxFF
+  if (Lreax) {
+    return double_nan;
+  }
+
+a424 1
+
+a431 6
+  // No virial available yet for ReaxFF
+  if (Lreax) {
+    glog.error("ForceFieldList::get_virial:\n"
+	       "Virial tensor not available yet for ReaxFF");
+  }
+
+@
+
+
+3.6
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.5
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d47 4
+d58 3
+d119 3
+a121 1
+  comm->reverse_communicate(p);
+d144 3
+a146 1
+  comm->reverse_communicate(p);
+d244 3
+d263 1
+d268 3
+d288 46
+d467 6
+d482 6
+d492 1
+d500 6
+@
+
+
+3.4
+log
+@Added rcutmaxall to forcefieldlist.cpp
+@
+text
+@d84 1
+a84 1
+  double t1,t2,t3,t4,t5,t6,t7;
+a85 1
+  t3 = MPI_Wtime();
+d88 1
+d90 1
+a90 2
+    t1 = MPI_Wtime();	
+    if (Lvirial != free_particles)
+d92 1
+a92 1
+    else 
+d94 1
+d100 1
+d102 6
+d109 1
+a109 1
+    ff->nforce++;
+d111 1
+a111 4
+  t4 = MPI_Wtime();
+
+  MPI_Barrier(comm->get_world());
+  t5 = MPI_Wtime();
+d113 7
+a119 7
+  t6 = MPI_Wtime();
+  glog.timeforce+=t4-t3;
+  glog.timerevcomm+=t6-t5;
+  MPI_Barrier(comm->get_world());
+  t7 = MPI_Wtime();
+  glog.timebarrier+=t5-t4;
+  glog.timebarrier+=t7-t6;
+d143 1
+a143 1
+  double t1,t2,t3,t4,t5,t6;
+a145 1
+  t3 = MPI_Wtime();
+d156 5
+d162 1
+a164 2
+  t4 = MPI_Wtime();
+  glog.timeneigh+=t4-t3;
+d167 8
+a178 4
+    // Barriers used to improving timing measurements
+    t5 = MPI_Wtime();
+    MPI_Barrier(comm->get_world());
+    t1 = MPI_Wtime();
+d182 5
+a186 2
+    MPI_Barrier(comm->get_world());
+    t6 = MPI_Wtime();
+a187 1
+    glog.timebarrier+= t1-t5 + t6-t2;
+a188 3
+    // Barriers used to improving timing measurements
+    t5 = MPI_Wtime();
+    MPI_Barrier(comm->get_world());
+d190 6
+d198 5
+a202 2
+    MPI_Barrier(comm->get_world());
+    t6 = MPI_Wtime();
+a203 1
+    glog.timebarrier+= t1-t5 + t6-t2;
+a205 1
+  t3 = MPI_Wtime();
+d213 6
+a220 2
+  t4 = MPI_Wtime();
+  glog.timeneigh+=t4-t3;
+d276 3
+d405 1
+a405 1
+               "Invalid forcefield class type");
+@
+
+
+3.3
+log
+@Miscellaneous additions prior to adding Reax
+@
+text
+@d252 1
+d260 1
+d275 4
+@
+
+
+3.3.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@d97 3
+a99 39
+    //      ApplyForceLJCutFast(Lenergy,Lvirial,p,b,comm);
+    //     (static_cast<Force_Twobody*>(ff))->
+    //     ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+    t2 = MPI_Wtime();
+    ff->timeforce += t2-t1;
+    ff->nforce++;
+  }
+  t4 = MPI_Wtime();
+
+  MPI_Barrier(comm->get_world());
+  t5 = MPI_Wtime();
+  comm->reverse_communicate(p);
+  t6 = MPI_Wtime();
+  glog.timeforce+=t4-t3;
+  glog.timerevcomm+=t6-t5;
+  MPI_Barrier(comm->get_world());
+  t7 = MPI_Wtime();
+  glog.timebarrier+=t5-t4;
+  glog.timebarrier+=t7-t6;
+}
+
+// added saubry (01/25/05)  -> energy not force. 
+// energy changed only for an atom/surroundings. 
+//Find surrounding atoms : the one within a distance dist from input atom
+void ForceFieldList::ComputeEnergyChange(int* atom, vector <double> boost,
+    const bool& Lenergy, const VirialStyles& Lvirial, 
+    Box* b, ParticleTypeList* t, ParticleList* p, Comm* comm) {
+  double t1,t2,t3,t4,t5,t6,t7;
+
+  t3 = MPI_Wtime();
+
+  p->ZeroForce();
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    t1 = MPI_Wtime();	
+    if (Lvirial != free_particles)
+      ff->EnergyChange(atom,boost,Lenergy,Lvirial,p,b,comm);
+    //else 
+    //  ff->ApplyPartialForce(Lenergy,Lvirial,p,b,comm);
+@
+
+
+3.3.6.2
+log
+@Corrections to the energy change routines.
+@
+text
+@d118 3
+a120 1
+// added saubry (01/25/05) 
+d134 2
+@
+
+
+3.3.6.3
+log
+@Update changes.
+@
+text
+@d120 2
+a121 3
+					 const bool& Lenergy,Box* b, 
+					 ParticleTypeList* t, ParticleList* p, 
+					 Comm* comm) {
+d126 10
+a135 9
+  for (int iff = 0;iff<forcefield_list.size();iff++) 
+    {
+      ForceField* ff = forcefield_list[iff];
+      t1 = MPI_Wtime();	
+      ff->EnergyChange(atom,boost,Lenergy,p,b,comm);
+      t2 = MPI_Wtime();
+      ff->timeforce += t2-t1;
+      ff->nforce++;
+    }
+d137 1
+a137 1
+  
+@
+
+
+3.3.6.4
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d97 3
+a99 3
+      //      ApplyForceLJCutFast(Lenergy,Lvirial,p,b,comm);
+//     (static_cast<Force_Twobody*>(ff))->
+//     ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+a149 1
+
+a283 1
+  rcutmaxall = 0.0;
+a290 1
+    rcutmaxall = max(rcutmaxall,ff->get_rcutmax());
+a304 4
+double ForceFieldList::get_rcutmaxall() const {
+  return rcutmaxall;
+}
+
+@
+
+
+3.3.2.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@a46 1
+#include "force_reax.h"
+d108 1
+a108 1
+  //  comm->reverse_communicate(p);
+d131 1
+a131 1
+  //  comm->reverse_communicate(p);
+a372 2
+  } else if (ffname == "reax") {
+    ff = dynamic_cast<ForceField*> (new Force_Reax(arg_string));
+@
+
+
+3.3.2.2
+log
+@Separated charge equilibration part of REAXFF into separate force field.
+@
+text
+@a47 1
+#include "force_chargeequil.h"
+a228 1
+  int iff_reax,iff_chargeequil;
+a232 2
+  iff_reax = -1;
+  iff_chargeequil = -1;
+a249 39
+
+    if (ff->get_classname() == ForceField::reax) {
+      if (iff_reax == -1) {
+	iff_reax = iff;
+
+	if (comm->get_Lnodefile()) {
+	  comm->get_nodefile() << "Found ff_reax" << endl;
+	}
+      } else {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "More than one instance of Force_Reax not allowed");
+      }
+    }
+
+    if (ff->get_classname() == ForceField::chargeequil) {
+      if (iff_chargeequil == -1) {
+	iff_chargeequil = iff;
+
+	if (comm->get_Lnodefile()) {
+	  comm->get_nodefile() << "Found ff_chargeequil" << endl;
+	}
+      } else {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "More than one instance of Force_Chargeequil not allowed");
+      }
+    }
+  }
+
+  // Check consistency of reax and chargeequil force fields
+  if (iff_chargeequil != -1) {
+    if (iff_reax == -1) {
+      glog.error("ForceFieldList::ForceFieldSetup:\n"
+		 "Currently REAXFF force field required for "
+		 "charge equilibration");
+    } else if (iff_chargeequil > iff_reax) {
+      ff = forcefield_list[iff_reax];
+      forcefield_list[iff_reax] = forcefield_list[iff_chargeequil];
+      forcefield_list[iff_chargeequil] = ff;
+    }
+a375 2
+  } else if (ffname == "chargeequil") {
+    ff = dynamic_cast<ForceField*> (new Force_ChargeEquil(arg_string));
+@
+
+
+3.3.2.3
+log
+@Separated charge equilibration input from REAX
+@
+text
+@a213 3
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << ff->get_label() << "::Lneighbor " << ff->Lneighbor << endl;
+    }
+d284 8
+a291 14
+    if (static_cast<Force_ChargeEquil*>(
+        forcefield_list[iff_chargeequil])->get_Linputreax()) {
+      if (iff_reax == -1) {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "Currently REAXFF force field required for\n "
+		   "charge equilibration with REAX flag in input file");
+      }
+    }
+    if (iff_reax != -1) {
+      if (iff_chargeequil > iff_reax) {
+	ff = forcefield_list[iff_reax];
+	forcefield_list[iff_reax] = forcefield_list[iff_chargeequil];
+	forcefield_list[iff_chargeequil] = ff;
+      }
+a295 1
+  rcutmaxall = 0.0;
+a302 5
+    rcutmaxall = max(rcutmaxall,ff->get_rcutmax());
+  }
+
+  if (node == 0) {
+    glog.logfile << "rcutmaxall = " << rcutmaxall << endl;
+a316 4
+double ForceFieldList::get_rcutmaxall() const {
+  return rcutmaxall;
+}
+
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d255 1
+a258 1
+    ff->SetupTypes(t);
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d72 4
+a75 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering ForceFieldList::Setup()" << endl;
+#endif
+d238 6
+a243 3
+	comm->get_nodefile() << "Found ff_ewald" << endl;
+	comm->get_nodefile() << "g_ewald = " << 
+	  ff_ewald->get_g_ewald() << endl;
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d72 1
+d74 1
+d81 1
+a81 1
+    const bool& Lenergy, const bool& Lvirial, 
+d89 5
+a93 2
+    t1 = MPI_Wtime();
+     ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+d95 4
+a98 4
+    //     (static_cast<Force_Twobody*>(ff))->
+    //       ApplyForceLJCutFast(Lenergy,Lvirial,p,b,comm);
+    //     (static_cast<Force_Twobody*>(ff))->
+    //         ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+d118 1
+a118 1
+    const bool& Lenergy, const bool& Lvirial, 
+@
+
+
+2.28
+log
+@Fixed problem with messed up neighbor.cpp
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+d118 1
+a118 1
+    //    ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+d122 2
+a123 2
+      (static_cast<Force_Twobody*>(ff))->
+            ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+@
+
+
+2.27
+log
+@Fixed conflict in forcefieldlist.cpp
+@
+text
+@d87 1
+a87 1
+    // ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+d91 2
+a92 4
+    //    (static_cast<Force_Twobody*>(ff))->
+      //      ApplyForceLJCutFast(Lenergy,Lvirial,p,b,comm);
+     (static_cast<Force_Twobody*>(ff))->
+         ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+@
+
+
+2.26
+log
+@*** empty log message ***
+@
+text
+@d89 2
+@
+
+
+2.26.2.1
+log
+@Fixed problems with vectorized neighbor code
+@
+text
+@d87 1
+a87 1
+     ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+d91 2
+a92 2
+    //     (static_cast<Force_Twobody*>(ff))->
+    //         ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+d117 1
+a117 1
+        ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+d121 2
+a122 2
+    //      (static_cast<Force_Twobody*>(ff))->
+    //            ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+@
+
+
+2.25
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d87 1
+a87 1
+    ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+d91 2
+a92 2
+//     (static_cast<Force_Twobody*>(ff))->
+//     ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+d117 6
+a122 1
+    ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+@
+
+
+2.24
+log
+@Finalized addition of RUNDIR variable to fix problem on liberty
+and added in the Barrier timing category to avoid spurious
+attributions of waiting times to Other.
+@
+text
+@a61 1
+  forcefield_list.clear();
+@
+
+
+2.23
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@d81 1
+a81 1
+  double t1,t2,t3,t4,t5,t6;
+d107 3
+d128 1
+a128 1
+  double t1,t2,t3,t4;
+d154 1
+d160 2
+d163 1
+a163 1
+    MPI_Barrier(comm->get_world());
+d166 1
+d171 2
+d174 1
+a174 1
+    MPI_Barrier(comm->get_world());
+@
+
+
+2.22
+log
+@Updated header
+@
+text
+@d59 4
+@
+
+
+2.21
+log
+@Fixed fix for rcutneighmaxall for forcefield that have no neighbor list.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.20
+log
+@Fixed problem with rcutneighmax when using multiple
+force fields with different cut off distances.
+@
+text
+@d236 3
+a238 1
+    ff->set_rcutneighmaxall(rcutneighmaxall);
+@
+
+
+2.19
+log
+@Added anisotropic style to pressure control,
+and included in Tersoff example testp.
+@
+text
+@a205 1
+  rcutneighmaxall = 0.0;
+d224 1
+d232 5
+@
+
+
+2.18
+log
+@Added the Tersoff force field class
+@
+text
+@d354 18
+@
+
+
+2.17
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d45 1
+d337 2
+@
+
+
+2.16
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d116 2
+a117 1
+                     ParticleList* p, const Box* b, Comm* comm) {
+d142 3
+d343 8
+@
+
+
+2.15
+log
+@Various
+@
+text
+@d84 5
+d128 4
+a131 1
+      if(ff->neighbor->NeighboringCheck()) nflag = true;
+a133 1
+      ff->neighbor->inc_ntimeneigh();
+a166 1
+      ff->neighbor->inc_ntimeneigh();
+@
+
+
+2.14
+log
+@Updated documentation
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.13
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d192 1
+a194 1
+
+d197 1
+d201 16
+a216 1
+    ff->SetupInteractions(b,comm);
+@
+
+
+2.12
+log
+@Added Ewald sum example
+@
+text
+@d224 1
+a224 1
+  stringstream buf_in(buf);
+d284 1
+a284 1
+  stringstream buf_in(buf);
+@
+
+
+2.11
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d44 1
+a47 1
+#include "particletypelist.h"
+d70 1
+a70 3
+		  ff_classname_list,ff_filename_list,
+		  ff_label_list,b,t,comm);
+  SetupTypes(t);
+d74 1
+d83 1
+a83 1
+    ff->ApplyForce(p,b,type_index[iff],comm);
+d100 1
+d105 1
+a105 1
+    ff->ApplyForce(p,b,type_index[iff],comm);
+d157 1
+a157 12
+      ff_classname = ff->get_classname();
+      switch (ff_classname) {
+      case ForceField::external:
+	ff->neighbor->NeighboringWall(
+           static_cast<Force_External*>(ff)->get_walls(),p,type_index[iff],
+				      ff->rcutneighsq_table,b,comm);
+	break;
+      default:
+	ff->neighbor->Neighboring(p,type_index[iff],
+				       ff->rcutneighsq_table,b,comm);
+	break;
+      }
+d178 1
+a178 12
+      ff_classname = ff->get_classname();
+      switch (ff_classname) {
+      case ForceField::external:
+	ff->neighbor->NeighboringWall(
+           static_cast<Force_External*>(ff)->get_walls(),p,type_index[iff],
+				      ff->rcutneighsq_table,b,comm);
+	break;
+      default:
+	ff->neighbor->Neighboring(p,type_index[iff],
+				       ff->rcutneighsq_table,b,comm);
+	break;
+      }
+d185 2
+a186 6
+     const int& neighbor_freq, const double& neighbor_rskin, 
+     const vector<string> input_classname_list,
+     const vector<string> input_filename_list, 
+     const vector<string> input_label_list, Box* b,
+     ParticleTypeList* t, Comm* comm)
+{
+a188 1
+  double rcutneighmax;
+d191 1
+d197 1
+a197 123
+  for (int iff = 0;iff<input_classname_list.size();iff++) {
+    if (node == 0) {
+      glog.logfile << "\n\n\n";
+      glog.logfile << "Reading " << input_label_list[iff] <<
+	" from file " << input_filename_list[iff] << endl;
+    }
+
+    str_tmp = input_classname_list[iff];
+    if (str_tmp == "twobody") {
+      classname = ForceField::twobody;
+    } else if (str_tmp == "threebody") {
+      classname = ForceField::threebody;
+    } else if (str_tmp == "external") {
+      classname = ForceField::external;
+    } else if (str_tmp == "eam") {
+      classname = ForceField::eam;
+    } else {
+      glog.error("ForceFieldList::ForceFieldSetup: Invalid class name");
+    }
+
+    switch(classname) {
+    case ForceField::twobody:
+      ff = dynamic_cast<ForceField*>
+	(new Force_Twobody(neighbor_style,
+				neighbor_freq,neighbor_rskin));
+      forcefield_list.push_back(ff);
+      ff->ReadInteractions(input_filename_list[iff],
+                           input_label_list[iff],comm);
+      ff->SetupInteractions(b,comm);
+      if (ff->Lneighbor) {
+	rcutneighmax = ff->get_rcutmax() + neighbor_rskin;
+	ff->neighbor->set_rcutneighmax(rcutneighmax);
+	ff->SetupCutNeighSq(neighbor_rskin,comm);
+	rcutneighmaxall = max(rcutneighmaxall,rcutneighmax);
+	if (node == 0) {
+	  glog.logfile << "Cutoffs for this forcefield" << endl;
+	  glog.logfile << "rcutmax = " << ff->get_rcutmax() << endl;
+	  glog.logfile << "rskin = " << neighbor_rskin << endl;
+	  glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+	}
+      }
+      break;
+    case ForceField::threebody:
+      ff = dynamic_cast<ForceField*>
+	(new Force_Threebody(neighbor_style,
+				neighbor_freq,neighbor_rskin));
+      forcefield_list.push_back(ff);
+      ff->ReadInteractions(input_filename_list[iff],
+                           input_label_list[iff],comm);
+      ff->SetupInteractions(b,comm);
+      if (ff->Lneighbor) {
+	rcutneighmax = ff->get_rcutmax() + neighbor_rskin;
+	ff->neighbor->set_rcutneighmax(rcutneighmax);
+	ff->SetupCutNeighSq(neighbor_rskin,comm);
+	rcutneighmaxall = max(rcutneighmaxall,rcutneighmax);
+	if (node == 0) {
+	  glog.logfile << "Cutoffs for this forcefield" << endl;
+	  glog.logfile << "rcutmax = " << ff->get_rcutmax() << endl;
+	  glog.logfile << "rskin = " << neighbor_rskin << endl;
+	  glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+	}
+      }
+      break;
+    case ForceField::external:
+      ff = dynamic_cast<ForceField*>
+	(new Force_External(neighbor_style,
+				neighbor_freq,neighbor_rskin));
+      forcefield_list.push_back(ff);
+      ff->ReadInteractions(input_filename_list[iff],
+                           input_label_list[iff],comm);
+      ff->SetupInteractions(b,comm);
+      if (ff->Lneighbor) {
+	rcutneighmax = ff->get_rcutmax() + neighbor_rskin;
+	ff->neighbor->set_rcutneighmax(rcutneighmax);
+	ff->SetupCutNeighSq(neighbor_rskin,comm);
+	rcutneighmaxall = max(rcutneighmaxall,rcutneighmax);
+	if (node == 0) {
+	  glog.logfile << "Cutoffs for this forcefield" << endl;
+	  glog.logfile << "rcutmax = " << ff->get_rcutmax() << endl;
+	  glog.logfile << "rskin = " << neighbor_rskin << endl;
+	  glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+	}
+      }
+      break;
+    case ForceField::eam:
+      ff = dynamic_cast<ForceField*>
+	(new Force_Eam(neighbor_style,
+				neighbor_freq,neighbor_rskin));
+      forcefield_list.push_back(ff);
+      ff->ReadInteractions(input_filename_list[iff],
+                           input_label_list[iff],comm);
+      ff->SetupInteractions(b,comm);
+      if (ff->Lneighbor) {
+	rcutneighmax = ff->get_rcutmax() + neighbor_rskin;
+	ff->neighbor->set_rcutneighmax(rcutneighmax);
+	ff->SetupCutNeighSq(neighbor_rskin,comm);
+	rcutneighmaxall = max(rcutneighmaxall,rcutneighmax);
+	if (node == 0) {
+	  glog.logfile << "Cutoffs for this forcefield" << endl;
+	  glog.logfile << "rcutmax = " << ff->get_rcutmax() << endl;
+	  glog.logfile << "rskin = " << neighbor_rskin << endl;
+	  glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+	}
+      }
+      break;
+    default:
+      glog.error("ForceFieldList::ForceFieldSetup:\n"
+		 "Invalid forcefield class name");
+    }
+  }
+}
+
+void ForceFieldList::SetupTypes(const ParticleTypeList* t) {
+
+  ForceField* ff;
+  int itype,itype_ff,iff;
+  int* ipnt;
+  bool match;
+  int nparticletypes;
+
+  nparticletypes = t->get_ntypes();
+
+  for (iff=0;iff < forcefield_list.size();iff++) {
+d199 6
+a204 24
+    // For each id in t, generate ff index
+    // If id not found in ff, generate warning
+    ipnt = new int[nparticletypes];
+    type_index.push_back(ipnt);
+    for (itype = 0; itype < nparticletypes; itype++) {
+      match = ff->find_id(t->get_id(itype),itype_ff);
+      if (!match) {
+	glog.warning("ForceFieldList::SetupTypes:\n"
+		     "Particle id has no ff match");
+	glog.logfile << itype_ff << " " << t->get_id(itype) << " " << iff << endl;
+	type_index[iff][itype]=-1;
+      } else {
+	type_index[iff][itype]=itype_ff;
+      }
+    }
+    // Check that each id in ff appears in t
+    for (itype_ff = 0; itype_ff < ff->get_ntypes(); itype_ff++) {
+      match = t->find_id(ff->id_index[itype_ff],itype);
+      if (!match) {
+	glog.warning("ForceFieldList::SetupTypes:\n"
+		     "ff type id has no particle type match");
+      }
+    }
+    ff->CheckMasses(type_index[iff],t);
+d279 1
+a279 1
+void ForceFieldList::input_forcefield_twobody(const string& buf)
+d281 2
+a282 27
+  string filename,label;
+  stringstream buf_in(buf);
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ForceFieldList::input_forcefield_twobody:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << filename << " ";
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ForceFieldList::input_forcefield_twobody:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << label << endl;
+
+  ff_classname_list.push_back("twobody");
+  ff_filename_list.push_back(filename);
+  ff_label_list.push_back(label);
+}
+
+void ForceFieldList::input_forcefield_threebody(const string& buf)
+{
+  string filename,label;
+a284 8
+  buf_in >> filename;
+  
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ForceFieldList::input_forcefield_threebody:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << filename << " ";
+d286 1
+a286 1
+  buf_in >> label;
+d289 1
+a289 1
+    glog.error("ForceFieldList::input_forcefield_threebody:\n"
+d292 2
+a293 13
+  glog.logfile << label << endl;
+
+  ff_classname_list.push_back("threebody");
+  ff_filename_list.push_back(filename);
+  ff_label_list.push_back(label);
+}
+
+void ForceFieldList::input_forcefield_external(const string& buf)
+{
+  string filename,label;
+  stringstream buf_in(buf);
+  buf_in >> filename;
+  
+d296 1
+a296 1
+    glog.error("ForceFieldList::input_forcefield_external:\n"
+d299 14
+a312 7
+  glog.logfile << " " << filename << " ";
+  
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ForceFieldList::input_forcefield_external:\n"
+	       "Read error in input file");
+d314 1
+a314 31
+  glog.logfile << label << endl;
+
+  ff_classname_list.push_back("external");
+  ff_filename_list.push_back(filename);
+  ff_label_list.push_back(label);
+}
+
+void ForceFieldList::input_forcefield_eam(const string& buf)
+{
+  string filename,label;
+  stringstream buf_in(buf);
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ForceFieldList::input_forcefield_eam:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << filename << " ";
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ForceFieldList::input_forcefield_eam:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << label << endl;
+
+  ff_classname_list.push_back("eam");
+  ff_filename_list.push_back(filename);
+  ff_label_list.push_back(label);
+@
+
+
+2.11.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a66 1
+#ifdef USE_NODEFILES
+a67 1
+#endif
+@
+
+
+2.11.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a43 2
+#include "force_ewald.h"
+#include "force_tersoff.h"
+d47 1
+a57 3
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    delete forcefield_list[iff];
+  }
+d72 3
+a74 1
+		  b,t,comm);
+a77 1
+    const bool& Lenergy, const bool& Lvirial, 
+d79 1
+a79 1
+  double t1,t2,t3,t4,t5,t6,t7;
+d86 1
+a86 6
+    ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+    // alternate force routine for performance comparison
+    //    (static_cast<Force_Twobody*>(ff))->
+      //      ApplyForceLJCutFast(Lenergy,Lvirial,p,b,comm);
+//     (static_cast<Force_Twobody*>(ff))->
+//     ApplyForceLJCutSuperFast(Lenergy,Lvirial,p,b,comm);
+a99 3
+  t7 = MPI_Wtime();
+  glog.timebarrier+=t5-t4;
+  glog.timebarrier+=t7-t6;
+a102 1
+    const bool& Lenergy, const bool& Lvirial, 
+d107 1
+a107 1
+    ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+d113 1
+a113 2
+                     ParticleList* p, const Box* b, Comm* comm, 
+		     const bool& Lvolume) {
+d116 1
+a116 1
+  double t1,t2,t3,t4,t5,t6;
+d125 1
+a125 4
+      if(ff->neighbor->NeighboringCheck()) {
+	nflag = true;
+	ff->neighbor->inc_ntimeneigh();
+      }
+d128 1
+a135 3
+    if (Lvolume) {
+      comm->Setup(b,this);
+    }
+a136 1
+    t5 = MPI_Wtime();
+d142 1
+a143 3
+    t6 = MPI_Wtime();
+    glog.timeexchange+= t2-t1;
+    glog.timebarrier+= t1-t5 + t6-t2;
+a145 1
+    t5 = MPI_Wtime();
+d150 1
+a151 3
+    t6 = MPI_Wtime();
+    glog.timecomm+= t2-t1;
+    glog.timebarrier+= t1-t5 + t6-t2;
+d159 12
+a170 1
+      ff->Neighboring(p,b,comm);
+d173 1
+d191 12
+a202 1
+      ff->Neighboring(p,b,comm);
+d209 6
+a214 2
+     const int& neighbor_freq, const double& neighbor_rskin, Box* b,
+     ParticleTypeList* t, Comm* comm) {
+d217 1
+a219 2
+  double rcutneighmax;
+  Force_Ewald* ff_ewald;
+d223 105
+a327 13
+  ff_ewald = NULL;
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    ff->ReadInteractions(comm);
+    if (ff->get_classname() == ForceField::ewald) {
+      if (ff_ewald == NULL) {
+	ff_ewald = static_cast<Force_Ewald*>(ff);
+	comm->get_nodefile() << "Found ff_ewald" << endl;
+	comm->get_nodefile() << "g_ewald = " << 
+	  ff_ewald->get_g_ewald() << endl;
+      } else {
+	glog.error("ForceFieldList::ForceFieldSetup:\n"
+		   "More than one instance of Force_Ewald not allowed");
+d329 4
+d335 1
+d337 9
+a345 9
+  rcutneighmaxall = 0.0;
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    ff->SetupInteractions(b,ff_ewald,comm);
+    ff->SetupNeighbor(neighbor_style,neighbor_freq,neighbor_rskin,
+		      rcutneighmax,b,comm);
+    rcutneighmaxall = max(rcutneighmaxall,rcutneighmax);
+    ff->SetupTypes(t);
+  }
+d347 1
+a347 1
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+d349 14
+a362 2
+    if (ff->get_Lneighbor()) {
+      ff->set_rcutneighmaxall(rcutneighmaxall);
+d364 9
+d392 1
+a392 1
+  std::istringstream buf_in(buf);
+d447 1
+a447 1
+void ForceFieldList::input_forcefield(const string& buf)
+d449 2
+a450 2
+  string ffname,arg_string;
+  ForceField* ff;
+d452 7
+a458 1
+  std::istringstream buf_in(buf);
+d460 1
+a460 1
+  buf_in >> ffname;
+d463 1
+a463 1
+    glog.error("ForceFieldList::input_forcefield:\n"
+d466 14
+a479 2
+  glog.logfile << " " << ffname; 
+  getline(buf_in,arg_string);
+d482 1
+a482 1
+    glog.error("ForceFieldList::input_forcefield:\n"
+d485 7
+a491 16
+  glog.logfile << arg_string << endl; 
+  if (ffname == "twobody") {
+    ff = dynamic_cast<ForceField*> (new Force_Twobody(arg_string));
+  } else if (ffname == "threebody") {
+    ff = dynamic_cast<ForceField*> (new Force_Threebody(arg_string));
+  } else if (ffname == "external") {
+    ff = dynamic_cast<ForceField*> (new Force_External(arg_string));
+  } else if (ffname == "eam") {
+    ff = dynamic_cast<ForceField*> (new Force_Eam(arg_string));
+  } else if (ffname == "ewald") {
+    ff = dynamic_cast<ForceField*> (new Force_Ewald(arg_string));
+  } else if (ffname == "tersoff") {
+    ff = dynamic_cast<ForceField*> (new Force_Tersoff(arg_string));
+  } else {
+    glog.error("ForceFieldList::input_forcefield: \n"
+               "Invalid forcefield class type");
+d493 5
+a497 1
+  forcefield_list.push_back(ff);
+d500 18
+a517 5
+double ForceFieldList::get_virial() const {
+  double virial = 0.0;
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    virial+=ff->get_virial();
+d519 5
+a523 1
+  return virial;
+d526 12
+a537 3
+void ForceFieldList::get_virial(vector <double>& virial) const {
+  vector <double> virial_tmp;
+  int nvirial;
+d539 5
+a543 11
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ForceField* ff = forcefield_list[iff];
+    ff->get_virial(virial_tmp);
+    if (iff == 0) {
+      virial = virial_tmp;
+      nvirial = virial.size();
+    } else {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial[ivirial] += virial_tmp[ivirial];
+      }
+    }
+d545 5
+d551 1
+@
+
+
+2.11.2.3
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d80 1
+a80 1
+    const bool& Lenergy, const VirialStyles& Lvirial, 
+d88 2
+a89 5
+    t1 = MPI_Wtime();	
+    if (Lvirial != free_particles)
+      ff->ApplyForce(Lenergy,Lvirial,p,b,comm);
+    else 
+      ff->ApplyPartialForce(Lenergy,Lvirial,p,b,comm);
+d114 1
+a114 1
+    const bool& Lenergy, const VirialStyles& Lvirial, 
+@
+
+
+2.10
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d43 1
+d84 1
+a84 1
+    ff->ApplyForce(p,*b,type_index[iff]);
+d105 1
+a105 1
+    ff->ApplyForce(p,*b,type_index[iff]);
+d237 2
+d251 1
+a251 1
+      ff->SetupInteractions(*b,comm);
+d272 1
+a272 1
+      ff->SetupInteractions(*b,comm);
+d293 22
+a314 1
+      ff->SetupInteractions(*b,comm);
+d347 2
+d354 2
+a355 1
+	glog.warning("Particle id has no ff match");
+d362 9
+d520 26
+@
+
+
+2.9
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.8
+log
+@Removed Thermo class
+@
+text
+@d32 1
+a32 1
+    const Input* inp, Box* b, ParticleTypeList* t, ParticleList* p,
+a35 2
+  string str_tmp;
+  Neighbor::NeighborStyles neighbor_style; 
+d40 3
+a42 15
+  str_tmp = inp->neighbor_style;
+
+  if (str_tmp == "nsq") {
+    neighbor_style = Neighbor::neighbor_nsq; 
+  } else if (str_tmp == "bin") {
+    neighbor_style = Neighbor::neighbor_bin;
+  } else if (str_tmp == "none") {
+    neighbor_style = Neighbor::neighbor_none;
+  } else {
+    glog.error("ForceFieldList::Setup: Invalid neighbor_style");
+  }
+
+  ForceFieldSetup(neighbor_style,inp->neighbor_freq,inp->neighbor_rskin,
+		  inp->ff_classname_list,inp->ff_filename_list,
+		  inp->ff_label_list,b,t,comm);
+d51 1
+a51 1
+  p->ZeroForces();
+d73 1
+a73 1
+  p->ZeroForces();
+d177 1
+a177 1
+     const Neighbor::NeighborStyles& neighbor_style, 
+d320 138
+@
+
+
+2.7
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d33 1
+a33 1
+    Thermo* thermo, Comm* comm) {
+d223 1
+a223 1
+      glog.error("ForceFieldList::ForceFieldSetup: Invalid units_style");
+@
+
+
+2.6
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d10 1
+a11 1
+#include "forcefield.h"
+d36 2
+d42 13
+a54 2
+  units_style = inp->units_style;
+  ForceFieldSetup(inp->neighbor_style,inp->neighbor_freq,inp->neighbor_rskin,
+a63 4
+  MPI_Comm world;
+
+  world = comm->get_world();
+
+d76 1
+a76 1
+  MPI_Barrier(world);
+d82 1
+a82 1
+  MPI_Barrier(world);
+a100 3
+  MPI_Comm world;
+
+  world = comm->get_world();
+d120 1
+a120 1
+    MPI_Barrier(world);
+d126 1
+a126 1
+    MPI_Barrier(world);
+d129 1
+a129 1
+    MPI_Barrier(world);
+d134 1
+a134 1
+    MPI_Barrier(world);
+d190 2
+a191 1
+void ForceFieldList::ForceFieldSetup(const int& neighbor_style, 
+d193 1
+a193 1
+     const vector<int> input_classname_list,
+d201 2
+d214 13
+a226 1
+    switch(input_classname_list[iff]) {
+@
+
+
+2.5
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@a37 1
+  if (node == 0) glog.logfile << "Entering ForceFieldList::Setup()" << endl;
+d43 1
+a43 1
+		  b,t,comm);
+d47 1
+a47 1
+void ForceFieldList::ComputeForce(const bool& Lthermo,
+d49 2
+a50 7
+  int i;
+  float tforce,trevcomm;
+  clock_t t1,t2;
+  double e_potential_tmp;
+  int ff_classname;
+  double e_potential;
+  double tmp;
+a51 1
+  int node,nparticles,nparticles_tot,npairs;
+a52 1
+  node = comm->get_node();
+d55 1
+d57 9
+a65 1
+  e_potential = 0.0;
+d67 12
+d80 2
+a81 111
+    Forcefield* ff = forcefield_list[iff];
+    ff_classname = ff->get_classname();
+    if (Lthermo) {
+      t1 = clock();
+      ff->ApplyForce(p,e_potential_tmp,*b,type_index[iff]);
+      t2 = clock();
+      tmp = e_potential_tmp;
+      MPI_Allreduce(&tmp,&e_potential_tmp,1,MPI_DOUBLE,MPI_SUM,world);
+      e_potential+=e_potential_tmp;
+      tforce = (t2-t1)/float(CLOCKS_PER_SEC);
+      nparticles = p->get_nparticles();
+      MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+      if (node == 0) {
+	glog.logfile << endl;
+	glog.logfile << "Force evaluation for Forcefield object " << iff << endl;
+	glog.logfile << "Forcefield classname [enum Forcefield::ff_class_type] = " << 
+	ff_classname << endl;
+      }
+      switch (ff_classname) {
+      case Forcefield::twobody :
+	switch(units_style) {
+	case real_units:
+	  if (node == 0) {
+	    glog.logfile << "Energy [kJ/mol] = " << e_potential_tmp << endl; 
+	    glog.logfile << "Energy/particle [kJ/mol] = " << e_potential_tmp/nparticles_tot << endl;
+	    glog.logfile << "Force time [s] = " << tforce << endl;
+	    npairs = ff->get_npairs(nparticles);
+	    if (npairs > 0) {
+	      glog.logfile << "Force-pair time [s/pair] = " << 
+		tforce/npairs << endl;
+	    }
+	  }
+	  break;
+	case reduced_units:
+	  if (node == 0) {
+	    glog.logfile << "Energy [epsilon] = " << e_potential_tmp << endl; 
+	    glog.logfile << "Energy/particle [epsilon] = " << e_potential_tmp/nparticles_tot << endl;
+	    glog.logfile << "Force time [s] = " << tforce << endl;
+	    npairs = ff->get_npairs(nparticles);
+	    if (npairs > 0) {
+	      glog.logfile << "Force-pair time [s/pair] = " << 
+		tforce/npairs << endl;
+	    }
+	  }
+	  break;
+	default:
+	  glog.error("ForceFieldList::ComputeForce:\n"
+		     "Invalid units style");
+	  break;
+	}
+	break;
+      case Forcefield::external :
+	switch(units_style) {
+	case real_units:
+	  if (node == 0) {
+	    glog.logfile << "Energy [kJ/mol] = " << e_potential_tmp << endl; 
+	    glog.logfile << "Energy/particle [kJ/mol] = " << e_potential_tmp/nparticles_tot << endl;
+	    glog.logfile << "Force time [s] = " << tforce << endl;
+	    npairs = ff->get_npairs(nparticles);
+	    if (npairs > 0) {
+	      glog.logfile << "Force-pair time [s/pair] = " << 
+		tforce/npairs << endl;
+	    }
+	  }
+	  break;
+	case reduced_units:
+	  if (node == 0) {
+	    glog.logfile << "Energy [epsilon] = " << e_potential_tmp << endl; 
+	    glog.logfile << "Energy/particle [epsilon] = " << e_potential_tmp/nparticles_tot << endl;
+	    glog.logfile << "Force time [s] = " << tforce << endl;
+	    npairs = ff->get_npairs(nparticles);
+	    if (npairs > 0) {
+	      glog.logfile << "Force-pair time [s/pair] = " << 
+		tforce/npairs << endl;
+	    }
+	  }
+	  break;
+	default:
+	  glog.error("ForceFieldList::ComputeForce:\n"
+		     "Invalid units style");
+	  break;
+	}
+	break;
+      default:
+	// Default output
+	switch(units_style) {
+	case real_units:
+	  if (node == 0) {
+	    glog.logfile << "Energy [kJ/mol] = " << e_potential_tmp << endl; 
+	    glog.logfile << "Energy/particle [kJ/mol] = " << e_potential_tmp/nparticles_tot << endl;
+	    glog.logfile << "Force time [s] = " << tforce << endl;
+	  }
+	  break;
+	case reduced_units:
+	  if (node == 0) {
+	    glog.logfile << "Energy [epsilon] = " << e_potential_tmp << endl; 
+	    glog.logfile << "Energy/particle [epsilon] = " << e_potential_tmp/nparticles_tot << endl;
+	    glog.logfile << "Force time [s] = " << tforce << endl;
+	  }
+	  break;
+	default:
+	  glog.error("ForceFieldList::ComputeForce:\n"
+		     "Invalid units style");
+	  break;
+	}
+	break;
+      }
+    } else {
+      ff->ApplyForce(p,e_potential_tmp,*b,type_index[iff]);
+      e_potential+=e_potential_tmp;
+    }
+a82 1
+  t1 = clock();
+a83 5
+  t2 = clock();
+  trevcomm = (t2-t1)/float(CLOCKS_PER_SEC);
+  if (node == 0) {
+    glog.logfile << "Reverse Communicate time is " << trevcomm << endl;
+  }
+d88 3
+a90 1
+  Forcefield* ff;
+a91 5
+  bool nflag;
+  int node;
+  float tneigh,tcomm;
+  clock_t t1,t2;
+  int nneighbors,nneighbors_tot;
+a93 1
+  node = comm->get_node();
+d96 1
+d101 1
+d103 3
+d108 2
+d112 2
+d115 1
+a115 2
+    t1 = clock();
+    p->ResetPosition(b,false);
+d118 2
+a120 5
+    t2 = clock();
+    tcomm = (t2-t1)/float(CLOCKS_PER_SEC);
+    if (node == 0) {
+      glog.logfile << "Exchange Communicate time is " << tcomm << endl;
+    }
+d122 3
+a124 1
+    t1 = clock();
+d126 25
+a150 4
+    t2 = clock();
+    tcomm = (t2-t1)/float(CLOCKS_PER_SEC);
+    if (node == 0) {
+      glog.logfile << "Communicate time is " << tcomm << endl;
+d153 11
+a168 3
+      if (node == 0) {
+	glog.logfile << endl;
+      }
+d170 1
+a170 2
+      case Forcefield::external:
+	t1 = clock();
+a173 11
+	t2 = clock();
+	tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+	nneighbors = ff->neighbor->get_nneighbors();
+	MPI_Allreduce(&nneighbors,&nneighbors_tot,1,MPI_INT,MPI_SUM,world);
+	if (node == 0) {
+	  glog.logfile << "Forcefield class is "
+	    "[enum Forcefield::ff_class_type] " <<
+	    ff_classname << endl;
+	  glog.logfile << "Neighboring time is " << tneigh << endl;
+	  glog.logfile << "Number of neighbors is " << nneighbors_tot << endl; 
+	}
+a175 1
+	t1 = clock();
+a177 11
+	t2 = clock();
+	tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+	nneighbors = ff->neighbor->get_nneighbors();
+	MPI_Allreduce(&nneighbors,&nneighbors_tot,1,MPI_INT,MPI_SUM,world);
+	if (node == 0) {
+	  glog.logfile << "Forcefield class is "
+	    "[enum Forcefield::ff_class_type] " <<
+	    ff_classname << endl;
+	  glog.logfile << "Neighboring time is " << tneigh << endl;
+	  glog.logfile << "Number of neighbors is " << nneighbors_tot << endl; 
+	}
+d187 2
+a188 1
+     const vector<string> input_filename_list, Box* b,
+d191 1
+a191 1
+  Forcefield* ff;
+d200 5
+d206 2
+a207 2
+    case Forcefield::twobody:
+      ff = dynamic_cast<Forcefield*>
+d211 2
+a212 1
+      ff->ReadInteractions(input_filename_list[iff],comm);
+d227 2
+a228 2
+    case Forcefield::threebody:
+      ff = dynamic_cast<Forcefield*>
+d232 2
+a233 1
+      ff->ReadInteractions(input_filename_list[iff],comm);
+d248 2
+a249 2
+    case Forcefield::external:
+      ff = dynamic_cast<Forcefield*>
+d253 2
+a254 1
+      ff->ReadInteractions(input_filename_list[iff],comm);
+d278 1
+a278 1
+  Forcefield* ff;
+d306 9
+@
+
+
+2.4
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@d58 1
+a58 1
+  int node,nparticles,nparticles_tot;
+d93 5
+a97 2
+	    glog.logfile << "Force-pair time [s/pair] = " << 
+	      tforce/ff->get_npairs(nparticles) << endl;
+d105 5
+a109 2
+	    glog.logfile << "Force-pair time [s/pair] = " << 
+	      tforce/ff->get_npairs(nparticles) << endl;
+d125 5
+a129 2
+	    glog.logfile << "Force-pair time [s/pair] = " << 
+	      tforce/ff->get_npairs(nparticles) << endl;
+d137 5
+a141 2
+	    glog.logfile << "Force-pair time [s/pair] = " << 
+	      tforce/ff->get_npairs(nparticles) << endl;
+d196 2
+d200 1
+d211 1
+d216 1
+d247 2
+d254 1
+d263 2
+d270 1
+d286 1
+d290 1
+a290 1
+  rcutneighmax = 0.0;
+d302 2
+d305 7
+a311 1
+	rcutneighmax = max(rcutneighmax,ff->get_rcut_max()+neighbor_rskin);
+d322 2
+d325 7
+a331 1
+	rcutneighmax = max(rcutneighmax,ff->get_rcut_max()+neighbor_rskin);
+d342 2
+d345 7
+a351 1
+	rcutneighmax = max(rcutneighmax,ff->get_rcut_max()+neighbor_rskin);
+d388 2
+a389 2
+double ForceFieldList::get_rcutneighmax() const {
+  return rcutneighmax;
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d94 1
+a94 1
+	      tforce/ff->get_npairs(p->get_nparticles()) << endl;
+d103 1
+a103 1
+	      tforce/ff->get_npairs(p->get_nparticles()) << endl;
+d120 1
+a120 1
+	      tforce/ff->get_npairs(p->get_nparticles()) << endl;
+d129 1
+a129 1
+	      tforce/ff->get_npairs(p->get_nparticles()) << endl;
+d225 1
+a225 1
+	ff->neighbor->NeighboringWallLocal(
+d239 1
+a239 1
+	ff->neighbor->NeighboringGhost(p,type_index[iff],
+a261 1
+  bool Lasymm;
+a270 1
+      Lasymm = false;
+d273 1
+a273 1
+				Lasymm,neighbor_freq,neighbor_rskin));
+a277 1
+	ff->neighbor->SetupImageStencil(*ff,b,comm);
+a282 1
+      Lasymm = true;
+d285 1
+a285 1
+				Lasymm,neighbor_freq,neighbor_rskin));
+a289 1
+	ff->neighbor->SetupImageStencil(*ff,b,comm);
+a294 1
+      Lasymm = true;
+d297 1
+a297 1
+				Lasymm,neighbor_freq,neighbor_rskin));
+a301 1
+	ff->neighbor->SetupImageStencil(*ff,b,comm);
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d51 1
+a51 1
+  float tforce;
+d167 1
+d169 5
+d182 2
+d196 1
+d200 5
+d206 1
+d208 5
+d224 1
+d227 9
+a235 1
+				      ff->cutneighsq_table,b,comm);
+d238 1
+d240 10
+a249 1
+				  ff->cutneighsq_table,b,comm);
+d267 2
+a268 1
+  rcutneigh = 0.0;
+d282 1
+a282 1
+	rcutneigh = max(rcutneigh,ff->get_rcut_max()+neighbor_rskin);
+d296 1
+a296 1
+	rcutneigh = max(rcutneigh,ff->get_rcut_max()+neighbor_rskin);
+d310 1
+d347 2
+a348 2
+double ForceFieldList::get_rcutneigh() const {
+  return rcutneigh;
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d3 1
+a7 1
+extern ofstream logfile;
+d22 2
+d38 1
+a38 1
+  if (node == 0) logfile << "Entering ForceFieldList::Setup()" << endl;
+d58 1
+a58 1
+  int node;
+d72 1
+a73 1
+      comm->get_nodefile() << "E_potential = " << tmp << endl;
+a75 1
+      t2 = clock();
+d77 2
+d80 3
+a82 3
+	logfile << endl;
+	logfile << "Force evaluation for Forcefield object " << iff << endl;
+	logfile << "Forcefield classname [enum Forcefield::ff_class_type] = " << 
+d90 4
+a93 3
+	    logfile << "Twobody energy [kJ/mol] = " << e_potential_tmp << endl; 
+	    logfile << "Twobody force time [s] = " << tforce << endl;
+	    logfile << "Twobody force-pair time [s/pair] = " << 
+d99 4
+a102 3
+	    logfile << "Twobody energy [epsilon] = " << e_potential_tmp << endl; 
+	    logfile << "Twobody force time [s] = " << tforce << endl;
+	    logfile << "Twobody force-pair time [s/pair] = " << 
+d107 3
+a109 4
+	  if (node == 0) {
+	    logfile << "Error: invalid units style" << endl;
+	  }
+	  exit(0);
+d116 4
+a119 3
+	    logfile << "External energy [kJ/mol] = " << e_potential_tmp << endl; 
+	    logfile << "External force time [s] = " << tforce << endl;
+	    logfile << "External force-pair time [s/pair] = " << 
+d125 4
+a128 3
+	    logfile << "External energy [epsilon] = " << e_potential_tmp << endl; 
+	    logfile << "External force time [s] = " << tforce << endl;
+	    logfile << "External force-pair time [s/pair] = " << 
+d133 3
+a135 4
+	  if (node == 0) {
+	    logfile << "Error: invalid units style" << endl;
+	    exit(0);
+	  }
+d143 3
+a145 2
+	    logfile << "Forcefield energy [kJ/mol] = " << e_potential_tmp << endl; 
+	    logfile << "Forcefield force time [s] = " << tforce << endl;
+d150 3
+a152 2
+	    logfile << "Forcefield energy [epsilon] = " << e_potential_tmp << endl; 
+	    logfile << "Forcefield force time [s] = " << tforce << endl;
+d156 2
+a157 4
+	  if (node == 0) {
+	    logfile << "Error: invalid units style" << endl;
+	  }
+	  exit(0);
+d200 1
+a200 1
+	logfile << endl;
+d204 2
+a205 1
+	ff->neighbor->NeighboringWall(ff->get_walls(),p,type_index[iff],
+d256 1
+d273 2
+a274 4
+      if (node == 0) {
+	logfile << "Error: Invalid forcefield class name" << endl;;
+      }
+      exit(0);
+d296 2
+a297 2
+	logfile << "Warning: Particle id has no ff match" << endl;
+	logfile << itype_ff << " " << t->get_id(itype) << " " << iff << endl;
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d7 2
+d20 1
+d31 7
+a37 1
+    Thermo* thermo) {
+d42 1
+a42 1
+		  b,t);
+a43 2
+  Neighboring(p,b);
+  ComputeForce(true,b,t,p);
+d47 1
+a47 1
+    Box* b, ParticleTypeList* t, ParticleList* p) {
+d54 6
+d70 3
+d76 4
+a79 3
+      cout << endl;
+      cout << "Force evaluation for Forcefield object " << iff << endl;
+      cout << "Forcefield classname [enum Forcefield::ff_class_type] = " << 
+d81 1
+d86 6
+a91 4
+	  cout << "Twobody energy [kJ/mol] = " << e_potential_tmp << endl; 
+	  cout << "Twobody force time [s] = " << tforce << endl;
+	  cout << "Twobody force-pair time [s/pair] = " << 
+	    tforce/ff->get_npairs(p->get_nparticles()) << endl;
+d94 6
+a99 4
+	  cout << "Twobody energy [epsilon] = " << e_potential_tmp << endl; 
+	  cout << "Twobody force time [s] = " << tforce << endl;
+	  cout << "Twobody force-pair time [s/pair] = " << 
+	    tforce/ff->get_npairs(p->get_nparticles()) << endl;
+d102 3
+a104 1
+	  cout << "Error: invalid units style" << endl;
+d111 6
+a116 4
+	  cout << "External energy [kJ/mol] = " << e_potential_tmp << endl; 
+	  cout << "External force time [s] = " << tforce << endl;
+	  cout << "External force-pair time [s/pair] = " << 
+	    tforce/ff->get_npairs(p->get_nparticles()) << endl;
+d119 6
+a124 4
+	  cout << "External energy [epsilon] = " << e_potential_tmp << endl; 
+	  cout << "External force time [s] = " << tforce << endl;
+	  cout << "External force-pair time [s/pair] = " << 
+	    tforce/ff->get_npairs(p->get_nparticles()) << endl;
+d127 4
+a130 2
+	  cout << "Error: invalid units style" << endl;
+	  exit(0);
+d137 4
+a140 2
+	  cout << "Forcefield energy [kJ/mol] = " << e_potential_tmp << endl; 
+	  cout << "Forcefield force time [s] = " << tforce << endl;
+d143 4
+a146 2
+	  cout << "Forcefield energy [epsilon] = " << e_potential_tmp << endl; 
+	  cout << "Forcefield force time [s] = " << tforce << endl;
+d149 3
+a151 1
+	  cout << "Error: invalid units style" << endl;
+d162 1
+a162 1
+
+d165 2
+a166 1
+void ForceFieldList::Neighboring(ParticleList* p, const Box* b) {
+d169 20
+d194 3
+a196 1
+      cout << endl;
+d200 1
+a200 1
+				      ff->cutneighsq_table,b);
+d203 2
+a204 2
+	ff->neighbor->Neighboring(p,type_index[iff],
+				  ff->cutneighsq_table,b);
+d214 1
+a214 1
+     ParticleTypeList* t)
+d218 3
+d222 1
+d231 2
+a232 2
+      ff->ReadInteractions(input_filename_list[iff]);
+      ff->SetupInteractions(*b);
+d234 3
+a236 2
+	ff->neighbor->SetupImageStencil(*ff,b);
+	ff->SetupCutNeighSq(neighbor_rskin);
+d245 2
+a246 2
+      ff->ReadInteractions(input_filename_list[iff]);
+      ff->SetupInteractions(*b);
+d248 2
+a249 2
+	ff->neighbor->SetupImageStencil(*ff,b);
+	ff->SetupCutNeighSq(neighbor_rskin);
+d258 2
+a259 2
+      ff->ReadInteractions(input_filename_list[iff]);
+      ff->SetupInteractions(*b);
+d261 2
+a262 2
+	ff->neighbor->SetupImageStencil(*ff,b);
+	ff->SetupCutNeighSq(neighbor_rskin);
+d266 3
+a268 1
+      cout << "Error: Invalid forcefield class name" << endl;;
+d291 2
+a292 2
+	cout << "Warning: Particle id has no ff match" << endl;
+	cout << itype_ff << " " << t->get_id(itype) << " " << iff << endl;
+d301 3
+@
+

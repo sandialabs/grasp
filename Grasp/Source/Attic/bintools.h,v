@@ -1,0 +1,201 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.07.28.23.17.30;	author saubry;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.07.28.23.17.30;	author saubry;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.08.04.18.28.14;	author saubry;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file bintools.h was initially added on branch Monaco_Aidan.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Implemented tools for bins lists:
+  - intersection
+  - union
+  - copy constructor
+
+Created a new class:  BinTools.
+Tested these tools.
+
+Seems to work ok in serial and parallel.
+@
+text
+@a0 80
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef BINTOOLS_H
+#define BINTOOLS_H
+
+#include <vector>
+using namespace std;
+#include "bin.h"
+#include "binlist.h"
+
+class BinTools
+{
+ public:
+  
+  vector<Bin *> Intersection(vector<Bin *>, vector<Bin *>);
+  vector<Bin *> Union(vector<Bin *>, vector<Bin *>);
+  void SortBins(vector<Bin *>,int);
+  void PrintIds(vector<Bin *>);
+  void PrintIds(vector<Bin *>, Comm*);
+  void PrintRegion(vector<Bin *>);
+  void PrintRegion(vector<Bin *>,Comm*);
+
+ private:
+  void SwapBins(Bin*, Bin*);
+
+
+ public:
+  BinTools(){};
+  ~BinTools(){};
+
+  friend class BinList;
+  friend class OctantList;
+
+};
+
+#endif
+
+@
+
+
+1.1.2.2
+log
+@Implement Alex's algorithm to send specific octant bin lists.
+No communication implemented yet.
+@
+text
+@d60 1
+a60 4
+  vector<Bin *> UnionFast(vector<Bin *>, vector<Bin *>);
+  vector<Bin *> Subtract(vector<Bin *>, vector<Bin *>);
+
+  void SortBins(vector<Bin *> *,int);
+@
+
+
+1.1.2.3
+log
+@Correct several bugs
+@
+text
+@d58 1
+a58 1
+  vector<Bin *> Intersection(vector <Bin *>, vector <Bin *>);
+a67 2
+  void PrintBins(vector<Bin *>);
+  void PrintBins(vector<Bin *>,Comm*);
+@
+
+
+1.1.2.4
+log
+@Correct a few things.
+@
+text
+@a69 2
+  void PrintParticles(vector<Bin *>);
+  void PrintParticles(vector<Bin *>,Comm *);
+@
+
+
+1.1.2.5
+log
+@Bin Communication fixed
+@
+text
+@d70 2
+a71 2
+  void PrintParticles(vector<Bin *>, ParticleList*);
+  void PrintParticles(vector<Bin *>,ParticleList*,Comm *);
+@
+
+

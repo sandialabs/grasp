@@ -1,0 +1,84 @@
+head	1.1;
+access;
+symbols
+	Monaco:1.1.0.4
+	PreMonaco:1.1
+	P_MonacoTesting:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2005.01.14.17.53.12;	author saubry;	state dead;
+branches
+	1.1.2.1
+	1.1.4.1;
+next	;
+
+1.1.2.1
+date	2005.01.14.17.53.12;	author saubry;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.02.25.21.44.06;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file types.in was initially added on branch P_MonacoTesting.
+@
+text
+@@
+
+
+1.1.4.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 2
+# Specification of particle id for copper.
+29     atom  63.55
+@
+
+
+1.1.2.1
+log
+@Basic example to run P-Monaco version of Grasp.
+Sylvie Aubry, Jan. 14 2005.
+@
+text
+@a0 6
+# Specification of particle id's (Ni, Al and H)
+28    atom  58.710
+13    atom  26.982
+1     atom  1.008
+
+
+@
+
+
+1.1.2.2
+log
+@Add new example with 500 copper particles.
+@
+text
+@d1 6
+a6 2
+# Specification of particle id for copper.
+29     atom  63.55
+@
+
+

@@ -1,0 +1,96 @@
+head	2.1;
+access;
+symbols
+	PreMonaco:2.1;
+locks; strict;
+comment	@# @;
+
+
+2.1
+date	2004.01.15.20.12.13;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.11.04.00.27.04;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.1
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@This file contains instructions for compiling
+and testing GRASP on your machine.
+
+For more information on the code, see Documentation/manual.txt.
+
+The GRASP source code and examples in this distribution
+can be compiled and run using the make command.
+This distribution contains two make files. 
+
+Makefile is the generic version, intended for Linux 
+workstations, Linux clusters and the like.  The 
+following variables are system specific:
+
+	MPI_PATH - The root directory for the MPI installation
+	GRASPDIR - The directory containing the directory Source
+
+Once these are set, you should be able to compile the
+binary grasp.exe by moving to the direcotry Source and typing
+
+	make all
+
+To run a test example, type 
+
+	make testa
+
+The results of the example will be written to Grasp/Testing/testa.
+
+
+Makefile.cplant is customized for use on Cplant.   The 
+following variables are user specific:
+
+	GRASPDIR - The directory containing the directory Source
+	ENFSDIR - The directory Testing on the enfs filesystem
+
+Once these are set, you should be able to compile the
+binary grasp.exe by moving to the directory Source and typing
+
+	make all
+
+To run a test example, first copy the directory Testing to
+the enfs filesystem, and make sure ENFSDIR in Makefile.cplant
+matches the new location.  Then go to the directory Source
+and type 
+
+	make testa
+
+The results of the example will be written to $(ENFSDIR)/testa.
+
+
+
+@
+
+
+2.0
+log
+@Added a README file
+@
+text
+@@
+

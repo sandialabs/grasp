@@ -1,0 +1,885 @@
+head	4.10;
+access;
+symbols
+	ReverseComm_branch:4.7.0.2
+	ADTools_branch:4.6.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.1
+	CRAY:2.3.0.4
+	cjkimme_version_merge_from_trunk_1:2.3.2.1
+	cjkimme_version:2.3.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.10
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.03.19.05.22.50;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.05.04.22.00.58;	author athomps;	state Exp;
+branches
+	4.7.2.1;
+next	4.6;
+
+4.6
+date	2005.10.28.19.10.56;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.06.09.16.06.37;	author foiles;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.19.21.58.51;	author foiles;	state Exp;
+branches
+	3.1.6.1;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches
+	2.3.2.1;
+next	2.2;
+
+2.2
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2004.07.19.17.05.38;	author athomps;	state Exp;
+branches;
+next	;
+
+2.3.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.1.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.1.6.2;
+
+3.1.6.2
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.1.6.3;
+
+3.1.6.3
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.7.2.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	4.7.2.2;
+
+4.7.2.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.10
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCE_TERSOFF_H
+#define FORCE_TERSOFF_H
+
+class Particle_Types;
+class Box;
+
+// Data structure for three-body force fields
+// Derived from ForceField base class.
+class Force_Tersoff: public ForceField {
+ public:
+  // List of allowable forcefield types. Several types
+  // can be used in a single simulation.
+  //
+  // enum class for force field types
+  enum ForceFieldTypes {tersoff_cut,tersoff_zbl,tersoff_moliere,tersoff_morse};
+ private:
+  struct ff_params {ForceFieldTypes type;int np;double* params;};
+  //Array of ff_params created on input 
+  vector<ff_params> input_param_list;
+  //Array of ff_params created in SetupInteractions
+  int nentries;
+  vector<ff_params> param_list;
+  //3-D array of pointers to elements in input_param_list, 
+  // indexed by three particle types
+  int*** input_param_index;
+  //3-D array of pointers to elements in param_list 
+  // indexed by three particle types
+  int*** param_index;
+
+  //  The data values are used to compute the short-range ZBL potential
+  //  The values are initialized in force_tersoff_inline.h
+  //
+  static const double ZBL_C1;
+  static const double ZBL_C2;
+  static const double ZBL_C3;
+  static const double ZBL_C4;
+  static const double ZBL_D1;
+  static const double ZBL_D2;
+  static const double ZBL_D3;
+  static const double ZBL_D4;
+  static const double ZBL_ACONST;
+  static const double ZBL_ZEXP;
+  static const double ZBL_ECONV;
+
+  //  The data values are used to compute the short-range Moliere potential
+  //  The values are initialized in force_tersoff_inline.h
+  //
+  static const double MOLIERE_C1;
+  static const double MOLIERE_C2;
+  static const double MOLIERE_C3;
+  static const double MOLIERE_D1;
+  static const double MOLIERE_D2;
+  static const double MOLIERE_D3;
+  static const double MOLIERE_ACONST;
+  static const double MOLIERE_ECONV;
+
+// This is upper limit on number of neighbors for one atom
+#define TERSONEATOM 10000
+// This is number of values saved for each neighbor
+#define TERSNDATA 13
+
+  double drdatalist[TERSNDATA*TERSONEATOM];
+
+ public:
+
+  Force_Tersoff(const string);
+  ~Force_Tersoff();
+  void SetupCutNeighSq(const double&, Comm*);
+
+  int get_entry(const int&, const int&, const int&) const;
+
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+		  const Box*, Comm*);
+  void ReadInteractions(Comm*);
+  void SetupInteractions(const Box*, const double&, Comm*);
+  void SetupNeighbor(const string&, const int&,const double&, 
+                        double&, double&, const Box*, Comm*);
+
+ private:
+  void tersoff_cut_cross_setup(const double&, const double&, const double&, 
+			       const double&, const double&, const double&, 
+			       const double&, const double&, const double&, 
+		    const double&, ff_params&);
+  void tersoff_cut_pure_setup(const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    ff_params&);
+  void tersoff_zbl_pure_setup(const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    ff_params&);
+  void tersoff_moliere_pure_setup(const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    ff_params&);
+  void tersoff_morse_pure_setup(const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, 
+		    ff_params&);
+
+  // Functions based on standard Tersoff potential
+  void force_tersoff_ij_cut(const double&, const double[], 
+		    double[], const bool&, const bool&, double&, double[],
+		    double&, const int&) const;
+  void force_tersoff_ijk_cut(const double&, 
+		    const double[], const double[], 
+		    double[], double[], 
+		    const bool&, double[],
+		    const int&, const int&) const;
+  void force_tersoff_repulsive_cut(const double[],double[], 
+		    const bool&, const bool&, double&, double[],
+		    const int&) const;
+
+  double zetaterm_tersoff_cut(const double[], 
+			      const double[], const int&, const int&) const;
+
+  // Functions based on ZBL Tersoff potential
+  void force_tersoff_repulsive_zbl(const double[], double[], 
+		    const bool&, const bool&, double&, double[],
+		    const int&) const;
+  // Functions based on Moliere Tersoff potential
+  void force_tersoff_repulsive_moliere(const double[], double[], 
+		    const bool&, const bool&, double&, double[],
+		    const int&) const;
+
+  // Functions based on Morse Tersoff potential
+  void force_tersoff_ij_morse(const double&, const double[], 
+		    double[], const bool&, const bool&, double&, double[],
+		    double&, const int&) const;
+  void force_tersoff_ijk_morse(const double&, 
+		    const double[], const double[], 
+		    double[], double[], 
+		    const bool&, double[],
+		    const int&, const int&) const;
+  void force_tersoff_repulsive_morse(const double[], double[], 
+		    const bool&, const bool&, double&, double[],
+		    const int&) const;
+  double zetaterm_tersoff_morse(const double[], 
+			      const double[], const int&, const int&) const;
+  void zetaterm_tersoff_morse_d(const double&, 
+			 const double[], const double&,
+			 const double[], const double&, const double&, const double&, 
+			 double[], double[], const int&) const;
+
+  // Low-level Tersoff functions
+  double ters_fc(const double&, const int&) const;
+  double ters_fc_d(const double&, const int&) const;
+  double ters_fa(const double&, const double&, const int&) const;
+  double ters_fa_d(const double&, const double&, const double&, const int&) const;
+  double zbl(const double&, const double&, const int&) const;
+  double zbl_d(const double&, const double&, const int&) const;
+  double moliere(const double&, const double&, const int&) const;
+  double moliere_d(const double&, const double&, const int&) const;
+  double ters_bij(const double&, const int&) const;
+  double ters_bij_d(const double&, const int&) const;
+  double ters_gijk(const double&, const int&) const ;
+  double ters_gijk_d(const double&, const int&) const ;
+  void costheta_d(const double[], const double&,
+		  const double[], const double&,
+		  double[], double[], double[]) const;
+  double ters_bij_morse(const double&, const int&) const;
+  double ters_bij_morse_d(const double&, const int&) const;
+
+};
+#endif
+
+@
+
+
+4.9
+log
+@Optimized Tersoff
+@
+text
+@d123 1
+a123 1
+                        double&, const Box*, Comm*);
+@
+
+
+4.8
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d102 6
+d124 2
+a134 8
+  void force_tersoff_ij_cut(const double&, const double[], const double[], 
+		    double[], const bool&, const bool&, double&, double[],
+		    double&, const int&) const;
+  void force_tersoff_ijk_cut(const double&, 
+		    const double[], const double[], const double[], 
+		    double[], double[], 
+		    const bool&, double[],
+		    const int&, const int&) const;
+d147 16
+a162 1
+  void force_tersoff_repulsive_cut(const double[], const double[], double[], 
+d165 6
+a170 1
+  void force_tersoff_repulsive_zbl(const double[], const double[], double[], 
+d173 2
+a174 1
+  void force_tersoff_repulsive_moliere(const double[], const double[], double[], 
+a176 24
+  double zetaterm_tersoff_cut(const double[], const double[], 
+			      const double[], const int&, const int&) const;
+
+  double ters_fc(const double&, const int&) const;
+  double ters_fc_d(const double&, const int&) const;
+  double ters_fa(const double&, const int&) const;
+  double ters_fa_d(const double&, const int&) const;
+  double zbl(const double&, const int&) const;
+  double zbl_d(const double&, const int&) const;
+  double moliere(const double&, const int&) const;
+  double moliere_d(const double&, const int&) const;
+  double ters_bij(const double&, const int&) const;
+  double ters_bij_d(const double&, const int&) const;
+  double ters_gijk(const double&, const int&) const ;
+  double ters_gijk_d(const double&, const int&) const ;
+  void ters_zetaterm_d(const double&, 
+			 const double[], const double&,
+			 const double[], const double&, 
+			 double[], double[], const int&) const;
+  void costheta_d(const double[], const double[], 
+		  double[], double[], double[]) const;
+  void costheta_d(const double[], const double&,
+		  const double[], const double&,
+		  double[], double[], double[]) const;
+d178 2
+a179 6
+  void tersoff_morse_pure_setup(const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, const double&, 
+		    const double&, const double&, 
+		    ff_params&);
+  void force_tersoff_ij_morse(const double&, const double[], const double[], 
+d183 1
+a183 1
+		    const double[], const double[], const double[], 
+d187 1
+a187 1
+  void force_tersoff_repulsive_morse(const double[], const double[], double[], 
+d190 1
+a190 1
+  double zetaterm_tersoff_morse(const double[], const double[], 
+d192 1
+a192 1
+  void ters_zetaterm_morse_d(const double&, 
+d194 1
+a194 1
+			 const double[], const double&, 
+d196 17
+@
+
+
+4.7
+log
+@Fixed bug in parameter selection for Tersoff alloys.
+@
+text
+@d111 2
+a112 1
+  void ApplyForce(const bool&, const bool&, ParticleList*, 
+d132 1
+a132 1
+		    double[], double[], double[], 
+d174 1
+a174 1
+			 double[], double[], double[], const int&) const;
+d191 1
+a191 1
+		    double[], double[], double[], 
+d202 1
+a202 1
+			 double[], double[], double[], const int&) const;
+@
+
+
+4.7.2.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@d131 1
+a131 1
+		    double[], double[], 
+d173 1
+a173 1
+			 double[], double[], const int&) const;
+d190 1
+a190 1
+		    double[], double[], 
+d201 1
+a201 1
+			 double[], double[], const int&) const;
+@
+
+
+4.7.2.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d111 1
+a111 2
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+@
+
+
+4.6
+log
+@Added GaAs version of Tersoff
+@
+text
+@d133 1
+a133 1
+		    const int&) const;
+d156 1
+a156 1
+			      const double[], const int&) const;
+d192 1
+a192 1
+		    const int&) const;
+d197 1
+a197 1
+			      const double[], const int&) const;
+@
+
+
+4.5
+log
+@add the Moliere short-range potential to the tersoff potential
+@
+text
+@d60 1
+a60 1
+  enum ForceFieldTypes {tersoff_cut,tersoff_zbl,tersoff_moliere};
+d157 1
+d179 26
+@
+
+
+4.4
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d60 1
+a60 1
+  enum ForceFieldTypes {tersoff_cut,tersoff_zbl};
+d90 13
+d140 6
+d152 3
+d163 2
+@
+
+
+4.4.2.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d101 1
+a101 1
+  void SetupInteractions(const ParticleList*, const Box*, const double&, Comm*);
+@
+
+
+4.4.2.2
+log
+@Latest PPPM version
+@
+text
+@d99 1
+a99 1
+		  const Box*, double&, Comm*);
+d101 1
+a101 1
+  void SetupInteractions(ParticleList*, const Box*, double&, Comm*);
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d101 1
+a101 1
+  void SetupInteractions(const Box*, const Force_Ewald*, Comm*);
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a99 6
+
+  // added saubry (01-24-05)
+  void EnergyChange(int*, vector <double>,const bool&, ParticleList*, 
+		    const Box*, Comm*);
+
+
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d100 3
+a102 1
+  void EnergyChange(int*, double[3],const bool&, ParticleList*, 
+d104 2
+@
+
+
+4.3.2.1.2.2
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d100 2
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+a99 6
+
+  // added saubry (01-24-05)
+  void EnergyChange(int*, vector <double>,const bool&, ParticleList*, 
+		    const Box*, Comm*);
+
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d84 6
+@
+
+
+3.2
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.1
+log
+@Added tersoff_zbl force type
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.1.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a83 6
+
+  // added saubry (01-24-05)
+  void EnergyChange(int*, vector <double>,
+		    const bool&, const bool&, ParticleList*, 
+		    const Box*, Comm*);
+
+@
+
+
+3.1.6.2
+log
+@Update changes.
+@
+text
+@d86 2
+a87 1
+  void EnergyChange(int*, vector <double>,const bool&, ParticleList*, 
+@
+
+
+3.1.6.3
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a88 1
+
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d44 1
+a44 1
+  enum ForceFieldTypes {tersoff_cut};
+d58 16
+d105 6
+d114 3
+d123 2
+@
+
+
+2.3
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.3.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@@
+
+
+2.2
+log
+@Updated header
+@
+text
+@d60 1
+@
+
+
+2.1
+log
+@Added the Tersoff force field class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+

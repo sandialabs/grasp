@@ -1,0 +1,128 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.1
+	P_MonacoTesting:3.1.0.6
+	InitialGraspTesting:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	cjkimme_version_merge_from_trunk_1:1.2.2.1
+	cjkimme_version:1.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.05.20.22.11.35;	author athomps;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2004.03.01.18.14.14;	author athomps;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@#
+#	Truncated Lennard-Jones interactions
+#	Mixing rule required for B/C interaction.
+#
+#A   A   lj_cut_shift_coul  4.184 1.0 6.0
+#A   A   lj_cut_coul  4.184 1.0 6.0
+A   A   lj_ewald_cut_shift  4.184 1.0 6.0
+#A   A   lj_cut_ewald  4.184 1.0 6.0
+#A   A   lj_cut  4.184 1.0 6.0
+
+@
+
+
+3.1
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d7 1
+a7 1
+A   A   lj_cut_shift_ewald  4.184 1.0 6.0
+@
+
+
+1.2
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@@
+
+
+1.2.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.1
+log
+@Added Ewald sum example
+@
+text
+@d8 2
+@
+

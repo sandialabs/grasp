@@ -1,0 +1,83 @@
+head	1.1;
+access;
+symbols
+	PreMonaco:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.02.09.03.14.41;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.02.09.03.14.41;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.02.09.07.17.19;	author athomps;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.02.10.01.57.05;	author athomps;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file reax_params_n621.h was initially added on branch REAXFF.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@dAdded param files to testrdx and testreax
+@
+text
+@a0 4
+class ReaxParams {
+ public:
+  enum {nneighmax = 50, nat = 4000,mbond=20,nsort=20,nattot=621};
+};
+@
+
+
+1.1.2.2
+log
+@Updated parameter files
+@
+text
+@a0 1
+#include "reax_defs.h"
+d3 1
+a3 6
+  enum {nneighmax=50, 
+	nat=4000, 
+	nattot=621, 
+        nsort=20,
+	mbond=20, 
+  };
+@
+
+
+1.1.2.3
+log
+@Added origin shift (6.25A) to input.
+Included reax_defs.h file for each example.
+@
+text
+@@
+
+

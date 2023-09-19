@@ -1,0 +1,98 @@
+head	1.1;
+access;
+symbols
+	PreMonaco:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2004.12.23.03.26.06;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.12.23.03.26.06;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.01.03.00.24.41;	author athomps;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.01.04.00.33.04;	author athomps;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file inp.dat was initially added on branch REAXFF.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added 600 atom example to REAXFF branch
+@
+text
+@a0 24
+# twobody 4-particle input data
+# forcefield twobody 	twobody.in   Lennard-Jones
+forcefield reax         ReaxFF
+init config reax
+timestep 		0.25
+nsteps 			100
+# 
+# Currently, these dimensions must match the Reaxx
+# geo or fort.3 file.
+#
+box dimensions 		37.5.0	0.0	0.0	\
+			0.0	37.5.0	0.0	\
+			0.0	0.0	37.5.0
+box origin 		0.0 		0.0 		0.0
+initialize temperature 	0.0 		256
+neighbor		nsq 		25 		2.5
+thermo 			100
+dump particles 		100
+dump forces 		100
+
+
+
+
+
+@
+
+
+1.1.2.2
+log
+@Fixed bug in inp.dat
+@
+text
+@d11 3
+a13 3
+box dimensions 		37.5	0.0	0.0	\
+			0.0	37.5	0.0	\
+			0.0	0.0	37.5
+@
+
+
+1.1.2.3
+log
+@This is an 621 particle rdx example that matches the energies, forces and trajectory
+from Adri's March code very well. See also directory testrdx_reax.
+@
+text
+@@
+
+

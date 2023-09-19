@@ -1,0 +1,90 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.05.03.57;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.03.30.23.32.07;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.03.30.23.32.07;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@C       reax    5.7254000000 6.9235000000 0.8712000000  0.0  10.0
+H       reax    3.8196000000 9.8832000000 0.7625000000  0.0  10.0
+O       reax    8.5000000000 7.8386000000 1.0804000000  0.0  10.0
+N       reax    6.8418000000 6.3404000000 0.8596000000  0.0  10.0
+
+@
+
+
+1.2
+log
+@Cleaning up testrdx
+@
+text
+@@
+
+
+1.1
+log
+@file chargeequil_reax.in was initially added on branch REAXFF.
+@
+text
+@d1 5
+@
+
+
+1.1.2.1
+log
+@Separated charge equilibration input from REAX
+@
+text
+@a0 5
+C       reax    5.7254000000 6.9235000000 0.8712000000  0.0  10.0
+H       reax    3.8196000000 9.8832000000 0.7625000000  0.0  10.0
+O       reax    8.5000000000 7.8386000000 1.0804000000  0.0  10.0
+N       reax    6.8418000000 6.3404000000 0.8596000000  0.0  10.0
+
+@
+

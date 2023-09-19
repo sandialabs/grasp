@@ -1,0 +1,125 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoTesting:3.0.0.6
+	InitialGraspTesting:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:1.2.2.1
+	cjkimme_version:1.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.04.28.22.00.03;	author athomps;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2003.11.03.23.34.18;	author athomps;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@# dft 256-particle input data
+# x-dimension must be made big enough to avoid
+# particle-wall periodic interactions, i.e.
+# xlo <= x_leftwall - rcut/2.0 
+# xhi >= x_rightwall + rcut/2.0 
+forcefield external 	external.in LJ-93-Wall
+forcefield twobody 	twobody.in Lennard-Jones
+timestep 		0.005
+nsteps 			1000
+box dimensions		12.0  0.00000000  0.00000000 		\
+			0.00000000  6.34960440  0.00000000	\
+			0.00000000  0.00000000  6.34960440
+box origin 		-6.0 	0.0 	0.0
+initialize temperature 	2.0		256
+#Prior to April 2004, skin was 0.2, which was too short.
+neighbor 		nsq		10 		0.5
+thermo 			100
+dump particles 		1000
+dump velocities 	1000
+density profile		10 		120 		1
+units			reduced
+temperature control	rescale	2.0 100 0.05 1.0
+
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@@
+
+
+1.2
+log
+@See previous checkin of source for info.
+@
+text
+@@
+
+
+1.2.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.1
+log
+@Pushed the examples down into directories.
+@
+text
+@d15 2
+a16 1
+neighbor 		nsq		10 		0.2
+@
+

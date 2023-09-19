@@ -1,0 +1,1111 @@
+head	4.7;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	cjkimme_version_merge_from_trunk_1:1.1.2.2
+	cjkimme_version:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.7
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.4.4.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.09.09.21.01.42;	author cjkimme;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+4.4.4.1
+date	2006.09.07.19.49.27;	author athomps;	state Exp;
+branches;
+next	4.4.4.2;
+
+4.4.4.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.7
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "grain_boundary_minimizer.h"
+#include "constants.h"
+#include "particletypelist.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+#include "vec3.h"
+extern Log glog;
+extern Constants constants;
+
+Grain_Boundary_Minimizer::Grain_Boundary_Minimizer():
+  tplus_old(3),
+  tminus_old(3)
+{
+}
+
+void Grain_Boundary_Minimizer::Setup(const string input_string,
+                Comm* commp) {
+
+  int node;
+  string str_tmp;
+
+  comm = commp;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering Grain_Boundary_Minimizer::Setup()" << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Grain_Boundary_Minimizer::Setup()" << endl;
+  }
+
+
+  glog.get_logfile() << "grain boundary minimizer";
+
+  std::stringstream buf_in(input_string);
+  minimize_style = minimize_grain_boundary;
+  buf_in >> strtypeA >> strtypeB;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Grain_Boundary_Minimizer::Setup:\n"
+	       "Read error in input string"+str_tmp);
+  }
+  glog.get_logfile() << " " << strtypeA << " " << strtypeB;
+  buf_in >> max_cg_its;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Grain_Boundary_Minimizer::input_minimize:\n"
+  	       "Cannot read in max_cg_its");
+  }
+  glog.get_logfile() << " " << max_cg_its;
+  buf_in >> max_ls_its;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Grain_Boundary_Minimizer::input_minimize:\n"
+  	       "Cannot read in maximum number of line search iterations");
+  }
+  glog.get_logfile() << " " << max_cg_its;
+  buf_in >> line_search_tol;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in line search tolerance");
+  }
+  glog.get_logfile() << " " << line_search_tol;
+  buf_in >> max_cg_force;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Grain_Boundary_Minimizer::input_minimize:\n"
+  	       "Cannot read max_cg_force");
+  }
+  glog.get_logfile() << " " << max_cg_force;
+  buf_in >> L_z; // temp - figure out a better way
+}
+
+void Grain_Boundary_Minimizer::Run(const int nsteps, const double timestep,
+           Box* bp, ParticleTypeList* tp,
+           ParticleList* pp, ForceFieldList* ffp,
+           Output* outpp, FixList* fix_listp, Comm* commp) 
+{
+  double t0,t1;
+
+  // initialize class members
+  box = bp;
+  t = tp;
+  p = pp;
+  ff = ffp;
+  comm = commp;
+
+  t0 = MPI_Wtime();
+  if (!(t->find_id(strtypeA,typeA)))
+      glog.abort("Grain_Boundary_Minimizer::Run"
+		 "Cannot find type "+strtypeA);
+  if (!(t->find_id(strtypeB,typeB)))
+    glog.abort("Grain_Boundary_Minimizer::Run"
+	       "Cannot find type "+strtypeB);
+
+
+  // r and f are coords + tplus{x,y} + tminus{x,y} + H33
+  nplus = 3*p->get_nminimized();
+  nminus = nplus + 2;
+  nH33 = nminus + 2;
+  int nmin = nplus + 5;
+ 
+  double energy;
+  valarray<double> r(nmin), f(nmin);
+  p->SaveMinimized(r);
+  r[nplus] = r[nplus+1] = 0.; // initialize tplus
+  r[nminus] = r[nminus+1] = 0.; // initialize tminus
+  tplus_old = 0.;
+  tminus_old = 0.;
+  r[nH33] = 1.; // this is a strain, so initially at bulk interplanar sep.
+ 
+  glog.get_logfile() << "Minimizing " << nmin << " degrees of freedom\n";
+
+  if (linesearch_x0)
+    delete linesearch_x0;
+  linesearch_x0 = new valarray<double>(nmin);
+  if (linesearch_x)
+    delete linesearch_x;
+  linesearch_x = new valarray<double>(nmin);
+  if (linesearch_dir)
+    delete linesearch_dir;
+  linesearch_dir = new valarray<double>(nmin);
+
+  // returns rigid-body separation R between typeA and typeB
+  EvaluateFunctionAndGradient(&energy, r, f); 
+  int nits = NRMinimize(&energy, r, f); 
+
+  glog.get_logfile() << "First time took " << nits << "\n";
+
+  // restart it to verify minimum
+  nits = NRMinimize(&energy, r, f);
+
+  glog.get_logfile() << "Second time took " << nits << "\n";
+    
+  t1 = MPI_Wtime();
+  glog.timetotal = t1-t0;
+  int istep = 1;
+  outpp->WriteOutput(istep,p,box,t,comm,ff,fix_listp,0,false,false,NULL);
+
+}
+
+/* Evaluate interfacial energy at the point lastPoint + x * lastDirection  */
+void Grain_Boundary_Minimizer::EvaluateFunctionAndGradient(double* energy, valarray<double>&x, valarray<double>& force)
+{
+
+  /* plan for a quick exit strategy if compression or expansion are too severe */
+  if (x[nH33] < 0.1 || x[nH33] > 2.) {
+    *energy = 10000000.;
+    force = 0;
+    return ;
+  }
+
+  ForceField* const* forcefields;
+  int node;
+  int nforcefields;
+  vector<double> tmp, e_ff;
+  valarray<double> dr(3);
+  int npieces;
+
+  node = comm->get_node();
+
+  /* shift typeA by tplus */
+  dr[0] = x[nplus] - tplus_old[0];
+  dr[1] = x[nplus+1] - tplus_old[1];
+  dr[2] = L_z/2.*(x[nH33] - 1.) - tplus_old[2]; // enforce the z-constraint
+  p->TranslateByType(typeA,dr);
+  tplus_old[0] = x[nplus];
+  tplus_old[1] = x[nplus+1];
+  tplus_old[2] = L_z*(x[nH33] - 1.)/2.; 
+  if (node == 0) {
+   glog.get_logfile() << " dr top " << dr[0] << " " << dr[1] << " " << dr[2] << "\n";
+   glog.get_logfile().flush();
+  } 
+
+
+  /* shift typeB by tminus */
+  dr[0] = x[nminus] - tminus_old[0];
+  dr[1] = x[nminus+1] - tminus_old[1];
+  dr[2] = -L_z/2.*(x[nH33] - 1.) - tplus_old[3]; // enforce the z-constraint
+  tminus_old[0] = x[nminus];
+  tminus_old[1] = x[nminus+1];
+  tminus_old[2] = -L_z*(x[nH33] - 1.)/2.; 
+  p->TranslateByType(typeB,dr);
+  if (node == 0) {
+   glog.get_logfile() << " dr bottom " << dr[0] << " " << dr[1] << " " << dr[2] << "\n";
+   glog.get_logfile() << " x.max " << x.max() << "\n";
+   glog.get_logfile().flush();
+  } 
+
+  /* apply conjugate--gradient update */
+  p->MoveMinimized(x);
+
+  /* apply scaling */
+  double dilation[3];
+  dilation[0] = dilation[1] = 1.; // H(1,1) and H(2,2) are fixed
+  dilation[2] = x[nH33];
+  box->BoxDilate(dilation);
+  p->ScaleMinimized(box, dilation);
+
+  ff->Neighboring(p, box, comm,false);
+  ff->ComputeForce(true,true,false,box,t,p,comm);
+  *energy = 0.;
+  forcefields = ff->get_forcefields();
+  nforcefields = ff->get_nforcefields();
+  for (int iff = 0;iff<nforcefields;iff++) {
+    ForceField* ffiff = forcefields[iff];
+    npieces = ffiff->get_npieces();
+    tmp = ffiff->get_energy();
+    e_ff.resize(npieces);
+    MPI_Allreduce(&tmp[0],&e_ff[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    if (node == 0) 
+      for (int ipiece=0;ipiece<npieces;ipiece++) 
+	 *energy += e_ff[ipiece];
+  }
+  MPI_Bcast(energy,1,MPI_DOUBLE,0,comm->get_world());
+  
+  /* Save gradient for region I atoms */
+  p->SaveGradient(force);
+  for (int i = 2; i < nminus; i += 3) // apply chain rule
+    force[i] *= dilation[2];
+
+  /* Save gradient for region II atoms */
+  valarray<double> fA(3), fB(3);
+  fA = 0.;
+  fB = 0.;
+  p->SumForceByType(typeA, fA, comm);
+  p->SumForceByType(typeB, fB, comm);
+  force[nplus] = fA[0];
+  force[nplus+1] = fA[1];
+  force[nminus] = fB[0];
+  force[nminus+1] = fB[1];
+ 
+  /* Save zz component of stress */
+  vector<double> f_virial_tmp(6);
+  ff->get_virial(f_virial_tmp);
+  force[nH33] = -f_virial_tmp[2]/x[nH33]; // should be zz part
+  //force[nH33] = 0.; // zero out this DOF for now
+
+  /* resdiual calculation */
+  double res = 0.;
+  for (int i = 0; i < force.size(); i++)
+    res += force[i]*force[i];
+  force *= -1.; // convert force to gradient
+  if (node == 0) {
+    glog.get_logfile() << " Energy = " << *energy << " Res = " << res << " eps_zz = " << x[nH33] << "\n";
+    glog.get_logfile().flush();
+  }
+}
+
+@
+
+
+4.6
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@d201 1
+a201 1
+  outpp->WriteOutput(istep,p,box,t,comm,ff,fix_listp,0,false,false);
+@
+
+
+4.5
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d76 1
+a76 1
+                Comm* comm) {
+d81 2
+d145 1
+a145 1
+  b = bp;
+d201 1
+a201 1
+  outpp->WriteOutput(istep,p,b,t,comm,ff,fix_listp,0,false,false);
+d260 2
+a261 2
+  b->BoxDilate(dilation);
+  p->ScaleMinimized(b, dilation);
+d263 2
+a264 2
+  ff->Neighboring(p, b, comm,false);
+  ff->ComputeForce(true,true,false,b,t,p,comm);
+@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@d262 1
+a262 1
+  ff->ComputeForce(true,ForceFieldList::free_particles,b,t,p,comm);
+@
+
+
+4.4.4.1
+log
+@Implemented ri*Fi pressure calc
+@
+text
+@d262 1
+a262 1
+  ff->ComputeForce(true,true,b,t,p,comm);
+@
+
+
+4.4.4.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d262 1
+a262 1
+  ff->ComputeForce(true,true,false,b,t,p,comm);
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d84 2
+a85 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Grain_Boundary_Minimizer::Setup()" << endl;
+d93 1
+a93 1
+  glog.logfile << "grain boundary minimizer";
+d99 1
+a99 1
+    glog.logfile << endl;
+d103 1
+a103 1
+  glog.logfile << " " << strtypeA << " " << strtypeB;
+d106 1
+a106 1
+    glog.logfile << endl;
+d110 1
+a110 1
+  glog.logfile << " " << max_cg_its;
+d113 1
+a113 1
+    glog.logfile << endl;
+d117 1
+a117 1
+  glog.logfile << " " << max_cg_its;
+d120 1
+a120 1
+    glog.logfile << endl;
+d124 1
+a124 1
+  glog.logfile << " " << line_search_tol;
+d127 1
+a127 1
+    glog.logfile << endl;
+d131 1
+a131 1
+  glog.logfile << " " << max_cg_force;
+d173 1
+a173 1
+  glog.logfile << "Minimizing " << nmin << " degrees of freedom\n";
+d189 1
+a189 1
+  glog.logfile << "First time took " << nits << "\n";
+d194 1
+a194 1
+  glog.logfile << "Second time took " << nits << "\n";
+d232 2
+a233 2
+   glog.logfile << " dr top " << dr[0] << " " << dr[1] << " " << dr[2] << "\n";
+   glog.logfile.flush();
+d246 3
+a248 3
+   glog.logfile << " dr bottom " << dr[0] << " " << dr[1] << " " << dr[2] << "\n";
+   glog.logfile << " x.max " << x.max() << "\n";
+   glog.logfile.flush();
+d307 2
+a308 2
+    glog.logfile << " Energy = " << *energy << " Res = " << res << " eps_zz = " << x[nH33] << "\n";
+    glog.logfile.flush();
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: 8 January 2004
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 1
+a13 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d15 1
+a15 1
+//    Primary Author: Aidan P. Thompson
+d19 4
+a22 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a25 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: 8 January 2004
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d70 5
+a74 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Grain_Boundary_Minimizer::Setup()" << endl;
+#endif
+@
+
+
+1.1
+log
+@file grain_boundary_minimizer.cpp was initially added on branch cjkimme_version.
+@
+text
+@d1 292
+@
+
+
+1.1.2.1
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a0 264
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: 8 January 2004
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "grain_boundary_minimizer.h"
+#include "constants.h"
+#include "particletypelist.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+#include "vec3.h"
+extern Log glog;
+extern Constants constants;
+
+#define MAX_ITERATIONS 10
+#define LINESEARCHMAX 100
+#define XIDAMP 10000.
+
+Grain_Boundary_Minimizer::Grain_Boundary_Minimizer():
+  tplus_old(3),
+  tminus_old(3)
+{
+}
+
+void Grain_Boundary_Minimizer::Setup(const string input_string,
+                Comm* comm) {
+
+  int node;
+  string str_tmp;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Grain_Boundary_Minimizer::Setup()" << endl;
+  }
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Grain_Boundary_Minimizer::Setup()" << endl;
+#endif
+
+  glog.logfile << "grain boundary minimizer";
+
+  stringstream buf_in(input_string);
+  minimize_style = minimize_grain_boundary;
+  buf_in >> strtypeA >> strtypeB;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Grain_Boundary_Minimizer::Setup:\n"
+	       "Read error in input string"+str_tmp);
+  }
+  glog.logfile << " " << strtypeA << " " << strtypeB;
+  buf_in >> max_cg_its;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Grain_Boundary_Minimizer::input_minimize:\n"
+  	       "Cannot read in max_cg_its");
+  }
+  glog.logfile << " " << max_cg_its;
+  buf_in >> tolerance;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Grain_Boundary_Minimizer::input_minimize:\n"
+  	       "Cannot read in tolerance");
+  }
+  glog.logfile << " " << tolerance;
+  buf_in >> line_search_tol;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in line search tolerance");
+  }
+  glog.logfile << " " << line_search_tol;
+  buf_in >> max_cg_force;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Grain_Boundary_Minimizer::input_minimize:\n"
+  	       "Cannot read max_cg_force");
+  }
+  glog.logfile << " " << max_cg_force;
+
+}
+
+void Grain_Boundary_Minimizer::Run(const int nsteps, const double timestep,
+           Box* bp, ParticleTypeList* tp,
+           ParticleList* pp, ForceFieldList* ffp,
+           Output* outpp, FixList* fix_listp, Comm* commp) 
+{
+  double t0,t1;
+
+  // initialize class members
+  b = bp;
+  t = tp;
+  p = pp;
+  ff = ffp;
+  comm = commp;
+
+  t0 = MPI_Wtime();
+  if (!(t->find_id(strtypeA,typeA)))
+      glog.abort("Grain_Boundary_Minimizer::Run"
+		 "Cannot find type "+strtypeA);
+  if (!(t->find_id(strtypeB,typeB)))
+    glog.abort("Grain_Boundary_Minimizer::Run"
+	       "Cannot find type "+strtypeB);
+
+
+  // r and f are coords + tplus{x,y} + tminus{x,y} + H33
+  nplus = 3*p->get_nminimized();
+  nminus = nplus + 2;
+  nH33 = nminus + 2;
+  int nmin = nplus + 5;
+ 
+  double energy;
+  valarray<double> r(nmin), f(nmin);
+  p->SaveMinimized(r);
+  r[nplus] = r[nplus+1] = 0.; // initialize tplus
+  r[nminus] = r[nminus+1] = 0.; // initialize tminus
+  tplus_old = 0.;
+  tminus_old = 0.;
+  r[nH33] = 1.; // this is a strain, so initially at bulk interplanar sep.
+ 
+  glog.logfile << "Minimizing " << nmin << " degrees of freedom\n";
+
+  if (linesearch_x0)
+    delete linesearch_x0;
+  linesearch_x0 = new valarray<double>(nmin);
+  if (linesearch_x)
+    delete linesearch_x;
+  linesearch_x = new valarray<double>(nmin);
+  if (linesearch_dir)
+    delete linesearch_dir;
+  linesearch_dir = new valarray<double>(nmin);
+
+  // returns rigid-body separation R between typeA and typeB
+  EvaluateFunctionAndGradient(&energy, r, f); 
+  int nits = NRMinimize(&energy, r, f); 
+
+  glog.logfile << "First time took " << nits << "\n";
+
+  // restart it to verify minimum
+  nits = NRMinimize(&energy, r, f);
+
+  glog.logfile << "Second time took " << nits << "\n";
+    
+  t1 = MPI_Wtime();
+  glog.timetotal = t1-t0;
+  int istep = 1;
+  outpp->WriteOutput(istep,p,b,t,comm,ff,fix_listp,0);
+
+}
+
+/* Evaluate interfacial energy at the point lastPoint + x * lastDirection  */
+void Grain_Boundary_Minimizer::EvaluateFunctionAndGradient(double* energy, valarray<double>&x, valarray<double>& force)
+{
+
+  ForceField* const* forcefields;
+  int node;
+  int nforcefields;
+  vector<double> tmp, e_ff;
+  valarray<double> dr(3);
+  int npieces;
+
+  node = comm->get_node();
+
+  // shift typeA by tplus
+  dr[0] = x[nplus] - tplus_old[0];
+  dr[1] = x[nplus+1] - tplus_old[1];
+  dr[2] = (x[nH33] - 1.)/2 - tplus_old[2]; // enforce the z-constraint
+  p->TranslateByType(typeA,dr);
+  tplus_old[0] = x[nplus];
+  tplus_old[1] = x[nplus+1];
+  tplus_old[2] = (x[nH33] - 1.)/2; 
+  // shift typeB by tminus
+  dr[0] = x[nminus] - tminus_old[0];
+  dr[1] = x[nminus+1] - tminus_old[1];
+  dr[2] = -1./2.*(x[nH33] - 1.) - tplus_old[3]; // enforce the z-constraint
+  tminus_old[0] = x[nminus];
+  tminus_old[1] = x[nminus+1];
+  tminus_old[2] = -1.*(x[nH33] - 1.)/2;
+  // shift type I atoms
+  p->TranslateByType(typeB,dr);
+  // apply scaling?
+   
+  // apply conjugate--gradient update
+  p->MoveMinimized(x);
+  ff->Neighboring(p, b, comm);
+  ff->ComputeForce(b,t,p,comm);
+  *energy = 0.;
+  forcefields = ff->get_forcefields();
+  nforcefields = ff->get_nforcefields();
+  for (int iff = 0;iff<nforcefields;iff++) {
+    ForceField* ffiff = forcefields[iff];
+    npieces = ffiff->get_npieces();
+    tmp = ffiff->get_energy();
+    e_ff.resize(npieces);
+    MPI_Allreduce(&tmp[0],&e_ff[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    if (node == 0) 
+      for (int ipiece=0;ipiece<npieces;ipiece++) 
+	 *energy += e_ff[ipiece];
+  }
+  MPI_Bcast(energy,1,MPI_DOUBLE,0,comm->get_world());
+  
+  /* Save gradient for type I atoms */
+  p->SaveGradient(force);
+
+  /* Save gradient for type II atoms */
+  valarray<double> fA(3), fB(3);
+  fA = 0.;
+  fB = 0.;
+  p->SumForceByType(typeA, fA, comm);
+  p->SumForceByType(typeB, fB, comm);
+  force[nplus] = fA[0];
+  force[nplus+1] = fA[1];
+  force[nminus] = fB[0];
+  force[nminus+1] = fB[1];
+ 
+  /* Save zz component of stress */
+  
+
+  /* resdiual calculation */
+  double res = 0.;
+  for (int i = 0; i < force.size(); i++)
+    res += force[i]*force[i];
+  force *= -1.; // convert force to gradient
+  if (node == 0)
+    glog.logfile << " Energy = " << *energy << " Res = " << res << "\n";
+}
+@
+
+
+1.1.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d52 4
+d80 1
+a80 1
+  std::stringstream buf_in(input_string);
+d184 1
+a184 1
+  outpp->WriteOutput(istep,p,b,t,comm,ff,fix_listp,0,false,false);
+d222 2
+a223 2
+  ff->Neighboring(p, b, comm,false);
+  ff->ComputeForce(true,true,b,t,p,comm);
+d240 1
+a240 1
+  /* Save gradient for type mobile atoms */
+d243 1
+a243 1
+  /* Save gradient for type I and II atoms */
+d255 1
+a255 4
+  vector<double> f_virial_tmp;
+  ff->get_virial(f_virial_tmp);
+  //force[nH33] = f_virial_tmp[2]; // should be zz part
+  force[nH33] = 0.; // zero out this DOF for now
+@
+
+
+1.1.2.3
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d92 1
+a92 1
+  buf_in >> max_ls_its;
+d96 1
+a96 1
+  	       "Cannot read in maximum number of line search iterations");
+d98 1
+a98 1
+  glog.logfile << " " << max_cg_its;
+d113 1
+a113 1
+  buf_in >> L_z; // temp - figure out a better way
+a187 7
+  /* plan for a quick exit strategy if compression or expansion are too severe */
+  if (x[nH33] < 0.1 || x[nH33] > 2.) {
+    *energy = 10000000.;
+    force = 0;
+    return ;
+  }
+
+d197 1
+a197 1
+  /* shift typeA by tplus */
+d200 1
+a200 1
+  dr[2] = L_z/2.*(x[nH33] - 1.) - tplus_old[2]; // enforce the z-constraint
+d204 2
+a205 8
+  tplus_old[2] = L_z*(x[nH33] - 1.)/2.; 
+  if (node == 0) {
+   glog.logfile << " dr top " << dr[0] << " " << dr[1] << " " << dr[2] << "\n";
+   glog.logfile.flush();
+  } 
+
+
+  /* shift typeB by tminus */
+d208 1
+a208 1
+  dr[2] = -L_z/2.*(x[nH33] - 1.) - tplus_old[3]; // enforce the z-constraint
+d211 2
+a212 1
+  tminus_old[2] = -L_z*(x[nH33] - 1.)/2.; 
+d214 3
+a216 7
+  if (node == 0) {
+   glog.logfile << " dr bottom " << dr[0] << " " << dr[1] << " " << dr[2] << "\n";
+   glog.logfile << " x.max " << x.max() << "\n";
+   glog.logfile.flush();
+  } 
+
+  /* apply conjugate--gradient update */
+a217 8
+
+  /* apply scaling */
+  double dilation[3];
+  dilation[0] = dilation[1] = 1.; // H(1,1) and H(2,2) are fixed
+  dilation[2] = x[nH33];
+  b->BoxDilate(dilation);
+  p->ScaleMinimized(b, dilation);
+
+d219 1
+a219 1
+  ff->ComputeForce(true,ForceFieldList::free_particles,b,t,p,comm);
+d236 1
+a236 1
+  /* Save gradient for region I atoms */
+a237 2
+  for (int i = 2; i < nminus; i += 3) // apply chain rule
+    force[i] *= dilation[2];
+d239 1
+a239 1
+  /* Save gradient for region II atoms */
+d251 1
+a251 1
+  vector<double> f_virial_tmp(6);
+d253 2
+a254 2
+  force[nH33] = -f_virial_tmp[2]/x[nH33]; // should be zz part
+  //force[nH33] = 0.; // zero out this DOF for now
+d261 2
+a262 4
+  if (node == 0) {
+    glog.logfile << " Energy = " << *energy << " Res = " << res << " eps_zz = " << x[nH33] << "\n";
+    glog.logfile.flush();
+  }
+a263 1
+
+@
+
+

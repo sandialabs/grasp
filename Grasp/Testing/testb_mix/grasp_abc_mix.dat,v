@@ -1,0 +1,350 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.2
+	REAX-2:1.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.03.12.01.54.18;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.03.12.00.10.10;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@/home/athomps/Grasp/Testing/testb_mix/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /home/athomps/Grasp/Testing/testb_mix/
+PATH_MAX is 4096
+
+
+
+Entering Input::ReadInput()
+forcefield twobody twobodyaa.in LJ-AA
+forcefield twobody twobodyabac.in LJ-ABAC
+forcefield twobody twobodybbcc.in LJ-BBCC(BC)
+timestep 1.0000000000
+nsteps 10
+box dimensions	14.0000000000	0.0000000000	0.0000000000 \
+			0.0000000000	14.0000000000	0.0000000000 \
+			0.0000000000	0.0000000000	14.0000000000
+box origin	-7.0000000000	-7.0000000000	-7.0000000000
+initialize temperature 0.0000000000 256
+neighbor bin 10 1.0000000000
+thermo 10
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 3
+A 10.0000000000
+B 10.0000000000
+C 10.0000000000
+
+
+
+Reading LJ-AA from file twobodyaa.in
+
+
+
+Reading LJ-ABAC from file twobodyabac.in
+
+
+
+Reading LJ-BBCC(BC) from file twobodybbcc.in
+
+
+
+Setting up force field class 0 called LJ-AA
+
+id1 	 id2 	 type 	rcutsq 	 np	 p1      p2    ....   p_np  
+A	A	0	9.000	5        48.00        24.00        4.000        4.000        0.000
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.000
+rskin = 1.000
+rcutneighmax = 4.000
+
+
+
+Setting up force field class 0 called LJ-ABAC
+
+id1 	 id2 	 type 	rcutsq 	 np	 p1      p2    ....   p_np  
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+A	B	0	9.000	5        52.80        26.40        4.400        4.400        0.000
+A	C	0	9.000	5        57.60        28.80        4.800        4.800        0.000
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Missing pure entry for this cross pair
+No interaction for this cross pair (B,C)
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.000
+rskin = 1.000
+rcutneighmax = 4.000
+
+
+
+Setting up force field class 0 called LJ-BBCC(BC)
+
+id1 	 id2 	 type 	rcutsq 	 np	 p1      p2    ....   p_np  
+B	B	0	9.000	5        62.40        31.20        5.200        5.200        0.000
+C	C	0	9.000	5        226.0        63.78        18.83        10.63        0.000
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Using mixing rule for cross pair (B,C)
+****************************************************
+B	C	0	9.000	5        120.4        44.91        10.03        7.485        0.000
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.000
+rskin = 1.000
+rcutneighmax = 4.000
+
+
+
+Entering ParticleList::ReadConfig()
+Will not read an initial velocity file 
+Will not read an initial displacement file 
+Total particles read = 1372
+
+
+
+Entering Output::Setup()
+
+
+
+Entering FixList::Setup()
+
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+LJ-AA               =     -1168.0118592309
+LJ-ABAC             =      -557.1252785999
+LJ-BBCC(BC)         =     -4778.7485174731
+Potential Energy    =     -6503.8856553039
+Kinetic Energy      =         0.0000000000
+Extended Energy     =         0.0000000000
+Total Energy        =     -6503.8856553039
+Pressure            =     -6390.2509008825
+Temperature         =         0.0000000000
+Total Particles     =                 1372
+Volume              =      2744.0000000000
+--------------- Step        10 ---- CPU =     0.2413 (sec) ---------------
+LJ-AA               =     -1167.8140891177
+LJ-ABAC             =      -556.1049867367
+LJ-BBCC(BC)         =     -4781.8506910203
+Potential Energy    =     -6505.7697668748
+Kinetic Energy      =         1.8841959530
+Extended Energy     =         0.0000000000
+Total Energy        =     -6503.8855709218
+Pressure            =     -6388.6072708877
+Temperature         =         0.1101952001
+
+
+
+Loop time: 0.2423965809 on 2 processors for 1372 particles
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.1185     48.90
+          Neigh Time    0.0209      8.64
+           Comm Time    0.0202      8.34
+       Exchange Time    0.0147      6.05
+        Revcomm Time    0.0404     16.69
+        Barrier Time    0.0240      9.90
+          Other Time    0.0036      1.49
+          Total Time    0.2424    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+LJ-AA                   0.0249 (    10)     0.0029 (     1) 
+LJ-ABAC                 0.0239 (    10)     0.0099 (     1) 
+LJ-BBCC(BC)             0.0598 (    10)     0.0081 (     1) 
+
+
+
+Finished 
+@
+
+
+1.2
+log
+@added use of mixing rule to example
+@
+text
+@@
+
+
+1.1
+log
+@Added a example of mixing twobos force fields
+@
+text
+@d11 1
+a11 3
+forcefield twobody twobodybb.in LJ-BB
+forcefield twobody twobodybc.in LJ-BC
+forcefield twobody twobodycc.in LJ-CC
+d44 1
+a44 1
+Reading LJ-BB from file twobodybb.in
+d48 1
+a48 5
+Reading LJ-BC from file twobodybc.in
+
+
+
+Reading LJ-CC from file twobodycc.in
+d65 4
+d94 4
+d100 1
+a100 14
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.000
+rskin = 1.000
+rcutneighmax = 4.000
+
+id1 	 id2 	 type 	rcutsq 	 np	 p1      p2    ....   p_np  
+d103 1
+a103 1
+Force field has no pure entry for particle type B
+d105 1
+a105 5
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+B	C	0	9.000	5        67.20        33.60        5.600        5.600        0.000
+a114 15
+id1 	 id2 	 type 	rcutsq 	 np	 p1      p2    ....   p_np  
+C	C	0	9.000	5        72.00        36.00        6.000        6.000        0.000
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 3.000
+rskin = 1.000
+rcutneighmax = 4.000
+
+d135 2
+a136 4
+LJ-BB               =     -1496.3840197928
+LJ-BC               =      -371.7295256672
+LJ-CC               =     -1762.6390752782
+Potential Energy    =     -5355.8897585690
+d139 2
+a140 2
+Total Energy        =     -5355.8897585690
+Pressure            =     -5643.4837024492
+d144 6
+a149 8
+--------------- Step        10 ---- CPU =     0.2468 (sec) ---------------
+LJ-AA               =     -1167.8135187864
+LJ-ABAC             =      -556.8804277933
+LJ-BB               =     -1496.8655080417
+LJ-BC               =      -371.7732919547
+LJ-CC               =     -1763.8068256406
+Potential Energy    =     -5357.1395722167
+Kinetic Energy      =         1.2499196747
+d151 3
+a153 3
+Total Energy        =     -5355.8896525420
+Pressure            =     -5642.9910570302
+Temperature         =         0.0731002253
+d157 1
+a157 1
+Loop time: 0.2469114960 on 2 processors for 1372 particles
+d163 8
+a170 8
+          Force Time    0.1266     51.27
+          Neigh Time    0.0243      9.86
+           Comm Time    0.0186      7.52
+       Exchange Time    0.0148      6.00
+        Revcomm Time    0.0391     15.85
+        Barrier Time    0.0201      8.13
+          Other Time    0.0034      1.37
+          Total Time    0.2469    100.00
+d176 3
+a178 5
+LJ-AA                   0.0274 (    10)     0.0029 (     1) 
+LJ-ABAC                 0.0249 (    10)     0.0100 (     1) 
+LJ-BB                   0.0254 (    10)     0.0028 (     1) 
+LJ-BC                   0.0137 (    10)     0.0056 (     1) 
+LJ-CC                   0.0247 (    10)     0.0029 (     1) 
+@
+

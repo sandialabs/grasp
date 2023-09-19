@@ -1,0 +1,189 @@
+head	2.4;
+access;
+symbols
+	PreMonaco:2.4;
+locks; strict;
+comment	@# @;
+
+
+2.4
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.23.23.32.38;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.18.15.48.44;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.18;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.03.12.20.06.45;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.03.20.28.04;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.4
+log
+@Moved examples into subdirectories.
+@
+text
+@# Timestep 0
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+       3         0.000000000         0.000000000         0.000000000
+       4        -0.000000000        -0.000000000        -0.000000000
+       1         0.000000000         0.000000000         0.000000000
+       2        -0.000000000        -0.000000000        -0.000000000
+# 
+# Timestep 10
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+       3    -8.822461271e-05     5.516420654e-21    -1.473821065e-19
+       4     3.832254332e-05     2.099535823e-19     6.234249228e-19
+       1     0.0001381266821     1.283695372e-19     5.029310302e-19
+       2    -8.822461271e-05     2.173261571e-19     5.048045315e-19
+# 
+@
+
+
+2.3
+log
+@Fixed up the output log immensely. Fixed up the velocity-rescale
+thermostat, which changed the dft example a little.
+Other than that, all the other examples (NVE) stayed the same.
+@
+text
+@@
+
+
+2.2
+log
+@Switched the neighbor style from nsq to binning in all examples.
+@
+text
+@d7 1
+a7 1
+       4        -0.000000000         0.000000000        -0.000000000
+d9 1
+a9 1
+       2        -0.000000000         0.000000000        -0.000000000
+d16 4
+a19 4
+       3    -8.822461271e-05     1.854766341e-19     5.582340146e-19
+       4     3.832254332e-05     2.092249984e-19     6.230085892e-19
+       1     0.0001381266821     1.424554918e-19     6.591255319e-19
+       2    -8.822461271e-05    -2.843211777e-20     1.532107774e-19
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@d6 2
+d9 1
+a9 3
+       2         0.000000000         0.000000000         0.000000000
+       3         0.000000000         0.000000000         0.000000000
+       4         0.000000000         0.000000000         0.000000000
+d16 4
+a19 4
+       1     0.0001381266821    -4.973452206e-20     3.243932900e-20
+       2    -8.822461271e-05     2.498001805e-21    -4.093947403e-21
+       3    -8.822461271e-05     2.669305749e-19    -6.416742138e-20
+       4     3.832254332e-05    -1.144917494e-20    -9.455977668e-20
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d7 3
+a9 3
+       2        -0.000000000         0.000000000        -0.000000000
+       3         0.000000000        -0.000000000        -0.000000000
+       4         0.000000000         0.000000000        -0.000000000
+d16 4
+a19 4
+       1     0.0001381266821     4.755757538e-21    -5.447556875e-21
+       2    -8.822461271e-05    -3.752371415e-20    -4.274482312e-20
+       3    -8.822461271e-05     2.978305485e-20    -5.774544839e-20
+       4     3.832254332e-05    -1.804112415e-21     9.159339953e-21
+@
+
+
+1.2
+log
+@New input and output for old examples reflects two important changes:
+
+1. Created a full command interface with input commands echoed to output.
+2. Fixed bug in evaluation of kinetic energy so that report error
+	in total energy is now much, much smaller. Before we were
+	evaluating kinetic energy at t-delt/2 and potential energy at t.
+@
+text
+@d3 2
+d12 2
+@
+
+
+1.1
+log
+@Implemented a new forcefield type: Class Force_External
+This is designed primarily for external force fields with
+simple geometric forms, such as the Lennard-Jones 9-3 wall,
+although it might also be used for a set of fixed atoms.
+
+Currently, the only types implemented are lj93_cut and lj93_cut_shift.
+These work for both arbitrary cut-off neighbor list and also
+within the minimum image convention (although this is not used
+by external force field with only truncated interactions.
+
+Periodic boundary conditions are applied in all directions.
+
+Initialization and output of velocities have also been added.
+@
+text
+@d12 4
+a15 4
+       1     0.0001311660830     4.483658792e-21    -2.968058504e-21
+       2    -8.376407486e-05    -3.794957690e-20    -4.089433565e-20
+       3    -8.376407486e-05     2.694991388e-20    -5.773939845e-20
+       4     3.636206673e-05    -1.387778781e-22     9.853229344e-21
+@
+

@@ -1,0 +1,48 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.10.31.20.28.01;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Moved examples into subdirectories.
+@
+text
+@# Specification of particle id's.
+Hot  atom  1.0
+A    atom  1.0
+B    atom  1.0
+C    atom  1.0
+D    atom  1.0
+E    atom  1.0
+Cold atom  1.0
+
+
+@
+
+
+2.1
+log
+@Added fix capability example (suffix _fix).
+@
+text
+@@
+

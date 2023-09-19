@@ -1,0 +1,64 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.1
+	REAX-2:1.1
+	P_MonacoTesting:1.1.0.6
+	InitialGraspTesting:1.1
+	P_Monaco:1.1.0.4
+	InitialGrasp:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.16.21.47.50;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@#
+#	BKS Exponential-Six interactions for SiO2
+##      (van Beest et al Phys.Rev.Lett. 64 1955 (1990))
+#       Units are electron-volts and angstroms
+
+Si Si  exp6_ewald_nocut      0.0000  0.00000    0.0000
+Si O   exp6_ewald_nocut  18003.7572  4.87318  133.5381
+O  O   exp6_ewald_nocut   1388.7730  2.76000  175.0000
+@
+
+
+1.1
+log
+@Added BKS example to test suite
+@
+text
+@@
+

@@ -1,0 +1,284 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.2.1.0.2
+	Root-of-Monaco_Aidan:1.1.2.1
+	Monaco:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.05.03.22.14.52;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches
+	1.1.2.1.2.1;
+next	;
+
+1.1.2.1.2.1
+date	2005.06.15.20.29.11;	author athomps;	state Exp;
+branches;
+next	1.1.2.1.2.2;
+
+1.1.2.1.2.2
+date	2005.07.28.23.17.30;	author saubry;	state Exp;
+branches;
+next	1.1.2.1.2.3;
+
+1.1.2.1.2.3
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.2.1.2.4;
+
+1.1.2.1.2.4
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.2.1.2.5;
+
+1.1.2.1.2.5
+date	2005.11.01.21.17.20;	author saubry;	state Exp;
+branches;
+next	1.1.2.1.2.6;
+
+1.1.2.1.2.6
+date	2005.11.30.19.51.20;	author athomps;	state Exp;
+branches;
+next	1.1.2.1.2.7;
+
+1.1.2.1.2.7
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file montecarlo.h was initially added on branch Monaco.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 98
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef MONTECARLO_H
+#define MONTECARLO_H
+
+#include "move.h"
+
+class MonteCarlo : public Move
+{
+ private:
+  
+  int current_octant;
+  int next_octant;
+  
+  int calc_next_octant();
+
+  void pack_ghost_buffer();
+  void unpack_ghost_buffer();
+
+  void receive_ghost_buffer();
+  void send_ghost_buffer();
+
+  void propose_move(Particle , Particle &);
+  double energy_change(Particle , Particle &);
+  bool decide(double);
+  void update(bool);
+
+ public:
+
+  MonteCarlo();
+
+  void Setup(const ParticleList* , const Box* , Comm* , ForceFieldList *);
+
+  void Run(const int, const double, 
+           Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           Output*, FixList*, Comm*);
+
+  void Front(const double, Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           FixList*, Comm*);
+
+  void Sweep(const double, Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           FixList*, Comm*);
+
+  void Back(const double, Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           FixList*, Comm*);
+
+
+ protected:
+  // brute force approach
+  virtual double EnergyChange0(int*,Box*, ParticleTypeList*, ParticleList*, 
+			       ForceFieldList*, Comm*);
+
+};
+  
+#endif
+@
+
+
+1.1.2.1.2.1
+log
+@Added class Comm_Octant
+@
+text
+@a69 2
+  OctantList* oc;
+  BinList* bl;
+@
+
+
+1.1.2.1.2.2
+log
+@Implemented tools for bins lists:
+  - intersection
+  - union
+  - copy constructor
+
+Created a new class:  BinTools.
+Tested these tools.
+
+Seems to work ok in serial and parallel.
+@
+text
+@a69 1
+
+a71 1
+  BinTools* bt;
+@
+
+
+1.1.2.1.2.3
+log
+@Correct several bugs
+@
+text
+@d58 8
+d67 1
+a73 3
+  Move* move;
+
+  int get_next_octant() {return (current_octant+1)%8;};
+d81 12
+a92 2
+  void Run(const int, const double, const Box*, ParticleTypeList*, ParticleList*, 
+	   ForceFieldList*, Output*, FixList*, Comm*);
+a93 2
+  void Sweep(const double, const Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+	     FixList*, Comm*);
+d98 1
+a98 1
+			       ForceFieldList*, Comm*,double *);
+@
+
+
+1.1.2.1.2.4
+log
+@Correct a few things.
+@
+text
+@d78 2
+a79 1
+  void Sweep(ParticleList*,Comm*,const Box*);
+d83 2
+a84 3
+  virtual double EnergyChange0(int*,const Box*, 
+			       ParticleTypeList*, ParticleList*, 
+			       ForceFieldList*, Comm*);
+@
+
+
+1.1.2.1.2.5
+log
+@Add a pointer to particle instead of an array of particle.
+
+Bug in particles coordinates.
+@
+text
+@d73 1
+a73 1
+  void Setup(ParticleList* const, const Box* , Comm* , ForceFieldList *);
+@
+
+
+1.1.2.1.2.6
+log
+@Latest additions to Monaco branch
+@
+text
+@a56 2
+
+  double extended_energy;
+@
+
+
+1.1.2.1.2.7
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d51 2
+a52 1
+class MonteCarlo {
+d83 4
+@
+
+

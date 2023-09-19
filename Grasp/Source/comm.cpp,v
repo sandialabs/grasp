@@ -1,0 +1,3695 @@
+head	4.11;
+access;
+symbols
+	ReverseComm_branch:4.7.0.4
+	ADTools_branch:4.7.0.2
+	Monaco_Aidan:4.3.0.4
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.6
+	REAX-2:3.2.2.3
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.25.0.2
+	cjkimme_version_merge_from_trunk_1:2.14.2.2
+	cjkimme_version:2.14.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.11
+date	2007.08.24.17.17.49;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.04.02.15.27.14;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.02.21.00.53.53;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.01.10.20.41.52;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.06.08.21.19.05;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.4.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.7;
+
+3.7
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.6;
+
+3.6
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.02.23.19.56.59;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.02.16.20.35.26;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.02.16.20.31.17;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.2.2.1
+	3.2.6.1;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.25;
+
+2.25
+date	2004.09.21.23.18.28;	author athomps;	state Exp;
+branches;
+next	2.24;
+
+2.24
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.23;
+
+2.23
+date	2004.07.30.20.18.47;	author athomps;	state Exp;
+branches;
+next	2.22;
+
+2.22
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.03.20.00.15.36;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.02.12.23.57.39;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.02.12.23.36.09;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.02.12.00.13.00;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	2.14.2.1;
+next	2.13;
+
+2.13
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.01.15.20.12.28;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.04.02.46.52;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.09.23.16.01.59;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.08.14.23.02.08;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	;
+
+2.14.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.2;
+
+2.14.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.01.21.22.24.30;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.6.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.4.1
+date	2005.06.15.20.29.11;	author athomps;	state Exp;
+branches;
+next	4.3.4.2;
+
+4.3.4.2
+date	2005.06.21.17.34.07;	author athomps;	state Exp;
+branches;
+next	4.3.4.3;
+
+4.3.4.3
+date	2005.07.19.22.56.35;	author saubry;	state Exp;
+branches;
+next	4.3.4.4;
+
+4.3.4.4
+date	2006.02.06.19.15.25;	author athomps;	state Exp;
+branches;
+next	4.3.4.5;
+
+4.3.4.5
+date	2006.02.08.23.43.02;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.16.22.23.41;	author pscrozi;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.11
+log
+@Added Makefile settings for development.sandia.gov
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+// The spatial decompositon scheme is based on the Comm class written
+// by Steve Plimpton (LAMMPS 2003) for orthorhombic periodic cells.
+// 
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <cmath>
+#include <stdlib.h>
+#include <sstream>
+using namespace std;
+#include  "mpi.h"
+#include "grasp.h"
+#include "comm.h"
+#include "vec3.h"
+#include "box.h"
+#include "box_inline.h"
+#include "particle.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "neighbor.h"
+#include "forcefieldlist.h"
+#include "log.h"
+#include "machine.h"
+extern Log glog;
+
+#define BUFFACTOR 1.5
+#define BUFMIN 1000
+#define BUFEXTRA 100
+#define MIN(a,b) ((a) < (b) ? (a) : (b))
+#define MAX(a,b) ((a) > (b) ? (a) : (b))
+
+/* setup MPI and allocate buffer space */
+
+Comm::Comm(int& argc, char* argv[], 
+             const bool& mpi_init_flag_in, 
+             const bool& mpi_finalize_flag_in) {
+
+  mpi_init_flag = mpi_init_flag_in;
+  mpi_finalize_flag = mpi_finalize_flag_in;
+
+  if (mpi_init_flag) MPI_Init(&argc,&argv);
+
+  Lnodefile_input = false;
+#ifdef USE_NODEFILES
+  Lnodefile_input = true;
+#endif
+
+  universe = MPI_COMM_WORLD;
+
+  MPI_Comm_rank(universe,&me_universe);
+  MPI_Comm_size(universe,&nprocs_universe);
+
+  // This allows the get_node and get_world functions to be 
+  // overloaded, temporarily.
+  me = me_universe;
+  world = universe;
+
+#ifndef NO_STDERR
+  if (me_universe == 0) {
+    cerr << 
+      "*********************************\n" << 
+      "Started Grasp run with " << nprocs_universe << " processes\n" << 
+      "*********************************" << endl; 
+  }
+#endif
+
+  // This indicates that processor grid has not been assigned yet
+  procgrid[0] = procgrid[1] = procgrid[2] = 0;
+  // This indicates that no memory has been allocated yet;
+  nswap = -1;
+  nworlds = 1;
+  Lworld_seed = false;
+}
+
+/* destructor, free all memory */
+
+Comm::~Comm() {
+  glog.close_logfile_world();  
+  if (Lnodefile) {
+    nodefile << "Entered Comm::~Comm" << endl;
+    nodefile.close();
+  }
+
+  free_swap();
+  if (mpi_finalize_flag) MPI_Finalize();
+}
+
+void Comm::open_nodefile() {
+  /* open a file for each node */
+
+  string str_tmp;
+
+  // Transfer temporary flag to primary flag
+  Lnodefile = Lnodefile_input;
+
+  if (!Lnodefile) {
+    if (nodefile.is_open()) {
+      nodefile.close();
+    }
+    return;
+  }
+
+  if (nodefile.is_open()) {
+    return;
+  }
+
+  itostring(me_universe,str_tmp,4);
+  str_tmp = glog.path_str+"nodefile_" + str_tmp + ".out";
+  //  str_tmp = "nodefile_" + str_tmp + ".out";
+  //  str_tmp = "nodefile.out";
+  nodefile.open(str_tmp.c_str()); 
+  if (!nodefile) {
+    glog.error("Comm::open_nodefile:\n"
+  	       "Failed to open " + str_tmp);
+  }
+
+  nodefile.precision(10);
+  nodefile.setf(std::ios::showpoint);
+  nodefile.setf(std::ios::fixed);
+  nodefile << str_tmp << endl;
+  nodefile << "Setting up Comm object " << endl;
+  nodefile << "nprocs = " << nprocs_universe << endl;
+  nodefile << "node = " << me_universe << endl;
+}
+
+/* setup 3-d grid of procs based on box size */
+
+void Comm::set_procs(const Box* b) {
+  bool periodicity[3];
+
+  if (procgrid[0] == 0) procs2box(b);
+  if (procgrid[0]*procgrid[1]*procgrid[2] != nprocs) {
+    glog.error("Comm::set_procs\n"
+	       "Bad grid of processors");
+  }
+
+  int reorder = 0;
+  int periods[3];
+
+  b->get_perflag(periodicity);
+
+  periods[0] = periodicity[0];
+  periods[1] = periodicity[1];
+  periods[2] = periodicity[2];
+
+  MPI_Comm cartesian;
+      
+  MPI_Cart_create(world,3,procgrid,periods,reorder,&cartesian);
+  MPI_Cart_get(cartesian,3,procgrid,periods,myloc);
+  // The occurrence of non-periodic boundaries results in
+  // assignment of MPI_PROC_NULL to those procneigh entries.
+  // Generally, this can be ignored, as MPI is nice about it.
+  // But in some places in the code, we must explicitly check 
+  // for MPI_PROC_NULL, and execute some conditional code.
+  MPI_Cart_shift(cartesian,0,1,&procneigh[0][0],&procneigh[0][1]);
+  MPI_Cart_shift(cartesian,1,1,&procneigh[1][0],&procneigh[1][1]);
+  MPI_Cart_shift(cartesian,2,1,&procneigh[2][0],&procneigh[2][1]);
+  MPI_Comm_free(&cartesian);
+
+  if (Lnodefile) {
+    nodefile << "Procgrid = " << 
+      " " << procgrid[0] <<
+      " " << procgrid[1] <<
+      " " << procgrid[2] << endl;
+    nodefile << "Myloc = " << 
+      " " << myloc[0] <<
+      " " << myloc[1] <<
+      " " << myloc[2] << endl;
+    nodefile << "Procneigha = " << 
+      " " << procneigh[0][0] << " " << procneigh[0][1] << endl;
+    nodefile << "Procneighb = " << 
+      " " << procneigh[1][0] << " " << procneigh[1][1] << endl;
+    nodefile << "Procneighc = " << 
+      " " << procneigh[2][0] << " " << procneigh[2][1] << endl;
+  }
+}
+
+void Comm::Setup_World() {
+
+  string str_tmp;
+  int nprocs_world;
+
+  if (Lnodefile) {
+    nodefile << "Entering Comm::Setup_World()" << endl;
+  }
+
+  if (nworlds == 1) {
+    world = universe;
+  } else {
+    if (nprocs_universe % nworlds != 0) {
+      glog.error("Comm::Setup_World\n"
+		 "nprocs must equal nworlds or be multiple of nworlds");
+    }
+    nprocs_world = nprocs_universe / nworlds;
+    myworld = me_universe / nprocs_world;
+    MPI_Comm_split(universe,myworld,0,&world);
+    itostring(myworld,str_tmp,4);
+    str_tmp = "." + str_tmp;
+    glog.open_logfile_world(str_tmp,world);
+  }
+  MPI_Comm_rank(world,&me);
+  MPI_Comm_size(world,&nprocs);
+}
+
+/* setup spatial-decomposition communication patterns 
+   function of neighbor cutoff and current box size */
+
+void Comm::Setup(const Box* b, const ForceFieldList* ff) {
+  /* need = # of procs I need atoms from in each dim */
+  double rcutcomm,rcutcommred;
+  double origin[3];
+  double w[3];
+  bool periodicity[3];
+  double sublen;
+  int iswap;
+  int nbox;
+
+  if (Lnodefile) {
+    nodefile << "Entering Comm::Setup()" << endl;
+  }
+
+  // Check if Comm was set up previously; if so, clean up.
+  if (nswap != -1) {
+    free_swap();
+  }
+
+  set_procs(b);
+
+  for (int dim = 0; dim < 3; dim++) {
+    sublo[dim] = static_cast<double>(myloc[dim])/
+      static_cast<double>(procgrid[dim]); 
+    subhi[dim] = static_cast<double>(myloc[dim]+1)/
+      static_cast<double>(procgrid[dim]); 
+  }
+
+  if (Lnodefile) {
+    nodefile << "Suba = " << 
+      " " << sublo[0] << " " << subhi[0] << endl;
+    nodefile << "Subb = " << 
+      " " << sublo[1] << " " << subhi[1] << endl;
+    nodefile << "Subc = " << 
+      " " << sublo[2] << " " << subhi[2] << endl;
+  }
+
+  // This is not quite right, as we are only using half skin distance.
+  rcutcomm = ff->get_rcutcommall();
+  b->get_o(origin);
+  b->get_lw(w);
+  b->get_perflag(periodicity);
+  need[0] = static_cast<int> 
+    (rcutcomm * procgrid[0] / w[0]) + 1;
+  need[1] = static_cast<int> 
+    (rcutcomm * procgrid[1] / w[1]) + 1;
+  need[2] = static_cast<int> 
+    (rcutcomm * procgrid[2] / w[2]) + 1;
+
+  /* if non-periodic, do not communicate further than procgrid-1 away
+     this enables very large cutoffs in non-periodic systems */
+
+  if (!periodicity[0]) need[0] = MIN(need[0],procgrid[0]-1);
+  if (!periodicity[1]) need[1] = MIN(need[1],procgrid[1]-1);
+  if (!periodicity[2]) need[2] = MIN(need[2],procgrid[2]-1);
+
+  /* allocate comm memory */
+
+  /* initialize comm buffers & exchange memory */
+
+  maxsend = BUFMIN;
+  buf_send.resize(maxsend+BUFEXTRA);
+  maxrecv = BUFMIN;
+  buf_recv.resize(maxrecv);
+
+  maxswap = 6;
+  allocate_swap(maxswap);
+
+  sendlist.resize(maxswap);
+  maxsendlist.resize(maxswap);
+  for (int i = 0; i < maxswap; i++) {
+    maxsendlist[i] = BUFMIN;
+    sendlist[i].resize(BUFMIN);
+  }
+
+  nswap = 2 * (need[0]+need[1]+need[2]);
+  if (nswap > maxswap) grow_swap();
+
+  /* setup parameters for each exchange:
+     sendproc = proc to send to at each swap
+     recvproc = proc to recv from at each swap
+     slablo/slabhi = boundaries for slab of atoms to send at each swap
+     set slablo = slabhi for swaps across non-periodic boundaries
+       this prevents any atoms from actually being swapped
+       only for procs owning sub-box at non-periodic end of global box
+     pbc_flags = add-on factor for atoms sent across a periodic global boundary
+        0 = not across a boundary
+        1 = add box-length to coord when sending
+       -1 = subtract box-length from coord when sending
+     1st part of if statement is sending to the west/south/down
+     2nd part of if statement is sending to the east/north/up
+     nbox = atoms I am sending originated in this sub-box
+  */
+
+  // The slab formulae can be concisely written as
+  // 1st part (sending down):
+  //   slablo = myloc+ineed/2
+  //   slabhi = min(myloc+1+ineed/2,myloc+rcutcomm)
+  // 2nd part (sending up):
+  //   slabhi = myloc+1-ineed/2
+  //   slablo = max(myloc+ineed/2,myloc+1-rcutcomm)
+  // where all lengths are in units of sublen[dim] = w[dim]/procgrid.
+  // actual values of slablo, slabhi are calculated in fractional
+  // units i.e. units of w[dim] or a,b,c, depending on how you look at it.
+  iswap = 0;
+
+  for (int dim = 0; dim < 3; dim++) {
+    sublen = 1.0/procgrid[dim];
+    rcutcommred = (rcutcomm/w[dim])*procgrid[dim];
+    for (int ineed = 0; ineed < 2*need[dim]; ineed++) {
+      pbc_flags[iswap][0] = 0;
+      pbc_flags[iswap][1] = 0;
+      pbc_flags[iswap][2] = 0;
+      pbc_flags[iswap][3] = 0;
+
+      if (ineed % 2 == 0) {
+	sendproc[iswap] = procneigh[dim][0];
+	recvproc[iswap] = procneigh[dim][1];
+	nbox = myloc[dim] + ineed/2;
+	slablo[iswap] = nbox*sublen;
+	slabhi[iswap] = MIN(nbox+1,myloc[dim]+rcutcommred)*sublen;
+	if (myloc[dim] == 0) {
+	  if (periodicity[dim]) {
+	    pbc_flags[iswap][0] = 1;
+	    pbc_flags[iswap][dim+1] = 1;
+	  }
+	}
+      } else {
+	sendproc[iswap] = procneigh[dim][1];
+	recvproc[iswap] = procneigh[dim][0];
+	nbox = myloc[dim] - ineed/2;
+     	slabhi[iswap] = (nbox+1)*sublen;
+       	slablo[iswap] = MAX(nbox,(myloc[dim]+1)-rcutcommred)*sublen;
+
+	//	slabhi[iswap] = subhi[dim] - (ineed/2)*sublen;
+	//	slablo[iswap] = MAX(slabhi[iswap]-sublen,
+	//			    subhi[dim]-rcutcomm/w[dim]);
+
+	if (myloc[dim] == procgrid[dim]-1) {
+	  if (periodicity[dim]) {
+	    pbc_flags[iswap][0] = 1;
+	    pbc_flags[iswap][dim+1] = -1;
+	  }
+	}
+      }
+      if (Lnodefile) {
+	if (ineed % 2 == 0) {
+	  nodefile << "Slablo = " << slablo[iswap] << " " <<  
+	    slablo[iswap]*procgrid[dim]-(myloc[dim]+ineed/2) << endl;
+	  nodefile << "Slabhi = " << slabhi[iswap] << " " <<  
+	    slabhi[iswap]*procgrid[dim]-(myloc[dim]+ineed/2 + 1) << endl;
+	} else {
+	  nodefile << "Slablo = " << slablo[iswap] << " " <<  
+	    slablo[iswap]*procgrid[dim]+(myloc[dim]+ineed/2) << endl;
+	  nodefile << "Slabhi = " << slabhi[iswap] << " " <<  
+	    slabhi[iswap]*procgrid[dim]+(myloc[dim]+ineed/2 - 1) << endl;
+	}
+	nodefile << "PBC Flags = " << 
+	  " " << pbc_flags[iswap][0] << 
+	  " " << pbc_flags[iswap][1] << 
+	  " " << pbc_flags[iswap][2] << 
+	  " " << pbc_flags[iswap][3] << endl;
+	nodefile << endl;
+      }
+      iswap++;
+    }
+  }
+}
+
+/* communication of atom info every timestep */
+
+void Comm::communicate(const Box* b, ParticleList* p)
+{
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = 0; iswap < nswap; iswap++) {
+
+    /* pack buffer */
+    nsend = sendnum[iswap];
+    p->pack_comm(nsend,sendlist[iswap],
+		      &buf_send[0],pbc_flags[iswap],b);
+    /* exchange with another proc
+       if self, set recv buffer to send buffer */
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_comm_recv[iswap],MPI_DOUBLE,
+		recvproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_comm_send[iswap],MPI_DOUBLE,
+	       sendproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    p->unpack_comm(recvnum[iswap],firstrecv[iswap],buf);
+  }
+
+}
+
+/* reverse communication of atom info every timestep */
+      
+void Comm::reverse_communicate(ParticleList* p)
+{
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = nswap-1; iswap >= 0; iswap--) {
+
+    /* pack buffer */
+
+    p->pack_reverse(recvnum[iswap],firstrecv[iswap],&buf_send[0]);
+
+    /* exchange with another proc 
+       if self, set recv buffer to send buffer */
+
+    if (sendproc[iswap] != me) {
+      // Only communicate if not a non-periodic direction
+      MPI_Irecv(&buf_recv[0],size_reverse_recv[iswap],MPI_DOUBLE,
+		sendproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_reverse_send[iswap],MPI_DOUBLE,
+	       recvproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    nsend = sendnum[iswap];
+    p->unpack_reverse(nsend,sendlist[iswap],buf);
+  }
+
+}
+
+/* exchange:
+   move atoms to correct proc boxes
+   send out atoms that have left my box, receive ones entering my box
+   this routine called before every reneighboring
+   atoms exchanged with all 6 stencil neighbors
+*/
+
+void Comm::exchange(const Box* b, ParticleList* p)
+{
+  int i,m,nsend,nrecv,nrecv1,nrecv2,nparticles;
+  double rvec[3];
+  double t1,t2;
+  MPI_Request request;
+  MPI_Status status;
+  const Particle* particles;
+  // Declare value as volatile to
+  // force compiler to read it from memory.
+  // This prevents unexpected results arising
+  // from use of extra precision in registers.
+  volatile double value;
+  int itmp,nparticles_tot;
+
+  if (Lnodefile) {
+    nodefile << "Entering Comm::exchange()" << endl;
+  }
+
+  /* initialize atom data */
+
+  p->ResetGhosts();
+
+  /* clear global->local map since atoms move & new ghosts are created */
+
+  p->localptr_clear();
+
+  /* loop over dimensions */
+
+  for (int dim = 0; dim < 3; dim++) {
+
+    /* only exchange if more than one proc in this dimension */
+
+    if (procgrid[dim] == 1) continue;
+
+    /* fill buffer with atoms leaving my box
+       when atom is deleted, fill it in with last atom */
+
+    i = nsend = 0;
+    particles = p->get_particles();
+    nparticles = p->get_nparticles();
+
+    while (i < nparticles) {
+      particles[i].get_x(rvec);
+      value = b->Fractional(dim,rvec);
+
+      if (value < sublo[dim] || value >= subhi[dim]) {
+	if (nsend > maxsend) grow_send(nsend);
+	nsend += p->pack_exchange(i,&buf_send[nsend]);
+	p->RemoveParticle(i);
+	nparticles--;
+      } else i++;
+    }
+
+    /* send/recv atoms in both directions
+       only if neighboring procs are different */
+
+    MPI_Send(&nsend,1,MPI_INT,procneigh[dim][0],0,world);
+    MPI_Recv(&nrecv1,1,MPI_INT,procneigh[dim][1],0,world,&status);
+    if (procneigh[dim][1] == MPI_PROC_NULL)  nrecv1 = 0;
+    nrecv = nrecv1;
+
+    if (procgrid[dim] > 2 ) {
+      MPI_Send(&nsend,1,MPI_INT,procneigh[dim][1],0,world);
+      MPI_Recv(&nrecv2,1,MPI_INT,procneigh[dim][0],0,world,&status);
+      if (procneigh[dim][0] == MPI_PROC_NULL) nrecv2 = 0;
+      nrecv += nrecv2;
+      /* if procgrid==2 and first comm was suppressed, must do second. */
+      /* In this situation, only one direction can be suppressed */
+    } else if (procneigh[dim][0] == MPI_PROC_NULL) {
+      MPI_Send(&nsend,1,MPI_INT,procneigh[dim][1],0,world);
+    } else if (procneigh[dim][1] == MPI_PROC_NULL) {
+      MPI_Recv(&nrecv2,1,MPI_INT,procneigh[dim][0],0,world,&status);
+      nrecv += nrecv2;
+    }
+
+    if (nrecv > maxrecv) grow_recv(nrecv);
+
+    MPI_Irecv(&buf_recv[0],nrecv1,MPI_DOUBLE,procneigh[dim][1],0,
+	      world,&request);
+
+    MPI_Send(&buf_send[0],nsend,MPI_DOUBLE,procneigh[dim][0],0,world);
+    MPI_Wait(&request,&status);
+
+    if (procgrid[dim] > 2) {
+      MPI_Irecv(&buf_recv[nrecv1],nrecv2,MPI_DOUBLE,procneigh[dim][0],0,
+		world,&request);
+      MPI_Send(&buf_send[0],nsend,MPI_DOUBLE,procneigh[dim][1],0,world);
+      MPI_Wait(&request,&status);
+      /* if procgrid==2 and first comm was suppressed, must do second. */
+      /* In this situation, only one direction can be suppressed */
+    } else if (procneigh[dim][0] == MPI_PROC_NULL) {
+      MPI_Send(&buf_send[0],nsend,MPI_DOUBLE,procneigh[dim][1],0,world);
+    } else if (procneigh[dim][1] == MPI_PROC_NULL) {
+      MPI_Irecv(&buf_recv[nrecv1],nrecv2,MPI_DOUBLE,procneigh[dim][0],0,
+		world,&request);
+      MPI_Wait(&request,&status);
+    }
+          
+    /* check incoming atoms to see if they are in my box
+       if they are, add to my list */
+          
+    m = 0;
+    while (m < nrecv) {
+      value = b->Fractional(dim,&buf_recv[m]);
+      if (value >= sublo[dim] && value < subhi[dim]) {
+	m += p->unpack_exchange(&buf_recv[m]);
+      }
+      else m += p->skip_exchange(&buf_recv[m]);
+    }
+  }
+
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,world);
+  if (itmp != nparticles_tot) {
+    glog.error("Comm::Exchange:\n"
+	       "Invalid particle count");
+  }
+
+  /* reset global->local map for own particles*/
+
+  p->localptr_set();
+
+  if (Lnodefile) {
+    nodefile << "Exiting Comm::exchange()" << endl;
+  }
+}
+
+/* borders:
+   make lists of nearby atoms to send to neighboring procs at every timestep
+   one list is created for every swap that will be made
+   as list is made, actually do swaps
+   this does equivalent of a communicate (so don't need to explicitly
+     call communicate routine on reneighboring timestep)
+   this routine is called before every reneighboring
+   communication in non-periodic directions is suppressed
+*/
+
+void Comm::borders(const Box* b, ParticleList* p) {
+  int i,m,iswap,dim,ineed,nsend,nrecv,nall;
+  double **x;
+  double *buf;
+  double rvec[3];
+  double lo,hi;
+  double t1,t2;
+  int nparticles;
+  int size_comm,size_reverse,size_border;
+  int nfirst,nrecv_left,nrecv_right,nsend_left,nsend_right;
+  int msend0,mrecv0,nstart_left,nstop_left,nstart_right,nstop_right;
+  const Particle* particles;
+  MPI_Request request;
+  MPI_Status status;
+  // Declare value as volatile to
+  // force compiler to read it from memory.
+  // This prevents unexpected results arising
+  // from use of extra precision in registers.
+  volatile double value;
+
+  /* obtain data size information */
+
+  size_comm = p->get_size_comm();
+  size_reverse = p->get_size_reverse();
+  size_border = p->get_size_border();
+
+  /* do swaps over all 3 dimensions */
+
+  iswap = 0;
+
+  for (dim = 0; dim < 3; dim++) {
+
+    // In order to preserve data from previous pass
+    // in same direction, we append right pass data onto end
+    // of buffer, after left pass data.
+
+    nparticles = p->get_nparticles() + p->get_nghost_particles();
+    nstart_left = 0;
+    nstop_left = nparticles;
+    nstart_right = 0;
+    nstop_right = nparticles;
+      
+    for (ineed=0;ineed<need[dim];ineed++) {
+
+      // Pass to the left
+      nfirst = p->get_nparticles() + p->get_nghost_particles();
+      msend0 = 0;
+      mrecv0 = 0;
+      m = msend0;
+      nsend = 0;
+
+      if (ineed<need[dim]-1) {
+	for (i = nstart_left; i < nstop_left; i++) {
+	  if (m > maxsend) grow_send(m);
+	  m += p->pack_border(i,&buf_send[m],pbc_flags[iswap],b);
+	  if (nsend == maxsendlist[iswap]) grow_list(iswap,nsend);
+	  sendlist[iswap][nsend] = i;
+	  nsend++;
+	}
+      } else {
+	hi = slabhi[iswap];
+	particles = p->get_particles();
+	for (i = nstart_left;i<nstop_left;i++) {
+	  particles[i].get_x(rvec);
+	  value = b->Fractional(dim,rvec);
+	  if (value < hi) {
+	    if (m > maxsend) grow_send(m);
+	    m += p->pack_border(i,&buf_send[m],pbc_flags[iswap],b);
+	    if (nsend == maxsendlist[iswap]) grow_list(iswap,nsend);
+	    sendlist[iswap][nsend] = i;
+	    nsend++;
+	  }
+	}
+      }
+
+      if (sendproc[iswap] != me) {
+	MPI_Send(&nsend,1,MPI_INT,sendproc[iswap],0,world);
+	if (sendproc[iswap] == MPI_PROC_NULL) nsend = 0;
+	MPI_Recv(&nrecv,1,MPI_INT,recvproc[iswap],0,world,&status);
+	if (recvproc[iswap] == MPI_PROC_NULL) nrecv = 0;
+
+	if (nrecv*size_border > maxrecv) 
+	  grow_recv(nrecv*size_border);
+	MPI_Irecv(&buf_recv[mrecv0],nrecv*size_border,MPI_DOUBLE,
+		  recvproc[iswap],0,world,&request);
+	MPI_Send(&buf_send[msend0],nsend*size_border,MPI_DOUBLE,
+		 sendproc[iswap],0,world);
+	MPI_Wait(&request,&status);
+	buf = &buf_recv[mrecv0];
+      } else {
+	nrecv = nsend;
+	buf = &buf_send[msend0];
+      }
+
+      /* unpack buffer */
+
+      m = 0;
+      for (i = 0; i < nrecv; i++) {
+	m += p->unpack_border(&buf[m]);
+      }
+      
+      /* set all pointers & counters */
+
+      sendnum[iswap] = nsend;
+      recvnum[iswap] = nrecv;
+      size_comm_send[iswap] = nsend * size_comm;
+      size_comm_recv[iswap] = nrecv * size_comm;
+      size_reverse_send[iswap] = nrecv * size_reverse;
+      size_reverse_recv[iswap] = nsend * size_reverse;
+      firstrecv[iswap] = nfirst;
+      nrecv_left = nrecv;
+      nsend_left = nsend;
+      iswap++;
+
+      // Pass to the right
+      nfirst = p->get_nparticles() + p->get_nghost_particles();
+      msend0 = nsend_left*size_border;
+      mrecv0 = nrecv_left*size_border;
+      m = msend0;
+      nsend = 0;
+
+      if (ineed<need[dim]-1) {
+	for (i = nstart_right; i < nstop_right; i++) {
+	  if (m > maxsend) grow_send(m);
+	  m += p->pack_border(i,&buf_send[m],pbc_flags[iswap],b);
+	  if (nsend == maxsendlist[iswap]) grow_list(iswap,nsend);
+	  sendlist[iswap][nsend] = i;
+	  nsend++;
+	}
+      } else {
+	lo = slablo[iswap];
+	particles = p->get_particles();
+	for (i = nstart_right;i < nstop_right; i++) {
+	  particles[i].get_x(rvec);
+	  value = b->Fractional(dim,rvec);
+	  if (value >= lo) {
+	    if (m > maxsend) grow_send(m);
+	    m += p->pack_border(i,&buf_send[m],pbc_flags[iswap],b);
+	    if (nsend == maxsendlist[iswap]) grow_list(iswap,nsend);
+	    sendlist[iswap][nsend] = i;
+	    nsend++;
+	  }
+	}
+      }
+
+      if (sendproc[iswap] != me) {
+	MPI_Send(&nsend,1,MPI_INT,sendproc[iswap],0,world);
+	if (sendproc[iswap] == MPI_PROC_NULL) nsend = 0;
+	MPI_Recv(&nrecv,1,MPI_INT,recvproc[iswap],0,world,&status);
+	if (recvproc[iswap] == MPI_PROC_NULL) nrecv = 0;
+
+	if ((nrecv+nrecv_left)*size_border > maxrecv) 
+	  grow_recv((nrecv+nrecv_left)*size_border);
+	MPI_Irecv(&buf_recv[mrecv0],nrecv*size_border,MPI_DOUBLE,
+		  recvproc[iswap],0,world,&request);
+	MPI_Send(&buf_send[msend0],nsend*size_border,MPI_DOUBLE,
+		 sendproc[iswap],0,world);
+	MPI_Wait(&request,&status);
+	buf = &buf_recv[mrecv0];
+      } else {
+	nrecv = nsend;
+	buf = &buf_send[msend0];
+      }
+
+      /* unpack buffer */
+      m = 0;
+      for (i = 0; i < nrecv; i++) {
+	m += p->unpack_border(&buf[m]);
+      }
+
+      /* set all pointers & counters */
+
+      sendnum[iswap] = nsend;
+      recvnum[iswap] = nrecv;
+      size_comm_send[iswap] = nsend * size_comm;
+      size_comm_recv[iswap] = nrecv * size_comm;
+      size_reverse_send[iswap] = nrecv * size_reverse;
+      size_reverse_recv[iswap] = nsend * size_reverse;
+      firstrecv[iswap] = nfirst;
+      nrecv_right = nrecv;
+      nsend_right = nsend;
+      iswap++;
+
+      // Set up index limits for next pass
+      nparticles = p->get_nparticles() + p->get_nghost_particles();
+      nstart_left = nparticles-nrecv_left-nrecv_right;
+      nstop_left = nparticles-nrecv_right;
+      nstart_right = nparticles-nrecv_right;
+      nstop_right = nparticles;
+    }
+  }
+
+  /* insure buffers are large enough for reverse comm */
+
+  int max1,max2;
+  max1 = max2 = 0;
+  for (iswap = 0; iswap < nswap; iswap++) {
+    max1 = MAX(max1,size_reverse_send[iswap]);
+    max2 = MAX(max2,size_reverse_recv[iswap]);
+  }
+  if (max1 > maxsend) grow_send(max1);
+  if (max2 > maxrecv) grow_recv(max2);
+
+  /* reset global->local map for other particles*/
+
+  p->localptr_set();
+
+}
+
+/* realloc the size of the send buffer as needed with BUFFACTOR & BUFEXTRA */
+
+void Comm::grow_send(int n)
+{
+  maxsend = static_cast<int> (BUFFACTOR * n);
+  buf_send.resize(maxsend+BUFEXTRA);
+}
+
+/* free/malloc the size of the recv buffer as needed with BUFFACTOR */
+
+void Comm::grow_recv(int n)
+{
+  maxrecv = static_cast<int> (BUFFACTOR * n);
+  buf_recv.clear();
+  buf_recv.resize(maxrecv);
+}
+
+/* realloc the size of the iswap sendlist as needed with BUFFACTOR */
+
+void Comm::grow_list(int iswap, int n)
+{
+  maxsendlist[iswap] = static_cast<int> (BUFFACTOR * n);
+  sendlist[iswap].resize(maxsendlist[iswap]);
+}
+
+void Comm::grow_swap()
+{
+  free_swap();
+  allocate_swap(nswap);
+
+  sendlist.resize(nswap);
+  maxsendlist.resize(nswap);
+
+  for (int i = maxswap; i < nswap; i++) {
+    maxsendlist[i] = BUFMIN;
+    sendlist[i].resize(BUFMIN);
+  }
+  maxswap = nswap;
+}
+
+void Comm::allocate_swap(int n)
+{
+  sendnum.resize(n);
+  recvnum.resize(n);
+  sendproc.resize(n);
+  recvproc.resize(n);
+  size_comm_send.resize(n);
+  size_comm_recv.resize(n);
+  size_reverse_send.resize(n);
+  size_reverse_recv.resize(n);
+  slablo.resize(n);
+  slabhi.resize(n);
+  firstrecv.resize(n);
+  pbc_flags.resize(n);
+  for (int iswap=0;iswap<n;iswap++) {
+    pbc_flags[iswap] = new int[4];
+  }
+}
+
+void Comm::free_swap()
+{
+  sendnum.clear();
+  recvnum.clear();
+  sendproc.clear();
+  recvproc.clear();
+  size_comm_send.clear();
+  size_comm_recv.clear();
+  size_reverse_send.clear();
+  size_reverse_recv.clear();
+  slablo.clear();
+  slabhi.clear();
+  firstrecv.clear();
+  for (int iswap=0;iswap<maxswap;iswap++) {
+    delete []pbc_flags[iswap];
+  }
+  pbc_flags.clear();
+}
+
+/* assign nprocs to 3-d xprd,yprd,zprd box so as to minimize surface area */
+
+void Comm::procs2box(const Box* box)
+{
+  int ipx,ipy,ipz,nremain;
+  double ah,ak,al,surf;
+
+  if (Lnodefile) {
+    nodefile << "Entering Comm::procs2box()" << endl;
+  }
+
+  box->get_la(ah,ak,al);
+  double bestsurf = 2.0 * (ah+ak+al) * nprocs;
+
+  /* loop thru all possible factorizations of nprocs
+     surf = surface area of a proc sub-domain */
+
+  ipx = 1;
+  while (ipx <= nprocs) {
+    if (nprocs % ipx == 0) {
+      nremain = nprocs/ipx;
+      ipy = 1;
+      while (ipy <= nremain) {
+	if (nremain % ipy == 0) {
+	  ipz = nremain/ipy;
+	  surf = ah*ipx+ak*ipy+al*ipz;
+	  if (surf < bestsurf) {
+	    bestsurf = surf;
+	    procgrid[0] = ipx;
+	    procgrid[1] = ipy;
+	    procgrid[2] = ipz;
+	  }
+	}
+	ipy++;
+      }
+    }
+    ipx++;
+  }
+}
+
+const MPI_Comm& Comm::get_universe() const {
+  return universe;
+}
+
+int Comm::get_nprocs_universe() const {
+  return nprocs_universe;
+}
+
+int Comm::get_node_universe() const {
+  return me_universe;
+}
+
+int Comm::get_nprocs() const {
+  return nprocs;
+}
+
+int Comm::get_node() const {
+  return me;
+}
+
+const MPI_Comm& Comm::get_world() const {
+  return world;
+}
+
+int Comm::get_nworlds() const {
+  return nworlds;
+}
+
+int Comm::get_myworld() const {
+  return myworld;
+}
+
+// If Lworld_seed is set, then get_world_seed returns
+// a world-specific seed;  otherwise it returns zero.
+int Comm::get_world_seed() const {
+  if (Lworld_seed) {
+    return myworld;
+  } else {
+    return 0;
+  }
+}
+
+/* itostring: convert n to characters in s */
+void Comm::itostring(int n, string& s, int minlen) const {
+  int i, j, sign, c;
+  if ((sign = n) < 0) {      /* record sign */
+    n = -n;
+  }
+
+  do {                      /* generate digits in reverse order */
+    c = n % 10 + '0';
+    s.push_back(c);         /* get next digit */
+  } while ((n /= 10) > 0);  /* delete it */
+  while (s.size()<minlen) {
+    s.push_back('0');
+  }
+  if (sign < 0) {
+    s.push_back('-');
+  }
+
+  // Now reverse the string
+  i = s.size()-1;
+  j = 0;  
+  while (i > j) {
+    c = s[i];
+    s[i] = s[j];
+    s[j] = c;
+    i--;
+    j++;
+  }
+}
+
+ofstream& Comm::get_nodefile() {
+  return nodefile;
+}
+
+bool Comm::get_Lnodefile() const {
+  return Lnodefile;
+}
+
+
+bool Comm::sub_check(const Box* b, const double x_in[]) {
+  bool Lsub;
+  // Declare value as volatile to
+  // force compiler to read it from memory.
+  // This prevents unexpected results arising
+  // from use of extra precision in registers.
+  volatile double value;
+
+  Lsub = true;
+  
+  for (int dim = 0; dim < 3; dim++) {
+    value = b->Fractional(dim,x_in);
+    // first, check that particle is inside central box.
+    // allowance is made for small errors due to round-off
+    if (value < 0.0) {
+      if (value > -small) {
+	value = 0.0;
+      }
+    } else if (value >= 1.0 ) {
+      if (value < 1.0+small) {
+	value = 1.0-small;
+      }
+    }
+    // Now compare with domain boundaries
+    if (value < sublo[dim] || value >= subhi[dim]) Lsub = false;
+    
+  }
+  
+  return Lsub;
+
+}
+
+bool Comm::sub_check_strict(const Box* b, const double x_in[]) {
+  bool Lsub;
+  // Declare value as volatile to
+  // force compiler to read it from memory.
+  // This prevents unexpected results arising
+  // from use of extra precision in registers.
+  volatile double value;
+  double ftmp[3];
+
+  Lsub = false;
+  b->Fractional(x_in,ftmp);
+  if (ftmp[0] >= sublo[0] && ftmp[0] < subhi[0]) 
+    if (ftmp[1] >= sublo[1] && ftmp[1] < subhi[1]) 
+      if (ftmp[2] >= sublo[2] && ftmp[2] < subhi[2]) 
+	Lsub = true;
+  
+  return Lsub;
+}
+
+void Comm::get_myloc(int myloc_out[]) const {
+  myloc_out[0] = myloc[0];
+  myloc_out[1] = myloc[1];
+  myloc_out[2] = myloc[2];
+}
+
+void Comm::get_procgrid(int procgrid_out[]) const {
+  procgrid_out[0] = procgrid[0];
+  procgrid_out[1] = procgrid[1];
+  procgrid_out[2] = procgrid[2];
+}
+
+/* communication of array of doubles */
+/* received values are incremented to local values */
+      
+void Comm::comm_double_add(vector<double>& x) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = 0; iswap < nswap; iswap++) {
+
+    /* pack buffer */
+    nsend = sendnum[iswap];
+    for (int i=0;i<nsend;i++) {
+      ii = sendlist[iswap][i];
+      buf_send[i] = x[ii];
+    }
+    /* exchange with another proc
+       if self, set recv buffer to send buffer */
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_comm_recv[iswap],MPI_DOUBLE,
+		recvproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_comm_send[iswap],MPI_DOUBLE,
+	       sendproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      x[ii] += buf[i];
+      ii++;
+    }
+
+  }
+
+}
+
+void Comm::comm_double_add(double x[]) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = 0; iswap < nswap; iswap++) {
+
+    /* pack buffer */
+    nsend = sendnum[iswap];
+    for (int i=0;i<nsend;i++) {
+      ii = sendlist[iswap][i];
+      buf_send[i] = x[ii];
+    }
+    /* exchange with another proc
+       if self, set recv buffer to send buffer */
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_comm_recv[iswap],MPI_DOUBLE,
+		recvproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_comm_send[iswap],MPI_DOUBLE,
+	       sendproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      x[ii] += buf[i];
+      ii++;
+    }
+
+  }
+
+}
+
+/* communication of array of doubles */
+/* received values overwrite local values */
+      
+void Comm::comm_double(double x[]) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = 0; iswap < nswap; iswap++) {
+
+    /* pack buffer */
+    nsend = sendnum[iswap];
+    for (int i=0;i<nsend;i++) {
+      ii = sendlist[iswap][i];
+      buf_send[i] = x[ii];
+    }
+    /* exchange with another proc
+       if self, set recv buffer to send buffer */
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_comm_recv[iswap],MPI_DOUBLE,
+		recvproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_comm_send[iswap],MPI_DOUBLE,
+	       sendproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      x[ii] = buf[i];
+      ii++;
+    }
+
+  }
+
+}
+
+/* reverse communication of array of doubles */
+/* received values are incremented to local values */
+      
+void Comm::reverse_comm_double_add(vector<double>& x) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = nswap-1; iswap >= 0; iswap--) {
+
+    /* pack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      buf_send[i] = x[ii];
+      ii++;
+    }
+
+    /* exchange with another proc 
+       if self, set recv buffer to send buffer */
+
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_reverse_recv[iswap],MPI_DOUBLE,
+		sendproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_reverse_send[iswap],MPI_DOUBLE,
+	       recvproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    for (int i=0;i<sendnum[iswap];i++) {
+      ii = sendlist[iswap][i];
+      x[ii] += buf[i];
+    }
+  }
+}
+
+/* reverse communication of array of doubles */
+/* received values are incremented to local values */
+      
+void Comm::reverse_comm_double_add(double x[]) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = nswap-1; iswap >= 0; iswap--) {
+
+    /* pack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      buf_send[i] = x[ii];
+      ii++;
+    }
+
+    /* exchange with another proc 
+       if self, set recv buffer to send buffer */
+
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_reverse_recv[iswap],MPI_DOUBLE,
+		sendproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_reverse_send[iswap],MPI_DOUBLE,
+	       recvproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    for (int i=0;i<sendnum[iswap];i++) {
+      ii = sendlist[iswap][i];
+      x[ii] += buf[i];
+    }
+  }
+}
+
+// this function is deliberately global for access by 
+// classes invoked by Comm class
+int nint(const double& r) {
+  int i;
+
+  i = 0;
+
+  if (r>0.0) {
+    i = static_cast<int>(r+0.5);
+  } else if (r<0.0) {
+    i = static_cast<int>(r-0.5);
+  }
+
+  return i;
+}
+
+void Comm::input_procgrid(const string& buf) {
+  std::istringstream buf_in(buf);
+  buf_in >> procgrid[0];
+  buf_in >> procgrid[1];
+  buf_in >> procgrid[2];
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Comm::input_procgrid:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " "  << procgrid[0] << " " << procgrid[1] << 
+    " " << procgrid[2] << endl;
+}
+
+void Comm::input_nodefile(const string& buf) {
+  std::istringstream buf_in(buf);
+  int iflag;
+  buf_in >> iflag;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Comm::input_nodefile:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " "  << iflag << endl;
+  if (iflag) {
+    Lnodefile_input = true;
+  } else { 
+    Lnodefile_input = false;
+  }
+  glog.get_logfile() << endl;
+}
+
+void Comm::input_nworlds(const string& buf) {
+  std::istringstream buf_in(buf);
+
+  buf_in >> nworlds;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Comm::input_nworlds:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " "  << nworlds << endl;
+  glog.get_logfile() << endl;
+}
+
+void Comm::input_world_seed() {
+  Lworld_seed = true;
+  glog.get_logfile() << endl;
+}
+
+@
+
+
+4.10
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d113 1
+d115 2
+d269 1
+a269 1
+  if (procgrid[0] > 0) {
+@
+
+
+4.9
+log
+@Improved cleanup in Comm::Setup()
+@
+text
+@d253 1
+a253 1
+  double rcutneighmax,rcutneighred;
+d288 2
+a289 1
+  rcutneighmax = ff->get_rcutneighmaxall();
+d294 1
+a294 1
+    (rcutneighmax * procgrid[0] / w[0]) + 1;
+d296 1
+a296 1
+    (rcutneighmax * procgrid[1] / w[1]) + 1;
+d298 1
+a298 1
+    (rcutneighmax * procgrid[2] / w[2]) + 1;
+d348 1
+a348 1
+  //   slabhi = min(myloc+1+ineed/2,myloc+rcutneighmax)
+d351 1
+a351 1
+  //   slablo = max(myloc+ineed/2,myloc+1-rcutneighmax)
+d359 1
+a359 1
+    rcutneighred = (rcutneighmax/w[dim])*procgrid[dim];
+d371 1
+a371 1
+	slabhi[iswap] = MIN(nbox+1,myloc[dim]+rcutneighred)*sublen;
+d383 1
+a383 1
+       	slablo[iswap] = MAX(nbox,(myloc[dim]+1)-rcutneighred)*sublen;
+d387 1
+a387 1
+	//			    subhi[dim]-rcutneighmax/w[dim]);
+a1061 8
+      } else {
+	if (Lnodefile) {
+	  nodefile << dim << x_in[0] << " " << x_in[1] << 
+	    " " << x_in[2] << endl;
+	  nodefile << "Value = " << value << endl;
+	}
+	glog.error("Comm::sub_check:\n"
+		   "Value outside box ");
+a1065 8
+      } else {
+	if (Lnodefile) {
+	  nodefile << dim << x_in[0] << " " << x_in[1] << 
+	    " " << x_in[2] << endl;
+	  nodefile << "Value = " << value << endl;
+	}
+	glog.error("Comm::sub_check:\n"
+		   "Value outside box ");
+d1077 19
+@
+
+
+4.8
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d265 5
+@
+
+
+4.7
+log
+@Finished fixing bug in reax_connect.F
+@
+text
+@d172 2
+d182 7
+a188 1
+  periods[0] = periods[1] = periods[2] = 1;
+d193 5
+d367 1
+a367 2
+	  if (!periodicity[dim]) slabhi[iswap] = slablo[iswap];
+	  else {
+d384 1
+a384 2
+	  if (!periodicity[dim]) slabhi[iswap] = slablo[iswap];
+	  else {
+d468 1
+d482 1
+a538 3
+	if (Lnodefile) {
+	  nodefile << "Exchange " << endl;
+	}
+a540 3
+	if (Lnodefile) {
+	  nodefile << "Removing particle " << particles[i].get_tag() << endl;
+	}
+d551 1
+d553 9
+a561 1
+    if (procgrid[dim] > 2) {
+d563 1
+d567 1
+d571 2
+a572 1
+              world,&request);
+d578 6
+a583 1
+                world,&request);
+d585 3
+d628 1
+d708 1
+d710 2
+d731 1
+a731 1
+
+d778 1
+d780 2
+@
+
+
+4.6
+log
+@Added multiple replica feature.
+@
+text
+@d152 2
+@
+
+
+4.5
+log
+@fixed bug in nodefile handler
+@
+text
+@a49 1
+#include <iomanip>
+a53 1
+#include <stdio.h>
+a93 1
+  world = MPI_COMM_WORLD;
+d96 16
+a111 2
+  MPI_Comm_rank(world,&me);
+  MPI_Comm_size(world,&nprocs);
+d114 2
+a115 17
+
+  /* initialize comm buffers & exchange memory */
+
+  maxsend = BUFMIN;
+  buf_send.resize(maxsend+BUFEXTRA);
+  maxrecv = BUFMIN;
+  buf_recv.resize(maxrecv);
+
+  maxswap = 6;
+  allocate_swap(maxswap);
+
+  sendlist.resize(maxswap);
+  maxsendlist.resize(maxswap);
+  for (int i = 0; i < maxswap; i++) {
+    maxsendlist[i] = BUFMIN;
+    sendlist[i].resize(BUFMIN);
+  }
+d121 1
+d150 1
+a150 1
+  itostring(me,str_tmp,4);
+d154 1
+a154 1
+    glog.error("Comm::Comm:\n"
+d163 2
+a164 2
+  nodefile << "nprocs = " << nprocs << endl;
+  nodefile << "node = " << me << endl;
+d206 27
+d236 1
+a236 2
+void Comm::Setup(const Box* b, const ForceFieldList* ff)
+{
+d288 17
+d922 12
+d946 16
+a961 2
+const MPI_Comm& Comm::get_universe() const {
+  return universe;
+d1292 1
+a1292 1
+    glog.logfile << endl;
+d1296 1
+a1296 1
+  glog.logfile << " "  << procgrid[0] << " " << procgrid[1] << 
+d1305 1
+a1305 1
+    glog.logfile << endl;
+d1309 1
+a1309 3
+  glog.logfile << " "  << iflag << endl;
+  // Can not set primary flag until file has been opened
+  // We set a temporary flag instead
+d1315 1
+a1315 1
+  glog.logfile << endl;
+d1317 19
+@
+
+
+4.4
+log
+@Added a feature to turn on and off nodefiles.
+@
+text
+@d91 1
+a91 1
+  Lnodefile = false;
+d93 1
+a93 1
+  Lnodefile = true;
+d139 3
+d158 1
+a158 1
+  	       "Failed to open" + str_tmp);
+d1244 2
+d1247 1
+a1247 1
+    Lnodefile = true;
+d1249 1
+a1249 1
+    Lnodefile = false;
+@
+
+
+4.4.2.1
+log
+@latest additions to the PPPM FF
+@
+text
+@a993 9
+void Comm::get_procneigh(int procneigh_out[][2]) const {
+  procneigh_out[0][0] = procneigh[0][0];
+  procneigh_out[1][0] = procneigh[1][0];
+  procneigh_out[2][0] = procneigh[2][0];
+  procneigh_out[0][1] = procneigh[0][1];
+  procneigh_out[1][1] = procneigh[1][1];
+  procneigh_out[2][1] = procneigh[2][1];
+}
+
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@a95 4
+//   if (Lnodefile) {
+//     nodefile.setstate(std::ios::failbit);
+//   }
+
+d140 3
+d188 16
+a203 15
+  nodefile << "Procgrid = " << 
+    " " << procgrid[0] <<
+    " " << procgrid[1] <<
+    " " << procgrid[2] << endl;
+  nodefile << "Myloc = " << 
+    " " << myloc[0] <<
+    " " << myloc[1] <<
+    " " << myloc[2] << endl;
+  nodefile << "Procneigha = " << 
+    " " << procneigh[0][0] << " " << procneigh[0][1] << endl;
+  nodefile << "Procneighb = " << 
+    " " << procneigh[1][0] << " " << procneigh[1][1] << endl;
+  nodefile << "Procneighc = " << 
+    " " << procneigh[2][0] << " " << procneigh[2][1] << endl;
+
+d220 3
+a222 1
+  nodefile << "Entering Comm::Setup()" << endl;
+d233 8
+a240 6
+  nodefile << "Suba = " << 
+    " " << sublo[0] << " " << subhi[0] << endl;
+  nodefile << "Subb = " << 
+    " " << sublo[1] << " " << subhi[1] << endl;
+  nodefile << "Subc = " << 
+    " " << sublo[2] << " " << subhi[2] << endl;
+d334 18
+a351 10
+      if (ineed % 2 == 0) {
+	nodefile << "Slablo = " << slablo[iswap] << " " <<  
+	  slablo[iswap]*procgrid[dim]-(myloc[dim]+ineed/2) << endl;
+	nodefile << "Slabhi = " << slabhi[iswap] << " " <<  
+	  slabhi[iswap]*procgrid[dim]-(myloc[dim]+ineed/2 + 1) << endl;
+      } else {
+	nodefile << "Slablo = " << slablo[iswap] << " " <<  
+	  slablo[iswap]*procgrid[dim]+(myloc[dim]+ineed/2) << endl;
+	nodefile << "Slabhi = " << slabhi[iswap] << " " <<  
+	  slabhi[iswap]*procgrid[dim]+(myloc[dim]+ineed/2 - 1) << endl;
+a352 6
+      nodefile << "PBC Flags = " << 
+	" " << pbc_flags[iswap][0] << 
+	" " << pbc_flags[iswap][1] << 
+	" " << pbc_flags[iswap][2] << 
+	" " << pbc_flags[iswap][3] << endl;
+      nodefile << endl;
+d449 3
+a451 1
+  nodefile << "Entering Comm::exchange()" << endl;
+d481 3
+a483 1
+	nodefile << "Exchange " << endl;
+d486 3
+a488 1
+	nodefile << "Removing particle " << particles[i].get_tag() << endl;
+d544 3
+a546 1
+  nodefile << "Exiting Comm::exchange()" << endl;
+d846 3
+a848 1
+  nodefile << "Entering Comm::procs2box()" << endl;
+d952 5
+a956 2
+	nodefile << dim << x_in[0] << " " << x_in[1] << " " << x_in[2] << endl;
+	nodefile << "Value = " << value << endl;
+d964 5
+a968 2
+	nodefile << dim << x_in[0] << " " << x_in[1] << " " << x_in[2] << endl;
+	nodefile << "Value = " << value << endl;
+d1233 13
+a1245 1
+  Lnodefile = true;
+@
+
+
+4.3.4.1
+log
+@Added class Comm_Octant
+@
+text
+@a971 9
+void Comm::get_procneigh(int procneigh_out[3][2]) const {
+  procneigh_out[0][0] = procneigh[0][0];
+  procneigh_out[0][1] = procneigh[0][1];
+  procneigh_out[1][0] = procneigh[1][0];
+  procneigh_out[1][1] = procneigh[1][1];
+  procneigh_out[2][0] = procneigh[2][0];
+  procneigh_out[2][1] = procneigh[2][1];
+}
+
+@
+
+
+4.3.4.2
+log
+@Added use_nodefile command to Monaco_Aidan branch
+@
+text
+@d96 4
+a143 3
+    if (nodefile.is_open()) {
+      nodefile.close();
+    }
+d189 15
+a203 16
+  if (Lnodefile) {
+    nodefile << "Procgrid = " << 
+      " " << procgrid[0] <<
+      " " << procgrid[1] <<
+      " " << procgrid[2] << endl;
+    nodefile << "Myloc = " << 
+      " " << myloc[0] <<
+      " " << myloc[1] <<
+      " " << myloc[2] << endl;
+    nodefile << "Procneigha = " << 
+      " " << procneigh[0][0] << " " << procneigh[0][1] << endl;
+    nodefile << "Procneighb = " << 
+      " " << procneigh[1][0] << " " << procneigh[1][1] << endl;
+    nodefile << "Procneighc = " << 
+      " " << procneigh[2][0] << " " << procneigh[2][1] << endl;
+  }
+d220 1
+a220 3
+  if (Lnodefile) {
+    nodefile << "Entering Comm::Setup()" << endl;
+  }
+d231 6
+a236 8
+  if (Lnodefile) {
+    nodefile << "Suba = " << 
+      " " << sublo[0] << " " << subhi[0] << endl;
+    nodefile << "Subb = " << 
+      " " << sublo[1] << " " << subhi[1] << endl;
+    nodefile << "Subc = " << 
+      " " << sublo[2] << " " << subhi[2] << endl;
+  }
+d330 10
+a339 18
+      if (Lnodefile) {
+	if (ineed % 2 == 0) {
+	  nodefile << "Slablo = " << slablo[iswap] << " " <<  
+	    slablo[iswap]*procgrid[dim]-(myloc[dim]+ineed/2) << endl;
+	  nodefile << "Slabhi = " << slabhi[iswap] << " " <<  
+	    slabhi[iswap]*procgrid[dim]-(myloc[dim]+ineed/2 + 1) << endl;
+	} else {
+	  nodefile << "Slablo = " << slablo[iswap] << " " <<  
+	    slablo[iswap]*procgrid[dim]+(myloc[dim]+ineed/2) << endl;
+	  nodefile << "Slabhi = " << slabhi[iswap] << " " <<  
+	    slabhi[iswap]*procgrid[dim]+(myloc[dim]+ineed/2 - 1) << endl;
+	}
+	nodefile << "PBC Flags = " << 
+	  " " << pbc_flags[iswap][0] << 
+	  " " << pbc_flags[iswap][1] << 
+	  " " << pbc_flags[iswap][2] << 
+	  " " << pbc_flags[iswap][3] << endl;
+	nodefile << endl;
+d341 6
+d443 1
+a443 3
+  if (Lnodefile) {
+    nodefile << "Entering Comm::exchange()" << endl;
+  }
+d473 1
+a473 3
+	if (Lnodefile) {
+	  nodefile << "Exchange " << endl;
+	}
+d476 1
+a476 3
+	if (Lnodefile) {
+	  nodefile << "Removing particle " << particles[i].get_tag() << endl;
+	}
+d532 1
+a532 3
+  if (Lnodefile) {
+    nodefile << "Exiting Comm::exchange()" << endl;
+  }
+d832 1
+a832 3
+  if (Lnodefile) {
+    nodefile << "Entering Comm::procs2box()" << endl;
+  }
+d936 2
+a937 5
+	if (Lnodefile) {
+	  nodefile << dim << x_in[0] << " " << x_in[1] << 
+	    " " << x_in[2] << endl;
+	  nodefile << "Value = " << value << endl;
+	}
+d945 2
+a946 5
+	if (Lnodefile) {
+	  nodefile << dim << x_in[0] << " " << x_in[1] << 
+	    " " << x_in[2] << endl;
+	  nodefile << "Value = " << value << endl;
+	}
+d1220 1
+a1220 13
+  int iflag;
+  buf_in >> iflag;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Comm::input_nodefile:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " "  << iflag << endl;
+  if (iflag) {
+    Lnodefile = true;
+  } else { 
+    Lnodefile = false;
+  }
+@
+
+
+4.3.4.3
+log
+@Correct
+@
+text
+@a95 4
+//   if (Lnodefile) {
+//     nodefile.setstate(std::ios::failbit);
+//   }
+
+d140 3
+d188 16
+a203 15
+  nodefile << "Procgrid = " << 
+    " " << procgrid[0] <<
+    " " << procgrid[1] <<
+    " " << procgrid[2] << endl;
+  nodefile << "Myloc = " << 
+    " " << myloc[0] <<
+    " " << myloc[1] <<
+    " " << myloc[2] << endl;
+  nodefile << "Procneigha = " << 
+    " " << procneigh[0][0] << " " << procneigh[0][1] << endl;
+  nodefile << "Procneighb = " << 
+    " " << procneigh[1][0] << " " << procneigh[1][1] << endl;
+  nodefile << "Procneighc = " << 
+    " " << procneigh[2][0] << " " << procneigh[2][1] << endl;
+
+d220 3
+a222 1
+  nodefile << "Entering Comm::Setup()" << endl;
+d233 8
+a240 6
+  nodefile << "Suba = " << 
+    " " << sublo[0] << " " << subhi[0] << endl;
+  nodefile << "Subb = " << 
+    " " << sublo[1] << " " << subhi[1] << endl;
+  nodefile << "Subc = " << 
+    " " << sublo[2] << " " << subhi[2] << endl;
+d334 18
+a351 10
+      if (ineed % 2 == 0) {
+	nodefile << "Slablo = " << slablo[iswap] << " " <<  
+	  slablo[iswap]*procgrid[dim]-(myloc[dim]+ineed/2) << endl;
+	nodefile << "Slabhi = " << slabhi[iswap] << " " <<  
+	  slabhi[iswap]*procgrid[dim]-(myloc[dim]+ineed/2 + 1) << endl;
+      } else {
+	nodefile << "Slablo = " << slablo[iswap] << " " <<  
+	  slablo[iswap]*procgrid[dim]+(myloc[dim]+ineed/2) << endl;
+	nodefile << "Slabhi = " << slabhi[iswap] << " " <<  
+	  slabhi[iswap]*procgrid[dim]+(myloc[dim]+ineed/2 - 1) << endl;
+a352 6
+      nodefile << "PBC Flags = " << 
+	" " << pbc_flags[iswap][0] << 
+	" " << pbc_flags[iswap][1] << 
+	" " << pbc_flags[iswap][2] << 
+	" " << pbc_flags[iswap][3] << endl;
+      nodefile << endl;
+d449 3
+a451 1
+  nodefile << "Entering Comm::exchange()" << endl;
+d481 3
+a483 1
+	nodefile << "Exchange " << endl;
+d486 3
+a488 1
+	nodefile << "Removing particle " << particles[i].get_tag() << endl;
+d544 3
+a546 1
+  nodefile << "Exiting Comm::exchange()" << endl;
+d846 3
+a848 1
+  nodefile << "Entering Comm::procs2box()" << endl;
+d952 5
+a956 2
+	nodefile << dim << x_in[0] << " " << x_in[1] << " " << x_in[2] << endl;
+	nodefile << "Value = " << value << endl;
+d964 5
+a968 2
+	nodefile << dim << x_in[0] << " " << x_in[1] << " " << x_in[2] << endl;
+	nodefile << "Value = " << value << endl;
+d1242 13
+a1254 1
+  Lnodefile = true;
+@
+
+
+4.3.4.4
+log
+@Added in bin reallocation in montecarlo.cpp
+@
+text
+@d473 1
+d476 1
+a476 5
+	if (value < sublo[dim]) {
+	  nodefile << value - sublo[dim] << endl;  
+	} else if (value >= subhi[dim]) {
+	  nodefile << value - subhi[dim] << endl;  
+	}
+a514 2
+      } else {
+	m += p->skip_exchange(&buf_recv[m]);
+d516 1
+@
+
+
+4.3.4.5
+log
+@Added bin-based energy calc
+@
+text
+@d358 1
+d392 1
+d432 1
+d549 2
+a550 1
+  int i,m,iswap,dim,ineed,nsend,nrecv;
+d554 1
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d96 4
+d143 5
+a147 1
+  if (!Lnodefile) {//
+d975 1
+a975 1
+void Comm::comm_double(vector<double>& x) {
+d1014 81
+d1098 1
+a1098 1
+void Comm::reverse_comm_double(vector<double>& x) {
+d1137 58
+d1205 8
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+a79 4
+//   if (Lnodefile) {
+//     nodefile.setstate(std::ios::failbit);
+//   }
+
+d123 1
+a123 5
+  if (!Lnodefile) {
+    return;
+  }
+
+  if (nodefile.is_open()) {
+d951 1
+a951 1
+void Comm::comm_double_add(vector<double>& x) {
+a989 81
+void Comm::comm_double_add(double x[]) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = 0; iswap < nswap; iswap++) {
+
+    /* pack buffer */
+    nsend = sendnum[iswap];
+    for (int i=0;i<nsend;i++) {
+      ii = sendlist[iswap][i];
+      buf_send[i] = x[ii];
+    }
+    /* exchange with another proc
+       if self, set recv buffer to send buffer */
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_comm_recv[iswap],MPI_DOUBLE,
+		recvproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_comm_send[iswap],MPI_DOUBLE,
+	       sendproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      x[ii] += buf[i];
+      ii++;
+    }
+
+  }
+
+}
+
+/* communication of array of doubles */
+/* received values overwrite local values */
+      
+void Comm::comm_double(double x[]) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = 0; iswap < nswap; iswap++) {
+
+    /* pack buffer */
+    nsend = sendnum[iswap];
+    for (int i=0;i<nsend;i++) {
+      ii = sendlist[iswap][i];
+      buf_send[i] = x[ii];
+    }
+    /* exchange with another proc
+       if self, set recv buffer to send buffer */
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_comm_recv[iswap],MPI_DOUBLE,
+		recvproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_comm_send[iswap],MPI_DOUBLE,
+	       sendproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      x[ii] = buf[i];
+      ii++;
+    }
+
+  }
+
+}
+
+d993 1
+a993 1
+void Comm::reverse_comm_double_add(vector<double>& x) {
+a1031 58
+/* reverse communication of array of doubles */
+/* received values are incremented to local values */
+      
+void Comm::reverse_comm_double_add(double x[]) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = nswap-1; iswap >= 0; iswap--) {
+
+    /* pack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      buf_send[i] = x[ii];
+      ii++;
+    }
+
+    /* exchange with another proc 
+       if self, set recv buffer to send buffer */
+
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_reverse_recv[iswap],MPI_DOUBLE,
+		sendproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_reverse_send[iswap],MPI_DOUBLE,
+	       recvproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    for (int i=0;i<sendnum[iswap];i++) {
+      ii = sendlist[iswap][i];
+      x[ii] += buf[i];
+    }
+  }
+}
+
+// this function is deliberately global for access by 
+// classes invoked by Comm class
+int nint(const double& r) {
+  int i;
+
+  i = 0;
+
+  if (r>0.0) {
+    i = static_cast<int>(r+0.5);
+  } else if (r<0.0) {
+    i = static_cast<int>(r-0.5);
+  }
+
+  return i;
+}
+
+a1041 8
+  glog.logfile << " "  << procgrid[0] << " " << procgrid[1] << 
+    " " << procgrid[2] << endl;
+}
+
+void Comm::input_nodefile(const string& buf) {
+  std::istringstream buf_in(buf);
+  Lnodefile = true;
+  glog.logfile << endl;
+@
+
+
+3.7
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.6
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d959 1
+a959 1
+void Comm::comm_double(vector<double>& x) {
+d998 123
+d1124 1
+a1124 1
+void Comm::reverse_comm_double(vector<double>& x) {
+d1163 16
+@
+
+
+3.5
+log
+@Added input_procgrid function.
+@
+text
+@d80 4
+d131 4
+d1050 8
+@
+
+
+3.4
+log
+@Fixed bug in comm.cpp regaarding nodefile and bug in force_threeebody.cpp regarding virial.
+@
+text
+@d41 1
+d149 1
+a149 1
+    glog.error("Comm::set_procs"
+d1032 11
+@
+
+
+3.3
+log
+@Fixed a bug in comm.cpp regarding nodefile.
+CV: ----------------------------------------------------------------------
+@
+text
+@d110 1
+a113 1
+  nodefile.close();
+a122 1
+    nodefile.open(glog.null_str.c_str());
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d108 1
+a108 1
+  if (!Lnodefile) {
+@
+
+
+3.2.6.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a40 1
+#include <sstream>
+d108 1
+a108 1
+  if (Lnodefile) {
+a109 1
+    nodefile.close();
+d113 1
+d122 2
+a123 1
+  if (!Lnodefile) {//
+d149 1
+a149 1
+    glog.error("Comm::set_procs\n"
+a1031 11
+void Comm::input_procgrid(const string& buf) {
+  std::istringstream buf_in(buf);
+  buf_in >> procgrid[0];
+  buf_in >> procgrid[1];
+  buf_in >> procgrid[2];
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Comm::input_procgrid:\n"
+	       "Read error in input file");
+  }
+}
+@
+
+
+3.2.2.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@d951 1
+a951 1
+void Comm::comm_double_add(vector<double>& x) {
+a989 42
+/* communication of array of doubles */
+/* received values overwrite local values */
+      
+void Comm::comm_double(double x[]) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = 0; iswap < nswap; iswap++) {
+
+    /* pack buffer */
+    nsend = sendnum[iswap];
+    for (int i=0;i<nsend;i++) {
+      ii = sendlist[iswap][i];
+      buf_send[i] = x[ii];
+    }
+    /* exchange with another proc
+       if self, set recv buffer to send buffer */
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_comm_recv[iswap],MPI_DOUBLE,
+		recvproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_comm_send[iswap],MPI_DOUBLE,
+	       sendproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      x[ii] = buf[i];
+      ii++;
+    }
+
+  }
+
+}
+
+d993 1
+a993 1
+void Comm::reverse_comm_double_add(vector<double>& x) {
+a1031 41
+/* reverse communication of array of doubles */
+/* received values are incremented to local values */
+      
+void Comm::reverse_comm_double_add(double x[]) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = nswap-1; iswap >= 0; iswap--) {
+
+    /* pack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      buf_send[i] = x[ii];
+      ii++;
+    }
+
+    /* exchange with another proc 
+       if self, set recv buffer to send buffer */
+
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_reverse_recv[iswap],MPI_DOUBLE,
+		sendproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_reverse_send[iswap],MPI_DOUBLE,
+	       recvproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    for (int i=0;i<sendnum[iswap];i++) {
+      ii = sendlist[iswap][i];
+      x[ii] += buf[i];
+    }
+  }
+}
+@
+
+
+3.2.2.2
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@a1114 17
+
+// this function is deliberately global for access by 
+// classes invoked by Comm class
+int nint(const double& r) {
+  int i;
+
+  i = 0;
+
+  if (r>0.0) {
+    i = static_cast<int>(r+0.5);
+  } else if (r<0.0) {
+    i = static_cast<int>(r-0.5);
+  }
+
+  return i;
+}
+
+@
+
+
+3.2.2.3
+log
+@Implemented a parallel CG scheme. Does not exploit sparsity and
+so is still quite slow.
+@
+text
+@a989 39
+void Comm::comm_double_add(double x[]) {
+  int iswap,nsend;
+  double *buf;
+  double t1,t2;
+  int ii;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = 0; iswap < nswap; iswap++) {
+
+    /* pack buffer */
+    nsend = sendnum[iswap];
+    for (int i=0;i<nsend;i++) {
+      ii = sendlist[iswap][i];
+      buf_send[i] = x[ii];
+    }
+    /* exchange with another proc
+       if self, set recv buffer to send buffer */
+    if (sendproc[iswap] != me) {
+      MPI_Irecv(&buf_recv[0],size_comm_recv[iswap],MPI_DOUBLE,
+		recvproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],size_comm_send[iswap],MPI_DOUBLE,
+	       sendproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      x[ii] += buf[i];
+      ii++;
+    }
+
+  }
+
+}
+
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d74 2
+a75 1
+  //Lnodefile = false;
+d77 1
+d108 3
+a110 3
+#ifdef _USE_NODEFILES_
+  nodefile << "Entered Comm::~Comm" << endl;
+#endif
+a128 1
+#ifdef _USE_NODEFILES_
+a133 1
+#endif
+d889 5
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d106 1
+d108 1
+d127 1
+d133 1
+@
+
+
+2.25
+log
+@*** empty log message ***
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.24
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d73 2
+a74 2
+  Lnodefile = false;
+  //Lnodefile = true;
+@
+
+
+2.23
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@a97 1
+    sendlist[i] = *(new vector<int>);
+a99 1
+
+a107 9
+  maxsendlist.clear();
+
+  for (int iswap=0;iswap<sendlist.size();iswap++) {
+    sendlist[iswap].clear();
+  }
+  sendlist.clear();
+
+  buf_send.clear();
+  buf_recv.clear();
+a752 1
+    sendlist[i] = *(new vector<int>);
+@
+
+
+2.22
+log
+@Updated header
+@
+text
+@d74 1
+a74 1
+  //  Lnodefile = true;
+@
+
+
+2.21
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.20
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d73 2
+a74 2
+  //  Lnodefile = false;
+  Lnodefile = true;
+@
+
+
+2.19
+log
+@Various
+@
+text
+@d950 4
+a953 4
+/* communication of EAM embedding function */
+
+void Comm::comm_embed(ParticleList* p)
+{
+d957 1
+d965 4
+a968 2
+    p->pack_embed(nsend,sendlist[iswap],
+		      &buf_send[0]);
+d982 6
+a987 1
+    p->unpack_embed(recvnum[iswap],firstrecv[iswap],buf);
+d992 2
+a993 1
+/* reverse communication of EAM density */
+d995 1
+a995 2
+void Comm::reverse_comm_rho(ParticleList* p)
+{
+d999 1
+d1007 5
+a1011 1
+    p->pack_reverse_rho(recvnum[iswap],firstrecv[iswap],&buf_send[0]);
+d1027 4
+a1030 1
+    p->unpack_reverse_rho(sendnum[iswap],sendlist[iswap],buf);
+@
+
+
+2.18
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.17
+log
+@Fixed up a problem with nodefile output.
+@
+text
+@d73 2
+a74 1
+  Lnodefile = false;
+d112 1
+a112 1
+  for (int iswap=0;iswap<maxswap;iswap++) {
+@
+
+
+2.16
+log
+@This might be the value round of clean-up on the make files.
+Now it works on Cplant and everything.
+@
+text
+@d73 1
+a73 1
+  Lnodefile = true;
+d128 1
+a128 1
+    //    nodefile.open("/dev/null");
+@
+
+
+2.15
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@d73 1
+a73 1
+  Lnodefile = false;
+d128 1
+a128 1
+    nodefile.open("/dev/null");
+d137 1
+a137 1
+	       "Failed to open" + str_tmp);
+@
+
+
+2.14
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@d73 2
+d126 5
+@
+
+
+2.14.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a103 1
+#ifdef _USE_NODEFILES_
+a104 1
+#endif
+d127 5
+a131 5
+//  nodefile.open(str_tmp.c_str()); 
+//  if (!nodefile) {
+//    glog.error("Comm::Comm:\n"
+//       "Failed to open" + str_tmp);
+//  }
+@
+
+
+2.14.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a72 3
+  Lnodefile = false;
+  //Lnodefile = true;
+
+d95 1
+d98 1
+d109 9
+a126 5
+  if (!Lnodefile) {
+    nodefile.open(glog.null_str.c_str());
+    return;
+  }
+
+d129 5
+a133 7
+#ifdef _USE_NODEFILES_
+  nodefile.open(str_tmp.c_str()); 
+  if (!nodefile) {
+    glog.error("Comm::Comm:\n"
+  	       "Failed to open" + str_tmp);
+  }
+#endif
+d758 1
+d944 4
+a947 4
+/* communication of array of doubles */
+/* received values are incremented to local values */
+      
+void Comm::comm_double(vector<double>& x) {
+a950 1
+  int ii;
+d958 2
+a959 4
+    for (int i=0;i<nsend;i++) {
+      ii = sendlist[iswap][i];
+      buf_send[i] = x[ii];
+    }
+d973 1
+a973 6
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      x[ii] += buf[i];
+      ii++;
+    }
+
+d978 1
+a978 2
+/* reverse communication of array of doubles */
+/* received values are incremented to local values */
+d980 2
+a981 1
+void Comm::reverse_comm_double(vector<double>& x) {
+a984 1
+  int ii;
+d992 1
+a992 5
+    ii = firstrecv[iswap];
+    for (int i=0;i<recvnum[iswap];i++) {
+      buf_send[i] = x[ii];
+      ii++;
+    }
+d1008 1
+a1008 4
+    for (int i=0;i<sendnum[iswap];i++) {
+      ii = sendlist[iswap][i];
+      x[ii] += buf[i];
+    }
+@
+
+
+2.13
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d47 1
+a51 1
+#include "particle.h"
+@
+
+
+2.12
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@d48 1
+d330 1
+a330 1
+  int iswap,nsend,size_comm;
+a335 2
+  size_comm = p->get_size_comm();
+
+d364 1
+a364 1
+  int iswap,nsend,size_reverse;
+a369 2
+  size_reverse = p->get_size_reverse();
+
+d450 1
+d940 68
+@
+
+
+2.11
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d29 2
+a30 4
+//  Definitions for Comm class.
+//  Comm is a modified version of the LAMMPS-like
+//  spatial decomposition communication class
+//  written by Steve Plimpton (May 2003).
+@
+
+
+2.10
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.9
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d37 9
+a45 2
+Comm::Comm(int& argc, char* argv[]) {
+  MPI_Init(&argc,&argv);
+d90 1
+a90 1
+  MPI_Finalize();
+d106 1
+a106 1
+  nodefile.precision(3);
+@
+
+
+2.8
+log
+@Redoing temperature functions. Not finished yet.
+@
+text
+@d22 1
+d815 1
+a815 1
+MPI_Comm Comm::get_world() const {
+d819 1
+a819 1
+MPI_Comm Comm::get_universe() const {
+@
+
+
+2.7
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d384 1
+d460 8
+@
+
+
+2.6
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@a158 1
+  if (me == 0) glog.logfile << "Entering Comm::Setup()" << endl;
+a288 2
+
+  if (me == 0) glog.logfile << "Exiting Comm::Setup()" << endl;
+d297 1
+d324 1
+d333 1
+d375 1
+d483 1
+d677 1
+@
+
+
+2.5
+log
+@Removed some diagnostic output.
+@
+text
+@d11 3
+d18 1
+d20 1
+d25 1
+a63 19
+  /* open a file for each node */
+  /* may move this later */
+
+  string str_tmp;
+
+  itostring(me,str_tmp,4);
+  str_tmp = "nodefile_" + str_tmp + ".out";
+  nodefile.open(str_tmp.c_str()); 
+  if (!nodefile) {
+    glog.error("Comm::Comm:\n"
+	       "Failed to open" + str_tmp);
+  }
+
+  nodefile.precision(3);
+  nodefile.setf(std::ios::showpoint);
+  nodefile.setf(std::ios::fixed);
+  nodefile << "Setting up Comm object " << endl;
+  nodefile << "nprocs = " << nprocs << endl;
+  nodefile << "node = " << me << endl;
+d81 1
+d85 22
+a176 1
+  
+d178 1
+a178 1
+  rcutneighmax = ff->get_rcutneighmax();
+a373 1
+  double value;
+d378 5
+d412 1
+d414 1
+a453 1
+	nodefile << "Unpack Exchange Tag = " << buf_recv[m+8] << endl;
+d476 1
+a476 2
+void Comm::borders(const Box* b, ParticleList* p)
+{
+d481 1
+a481 1
+  double lo,hi,value;
+d484 2
+d489 5
+a505 1
+    for (ineed = 0; ineed < 2*need[dim]; ineed++) {
+d507 11
+a517 8
+      /* find all atoms (own & ghost) within slab boundaries lo/hi
+	 store atom indices in list for use in future timesteps */
+
+      lo = slablo[iswap];
+      hi = slabhi[iswap];
+
+      m = nsend = 0;
+      nparticles = p->get_nparticles() + p->get_nghost_particles();
+d519 6
+a524 1
+      for (i = 0; i < nparticles; i++) {
+d526 2
+a527 5
+	// Need to keep pointer up-to-date
+	particles = p->get_particles();
+	particles[i].get_x(rvec);
+	value = b->Fractional(dim,rvec);
+	if (value >= lo && value < hi) {
+d534 14
+a549 4
+      /* swap atoms with other proc
+	 put incoming ghosts at end of my atom arrays
+	 if swapping with self, simply copy, no messages */
+
+d555 1
+a555 1
+	MPI_Irecv(&buf_recv[0],nrecv*size_border,MPI_DOUBLE,
+d557 1
+a557 1
+	MPI_Send(&buf_send[0],nsend*size_border,MPI_DOUBLE,
+d560 1
+a560 1
+	buf = &buf_recv[0];
+d563 1
+a563 1
+	buf = &buf_send[0];
+d581 69
+a649 1
+      firstrecv[iswap] = nparticles;
+d651 7
+a755 1
+
+d844 1
+a844 2
+bool Comm::sub_check(const Box* b, const double x_in[]) const {
+  double value;
+d846 5
+d856 22
+d879 1
+@
+
+
+2.4
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@a502 1
+	nodefile << "i = " << i << " Value = " << value << endl;
+a503 1
+	  nodefile << "Accepted image of i = " << i << endl;	  
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d7 1
+d71 3
+d289 1
+a289 1
+  int iswap,nsend_local,nsend_ghost,size_comm;
+d299 2
+a300 4
+
+    nsend_local = sendnum_local[iswap];
+    nsend_ghost = sendnum[iswap]-nsend_local;
+    p->pack_comm(nsend_local,sendlist[iswap],
+a301 3
+    p->pack_comm_ghost(nsend_ghost,&sendlist[iswap][nsend_local],
+		      &buf_send[size_comm*nsend_local],pbc_flags[iswap],b);
+
+a303 1
+
+d323 1
+a323 1
+  int iswap,nsend_local,nsend_ghost,size_reverse;
+d350 2
+a351 6
+    nsend_local = sendnum_local[iswap];
+    nsend_ghost = sendnum[iswap]-nsend_local;
+    p->unpack_reverse(nsend_local,sendlist[iswap],buf);
+    buf = buf+size_reverse*nsend_local;
+    p->unpack_reverse_ghost(nsend_ghost,&sendlist[iswap][nsend_local],
+			    buf);
+d364 1
+a364 1
+  int i,m,nsend,nrecv,nrecv1,nrecv2,nlocal;
+d373 4
+d394 1
+a394 1
+    nlocal = p->get_nparticles();
+d396 1
+a396 1
+    while (i < nlocal) {
+d403 1
+a403 1
+	nlocal--;
+d439 1
+d464 1
+a464 1
+  int i,m,iswap,dim,ineed,nsend,nrecv,nall,nsend_local;
+d469 1
+a469 1
+  int nlocal,nghost;
+d471 1
+a471 2
+  const Particle* particleslocal;
+  const Particle* particlesghost;
+a480 6
+  /* initialize atom data */
+
+  p->ResetGhosts();
+  particleslocal = p->get_particles();
+  nlocal = p->get_nparticles();
+
+a492 2
+      particlesghost = p->get_ghost_particles();
+      nghost = p->get_nghost_particles();
+d495 1
+d497 1
+a497 1
+      for (i = 0; i < nlocal; i++) {
+d499 3
+a501 1
+	particleslocal[i].get_x(rvec);
+d503 1
+d505 1
+a513 14
+      nsend_local = nsend;
+      for (i = 0; i < nghost; i++) {
+
+	particlesghost[i].get_x(rvec);
+	value = b->Fractional(dim,rvec);
+	if (value >= lo && value < hi) {
+	  if (m > maxsend) grow_send(m);
+	  m += p->pack_border_ghost(i,&buf_send[m],pbc_flags[iswap],b);
+	  if (nsend == maxsendlist[iswap]) grow_list(iswap,nsend);
+	  sendlist[iswap][nsend] = i;
+	  nsend++;
+	}
+      }
+
+a542 1
+      sendnum_local[iswap] = nsend_local;
+d549 1
+a549 1
+      firstrecv[iswap] = nghost;
+a613 1
+  sendnum_local.resize(n);
+a632 1
+  sendnum_local.clear();
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d63 1
+a63 1
+  str_tmp = "grasp_" + str_tmp + ".out";
+d137 1
+a137 1
+  double rcutneigh;
+d143 1
+d165 1
+a165 1
+  rcutneigh = ff->get_rcutneigh();
+d170 1
+a170 1
+    (rcutneigh * procgrid[0] / w[0]) + 1;
+d172 1
+a172 1
+    (rcutneigh * procgrid[1] / w[1]) + 1;
+d174 1
+a174 1
+    (rcutneigh * procgrid[2] / w[2]) + 1;
+d206 2
+a207 2
+  //   slablo = sublo+ineed/2
+  //   slabhi = min(slablo+1,sublo+rcutneigh/subw)
+d209 5
+a213 7
+  //   slabhi = subhi-ineed/2
+  //   slablo = max(slabhi-1,subhi-rcutneigh/subw)
+  // where all lo/hi lengths are in units of sublen = a/procgrid.
+  // hi/lo lengths are actually calculated and stored in units of a.
+  // a is the length of the unit cell vector in direction dim.
+  // subw is the spacing between subdomain planes = w/procgrid
+  // subw <= sublen, with equality iff a.b = a.c = 0.
+d218 1
+d228 3
+a230 3
+	slablo[iswap] = sublo[dim] + (ineed/2)*sublen;
+	slabhi[iswap] = MIN(slablo[iswap]+sublen,
+			    sublo[dim]+rcutneigh/w[dim]);
+d241 8
+a248 3
+	slabhi[iswap] = subhi[dim] - (ineed/2)*sublen;
+	slablo[iswap] = MAX(slabhi[iswap]-sublen,
+			    subhi[dim]-rcutneigh/w[dim]);
+a397 2
+    nodefile << "Nlocal exchange = " << nlocal << endl;
+
+a399 3
+      nodefile << rvec[0] << " " <<
+                  rvec[1] << " " <<
+	rvec[2] << " " << endl;
+a400 1
+      nodefile << "Value = " << value << endl;
+a436 2
+    nodefile << "Nrecv exchange = " << nrecv << endl;
+
+a519 1
+      nodefile << "nsend_local = " << nsend_local << endl;
+a531 2
+      nodefile << "nsend_ghost = " << nsend - nsend_local << endl;
+
+d774 13
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@a10 1
+extern ofstream logfile;
+d18 2
+d66 2
+a67 2
+    logfile << "Failed to open" << str_tmp << endl;
+    exit(0);
+d98 2
+a99 4
+    if (me == 0) {
+      logfile << "Bad grid of processors" << endl;
+    }
+    exit(0);
+d144 1
+a144 1
+  if (me == 0) logfile << "Entering Comm::Setup()" << endl;
+d273 1
+a273 1
+  if (me == 0) logfile << "Exiting Comm::Setup()" << endl;
+@
+

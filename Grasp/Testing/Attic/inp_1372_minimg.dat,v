@@ -1,0 +1,83 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.09.23.23.32.37;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.12.23.28.39;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Moved examples into subdirectories.
+@
+text
+@# twobody minimg 1372-particle input data
+forcefield twobody 	twobody.in Lennard-Jones
+timestep 		1.0
+nsteps 			10
+box dimensions 		14.0	0.0	0.0	\
+			0.0	14.0	0.0	\
+			0.0	0.0	14.0
+box origin 		-7.0 		-7.0 		-7.0
+initialize temperature 	0.0 		256
+neighbor		none
+thermo 			1
+dump atoms 		10
+dump velocities 	10
+@
+
+
+2.1
+log
+@Fixed up the output log immensely. Fixed up the velocity-rescale
+thermostat, which changed the dft example a little.
+Other than that, all the other examples (NVE) stayed the same.
+@
+text
+@@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d2 1
+a2 1
+forcefield twobody 	twobody.in
+@
+
+
+1.1
+log
+@Can not specify neighboring in input file for this run,
+as there are nocut forcefields present.
+@
+text
+@@
+

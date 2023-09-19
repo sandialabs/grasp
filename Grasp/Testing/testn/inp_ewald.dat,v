@@ -1,0 +1,127 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoTesting:3.0.0.6
+	InitialGraspTesting:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:1.2.2.1
+	cjkimme_version:1.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.07.30.20.18.56;	author athomps;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2004.03.01.18.14.14;	author athomps;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@# twobody 4-particle input data
+forcefield twobody 	twobody.in   Lennard-Jones
+forcefield ewald        1.0e-12   6.0
+timestep 		1.0e-2
+nsteps 			1000
+box dimensions 		2.0000000000	0.0	0.0	\
+			0.0	2.00000000000	0.0	\
+			0.0	0.0	2.000000000000
+box origin 		-1.0 		-1.0 		-1.0
+initialize temperature 	0.0 		256
+neighbor		bin 		10 		0.3
+thermo 			100
+dump particles 		100
+dump velocities 	100
+dump forces 	100
+
+
+
+
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@@
+
+
+1.2
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@@
+
+
+1.2.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.1
+log
+@Added Ewald sum example
+@
+text
+@d3 1
+a3 1
+forcefield ewald        1.0e-5   6.0
+d6 3
+a8 3
+box dimensions 		2.00000000001	0.0	0.0	\
+			0.0	2.000000000001	0.0	\
+			0.0	0.0	2.0000000000001
+@
+

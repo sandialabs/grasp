@@ -1,0 +1,65 @@
+head	2.1;
+access;
+symbols
+	PreMonaco:2.1;
+locks; strict;
+comment	@# @;
+
+
+2.1
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.21.23.04.33;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.1
+log
+@Moved examples into subdirectories.
+@
+text
+@#
+#	Stillinger-Weber interaction for Silicon.
+#
+A  A   A   sw_cut   209.2  2.0951  1.80 21.0 1.20 -0.333333333333 7.049556277 0.6022245584 4.0 0.0 
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.1
+log
+@Finally finished implementing Stillinger-Weber forcefield
+Increased number of examples to six. The LJ and SW force
+fields have been tested for energy conservation, and so are
+have high confidence.
+
+The first three are short MD runs using perturbed FCC LJ systems.
+The fourth is an energy evaluation of a dense tetrahedral
+Stillinger-Weber Silicon crystal, which matches a TOWHEE example
+to seven decimal places.
+The fifth and sixth are short MD runs using perturbed tetrahedral
+Stillinger-Weber Silicon.
+@
+text
+@@
+

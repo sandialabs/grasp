@@ -1,0 +1,103 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.05.03.58;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.01.04.00.33.04;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.01.04.00.33.04;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@# Specification of particle id's.
+#
+# Currently, these must be entered in the same order as
+# they appear in the ReaxFF ffield file
+#
+C    atom  12.0000
+H    atom   1.0080
+O    atom  15.9990
+N    atom  14.0000
+
+
+@
+
+
+1.2
+log
+@Cleaning up testrdx
+@
+text
+@@
+
+
+1.1
+log
+@file types_rdx.in was initially added on branch REAXFF.
+@
+text
+@d1 11
+@
+
+
+1.1.2.1
+log
+@This is an 621 particle rdx example that matches the energies, forces and trajectory
+from Adri's March code very well. See also directory testrdx_reax.
+@
+text
+@a0 11
+# Specification of particle id's.
+#
+# Currently, these must be entered in the same order as
+# they appear in the ReaxFF ffield file
+#
+C    atom  12.0000
+H    atom   1.0080
+O    atom  15.9990
+N    atom  14.0000
+
+
+@
+

@@ -1,0 +1,72 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2006.11.28.18.26.43;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Added some header files needed for ReaxFF bond output
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia
+//    Corporation, the U.S. Government retains certain rights in
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public
+//    License (GPL). For a copy of the GPL see the file
+//    Grasp/Documentation/LICENSE or visit the GNU website at
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL
+//    entitles you to use the software, modify it and redistribute it.
+//    The main thing you can not do is apply any other licensing
+//    terms to the software. Also, if any part of this sofware is added
+//    to other software, then that software must also be released under
+//    the GPL.
+//
+//    This software comes with no warranty of any kind.
+//
+//-----------------------------------------------------------------------
+/////:EOH~
+extern struct {
+  int nubon1[ReaxParams::nat*(ReaxParams::mbond)];
+  int nubon2[ReaxParams::nat*(ReaxParams::mbond)];
+} FORTRAN(cbknubon2,CBKNUBON2);
+
+@

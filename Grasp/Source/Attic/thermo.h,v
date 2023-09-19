@@ -1,0 +1,89 @@
+head	2.3;
+access;
+symbols
+	PreMonaco:2.3;
+locks; strict;
+comment	@ * @;
+
+
+2.3
+date	2003.10.31.20.20.44;	author athomps;	state dead;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.3
+log
+@Removed Thermo class
+@
+text
+@#ifndef THERMO_H
+#define THERMO_H
+
+class Thermo
+{
+ public:
+ private:
+   double temp_current;
+   double pressa_current,pressb_current,pressc_current;
+   double e_potential,e_kinetic,e_potential_init,e_kinetic_init;
+ public:
+   Thermo();
+   ~Thermo();
+   void Setup(const Input*);
+   void SetTemperature(double&);
+   void SetKineticEnergy(double&);
+};
+
+#endif
+@
+
+
+2.2
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@@
+
+
+2.1
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@a10 2
+   int thermo_freq;
+   bool Lthermo
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d11 2
+@
+

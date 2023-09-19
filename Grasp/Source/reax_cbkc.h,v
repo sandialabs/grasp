@@ -1,0 +1,236 @@
+head	4.3;
+access;
+symbols
+	ReverseComm_branch:4.2.0.4
+	ADTools_branch:4.2.0.2
+	Monaco_Aidan:4.1.0.6
+	Root-of-Monaco_Aidan:4.1
+	PPPM_Crozier2:4.1.0.4
+	PPPM_Crozier:4.1
+	Root-of-PPPM_Crozier:4.1
+	Monaco:4.1.0.2
+	PreMonaco:4.1
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:3.2.2.3
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.3
+date	2008.11.06.05.31.16;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.08.03.17.58.35;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2005.01.11.22.49.40;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.01.31.04.22.50;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.3
+log
+@Added a few tweaks to charge equilibration
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+extern struct {
+  double c[3*ReaxParams::nat]; double cglobal[3*ReaxParams::nattot];
+  int itag[ReaxParams::nat]; double chgglobal[ReaxParams::nattot];
+} FORTRAN(cbkc,CBKC);
+
+@
+
+
+4.2
+log
+@ReaxFF: Provided atom tags to ReaxFF common blocks
+@
+text
+@d47 1
+a47 1
+  int itag[ReaxParams::nat];
+@
+
+
+4.1
+log
+@Fixed glitch in header.
+@
+text
+@d47 1
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@d1 28
+d30 1
+a30 1
+  double c[3*ReaxParams::nat];
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Modified use of nat to allow treatment of big parallel systems.
+@
+text
+@d2 1
+a2 1
+  double c[3*ReaxParams::nattot];
+@
+
+
+3.2.2.3
+log
+@Streamlined memory for global and local data
+@
+text
+@d2 1
+a2 1
+  double c[3*ReaxParams::nat]; double cglobal[3*ReaxParams::nattot];
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

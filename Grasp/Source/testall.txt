@@ -1,0 +1,40 @@
+co  Makefile,v Makefile
+Makefile,v  -->  Makefile
+revision 4.6
+done
+Makefile:62: Makefile.target: No such file or directory
+co  Makefile.target,v Makefile.target
+Makefile.target,v  -->  Makefile.target
+revision 4.3
+done
+/space/CVS-grasp/Grasp/Source/Makefile:173: /space/CVS-grasp/Grasp/Source/Makefile.arch: No such file or directory
+/space/CVS-grasp/Grasp/Source/Makefile:204: /space/CVS-grasp/Grasp/Source/Makefile.testing: No such file or directory
+co  /space/CVS-grasp/Grasp/Source/Makefile.testing,v /space/CVS-grasp/Grasp/Source/Makefile.testing
+/space/CVS-grasp/Grasp/Source/Makefile.testing,v  -->  /space/CVS-grasp/Grasp/Source/Makefile.testing
+revision 4.5
+done
+co  /space/CVS-grasp/Grasp/Source/Makefile.arch,v /space/CVS-grasp/Grasp/Source/Makefile.arch
+/space/CVS-grasp/Grasp/Source/Makefile.arch,v  -->  /space/CVS-grasp/Grasp/Source/Makefile.arch
+revision 4.7
+done
+co  /space/CVS-grasp/Grasp/Source/grasp_run.cpp,v grasp_run.cpp
+/space/CVS-grasp/Grasp/Source/grasp_run.cpp,v  -->  grasp_run.cpp
+revision 4.3
+done
+/usr/bin/g++ -O2 -MD  -DGNU_2_96   -c grasp_run.cpp
+grasp_run.cpp:51:19: grasp.h: No such file or directory
+grasp_run.cpp:52:24: controller.h: No such file or directory
+grasp_run.cpp:53:17: log.h: No such file or directory
+grasp_run.cpp:54:23: constants.h: No such file or directory
+grasp_run.cpp:56: error: 'Log' is used as a type, but is not defined as a type.
+grasp_run.cpp:57: error: 'Constants' is used as a type, but is not defined as a 
+   type.
+grasp_run.cpp: In function `int main(int, char**)':
+grasp_run.cpp:60: error: `Controller' undeclared (first use this function)
+grasp_run.cpp:60: error: (Each undeclared identifier is reported only once for 
+   each function it appears in.)
+grasp_run.cpp:60: error: syntax error before `(' token
+grasp_run.cpp:61: error: `controller' undeclared (first use this function)
+make[1]: *** [grasp_run.o] Error 1
+rm grasp_run.cpp
+make: *** [Obj_software] Error 2

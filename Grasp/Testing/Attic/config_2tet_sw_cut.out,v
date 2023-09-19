@@ -1,0 +1,77 @@
+head	2.3;
+access;
+symbols
+	PreMonaco:2.3;
+locks; strict;
+comment	@# @;
+
+
+2.3
+date	2003.11.03.23.24.20;	author athomps;	state dead;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.18.15.48.43;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.3
+log
+@Moved examples into subdirectories.
+@
+text
+@# Unit cell lattice vectors:
+# 0 2.3596 2.3596
+# 2.3596 0 2.3596
+# 2.3596 2.3596 0
+# 
+# Unit cell origin:
+# 5.899 5.899 0
+# 
+# Timestep 0
+# 
+# Number of particles 2
+# 
+# Particle positions 
+       1        A       1         0.000000000         7.078800000         7.078800000         0.000000000
+       2        A       2         0.000000000         8.258600000         8.258600000         1.179800000
+# 
+@
+
+
+2.2
+log
+@Switched the neighbor style from nsq to binning in all examples.
+@
+text
+@@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@d7 1
+a7 1
+# 5.899 5.899 1e-10
+d14 1
+a14 1
+       1        A       1         0.000000000         9.438400000         9.438400000         4.719200000
+@
+

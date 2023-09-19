@@ -1,0 +1,28 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2006.12.08.21.05.28;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Added a triclinic TATB example
+@
+text
+@C       reax    5.7254000000 6.9235000000 0.8712000000  0.0  10.0
+H       reax    3.8196000000 9.8832000000 0.7625000000  0.0  10.0
+O       reax    8.5000000000 7.8386000000 1.0804000000  0.0  10.0
+N       reax    6.8418000000 6.3404000000 0.8596000000  0.0  10.0
+
+@

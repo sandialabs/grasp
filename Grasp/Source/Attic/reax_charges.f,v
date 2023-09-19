@@ -1,0 +1,1175 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAX-2:3.2.2.9
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@c @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.01.03.00.29.17;	author athomps;	state Exp;
+branches;
+next	3.2.2.4;
+
+3.2.2.4
+date	2005.01.07.22.51.01;	author athomps;	state Exp;
+branches;
+next	3.2.2.5;
+
+3.2.2.5
+date	2005.01.21.22.24.30;	author athomps;	state Exp;
+branches;
+next	3.2.2.6;
+
+3.2.2.6
+date	2005.01.23.19.04.55;	author athomps;	state Exp;
+branches;
+next	3.2.2.7;
+
+3.2.2.7
+date	2005.01.29.01.44.20;	author athomps;	state Exp;
+branches;
+next	3.2.2.8;
+
+3.2.2.8
+date	2005.01.29.02.15.37;	author athomps;	state Exp;
+branches;
+next	3.2.2.9;
+
+3.2.2.9
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@********************************************************************** 
+
+      subroutine charges
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkch.blk'
+      include 'cbkcha.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkenergies.blk'
+      include 'cbkff.blk'
+      include 'cbkia.blk'
+      include 'cbkm.blk'
+      include 'cbkmolec.blk'
+      include 'control.blk'
+      include 'small.blk'
+      include 'cbkchb.blk'
+      dimension elcvec(nat),char(nat)
+********************************************************************** 
+*                                                                    *
+*     Determine charges on atoms: separate molecules                 *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In charges'
+      call timer(65)
+      close (65)
+      end if
+      if (ncha.eq.5) return  !fixed charges
+
+      if (nmcharge.gt.0) then  !fixed molecular charges
+      if (ioldchg.eq.0) then
+      do i1=1,na
+      ch(i1)=zero
+      chgold(i1)=zero
+      end do
+      call charmol
+      else
+      call charmol
+      end if
+      return
+      end if
+
+      if (kx.gt.0.or.ky.gt.0.or.kz.gt.0) then
+      call charcrys
+      return
+      end if
+
+      if (ncha.eq.4) then
+      call chargest    !charges on full system 
+      return
+      end if
+
+      ech=zero
+
+*     swbo=swb
+*     swb=5.0
+*     call tap7th
+
+      do 10 i1=1,nmolo5
+      na1m=nmolat2(i1,1)
+
+      do i2=1,na1m+1
+      do i3=1,na1m+1
+      xmortr(i2,i3)=zero
+      end do
+      end do
+      elnor=zero
+      do i2=1,na1m
+      ihu=nmolat2(i1,i2+1)
+      elnor=elnor+stlp(ia(ihu,1))
+      end do
+      chamol=elnor-elmol2(i1)
+      do i2=1,na1m
+      ihu=nmolat2(i1,i2+1)
+      xmortr(i2,i2)=2.0*eta(ia(ihu,1))  !Mortier method
+      elcvec(i2)=-chi(ia(ihu,1))        !Mortier method
+*     xmortr(i2,i2)=vjqeq(ia(ihu,1))     !Qeq method
+*     elcvec(i2)=-chiqeq(ia(ihu,1))     !Qeq method
+      xmortr(na1m+1,i2)=1.0
+      end do
+      elcvec(na1m+1)=chamol     !Charge on molecule
+      do i2=1,na1m-1
+      ihu2=nmolat2(i1,i2+1)
+      ity1=ia(ihu2,1)
+      do i3=i2+1,na1m
+      ihu3=nmolat2(i1,i3+1)
+      call dista2(ihu2,ihu3,dis,dx,dy,dz)
+      if (dis*dis.lt.swb*swb) then
+      call taper(dis,dis*dis)
+      ity2=ia(ihu3,1)
+*     gamt=sqrt(gam(ity1)*gam(ity2))
+*     sig=1.0/(rqeq(ity1)+rqeq(ity2))
+*     sig=0.75/(rqeq(ity1)+rqeq(ity2))
+*     xmortr(i3,i2)=sw*14.40*exp(-sig*dis)  !Qeq method
+      hulp1=(dis**3+gamcco(ity1,ity2))
+      hulp2=hulp1**(1.0/3.0)
+      if (ncha.eq.1) xmortr(i3,i2)=sw*14.40/dis     !Mortier method
+      if (ncha.eq.3) xmortr(i3,i2)=sw*14.40/hulp2   !Shielded Mortier method
+      end if
+      end do
+      end do
+      call matsym4(na1m+1,na1m+1,na1m+1,na1m+1,na1m+1,xmortr,char,
+     $elcvec)
+
+*     write (65,'(a40,i6,f12.4)')qmol,na1m+1,char(1)
+*     do i2=1,na1m+1
+*     write (65,'(40f8.2)')(xmortr(i3,i2),i3=1,na1m+1)
+*     end do
+
+      do i2=1,na1m
+      ihu=nmolat2(i1,i2+1)
+      ch(ihu)=char(i2)
+      ech=ech+23.02*(chi(ia(ihu,1))*ch(ihu)+
+     $eta(ia(ihu,1))*ch(ihu)*ch(ihu))
+      end do
+
+   10 continue
+*     swb=swbo
+*     call tap7th
+      return
+      end
+********************************************************************** 
+**********************************************************************
+
+      subroutine charmol
+
+**********************************************************************
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkch.blk'
+      include 'cbkcha.blk'
+      include 'cbkcharmol.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkenergies.blk'
+      include 'cbkff.blk'
+      include 'cbkia.blk'
+      include 'cbkm.blk'
+      include 'cbktregime.blk'
+      include 'control.blk'
+      include 'small.blk'
+      include 'cbkchb.blk'
+      dimension elcvec(nat),char(nat)
+c     Space for dsysv
+      integer ipiv(nat)
+      real*8 work(5*nat)
+********************************************************************** 
+*                                                                    *
+*     Determine charges on atoms: separate molecules with fixed      *
+*     molecular charges                                              *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In charmol'
+      call timer(65)
+      close (65)
+      end if
+
+      ech=zero
+      cfield=332.0638
+ 
+      nsum=0
+      do i2=1,na+nmcharge
+      elcvec(i2)=zero
+      do i3=1,na+nmcharge
+      xmortr(i2,i3)=zero
+      end do
+      end do
+
+      do 10 i1=1,nmcharge
+      nastart=iat1mc(i1)
+      naend=iat2mc(i1)
+      nhulp=naend-nastart+1
+      nsum=nsum+nhulp
+ 
+      do i2=1,nhulp                  !Fill in diagonal
+      ihu=nastart+i2-1
+      xmortr(ihu,ihu)=2.0*eta(ia(ihu,1))  
+      elcvec(ihu)=-chi(ia(ihu,1))        
+      xmortr(na+i1,ihu)=1.0
+      if (ifieldx.eq.1) then
+      elcvec(ihu)=elcvec(ihu)-vfieldx*cfield*c(ihu,1)
+      end if
+      if (ifieldy.eq.1) then
+      elcvec(ihu)=elcvec(ihu)-vfieldy*cfield*c(ihu,2)
+      end if
+      if (ifieldz.eq.1) then
+      elcvec(ihu)=elcvec(ihu)-vfieldz*cfield*c(ihu,3)
+      end if
+      end do
+      elcvec(na+i1)=vmcha(i1)     !Charge on molecule
+
+      do i2=1,nhulp-1                   !Fill in matrix for each molecule
+      ihu2=nastart+i2-1
+      ity1=ia(ihu2,1)
+      do i3=i2+1,nhulp
+      ihu3=nastart+i3-1
+      call dista2(ihu2,ihu3,dis,dx,dy,dz)
+      if (dis*dis.lt.swb*swb) then
+      call taper(dis,dis*dis)
+      ity2=ia(ihu3,1)
+      hulp1=(dis**3+gamcco(ity1,ity2))
+      hulp2=hulp1**(1.0/3.0)
+      xmortr(ihu3,ihu2)=sw*14.40/hulp2   
+      end if
+      end do
+      end do
+
+      do i2=1,nhulp                      !Add polarization by system
+      ihu2=nastart+i2-1
+      ity1=ia(ihu2,1)
+      do i3=ihu2+1,na
+      call dista2(ihu2,i3,dis,dx,dy,dz)
+      if (dis*dis.lt.swb*swb) then
+      call taper(dis,dis*dis)
+      ity2=ia(i3,1)
+      hulp1=(dis**3+gamcco(ity1,ity2))
+      hulp2=hulp1**(1.0/3.0)
+      xmortr(i3,ihu2)=sw*14.40/hulp2
+      end if
+      end do
+      end do
+
+   10 continue
+*     call matsym4(na+nmcharge,neem,neem,neem,neem,xmortr,char,elcvec)
+      if (ioldchg .ne. 0) then
+         call fillmatrix(na+nmcharge,xmortr,neem) ! fill in top half of matrix
+         call dcopy(na+nmcharge,chgold,1,char,1)
+         call cgsolve(na+nmcharge,xmortr,neem,char,elcvec,mdstep)
+      else
+         call dcopy(na+nmcharge,elcvec,1,char,1)
+         call dsysv('L',na+nmcharge,1,xmortr,neem,ipiv,
+     $        char,nat,work,5*nat,info)
+         if (info .ne. 0) stop 'dsysv solved failed in charmol'
+         ioldchg=1              ! Only called once
+      endif
+      call dcopy(na+nmcharge,char,1,chgold,1) ! Save the charges
+ 
+      do i2=1,na
+      ch(i2)=char(i2)
+      ech=ech+23.02*(chi(ia(i2,1))*ch(i2)+
+     $eta(ia(i2,1))*ch(i2)*ch(i2))
+      end do
+ 
+      ioldchg=1
+      if (nsum.ne.na) then
+      write (*,*)nsum,na
+      write (*,*)'Not all atoms defined in MOLCHARGE-keywords'
+      stop 'Not all atoms defined in MOLCHARGE-keywords'
+      end if
+
+      return
+      end 
+**********************************************************************
+**********************************************************************
+
+      subroutine charcrys
+
+**********************************************************************
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkch.blk'
+      include 'cbkcha.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkenergies.blk'
+      include 'cbkff.blk'
+      include 'cbkia.blk'
+      include 'cbkm.blk'
+      include 'cbknvl.blk'
+      include 'cbkpairs.blk'
+      include 'cbktregime.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'cbkchb.blk'
+      include 'small.blk'
+      dimension elcvec(nat),char(nat)
+      dimension ct(nat,3)
+
+*     Space to hold old charges
+*     real*8 chgold(nat)        ! The charges from the previous iteration
+*     integer ioldchg           ! Flag that chgold has something interesting
+*     common /cchgold/ ioldchg,chgold
+*     data ioldchg /0/
+
+c     Space for dsysv
+      integer ipiv(nat)
+      real*8 work(5*nat)
+
+**********************************************************************
+*                                                                    *
+*     Determine charges on atoms: crystal                            *
+*                                                                    *
+**********************************************************************
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In charcrys'
+      call timer(65)
+      close (65)
+      end if
+      ech=zero
+      cfield=332.0638
+      
+      kxt=kx
+      kyt=ky
+      kzt=kz
+      if (kxt.eq.0) kxt=1
+      if (kyt.eq.0) kyt=1
+      if (kzt.eq.0) kzt=1
+
+      do i1=1,na+1
+      elcvec(i1)=zero
+      do i2=1,na+1
+      xmortr(i1,i2)=zero
+      end do
+      end do
+      chamol=syscha       !System charge
+
+      do i1=1,na
+      ity=ia(i1,1)
+      xmortr(i1,i1)=2.0*eta(ity)  !EEM method
+      elcvec(i1)=-chi(ity)
+      xmortr(na+1,i1)=1.0
+      if (ifieldx.eq.1) then
+      elcvec(i1)=elcvec(i1)-vfieldx*cfield*c(i1,1)
+      end if
+      if (ifieldy.eq.1) then
+      elcvec(i1)=elcvec(i1)-vfieldy*cfield*c(i1,2)
+      end if
+      if (ifieldz.eq.1) then
+      elcvec(i1)=elcvec(i1)-vfieldz*cfield*c(i1,3)
+      end if
+
+      do 5 k1=-kxt,kxt              !Sum over periodic self-images
+      do 5 k2=-kyt,kyt
+      do 5 k3=-kzt,kzt
+      
+      dx=k1*tm11
+      dy=k1*tm21+k2*tm22
+      dz=k1*tm31+k2*tm32+k3*tm33
+      dis=sqrt(dx*dx+dy*dy+dz*dz)
+
+      if (dis.lt.swb.and.dis.gt.0.001) then
+      call taper(dis,dis*dis)
+      hulp1=(dis**3+(1.0/(gam(ity)**3)))
+      hulp2=hulp1**(1.0/3.0)
+      xmortr(i1,i1)=xmortr(i1,i1)+1.0*sw*14.40/hulp2
+      end if
+
+    5 continue
+      end do
+
+      elcvec(na+1)=chamol     !Charge on system
+
+      do 10 ivl=1,nvpair-nvlself      !Verlet-list
+      i2=nvl1(ivl)
+      i3=nvl2(ivl)
+      ix=nvlx(ivl)
+      iy=nvly(ivl)
+      iz=nvlz(ivl)
+      dx=c(i2,1)-c(i3,1)+ix*tm11
+      dy=c(i2,2)-c(i3,2)+ix*tm21+iy*tm22
+      dz=c(i2,3)-c(i3,3)+ix*tm31+iy*tm32+iz*tm33
+      dis2=sqrt(dx*dx+dy*dy+dz*dz)
+
+      ity1=ia(i2,1)
+      ity2=ia(i3,1)
+      gamt=sqrt(gam(ity1)*gam(ity2))
+
+      if (dis2.lt.swb.and.dis2.gt.0.001) then
+      call taper(dis2,dis2*dis2)
+      hulp1=(dis2**3+(1.0/(gamt**3)))
+      hulp2=hulp1**(1.0/3.0)
+      xmortr(i3,i2)=xmortr(i3,i2)+sw*14.40/hulp2
+
+      end if
+
+   10 continue
+
+*     do i2=1,na-1                   !No Verlet-list
+*     do i3=i2+1,na
+*     ity1=ia(i2,1)
+*     ity2=ia(i3,1)
+*     gamt=sqrt(gam(ity1)*gam(ity2))
+*     dx=c(i2,1)-c(i3,1)
+*     dy=c(i2,2)-c(i3,2)
+*     dz=c(i2,3)-c(i3,3)
+
+*     do 10 k1=-kxt,kxt   !Sum over periodic images
+*     dx2=dx+k1*tm11
+*     do 10 k2=-kyt,kyt
+*     dy2=dy+k1*tm21+k2*tm22
+*     do 10 k3=-kzt,kzt
+*     dz2=dz+k1*tm31+k2*tm32+k3*tm33
+*     dis2=sqrt(dx2*dx2+dy2*dy2+dz2*dz2)
+
+*     if (dis2.lt.swb.and.dis2.gt.0.001) then
+*     call taper(dis2,dis2*dis2)
+*     hulp1=(dis2**3+(1.0/(gamt**3)))
+*     hulp2=hulp1**(1.0/3.0)
+*     xmortr(i3,i2)=xmortr(i3,i2)+sw*14.40/hulp2
+*     end if
+
+*  10 continue
+
+*     end do
+*     end do
+
+*     call matsym4(na+1,na+1,na+1,na+1,na+1,xmortr,char,
+*    $elcvec)
+
+      if (ioldchg .ne. 0) then
+         call fillmatrix(na+1,xmortr,neem) ! fill in top half of matrix
+         call dcopy(na+1,chgold,1,char,1)
+         call cgsolve(na+1,xmortr,neem,char,elcvec,mdstep)
+      else
+         call dcopy(na+1,elcvec,1,char,1)
+         call dsysv('L',na+1,1,xmortr,neem,ipiv,
+     $        char,nat,work,5*nat,info)
+         if (info .ne. 0) stop 'dsysv solved failed in charcrys'
+         ioldchg=1              ! Only called once
+      endif
+      call dcopy(nat,char,1,chgold,1) ! Save the charges
+
+      do i2=1,na
+      ch(i2)=char(i2)
+      ech=ech+23.02*(chi(ia(i2,1))*ch(i2)+
+     $eta(ia(i2,1))*ch(i2)*ch(i2))
+      end do
+
+      return
+      end
+**********************************************************************
+**********************************************************************
+
+      subroutine chargesm (namo,nmohu,charge,chag)
+
+**********************************************************************
+      include 'cbka.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkenergies.blk'
+      include 'cbkff.blk'
+      include 'cbkia.blk'
+      include 'cbkm.blk'
+      include 'control.blk'
+      include 'cbkchb.blk'
+      dimension elcvec(nat),chag(nat)
+      dimension nmohu(nat)
+**********************************************************************
+*                                                                    *
+*     Determine charges on a single molecule                         *
+*                                                                    *
+**********************************************************************
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In chargesm'
+      call timer(65)
+      close (65)
+      end if
+      do i1=1,namo+1
+      do i2=1,namo+1
+      xmortr(i1,i2)=zero
+      end do
+      end do
+
+      do i2=1,namo
+      ihu=nmohu(i2)
+      ity=ia(ihu,1)
+      xmortr(i2,i2)=2.0*eta(ity)  !Mortier method
+      elcvec(i2)=-chi(ity)                              !Mortier method
+      xmortr(namo+1,i2)=1.0
+      xmortr(i2,namo+1)=1.0
+      end do
+      xmortr(namo+1,namo+1)=zero
+      elcvec(namo+1)=charge     !Charge on molecule
+
+      do i2=1,namo-1
+      ihu2=nmohu(i2)
+      ity1=ia(ihu2,1)
+      do i3=i2+1,namo
+      ihu3=nmohu(i3)
+      ity2=ia(ihu3,1)
+      call dista2 (ihu2,ihu3,dis,dx,dy,dz)
+
+      if (dis*dis.lt.swb*swb) then
+      call taper(dis,dis*dis)
+      gamt=sqrt(gam(ity1)*gam(ity2))
+      hulp1=(dis**3+(1.0/(gamt**3)))
+      hulp2=hulp1**(1.0/3.0)
+
+*     if (ncha.eq.1) xmortr(i3,i2)=sw*14.40/dis     !Mortier method
+
+*     if (ncha.eq.3) then   !Shielded EEM
+      xmortr(i3,i2)=sw*14.40/hulp2
+*     end if
+
+      end if
+
+      end do
+      end do
+
+      call matsym4(namo+1,namo+1,namo+1,namo+1,namo+1,xmortr,chag,
+     $elcvec)
+
+      echh=zero
+      do i2=1,namo
+      ihu=nmohu(i2)
+      echh=echh+23.02*(chi(ia(ihu,1))*chag(ihu)+
+     $eta(ia(ihu,1))*chag(ihu)*chag(ihu))
+      end do
+
+      chimol=-chag(namo+1)
+
+      return
+      end
+
+********************************************************************** 
+********************************************************************** 
+
+      subroutine chargest
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkch.blk'
+      include 'cbkcha.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkenergies.blk'
+      include 'cbkff.blk'
+      include 'cbkia.blk'
+      include 'cbkm.blk'
+      include 'cbktregime.blk'
+      include 'control.blk'
+      include 'small.blk'
+      include 'cbkchb.blk'
+      dimension elcvec(nat),char(nat)
+********************************************************************** 
+*                                                                    *
+*     Determine charges on atoms: full system                        *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In chargest'
+      call timer(65)
+      close (65)
+      end if
+      ech=zero
+      cfield=332.0638
+
+      do i2=1,na+1
+      elcvec(i2)=zero
+      do i3=1,na+1
+      xmortr(i2,i3)=zero
+      end do
+      end do
+      chamol=syscha    !System charge
+
+      do i1=1,na
+      xmortr(i1,i1)=2.0*eta(ia(i1,1))  !Mortier method
+      elcvec(i1)=-chi(ia(i1,1))        !Mortier method
+      if (ifieldx.eq.1) then
+      elcvec(i1)=elcvec(i1)-vfieldx*cfield*c(i1,1)
+      end if
+      if (ifieldy.eq.1) then
+      elcvec(i1)=elcvec(i1)-vfieldy*cfield*c(i1,2)
+      end if
+      if (ifieldx.eq.1) then
+      elcvec(i1)=elcvec(i1)-vfieldz*cfield*c(i1,3)
+      end if
+      
+      xmortr(na+1,i1)=1.0
+      end do
+      elcvec(na+1)=chamol     !Charge on molecule
+      do i2=1,na-1
+      do i3=i2+1,na
+      call dista2(i2,i3,dis,dx,dy,dz)
+      if (dis.lt.swb) then
+      call taper(dis,dis*dis)
+      ity1=ia(i2,1)
+      ity2=ia(i3,1)
+      gamt=sqrt(gam(ity1)*gam(ity2))
+      hulp1=(dis**3+(1.0/(gamt**3)))
+      hulp2=hulp1**(1.0/3.0)
+      xmortr(i3,i2)=sw*14.40/hulp2   
+
+      end if
+      end do
+      end do
+      call matsym4(na+1,na+1,na+1,na+1,na+1,xmortr,char,
+     $elcvec)
+      do i2=1,na
+      ch(i2)=char(i2)
+      ech=ech+23.02*(chi(ia(i2,1))*ch(i2)+
+     $eta(ia(i2,1))*ch(i2)*ch(i2))
+      end do
+      chisys=char(na+1)
+*     ech=zero
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine fixcha
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkch.blk'
+      include 'cbkconst.blk'
+      include 'cbkh.blk'
+      include 'control.blk'
+      include 'small.blk'
+      dimension nmcb(nmolmax),nmce(nmolmax)
+********************************************************************** 
+*                                                                    *
+*     Read in fixed charges from unit 26 (optional)                  *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In fixcha'
+      call timer(65)
+      close (65)
+      end if
+
+      read (26,10)ntymol
+      read (26,10)(nmcb(i1),nmce(i1),i1=1,ntymol)
+      nhulp=0
+      do i1=1,ntymol
+      read (26,*)
+      read (26,10)natmty
+      do i2=1,natmty
+      read (26,20)irom,charge
+      ch(nhulp+i2)=charge
+      do i3=1,nmce(i1)-nmcb(i1)
+      ch(nhulp+i3*natmty+i2)=charge
+      end do
+      end do
+      nhulp=nhulp+natmty*(nmce(i1)-nmcb(i1)+1)
+      end do
+
+      if (nhulp.ne.na) then
+      write (*,*)nhulp,na
+      stop 'INCONSISTENCY IN CHARGE DATA (UNIT 26)'
+      end if
+      totch=0.0
+      do i1=1,na
+      totch=totch+ch(i1)
+      end do
+      write (*,*)'Number of atoms',na,' Total charge',totch
+
+      return
+   10 format (10i4)
+   20 format (i4,f12.6)
+      end
+********************************************************************** 
+************************************************************************
+
+      subroutine taper(r,r2)
+
+************************************************************************
+      include 'cbka.blk'
+      include 'cbkconst.blk'
+      include 'cbkenergies.blk'
+      include 'cbkinit.blk'
+      include 'cbknonbon.blk'
+************************************************************************
+*                                                                      *
+*     Taper function for Coulomb interaction                           *
+*                                                                      *
+************************************************************************
+      r3=r2*r
+      SW=SWC7*R3*R3*R+SWC6*R3*R3+SWC5*R3*R2+SWC4*R2*R2+SWC3*R3+SWC2*R2+
+     $SWC1*R+SWC0
+      SW1=7.0D0*SWC7*R3*R3+6.0D0*SWC6*R3*R2+5.0D0*SWC5*R2*R2+
+     $4.0D0*SWC4*R3+THREE*SWC3*R2+TWO*SWC2*R+SWC1
+      return
+      end
+************************************************************************
+************************************************************************
+
+      subroutine tap7th
+
+************************************************************************
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkconst.blk'
+      include 'cbkd.blk'
+      include 'cbkff.blk'
+      include 'cbkh.blk'
+      include 'control.blk'
+
+************************************************************************
+*                                                                      *
+*     7th order taper function setup                                   *
+*                                                                      *
+************************************************************************
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In tap7th'
+      call timer(65)
+      close (65)
+      end if
+      D1=SWB-SWA
+      D7=D1**7.0D0
+      SWA2=SWA*SWA
+      SWA3=SWA2*SWA
+      SWB2=SWB*SWB
+      SWB3=SWB2*SWB
+ 
+************************************************************************
+*     7th order taper function                                         *
+************************************************************************
+ 
+      SWC7=  20.0D0/D7
+      SWC6= -70.0D0*(SWA+SWB)/D7
+      SWC5=  84.0D0*(SWA2+3.0D0*SWA*SWB+SWB2)/D7
+      SWC4= -35.0D0*(SWA3+9.0D0*SWA2*SWB+9.0D0*SWA*SWB2+SWB3)/D7
+      SWC3= 140.0D0*(SWA3*SWB+3.0D0*SWA2*SWB2+SWA*SWB3)/D7
+      SWC2=-210.0D0*(SWA3*SWB2+SWA2*SWB3)/D7
+      SWC1= 140.0D0*SWA3*SWB3/D7
+      SWC0=(-35.0D0*SWA3*SWB2*SWB2+21.0D0*SWA2*SWB3*SWB2+
+     $7.0D0*SWA*SWB3*SWB3+SWB3*SWB3*SWB)/D7
+ 
+      return
+      END
+************************************************************************
+************************************************************************
+
+      subroutine matsym4(N,NDIMM1,NDIMM2,NDIMVX,NDIMVY,RMAT,VECX,VECY)
+
+************************************************************************
+*                                                                      *
+*     Construction of the lower triangle and backsubstitution.         *
+*     VERTICAL: ONLY for SYMMETRIC matrices not necessarily stored in  *
+*     square arrays.                                                   *
+*                                                                      *
+************************************************************************
+
+      include 'cbka.blk'
+      include 'control.blk'
+
+      DIMENSION RMAT(neem,neem),VECX(neem),VECY(neem)
+
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In matsym4'
+      call timer(65)
+      close (65)
+      end if
+      DO 11 K=1,N
+      DIAG=RMAT(K,K)
+      DO 9 L=K+1,N
+      VECX(L)=RMAT(L,K)
+    9 RMAT(L,K)=RMAT(L,K)/DIAG
+      VECY(K)=VECY(K)/DIAG
+      RMAT(K,K)=1.0D0
+      DO 11 L=K+1,N
+      FACTOR=VECX(L)
+      DO 10 M=L,N
+   10 RMAT(M,L)=RMAT(M,L)-FACTOR*RMAT(M,K)
+   11 VECY(L)=VECY(L)-FACTOR*VECY(K)
+
+      DO 12 K=N,1,-1
+      VECX(K)=VECY(K)
+      DO 12 L=K+1,N
+   12 VECX(K)=VECX(K)-RMAT(L,K)*VECX(L)
+
+      RETURN
+
+      END
+
+************************************************************************
+************************************************************************
+
+      subroutine cgsolve(n,a,lda,x,b,mdstep)
+
+************************************************************************
+      implicit real*8 (a-h,o-z)
+
+c     RPM. Conjugate gradient scheme to solve Ax=b
+
+      INTEGER n                 ! INPUT: The order of the problem
+      REAL*8 a(lda,n)           ! INPUT: The matrix to be solved
+      INTEGER lda               ! INPUT: The leading dimension of A
+      REAL*8 x(n)               ! OUTPUT: The solution x=A^-1*b
+      REAL*8 b(n)               ! INPUT: The vector b in Ax=b
+      INTEGER mdstep   
+
+c     Local temp storage
+      dimension r(lda),p(lda),p_old(lda),q(lda)
+
+      one = 1.d0
+      zero = 0.d0
+
+      maxiter = 100
+c     Form r=b-Ax
+      call dgemv('N',n,n,one,a,lda,x,1,zero,r,1) ! r = Ax
+      call dscal(n,-one,r,1)
+      call daxpy(n,one,b,1,r,1)
+      rho_old = one
+
+      do iter = 1,maxiter
+         rho = ddot(n,r,1,r,1)
+         if (rho .lt. 1.d-6) goto 666
+
+         call dcopy(n,r,1,p,1) ! p=r
+         if (iter .gt. 1) then
+            beta = rho/rho_old
+            call daxpy(n,beta,p_old,1,p,1)
+         endif
+         call dgemv('N',n,n,one,a,lda,p,1,zero,q,1) ! q=Ap
+         alpha = rho/ddot(n,p,1,q,1)
+         call daxpy(n,alpha,p,1,x,1) ! x += alpha*p
+         call daxpy(n,-alpha,q,1,r,1) ! r -= alpha*q
+         call dcopy(n,p,1,p_old,1)
+         rho_old = rho
+      enddo
+      write(*,*)mdstep,'cgsolve:Warning:maxiter exceeded. Continuing.'
+ 666  continue
+
+      return
+      end
+
+************************************************************************
+************************************************************************
+
+      subroutine fillmatrix(n,a,lda)
+
+************************************************************************
+      implicit real*8 (a-h,o-z)
+
+c     fill in top half of matrix
+      INTEGER n                 ! INPUT: The size of the matrix a
+      REAL*8 a(lda,lda)         ! INPUT: The matrix to be filled in
+                                ! OUTPUT: Contains the full matrix
+      INTEGER lda               ! INPUT: The leading dimension of a
+
+      do i = 1, n
+         do j = 1, i-1
+            a(j,i) = a(i,j)
+         enddo
+      enddo
+
+      return
+      end
+
+************************************************************************
+************************************************************************
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@a31 1
+      if (ncha.eq.7) return  !Grasp computes charges
+a799 16
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In cgsolve'
+      write(65,*) 'Elements ((a(ij),i=1,n),b(j),j=1,n)'
+      do j = 1,n
+         do i = 1,n
+            write(65,*) a(i,j)
+         end do
+         write(65,*)
+         write(65,*) b(j)
+         write(65,*)
+      end do
+      call timer(65)
+      close (65)
+      end if
+
+a828 10
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write(65,*) 'Charges'
+      do i = 1,n
+         write(65,*) x(i)
+      end do
+      call timer(65)
+      close (65)
+      end if
+
+@
+
+
+3.2.2.3
+log
+@Added REAXFF energy evaluation to Grasp
+@
+text
+@d801 16
+d846 10
+@
+
+
+3.2.2.4
+log
+@Finished optimized implementation of ReaxFF.
+Eliminates O(N^2) scaling of srttor and srtang.
+Also blanks out the ghost bonds that are not in dihedral
+with local atom.
+@
+text
+@d3 608
+@
+
+
+3.2.2.5
+log
+@Implemented a parallel CG scheme. Does not exploit sparsity and
+so is still quite slow.
+@
+text
+@d174 52
+a225 52
+c$$$************************************************************************
+c$$$
+c$$$      subroutine cgsolve(n,a,lda,x,b,mdstep)
+c$$$
+c$$$************************************************************************
+c$$$      implicit real*8 (a-h,o-z)
+c$$$
+c$$$c     RPM. Conjugate gradient scheme to solve Ax=b
+c$$$
+c$$$      INTEGER n                 ! INPUT: The order of the problem
+c$$$      REAL*8 a(lda,n)           ! INPUT: The matrix to be solved
+c$$$      INTEGER lda               ! INPUT: The leading dimension of A
+c$$$      REAL*8 x(n)               ! OUTPUT: The solution x=A^-1*b
+c$$$      REAL*8 b(n)               ! INPUT: The vector b in Ax=b
+c$$$      INTEGER mdstep   
+c$$$
+c$$$c     Local temp storage
+c$$$      dimension r(lda),p(lda),p_old(lda),q(lda)
+c$$$
+c$$$      one = 1.d0
+c$$$      zero = 0.d0
+c$$$
+c$$$      maxiter = 100
+c$$$c     Form r=b-Ax
+c$$$      call dgemv('N',n,n,one,a,lda,x,1,zero,r,1) ! r = Ax
+c$$$      call dscal(n,-one,r,1)
+c$$$      call daxpy(n,one,b,1,r,1)
+c$$$      rho_old = one
+c$$$
+c$$$      do iter = 1,maxiter
+c$$$         rho = ddot(n,r,1,r,1)
+c$$$         if (rho .lt. 1.d-6) goto 666
+c$$$
+c$$$         call dcopy(n,r,1,p,1) ! p=r
+c$$$         if (iter .gt. 1) then
+c$$$            beta = rho/rho_old
+c$$$            call daxpy(n,beta,p_old,1,p,1)
+c$$$         endif
+c$$$         call dgemv('N',n,n,one,a,lda,p,1,zero,q,1) ! q=Ap
+c$$$         alpha = rho/ddot(n,p,1,q,1)
+c$$$         call daxpy(n,alpha,p,1,x,1) ! x += alpha*p
+c$$$         call daxpy(n,-alpha,q,1,r,1) ! r -= alpha*q
+c$$$         call dcopy(n,p,1,p_old,1)
+c$$$         rho_old = rho
+c$$$      enddo
+c$$$      write(*,*)mdstep,'cgsolve:Warning:maxiter exceeded. Continuing.'
+c$$$ 666  continue
+c$$$C      write(6,*) 'CG iter = ',iter
+c$$$      return
+c$$$      end
+c$$$
+c$$$************************************************************************
+@
+
+
+3.2.2.6
+log
+@Added and removed some nodefile diagnostics.
+@
+text
+@d128 46
+a173 45
+c$$$************************************************************************
+c$$$
+c$$$      subroutine matsym4(N,NDIMM1,NDIMM2,NDIMVX,NDIMVY,RMAT,VECX,VECY)
+c$$$
+c$$$************************************************************************
+c$$$*                                                                      *
+c$$$*     Construction of the lower triangle and backsubstitution.         *
+c$$$*     VERTICAL: ONLY for SYMMETRIC matrices not necessarily stored in  *
+c$$$*     square arrays.                                                   *
+c$$$*                                                                      *
+c$$$************************************************************************
+c$$$
+c$$$      include 'cbka.blk'
+c$$$      include 'control.blk'
+c$$$
+c$$$      DIMENSION RMAT(neem,neem),VECX(neem),VECY(neem)
+c$$$
+c$$$      if (ndebug.eq.1) then
+c$$$      open (65,file='fort.65',status='unknown',access='append')
+c$$$      write (65,*) 'In matsym4'
+c$$$      call timer(65)
+c$$$      close (65)
+c$$$      end if
+c$$$      DO 11 K=1,N
+c$$$      DIAG=RMAT(K,K)
+c$$$      DO 9 L=K+1,N
+c$$$      VECX(L)=RMAT(L,K)
+c$$$    9 RMAT(L,K)=RMAT(L,K)/DIAG
+c$$$      VECY(K)=VECY(K)/DIAG
+c$$$      RMAT(K,K)=1.0D0
+c$$$      DO 11 L=K+1,N
+c$$$      FACTOR=VECX(L)
+c$$$      DO 10 M=L,N
+c$$$   10 RMAT(M,L)=RMAT(M,L)-FACTOR*RMAT(M,K)
+c$$$   11 VECY(L)=VECY(L)-FACTOR*VECY(K)
+c$$$
+c$$$      DO 12 K=N,1,-1
+c$$$      VECX(K)=VECY(K)
+c$$$      DO 12 L=K+1,N
+c$$$   12 VECX(K)=VECX(K)-RMAT(L,K)*VECX(L)
+c$$$
+c$$$      RETURN
+c$$$
+c$$$      END
+c$$$************************************************************************
+@
+
+
+3.2.2.7
+log
+@Cleaned up charge eequilibration, removed some FORTRAN allocations
+@
+text
+@d1 56
+d127 122
+@
+
+
+3.2.2.8
+log
+@Added various things to make Grasp/REAXFF run on Blue Gene
+@
+text
+@d43 1
+a43 1
+C      open (65,file='fort.65',status='unknown',access='append')
+@
+
+
+3.2.2.9
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@d6 5
+a10 5
+#include "cbka.blk"
+#include "cbkconst.blk"
+#include "cbkenergies.blk"
+#include "cbkinit.blk"
+#include "cbknonbon.blk"
+d29 7
+a35 7
+#include "cbka.blk"
+#include "cbkc.blk"
+#include "cbkconst.blk"
+#include "cbkd.blk"
+#include "cbkff.blk"
+#include "cbkh.blk"
+#include "control.blk"
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

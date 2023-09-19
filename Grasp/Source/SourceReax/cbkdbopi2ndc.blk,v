@@ -1,0 +1,75 @@
+head	4.1;
+access;
+symbols
+	ReverseComm_branch:4.0.0.16
+	ADTools_branch:4.0.0.14
+	Monaco_Aidan:4.0.0.12
+	Root-of-Monaco_Aidan:4.0
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0;
+locks; strict;
+comment	@# @;
+
+
+4.1
+date	2007.05.31.21.20.58;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.1
+log
+@Minor twiddles
+@
+text
+@ 
+       
+       
+      common
+     $/cbkdbopi2ndc/ dbopi2ndc(nbomax,3,2*mbond+2)
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d5 1
+a5 1
+     $/cbkdbopi2ndc/ dbopi2ndc(nbomax,3,2*mbond)
+@
+
+
+1.1
+log
+@Merged REAX version with main version
+@
+text
+@@
+

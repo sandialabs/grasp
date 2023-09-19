@@ -1,0 +1,244 @@
+head	4.2;
+access;
+symbols
+	ReverseComm_branch:4.1.0.10
+	ADTools_branch:4.1.0.8
+	Monaco_Aidan:4.1.0.6
+	Root-of-Monaco_Aidan:4.1
+	PPPM_Crozier2:4.1.0.4
+	PPPM_Crozier:4.1
+	Root-of-PPPM_Crozier:4.1
+	Monaco:4.1.0.2
+	PreMonaco:4.1
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:3.2.2.3
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.2
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2005.01.07.22.51.01;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.02.03.21.40.18;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.2
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+extern struct {
+  int nvl1[ReaxParams::nneighmax * ReaxParams::nat];
+  int nvl2[ReaxParams::nneighmax * ReaxParams::nat];
+  int nvpair;
+  int nvlself;
+} FORTRAN(cbkpairs,CBKPAIRS);
+
+extern struct {
+  int nvlbo[ReaxParams::nneighmax * ReaxParams::nat];
+} FORTRAN(cbknvlbo,CBKNVLBO);
+
+extern struct {
+  int nvlown[ReaxParams::nneighmax * ReaxParams::nat];
+} FORTRAN(cbknvlown,CBKNVLOWN);
+@
+
+
+4.1
+log
+@Fixed glitch in header.
+@
+text
+@d55 4
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@d1 28
+d30 2
+a31 2
+  int nvl1[ReaxParams::nat * ReaxParams::nat];
+  int nvl2[ReaxParams::nat * ReaxParams::nat];
+d37 1
+a37 7
+  int nvlx[ReaxParams::nat * ReaxParams::nat];
+  int nvly[ReaxParams::nat * ReaxParams::nat];
+  int nvlz[ReaxParams::nat * ReaxParams::nat];
+} FORTRAN(cbknvl,CBKNVL);
+
+extern struct {
+  int nvlbo[ReaxParams::nat * ReaxParams::nat];
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Finished optimized implementation of ReaxFF.
+Eliminates O(N^2) scaling of srttor and srtang.
+Also blanks out the ghost bonds that are not in dihedral
+with local atom.
+@
+text
+@d9 6
+@
+
+
+3.2.2.3
+log
+@Greatly reduced memory usage.
+@
+text
+@d2 2
+a3 2
+  int nvl1[ReaxParams::nneighmax * ReaxParams::nat];
+  int nvl2[ReaxParams::nneighmax * ReaxParams::nat];
+d9 1
+a9 1
+  int nvlbo[ReaxParams::nneighmax * ReaxParams::nat];
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

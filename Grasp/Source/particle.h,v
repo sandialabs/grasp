@@ -1,0 +1,1311 @@
+head	4.10;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.13.0.2
+	cjkimme_version_merge_from_trunk_1:2.6.2.3
+	cjkimme_version:2.6.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.10
+date	2007.10.15.20.52.10;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.05.15.19.30.48;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.10.11.01.40.34;	author athomps;	state Exp;
+branches
+	4.4.4.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches
+	3.1.6.1;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.08.13.22.54.43;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.07.22.17.32.23;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.07.21.17.46.50;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.05.20.22.11.34;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.6.2.1;
+next	2.5;
+
+2.5
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.02.25.23.06.37;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.04.00.12.41;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.01.18.00.20.49;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.08.23.25.53;	author athomps;	state Exp;
+branches;
+next	;
+
+2.6.2.1
+date	2004.05.14.16.12.58;	author cjkimme;	state Exp;
+branches;
+next	2.6.2.2;
+
+2.6.2.2
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.6.2.3;
+
+2.6.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.1.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.1.6.2;
+
+3.1.6.2
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.4.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.10
+log
+@Improved stability of steepest descent minimizer
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef PARTICLE_H
+#define PARTICLE_H
+
+// Incomplete declarations eliminate dependence on relative 
+// ordering of headers for class declarations in source files.
+class Particle;
+class Box;
+class Force_Twobody;
+
+class Particle
+{
+  // Performance debugging only
+  friend class Force_Twobody;
+ private:
+  double x[3],v[3],f[3],X[3];
+  int ishift[3];
+  double charge, phi, virial[6];
+  // tag is a unique integer for that particle
+  // it is assigned internally.
+  // type is an internally assigned serial.
+  // color is a user-defined number identifying a group of particles.
+  // phi is potential energy of particle, inasmuch as it is defined 
+  // virial is the potential energy contribution to the virial,
+  //  for the particle, inasmuch as it is defined.
+  int type,tag,color;
+  double mass;
+  bool is_fixed, to_be_minimized;
+ public:
+  // Default constructor
+  Particle();
+  // Type, tag, color, position, ref position, mass, ishift, [charge, phi] constructor
+  Particle(const int&, const int&, const int&, 
+   const double[], const double[], const double&, const int[], const double& = 0.0, const double& = 0.0, const bool& = false, const bool& = false);
+  // Type, tag, color, position, ref position, mass, charge, velocity, ishift, [phi] constructor
+  Particle(const int&, const int&, const int&, 
+	   const double[], const double[], const double&, const double&, const double[], const int[], const double& = 0.0, 
+	   const bool& = false, const bool& = false);
+  // Type, position, ref position, charge constructor
+  Particle(const int&, const int&, const double[], const double[], const double&);
+  // Copy constructor
+  Particle(const Particle&);
+  // Destructor
+  ~Particle();
+  // Assignment operator
+  Particle& operator=(const Particle&);
+
+  int get_type() const;
+  int get_tag() const;
+  int get_color() const;
+  void get_x(double[]) const;
+  void get_v(double[]) const;
+  void get_f(double[]) const;
+  void get_u(double[]) const;
+  void get_X(double[]) const;
+  void get_shift(int[]) const;
+  void get_shift(double[]) const;
+  double get_charge() const;
+  double get_mass() const;
+  double get_mvsq() const;
+  double get_phi() const;
+  void get_virial(double[]) const;
+  bool get_fixed() const;
+  bool get_minimized() const;
+  void get_mvsq(vector <double>&) const;
+  void set_type(const int&);
+  void set_tag(const int&);
+  void set_color(const int&);
+  void set_x(const double[]);
+  void set_v(const double[]);
+  void set_X(const double[]);
+  void scale_v(const double);
+  void scale_v(const Box*, const double[]);
+  void scale_v(const Box*, const double[3][3]);
+  void set_f(const double[]);
+  void set_f();
+  void set_charge(const double&);
+  void set_mass(const double&);
+  void set_phi(const double&);
+  void set_fixed();
+  void set_minimized();
+  void set_virial();
+
+  void step_x(const double&);
+  void step_x_force(const double&,const bool*,const double&,bool&,double&);
+  void step_x_force(const double&,const bool*);
+  void step_v(const double&);
+
+  void increment_f(const double[]);
+  void decrement_f(const double[]);
+  void increment_phi(const double&);
+  void increment_x(const double[]);
+  void increment_virial(const double[]);
+
+  void reset_x(const Box*); 
+  void scale_x(const Box*, const double[]);
+  void scaled_deform(const Box*, const double[3][3]);
+  void reset_full_x(const Box*); 
+  void apply_boundary_conditions(const Box*);
+};
+
+// INLINE (inline) FUNCTION DEFINITIONS
+//
+// Inlining inner loop operations provides significant performance gain
+//
+
+inline void Particle::get_x(double x_out[]) const
+{
+  x_out[0] = x[0];
+  x_out[1] = x[1];
+  x_out[2] = x[2];
+  return;
+}
+
+inline void Particle::set_fixed()
+{
+  is_fixed = true;
+}
+
+inline void Particle::set_minimized()
+{
+  to_be_minimized = true;
+}
+
+inline void Particle::increment_f(const double f_in[])
+{
+  f[0]+=f_in[0];
+  f[1]+=f_in[1];
+  f[2]+=f_in[2];
+}
+
+inline void Particle::decrement_f(const double f_in[])
+{
+  f[0]-=f_in[0];
+  f[1]-=f_in[1];
+  f[2]-=f_in[2];
+}
+
+inline void Particle::increment_virial(const double virial_in[])
+{
+  virial[0]+=virial_in[0];
+  virial[1]+=virial_in[1];
+  virial[2]+=virial_in[2];
+  virial[3]+=virial_in[3];
+  virial[4]+=virial_in[4];
+  virial[5]+=virial_in[5];
+}
+
+inline void Particle::increment_x(const double x_in[])
+{
+  x[0] += x_in[0];
+  x[1] += x_in[1];
+  x[2] += x_in[2];
+}
+
+inline int Particle::get_type() const
+{
+  return type;
+}
+#endif
+
+@
+
+
+4.9
+log
+@Added nose-hoover-full version of pressure control to allow fully flexible fluctuations in box dimensions
+@
+text
+@d129 1
+a129 1
+  void step_x_force(const double&,const bool*,const double&,bool&);
+@
+
+
+4.8
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@d118 1
+@
+
+
+4.7
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d140 1
+@
+
+
+4.6
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d141 1
+a141 1
+
+@
+
+
+4.5
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d61 1
+d76 1
+a76 1
+  // Type, tag, color, position, ref position, mass, [charge, phi] constructor
+d78 2
+a79 2
+   const double[], const double[], const double&, const double& = 0.0, const double& = 0.0, const bool& = false, const bool& = false);
+  // Type, tag, color, position, ref position, mass, charge, velocity, [phi] constructor
+d81 1
+a81 1
+	   const double[], const double[], const double&, const double&, const double[], const double& = 0.0, 
+d100 2
+@
+
+
+4.4
+log
+@Added some new barostats and thermostats.
+@
+text
+@d61 1
+a61 1
+  double charge, phi;
+d67 2
+d75 1
+a75 1
+  // Type, tag, color, position, mass [charge, phi] constructor
+d78 1
+a78 1
+  // Type, tag, color, position, mass, charge,velocity, and phi constructor
+d80 3
+a82 2
+	   const double[], const double[], const double&, const double&, const double[], const double&, const bool&, const bool&);
+  // Type, position, charge constructor
+d103 1
+d122 1
+d133 1
+d178 10
+@
+
+
+4.4.4.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@d61 1
+a61 1
+  double charge, phi, virial[6];
+a66 2
+  // virial is the potential energy contribution to the virial,
+  //  for the particle, inasmuch as it is defined.
+d73 1
+a73 1
+  // Type, tag, color, position, ref position, mass, [charge, phi] constructor
+d76 1
+a76 1
+  // Type, tag, color, position, ref position, mass, charge, velocity, [phi] constructor
+d78 2
+a79 3
+	   const double[], const double[], const double&, const double&, const double[], const double& = 0.0, 
+	   const bool& = false, const bool& = false);
+  // Type, position, ref position, charge constructor
+a99 1
+  void get_virial(double[]) const;
+a117 1
+  void set_virial();
+a127 1
+  void increment_virial(const double[]);
+a171 10
+inline void Particle::increment_virial(const double virial_in[])
+{
+  virial[0]+=virial_in[0];
+  virial[1]+=virial_in[1];
+  virial[2]+=virial_in[2];
+  virial[3]+=virial_in[3];
+  virial[4]+=virial_in[4];
+  virial[5]+=virial_in[5];
+}
+
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d110 1
+a110 1
+  void scale_v(const double[]);
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a108 1
+
+@
+
+
+4.3.2.1.2.1
+log
+@Added EAM energy change calculation
+@
+text
+@a68 1
+  double rho;
+d73 1
+a73 1
+  // Type, tag, color, position, mass [charge, phi, rho] constructor
+d75 2
+a76 3
+   const double[], const double[], const double&, const double& = 0.0, const double& = 0.0, 
+	   const double& = 0.0, const bool& = false, const bool& = false);
+  // Type, tag, color, position, mass, charge,velocity, phi and rho constructor
+d78 3
+a80 5
+	   const double[], const double[], const double&, const double&, const double[], 
+	   const double&, const double&, const bool&, const bool&);
+  // Type, position, charge [, rho] constructor
+  Particle(const int&, const int&, const double[], const double[], const double&,
+	   const double& = 0.0);
+a99 1
+  double get_rho() const;
+a116 1
+  void set_rho(const double&);
+a127 1
+  void increment_rho(const double&);
+a128 1
+  void decrement_x(const double[]);
+a179 7
+inline void Particle::decrement_x(const double x_in[])
+{
+  x[0] -= x_in[0];
+  x[1] -= x_in[1];
+  x[2] -= x_in[2];
+}
+
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+a108 4
+
+  // added saubry (01-13-05)
+  void add_x(const double[]);
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d93 4
+@
+
+
+3.2
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.1.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a92 1
+  void add_x(const double[]);
+@
+
+
+3.1.6.2
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a92 2
+
+  // added saubry (01-13-05)
+a93 1
+
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d44 2
+a45 2
+  double x[3],v[3],f[3];
+  double charge;
+d50 1
+d53 1
+d57 1
+a57 1
+  // Type, tag, color, position, mass [,charge] constructor
+d59 2
+a60 2
+	   const double[], const double&, const double& = 0.0);
+  // Type, tag, color, position, mass, charge and velocity constructor
+d62 1
+a62 1
+	   const double[], const double&, const double&, const double[]);
+d64 1
+a64 1
+  Particle(const int&, const int&, const double[], const double&);
+d78 2
+d83 3
+a86 1
+
+d92 1
+d99 3
+d110 2
+d132 10
+d156 7
+a166 1
+
+@
+
+
+2.13
+log
+@Fixed bug in minimixer.cpp, and tweaked parameters to
+improve performance. Result very sensitive to maxstep.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.12
+log
+@Updated header
+@
+text
+@d93 1
+a93 1
+  void step_x_force(const double&,const bool*,const double&,bool);
+@
+
+
+2.11
+log
+@fixed some issues found by compiler on liberty
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.10
+log
+@Added anisotropic style to pressure control,
+and included in Tersoff example testp.
+@
+text
+@a72 1
+  const double *const get_x() const;
+a116 5
+}
+
+inline const double *const Particle::get_x() const
+{
+  return x;
+@
+
+
+2.9
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d79 1
+d87 1
+@
+
+
+2.8
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d73 1
+d100 1
+d116 5
+@
+
+
+2.7
+log
+@Added Ewald sum example
+@
+text
+@d40 2
+a50 3
+  // Extra storage required for embedded atom method (eam)
+  // Should probably move this into Force_Eam.
+  double rho_eam,fp_eam;
+a100 8
+  // Extra operations required for embedded atom method (eam).
+  double get_rho_eam() const;
+  double get_fp_eam() const;
+  void set_rho_eam(const double&);
+  void set_fp_eam(const double&);
+  void increment_rho_eam(const double&);
+  void increment_fp_eam(const double&);
+
+a132 27
+}
+
+  // Extra operations required for embedded atom method (eam).
+inline double Particle::get_rho_eam() const
+{
+  return rho_eam;
+}
+
+inline double Particle::get_fp_eam() const
+{
+  return fp_eam;
+}
+
+inline void Particle::set_rho_eam(const double& rho_in=0) {
+  rho_eam = rho_in;
+}
+
+inline void Particle::set_fp_eam(const double& fp_in=0) {
+  fp_eam = fp_in;
+}
+
+inline void Particle::increment_rho_eam(const double& rho_in) {
+  rho_eam += rho_in;
+}
+
+inline void Particle::increment_fp_eam(const double& fp_in) {
+  fp_eam += fp_in;
+@
+
+
+2.6
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d50 1
+@
+
+
+2.6.2.1
+log
+@Keeping track of displacements for each particle.
+@
+text
+@d41 1
+a41 1
+  double x[3],v[3],f[3],X[3];
+d56 1
+a56 1
+	   const double[], const double[], const double&, const double& = 0.0);
+d59 1
+a59 1
+	   const double[], const double[], const double&, const double&, const double[]);
+d61 1
+a61 1
+  Particle(const int&, const int&, const double[], const double[], const double&);
+a74 2
+  void get_u(double[]) const;
+  void get_X(double[]) const;
+a83 1
+  void set_X(const double[]);
+@
+
+
+2.6.2.2
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@d42 1
+a42 1
+  double charge, phi;
+a46 1
+  // phi is potential energy of particle, inasmuch as it is defined 
+a50 1
+  bool is_fixed, to_be_minimized;
+d54 1
+a54 1
+  // Type, tag, color, position, mass [charge, phi] constructor
+d56 2
+a57 2
+   const double[], const double[], const double&, const double& = 0.0, const double& = 0.0, const bool& = false, const bool& = false);
+  // Type, tag, color, position, mass, charge,velocity, and phi constructor
+d59 1
+a59 1
+	   const double[], const double[], const double&, const double&, const double[], const double&, const bool&, const bool&);
+a79 3
+  double get_phi() const;
+  bool get_fixed() const;
+  bool get_minimized() const;
+a91 3
+  void set_phi(const double&);
+  void set_fixed();
+  void set_minimized();
+a99 2
+  void increment_phi(const double&);
+  void increment_x(const double[]);
+a126 10
+inline void Particle::set_fixed()
+{
+  is_fixed = true;
+}
+
+inline void Particle::set_minimized()
+{
+  to_be_minimized = true;
+}
+
+a138 7
+}
+
+inline void Particle::increment_x(const double x_in[])
+{
+  x[0] += x_in[0];
+  x[1] += x_in[1];
+  x[2] += x_in[2];
+@
+
+
+2.6.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a39 2
+  // Performance debugging only
+  friend class Force_Twobody;
+d50 2
+d85 1
+a85 1
+  void get_mvsq(vector <double>&) const;
+a92 1
+  void scale_v(const double[]);
+d102 1
+a102 1
+  void step_x_force(const double&,const bool*,const double&,bool&);
+a111 1
+  void scale_x(const Box*, const double[]);
+d114 8
+d171 27
+@
+
+
+2.5
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d43 2
+a44 3
+  // tag is a unique number for that particle (Note: tags are 
+  //        currently user-specified and no checking is done. Should
+  //        either check for uniqueness or assign internally)
+d49 2
+d98 11
+a108 2
+  void reset_x(const Box&); 
+  void reset_full_x(const Box&); 
+d141 27
+@
+
+
+2.4
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.3
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d62 1
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d55 1
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d61 1
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d18 1
+a18 2
+  // id is user-defined identity string for that type of particle.
+  // type is an internally assigned serial number for that id.
+a20 1
+  string id;
+d25 8
+a32 6
+  // Type, tag, id, color, position, velocity [and charge] constructor
+  Particle(const int&, const int&, const string&, const int&, 
+	   const double[], const double[], const double& = 0.0);
+  // Type, tag, id, color, position [and charge] constructor
+  Particle(const int&, const int&, const string&, const int&, 
+	   const double[], const double& = 0.0);
+a41 1
+  string get_id() const;
+a51 1
+  void set_id(const string&);
+d53 1
+a53 1
+  void set_x(const double[], const Box&);
+@
+
+
+1.6
+log
+@Added configuration output routine to Box.
+Added shifted origin to minimg routines.
+Cleaned up minimg routines to consistently
+Deal with following issues:
+	orthorhombic versus triclinic
+	inner-loop Minimig_Dist functions only perform single box shift,
+		as it is more efficient than general shift.
+	For this reason, standard Minimg_Pos function also only
+		performs single box shift, but also checks that
+		aparticles have not strayed too far.
+	Initial config may require more than single box shift, and
+		so for this we use Minimg_Full_pos.
+Treatment of equality conditions:
+	Positions on )0,1[ are mapped onto [0,1).
+	Positions on [0,1) are left alone.
+	Distances on )-1,1( should not occur
+	Distances on )-0.5,0.5( are mapped (-0.5,0.5).
+	Distances on [-0.5,0.5] are left alone.
+@
+text
+@d76 1
+@
+
+
+1.5
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@d69 1
+@
+
+
+1.4
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d18 1
+a18 1
+  // id is user-defined identity number for that type of particle.
+d21 2
+a22 1
+  int type,tag,id,color;
+d28 1
+a28 1
+  Particle(const int&, const int&, const int&, const int&, 
+d31 1
+a31 1
+  Particle(const int&, const int&, const int&, const int&, 
+d42 1
+a42 1
+  int get_id() const;
+d49 1
+d53 1
+a53 1
+  void set_id(const int&);
+@
+
+
+1.3
+log
+@
+
+Added neighbor list object.
+@
+text
+@d69 1
+a69 1
+// INLINE FUNCTION DEFINITIONS
+d95 5
+d101 1
+@
+
+
+1.2
+log
+@
+Added ReadParticleTypes, and improved organization of input,
+including error checking.
+@
+text
+@d60 1
+a60 1
+  void step_x(const double&, const Box&);
+d65 2
+@
+
+
+1.1
+log
+@Starting source distribution for Grasp.
+Basic molecular dynamics code with twobody interactions
+@
+text
+@d15 6
+d22 1
+d47 1
+d58 1
+@
+

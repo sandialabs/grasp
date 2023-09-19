@@ -1,0 +1,645 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.6.2.0.2
+	Root-of-Monaco_Aidan:1.1.6.2
+	Monaco:1.1.0.6
+	PreMonaco:1.1
+	PMONACO:1.1.0.4
+	P_MonacoSource:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.04.07.00.04.52;	author saubry;	state dead;
+branches
+	1.1.2.1
+	1.1.4.1
+	1.1.6.1;
+next	;
+
+1.1.2.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.04.08.00.04.39;	author saubry;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.04.12.16.31.04;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2005.04.12.22.58.05;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.6.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	1.1.6.2;
+
+1.1.6.2
+date	2005.05.10.23.31.54;	author saubry;	state Exp;
+branches
+	1.1.6.2.2.1;
+next	;
+
+1.1.6.2.2.1
+date	2005.06.15.20.29.11;	author athomps;	state Exp;
+branches;
+next	1.1.6.2.2.2;
+
+1.1.6.2.2.2
+date	2005.07.05.22.39.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.3;
+
+1.1.6.2.2.3
+date	2005.07.08.23.16.36;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.4;
+
+1.1.6.2.2.4
+date	2005.07.20.23.18.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.5;
+
+1.1.6.2.2.5
+date	2005.07.28.23.17.30;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.6;
+
+1.1.6.2.2.6
+date	2005.08.04.18.28.14;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.7;
+
+1.1.6.2.2.7
+date	2005.08.09.22.50.06;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.8;
+
+1.1.6.2.2.8
+date	2005.08.09.23.26.38;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.9;
+
+1.1.6.2.2.9
+date	2005.08.12.23.55.22;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.10;
+
+1.1.6.2.2.10
+date	2005.09.12.21.02.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.11;
+
+1.1.6.2.2.11
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.12;
+
+1.1.6.2.2.12
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.6.2.2.13;
+
+1.1.6.2.2.13
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	1.1.6.2.2.14;
+
+1.1.6.2.2.14
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file octantlist.h was initially added on branch P_MonacoSource.
+@
+text
+@@
+
+
+1.1.6.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 73
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef OCTANTLIST_H
+#define OCTANTLIST_H
+
+#include <vector>
+using namespace std;
+#include "octant.h"
+
+
+class OctantList
+{
+ protected: 
+  double localbounds[6];
+  double rcut;
+
+ public:
+  vector<Octant> octants;
+
+  OctantList(){};
+  ~OctantList(){};  
+  void Setup(BinList*, const Box*, Comm*,ForceFieldList*);
+  
+ private:
+  void LocalBounds(double r[],double rc[]);  
+  void InvLocalBounds(double r[],double rc[]);  
+
+};
+
+#endif
+@
+
+
+1.1.6.2
+log
+@Alex's algorithm implemented. Need more checks in parallel
+@
+text
+@d57 1
+a57 1
+  double locals[6];
+d68 2
+a69 2
+  void Locals(double r[],double rc[]);  
+  void InvLocals(double r[],double rc[]);  
+@
+
+
+1.1.6.2.2.1
+log
+@Added class Comm_Octant
+@
+text
+@a65 2
+  // Prototype for loop over 8 octants.
+  void Cycle(Box*, BinList*, ForceFieldList*, Comm*);
+@
+
+
+1.1.6.2.2.2
+log
+@Correct a few bugs
+@
+text
+@d58 1
+@
+
+
+1.1.6.2.2.3
+log
+@Implement correctly bin and ghost bin lists
+@
+text
+@d56 3
+d67 5
+@
+
+
+1.1.6.2.2.4
+log
+@Implementation of 2 routines:
+1./ Return ghost bins of an octant on the proc. of that octant.
+2./ Return bins of a given translated region.
+@
+text
+@a55 4
+ protected:
+  int procgrid[3];
+  int nprocs;
+
+a66 1
+
+@
+
+
+1.1.6.2.2.5
+log
+@Implemented tools for bins lists:
+  - intersection
+  - union
+  - copy constructor
+
+Created a new class:  BinTools.
+Tested these tools.
+
+Seems to work ok in serial and parallel.
+@
+text
+@d65 1
+a65 4
+
+  void Setup(BinList*, BinTools*, const Box*, Comm*,ForceFieldList*);
+  void CheckBins(Comm*,BinTools *);
+
+@
+
+
+1.1.6.2.2.6
+log
+@Implement Alex's algorithm to send specific octant bin lists.
+No communication implemented yet.
+@
+text
+@d67 1
+a67 2
+  void CheckBins(Comm*,BinTools *,BinList* bl,int);
+  void SendOctantBins(BinList *,BinTools *,const Box* ,Comm *);
+@
+
+
+1.1.6.2.2.7
+log
+@Link communication scheme with send bins.
+@
+text
+@d66 1
+a66 1
+  void Setup(BinList*, BinTools*,const Box*, Comm*,ForceFieldList*);
+d68 1
+a68 2
+  void OctantSendBinsList(int,vector <Bin*>[3],vector <Bin*>[6],BinTools*,
+			  BinList *, const Box* ,Comm *);
+a69 2
+  // Commnunication scheme
+  enum {size_comm = 3, size_reverse = 3};
+d71 1
+a71 26
+  void Cycle(Box*, OctantList*, ForceFieldList*, Comm*);
+
+  // Compute size of buffer needed to store data
+  int pack_comm_size(const int& num, const vector<int>& list, vector <Bin *>);
+  // Pack up data for list of bins into buf, 
+  // applying pbc shifts if indicated 
+  void pack_comm(const int& num, const vector<int>& list, 
+		 double* buf, const int pbc[], const Box* b,
+		 vector <Bin *>);
+  // Extract data from list of bins from buf 
+  void unpack_comm(const int& num, const vector<int>& list , 
+		   const double* buf, vector <Bin *>); 
+  // Compute size of buffer needed to store reverse data
+  int pack_reverse_size(const int& num, const vector<int>& list,
+			vector <Bin *>);
+  // Pack up reverse data for list of bins into buf, 
+  // applying pbc shifts if indicated 
+  void pack_reverse(const int& num, const vector<int>& list, 
+		    double* buf, const int pbc[], const Box* b,
+		    vector <Bin *>);
+  // Extract reverse data from list of bins from buf 
+  void unpack_reverse(const int& num, const vector<int>& list , 
+		      const double* buf, vector <Bin *>); 
+
+
+
+@
+
+
+1.1.6.2.2.8
+log
+@Implement receiving bins.
+@
+text
+@d68 2
+a69 3
+  void OctantBinsLists(int,vector <Bin*>[3],vector <Bin*> RecvBins[3],
+		       vector <Bin*>[6],BinTools*, BinList *, const Box*,
+		       Comm *);
+@
+
+
+1.1.6.2.2.9
+log
+@Problem with pbc_flags.
+Update recent modifications.
+@
+text
+@d70 1
+a70 1
+		       Comm *,vector <int*>);
+@
+
+
+1.1.6.2.2.10
+log
+@Correct boundary flags.
+Implement send/receive bins.
+@
+text
+@d68 1
+a68 1
+  void OctantBinsLists(const int&,vector <Bin*>[3],vector <Bin*> RecvBins[3],
+a78 1
+
+a83 1
+
+a86 1
+
+a89 1
+
+a94 1
+
+d98 3
+@
+
+
+1.1.6.2.2.11
+log
+@Correct several bugs
+@
+text
+@d68 3
+a70 2
+  void OctantBinsLists(const int&,vector <Bin*>[6],BinTools*, BinList *, 
+		       const Box*,Comm *);
+d75 1
+a75 1
+  void Cycle(const Box*, OctantList*, ForceFieldList*, Comm*);
+d78 1
+a78 1
+  int pack_comm_size(Comm* comm,const int& num, const vector<int>& list, vector <Bin *>);
+@
+
+
+1.1.6.2.2.12
+log
+@Correct a few things.
+@
+text
+@d54 1
+a54 1
+class OctantList 
+d66 2
+a67 1
+  void Setup(BinList*, BinTools*,const Box*, Comm*);
+d71 31
+a101 1
+  void Cycle(OctantList *,BinList*, BinTools*, const Box*, Comm*);
+@
+
+
+1.1.6.2.2.13
+log
+@Bin Communication fixed
+@
+text
+@d70 1
+a70 1
+  void Cycle(ParticleList*, OctantList*, BinList*, BinTools*, const Box*, Comm*);
+@
+
+
+1.1.6.2.2.14
+log
+@Added EAM energy change calculation
+@
+text
+@d70 1
+a70 2
+  void Cycle(ParticleList*, OctantList*, BinList*, BinTools*, 
+	     const Box*, ForceFieldList*, Comm*);
+@
+
+
+1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a0 57
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#ifndef OCTANTLIST_H
+#define OCTANTLIST_H
+
+#include <vector>
+using namespace std;
+#include "octant.h"
+
+
+class OctantList
+{
+ protected: 
+  double localbounds[6];
+  double rcut;
+
+ public:
+  vector<Octant> octants;
+
+  OctantList(){};
+  ~OctantList(){};  
+  void Setup(BinList*, const Box*, Comm*,ForceFieldList*);
+  
+ private:
+  void LocalBounds(double r[],double rc[]);  
+  void InvLocalBounds(double r[],double rc[]);  
+
+};
+
+#endif
+@
+
+
+1.1.2.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a0 51
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#ifndef OCTANTLIST_H
+#define OCTANTLIST_H
+
+#include <vector>
+using namespace std;
+
+
+class OctantList{
+
+public:
+	OctantList();
+	~OctantList(){};
+
+	std::vector<Octant> octants;
+
+	void Setup(const BinList*, const Box*, Comm*,ForceFieldList*);
+
+	void clear();
+
+};
+
+#endif
+@
+
+
+1.1.2.2
+log
+@Modify binlist to create bins array locally (to each proc).
+Begin implementing octantlist.
+
+saubry (04-07-05).
+@
+text
+@a34 1
+#include "octant.h"
+d37 11
+a47 16
+class OctantList
+{
+ protected: 
+  double ghostbounds[6];
+  double rcut;
+
+ public:
+  vector<Octant> octants;
+
+  OctantList(){};
+  ~OctantList(){};  
+  void Setup(BinList*, const Box*, Comm*,ForceFieldList*);
+  
+ private:
+  void GhostBounds(double r[],double rc[]);  
+  void InvGhostBounds(double r[],double rc[]);  
+@
+
+
+1.1.2.3
+log
+@Correct binparticles routine.
+Add map index.
+
+saubry 04-12-05
+@
+text
+@d41 1
+a41 1
+  double localbounds[6];
+d52 2
+a53 2
+  void LocalBounds(double r[],double rc[]);  
+  void InvLocalBounds(double r[],double rc[]);  
+@
+
+

@@ -1,0 +1,93 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAX-2:3.2.2.2
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@      parameter (maxdat=5000)
+      parameter (maxmdat=2500)
+      parameter (maxkop=2500)
+      character*80 qff
+      character*60 qmdat
+      character*100 qdatid
+      character*2 qas2
+      common
+     $/opt/    fpar(7,nvatym,40),datopt(maxdat),caldat(maxdat),
+     $         compdat(maxdat),weightdat(maxdat),
+     $         devi(maxdat),vkop(maxkop),devkop(maxkop),sdy(3),
+     $         valpar,valnew,change,vchange,
+     $         molin(maxmdat,nsort),
+     $         iboo(nbotym,2),idmo(nodmtym,2),ivao(nvatym,5),
+     $         itoo(ntotym,7),ihbo(nhbtym,5),iheada(maxmdat),
+     $         ndatm(maxmdat),iheada2(maxmdat),ichn(3),
+     $         ikop1(maxkop),ikop2(maxkop),idat(maxdat),mu1(maxkop),
+     $         mu2(maxkop),
+     $         ndata,imam,iopt,iheatf,nkop,iagain,
+     $         qdatid(maxdat),qmdat(maxmdat),qff(250),qas2(nsort)
+***********************************************************************
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@a21 2
+
+
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

@@ -1,0 +1,283 @@
+head	4.2;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoTesting:3.0.0.6
+	InitialGraspTesting:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:1.7.2.1
+	cjkimme_version:1.7.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.2
+date	2007.06.02.03.27.22;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2006.08.28.23.28.22;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2004.07.30.20.18.56;	author athomps;	state Exp;
+branches
+	1.7.2.1;
+next	1.6;
+
+1.6
+date	2004.07.13.21.21.21;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2004.05.20.22.11.35;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2004.04.28.22.00.03;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2004.03.01.18.14.14;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.02.05.23.01.02;	author cjkimme;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.01.28.20.37.01;	author athomps;	state Exp;
+branches;
+next	;
+
+1.7.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.2
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@# Timestep 0
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+         3         0.1594758574         0.05674962695         0.6886427278
+         4         -0.02548936424         0.0004266139447         -0.4600744064
+         1         -0.01142991520         -0.2948873520         -0.1198589255
+         2         -0.1225565779         0.2377111111         -0.1087093959
+# 
+# Timestep 1000
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+         3         -0.01353381240         0.4128145706         0.5804328903
+         1         0.001662392172         -0.05067324605         -0.3422107576
+         2         0.09204860488         -0.1565571634         0.1657286280
+         4         -0.08017718465         -0.2055841611         -0.4039507607
+# 
+@
+
+
+4.1
+log
+@New PRNG caused new initial conditions
+@
+text
+@d6 4
+a9 4
+       3        0.1594758574       0.05674962695        0.6886427278
+       4      -0.02548936424     0.0004266139447       -0.4600744064
+       1      -0.01142991520       -0.2948873520       -0.1198589255
+       2       -0.1225565779        0.2377111111       -0.1087093959
+d16 4
+a19 4
+       3      -0.01353381240        0.4128145706        0.5804328903
+       1      0.001662392172      -0.05067324605       -0.3422107576
+       2       0.09204860488       -0.1565571634        0.1657286280
+       4      -0.08017718465       -0.2055841611       -0.4039507607
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d6 4
+a9 4
+       3     -0.003303983677       -0.2283792413       -0.2058423674
+       4        0.3008422018        0.2884691903       -0.1944454651
+       1       0.04562517955       0.02989523632        0.6388820927
+       2       -0.3431633977      -0.08998518525       -0.2385942602
+d16 4
+a19 4
+       2       -0.4566378165      -0.04816369697      -0.01798624696
+       1       -0.2538941359        0.3942535564        0.1634663749
+       3        0.5921597866       -0.2233049318      -0.04429575892
+       4        0.1183721659       -0.1227849277       -0.1011843690
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@@
+
+
+1.7
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@@
+
+
+1.7.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.6
+log
+@Added NPT ensemble
+@
+text
+@d11 1
+a11 1
+# Timestep 10000
+d16 4
+a19 4
+       2      -0.01614248363        0.1026370734        0.3071146789
+       3        0.4712188586       -0.1765159298       -0.4472387445
+       1       -0.4815121755        0.2311810817      -0.03464444965
+       4       0.02643580056       -0.1573022253        0.1747685152
+@
+
+
+1.5
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d16 4
+a19 4
+       2      -0.01175511218       0.07564536251        0.3135920263
+       3        0.4684741526       -0.1456630869       -0.4593724433
+       1       -0.4709114892        0.2467969385      -0.02771428302
+       4       0.01419244879       -0.1767792141        0.1734947001
+@
+
+
+1.4
+log
+@See previous checkin of source for info.
+@
+text
+@d16 1
+a16 1
+       2      -0.01175511221       0.07564536253        0.3135920263
+d18 2
+a19 2
+       1       -0.4709114892        0.2467969384      -0.02771428301
+       4       0.01419244880       -0.1767792141        0.1734947000
+@
+
+
+1.3
+log
+@Added Ewald sum example
+@
+text
+@d16 4
+a19 4
+       2      -0.01175511225       0.07564536269        0.3135920262
+       3        0.4684741526       -0.1456630871       -0.4593724432
+       1       -0.4709114893        0.2467969384      -0.02771428304
+       4       0.01419244887       -0.1767792139        0.1734947000
+@
+
+
+1.2
+log
+@Testing out Chris Kimmer's new account
+@
+text
+@a20 1
+
+@
+
+
+1.1
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d21 1
+@
+

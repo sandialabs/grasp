@@ -1,0 +1,1039 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.2.2.0.2
+	Root-of-Monaco_Aidan:1.1.2.2
+	Monaco:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2005.05.03.22.14.52;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.05.10.23.31.54;	author saubry;	state Exp;
+branches
+	1.1.2.2.2.1;
+next	;
+
+1.1.2.2.2.1
+date	2005.06.15.20.29.11;	author athomps;	state Exp;
+branches;
+next	1.1.2.2.2.2;
+
+1.1.2.2.2.2
+date	2005.06.15.23.26.07;	author athomps;	state Exp;
+branches;
+next	1.1.2.2.2.3;
+
+1.1.2.2.2.3
+date	2005.07.28.23.17.30;	author saubry;	state Exp;
+branches;
+next	1.1.2.2.2.4;
+
+1.1.2.2.2.4
+date	2005.08.04.18.28.14;	author saubry;	state Exp;
+branches;
+next	1.1.2.2.2.5;
+
+1.1.2.2.2.5
+date	2005.08.09.22.50.06;	author saubry;	state Exp;
+branches;
+next	1.1.2.2.2.6;
+
+1.1.2.2.2.6
+date	2005.09.12.21.02.47;	author saubry;	state Exp;
+branches;
+next	1.1.2.2.2.7;
+
+1.1.2.2.2.7
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.2.2.2.8;
+
+1.1.2.2.2.8
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.2.2.2.9;
+
+1.1.2.2.2.9
+date	2005.11.01.21.17.20;	author saubry;	state Exp;
+branches;
+next	1.1.2.2.2.10;
+
+1.1.2.2.2.10
+date	2005.11.17.20.43.30;	author athomps;	state Exp;
+branches;
+next	1.1.2.2.2.11;
+
+1.1.2.2.2.11
+date	2005.11.28.23.08.47;	author saubry;	state Exp;
+branches;
+next	1.1.2.2.2.12;
+
+1.1.2.2.2.12
+date	2005.11.30.19.51.20;	author athomps;	state Exp;
+branches;
+next	1.1.2.2.2.13;
+
+1.1.2.2.2.13
+date	2005.12.09.18.35.27;	author athomps;	state Exp;
+branches;
+next	1.1.2.2.2.14;
+
+1.1.2.2.2.14
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	1.1.2.2.2.15;
+
+1.1.2.2.2.15
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	1.1.2.2.2.16;
+
+1.1.2.2.2.16
+date	2006.02.06.19.15.25;	author athomps;	state Exp;
+branches;
+next	1.1.2.2.2.17;
+
+1.1.2.2.2.17
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file montecarlo.cpp was initially added on branch Monaco.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 273
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "constants.h"
+#include "octantlist.h"
+#include "octant.h"
+#include "montecarlo.h"
+#include "particlelist.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "box.h"
+#include "output.h"
+#include "bin.h"
+#include "binlist.h"
+#include "comm.h"
+#include "log.h"
+#include "fixlist.h"
+extern Log glog;
+extern Constants constants;
+
+MonteCarlo::MonteCarlo() {}
+
+void MonteCarlo::Setup(const ParticleList* p, const Box* b, Comm* comm, ForceFieldList *ffl) {
+
+	int node;
+
+	node = comm->get_node();
+	if (node == 0) {
+		glog.logfile << "\n\n\n";
+		glog.logfile << "Entering MonteCarlo::Setup()" << endl;
+	}
+	if (comm->get_Lnodefile()) {
+		comm->get_nodefile() << "Entering Monte Carlo::Setup()" << endl;
+	}
+
+
+	// BinList
+	BinList* bl = new BinList();
+	bl->Setup(p,b,comm,ffl);
+
+	// OctantList
+	OctantList* oc = new OctantList();
+	oc->Setup(bl,b,comm,ffl);
+
+}
+
+void MonteCarlo::Run(const int nsteps, const double timestep, 
+		     Box* b, ParticleTypeList* t,
+		     ParticleList* p,ForceFieldList* ff,
+		     Output* outp,FixList* fix_list,Comm* comm) 
+{
+  double t0,t1;
+  
+  t0 = MPI_Wtime();
+  for (int istep=1;istep<=nsteps;istep++) 
+    
+    for (int oct = 0; oct < 8; oct++)
+      {
+	
+	Front(timestep,b,t,p,ff,fix_list,comm);
+	Sweep(timestep,b,t,p,ff,fix_list,comm);
+	Back(timestep,b,t,p,ff,fix_list,comm);
+      }
+  
+  t1 = MPI_Wtime();
+  glog.timetotal = t1-t0;
+  
+
+ // Simple example for energy change
+  int atom = 1;
+
+  // Test first energy change routine 
+  double ec = EnergyChange0(&atom,b,t,p,ff,comm);
+
+  // Test second energy change routine in force_eam.cpp
+  bool Lenergy;
+  Lenergy = true;
+  ff->ComputeEnergyChange(&atom,Boost,Lenergy,b,t,p,comm);
+}
+
+void MonteCarlo::Front(const double timestep, Box* b, ParticleTypeList* t,
+           ParticleList* p,ForceFieldList* ff,
+           FixList* fix_list,Comm* comm) {
+
+  receive_ghost_buffer();
+  unpack_ghost_buffer();
+ 
+}
+
+void MonteCarlo::Sweep(const double timestep, Box* b, ParticleTypeList* t,
+           ParticleList* p,ForceFieldList* ff,
+           FixList* fix_list,Comm* comm) {
+
+	Particle propose;
+
+	vector<Particle> particles;
+
+
+	for(int part_i = 0;part_i != particles.size(); part_i ++)
+	{
+		propose_move(particles[part_i], propose);
+		update(decide(energy_change(particles[part_i], propose)));
+	}
+}
+
+void MonteCarlo::Back(const double timestep, Box* b, ParticleTypeList* t,
+           ParticleList* p,ForceFieldList* ff,
+           FixList* fix_list,Comm* comm) {
+
+   pack_ghost_buffer();
+   send_ghost_buffer();
+
+}
+
+int MonteCarlo::calc_next_octant(){return (current_octant+1)%8;}
+
+void MonteCarlo::pack_ghost_buffer(){}
+void MonteCarlo::unpack_ghost_buffer(){}
+
+void MonteCarlo::receive_ghost_buffer(){}
+void MonteCarlo::send_ghost_buffer(){}
+
+void MonteCarlo::propose_move(Particle current_particle, Particle &propose){}
+double MonteCarlo::energy_change(Particle current_particle, Particle &propose){return 0.0;}
+bool MonteCarlo::decide(double){return true;}
+void MonteCarlo::update(bool){}
+
+
+// Brute Force method to calculate energy change.
+double MonteCarlo::EnergyChange0(int* atom, Box* b, ParticleTypeList* t, 
+				ParticleList* p, ForceFieldList* ff, Comm* comm) 
+{
+  // initialization
+  double energy0 = 0.0, energy1 = 0.0;
+  double ep1=0.0,em1=0.0,ep0=0.0,em0=0.0;
+
+  ForceField* const* forcefields;
+  int node;
+  int nforcefields;
+  vector<double> tmp;
+  vector<double> e_ff;
+  int npieces;
+
+  // calculate initial energy
+  node = comm->get_node();
+
+  ff->Neighboring(p, b, comm, false);  
+  ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+
+  forcefields = ff->get_forcefields();
+  nforcefields = ff->get_nforcefields();
+  for (int iff = 0;iff<nforcefields;iff++) 
+    {
+      ForceField* ffiff = forcefields[iff];
+      npieces = ffiff->get_npieces();
+      tmp = ffiff->get_energy();
+      e_ff.resize(npieces);
+      MPI_Allreduce(&tmp[0],&e_ff[0],npieces,MPI_DOUBLE,
+		    MPI_SUM,comm->get_world());
+      if (node == 0) 
+	{
+	  em0 += e_ff[0];
+	  ep0 += e_ff[1];
+	  for (int ipiece=0;ipiece<npieces;ipiece++) 
+	    energy0 += e_ff[ipiece];
+	}
+
+
+    }
+  MPI_Bcast(&energy0,1,MPI_DOUBLE,0,comm->get_world());
+
+ // apply MC move
+  p->ModifyParticle(atom,Boost);
+
+  // calculate final energy
+  node = comm->get_node();
+
+  ff->Neighboring(p, b, comm, false);  
+  ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+
+  forcefields = ff->get_forcefields();
+  nforcefields = ff->get_nforcefields();
+  for (int iff = 0;iff<nforcefields;iff++) 
+    {
+      ForceField* ffiff = forcefields[iff];
+      npieces = ffiff->get_npieces();
+      tmp = ffiff->get_energy();
+      e_ff.resize(npieces);
+      MPI_Allreduce(&tmp[0],&e_ff[0],npieces,MPI_DOUBLE,
+		    MPI_SUM,comm->get_world());
+      if (node == 0) 
+	{
+	  em1 += e_ff[0];
+	  ep1 += e_ff[1];
+	  for (int ipiece=0;ipiece<npieces;ipiece++) 
+	    energy1 += e_ff[ipiece];
+	}
+    }
+  MPI_Bcast(&energy1,1,MPI_DOUBLE,0,comm->get_world());
+
+  if (node == 0)
+    {
+      glog.logfile  << "Energy Change (1) :" << energy1 -  energy0 << "\n";
+      glog.logfile << "      Embedding = " << em1-em0 << "\n";
+      glog.logfile << "      Pair      = " << ep1-ep0 << "\n";
+    }
+
+  vector <double> boost2;
+  boost2.resize(3);
+  boost2[0] = -Boost[0];
+  boost2[1] = -Boost[1];
+  boost2[2] = -Boost[2];
+  p->ModifyParticle(atom,boost2);
+  ff->Neighboring(p, b, comm, false);  
+  
+  return energy1-energy0;
+}
+
+
+@
+
+
+1.1.2.2
+log
+@Alex's algorithm implemented. Need more checks in parallel
+@
+text
+@d127 1
+a127 1
+  //double ec = EnergyChange0(&atom,b,t,p,ff,comm);
+d132 1
+a132 1
+  //ff->ComputeEnergyChange(&atom,Boost,Lenergy,b,t,p,comm);
+@
+
+
+1.1.2.2.2.1
+log
+@Added class Comm_Octant
+@
+text
+@d92 1
+a92 2
+	// BinList* bl = new BinList();
+	bl = new BinList();
+d96 1
+a96 1
+	oc = new OctantList();
+d98 1
+d114 3
+a116 4
+	//	Front(timestep,b,t,p,ff,fix_list,comm);
+	//	Sweep(timestep,b,t,p,ff,fix_list,comm);
+	//	Back(timestep,b,t,p,ff,fix_list,comm);
+		oc->Cycle(b,bl,ff,comm);
+@
+
+
+1.1.2.2.2.2
+log
+@Finished fist pass of testing on Comm_Octant class
+@
+text
+@d111 2
+a112 4
+    oc->Cycle(b,bl,ff,comm);
+
+//     for (int oct = 0; oct < 8; oct++)
+//       {
+d114 5
+a118 4
+// 	//	Front(timestep,b,t,p,ff,fix_list,comm);
+// 	//	Sweep(timestep,b,t,p,ff,fix_list,comm);
+// 	//	Back(timestep,b,t,p,ff,fix_list,comm);
+//       }
+@
+
+
+1.1.2.2.2.3
+log
+@Implemented tools for bins lists:
+  - intersection
+  - union
+  - copy constructor
+
+Created a new class:  BinTools.
+Tested these tools.
+
+Seems to work ok in serial and parallel.
+@
+text
+@a67 1
+#include "bintools.h"
+d77 22
+a98 24
+void MonteCarlo::Setup(const ParticleList* p, const Box* b, Comm* comm, 
+		       ForceFieldList *ffl) 
+{
+  int node;
+  
+  node = comm->get_node();
+  if (node == 0) 
+    {
+      glog.logfile << "\n\n\n";
+      glog.logfile << "Entering MonteCarlo::Setup()" << endl;
+    }
+  if (comm->get_Lnodefile()) 
+    {
+      comm->get_nodefile() << "Entering Monte Carlo::Setup()" << endl;
+    }
+  
+  // BinList
+  bl = new BinList();
+  bl->Setup(p,b,comm,ffl);
+  
+  // OctantList
+  bt = new BinTools();
+  oc = new OctantList();
+  oc->Setup(bl,bt,b,comm,ffl);
+@
+
+
+1.1.2.2.2.4
+log
+@Implement Alex's algorithm to send specific octant bin lists.
+No communication implemented yet.
+@
+text
+@a93 1
+  bt = new BinTools();
+d96 1
+a96 1
+  bl->Setup(p,bt,b,comm,ffl);
+d99 1
+@
+
+
+1.1.2.2.2.5
+log
+@Link communication scheme with send bins.
+@
+text
+@d90 3
+a92 1
+    comm->get_nodefile() << "Entering Monte Carlo::Setup()" << endl;
+a94 1
+
+d109 6
+a114 1
+  double t0 = MPI_Wtime();
+d116 11
+a126 2
+  for (int istep=1;istep<=nsteps;istep++) 
+    oc->Cycle(b,oc,ff,comm);
+a137 3
+
+  double t1 = MPI_Wtime();
+  glog.timetotal = t1-t0;
+@
+
+
+1.1.2.2.2.6
+log
+@Correct boundary flags.
+Implement send/receive bins.
+@
+text
+@a109 4
+  int procgrid[3];
+  comm->get_procgrid(procgrid);
+  int nprocs = procgrid[0]*procgrid[1]*procgrid[2];
+
+d111 1
+a111 1
+    if (nprocs > 1) oc->Cycle(b,oc,ff,comm);
+@
+
+
+1.1.2.2.2.7
+log
+@Correct several bugs
+@
+text
+@d1 1
+a1 1
+
+a72 1
+#include "move.h"
+a91 1
+  // BinTools
+a100 8
+
+  // Move
+  move = new Move();
+  int pbin[3];
+  bl->get_pbin(pbin);
+  double binsize[3];
+  bl->get_binsize(binsize);
+  move->Setup(b,pbin,binsize);
+d104 1
+a104 1
+		     const Box* b, ParticleTypeList* t,
+d114 13
+a126 15
+  for (int istep=1;istep<=nsteps;istep++)
+     {
+       oc->Cycle(b,oc,ff,comm);
+       //Sweep(timestep,b,t,p,ff,fix_list,comm);
+     }
+
+  // Test of EnergyChange routines
+  // int atom = 1;
+  // double ec = EnergyChange0(&atom,b,t,p,ff,comm);
+
+  // bool Lenergy;
+  // Lenergy = true;
+  // double boost[3];
+  // move->get_Boost(boost);
+  // ff->ComputeEnergyChange(&atom,boost,Lenergy,b,t,p,comm);
+d132 12
+a143 5
+void MonteCarlo::Sweep(const double timestep, const Box* b, ParticleTypeList* t,
+		       ParticleList* p,ForceFieldList* ff,
+		       FixList* fix_list,Comm* comm) 
+{
+  double x[3];
+d145 1
+a145 2
+  double boost[3];
+  move->get_Boost(boost);
+d147 1
+a147 11
+  int npart = p->get_nparticles();
+  //for(int i=0;i<npart; i++)
+  int i = 10;
+    {
+      p->particles[i].get_x(x);
+      x[0] += boost[0];
+      x[1] += boost[1];
+      x[2] += boost[2];
+      move->CheckPBC(x,b);
+      p->ModifyParticle(&i,x);
+    }
+d150 5
+a154 7
+  /*  
+  for(int i=0;i<npart;i++)
+    {
+      pmove.increment_x(boost);
+      update(decide(energy_change(particles[i], propose)));
+    }
+  */
+d157 3
+a159 2
+bool MonteCarlo::decide(double){return true;}
+void MonteCarlo::update(bool){}
+d161 2
+d164 1
+d166 1
+d168 2
+d171 7
+d182 1
+a182 2
+				 ParticleList* p, ForceFieldList* ff, 
+				 Comm* comm,double *boost) 
+d224 1
+a224 1
+  p->ModifyParticle(atom,boost);
+d259 5
+a263 5
+
+  double boost2[3];
+  boost2[0] = -boost[0];
+  boost2[1] = -boost[1];
+  boost2[2] = -boost[2];
+a270 1
+
+@
+
+
+1.1.2.2.2.8
+log
+@Correct a few things.
+@
+text
+@d102 1
+a102 1
+  oc->Setup(bl,bt,b,comm);
+d106 5
+a110 1
+  move->Setup();
+d126 2
+a127 36
+       
+       /*int nparticles = p->get_nparticles();
+       for (int i = 0; i < nparticles; i++) 
+	 {
+	     double x[3];
+	     p->particles[i].get_x(x);
+	     if (comm->get_Lnodefile()) 
+	       comm->get_nodefile() << "Avant:" << i << "\t" 
+				    << x[0] << "\t" << x[1] << "\t" << x[2] << endl;
+				    }*/
+
+       Sweep(p,comm,b);
+       oc->Cycle(oc,bl,bt,b,comm);
+       Sweep(p,comm,b);      
+ 
+       /*for (int i = 0; i < nparticles; i++) 
+	 {
+	     double x[3];
+	     p->particles[i].get_x(x);
+	     if (comm->get_Lnodefile()) 
+	       comm->get_nodefile() << "Apres:" << i << "\t" 
+				    << x[0] << "\t" << x[1] << "\t" << x[2] << endl;
+				    }*/
+
+       // Test of EnergyChange routines
+       bool Lenergy;
+       Lenergy = true;
+       int atom = 1;
+       
+       // Method 1: brute force
+       double ec = EnergyChange0(&atom,b,t,p,ff,comm);
+       
+       // Method 2: real calculation
+       double boost[3];
+       move->get_Boost(boost);
+       ff->ComputeEnergyChange(&atom,boost,Lenergy,b,t,p,comm);
+d130 10
+d144 3
+a146 1
+void MonteCarlo::Sweep(ParticleList* p,Comm* comm,const Box* b) 
+d148 25
+a172 1
+  move->MoveParticle(oc,b,comm);
+d179 5
+d185 3
+a187 2
+double MonteCarlo::EnergyChange0(int* atom, const Box* b, ParticleTypeList* t, 
+				 ParticleList* p, ForceFieldList* ff, Comm* comm) 
+a189 3
+  double boost[3];
+  move->get_Boost(boost);
+
+d232 2
+@
+
+
+1.1.2.2.2.9
+log
+@Add a pointer to particle instead of an array of particle.
+
+Bug in particles coordinates.
+@
+text
+@d79 1
+a79 1
+void MonteCarlo::Setup(ParticleList* const p, const Box* b, Comm* comm, 
+d123 2
+a124 2
+       int nparticles = p->get_nparticles();
+       /*for (int i = 0; i < nparticles; i++) 
+d127 1
+a127 1
+	     p->get_particles()[i].get_x(x);
+d133 3
+a135 3
+       //Sweep(p,comm,b);
+       //oc->Cycle(oc,bl,bt,b,comm);
+       //Sweep(p,comm,b);      
+d140 1
+a140 1
+	     p->get_particles()[i].get_x(x);
+@
+
+
+1.1.2.2.2.10
+log
+@Latest additions to Monte Carlo branch
+@
+text
+@d133 3
+a135 3
+       Sweep(p,comm,b);
+       oc->Cycle(oc,bl,bt,b,comm);
+       Sweep(p,comm,b);      
+@
+
+
+1.1.2.2.2.11
+log
+@Correct a few bugs.
+Segmentation fault when domain is not squared.
+@
+text
+@d124 10
+d137 9
+a247 1
+      glog.logfile  << "\n\n\n";
+@
+
+
+1.1.2.2.2.12
+log
+@Latest additions to Monaco branch
+@
+text
+@a113 1
+  bool Lenergy,Lvolume,Lnparticles;
+a119 4
+  Lvolume = false;
+  Lnparticles = false;
+  Lenergy = true;
+
+a138 2
+       outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,extended_energy,
+			 Lvolume,Lnparticles);
+a140 1
+
+@
+
+
+1.1.2.2.2.13
+log
+@Tweaked Monaco branch
+@
+text
+@d1 1
+d85 5
+a120 3
+  if (comm->get_Lnodefile()) 
+    comm->get_nodefile() << "Entering Monte Carlo::Run()" << endl;
+
+d125 11
+a135 1
+  for (int istep=1;istep<=nsteps;istep++) {
+d137 11
+a147 27
+    int nparticles = p->get_nparticles();
+     oc->Cycle(oc,bl,bt,b,comm);
+     //    Sweep(p,comm,b);      
+    
+    // Test of EnergyChange routines
+    bool Lenergy;
+    Lenergy = true;
+    int atom = 1;
+    
+    // Method 1: brute force
+    double ec = EnergyChange0(&atom,b,t,p,ff,comm);
+    
+    // Method 2: real calculation
+    //This one does not currently work, fatally flawed algorithm
+    double boost[3];
+    move->get_Boost(boost);
+    ff->ComputeEnergyChange(&atom,boost,Lenergy,b,t,p,comm);
+
+
+    // Method 3: Grasp calculation
+    // apply MC move
+    p->ModifyParticle(&atom,boost);
+    ff->Neighboring(p, b, comm, false);  
+    ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,extended_energy,
+		      Lvolume,Lnparticles);
+  }
+d153 2
+a154 1
+void MonteCarlo::Sweep(ParticleList* p,Comm* comm,const Box* b) {
+d164 2
+a165 1
+				 ParticleList* p, ForceFieldList* ff, Comm* comm) {
+d170 3
+a178 3
+  double energy1,energy0;
+  // Special EAM diagnostic
+  double em0,ep0,em1,ep1;
+d183 3
+d188 15
+a203 2
+  ff->Neighboring(p, b, comm, false);  
+  ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+a204 8
+  energy0 = 0.0;
+  for (int iff = 0;iff<nforcefields;iff++) {
+    ForceField* ffiff = forcefields[iff];
+    npieces = ffiff->get_npieces();
+    e_ff.resize(npieces);
+    e_ff = ffiff->get_energy();
+    for (int ipiece=0;ipiece<npieces;ipiece++) {
+      energy0+=e_ff[ipiece];
+d206 1
+a206 6
+    // Special EAM diagnostic
+    if (node == 0 && ffiff->get_classname() == ForceField::eam) {
+      em0 = e_ff[0];
+      ep0 = e_ff[1];
+    }
+  }
+d208 1
+a208 1
+  // apply MC move
+d215 17
+a231 8
+  energy1 = 0.0;
+  for (int iff = 0;iff<nforcefields;iff++) {
+    ForceField* ffiff = forcefields[iff];
+    npieces = ffiff->get_npieces();
+    e_ff.resize(npieces);
+    e_ff = ffiff->get_energy();
+    for (int ipiece=0;ipiece<npieces;ipiece++) {
+      energy1+=e_ff[ipiece];
+d233 8
+a240 4
+    // Special EAM diagnostic
+    if (node == 0 && ffiff->get_classname() == ForceField::eam) {
+      em1 = e_ff[0];
+      ep1 = e_ff[1];
+a241 1
+  }
+a242 7
+  // Special EAM diagnostic
+  if (node == 0) {
+    glog.logfile  << "\n\n\n";
+    glog.logfile  << "Energy Change (1) :" << energy1  << " " << energy0 << "\n";
+    glog.logfile << "   Embedding = " << em1 << " " << em0 << "\n";
+    glog.logfile << "   Pair      = " << ep1 << " " << ep0 << "\n";
+  }
+@
+
+
+1.1.2.2.2.14
+log
+@Bin Communication fixed
+@
+text
+@d125 1
+a125 1
+     oc->Cycle(p,oc,bl,bt,b,comm);
+d128 4
+a131 4
+//     // Test of EnergyChange routines
+//     bool Lenergy;
+//     Lenergy = true;
+//     int atom = 1;
+d133 2
+a134 2
+//     // Method 1: brute force
+//     double ec = EnergyChange0(&atom,b,t,p,ff,comm);
+d136 5
+a140 5
+//     // Method 2: real calculation
+//     //This one does not currently work, fatally flawed algorithm
+//     double boost[3];
+//     move->get_Boost(boost);
+//     ff->ComputeEnergyChange(&atom,boost,Lenergy,b,t,p,comm);
+d143 3
+a145 3
+//     // Method 3: Grasp calculation
+//     // apply MC move
+//     p->ModifyParticle(&atom,boost);
+@
+
+
+1.1.2.2.2.15
+log
+@Added EAM energy change calculation
+@
+text
+@d79 2
+a80 1
+		       ForceFieldList *ffl) {
+d106 2
+a107 1
+		     Output* outp,FixList* fix_list,Comm* comm) {
+d123 4
+a126 5
+
+    ff->SaveEnergy();
+    ff->ZeroEnergy();
+    oc->Cycle(p,oc,bl,bt,b,ff,comm);
+    //    Sweep(p,comm,b);      
+a145 3
+    ff->RestoreEnergy(comm);
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,extended_energy,
+		      Lvolume,Lnparticles);
+d163 1
+@
+
+
+1.1.2.2.2.16
+log
+@Added in bin reallocation in montecarlo.cpp
+@
+text
+@a99 3
+
+  extended_energy = 0.0;
+
+d120 1
+a120 2
+  ff->SaveEnergy();
+  ff->ZeroEnergy();
+d122 2
+a123 1
+  for (int istep=1;istep<=nsteps;istep++) {
+d125 27
+a151 5
+    // Reallocate Particles to Processors
+    p->ResetPosition(b,false);
+    comm->exchange(b,p);
+    // Reallocate Particles to Bins
+    bl->BinParticles(p,p->get_particles(),b,comm);
+a153 4
+  ff->RestoreEnergy(comm);
+  outp->WriteOutput(nsteps,p,b,t,comm,ff,fix_list,extended_energy,
+		    Lvolume,Lnparticles);
+
+@
+
+
+1.1.2.2.2.17
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d110 1
+d123 3
+a125 1
+  double t0 = MPI_Wtime();
+a126 3
+    // Save absolute energy and initialize relative enrgy to zero
+    ff->SaveEnergy();
+    ff->ZeroEnergy();
+a132 7
+
+    double t1 = MPI_Wtime();
+    glog.timetotal = t1-t0;
+    // Output energy from Monte Carlo calculation
+    ff->RestoreEnergy(comm);
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,extended_energy,
+		      Lvolume,Lnparticles);
+d135 3
+a137 5
+  // Output energy from standard calculation
+  ff->Neighboring(p, b, comm, false,true);  
+  ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+  outp->WriteOutput(nsteps,p,b,t,comm,ff,fix_list,0.0,
+		      false,false,true);
+d139 2
+d150 85
+@
+
+

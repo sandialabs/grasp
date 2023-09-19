@@ -1,0 +1,396 @@
+head	2.1;
+access;
+symbols
+	PreMonaco:2.1;
+locks; strict;
+comment	@// @;
+
+
+2.1
+date	2003.04.24.19.37.50;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.02.25.23.06.37;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.04.00.12.41;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.01.18.00.20.49;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.08.23.25.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.1
+log
+@Removing obsolete files from version 2.
+@
+text
+@using namespace std;
+
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <math.h>
+#include "forcefield.h"
+#include "particle_types.h"
+
+Particle_Types::Particle_Types() {
+  ntypes = 0;
+  return;
+};
+
+Particle_Types::~Particle_Types(){
+  return;
+};
+
+int Particle_Types::get_ntypes() const {
+  return ntypes;
+};
+
+void Particle_Types::ReadParticleTypes() 
+{
+  string buf;
+  string id;
+  string particleclass;
+  double mass;
+  int itype;
+  bool match;
+
+  ifstream infile("types.in"); 
+  
+  if (!infile) {
+    cout << "Failed to open types.in" << endl;
+    exit(0);
+  }
+
+  while (getline(infile,buf)){
+
+    // Skip empty or comment lines
+    if (buf.empty() || buf[0]=='#') continue;
+    stringstream buf_in(buf);
+    // Skip lines with only whitespace
+    buf_in >> ws;
+    if (buf_in.eof()) continue;
+
+    // Construct index for ids on the fly
+    buf_in >> id;
+
+    match = find_id(id,itype);
+
+    if (!match) {
+      ntypes++;
+      itype = ntypes-1;
+      id_index.push_back(id);
+    } else if (match) {
+      cout << "Error: ReadParticleTypes: Particle id previously read" << endl;
+      cout << id << endl;
+      exit(0);
+    }
+
+    buf_in >> particleclass;
+    if (particleclass == "atom") {
+      buf_in >> mass;
+      mass_list.push_back(mass);
+    } 
+    else {
+      cerr << "Invalid particle class name" << endl;
+    }
+
+    if (buf_in.fail()) {
+      cout << "Read error in types.in" << endl;
+      exit(0);
+    }
+  }
+
+  cout << "ntypes = " << ntypes << endl;
+  for (itype=0;itype<ntypes;itype++) {
+    cout << id_index[itype] << " " << mass_list[itype] << endl;
+  }
+
+}
+
+void Particle_Types::SetupTypes_Force(const vector <Forcefield*> forcefield_list) {
+
+  Forcefield* ff;
+  int itype,itype_ff,iff;
+  int* ipnt;
+  bool match;
+
+  for (iff=0;iff < forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    ipnt = new int[ntypes];
+    type_index.push_back(ipnt);
+    for (itype = 0; itype < ntypes; itype++) {
+      match = ff->find_id(id_index[itype],itype_ff);
+      if (!match) {
+	cout << "Warning: Particle id has no ff match" << endl;
+	cout << itype_ff << " " << id_index[itype] << " " << iff << endl;
+	type_index[iff][itype]=-1;
+      } else {
+	type_index[iff][itype]=itype_ff;
+      }
+    }
+  }
+}
+
+bool Particle_Types::find_id(const string& id, int& itype) const
+{
+  bool match;
+  match = false;
+  for (itype=0;(itype < ntypes) 
+	 && !match ; itype++) {
+    if (id == id_index[itype]) {
+      match = true;
+      break;
+    }
+  }
+  return match;
+}
+
+double Particle_Types::get_type_mass(const int& itype) const
+{
+  return mass_list[itype];
+}
+
+int* Particle_Types::get_type_index(const int& i) const
+{
+  return type_index[i];
+};
+
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.6
+log
+@Added configuration output routine to Box.
+Added shifted origin to minimg routines.
+Cleaned up minimg routines to consistently
+Deal with following issues:
+	orthorhombic versus triclinic
+	inner-loop Minimig_Dist functions only perform single box shift,
+		as it is more efficient than general shift.
+	For this reason, standard Minimg_Pos function also only
+		performs single box shift, but also checks that
+		aparticles have not strayed too far.
+	Initial config may require more than single box shift, and
+		so for this we use Minimg_Full_pos.
+Treatment of equality conditions:
+	Positions on )0,1[ are mapped onto [0,1).
+	Positions on [0,1) are left alone.
+	Distances on )-1,1( should not occur
+	Distances on )-0.5,0.5( are mapped (-0.5,0.5).
+	Distances on [-0.5,0.5] are left alone.
+@
+text
+@@
+
+
+1.5
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@d37 1
+a37 1
+  if (infile.fail()) {
+d43 2
+d47 4
+@
+
+
+1.4
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d29 1
+a29 1
+  int id;
+d37 5
+d98 1
+d106 1
+a106 1
+bool Particle_Types::find_id(const int& id, int& itype) const
+@
+
+
+1.3
+log
+@
+
+Added neighbor list object.
+@
+text
+@d10 1
+a10 1
+#include "particle.h"
+a11 3
+#include "neighbor.h"
+#include "force_twobody.h"
+#include "box.h"
+d13 12
+a24 5
+Particle_Types& Particle_Types::get()
+{
+  static Particle_Types theparticletypes;
+  return theparticletypes;
+}
+d26 1
+a26 1
+void Particle_Types::ReadParticleTypes()
+d38 1
+a38 1
+    if (buf.empty()) continue;
+d72 1
+a72 1
+    cout << id_index[itype] << " " << mass_list[itype];
+d77 1
+a77 2
+void Particle_Types::SetupTypes_Force(const bool& Ltwobody, 
+				      const bool& Lthreebody) {
+d79 4
+a82 4
+  int itype,itype_twobody;
+  bool match_twobody;
+ 
+  Force_Twobody& ftwobody = Force_Twobody::get();
+d84 4
+a87 1
+  if (Ltwobody) {
+d89 4
+a92 5
+      match_twobody = ftwobody.find_id(id_index[itype],itype_twobody);
+      if (!match_twobody) {
+	cout << "Error: Particle id has no twobody match" << endl;
+	cout << itype_twobody << endl;
+	exit(0);
+d94 1
+a94 1
+	twobody_type_index.push_back(itype_twobody);
+a97 6
+
+  if (Lthreebody) {
+    cout << "Error in ParticleTypes::SetupTypes_Force" <<
+      ": threebody not implemented" << endl;
+    exit(0);
+  }
+d118 6
+@
+
+
+1.2
+log
+@
+Added ReadParticleTypes, and improved organization of input,
+including error checking.
+@
+text
+@a10 1
+#include "box.h"
+d12 1
+d14 1
+d73 2
+a74 1
+void Particle_Types::SetupTypes_Force() {
+d81 10
+a90 8
+  for (itype = 0; itype < ntypes; itype++) {
+    match_twobody = ftwobody.find_id(id_index[itype],itype_twobody);
+    if (!match_twobody) {
+      cout << "Error: Particle id has no twobody match" << endl;
+      cout << itype_twobody << endl;
+      exit(0);
+    } else {
+      twobody_type_index.push_back(itype_twobody);
+d92 6
+@
+
+
+1.1
+log
+@Starting source distribution for Grasp.
+Basic molecular dynamics code with twobody interactions
+@
+text
+@d21 1
+a21 1
+int Particle_Types::AddType(const int& id)
+d23 26
+a48 2
+  int itype,itype_twobody;
+  bool match,match_twobody;
+d50 8
+a57 1
+  Force_Twobody& ftwobody = Force_Twobody::get();
+d59 3
+a61 5
+  match = false; 
+  for (itype = 0; (itype < ntypes) && !match ; itype++) {
+    if (id == id_index[itype]) {
+      match = true;
+      break;
+d64 17
+a80 6
+  if (!match) {
+    ntypes++;
+    itype = ntypes-1;
+    id_index.push_back(id);
+    //Find this id in list of twobody types
+    match_twobody = ftwobody.find_id(id,itype_twobody);
+a88 1
+  return itype;
+d91 13
+d105 4
+@
+

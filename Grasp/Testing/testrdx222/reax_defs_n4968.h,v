@@ -1,0 +1,189 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.05.23.05;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.02.10.01.57.05;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.02.10.01.57.05;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@# /* Max number of neighbors per atom */
+#define NNEIGHMAXDEF 50
+# /* Max number of atoms */
+#define NATDEF 11776
+# /* Max number of global atoms */
+#define NATTOTDEF 4968
+# /* Max number of atom types */
+#define NSORTDEF 20
+# /* Max number of bonds connected to one atom */
+#define MBONDDEF 20
+# /* for 2nd derivatives */
+#define NAVIBDEF 50
+# /* Max number of bond types */
+#define NBOTYMDEF 200
+# /* Max number of valency angle types */
+#define NVATYMDEF 200
+# /* Max number of torsion angle types */
+#define NTOTYMDEF 200
+# /* Max number of hydrogen bond types */
+#define NHBTYMDEF 200
+# /* Max number of off-diagonal Morse types */
+#define NODMTYMDEF 20
+# /* Max number of all bonds */
+#define NBOALLMAXDEF 40000
+# /* Max number of bonds */
+#define NBOMAXDEF 21000
+# /* Max number of  hydrogen bonds */
+#define NHBMAXDEF 00010
+# /* Max number of valency angles */
+#define NVAMAXDEF 31000
+# /* Max number of out of plane angles */
+#define NOPMAXDEF 00010
+# /* Max number of torsion angles */
+#define NTOMAXDEF 55000
+# /* Max number of general parameters in force field */
+#define NPAMAXDEF 50
+# /* Max number of molecules in system */
+#define NMOLMAXDEF 2000
+# /* Max number of molecules in training set */
+#define NMOLSETDEF 1500
+# /* Max number of restraints */
+#define MRESTRADEF 100
+# /* Max number of temperature regimes */
+#define MTREGDEF 100
+# /* Max number of temperature zones */
+#define MTZONEDEF 5
+# /* Max number of volume regimes */
+#define MVREGDEF 100
+# /* Max number of volume zones */
+#define MVZONEDEF 6
+# /* Max number of electric field regimes */
+#define MEREGDEF 100
+# /* Max number of electric field zones */
+#define MEZONEDEF 3
+@
+
+
+1.2
+log
+@Cleaning up testrdx222
+@
+text
+@@
+
+
+1.1
+log
+@file reax_defs_n4968.h was initially added on branch REAXFF.
+@
+text
+@d1 54
+@
+
+
+1.1.2.1
+log
+@Added origin shift (6.25A) to input.
+Included reax_defs.h file for each example.
+@
+text
+@a0 54
+# /* Max number of neighbors per atom */
+#define NNEIGHMAXDEF 50
+# /* Max number of atoms */
+#define NATDEF 11776
+# /* Max number of global atoms */
+#define NATTOTDEF 4968
+# /* Max number of atom types */
+#define NSORTDEF 20
+# /* Max number of bonds connected to one atom */
+#define MBONDDEF 20
+# /* for 2nd derivatives */
+#define NAVIBDEF 50
+# /* Max number of bond types */
+#define NBOTYMDEF 200
+# /* Max number of valency angle types */
+#define NVATYMDEF 200
+# /* Max number of torsion angle types */
+#define NTOTYMDEF 200
+# /* Max number of hydrogen bond types */
+#define NHBTYMDEF 200
+# /* Max number of off-diagonal Morse types */
+#define NODMTYMDEF 20
+# /* Max number of all bonds */
+#define NBOALLMAXDEF 40000
+# /* Max number of bonds */
+#define NBOMAXDEF 21000
+# /* Max number of  hydrogen bonds */
+#define NHBMAXDEF 00010
+# /* Max number of valency angles */
+#define NVAMAXDEF 31000
+# /* Max number of out of plane angles */
+#define NOPMAXDEF 00010
+# /* Max number of torsion angles */
+#define NTOMAXDEF 55000
+# /* Max number of general parameters in force field */
+#define NPAMAXDEF 50
+# /* Max number of molecules in system */
+#define NMOLMAXDEF 2000
+# /* Max number of molecules in training set */
+#define NMOLSETDEF 1500
+# /* Max number of restraints */
+#define MRESTRADEF 100
+# /* Max number of temperature regimes */
+#define MTREGDEF 100
+# /* Max number of temperature zones */
+#define MTZONEDEF 5
+# /* Max number of volume regimes */
+#define MVREGDEF 100
+# /* Max number of volume zones */
+#define MVZONEDEF 6
+# /* Max number of electric field regimes */
+#define MEREGDEF 100
+# /* Max number of electric field zones */
+#define MEZONEDEF 3
+@
+

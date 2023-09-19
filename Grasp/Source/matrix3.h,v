@@ -1,0 +1,136 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2007.03.14.15.07.56;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Added new files for fix deformation command
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+// INLINE FUNCTION DEFINITIONS
+//
+// Inlining inner loop operations provides significant performance gain
+//
+// Set of inline 3x3 matrix operations
+
+inline void matrix3_zero(double x[3][3]) {
+  x[0][0] = 0.0;
+  x[1][0] = 0.0;
+  x[2][0] = 0.0;
+  x[0][1] = 0.0;
+  x[1][1] = 0.0;
+  x[2][1] = 0.0;
+  x[0][2] = 0.0;
+  x[1][2] = 0.0;
+  x[2][2] = 0.0;
+}
+
+inline void matrix3_copy(const double k, double x[3][3]) {
+  x[0][0] = k;
+  x[1][0] = k;
+  x[2][0] = k;
+  x[0][1] = k;
+  x[1][1] = k;
+  x[2][1] = k;
+  x[0][2] = k;
+  x[1][2] = k;
+  x[2][2] = k;
+}
+
+inline void matrix3_copy(const double x[3][3], double y[3][3]) {
+  y[0][0] = x[0][0];
+  y[1][0] = x[1][0];
+  y[2][0] = x[2][0];
+  y[0][1] = x[0][1];
+  y[1][1] = x[1][1];
+  y[2][1] = x[2][1];
+  y[0][2] = x[0][2];
+  y[1][2] = x[1][2];
+  y[2][2] = x[2][2];
+}
+
+inline void matrix3_multiply(const double x[3][3], const double y[3], double z[3]) {
+  z[0] = x[0][0]*y[0] + x[0][1]*y[1] + x[0][2]*y[2];
+  z[1] = x[1][0]*y[0] + x[1][1]*y[1] + x[1][2]*y[2];
+  z[2] = x[2][0]*y[0] + x[2][1]*y[1] + x[2][2]*y[2];
+}
+
+inline void matrix3_scale_multiply(const double k, 
+				       const double x[3][3], const double y[3], double z[3]) {
+  z[0] = k*(x[0][0]*y[0] + x[0][1]*y[1] + x[0][2]*y[2]);
+  z[1] = k*(x[1][0]*y[0] + x[1][1]*y[1] + x[1][2]*y[2]);
+  z[2] = k*(x[2][0]*y[0] + x[2][1]*y[1] + x[2][2]*y[2]);
+}
+
+inline void matrix3_multiply_add(const double x[3][3], const double y[3], const double z[3], double w[3]) {
+  w[0] = x[0][0]*y[0] + x[0][1]*y[1] + x[0][2]*y[2]+z[0];
+  w[1] = x[1][0]*y[0] + x[1][1]*y[1] + x[1][2]*y[2]+z[1];
+  w[2] = x[2][0]*y[0] + x[2][1]*y[1] + x[2][2]*y[2]+z[2];
+}
+
+inline void matrix3_scale_multiply_add(const double k, 
+				       const double x[3][3], const double y[3], const double z[3], double w[3]) {
+  w[0] = k*(x[0][0]*y[0] + x[0][1]*y[1] + x[0][2]*y[2])+z[0];
+  w[1] = k*(x[1][0]*y[0] + x[1][1]*y[1] + x[1][2]*y[2])+z[1];
+  w[2] = k*(x[2][0]*y[0] + x[2][1]*y[1] + x[2][2]*y[2])+z[2];
+}
+
+@

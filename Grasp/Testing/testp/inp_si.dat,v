@@ -1,0 +1,165 @@
+head	4.1;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoTesting:3.0.0.6
+	InitialGraspTesting:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:1.3.2.1
+	cjkimme_version:1.3.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.1
+date	2005.10.25.16.03.28;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2004.07.30.20.18.56;	author athomps;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	2004.07.21.17.46.55;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.07.19.17.05.39;	author athomps;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.1
+log
+@Modified pressure control command keyword from anisotropic to partial.
+@
+text
+@# threebody 512-particle diamond Silicon input data
+#
+units metal
+forcefield tersoff 	tersoff.in Silicon Tersoff
+timestep 		0.0005
+nsteps 			200
+box dimensions 		21.679088      0.000000      0.000000   \
+			0.000000     21.679088      0.000000    \
+			0.000000      0.000000     21.679088
+box origin 		0.0  0.0   0.0
+initialize temperature 	500.0 		256
+temperature control     nose-hoover 500.0 0.01
+#pressure control        nose-hoover 400.0  0.01
+pressure control        nose-hoover-partial 400.0 NULL NULL 0.1
+thermo 			10
+dump particles 		200
+dump velocities 	200
+dump forces 		200
+neighbor		bin  10 0.1
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d14 1
+a14 1
+pressure control        nose-hoover-anisotropic 400.0 NULL NULL 0.1
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@@
+
+
+1.3
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@@
+
+
+1.3.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.2
+log
+@Added anisotropic style to pressure control,
+and included in Tersoff example testp.
+@
+text
+@d6 1
+a6 1
+nsteps 			2000
+d14 1
+a14 1
+pressure control        nose-hoover-anisotropic 400.0 NULL NULL 0.01
+d16 3
+a18 3
+dump particles 		2000
+dump velocities 	2000
+dump forces 		2000
+@
+
+
+1.1
+log
+@Added the Tersoff force field class
+@
+text
+@d12 4
+a15 3
+temperature control     nose-hoover 500.0 0.1
+pressure control        nose-hoover 400.0 0.01
+thermo 			50
+@
+

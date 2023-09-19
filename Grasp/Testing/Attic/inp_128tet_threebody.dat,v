@@ -1,0 +1,205 @@
+head	2.4;
+access;
+symbols
+	PreMonaco:2.4;
+locks; strict;
+comment	@# @;
+
+
+2.4
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.23.23.32.37;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.18.15.48.44;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.03.12.23.27.06;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.03.12.20.06.45;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.03.03.20.28.04;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.21.23.04.32;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.4
+log
+@Moved examples into subdirectories.
+@
+text
+@# threebody 128-particle tetrahedral input data
+forcefield threebody 	threebody.in Stillinger-Weber
+timestep 		1.0e-2
+nsteps 			100
+box dimensions 		0.0	10.4	10.4	\
+			10.4	0.0	10.4	\
+			10.4	10.4	0.0
+box origin 		0.0 0.0 0.0
+initialize temperature 	0.0 		256
+thermo 			1
+dump atoms 		100
+dump velocities 	100
+neighbor		bin  10   0.1
+
+@
+
+
+2.3
+log
+@Fixed up the output log immensely. Fixed up the velocity-rescale
+thermostat, which changed the dft example a little.
+Other than that, all the other examples (NVE) stayed the same.
+@
+text
+@@
+
+
+2.2
+log
+@Switched the neighbor style from nsq to binning in all examples.
+@
+text
+@d2 1
+a2 1
+forcefield threebody 	threebody.in
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@d13 1
+a13 1
+neighbor		nsq  10   0.1
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d13 2
+a14 1
+neighbor		none
+@
+
+
+1.4
+log
+@This is another example demonstrating use of reduced units
+and LJ93 walls and density profile to compare with dft
+calculations.
+@
+text
+@@
+
+
+1.3
+log
+@New input and output for old examples reflects two important changes:
+
+1. Created a full command interface with input commands echoed to output.
+2. Fixed bug in evaluation of kinetic energy so that report error
+	in total energy is now much, much smaller. Before we were
+	evaluating kinetic energy at t-delt/2 and potential energy at t.
+@
+text
+@d13 1
+@
+
+
+1.2
+log
+@Implemented a new forcefield type: Class Force_External
+This is designed primarily for external force fields with
+simple geometric forms, such as the Lennard-Jones 9-3 wall,
+although it might also be used for a set of fixed atoms.
+
+Currently, the only types implemented are lj93_cut and lj93_cut_shift.
+These work for both arbitrary cut-off neighbor list and also
+within the minimum image convention (although this is not used
+by external force field with only truncated interactions.
+
+Periodic boundary conditions are applied in all directions.
+
+Initialization and output of velocities have also been added.
+@
+text
+@d2 11
+a12 13
+false
+true
+false
+1.0e-2
+100
+   0.00000000  10.40000000  10.40000000
+   10.40000000  0.00000000  10.40000000
+   10.40000000  10.40000000  0.00000000
+0.0 0.0 0.0
+0.0
+256
+
+
+@
+
+
+1.1
+log
+@Finally finished implementing Stillinger-Weber forcefield
+Increased number of examples to six. The LJ and SW force
+fields have been tested for energy conservation, and so are
+have high confidence.
+
+The first three are short MD runs using perturbed FCC LJ systems.
+The fourth is an energy evaluation of a dense tetrahedral
+Stillinger-Weber Silicon crystal, which matches a TOWHEE example
+to seven decimal places.
+The fifth and sixth are short MD runs using perturbed tetrahedral
+Stillinger-Weber Silicon.
+@
+text
+@d4 1
+d11 2
+@
+

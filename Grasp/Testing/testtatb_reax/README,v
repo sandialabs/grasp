@@ -1,0 +1,67 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2008.02.12.17.55.47;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2008.02.12.17.51.32;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Added detail example to README
+@
+text
+@If you want to generate reax run to compare with testtatb, you
+should use exe_Nov2006_tatb, but first:
+
+cp geo_tatb geo
+cp control_tatb control
+cp ffield_tatb ffield
+
+Then;
+
+./exe_Nov2006_tatb
+
+Afterwards, look at fort.71 and fort.73 for energy info. The reac.f source
+file should have been modified so that the trajectory matches that from
+GRASP very closely (~0.001 kcal/mol excepts for effect of energy 
+discontinuities). As a reference, fort_tatb.71 and fort_tatb.73 
+are under CVS control.
+
+If you want to look closely at forces and energies for the first timestep,
+do:
+
+cp geo_detail geo
+cp control_detail control
+cp ffield_tatb ffield
+
+This computes initial forces and energies without charges and without periodic
+boundary conditions. The forces are printed to fort.66.
+ 
+
+@
+
+
+1.1
+log
+@Added README
+@
+text
+@d18 2
+d21 7
+@
+

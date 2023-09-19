@@ -1,0 +1,7054 @@
+head	4.13;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.5
+	REAX-2:3.3.2.1
+	P_MonacoSource:3.3.0.6
+	GraspSource:3.3
+	P_Monaco:3.3.0.4
+	InitialGrasp:3.3
+	REAXFF:3.3.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.23.0.2
+	cjkimme_version_merge_from_trunk_1:2.12.2.3
+	cjkimme_version:2.12.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.13
+date	2007.10.23.22.05.56;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.05.31.16.52.01;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.05.29.15.08.05;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.04.02.19.30.02;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.03.28.19.12.19;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.4.4.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.4.1
+	4.3.6.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.6;
+
+3.6
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.03.08.18.08.52;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2004.12.16.21.07.08;	author athomps;	state Exp;
+branches
+	3.3.2.1
+	3.3.6.1;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.24;
+
+2.24
+date	2004.09.22.17.14.40;	author athomps;	state Exp;
+branches;
+next	2.23;
+
+2.23
+date	2004.09.21.23.18.28;	author athomps;	state Exp;
+branches
+	2.23.2.1;
+next	2.22;
+
+2.22
+date	2004.08.24.15.32.11;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.07.30.20.18.47;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.07.22.23.15.01;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.07.19.17.05.38;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.03.20.00.15.39;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.02.12.23.36.09;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.12.2.1;
+next	2.11;
+
+2.11
+date	2004.01.15.20.12.28;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.08.14.23.02.08;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.03.03.20.32.39;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.05.00.32.02;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.04.00.12.41;	author athomps;	state Exp;
+branches;
+next	;
+
+2.12.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.12.2.2;
+
+2.12.2.2
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.12.2.3;
+
+2.12.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+2.23.2.1
+date	2004.09.22.20.47.54;	author athomps;	state Exp;
+branches;
+next	;
+
+3.3.2.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.3.6.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.4.1
+date	2005.06.16.22.23.41;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.3.6.1
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.4.1
+date	2006.09.06.18.46.13;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.13
+log
+@removed some unnecessary dynamic_casts and fixed problems with self-interactions
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+// The binning scheme is based on the Neighbor class written
+// by Steve Plimpton (LAMMPS 2003) for orthorhombic periodic cells.
+// 
+#include <cmath>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "particle.h"
+#include "vec3.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "box.h"
+#include "box_inline.h"
+#include "fixed_object.h"
+#include "particlelist.h"
+#include "forcefieldlist.h"
+#include "machine.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+
+#define NEIGHPAGESIZE 10000
+#define ONEATOM 2000
+#if (ONEATOM > NEIGHPAGESIZE) 
+#error ONEATOM can not be greater than NEIGHPAGESIZE
+#endif
+
+Neighbor::Neighbor(
+	  const NeighborStyles& neighbor_style_in, 
+	  const bool& Ltwoway_in, const bool& Ltwoway_ghost_in, 
+	  const int& neighbor_freq_in,
+	  const double& rskin_in) {
+  neighbor_style = neighbor_style_in;
+  Ltwoway = Ltwoway_in;
+  Ltwoway_ghost = Ltwoway_ghost_in;
+  neighbor_freq = neighbor_freq_in;
+  rskin = rskin_in;
+  nneighbors = 0;
+  neighbor_skip = 0;
+  nflag = true;
+  npage = 0;
+  timeneigh = 0.0;
+  ntimeneigh = 0;
+}
+
+Neighbor::~Neighbor() {
+  for (int ipage=0;ipage<npage;ipage++) {
+    delete []pages[ipage];
+  }
+}
+
+void Neighbor::Neighboring(
+	       ParticleList* p, 
+	       const vector<int>& type_index,
+	       double* const rcutneighsq_table[],
+	       const Box* b, Comm* comm) {
+
+  if (Ltwoway && !Ltwoway_ghost) {
+      glog.error("Neighbor::Neighboring:\n"
+		 "Can not have Ltwoway and not Ltwoway_ghost");
+  }
+
+  if (nflag) {
+    neighbor_skip = 1;
+    switch(neighbor_style) {
+    case Neighbor::neighbor_nsq:
+      SetupNeighborListNsq(p->get_nparticles(),p->get_nghost_particles(),
+			   p->get_particles(),
+				type_index,rcutneighsq_table,comm);
+      break;
+    case Neighbor::neighbor_bin:
+      SetupNeighborListBin(p->get_nparticles(),p->get_nghost_particles(),
+			   p->get_particles(),
+				type_index,rcutneighsq_table,b,comm);
+      break;
+    case Neighbor::neighbor_nsq_ghost:
+      SetupNeighborListNsqGhost(p->get_nparticles(),p->get_nghost_particles(),
+			   p->get_particles(),
+				type_index,rcutneighsq_table,comm);
+      break;
+    case Neighbor::neighbor_bin_ghost:
+      SetupNeighborListBinGhost(p->get_nparticles(),p->get_nghost_particles(),
+			   p->get_particles(),
+				type_index,rcutneighsq_table,b,comm);
+      break;
+    default:
+      glog.error("Neighbor::Neighboring:\n"
+		 "Invalid neighbor style");
+    }
+  }
+}
+
+void Neighbor::NeighboringWall(
+	       const vector<Fixed_Object>& walls,
+	       ParticleList* p, const vector<int>& type_index,
+	       double* const rcutneighsq_table[],
+	       const Box* b, Comm* comm) {
+  if (nflag) {
+    neighbor_skip = 1;
+    switch(neighbor_style) {
+    case Neighbor::neighbor_nsq:
+      SetupNeighborListNsqWall(walls,p->get_nparticles(),
+	  p->get_particles(),type_index,rcutneighsq_table,comm);
+      break;
+    case Neighbor::neighbor_bin:
+      SetupNeighborListNsqWall(walls,p->get_nparticles(),
+	  p->get_particles(),type_index,rcutneighsq_table,comm);
+      break;
+    default:
+      glog.error("Neighbor::Neighboring:\n"
+		 "Invalid neighbor style");
+    }
+  }
+}
+
+int Neighbor::get_nneighbors() const {
+  return nneighbors;
+};
+
+void Neighbor::set_rcutneighmax(const double& rcutneighmax_in) {
+  rcutneighmax = rcutneighmax_in;
+};
+
+void Neighbor::set_rcutneighmaxall(const double& rcutneighmaxall_in) {
+  rcutneighmaxall = rcutneighmaxall_in;
+};
+
+void Neighbor::SetupNeighborListNsq(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles,
+	       const vector<int>& type_index,
+	       double* const rcutneighsq_table[],Comm* comm) {
+  //This function does a brute force search for local particles
+  //lying within the cut-off. 
+
+  int itype,jtype,itype_particle,itag,jtag;
+  double rcutneighsq,rsq;
+  double rveci[3],rvecj[3],delr[3];
+  int *neighptr;
+  int npnt,n;
+  int* ipnt_tmp;
+  int ipage;
+
+  // Clear out previous entries,
+  // and size first_ptr list to number of local particles
+
+  for (ipage=0;ipage<npage;ipage++) {
+    ipnt_tmp = pages[ipage];
+    delete []ipnt_tmp;
+  }
+  pages.clear();
+
+  first_ptr.resize(nparticles);
+  nneigh_list.resize(nparticles);
+  ipnt_tmp = new int[NEIGHPAGESIZE];
+  pages.push_back(ipnt_tmp);
+  npage = 1;
+  npnt = 0;
+  nneighbors = 0;
+
+  // loop over each atom, storing neighbors
+
+  for (int i=0;i<nparticles;i++) {
+
+    // if necessary, goto next page and add pages
+
+    if (NEIGHPAGESIZE - npnt < ONEATOM) {
+      npnt = 0;
+      npage++;
+      ipnt_tmp = new int[NEIGHPAGESIZE];
+      pages.push_back(ipnt_tmp);
+    }
+
+    neighptr = &pages[npage-1][npnt];
+    n = 0;
+    itype_particle = particles[i].get_type();
+    itype = type_index[itype_particle];
+    // skip particles not included in force field
+    if (itype == -1) {
+      first_ptr[i] = neighptr;
+      nneigh_list[i] = 0;
+      continue;
+    }
+    particles[i].get_x(rveci);
+
+    // Include j<i neighbors if Ltwoway flag set in Neighbor constructor
+    if (Ltwoway) {
+      for (int j=0;j<i;j++) {
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  continue;
+	}
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  continue;
+	}
+	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj);
+      
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		   "Exceeded ONEATOM",comm);
+	  }
+	}
+      }
+    }
+
+    for (int j=i+1;j<nparticles;j++) {
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj);
+
+      if (rsq <= rcutneighsq) {
+
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+    }
+
+    itag = particles[i].get_tag();
+    for (int j=nparticles;j<nparticles+nghost_particles;j++) {
+
+      jtag = particles[j].get_tag();
+
+      if (!Ltwoway_ghost) {
+	if (itag > jtag) {
+	  if ((itag+jtag)%2 == 0) continue;
+	} else if (itag < jtag) {
+	  if ((itag+jtag)%2 == 1) continue;
+	}
+      }
+
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj,delr);
+
+      if (!Ltwoway_ghost) {
+	if (itag == jtag) {
+	  if (delr[2] > small) {
+	    continue;
+	  } else if (fabs(delr[2]) < small) {
+	    if (delr[1] > small) {
+	      continue;
+	    } else if (fabs(delr[1]) < small) {
+	      if (delr[0] > small) continue;
+	    }
+	  }
+	}
+      }
+
+      if (rsq <= rcutneighsq) {
+
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+    }
+
+    first_ptr[i] = neighptr;
+    nneigh_list[i] = n;
+    npnt += n;
+    nneighbors += n;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nsq nneighbors = " << nneighbors << endl;
+    comm->get_nodefile() << "Nsq npages = " << npage << endl;
+    comm->get_nodefile() << "Nsq nparticles = " << nparticles << endl;
+    comm->get_nodefile() << "Nsq nghostparticles = " << nghost_particles << endl;
+  }
+
+}  
+	
+
+void Neighbor::SetupNeighborListNsqWall(
+	       const vector<Fixed_Object>& walls,
+	       const int& nparticles, const Particle* particles,
+	       const vector<int>& type_index, 
+               double* const rcutneighsq_table[],
+	       Comm* comm) {
+  int nwalls;
+  double rcutneighsq,rsq;
+  double pos,rveci[3],rvecj[3];
+  int iaxis,jtype;
+  int node;
+
+  node = comm->get_node();
+
+  nwalls = walls.size();
+
+  nneighbors = 0;
+  neigh_list.clear();
+  first_list.resize(nwalls+1);
+
+  for (int i=0;i<nwalls;i++) {
+
+    first_list[i] = nneighbors;
+    walls[i].get_x(rveci);
+    iaxis = walls[i].get_color();
+    pos = rveci[iaxis-1];
+
+    for (int j=0;j<nparticles;j++) {
+
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[i][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+
+      particles[j].get_x(rvecj);
+      rsq = pow(pos-rvecj[iaxis-1],2);
+	
+      if (rsq <= rcutneighsq) {
+	neigh_list.push_back(j);
+	nneighbors++;
+      }
+    }
+  }
+  
+  first_list[nwalls] = nneighbors;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+  }
+
+}  
+	
+bool Neighbor::NeighboringCheck(bool Lreneigh) {
+  nflag = false;
+  if (neighbor_skip++ % neighbor_freq == 0) {
+    nflag = true;
+  }
+  // Lreneigh forces reneighboring 
+  if (Lreneigh) nflag = true;
+  return nflag;
+}
+
+//  
+// All distances related to binning are in fractional units, i.e. w[dim].
+//
+// setup neighbor binning parameters
+// bin numbering is global: 0 = 0.0 to binsize
+//                          1 = binsize to 2*binsize
+//                          nbin-1 = prd-binsize to binsize
+//                          nbin = prd to prd+binsize
+//                          -1 = -binsize to 0.0
+// coord = lowest and highest values of ghost atom coords I will have
+//         add in "small" for round-off safety
+// mbinlo = lowest global bin any of my ghost atoms could fall into
+// mbinhi = highest global bin any of my ghost atoms could fall into
+// mbin = number of bins I need in a dimension
+// stencil() = bin offsets in 1-d sense for stencil of surrounding bins 
+
+
+void Neighbor::SetupBins(const Box* b, Comm* comm) {
+  double w[3],lva[3],lvb[3],lvc[3];
+  int myloc[3],procgrid[3];
+  double rcutneighred[3];
+// divide box into bins
+// optimal size is roughly 1/2 the cutoff
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Neighbor::SetupBins" << endl;
+  }
+
+  b->get_lw(w);
+  b->get_lv(lva,lvb,lvc);
+  comm->get_procgrid(procgrid);
+  comm->get_myloc(myloc);
+  rcutneighred[0] = rcutneighmax/w[0];
+  rcutneighred[1] = rcutneighmax/w[1];
+  rcutneighred[2] = rcutneighmax/w[2];
+  nbinx = static_cast<int> (2.0 / rcutneighred[0]);
+  nbiny = static_cast<int> (2.0 / rcutneighred[1]);
+  nbinz = static_cast<int> (2.0 / rcutneighred[2]);
+  if (nbinx == 0) nbinx = 1;
+  if (nbiny == 0) nbiny = 1;
+  if (nbinz == 0) nbinz = 1;
+
+  binsizex = 1.0/nbinx;
+  binsizey = 1.0/nbiny;
+  binsizez = 1.0/nbinz;
+
+  bininvx = nbinx;
+  bininvy = nbiny;
+  bininvz = nbinz;
+
+  // find lowest and highest bins my ghost atoms could be in
+
+  double coord;
+  int mbinxhi,mbinyhi,mbinzhi;
+
+  coord = static_cast<double>(myloc[0])/static_cast<double>(procgrid[0])
+    - rcutneighred[0] - small;
+  mbinxlo = static_cast<int> (coord*nbinx);
+  if (coord < 0.0) mbinxlo = mbinxlo - 1;
+  coord = static_cast<double>(myloc[0]+1)/static_cast<double>(procgrid[0])
+    + rcutneighred[0] + small;
+  mbinxhi = static_cast<int> (coord*nbinx);
+
+  coord = static_cast<double>(myloc[1])/static_cast<double>(procgrid[1])
+    - rcutneighred[1] - small;
+  mbinylo = static_cast<int> (coord*nbiny);
+  if (coord < 0.0) mbinylo = mbinylo - 1;
+  coord = static_cast<double>(myloc[1]+1)/static_cast<double>(procgrid[1])
+    + rcutneighred[1] + small;
+  mbinyhi = static_cast<int> (coord*nbiny);
+
+  coord = static_cast<double>(myloc[2])/static_cast<double>(procgrid[2])
+    - rcutneighred[2] - small;
+  mbinzlo = static_cast<int> (coord*nbinz);
+  if (coord < 0.0) mbinzlo = mbinzlo - 1;
+  coord = static_cast<double>(myloc[2]+1)/static_cast<double>(procgrid[2])
+    + rcutneighred[2] + small;
+  mbinzhi = static_cast<int> (coord*nbinz);
+
+  // extend bins by 1 to insure stencil extent is included
+
+  mbinxlo = mbinxlo - 1;
+  mbinxhi = mbinxhi + 1;
+  mbinx = mbinxhi - mbinxlo + 1;
+
+  mbinylo = mbinylo - 1;
+  mbinyhi = mbinyhi + 1;
+  mbiny = mbinyhi - mbinylo + 1;
+
+  mbinzlo = mbinzlo - 1;
+  mbinzhi = mbinzhi + 1;
+  mbinz = mbinzhi - mbinzlo + 1;
+
+  // memory for bin ptrs
+
+  mbins = mbinx*mbiny*mbinz;
+  binhead.resize(mbins);
+
+  // create stencil of bins whose closest corner to central bin
+  //   is within neighbor cutoff
+  // next(xyz) = how far the stencil could possibly extend
+  //   stencil is bins to the "upper right" of central bin
+  //   stencil does NOT include self
+
+  int nextx = static_cast<int> (rcutneighred[0]*nbinx);
+  if (nextx*binsizex < rcutneighred[0]) nextx++;
+  int nexty = static_cast<int> (rcutneighred[1]*nbiny);
+  if (nexty*binsizey < rcutneighred[1]) nexty++;
+  int nextz = static_cast<int> (rcutneighred[2]*nbinz);
+  if (nextz*binsizez < rcutneighred[2]) nextz++;
+
+  int nmax = (2*nextz+1) * (2*nexty+1) * (2*nextx+1);
+  stencil.resize(nmax);
+
+  int i,j,k;
+  nstencil = 0;
+  double rcutsq = rcutneighmax*rcutneighmax;
+
+  for (k = 0; k <= nextz; k++)
+    for (j = -nexty; j <= nexty; j++)
+      for (i = -nextx; i <= nextx; i++)
+	if (k > 0 || j > 0 || (j == 0 && i > 0))
+	  if (BinDistance(i,j,k,lva,lvb,lvc) < rcutsq) {
+	    stencil[nstencil++] = k*mbiny*mbinx + j*mbinx + i;
+	  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile()  << "rcutneighmax = " << rcutneighmax << endl;
+    comm->get_nodefile()  << "rcutneighmaxall = " << rcutneighmaxall << endl;
+    comm->get_nodefile()  << "w[0] = " << w[0] << endl;
+    comm->get_nodefile()  << "w[1] = " << w[1] << endl;
+    comm->get_nodefile()  << "w[2] = " << w[2] << endl;
+    comm->get_nodefile()  << "rcutneighred[0] = " << rcutneighred[0] << endl;
+    comm->get_nodefile()  << "rcutneighred[1] = " << rcutneighred[1] << endl;
+    comm->get_nodefile()  << "rcutneighred[2] = " << rcutneighred[2] << endl;
+    comm->get_nodefile()  << "mbinxlo = " << mbinxlo << endl;
+    comm->get_nodefile()  << "mbinxhi = " << mbinxhi << endl;
+    comm->get_nodefile()  << "mbinylo = " << mbinylo << endl;
+    comm->get_nodefile()  << "mbinyhi = " << mbinyhi << endl;
+    comm->get_nodefile()  << "mbinzlo = " << mbinzlo << endl;
+    comm->get_nodefile()  << "mbinzhi = " << mbinzhi << endl;
+    comm->get_nodefile()  << "mbinx = " << mbinx << endl;
+    comm->get_nodefile()  << "mbiny = " << mbiny << endl;
+    comm->get_nodefile()  << "mbinz = " << mbinz << endl;
+    comm->get_nodefile()  << "nbinx = " << nbinx << endl;
+    comm->get_nodefile()  << "nbiny = " << nbiny << endl;
+    comm->get_nodefile()  << "nbinz = " << nbinz << endl;
+    comm->get_nodefile()  << "binsizex = " << binsizex << endl;
+    comm->get_nodefile()  << "binsizey = " << binsizey << endl;
+    comm->get_nodefile()  << "binsizez = " << binsizez << endl;
+    comm->get_nodefile()  << "mbins = " << mbins << endl;
+    comm->get_nodefile()  << "nextx = " << nextx << endl;
+    comm->get_nodefile()  << "nexty = " << nexty << endl;
+    comm->get_nodefile()  << "nextz = " << nextz << endl;
+    comm->get_nodefile()  << "nstencil = " << nstencil << endl;
+  }
+
+}
+      
+// compute closest distance squared between central bin (0,0,0) and bin (i,j,k)
+
+double Neighbor::BinDistance(const int& i, const int& j, 
+			     const int& k, const double lva[],
+			     const double lvb[], const double lvc[])
+{
+  double delx,dely,delz,rtmp[3];
+
+  if (i > 0)
+    delx = (i-1)*binsizex;
+  else if (i == 0)
+    delx = 0.0;
+  else
+    delx = (i+1)*binsizex;
+
+  if (j > 0)
+    dely = (j-1)*binsizey;
+  else if (j == 0)
+    dely = 0.0;
+  else
+    dely = (j+1)*binsizey;
+
+  if (k > 0)
+    delz = (k-1)*binsizez;
+  else if (k == 0)
+    delz = 0.0;
+  else
+    delz = (k+1)*binsizez;
+ 
+  vec3_scale(delx,lva,rtmp);
+  vec3_scaleadd(dely,lvb,rtmp,rtmp);
+  vec3_scaleadd(delz,lvc,rtmp,rtmp);
+  return vec3_dot(rtmp,rtmp);
+}
+
+void Neighbor::SetupNeighborListBin(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles,
+	       const vector<int>& type_index,
+	       double* const rcutneighsq_table[],
+	       const Box* b, Comm* comm) {
+
+/* binned neighbor list construction: each owned atom i 
+   checks its own bin and other bins in Newton stencil */
+
+// Here is a synopsis of the logic in this function
+
+//   for (int i = 0; i < nparticles; i++) {
+//     // Ltwoway means we include all neighbors in list
+//     // No need to distinguish between own and gohst atoms
+//     if (Ltwoway) {
+//       // loop over all atoms in i's bin, up to i.
+//       j = binhead[ibin];
+//       while (j != i) {
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//       // loop over all atoms in i's bin, above i.
+//       j = bins[i];
+//       while (j >= 0) {
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//       // loop over all atoms in other bins in stencil, store every pair.
+//       // both the positive and negative senses of the stencil are used.
+//       for (k = 0; k < nstencil; k++) {
+// 	j = binhead[ibin+stencil[k]];
+// 	while (j >= 0) {
+// 	  if (rsq <= rcutneighsq) {
+// 	    neighptr[n++] = j;
+// 	  }
+// 	  j = bins[j];
+// 	}
+//       }
+//       for (k = 0; k < nstencil; k++) {
+// 	j = binhead[ibin-stencil[k]];
+// 	while (j >= 0) {
+// 	  if (rsq <= rcutneighsq) {
+// 	    neighptr[n++] = j;
+// 	  }
+// 	  j = bins[j];
+// 	}
+//       }
+//       // Not Ltwoway means each ij pair stored only once
+//       // It is still possible that Ltwoway_ghost is true.
+//     } else {
+//     // loop over rest of atoms in i's bin, ghosts are at end of linked list
+//     // if j is owned atom, store it, since j is beyond i in linked list
+//     // if j is ghost, only store if j coords are "above and to the right" of i
+//     // or if Ltwoway_ghost
+//       j = bins[i];
+//       while (j >= 0) {
+//  	if (j >= nparticles) {
+// 	  if (!Ltwoway_ghost) {
+// 	    if (delr[2] > 0.0) {
+// 	      j = bins[j];
+// 	      continue;
+// 	    } else if (delr[2] == 0.0) {
+// 	      if (delr[1] > 0.0) {
+// 		j = bins[j];
+// 		continue;
+// 	      } else if (delr[1] == 0.0) {
+// 		if (delr[0] > 0.0) {
+// 		  j = bins[j];
+// 		  continue;
+// 		}
+// 	      }
+// 	    }
+// 	  }
+// 	}
+
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//       // loop over all atoms in other bins in positive stencil, 
+//       // store every pair
+//       for (k = 0; k < nstencil; k++) {
+// 	j = binhead[ibin+stencil[k]];
+// 	while (j >= 0) {
+// 	  if (rsq <= rcutneighsq) {
+// 	    neighptr[n++] = j;
+// 	  }
+// 	  j = bins[j];
+// 	}
+//       }
+//       // If Ltwoway_ghost, loop over all atoms in other bins 
+//       // in negative stencil, store every ghost pair
+//       if (Ltwoway_ghost) {
+// 	for (k = 0; k < nstencil; k++) {
+// 	  j = binhead[ibin-stencil[k]];
+// 	  while (j >= 0) {
+// 	    if (j < nparticles) {
+// 	      j = bins[j];
+// 	      continue;
+// 	    }
+// 	    if (rsq <= rcutneighsq) {
+// 	      neighptr[n++] = j;
+// 	    }
+// 	    j = bins[j];
+// 	  }
+// 	}
+//       }
+//     }
+//   }
+
+  int j,k,m,n,itype,jtype,ibin;
+  double rveci[3],rvecj[3],delr[3];
+  int *neighptr;
+  int npnt;
+  int* ipnt_tmp;
+  double rsq,rcutneighsq;
+  int ipage;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Neighbor::SetupNeighborListBin" << endl;
+  }
+
+  // set up bins (this does not really need to be done every time)
+
+  SetupBins(b,comm);
+
+  // bin local & ghost atoms
+  BinParticles(nparticles,nghost_particles,particles,b,type_index,comm);
+
+  // Clear out previous entries,
+  // and size first_ptr list to number of local particles
+
+  for (ipage=0;ipage<npage;ipage++) {
+    ipnt_tmp = pages[ipage];
+    delete []ipnt_tmp;
+  }
+  pages.clear();
+
+  first_ptr.resize(nparticles);
+  nneigh_list.resize(nparticles);
+  ipnt_tmp = new int[NEIGHPAGESIZE];
+  pages.push_back(ipnt_tmp);
+  npage = 1;
+  npnt = 0;
+  nneighbors = 0;
+
+  // loop over each atom, storing neighbors
+
+  for (int i = 0; i < nparticles; i++) {
+
+    // if necessary, goto next page and add pages
+
+    if (NEIGHPAGESIZE - npnt < ONEATOM) {
+      npnt = 0;
+      npage++;
+      ipnt_tmp = new int[NEIGHPAGESIZE];
+      pages.push_back(ipnt_tmp);
+    }
+
+    neighptr = &pages[npage-1][npnt];
+    n = 0;
+
+    itype = type_index[particles[i].get_type()];
+    // skip particles not included in force field
+    if (itype == -1) {
+      first_ptr[i] = neighptr;
+      nneigh_list[i] = 0;
+      continue;
+    }
+    particles[i].get_x(rveci);
+    ibin = Coord2BinLocal(rveci,b);
+    //
+    // Ltwoway means we include all neighbors in list
+    if (Ltwoway) {
+
+    // loop over all atoms in i's bin, up to i.
+
+      j = binhead[ibin];
+      while (j != i) {
+	particles[j].get_x(rvecj);
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1 ) {
+	  j = bins[j];
+	  continue;
+	}
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+	rsq = vec3_distsq(rveci,rvecj,delr);
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListBin:\n"
+		       "Exceeded ONEATOM",comm);
+	  }
+	}
+	
+	j = bins[j];
+      }
+
+    // loop over all atoms in i's bin, above i.
+
+      j = bins[i];
+      while (j >= 0) {
+	particles[j].get_x(rvecj);
+	jtype = type_index[particles[j].get_type()];
+	// skip particle types not included in force field
+	if (jtype == -1) {
+	  j = bins[j];
+	  continue;
+	}
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+	rsq = vec3_distsq(rveci,rvecj,delr);
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListBin:\n"
+		       "Exceeded ONEATOM",comm);
+	  }
+	}
+
+	j = bins[j];
+      }
+
+      // loop over all atoms in other bins in stencil, store every pair.
+      // both the positive and negative senses of the stencil are used.
+
+      for (k = 0; k < nstencil; k++) {
+	j = binhead[ibin+stencil[k]];
+	while (j >= 0) {
+	  particles[j].get_x(rvecj);
+	  jtype = type_index[particles[j].get_type()];
+	  // skip particles not included in force field
+	  if (jtype == -1) {
+	    j = bins[j];
+	    continue;
+	  }
+	  rcutneighsq = rcutneighsq_table[itype][jtype];
+	  // skip interactions not included in force field
+	  if (rcutneighsq == 0.0) { 
+	    j = bins[j];
+	    continue;
+	  }
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+	  if (rsq <= rcutneighsq) {
+	    neighptr[n++] = j;
+	    if (n > ONEATOM) {
+
+	      if (comm->get_Lnodefile()) {
+		comm->get_nodefile() << "n = " << n << endl;
+		comm->get_nodefile() << "npage = " << npage << endl;
+		comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	      }
+
+	      glog.abort("Neighbor::SetupNeighborListBin:\n"
+			 "Exceeded ONEATOM",comm);
+	    }
+	  }
+
+	  j = bins[j];
+	}
+      }
+
+      for (k = 0; k < nstencil; k++) {
+	j = binhead[ibin-stencil[k]];
+	while (j >= 0) {
+	  particles[j].get_x(rvecj);
+	  jtype = type_index[particles[j].get_type()];
+	  // skip particles not included in force field
+	  if (jtype == -1) {
+	    j = bins[j];
+	    continue;
+	  }
+	  rcutneighsq = rcutneighsq_table[itype][jtype];
+	  // skip interactions not included in force field
+	  if (rcutneighsq == 0.0) { 
+	    j = bins[j];
+	    continue;
+	  }
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+	  if (rsq <= rcutneighsq) {
+	    neighptr[n++] = j;
+	    if (n > ONEATOM) {
+
+	      if (comm->get_Lnodefile()) {
+		comm->get_nodefile() << "n = " << n << endl;
+		comm->get_nodefile() << "npage = " << npage << endl;
+		comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	      }
+
+	      glog.abort("Neighbor::SetupNeighborListBin:\n"
+			 "Exceeded ONEATOM",comm);
+	    }
+	  }
+
+	  j = bins[j];
+	}
+      }
+
+      // Not Ltwoway means each ij pair stored only once
+      // It is still possible that Ltwoway_ghost is true.
+    } else {
+
+    // loop over rest of atoms in i's bin, ghosts are at end of linked list
+    // if j is owned atom, store it, since j is beyond i in linked list
+    // if j is ghost, only store if j coords are "above and to the right" of i
+    // or if Ltwoway_ghost
+
+      j = bins[i];
+      while (j >= 0) {
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  j = bins[j];
+	  continue;
+	}
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+
+	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj,delr);
+ 	if (j >= nparticles) {
+	  if (!Ltwoway_ghost) {
+	    if (delr[2] > 0.0) {
+	      j = bins[j];
+	      continue;
+	    } else if (delr[2] == 0.0) {
+	      if (delr[1] > 0.0) {
+		j = bins[j];
+		continue;
+	      } else if (delr[1] == 0.0) {
+		if (delr[0] > 0.0) {
+		  j = bins[j];
+		  continue;
+		}
+	      }
+	    }
+	  }
+	}
+
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListBin:\n"
+		       "Exceeded ONEATOM",comm);
+	  }
+	}
+
+	j = bins[j];
+      }
+
+      // loop over all atoms in other bins in positive stencil, 
+      // store every pair
+
+      for (k = 0; k < nstencil; k++) {
+	j = binhead[ibin+stencil[k]];
+	while (j >= 0) {
+	  jtype = type_index[particles[j].get_type()];
+	  // skip particles not included in force field
+	  if (jtype == -1) {
+	    j = bins[j];
+	    continue;
+	  }
+	  rcutneighsq = rcutneighsq_table[itype][jtype];
+	  // skip interactions not included in force field
+	  if (rcutneighsq == 0.0) { 
+	    j = bins[j];
+	    continue;
+	  }
+	  particles[j].get_x(rvecj);
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+	  if (rsq <= rcutneighsq) {
+	    neighptr[n++] = j;
+	    if (n > ONEATOM) {
+
+	      if (comm->get_Lnodefile()) {
+		comm->get_nodefile() << "n = " << n << endl;
+		comm->get_nodefile() << "npage = " << npage << endl;
+		comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	      }
+
+	      glog.abort("Neighbor::SetupNeighborListBin:\n"
+			 "Exceeded ONEATOM",comm);
+	    }
+	  }
+
+	  j = bins[j];
+	}
+      }
+
+      // If Ltwoway_ghost, loop over all atoms in other bins 
+      // in negative stencil, store every ghost pair
+
+      if (Ltwoway_ghost) {
+	for (k = 0; k < nstencil; k++) {
+	  j = binhead[ibin-stencil[k]];
+	  while (j >= 0) {
+	    if (j < nparticles) {
+	      j = bins[j];
+	      continue;
+	    }
+	    jtype = type_index[particles[j].get_type()];
+	    // skip particles not included in force field
+	    if (jtype == -1) {
+	      j = bins[j];
+	      continue;
+	    }
+	    rcutneighsq = rcutneighsq_table[itype][jtype];
+	    // skip interactions not included in force field
+	    if (rcutneighsq == 0.0) { 
+	      j = bins[j];
+	      continue;
+	    }
+	    particles[j].get_x(rvecj);
+	    rsq = vec3_distsq(rveci,rvecj,delr);
+	    if (rsq <= rcutneighsq) {
+	      neighptr[n++] = j;
+	      if (n > ONEATOM) {
+		if (comm->get_Lnodefile()) {
+		  comm->get_nodefile() << "n = " << n << endl;
+		  comm->get_nodefile() << "npage = " << npage << endl;
+		  comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+		}
+		glog.abort("Neighbor::SetupNeighborListBin:\n"
+			   "Exceeded ONEATOM",comm);
+	      }
+	    }
+	    j = bins[j];
+	  }
+	}
+      }
+    }
+    first_ptr[i] = neighptr;
+    nneigh_list[i] = n;
+    npnt += n;
+    nneighbors += n;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Bin nneighbors = " << nneighbors << endl;
+    comm->get_nodefile() << "Bin npages = " << npage << endl;
+    comm->get_nodefile() << "Bin nparticles = " << nparticles << endl;
+    comm->get_nodefile() << "Bin nghost_particles = " << nghost_particles << endl;
+    comm->get_nodefile() << "Exited Neighbor::SetupNeighborListBin" << endl;
+  }
+
+}
+
+
+/* Bin Particles */
+
+void Neighbor::BinParticles(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles, const Box* b, Comm* comm)
+{
+  int i,ibin;
+  double rveci[3];
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Neighbor::BinParticles" << endl;
+  }
+
+  for (ibin = 0; ibin < mbins; ibin++) binhead[ibin] = -1;
+
+  bins.resize(nparticles+nghost_particles);
+
+  // bin ghost particles
+  for (i = nparticles; i < nparticles + nghost_particles; i++) {
+    particles[i].get_x(rveci);
+    ibin = Coord2BinGhost(rveci,b);
+    bins[i] = binhead[ibin];
+    binhead[ibin] = i;
+  }
+
+  // bin own particles
+
+  for (i = 0; i < nparticles; i++) {
+    particles[i].get_x(rveci);
+    ibin = Coord2BinLocal(rveci,b);
+    bins[i] = binhead[ibin];
+    binhead[ibin] = i;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Neighbor::BinParticles" << endl;
+  }
+
+}
+
+/* Bin Particles with type filtering*/
+
+void Neighbor::BinParticles(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles, const Box* b, 
+	       const vector<int>& type_index, Comm* comm) {
+  int i,ibin;
+  double rveci[3];
+  int itype;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Neighbor::BinParticles" << endl;
+  }
+
+  for (ibin = 0; ibin < mbins; ibin++) binhead[ibin] = -1;
+
+  bins.resize(nparticles+nghost_particles);
+
+  // bin ghost particles
+  for (i = nparticles; i < nparticles + nghost_particles; i++) {
+    itype = type_index[particles[i].get_type()];
+    // skip particles not included in force field
+    if (itype != -1) {
+      particles[i].get_x(rveci);
+      ibin = Coord2BinGhost(rveci,b);
+      bins[i] = binhead[ibin];
+      binhead[ibin] = i;
+    }
+  }
+
+  // bin own particles
+
+  for (i = 0; i < nparticles; i++) {
+    itype = type_index[particles[i].get_type()];
+    // skip particles not included in force field
+    if (itype != -1) {
+      particles[i].get_x(rveci);
+      ibin = Coord2BinLocal(rveci,b);
+      bins[i] = binhead[ibin];
+      binhead[ibin] = i;
+    }
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Neighbor::BinParticles" << endl;
+  }
+
+}
+
+// convert local atom coords into local bin #
+
+int Neighbor::Coord2BinLocal(const double x[], const Box* b)
+{
+  int ix,iy,iz;
+  int ibin;
+  // Declare value as volatile to
+  // force compiler to read it from memory.
+  // This prevents unexpected results arising
+  // from use of extra precision in registers.
+  double value;
+
+  value = b->Fractional(0,x);
+  if (value >= 1.0) {
+    glog.get_logfile() <<  value << " " << 
+      x[0] << " " << 
+      x[1] << " " << 
+      x[2] << " " <<  endl;
+    glog.abort("Neighbor::Coord2BinLocal:\n"
+	       "Local particle outside box");
+    exit(1); // Purely to satisfy compiler uninitialized data checks
+  } else if (value >= 0.0) {
+    ix = static_cast<int> (value*bininvx) - mbinxlo;
+  } else {
+    glog.get_logfile() <<  value << " " << 
+      x[0] << " " << 
+      x[1] << " " << 
+      x[2] << " " <<  endl;
+    glog.abort("Neighbor::Coord2BinLocal:\n"
+	       "Local particle outside box");
+    exit(1); // Purely to satisfy compiler uninitialized data checks
+  }
+
+  value = b->Fractional(1,x);
+  if (value >= 1.0) {
+    glog.get_logfile() <<  value << " " << 
+      x[0] << " " << 
+      x[1] << " " << 
+      x[2] << " " <<  endl;
+    glog.abort("Neighbor::Coord2BinLocal:\n"
+	       "Local particle outside box");
+    exit(1); // Purely to satisfy compiler uninitialized data checks
+  } else if (value >= 0.0) {
+    iy = static_cast<int> (value*bininvy) - mbinylo;
+  } else {
+    glog.get_logfile() <<  value << " " << 
+      x[0] << " " << 
+      x[1] << " " << 
+      x[2] << " " <<  endl;
+    glog.abort("Neighbor::Coord2BinLocal:\n"
+	       "Local particle outside box");
+    exit(1); // Purely to satisfy compiler uninitialized data checks
+  }
+
+  value = b->Fractional(2,x);
+  if (value >= 1.0) {
+    glog.get_logfile() <<  value << " " << 
+      x[0] << " " << 
+      x[1] << " " << 
+      x[2] << " " <<  endl;
+    glog.abort("Neighbor::Coord2BinLocal:\n"
+	       "Local particle outside box");
+    exit(1); // Purely to satisfy compiler uninitialized data checks
+  } else if (value >= 0.0) {
+    iz = static_cast<int> (value*bininvz) - mbinzlo;
+  } else {
+    glog.get_logfile() <<  value << " " << 
+      x[0] << " " << 
+      x[1] << " " << 
+      x[2] << " " <<  endl;
+    glog.abort("Neighbor::Coord2BinLocal:\n"
+	       "Local particle outside box");
+    exit(1); // Purely to satisfy compiler uninitialized data checks
+  }
+
+  ibin = iz*mbiny*mbinx + iy*mbinx + ix + 1;
+
+  if (ibin < 0 || ibin >= mbins) {
+    glog.get_logfile() << "ibin for own particle out of range " << ibin << endl;
+    glog.abort("Neighbor::Coord2BinLocal:\n"
+	       "ibin for local particle out of range");
+  }    
+
+  return ibin;
+}
+
+// convert ghost atom coords into local bin #
+
+int Neighbor::Coord2BinGhost(const double x[], const Box* b)
+{
+  int ix,iy,iz;
+  int ibin;
+  // Declare value as volatile to
+  // force compiler to read it from memory.
+  // This prevents unexpected results arising
+  // from use of extra precision in registers.
+  volatile double value;
+
+  value = b->Fractional(0,x);
+  if (value >= 1.0)
+    ix = static_cast<int> ((value - 1.0)*bininvx) + nbinx - mbinxlo;
+  else if (value >= 0.0)
+    ix = static_cast<int> (value*bininvx) - mbinxlo;
+  else
+    ix = static_cast<int> (value*bininvx) - mbinxlo - 1;
+
+  value = b->Fractional(1,x);
+  if (value >= 1.0)
+    iy = static_cast<int> ((value - 1.0)*bininvy) + nbiny - mbinylo;
+  else if (value >= 0.0)
+    iy = static_cast<int> (value*bininvy) - mbinylo;
+  else
+    iy = static_cast<int> (value*bininvy) - mbinylo - 1;
+
+  value = b->Fractional(2,x);
+  if (value >= 1.0)
+    iz = static_cast<int> ((value - 1.0)*bininvz) + nbinz - mbinzlo;
+  else if (value >= 0.0)
+    iz = static_cast<int> (value*bininvz) - mbinzlo;
+  else
+    iz = static_cast<int> (value*bininvz) - mbinzlo - 1;
+
+  ibin = iz*mbiny*mbinx + iy*mbinx + ix + 1;
+  if (ibin < 0 || ibin >= mbins) {
+    glog.get_logfile() << "ibin for ghost particle out of range " << ibin << endl;
+    glog.get_logfile() << "x = " << x[0] << " " << x[1] << " " << x[2] << endl; 
+    glog.abort("Neighbor::Coord2BinGhost:\n"
+	       "ibin for ghost particle out of range");
+  }    
+  return ibin;
+}
+
+double Neighbor::get_timeneigh() const {
+  return timeneigh;
+};
+
+int Neighbor::get_ntimeneigh() const {
+  return ntimeneigh;
+};
+
+void Neighbor::inc_timeneigh(const double& delt) {
+  timeneigh+=delt;
+}
+
+void Neighbor::inc_ntimeneigh() {
+  ntimeneigh++;
+}
+
+
+void Neighbor::SetupNeighborListNsqGhost(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles,
+	       const vector<int>& type_index,
+	       double* const rcutneighsq_table[],Comm* comm) {
+  //This function does a brute force search for local particles
+  //lying within the cut-off. It generates lists of neighbors
+  // for both the Own particles and the Ghost particles.
+
+  int itype,jtype,itype_particle,itag,jtag;
+  double rcutneighsq,rsq;
+  double rveci[3],rvecj[3],delr[3];
+  int *neighptr;
+  int npnt,n;
+  int* ipnt_tmp;
+  int ipage;
+
+  // Clear out previous entries,
+  // and size first_ptr list to number of local particles
+
+  for (ipage=0;ipage<npage;ipage++) {
+    ipnt_tmp = pages[ipage];
+    delete []ipnt_tmp;
+  }
+  pages.clear();
+
+  first_ptr.resize(nparticles+nghost_particles);
+  nneigh_list.resize(nparticles+nghost_particles);
+  ipnt_tmp = new int[NEIGHPAGESIZE];
+  pages.push_back(ipnt_tmp);
+  npage = 1;
+  npnt = 0;
+  nneighbors = 0;
+
+  // loop over each atom, storing neighbors
+
+  // First do local atoms
+
+  for (int i=0;i<nparticles;i++) {
+
+    // if necessary, goto next page and add pages
+
+    if (NEIGHPAGESIZE - npnt < ONEATOM) {
+      npnt = 0;
+      npage++;
+      ipnt_tmp = new int[NEIGHPAGESIZE];
+      pages.push_back(ipnt_tmp);
+    }
+
+    neighptr = &pages[npage-1][npnt];
+    n = 0;
+    itype_particle = particles[i].get_type();
+    itype = type_index[itype_particle];
+    // skip particles not included in force field
+    if (itype == -1) {
+      continue;
+      first_ptr[i] = neighptr;
+      nneigh_list[i] = 0;
+    }
+    particles[i].get_x(rveci);
+
+    // Include j<i neighbors if Ltwoway flag set in Neighbor constructor
+    if (Ltwoway) {
+      for (int j=0;j<i;j++) {
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  continue;
+	}
+	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj);
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+      
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		   "Exceeded ONEATOM",comm);
+	  }
+	}
+      }
+    }
+
+    for (int j=i+1;j<nparticles;j++) {
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj);
+
+      if (rsq <= rcutneighsq) {
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+    }
+
+    itag = particles[i].get_tag();
+    for (int j=nparticles;j<nparticles+nghost_particles;j++) {
+
+      jtag = particles[j].get_tag();
+
+       if (!Ltwoway_ghost) {
+	if (itag > jtag) {
+	  if ((itag+jtag)%2 == 0) continue;
+	} else if (itag < jtag) {
+	  if ((itag+jtag)%2 == 1) continue;
+	}
+      }
+
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj,delr);
+
+      if (!Ltwoway_ghost) {
+	if (itag == jtag) {
+	  if (delr[2] > small) {
+	    continue;
+	  } else if (fabs(delr[2]) < small) {
+	    if (delr[1] > small) {
+	      continue;
+	    } else if (fabs(delr[1]) < small) {
+	      if (delr[0] > small) continue;
+	    }
+	  }
+	}
+      }
+
+      if (rsq <= rcutneighsq) {
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+    }
+
+    first_ptr[i] = neighptr;
+    nneigh_list[i] = n;
+    npnt += n;
+    nneighbors += n;
+  }
+
+
+  // Then do ghost atoms
+
+  for (int i=nparticles;i<nparticles+nghost_particles;i++) {
+
+    // if necessary, goto next page and add pages
+
+    if (NEIGHPAGESIZE - npnt < ONEATOM) {
+      npnt = 0;
+      npage++;
+      ipnt_tmp = new int[NEIGHPAGESIZE];
+      pages.push_back(ipnt_tmp);
+    }
+
+    neighptr = &pages[npage-1][npnt];
+    n = 0;
+    itype_particle = particles[i].get_type();
+    itype = type_index[itype_particle];
+    // skip particles not included in force field
+    if (itype == -1) {
+      continue;
+      first_ptr[i] = neighptr;
+      nneigh_list[i] = 0;
+    }
+    particles[i].get_x(rveci);
+
+    for (int j=i+1;j<nparticles+nghost_particles;j++) {
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj);
+
+      if (rsq <= rcutneighsq) {
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+    }
+
+    first_ptr[i] = neighptr;
+    nneigh_list[i] = n;
+    npnt += n;
+    nneighbors += n;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nsq nneighbors = " << nneighbors << endl;
+    comm->get_nodefile() << "Nsq npages = " << npage << endl;
+    comm->get_nodefile() << "Nsq nparticles = " << nparticles << endl;
+    comm->get_nodefile() << "Nsq nghost_particles = " << nghost_particles << endl;
+  }
+
+}  
+
+void Neighbor::SetupNeighborListBinGhost(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles,
+	       const vector<int>& type_index,
+	       double* const rcutneighsq_table[],
+	       const Box* b, Comm* comm) {
+
+/* binned neighbor list construction: each owned atom i 
+   checks its own bin and other bins in Newton stencil */
+
+  int j,k,m,n,itype,jtype,ibin;
+  double rveci[3],rvecj[3],delr[3];
+  int *neighptr;
+  int npnt;
+  int* ipnt_tmp;
+  double rsq,rcutneighsq;
+  int ipage;
+  int jbin;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Neighbor::SetupNeighborListBinGhost" << endl;
+  }
+
+  // set up bins (this does not really need to be done every time)
+
+  SetupBins(b,comm);
+
+  // bin local & ghost atoms
+  BinParticles(nparticles,nghost_particles,particles,b,type_index,comm);
+
+  // Clear out previous entries,
+  // and size first_ptr list to number of local particles
+
+  for (ipage=0;ipage<npage;ipage++) {
+    ipnt_tmp = pages[ipage];
+    delete []ipnt_tmp;
+  }
+  pages.clear();
+
+  first_ptr.resize(nparticles+nghost_particles);
+  nneigh_list.resize(nparticles+nghost_particles);
+  ipnt_tmp = new int[NEIGHPAGESIZE];
+  pages.push_back(ipnt_tmp);
+  npage = 1;
+  npnt = 0;
+  nneighbors = 0;
+
+  // loop over each atom, storing neighbors
+  // first do local atoms 
+  for (int i = 0; i < nparticles; i++) {
+
+    // if necessary, goto next page and add pages
+
+    if (NEIGHPAGESIZE - npnt < ONEATOM) {
+      npnt = 0;
+      npage++;
+      ipnt_tmp = new int[NEIGHPAGESIZE];
+      pages.push_back(ipnt_tmp);
+    }
+
+    neighptr = &pages[npage-1][npnt];
+    n = 0;
+
+    itype = type_index[particles[i].get_type()];
+    // skip particles not included in force field
+    if (itype == -1) {
+      first_ptr[i] = neighptr;
+      nneigh_list[i] = 0;
+      continue;
+    }
+    particles[i].get_x(rveci);
+    ibin = Coord2BinLocal(rveci,b);
+    //
+    // Ltwoway means we include all neighbors in list
+    if (Ltwoway) {
+
+    // loop over all atoms in i's bin, up to i.
+
+      j = binhead[ibin];
+      while (j != i) {
+	particles[j].get_x(rvecj);
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1 ) {
+	  j = bins[j];
+	  continue;
+	}
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+	rsq = vec3_distsq(rveci,rvecj,delr);
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListBinGhost:\n"
+		       "Exceeded ONEATOM",comm);
+	  }
+	}
+	
+	j = bins[j];
+      }
+
+    // loop over all atoms in i's bin, above i.
+
+      j = bins[i];
+      while (j >= 0) {
+	particles[j].get_x(rvecj);
+	jtype = type_index[particles[j].get_type()];
+	// skip particle types not included in force field
+	if (jtype == -1) {
+	  j = bins[j];
+	  continue;
+	}
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+	rsq = vec3_distsq(rveci,rvecj,delr);
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListBinGhost:\n"
+		       "Exceeded ONEATOM",comm);
+	  }
+	}
+
+	j = bins[j];
+      }
+
+      // loop over all atoms in other bins in stencil, store every pair.
+      // both the positive and negative senses of the stencil are used.
+
+      for (k = 0; k < nstencil; k++) {
+	j = binhead[ibin+stencil[k]];
+	while (j >= 0) {
+	  particles[j].get_x(rvecj);
+	  jtype = type_index[particles[j].get_type()];
+	  // skip particles not included in force field
+	  if (jtype == -1) {
+	    j = bins[j];
+	    continue;
+	  }
+	  rcutneighsq = rcutneighsq_table[itype][jtype];
+	  // skip interactions not included in force field
+	  if (rcutneighsq == 0.0) { 
+	    j = bins[j];
+	    continue;
+	  }
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+	  if (rsq <= rcutneighsq) {
+	    neighptr[n++] = j;
+	    if (n > ONEATOM) {
+
+	      if (comm->get_Lnodefile()) {
+		comm->get_nodefile() << "n = " << n << endl;
+		comm->get_nodefile() << "npage = " << npage << endl;
+		comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	      }
+
+	      glog.abort("Neighbor::SetupNeighborListBinGhost:\n"
+			 "Exceeded ONEATOM",comm);
+	    }
+	  }
+
+	  j = bins[j];
+	}
+      }
+
+      for (k = 0; k < nstencil; k++) {
+	j = binhead[ibin-stencil[k]];
+	while (j >= 0) {
+	  particles[j].get_x(rvecj);
+	  jtype = type_index[particles[j].get_type()];
+	  // skip particles not included in force field
+	  if (jtype == -1) {
+	    j = bins[j];
+	    continue;
+	  }
+	  rcutneighsq = rcutneighsq_table[itype][jtype];
+	  // skip interactions not included in force field
+	  if (rcutneighsq == 0.0) { 
+	    j = bins[j];
+	    continue;
+	  }
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+	  if (rsq <= rcutneighsq) {
+	    neighptr[n++] = j;
+	    if (n > ONEATOM) {
+
+	      if (comm->get_Lnodefile()) {
+		comm->get_nodefile() << "n = " << n << endl;
+		comm->get_nodefile() << "npage = " << npage << endl;
+		comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	      }
+
+	      glog.abort("Neighbor::SetupNeighborListBinGhost:\n"
+			 "Exceeded ONEATOM",comm);
+	    }
+	  }
+
+	  j = bins[j];
+	}
+      }
+
+      // Not Ltwoway means each ij pair stored only once
+      // It is still possible that Ltwoway_ghost is true.
+    } else {
+
+    // loop over rest of atoms in i's bin, ghosts are at end of linked list
+    // if j is owned atom, store it, since j is beyond i in linked list
+    // if j is ghost, only store if j coords are "above and to the right" of i
+    // or if Ltwoway_ghost
+
+      j = bins[i];
+      while (j >= 0) {
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  j = bins[j];
+	  continue;
+	}
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+
+	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj,delr);
+ 	if (j >= nparticles) {
+	  if (!Ltwoway_ghost) {
+	    if (delr[2] > 0.0) {
+	      j = bins[j];
+	      continue;
+	    } else if (delr[2] == 0.0) {
+	      if (delr[1] > 0.0) {
+		j = bins[j];
+		continue;
+	      } else if (delr[1] == 0.0) {
+		if (delr[0] > 0.0) {
+		  j = bins[j];
+		  continue;
+		}
+	      }
+	    }
+	  }
+	}
+
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListBinGhost:\n"
+		       "Exceeded ONEATOM",comm);
+	  }
+	}
+
+	j = bins[j];
+      }
+
+      // loop over all atoms in other bins in positive stencil, 
+      // store every pair
+
+      for (k = 0; k < nstencil; k++) {
+	j = binhead[ibin+stencil[k]];
+	while (j >= 0) {
+	  jtype = type_index[particles[j].get_type()];
+	  // skip particles not included in force field
+	  if (jtype == -1) {
+	    j = bins[j];
+	    continue;
+	  }
+	  rcutneighsq = rcutneighsq_table[itype][jtype];
+	  // skip interactions not included in force field
+	  if (rcutneighsq == 0.0) { 
+	    j = bins[j];
+	    continue;
+	  }
+	  particles[j].get_x(rvecj);
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+	  if (rsq <= rcutneighsq) {
+	    neighptr[n++] = j;
+	    if (n > ONEATOM) {
+
+	      if (comm->get_Lnodefile()) {
+		comm->get_nodefile() << "n = " << n << endl;
+		comm->get_nodefile() << "npage = " << npage << endl;
+		comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	      }
+
+	      glog.abort("Neighbor::SetupNeighborListBinGhost:\n"
+			 "Exceeded ONEATOM",comm);
+	    }
+	  }
+
+	  j = bins[j];
+	}
+      }
+
+      // If Ltwoway_ghost, loop over all atoms in other bins 
+      // in negative stencil, store every ghost pair
+
+      if (Ltwoway_ghost) {
+	for (k = 0; k < nstencil; k++) {
+	  j = binhead[ibin-stencil[k]];
+	  while (j >= 0) {
+	    if (j < nparticles) {
+	      j = bins[j];
+	      continue;
+	    }
+	    jtype = type_index[particles[j].get_type()];
+	    // skip particles not included in force field
+	    if (jtype == -1) {
+	      j = bins[j];
+	      continue;
+	    }
+	    rcutneighsq = rcutneighsq_table[itype][jtype];
+	    // skip interactions not included in force field
+	    if (rcutneighsq == 0.0) { 
+	      j = bins[j];
+	      continue;
+	    }
+	    particles[j].get_x(rvecj);
+	    rsq = vec3_distsq(rveci,rvecj,delr);
+	    if (rsq <= rcutneighsq) {
+	      neighptr[n++] = j;
+	      if (n > ONEATOM) {
+		if (comm->get_Lnodefile()) {
+		  comm->get_nodefile() << "n = " << n << endl;
+		  comm->get_nodefile() << "npage = " << npage << endl;
+		  comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+		}
+		glog.abort("Neighbor::SetupNeighborListBinGhost:\n"
+			   "Exceeded ONEATOM",comm);
+	      }
+	    }
+	    j = bins[j];
+	  }
+	}
+      }
+    }
+    first_ptr[i] = neighptr;
+    nneigh_list[i] = n;
+    npnt += n;
+    nneighbors += n;
+  }
+
+
+  // loop over each atom, storing neighbors
+  // then do ghost atoms
+  for (int i=nparticles;i<nparticles+nghost_particles;i++) {
+
+    // if necessary, goto next page and add pages
+
+    if (NEIGHPAGESIZE - npnt < ONEATOM) {
+      npnt = 0;
+      npage++;
+      ipnt_tmp = new int[NEIGHPAGESIZE];
+      pages.push_back(ipnt_tmp);
+    }
+
+    neighptr = &pages[npage-1][npnt];
+    n = 0;
+
+    itype = type_index[particles[i].get_type()];
+    // skip particles not included in force field
+    if (itype == -1) {
+      first_ptr[i] = neighptr;
+      nneigh_list[i] = 0;
+      continue;
+    }
+    particles[i].get_x(rveci);
+    ibin = Coord2BinGhost(rveci,b);
+
+    // loop over rest of atoms in i's bin
+    j = bins[i];
+    while (j >= 0) {
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	j = bins[j];
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	j = bins[j];
+	continue;
+      }
+
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj,delr);
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      if (rsq <= rcutneighsq) {
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListBinGhost:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+
+      j = bins[j];
+    }
+
+    // loop over ghost atoms in other bins in positive stencil. 
+    for (k = 0; k < nstencil; k++) {
+      jbin = ibin+stencil[k];
+      // Skip if neighbor bin is out of range
+      if (jbin < 0 || jbin >= mbins) {
+	continue;
+      }    
+      j = binhead[jbin];
+      while (j >= 0) {
+	if (j < nparticles) {
+	  j = bins[j];
+	  continue;
+	}
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  j = bins[j];
+	  continue;
+	}
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj,delr);
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+	    glog.abort("Neighbor::SetupNeighborListBinGhost:\n"
+		       "Exceeded ONEATOM",comm);
+	  }
+	}
+	j = bins[j];
+      }
+    }
+    first_ptr[i] = neighptr;
+    nneigh_list[i] = n;
+    npnt += n;
+    nneighbors += n;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Bin nneighbors = " << nneighbors << endl;
+    comm->get_nodefile() << "Bin npages = " << npage << endl;
+    comm->get_nodefile() << "Bin nparticles = " << nparticles << endl;
+    comm->get_nodefile() << "Bin nghost_particles = " << nghost_particles << endl;
+    comm->get_nodefile() << "Exited Neighbor::SetupNeighborListBinGhost" << endl;
+  }
+
+}
+@
+
+
+4.12
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@a1627 137
+// Here is a synopsis of the logic in this function
+
+//   First generate neighbors of local atoms
+//
+//   for (int i = 0; i < nparticles; i++) {
+//     // Ltwoway means we include all neighbors in list
+//     // No need to distinguish between own and gohst atoms
+//     if (Ltwoway) {
+//       // loop over all atoms in i's bin, up to i.
+//       j = binhead[ibin];
+//       while (j != i) {
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//       // loop over all atoms in i's bin, above i.
+//       j = bins[i];
+//       while (j >= 0) {
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//       // loop over all atoms in other bins in stencil, store every pair.
+//       // both the positive and negative senses of the stencil are used.
+//       for (k = 0; k < nstencil; k++) {
+// 	j = binhead[ibin+stencil[k]];
+// 	while (j >= 0) {
+// 	  if (rsq <= rcutneighsq) {
+// 	    neighptr[n++] = j;
+// 	  }
+// 	  j = bins[j];
+// 	}
+//       }
+//       for (k = 0; k < nstencil; k++) {
+// 	j = binhead[ibin-stencil[k]];
+// 	while (j >= 0) {
+// 	  if (rsq <= rcutneighsq) {
+// 	    neighptr[n++] = j;
+// 	  }
+// 	  j = bins[j];
+// 	}
+//       }
+//       // Not Ltwoway means each ij pair stored only once
+//       // It is still possible that Ltwoway_ghost is true.
+//     } else {
+//     // loop over rest of atoms in i's bin, ghosts are at end of linked list
+//     // if j is owned atom, store it, since j is beyond i in linked list
+//     // if j is ghost, only store if j coords are "above and to the right" of i
+//     // or if Ltwoway_ghost
+//       j = bins[i];
+//       while (j >= 0) {
+//  	if (j >= nparticles) {
+// 	  if (!Ltwoway_ghost) {
+// 	    if (delr[2] > 0.0) {
+// 	      j = bins[j];
+// 	      continue;
+// 	    } else if (delr[2] == 0.0) {
+// 	      if (delr[1] > 0.0) {
+// 		j = bins[j];
+// 		continue;
+// 	      } else if (delr[1] == 0.0) {
+// 		if (delr[0] > 0.0) {
+// 		  j = bins[j];
+// 		  continue;
+// 		}
+// 	      }
+// 	    }
+// 	  }
+// 	}
+
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//       // loop over all atoms in other bins in positive stencil, 
+//       // store every pair
+//       for (k = 0; k < nstencil; k++) {
+// 	j = binhead[ibin+stencil[k]];
+// 	while (j >= 0) {
+// 	  if (rsq <= rcutneighsq) {
+// 	    neighptr[n++] = j;
+// 	  }
+// 	  j = bins[j];
+// 	}
+//       }
+//       // If Ltwoway_ghost, loop over all atoms in other bins 
+//       // in negative stencil, store every ghost pair
+//       if (Ltwoway_ghost) {
+// 	for (k = 0; k < nstencil; k++) {
+// 	  j = binhead[ibin-stencil[k]];
+// 	  while (j >= 0) {
+// 	    if (j < nparticles) {
+// 	      j = bins[j];
+// 	      continue;
+// 	    }
+// 	    if (rsq <= rcutneighsq) {
+// 	      neighptr[n++] = j;
+// 	    }
+// 	    j = bins[j];
+// 	  }
+// 	}
+//       }
+//     }
+//   }
+
+//  Then generate neighbors of ghost atoms
+//  These list only include other ghost atoms
+//  and are not twoway.
+//
+//   for (int i=nparticles;i<nparticles+nghost_particles;i++) {
+//     // loop over rest of atoms in i's bin
+//     j = bins[i];
+//     while (j >= 0) {
+//       if (rsq <= rcutneighsq) {
+// 	neighptr[n++] = j;
+//       }
+//       j = bins[j];
+//     }
+//     // loop over ghost atoms in other bins in positive stencil, 
+//     for (k = 0; k < nstencil; k++) {
+//       j = binhead[ibin+stencil[k]];
+//       while (j >= 0) {
+// 	if (j < nparticles) {
+// 	  j = bins[j];
+// 	  continue;
+// 	}
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//     }
+//   }
+
+@
+
+
+4.11
+log
+@Fixed neighbor styles for walls.
+@
+text
+@d1235 1
+d1245 1
+d1256 1
+d1266 1
+d1277 1
+d1287 1
+@
+
+
+4.10
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d155 4
+@
+
+
+4.9
+log
+@Enabled neighboring style bin with ReaxFF
+@
+text
+@a465 1
+
+d470 3
+a472 3
+  rcutneighred[0] = rcutneighmaxall/w[0];
+  rcutneighred[1] = rcutneighmaxall/w[1];
+  rcutneighred[2] = rcutneighmaxall/w[2];
+d554 1
+a554 1
+  double rcutsq = rcutneighmaxall*rcutneighmaxall;
+@
+
+
+4.8
+log
+@Fixed problem with invalid neighbor list with fix deformation.
+@
+text
+@d132 3
+a134 2
+      glog.error("Neighbor::Neighboring:\n"
+		 "bin ghost neighboring style not yet implemented");
+d1609 632
+@
+
+
+4.7
+log
+@Fixed worlds + reaxbond bug
+@
+text
+@d279 1
+d337 1
+d427 1
+a427 1
+bool Neighbor::NeighboringCheck() {
+d432 2
+@
+
+
+4.6
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@d1603 1
+@
+
+
+4.5
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d72 1
+a72 1
+#define PAGESIZE 10000
+d74 2
+a75 2
+#if (ONEATOM > PAGESIZE) 
+#error ONEATOM can not be greater than PAGESIZE
+d200 1
+a200 1
+  ipnt_tmp = new int[PAGESIZE];
+d212 1
+a212 1
+    if (PAGESIZE - npnt < ONEATOM) {
+d215 1
+a215 1
+      ipnt_tmp = new int[PAGESIZE];
+d774 1
+a774 1
+  ipnt_tmp = new int[PAGESIZE];
+d786 1
+a786 1
+    if (PAGESIZE - npnt < ONEATOM) {
+d789 1
+a789 1
+      ipnt_tmp = new int[PAGESIZE];
+d1378 1
+a1378 1
+  ipnt_tmp = new int[PAGESIZE];
+d1392 1
+a1392 1
+    if (PAGESIZE - npnt < ONEATOM) {
+d1395 1
+a1395 1
+      ipnt_tmp = new int[PAGESIZE];
+d1540 1
+a1540 1
+    if (PAGESIZE - npnt < ONEATOM) {
+d1543 1
+a1543 1
+      ipnt_tmp = new int[PAGESIZE];
+@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@a126 4
+      if (!Ltwoway_ghost) {
+	glog.error("Neighbor::Neighboring:\n"
+		   "For neighbor_nsq_ghost, must have Ltwoway_ghost");
+      }
+d1386 3
+a1388 1
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+d1440 119
+d1565 5
+a1571 1
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+@
+
+
+4.4.4.1
+log
+@Reverse comm seems to be working for ReaxFF
+@
+text
+@d127 4
+d1390 1
+a1390 3
+  // First do local atoms
+
+  for (int i=0;i<nparticles;i++) {
+d1442 1
+a1442 1
+    for (int j=i+1;j<nparticles;j++) {
+a1447 5
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+a1449 112
+
+      if (rsq <= rcutneighsq) {
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+    }
+
+    itag = particles[i].get_tag();
+    for (int j=nparticles;j<nparticles+nghost_particles;j++) {
+
+      jtag = particles[j].get_tag();
+
+       if (!Ltwoway_ghost) {
+	if (itag > jtag) {
+	  if ((itag+jtag)%2 == 0) continue;
+	} else if (itag < jtag) {
+	  if ((itag+jtag)%2 == 1) continue;
+	}
+      }
+
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj,delr);
+
+      if (!Ltwoway_ghost) {
+	if (itag == jtag) {
+	  if (delr[2] > small) {
+	    continue;
+	  } else if (fabs(delr[2]) < small) {
+	    if (delr[1] > small) {
+	      continue;
+	    } else if (fabs(delr[1]) < small) {
+	      if (delr[0] > small) continue;
+	    }
+	  }
+	}
+      }
+
+      if (rsq <= rcutneighsq) {
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+    }
+
+    first_ptr[i] = neighptr;
+    nneigh_list[i] = n;
+    npnt += n;
+    nneighbors += n;
+  }
+
+
+  // Then do ghost atoms
+
+  for (int i=nparticles;i<nparticles+nghost_particles;i++) {
+
+    // if necessary, goto next page and add pages
+
+    if (PAGESIZE - npnt < ONEATOM) {
+      npnt = 0;
+      npage++;
+      ipnt_tmp = new int[PAGESIZE];
+      pages.push_back(ipnt_tmp);
+    }
+
+    neighptr = &pages[npage-1][npnt];
+    n = 0;
+    itype_particle = particles[i].get_type();
+    itype = type_index[itype_particle];
+    // skip particles not included in force field
+    if (itype == -1) {
+      continue;
+      first_ptr[i] = neighptr;
+      nneigh_list[i] = 0;
+    }
+    particles[i].get_x(rveci);
+
+    for (int j=i+1;j<nparticles+nghost_particles;j++) {
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+a1450 6
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj);
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d1225 1
+a1225 1
+    glog.logfile <<  value << " " << 
+d1234 1
+a1234 1
+    glog.logfile <<  value << " " << 
+d1244 1
+a1244 1
+    glog.logfile <<  value << " " << 
+d1253 1
+a1253 1
+    glog.logfile <<  value << " " << 
+d1263 1
+a1263 1
+    glog.logfile <<  value << " " << 
+d1272 1
+a1272 1
+    glog.logfile <<  value << " " << 
+d1283 1
+a1283 1
+    glog.logfile << "ibin for own particle out of range " << ibin << endl;
+d1329 2
+a1330 2
+    glog.logfile << "ibin for ghost particle out of range " << ibin << endl;
+    glog.logfile << "x = " << x[0] << " " << x[1] << " " << x[2] << endl; 
+@
+
+
+4.3.6.1
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@a1352 3
+void Neighbor::set_nflag(const bool& nflag_in) {
+  nflag = nflag_in;
+}
+@
+
+
+4.3.4.1
+log
+@latest additions to the PPPM FF
+@
+text
+@a1340 4
+double Neighbor::get_rskin() const {
+  return rskin;
+};
+
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d126 13
+d243 5
+a249 1
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+d274 5
+a280 1
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+d311 11
+a338 7
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+
+d365 1
+d405 6
+a412 1
+      rcutneighsq = rcutneighsq_table[i][jtype];
+a555 2
+  //cout << "Stencil\n";
+  //cout << "nextx=" << nextx << "  nexty=" << nexty << "  nextz=" << nextz << "\n";
+a560 2
+	    //cout << "i=" << i << " j=" << j << "  k=" << k ;
+	    //cout << " stencil=" << nstencil << "  value=" << k*mbiny*mbinx + j*mbinx + i << endl;
+d594 1
+d639 108
+a746 3
+/* binned neighbor list construction with full Newton's 3rd law
+   every pair stored exactly once by some processor
+   each owned atom i checks its own bin and other bins in Newton stencil */
+a759 1
+
+d765 1
+a765 1
+  BinParticles(nparticles,nghost_particles,particles,b,comm);
+a817 1
+	rsq = vec3_distsq(rveci,rvecj,delr);
+d820 1
+a820 1
+	if (jtype == -1) {
+d825 6
+a830 1
+
+a853 1
+	rsq = vec3_distsq(rveci,rvecj,delr);
+d855 1
+a855 1
+	// skip particles not included in force field
+d861 6
+a891 1
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+d899 6
+a904 1
+
+a927 1
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+d935 6
+a940 1
+
+d971 13
+a1004 6
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  j = bins[j];
+	  continue;
+	}
+a1029 2
+	  particles[j].get_x(rvecj);
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+d1037 7
+a1043 1
+
+d1070 4
+a1073 2
+	    particles[j].get_x(rvecj);
+	    rsq = vec3_distsq(rveci,rvecj,delr);
+d1081 7
+a1087 1
+
+d1159 50
+d1353 129
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+a109 13
+    case Neighbor::neighbor_nsq_ghost:
+      if (!Ltwoway_ghost) {
+	glog.error("Neighbor::Neighboring:\n"
+		   "For neighbor_nsq_ghost, must have Ltwoway_ghost");
+      }
+      SetupNeighborListNsqGhost(p->get_nparticles(),p->get_nghost_particles(),
+			   p->get_particles(),
+				type_index,rcutneighsq_table,comm);
+      break;
+    case Neighbor::neighbor_bin_ghost:
+      glog.error("Neighbor::Neighboring:\n"
+		 "bin ghost neighboring style not yet implemented");
+      break;
+a213 5
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  continue;
+	}
+d216 1
+a240 5
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+d243 1
+a273 11
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+
+d291 7
+a323 1
+    comm->get_nodefile() << "Nsq nghostparticles = " << nghost_particles << endl;
+a362 6
+      rcutneighsq = rcutneighsq_table[i][jtype];
+      // skip interactions not included in force field
+      if (rcutneighsq == 0.0) { 
+	continue;
+      }
+
+d365 1
+d509 2
+d516 2
+a550 1
+
+d595 3
+a597 108
+/* binned neighbor list construction: each owned atom i 
+   checks its own bin and other bins in Newton stencil */
+
+// Here is a synopsis of the logic in this function
+
+//   for (int i = 0; i < nparticles; i++) {
+//     // Ltwoway means we include all neighbors in list
+//     // No need to distinguish between own and gohst atoms
+//     if (Ltwoway) {
+//       // loop over all atoms in i's bin, up to i.
+//       j = binhead[ibin];
+//       while (j != i) {
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//       // loop over all atoms in i's bin, above i.
+//       j = bins[i];
+//       while (j >= 0) {
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//       // loop over all atoms in other bins in stencil, store every pair.
+//       // both the positive and negative senses of the stencil are used.
+//       for (k = 0; k < nstencil; k++) {
+// 	j = binhead[ibin+stencil[k]];
+// 	while (j >= 0) {
+// 	  if (rsq <= rcutneighsq) {
+// 	    neighptr[n++] = j;
+// 	  }
+// 	  j = bins[j];
+// 	}
+//       }
+//       for (k = 0; k < nstencil; k++) {
+// 	j = binhead[ibin-stencil[k]];
+// 	while (j >= 0) {
+// 	  if (rsq <= rcutneighsq) {
+// 	    neighptr[n++] = j;
+// 	  }
+// 	  j = bins[j];
+// 	}
+//       }
+//       // Not Ltwoway means each ij pair stored only once
+//       // It is still possible that Ltwoway_ghost is true.
+//     } else {
+//     // loop over rest of atoms in i's bin, ghosts are at end of linked list
+//     // if j is owned atom, store it, since j is beyond i in linked list
+//     // if j is ghost, only store if j coords are "above and to the right" of i
+//     // or if Ltwoway_ghost
+//       j = bins[i];
+//       while (j >= 0) {
+//  	if (j >= nparticles) {
+// 	  if (!Ltwoway_ghost) {
+// 	    if (delr[2] > 0.0) {
+// 	      j = bins[j];
+// 	      continue;
+// 	    } else if (delr[2] == 0.0) {
+// 	      if (delr[1] > 0.0) {
+// 		j = bins[j];
+// 		continue;
+// 	      } else if (delr[1] == 0.0) {
+// 		if (delr[0] > 0.0) {
+// 		  j = bins[j];
+// 		  continue;
+// 		}
+// 	      }
+// 	    }
+// 	  }
+// 	}
+
+// 	if (rsq <= rcutneighsq) {
+// 	  neighptr[n++] = j;
+// 	}
+// 	j = bins[j];
+//       }
+//       // loop over all atoms in other bins in positive stencil, 
+//       // store every pair
+//       for (k = 0; k < nstencil; k++) {
+// 	j = binhead[ibin+stencil[k]];
+// 	while (j >= 0) {
+// 	  if (rsq <= rcutneighsq) {
+// 	    neighptr[n++] = j;
+// 	  }
+// 	  j = bins[j];
+// 	}
+//       }
+//       // If Ltwoway_ghost, loop over all atoms in other bins 
+//       // in negative stencil, store every ghost pair
+//       if (Ltwoway_ghost) {
+// 	for (k = 0; k < nstencil; k++) {
+// 	  j = binhead[ibin-stencil[k]];
+// 	  while (j >= 0) {
+// 	    if (j < nparticles) {
+// 	      j = bins[j];
+// 	      continue;
+// 	    }
+// 	    if (rsq <= rcutneighsq) {
+// 	      neighptr[n++] = j;
+// 	    }
+// 	    j = bins[j];
+// 	  }
+// 	}
+//       }
+//     }
+//   }
+d611 1
+d617 1
+a617 1
+  BinParticles(nparticles,nghost_particles,particles,b,type_index,comm);
+d670 1
+d673 1
+a673 1
+	if (jtype == -1 ) {
+d678 1
+a678 6
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+	rsq = vec3_distsq(rveci,rvecj,delr);
+d702 1
+d704 1
+a704 1
+	// skip particle types not included in force field
+a709 6
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+	rsq = vec3_distsq(rveci,rvecj,delr);
+d735 1
+d743 1
+a743 6
+	  // skip interactions not included in force field
+	  if (rcutneighsq == 0.0) { 
+	    j = bins[j];
+	    continue;
+	  }
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+d767 1
+d775 1
+a775 6
+	  // skip interactions not included in force field
+	  if (rcutneighsq == 0.0) { 
+	    j = bins[j];
+	    continue;
+	  }
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+a805 13
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  j = bins[j];
+	  continue;
+	}
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	// skip interactions not included in force field
+	if (rcutneighsq == 0.0) { 
+	  j = bins[j];
+	  continue;
+	}
+
+d827 6
+d858 2
+d867 1
+a867 7
+	  // skip interactions not included in force field
+	  if (rcutneighsq == 0.0) { 
+	    j = bins[j];
+	    continue;
+	  }
+	  particles[j].get_x(rvecj);
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+d894 2
+a895 4
+	    if (j < nparticles) {
+	      j = bins[j];
+	      continue;
+	    }
+d903 1
+a903 7
+	    // skip interactions not included in force field
+	    if (rcutneighsq == 0.0) { 
+	      j = bins[j];
+	      continue;
+	    }
+	    particles[j].get_x(rvecj);
+	    rsq = vec3_distsq(rveci,rvecj,delr);
+a974 50
+
+}
+
+/* Bin Particles with type filtering*/
+
+void Neighbor::BinParticles(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles, const Box* b, 
+	       const vector<int>& type_index, Comm* comm) {
+  int i,ibin;
+  double rveci[3];
+  int itype;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Neighbor::BinParticles" << endl;
+  }
+
+  for (ibin = 0; ibin < mbins; ibin++) binhead[ibin] = -1;
+
+  bins.resize(nparticles+nghost_particles);
+
+  // bin ghost particles
+  for (i = nparticles; i < nparticles + nghost_particles; i++) {
+    itype = type_index[particles[i].get_type()];
+    // skip particles not included in force field
+    if (itype != -1) {
+      particles[i].get_x(rveci);
+      ibin = Coord2BinGhost(rveci,b);
+      bins[i] = binhead[ibin];
+      binhead[ibin] = i;
+    }
+  }
+
+  // bin own particles
+
+  for (i = 0; i < nparticles; i++) {
+    itype = type_index[particles[i].get_type()];
+    // skip particles not included in force field
+    if (itype != -1) {
+      particles[i].get_x(rveci);
+      ibin = Coord2BinLocal(rveci,b);
+      bins[i] = binhead[ibin];
+      binhead[ibin] = i;
+    }
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Neighbor::BinParticles" << endl;
+  }
+
+a1118 129
+
+void Neighbor::SetupNeighborListNsqGhost(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles,
+	       const vector<int>& type_index,
+	       double* const rcutneighsq_table[],Comm* comm) {
+  //This function does a brute force search for local particles
+  //lying within the cut-off. It generates lists of neighbors
+  // for both the Own particles and the Ghost particles.
+
+  int itype,jtype,itype_particle,itag,jtag;
+  double rcutneighsq,rsq;
+  double rveci[3],rvecj[3],delr[3];
+  int *neighptr;
+  int npnt,n;
+  int* ipnt_tmp;
+  int ipage;
+
+  // Clear out previous entries,
+  // and size first_ptr list to number of local particles
+
+  for (ipage=0;ipage<npage;ipage++) {
+    ipnt_tmp = pages[ipage];
+    delete []ipnt_tmp;
+  }
+  pages.clear();
+
+  first_ptr.resize(nparticles+nghost_particles);
+  nneigh_list.resize(nparticles+nghost_particles);
+  ipnt_tmp = new int[PAGESIZE];
+  pages.push_back(ipnt_tmp);
+  npage = 1;
+  npnt = 0;
+  nneighbors = 0;
+
+  // loop over each atom, storing neighbors
+
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+
+    // if necessary, goto next page and add pages
+
+    if (PAGESIZE - npnt < ONEATOM) {
+      npnt = 0;
+      npage++;
+      ipnt_tmp = new int[PAGESIZE];
+      pages.push_back(ipnt_tmp);
+    }
+
+    neighptr = &pages[npage-1][npnt];
+    n = 0;
+    itype_particle = particles[i].get_type();
+    itype = type_index[itype_particle];
+    // skip particles not included in force field
+    if (itype == -1) {
+      continue;
+      first_ptr[i] = neighptr;
+      nneigh_list[i] = 0;
+    }
+    particles[i].get_x(rveci);
+
+    // Include j<i neighbors if Ltwoway flag set in Neighbor constructor
+    if (Ltwoway) {
+      for (int j=0;j<i;j++) {
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  continue;
+	}
+	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj);
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+      
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		   "Exceeded ONEATOM",comm);
+	  }
+	}
+      }
+    }
+
+    for (int j=i+1;j<nparticles+nghost_particles;j++) {
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj);
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+
+      if (rsq <= rcutneighsq) {
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+    }
+
+    first_ptr[i] = neighptr;
+    nneigh_list[i] = n;
+    npnt += n;
+    nneighbors += n;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nsq nneighbors = " << nneighbors << endl;
+    comm->get_nodefile() << "Nsq npages = " << npage << endl;
+    comm->get_nodefile() << "Nsq nparticles = " << nparticles << endl;
+    comm->get_nodefile() << "Nsq nghost_particles = " << nghost_particles << endl;
+  }
+
+}  
+@
+
+
+3.6
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.5
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d110 13
+d349 1
+d1337 129
+@
+
+
+3.4
+log
+@Fixed several typos in force field classes.
+CV ----------------------------------------------------------------------
+@
+text
+@d214 5
+a220 1
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+d245 5
+a251 1
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+d282 11
+a309 7
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+
+d375 6
+a382 1
+      rcutneighsq = rcutneighsq_table[i][jtype];
+d609 108
+a716 3
+/* binned neighbor list construction with full Newton's 3rd law
+   every pair stored exactly once by some processor
+   each owned atom i checks its own bin and other bins in Newton stencil */
+a729 1
+
+d735 1
+a735 1
+  BinParticles(nparticles,nghost_particles,particles,b,comm);
+a787 1
+	rsq = vec3_distsq(rveci,rvecj,delr);
+d790 1
+a790 1
+	if (jtype == -1) {
+d795 6
+a800 1
+
+a823 1
+	rsq = vec3_distsq(rveci,rvecj,delr);
+d825 1
+a825 1
+	// skip particles not included in force field
+d831 6
+a861 1
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+d869 6
+a874 1
+
+a897 1
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+d905 6
+a910 1
+
+d941 13
+a974 6
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  j = bins[j];
+	  continue;
+	}
+a999 2
+	  particles[j].get_x(rvecj);
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+d1007 7
+a1013 1
+
+d1040 4
+a1043 2
+	    particles[j].get_x(rvecj);
+	    rsq = vec3_distsq(rveci,rvecj,delr);
+d1051 7
+a1057 1
+
+d1132 49
+@
+
+
+3.3
+log
+@Miscellaneous additions prior to adding Reax
+@
+text
+@a199 1
+      continue;
+d202 1
+a651 1
+      continue;
+d654 1
+@
+
+
+3.3.6.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d200 1
+a202 1
+      continue;
+a508 2
+  //cout << "Stencil\n";
+  //cout << "nextx=" << nextx << "  nexty=" << nexty << "  nextz=" << nextz << "\n";
+a513 2
+	    //cout << "i=" << i << " j=" << j << "  k=" << k ;
+	    //cout << " stencil=" << nstencil << "  value=" << k*mbiny*mbinx + j*mbinx + i << endl;
+d547 1
+d652 1
+a654 1
+      continue;
+d972 1
+@
+
+
+3.3.2.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@a109 13
+    case Neighbor::neighbor_nsq_ghost:
+      if (!Ltwoway_ghost) {
+	glog.error("Neighbor::Neighboring:\n"
+		   "For neighbor_nsq_ghost, must have Ltwoway_ghost");
+      }
+      SetupNeighborListNsqGhost(p->get_nparticles(),p->get_nghost_particles(),
+			   p->get_particles(),
+				type_index,rcutneighsq_table,comm);
+      break;
+    case Neighbor::neighbor_bin_ghost:
+      glog.error("Neighbor::Neighboring:\n"
+		 "bin ghost neighboring style not yet implemented");
+      break;
+a323 1
+    comm->get_nodefile() << "Nsq nghostparticles = " << nghost_particles << endl;
+a1116 129
+
+void Neighbor::SetupNeighborListNsqGhost(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles,
+	       const vector<int>& type_index,
+	       double* const rcutneighsq_table[],Comm* comm) {
+  //This function does a brute force search for local particles
+  //lying within the cut-off. It generates lists of neighbors
+  // for both the Own particles and the Ghost particles.
+
+  int itype,jtype,itype_particle,itag,jtag;
+  double rcutneighsq,rsq;
+  double rveci[3],rvecj[3],delr[3];
+  int *neighptr;
+  int npnt,n;
+  int* ipnt_tmp;
+  int ipage;
+
+  // Clear out previous entries,
+  // and size first_ptr list to number of local particles
+
+  for (ipage=0;ipage<npage;ipage++) {
+    ipnt_tmp = pages[ipage];
+    delete []ipnt_tmp;
+  }
+  pages.clear();
+
+  first_ptr.resize(nparticles+nghost_particles);
+  nneigh_list.resize(nparticles+nghost_particles);
+  ipnt_tmp = new int[PAGESIZE];
+  pages.push_back(ipnt_tmp);
+  npage = 1;
+  npnt = 0;
+  nneighbors = 0;
+
+  // loop over each atom, storing neighbors
+
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+
+    // if necessary, goto next page and add pages
+
+    if (PAGESIZE - npnt < ONEATOM) {
+      npnt = 0;
+      npage++;
+      ipnt_tmp = new int[PAGESIZE];
+      pages.push_back(ipnt_tmp);
+    }
+
+    neighptr = &pages[npage-1][npnt];
+    n = 0;
+    itype_particle = particles[i].get_type();
+    itype = type_index[itype_particle];
+    // skip particles not included in force field
+    if (itype == -1) {
+      continue;
+      first_ptr[i] = neighptr;
+      nneigh_list[i] = 0;
+    }
+    particles[i].get_x(rveci);
+
+    // Include j<i neighbors if Ltwoway flag set in Neighbor constructor
+    if (Ltwoway) {
+      for (int j=0;j<i;j++) {
+	jtype = type_index[particles[j].get_type()];
+	// skip particles not included in force field
+	if (jtype == -1) {
+	  continue;
+	}
+	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj);
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+      
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+
+	    if (comm->get_Lnodefile()) {
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    }
+
+	    glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		   "Exceeded ONEATOM",comm);
+	  }
+	}
+      }
+    }
+
+    for (int j=i+1;j<nparticles+nghost_particles;j++) {
+      jtype = type_index[particles[j].get_type()];
+      // skip particles not included in force field
+      if (jtype == -1) {
+	continue;
+      }
+      particles[j].get_x(rvecj);
+      rsq = vec3_distsq(rveci,rvecj);
+      rcutneighsq = rcutneighsq_table[itype][jtype];
+
+      if (rsq <= rcutneighsq) {
+	neighptr[n++] = j;
+	if (n > ONEATOM) {
+
+	  if (comm->get_Lnodefile()) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	  }
+
+	  glog.abort("Neighbor::SetupNeighborListNsq:\n"
+		     "Exceeded ONEATOM",comm);
+	}
+      }
+    }
+
+    first_ptr[i] = neighptr;
+    nneigh_list[i] = n;
+    npnt += n;
+    nneighbors += n;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nsq nneighbors = " << nneighbors << endl;
+    comm->get_nodefile() << "Nsq npages = " << npage << endl;
+    comm->get_nodefile() << "Nsq nparticles = " << nparticles << endl;
+    comm->get_nodefile() << "Nsq nghost_particles = " << nghost_particles << endl;
+  }
+
+}  
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d198 6
+d210 4
+d237 4
+d292 4
+d359 4
+d650 6
+d669 5
+d701 5
+d734 5
+d766 5
+d825 5
+d858 5
+d894 5
+d928 1
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d211 7
+a217 5
+#ifdef USE_NODEFILES
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d234 7
+a240 5
+#ifdef USE_NODEFILES
+	  comm->get_nodefile() << "n = " << n << endl;
+	  comm->get_nodefile() << "npage = " << npage << endl;
+	  comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d283 7
+a289 5
+#ifdef USE_NODEFILES
+	  comm->get_nodefile() << "n = " << n << endl;
+	  comm->get_nodefile() << "npage = " << npage << endl;
+	  comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d301 7
+a307 5
+#ifdef USE_NODEFILES  
+  comm->get_nodefile() << "Nsq nneighbors = " << nneighbors << endl;
+  comm->get_nodefile() << "Nsq npages = " << npage << endl;
+  comm->get_nodefile() << "Nsq nparticles = " << nparticles << endl;
+#endif
+d353 5
+a357 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d391 5
+a395 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Neighbor::SetupBins" << endl;
+#endif
+d494 32
+a525 30
+#ifdef USE_NODEFILES
+  comm->get_nodefile()  << "rcutneighmax = " << rcutneighmax << endl;
+  comm->get_nodefile()  << "rcutneighmaxall = " << rcutneighmaxall << endl;
+  comm->get_nodefile()  << "w[0] = " << w[0] << endl;
+  comm->get_nodefile()  << "w[1] = " << w[1] << endl;
+  comm->get_nodefile()  << "w[2] = " << w[2] << endl;
+  comm->get_nodefile()  << "rcutneighred[0] = " << rcutneighred[0] << endl;
+  comm->get_nodefile()  << "rcutneighred[1] = " << rcutneighred[1] << endl;
+  comm->get_nodefile()  << "rcutneighred[2] = " << rcutneighred[2] << endl;
+  comm->get_nodefile()  << "mbinxlo = " << mbinxlo << endl;
+  comm->get_nodefile()  << "mbinxhi = " << mbinxhi << endl;
+  comm->get_nodefile()  << "mbinylo = " << mbinylo << endl;
+  comm->get_nodefile()  << "mbinyhi = " << mbinyhi << endl;
+  comm->get_nodefile()  << "mbinzlo = " << mbinzlo << endl;
+  comm->get_nodefile()  << "mbinzhi = " << mbinzhi << endl;
+  comm->get_nodefile()  << "mbinx = " << mbinx << endl;
+  comm->get_nodefile()  << "mbiny = " << mbiny << endl;
+  comm->get_nodefile()  << "mbinz = " << mbinz << endl;
+  comm->get_nodefile()  << "nbinx = " << nbinx << endl;
+  comm->get_nodefile()  << "nbiny = " << nbiny << endl;
+  comm->get_nodefile()  << "nbinz = " << nbinz << endl;
+  comm->get_nodefile()  << "binsizex = " << binsizex << endl;
+  comm->get_nodefile()  << "binsizey = " << binsizey << endl;
+  comm->get_nodefile()  << "binsizez = " << binsizez << endl;
+  comm->get_nodefile()  << "mbins = " << mbins << endl;
+  comm->get_nodefile()  << "nextx = " << nextx << endl;
+  comm->get_nodefile()  << "nexty = " << nexty << endl;
+  comm->get_nodefile()  << "nextz = " << nextz << endl;
+  comm->get_nodefile()  << "nstencil = " << nstencil << endl;
+#endif
+d581 5
+a585 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Neighbor::SetupNeighborListBin" << endl;
+#endif
+d646 7
+a652 5
+#ifdef USE_NODEFILES
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d672 7
+a678 5
+#ifdef USE_NODEFILES
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d701 7
+a707 5
+#ifdef USE_NODEFILES
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d728 7
+a734 5
+#ifdef USE_NODEFILES
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d781 7
+a787 5
+#ifdef USE_NODEFILES
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d810 7
+a816 5
+#ifdef USE_NODEFILES
+	      comm->get_nodefile() << "n = " << n << endl;
+	      comm->get_nodefile() << "npage = " << npage << endl;
+	      comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+#endif
+d841 5
+a845 3
+		comm->get_nodefile() << "n = " << n << endl;
+		comm->get_nodefile() << "npage = " << npage << endl;
+		comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+a859 4
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Bin nneighbors = " << nneighbors << endl;
+  comm->get_nodefile() << "Bin npages = " << npage << endl;
+  comm->get_nodefile() << "Bin nparticles = " << nparticles << endl;
+d861 7
+a867 2
+  comm->get_nodefile() << "Exited Neighbor::SetupNeighborListBin" << endl;
+#endif
+d879 5
+a883 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Neighbor::BinParticles" << endl;
+#endif
+d904 5
+a908 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Neighbor::BinParticles" << endl;
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d211 1
+d215 1
+d232 1
+d236 1
+d279 1
+d283 1
+d295 1
+a295 1
+  
+d299 1
+a299 1
+
+d345 1
+a345 1
+
+d347 1
+d381 1
+a381 1
+
+d383 1
+d482 1
+a482 1
+
+d511 1
+a511 1
+
+d567 1
+a567 1
+
+d569 1
+a575 1
+
+d630 1
+d634 1
+a648 1
+
+d654 1
+d658 1
+d681 1
+d685 1
+d706 1
+d710 1
+d757 1
+d761 1
+d784 1
+d788 1
+d830 1
+a830 1
+
+d836 1
+d848 1
+a848 1
+
+d850 1
+a850 1
+
+d871 1
+a871 1
+
+d873 1
+a873 1
+
+@
+
+
+2.24
+log
+@Fixed problem with messed up neighbor.cpp
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.23
+log
+@*** empty log message ***
+@
+text
+@a444 1
+  binvector.resize(mbins);
+d551 1
+a551 1
+  int j,k,m,n,itype,jtype,ibin,kbin;
+a587 2
+#pragma _CRI concurrent
+
+a604 1
+
+d609 1
+a609 1
+    // loop over all atoms in i's bin, excluding i.
+d611 6
+a616 2
+      int njj = binvector[ibin].size();
+      vector <int> jtmp(njj,0);
+d618 13
+a630 1
+      int jj;
+d632 1
+a632 1
+#pragma _CRI concurrent
+d634 2
+a635 2
+      for (jj = 0; jj < njj; jj++) {
+	j = binvector[ibin][jj];
+d638 1
+d642 7
+a648 2
+	  if (i != j) {
+	    jtmp[jj] = 1;
+a650 1
+      }
+d652 1
+a652 11
+      for (jj = 0; jj < njj; jj++) {
+	if (jtmp[jj]) {
+	  neighptr[n++] = binvector[ibin][jj];
+ 	  if (n > ONEATOM) {
+   	    comm->get_nodefile() << "n = " << n << endl;
+   	    comm->get_nodefile() << "npage = " << npage << endl;
+   	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+ 	    glog.abort("Neighbor::SetupNeighborListBin:\n"
+ 		       "Exceeded ONEATOM",comm);
+ 	  }
+	}
+d659 2
+a660 12
+
+	kbin = ibin+stencil[k];
+
+	int njj = binvector[kbin].size();
+	vector <int> jtmp(njj,0);
+
+	int jj;
+
+#pragma _CRI concurrent
+
+	for (jj = 0; jj < njj; jj++) {
+	  j = binvector[kbin][jj];
+d665 1
+d667 1
+a667 7
+	    jtmp[jj] = 1;
+	  }
+	}
+
+	for (jj = 0; jj < njj; jj++) {
+	  if (jtmp[jj]) {
+	    neighptr[n++] = binvector[kbin][jj];
+d676 2
+a678 1
+
+a680 3
+      // Not Ltwoway means each ij pair stored only once
+      // It is still possible that Ltwoway_ghost is true.
+
+d682 2
+a683 12
+
+	kbin = ibin-stencil[k];
+
+	int njj = binvector[kbin].size();
+	vector <int> jtmp(njj,0);
+
+	int jj;
+
+#pragma _CRI concurrent
+
+	for (jj = 0; jj < njj; jj++) {
+	  j = binvector[kbin][jj];
+d688 1
+d690 1
+a690 7
+	    jtmp[jj] = 1;
+	  }
+	}
+
+	for (jj = 0; jj < njj; jj++) {
+	  if (jtmp[jj]) {
+	    neighptr[n++] = binvector[kbin][jj];
+d699 2
+a701 1
+
+d704 2
+d713 11
+a723 13
+      int njj = binvector[ibin].size();
+      vector <int> jtmp(njj,0);
+
+      int jj;
+
+#pragma _CRI concurrent
+
+      for (jj = 0; jj < njj; jj++) {
+	j = binvector[ibin][jj];
+	if (i < j) {
+	  if (j >= nparticles) {
+	    if (!Ltwoway_ghost) {
+	      if (delr[2] > 0.0) {
+d726 2
+a727 2
+	      } else if (delr[2] == 0.0) {
+		if (delr[1] > 0.0) {
+a729 5
+		} else if (delr[1] == 0.0) {
+		  if (delr[0] > 0.0) {
+		    j = bins[j];
+		    continue;
+		  }
+d734 1
+d736 10
+a745 6
+	  particles[j].get_x(rvecj);
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+	  jtype = type_index[particles[j].get_type()];
+	  rcutneighsq = rcutneighsq_table[itype][jtype];
+	  if (rsq <= rcutneighsq) {
+	    jtmp[jj] = 1;
+a747 1
+      }
+d749 1
+a749 11
+      for (jj = 0; jj < njj; jj++) {
+	if (jtmp[jj]) {
+	  neighptr[n++] = binvector[ibin][jj];
+ 	  if (n > ONEATOM) {
+   	    comm->get_nodefile() << "n = " << n << endl;
+   	    comm->get_nodefile() << "npage = " << npage << endl;
+   	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+ 	    glog.abort("Neighbor::SetupNeighborListBin:\n"
+ 		       "Exceeded ONEATOM",comm);
+ 	  }
+	}
+d752 2
+a753 1
+      // loop over all atoms in other bins in stencil, store every pair.
+d756 2
+a757 12
+
+	kbin = ibin+stencil[k];
+
+	int njj = binvector[kbin].size();
+	vector <int> jtmp(njj,0);
+
+	int jj;
+
+#pragma _CRI concurrent
+
+	for (jj = 0; jj < njj; jj++) {
+	  j = binvector[kbin][jj];
+d762 1
+d764 1
+a764 7
+	    jtmp[jj] = 1;
+	  }
+	}
+
+	for (jj = 0; jj < njj; jj++) {
+	  if (jtmp[jj]) {
+	    neighptr[n++] = binvector[[jj];
+d773 2
+a775 1
+
+a777 19
+//   	if (j >= nparticles) {
+//  	  if (!Ltwoway_ghost) {
+//  	    if (delr[2] > 0.0) {
+//  	      j = bins[j];
+//  	      continue;
+//  	    } else if (delr[2] == 0.0) {
+//  	      if (delr[1] > 0.0) {
+//  		j = bins[j];
+//  		continue;
+//  	      } else if (delr[1] == 0.0) {
+//  		if (delr[0] > 0.0) {
+//  		  j = bins[j];
+//  		  continue;
+//  		}
+//  	      }
+//  	    }
+//  	  }
+//  	}
+
+a781 2
+#pragma _CRI concurrent
+
+a783 3
+
+#pragma _CRI concurrent
+
+a854 22
+/* Bin Particles */
+
+void Neighbor::BinParticlesVector(
+	       const int& nparticles, const int& nghost_particles, 
+	       const Particle* particles, const Box* b, Comm* comm) {
+  int i,ibin;
+  double rveci[3];
+
+  comm->get_nodefile() << "Entered Neighbor::BinParticlesVector" << endl;
+  
+  // bin particles
+
+  for (i = 0; i < nparticles + nghost_particles; i++) {
+    particles[i].get_x(rveci);
+    ibin = Coord2BinLocal(rveci,b);
+    binvector[ibin]->push_back(i);
+  }
+
+  comm->get_nodefile() << "Exited Neighbor::BinParticlesVector" << endl;
+
+}
+
+@
+
+
+2.23.2.1
+log
+@Fixed problems with vectorized neighbor code
+@
+text
+@d568 1
+a568 1
+  BinParticlesVector(nparticles,nghost_particles,particles,b,comm);
+a744 2
+	  particles[j].get_x(rvecj);
+	  rsq = vec3_distsq(rveci,rvecj,delr);
+d748 1
+d752 1
+d756 1
+d764 2
+d813 1
+a813 1
+	    neighptr[n++] = binvector[kbin][jj];
+d826 19
+a936 2
+  for (ibin = 0; ibin < mbins; ibin++) binvector[ibin].clear();
+
+d939 1
+a939 1
+  for (i = 0; i < nparticles; i++) {
+d942 1
+a942 7
+    binvector[ibin].push_back(i);
+  }
+
+  for (i = nparticles; i < nparticles + nghost_particles; i++) {
+    particles[i].get_x(rveci);
+    ibin = Coord2BinGhost(rveci,b);
+    binvector[ibin].push_back(i);
+@
+
+
+2.22
+log
+@Added a new variant of the neighbor list, invoked by
+Ltwoway = false
+Ltwoway_ghost = true
+
+This is the same as what LAMMPS uses when Newton's Law is not used.
+
+The new variant is used in by the Force_Eam class, in order
+to eliminate the communication of fp.
+
+It was more of an experiment than anything. It works, and for
+examples with lots of ghost atoms, seems to speed things up, but
+I doubt that it is dramatic.
+@
+text
+@d445 1
+d552 1
+a552 1
+  int j,k,m,n,itype,jtype,ibin;
+d589 2
+d608 1
+d613 1
+a613 1
+    // loop over all atoms in i's bin, up to i.
+d615 2
+a616 6
+      j = binhead[ibin];
+      while (j != i) {
+	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj,delr);
+	jtype = type_index[particles[j].get_type()];
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+d618 1
+a618 13
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    glog.abort("Neighbor::SetupNeighborListBin:\n"
+		       "Exceeded ONEATOM",comm);
+	  }
+	}
+	
+	j = bins[j];
+      }
+d620 1
+a620 1
+    // loop over all atoms in i's bin, above i.
+d622 2
+a623 2
+      j = bins[i];
+      while (j >= 0) {
+a625 1
+
+d629 2
+a630 7
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    glog.abort("Neighbor::SetupNeighborListBin:\n"
+		       "Exceeded ONEATOM",comm);
+d633 1
+d635 11
+a645 1
+	j = bins[j];
+d652 12
+a663 2
+	j = binhead[ibin+stencil[k]];
+	while (j >= 0) {
+d668 4
+d673 3
+a675 2
+	  if (rsq <= rcutneighsq) {
+	    neighptr[n++] = j;
+d684 1
+a685 2
+	  j = bins[j];
+	}
+d688 3
+d692 12
+a703 2
+	j = binhead[ibin-stencil[k]];
+	while (j >= 0) {
+d708 4
+d713 3
+a715 2
+	  if (rsq <= rcutneighsq) {
+	    neighptr[n++] = j;
+d724 1
+a725 2
+	  j = bins[j];
+	}
+a727 2
+      // Not Ltwoway means each ij pair stored only once
+      // It is still possible that Ltwoway_ghost is true.
+d735 13
+a747 11
+      j = bins[i];
+      while (j >= 0) {
+	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj,delr);
+ 	if (j >= nparticles) {
+	  if (!Ltwoway_ghost) {
+	    if (delr[2] > 0.0) {
+	      j = bins[j];
+	      continue;
+	    } else if (delr[2] == 0.0) {
+	      if (delr[1] > 0.0) {
+d750 2
+a751 2
+	      } else if (delr[1] == 0.0) {
+		if (delr[0] > 0.0) {
+d754 5
+a762 1
+	}
+d764 6
+a769 10
+	jtype = type_index[particles[j].get_type()];
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	if (rsq <= rcutneighsq) {
+	  neighptr[n++] = j;
+	  if (n > ONEATOM) {
+	    comm->get_nodefile() << "n = " << n << endl;
+	    comm->get_nodefile() << "npage = " << npage << endl;
+	    comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+	    glog.abort("Neighbor::SetupNeighborListBin:\n"
+		       "Exceeded ONEATOM",comm);
+d772 1
+d774 11
+a784 1
+	j = bins[j];
+d787 1
+a787 2
+      // loop over all atoms in other bins in positive stencil, 
+      // store every pair
+d790 12
+a801 2
+	j = binhead[ibin+stencil[k]];
+	while (j >= 0) {
+d806 4
+d811 3
+a813 2
+	  if (rsq <= rcutneighsq) {
+	    neighptr[n++] = j;
+d822 1
+a823 2
+	  j = bins[j];
+	}
+d826 19
+d849 2
+d853 3
+d927 22
+@
+
+
+2.21
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d63 2
+a64 1
+	  const bool& Ltwoway_in, const int& neighbor_freq_in,
+d68 1
+d91 5
+d243 1
+a243 1
+      if (!Ltwoway) {
+d254 1
+a254 1
+      if (!Ltwoway) {
+d705 1
+d711 1
+d718 2
+a719 5
+	  if (delr[2] > 0.0) {
+	    j = bins[j];
+	    continue;
+	  } else if (delr[2] == 0.0) {
+	    if (delr[1] > 0.0) {
+d722 2
+a723 2
+	    } else if (delr[1] == 0.0) {
+	      if (delr[0] > 0.0) {
+d726 5
+a739 13
+// 	  if (j < nparticles) {
+// 	    glog.logfile << "Own bin local " << 
+// 	      particles[j].get_tag() << " " <<
+// 	      rvecj[0] << " " <<
+// 	      rvecj[1] << " " <<
+// 	      rvecj[2] << " " << rsq <<endl;
+// 	  } else {
+// 	    glog.logfile << "Own bin ghost " << 
+// 	      particles[j].get_tag() << " " <<
+// 	      rvecj[0] << " " <<
+// 	      rvecj[1] << " " <<
+// 	      rvecj[2] << " " << rsq << endl;
+// 	  }
+d752 2
+a753 1
+      // loop over all atoms in other bins in stencil, store every pair
+a764 13
+// 	    if (j < nparticles) {
+// 	      glog.logfile << "Other bin local " <<  
+// 		particles[j].get_tag() << " " <<
+// 		rvecj[0] << " " <<
+// 		rvecj[1] << " " <<
+// 		rvecj[2] << " " << rsq << endl;
+// 	    } else {
+// 	      glog.logfile << "Other bin ghost " << 
+// 		particles[j].get_tag() << " " <<
+// 		rvecj[0] << " " <<
+// 		rvecj[1] << " " <<
+// 		rvecj[2] << " " << rsq << endl;
+// 	    }
+d775 27
+@
+
+
+2.20
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@d79 1
+a79 1
+    delete []pages[ipage];;
+a80 8
+  pages.clear();
+
+  first_ptr.clear();
+  nneigh_list.clear();
+
+  binhead.clear();
+  stencil.clear();
+  bins.clear();
+@
+
+
+2.19
+log
+@Updated header
+@
+text
+@d77 14
+a147 3
+Neighbor::~Neighbor() {
+}
+
+d924 1
+a924 1
+	       "ibin for own particle out of range");
+@
+
+
+2.18
+log
+@Fixed problem with rcutneighmax when using multiple
+force fields with different cut off distances.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.17
+log
+@Added the Tersoff force field class
+@
+text
+@d130 4
+d357 1
+a357 2
+void Neighbor::SetupBins(const Box* b, Comm* comm)
+{
+d370 3
+a372 3
+  rcutneighred[0] = rcutneighmax/w[0];
+  rcutneighred[1] = rcutneighmax/w[1];
+  rcutneighred[2] = rcutneighmax/w[2];
+d454 1
+a454 1
+  double rcutsq = rcutneighmax*rcutneighmax;
+d465 1
+a830 1
+    //    glog.logfile << "Local bin = " << ibin << endl;
+d844 1
+d908 9
+a916 1
+  return (iz*mbiny*mbinx + iy*mbinx + ix + 1);
+d924 1
+d955 8
+a962 1
+  return (iz*mbiny*mbinx + iy*mbinx + ix + 1);
+@
+
+
+2.16
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@a44 1
+#include "force_twobody.h"
+d63 1
+a63 1
+	  const bool& Lasymm_in, const int& neighbor_freq_in,
+d66 1
+a66 1
+  Lasymm = Lasymm_in;
+d185 2
+a186 2
+    // Include j<i neighbors if Lasymm flag set in Neighbor constructor
+    if (Lasymm) {
+d229 1
+a229 1
+      if (!Lasymm) {
+d240 1
+a240 1
+      if (!Lasymm) {
+d592 2
+a593 2
+    // Lasymm means we include all neighbors in list
+    if (Lasymm) {
+d690 1
+a690 1
+      // Not Lassym means each ij pair stored only once
+@
+
+
+2.15
+log
+@Various
+@
+text
+@d57 1
+a57 1
+#define ONEATOM 3000
+d85 1
+d109 11
+a119 8
+  switch(neighbor_style) {
+  case Neighbor::neighbor_nsq:
+    SetupNeighborListNsqWall(walls,p->get_nparticles(),
+	   p->get_particles(),type_index,rcutneighsq_table,comm);
+    break;
+  default:
+    glog.error("Neighbor::Neighboring:\n"
+	       "Invalid neighbor style");
+a133 2
+
+
+a332 1
+    neighbor_skip = 1;
+@
+
+
+2.14
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.13
+log
+@This might be the value round of clean-up on the make files.
+Now it works on Cplant and everything.
+@
+text
+@d80 1
+a80 1
+	       int* type_index,
+d105 1
+a105 1
+	       ParticleList* p, int* type_index,
+d135 1
+a135 1
+	       const int* type_index,
+d284 2
+a285 1
+	       const int* type_index, double* const rcutneighsq_table[],
+d529 1
+a529 1
+	       const int* type_index,
+@
+
+
+2.12
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@a161 1
+  comm->get_nodefile() << "Added page # " << npage << endl;
+a175 1
+      comm->get_nodefile() << "Added page # " << npage << endl;
+a566 1
+  comm->get_nodefile() << "Added page # " << npage << endl;
+a581 1
+      comm->get_nodefile() << "Added page # " << npage << endl;
+@
+
+
+2.12.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a161 1
+#ifdef USE_NODEFILE
+a162 1
+#endif
+a176 1
+#ifdef USE_NODEFILE
+a177 1
+#endif
+a196 1
+#ifdef USE_NODEFILES
+a199 1
+#endif
+a215 1
+#ifdef USE_NODEFILES
+a218 1
+#endif
+a260 1
+#ifdef USE_NODEFILES
+a263 1
+#endif
+d275 1
+a275 1
+#ifdef USE_NODEFILES  
+d279 1
+a279 1
+#endif
+d324 1
+a324 1
+#ifdef USE_NODEFILES
+a325 1
+#endif
+d361 1
+a361 1
+#ifdef USE_NODEFILES
+a362 1
+#endif
+d461 1
+a461 1
+#ifdef USE_NODEFILES
+d489 1
+a489 1
+#endif
+d545 1
+a545 1
+#ifdef USE_NODEFILES
+a546 1
+#endif
+a568 1
+#ifdef USE_NODEFILES
+a569 1
+#endif
+a584 1
+#ifdef USE_NODEFILES
+a585 1
+#endif
+a609 1
+#ifdef USE_NODEFILES
+a612 1
+#endif
+a632 1
+#ifdef USE_NODEFILES
+a635 1
+#endif
+a657 1
+#ifdef USE_NODEFILES
+a660 1
+#endif
+a680 1
+#ifdef USE_NODEFILES
+a683 1
+#endif
+a738 1
+#ifdef USE_NODEFILES
+a741 1
+#endif
+a775 1
+#ifdef USE_NODEFILES
+a778 1
+#endif
+d793 1
+a793 1
+#ifdef USE_NODEFILES
+a798 1
+#endif
+d810 1
+a810 1
+#ifdef USE_NODEFILES
+d812 1
+a812 1
+#endif
+d834 1
+a834 1
+#ifdef USE_NODEFILES
+d836 1
+a836 1
+#endif
+@
+
+
+2.12.2.2
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a212 2
+    cout << "Neighbor :: nparticles = " << nparticles << "\n";
+
+d566 1
+d646 1
+@
+
+
+2.12.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d45 1
+d57 1
+a57 1
+#define ONEATOM 2000
+d64 1
+a64 2
+	  const bool& Ltwoway_in, const bool& Ltwoway_ghost_in, 
+	  const int& neighbor_freq_in,
+d67 1
+a67 2
+  Ltwoway = Ltwoway_in;
+  Ltwoway_ghost = Ltwoway_ghost_in;
+a77 6
+Neighbor::~Neighbor() {
+  for (int ipage=0;ipage<npage;ipage++) {
+    delete []pages[ipage];
+  }
+}
+
+d80 1
+a80 1
+	       const vector<int>& type_index,
+a83 5
+  if (Ltwoway && !Ltwoway_ghost) {
+      glog.error("Neighbor::Neighboring:\n"
+		 "Can not have Ltwoway and not Ltwoway_ghost");
+  }
+
+a84 1
+    neighbor_skip = 1;
+d105 1
+a105 1
+	       ParticleList* p, const vector<int>& type_index,
+d108 8
+a115 11
+  if (nflag) {
+    neighbor_skip = 1;
+    switch(neighbor_style) {
+    case Neighbor::neighbor_nsq:
+      SetupNeighborListNsqWall(walls,p->get_nparticles(),
+	  p->get_particles(),type_index,rcutneighsq_table,comm);
+      break;
+    default:
+      glog.error("Neighbor::Neighboring:\n"
+		 "Invalid neighbor style");
+    }
+d127 4
+a130 3
+void Neighbor::set_rcutneighmaxall(const double& rcutneighmaxall_in) {
+  rcutneighmaxall = rcutneighmaxall_in;
+};
+d135 1
+a135 1
+	       const vector<int>& type_index,
+d162 3
+d179 3
+d190 2
+a191 2
+    // Include j<i neighbors if Ltwoway flag set in Neighbor constructor
+    if (Ltwoway) {
+d240 1
+a240 1
+      if (!Ltwoway_ghost) {
+d251 1
+a251 1
+      if (!Ltwoway_ghost) {
+d298 1
+a298 2
+	       const vector<int>& type_index, 
+               double* const rcutneighsq_table[],
+d345 1
+d367 2
+a368 1
+void Neighbor::SetupBins(const Box* b, Comm* comm) {
+d382 3
+a384 3
+  rcutneighred[0] = rcutneighmaxall/w[0];
+  rcutneighred[1] = rcutneighmaxall/w[1];
+  rcutneighred[2] = rcutneighmaxall/w[2];
+d466 1
+a466 1
+  double rcutsq = rcutneighmaxall*rcutneighmaxall;
+a476 1
+  comm->get_nodefile()  << "rcutneighmaxall = " << rcutneighmaxall << endl;
+d544 1
+a544 1
+	       const vector<int>& type_index,
+d583 3
+d601 3
+d613 2
+a614 2
+    // Ltwoway means we include all neighbors in list
+    if (Ltwoway) {
+d718 1
+a718 2
+      // Not Ltwoway means each ij pair stored only once
+      // It is still possible that Ltwoway_ghost is true.
+a723 1
+    // or if Ltwoway_ghost
+d730 5
+a734 2
+	  if (!Ltwoway_ghost) {
+	    if (delr[2] > 0.0) {
+d737 2
+a738 2
+	    } else if (delr[2] == 0.0) {
+	      if (delr[1] > 0.0) {
+a740 5
+	      } else if (delr[1] == 0.0) {
+		if (delr[0] > 0.0) {
+		  j = bins[j];
+		  continue;
+		}
+d750 13
+d777 1
+a777 2
+      // loop over all atoms in other bins in positive stencil, 
+      // store every pair
+d789 13
+a815 27
+
+      // If Ltwoway_ghost, loop over all atoms in other bins 
+      // in negative stencil, store every ghost pair
+
+      if (Ltwoway_ghost) {
+	for (k = 0; k < nstencil; k++) {
+	  j = binhead[ibin-stencil[k]];
+	  while (j >= 0) {
+	    particles[j].get_x(rvecj);
+	    rsq = vec3_distsq(rveci,rvecj,delr);
+	    jtype = type_index[particles[j].get_type()];
+	    rcutneighsq = rcutneighsq_table[itype][jtype];
+
+	    if (rsq <= rcutneighsq) {
+	      neighptr[n++] = j;
+	      if (n > ONEATOM) {
+		comm->get_nodefile() << "n = " << n << endl;
+		comm->get_nodefile() << "npage = " << npage << endl;
+		comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+		glog.abort("Neighbor::SetupNeighborListBin:\n"
+			   "Exceeded ONEATOM",comm);
+	      }
+	    }
+	    j = bins[j];
+	  }
+	}
+      }
+d860 1
+a873 1
+  int ibin;
+d937 1
+a937 9
+  ibin = iz*mbiny*mbinx + iy*mbinx + ix + 1;
+
+  if (ibin < 0 || ibin >= mbins) {
+    glog.logfile << "ibin for own particle out of range " << ibin << endl;
+    glog.abort("Neighbor::Coord2BinLocal:\n"
+	       "ibin for local particle out of range");
+  }    
+
+  return ibin;
+a944 1
+  int ibin;
+d975 1
+a975 8
+  ibin = iz*mbiny*mbinx + iy*mbinx + ix + 1;
+  if (ibin < 0 || ibin >= mbins) {
+    glog.logfile << "ibin for ghost particle out of range " << ibin << endl;
+    glog.logfile << "x = " << x[0] << " " << x[1] << " " << x[2] << endl; 
+    glog.abort("Neighbor::Coord2BinGhost:\n"
+	       "ibin for ghost particle out of range");
+  }    
+  return ibin;
+@
+
+
+2.11
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@a69 1
+  nimages = 0;
+a70 1
+  ncosps = 0;
+a77 18
+void Neighbor::NeighboringCosp(
+	       ParticleList* p, 
+	       int* type_index,
+	       double* const rcutneighsq_table[],
+	       const Box* b, Comm* comm) {
+  if (nflag) {
+    switch(neighbor_style) {
+    case Neighbor::neighbor_nsq:
+      SetupNeighborListNsqCosp(p->get_nparticles(),p->get_particles(),
+				type_index,rcutneighsq_table,comm);
+      break;
+    default:
+      glog.error("Neighbor::NeighboringCosp:\n"
+		 "Invalid neighbor style");
+    }
+  }
+}
+
+a102 15
+void Neighbor::NeighboringWallCosp(
+	       const vector<Fixed_Object>& walls,
+	       ParticleList* p, int* type_index,
+	       double* const rcutneighsq_table[],
+	       const Box* b, Comm* comm) {
+  switch(neighbor_style) {
+  case Neighbor::neighbor_nsq:
+    SetupNeighborListNsqWallCosp(walls,p->get_nparticles(),p->get_particles(),type_index,rcutneighsq_table,comm);
+    break;
+  default:
+    glog.error("Neighbor::Neighboring:\n"
+	       "Invalid neighbor style");
+  }
+}
+
+a129 186
+void Neighbor::SetupImageStencilCosp(
+               const Box* b, Comm* comm) {
+  double lva[3],lvb[3],lvc[3],origin[3],wh,wk,wl;
+  double rcutneighsq_max,rminsq;
+  bool Lemptyshell;
+  int node;
+
+  node = comm->get_node();
+
+  b->get_lv(lva,lvb,lvc);
+  b->get_o(origin);
+    if (node == 0) {
+      glog.logfile << "Lattice vector a = " 
+	      << lva[0] << " " << lva[1] << " " << lva[2] << " " << endl;
+      glog.logfile << "Lattice vector b = " 
+	      << lvb[0] << " " << lvb[1] << " " << lvb[2] << " " << endl;
+      glog.logfile << "Lattice vector c = " 
+	      << lvc[0] << " " << lvc[1] << " " << lvc[2] << " " << endl;
+      glog.logfile << "Unit cell origin = " 
+	      << origin[0] << " " << origin[1] << " " << origin[2] << " " << endl;
+    }
+  if (!b->get_Lorthorhombic()) {
+    b->get_lw(wh,wk,wl);
+    if (node == 0) {
+      glog.logfile << "Unit cell lattice spacings = "
+	      << wh << " " << wk << " " << wl << " " << endl; 
+    }
+  }
+
+  // Clear out previous entries, if necessary
+
+  if (nimages > 0) {
+    nimages = 0;
+    image_stencil.clear();
+  }
+
+  // Ensure that first image is central box. This property is
+  // relied on to enable special treatment of central box
+
+  AddImage(0,0,0,lva,lvb,lvc);
+
+  rcutneighsq_max = rcutneighmax*rcutneighmax;
+  if (node == 0) {
+    glog.logfile << "Neighbor rcutneighsq_max = " << rcutneighsq_max << endl;
+  }
+  Lemptyshell = false;
+  //Emptyshell is an expensive way to limit search
+  //Better is to use uc_wa, uc_wb, uc_wc to limit number
+  //of unit cells in each direction.
+  //Also need a better way of identify opposing images,
+  //which is needed to avoid double counting interactions
+  //between particle and self-image of particle.
+  for (int l=1;l<=maxradius && !Lemptyshell;l++) {
+    Lemptyshell = true;
+
+    for (int i=-l;i<=l;i++) {
+      for (int j=-l;j<=l;j++) {
+	rminsq = ImageDist(i,j,l,lva,lvb,lvc);
+	if (rminsq <= rcutneighsq_max) {
+	  Lemptyshell = false;
+	  AddImage(i,j,l,lva,lvb,lvc);
+	  AddImage(i,j,-l,lva,lvb,lvc);
+	}
+      }
+    }
+
+    for (int i=-l;i<=l;i++) {
+      for (int j=-(l-1);j<=(l-1);j++) {
+	rminsq = ImageDist(i,l,j,lva,lvb,lvc);
+	if (rminsq <= rcutneighsq_max) {
+	  Lemptyshell = false;
+	  AddImage(i,l,j,lva,lvb,lvc);
+	  AddImage(i,-l,j,lva,lvb,lvc);
+	}
+      }
+    }
+
+    for (int i=-(l-1);i<=(l-1);i++) {
+      for (int j=-(l-1);j<=(l-1);j++) {
+	rminsq = ImageDist(l,j,i,lva,lvb,lvc);
+	if (rminsq <= rcutneighsq_max) {
+	  Lemptyshell = false;
+	  AddImage(l,j,i,lva,lvb,lvc);
+	  AddImage(-l,j,i,lva,lvb,lvc);
+	}
+      }
+    }
+
+  }
+
+}
+
+void Neighbor::SetupNeighborListNsqCosp(
+               const int& nparticles, const Particle* particles,
+	       const int* type_index,
+	       double* const rcutneighsq_table[],Comm* comm) {
+  //This function does a brute force search for neighbors of a
+  //central atom lying within the cut-off. It picks up interactions
+  //with periodic images by shifting the central atom to all images
+  //in the image stencil.
+
+  int itype,jtype,itype_particle,nneigh_image;
+  int jstart;
+  double rcutneighsq,rsq;
+  double* rshift;
+  double rveci[3],rveci0[3],rvecj[3];
+  cosp cosp_tmp;
+
+  // Clear out previous entries, if necessary
+
+  if (ncosps > 0) {
+    ncosps = 0;
+    cosp_list.clear();
+  }
+
+  if (nneighbors > 0) {
+    nneighbors = 0;
+    neigh_list.clear();
+  }
+
+  for (int i=0;i<nparticles;i++) {
+    itype_particle = particles[i].get_type();
+    itype = type_index[itype_particle];
+    particles[i].get_x(rveci0);
+    for (int image=0;image<nimages;image++) {
+      rshift = image_stencil[image];
+      vec3_add(rshift,rveci0,rveci);
+
+      nneigh_image = 0;
+
+      //Decide whether to include original as neighbor of this image.
+      jstart = i+1;
+      if (image>0) {
+	if (rshift[0] > 0.0) {
+	  jstart = i;
+	} else if (rshift[0] == 0.0) {
+	  if (rshift[1] > 0.0) {
+	    jstart = i;
+	  } else if (rshift[1] == 0.0) {
+	    if (rshift[2] > 0.0) {
+	      jstart = i;
+	    }
+	  }
+	}
+      }
+
+      // Include j<i neighbors if Lasymm flag set in Neighbor constructor
+      if (Lasymm) {
+	for (int j=0;j<i;j++) {
+
+	  jtype = type_index[particles[j].get_type()];
+	  particles[j].get_x(rvecj);
+	  rsq = vec3_distsq(rveci,rvecj);
+	  rcutneighsq = rcutneighsq_table[itype][jtype];
+
+	  if (rsq <= rcutneighsq) {
+	    if (nneigh_image == 0) {
+	      ncosps++;
+	      cosp_tmp.i = i;
+	      cosp_tmp.image = image;
+	      cosp_tmp.first = nneighbors;
+	      cosp_list.push_back(cosp_tmp);
+	    }
+	    neigh_list.push_back(j);
+	    nneighbors++;
+	    nneigh_image++;
+	  }
+	}
+      }
+
+      for (int j=jstart;j<nparticles;j++) {
+
+       	jtype = type_index[particles[j].get_type()];
+      	particles[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj);
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+
+	/*
+	jtype = 0;
+	particles[j].get_x(rvecj);
+	double delr0 = rveci[0]-rvecj[0];
+	double delr1 = rveci[1]-rvecj[1];
+	double delr2 = rveci[2]-rvecj[2];
+	rsq = delr0*delr0+delr1*delr1+delr2*delr2;
+	rcutneighsq = 75.4292;
+	*/
+a130 27
+	if (rsq <= rcutneighsq) {
+
+	  if (nneigh_image == 0) {
+	    ncosps++;
+	    cosp_tmp.i = i;
+	    cosp_tmp.image = image;
+	    cosp_tmp.first = nneighbors;
+	    cosp_list.push_back(cosp_tmp);
+	  }
+	  neigh_list.push_back(j);
+	  nneighbors++;
+	  nneigh_image++;
+	}
+      }
+    }
+  }
+  
+  //Add dummy cosp to mark end of last cosp in cosp_list
+  cosp_tmp.i = -1;
+  cosp_tmp.image = -1;
+  cosp_tmp.first = nneighbors;
+  cosp_list.push_back(cosp_tmp);
+
+  comm->get_nodefile() << "ncosps = " << ncosps << endl;
+  comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+
+}  
+a281 160
+void Neighbor::SetupNeighborListNsqNonselfCosp(
+	       const int& nparticlesi, const Particle* particlesi,
+	       const int& nparticlesj, const Particle* particlesj,
+	       const int* type_index, double* const rcutneighsq_table[],
+	       Comm* comm) {
+  //This function does a brute force search for neighbors of a
+  //central atom lying within the cut-off. It picks up interactions
+  //with periodic images by shifting the central atom to all images
+  //in the image stencil.
+  //
+  // This version takes two lists of atoms, assumed to be different,
+  // so it does not do any self-interaction checks.
+
+  int itype,jtype,itype_particle,nneigh_image;
+  double rcutneighsq,rsq;
+  double* rshift;
+  double rveci[3],rveci0[3],rvecj[3];
+  cosp cosp_tmp;
+
+  // Clear out previous entries, if necessary
+  if (ncosps > 0) {
+    ncosps = 0;
+    cosp_list.clear();
+  }
+
+  if (nneighbors > 0) {
+    nneighbors = 0;
+    neigh_list.clear();
+  }
+
+  for (int i=0;i<nparticlesi;i++) {
+    itype_particle = particlesi[i].get_type();
+    itype = type_index[itype_particle];
+    particlesi[i].get_x(rveci0);
+    for (int image=0;image<nimages;image++) {
+      rshift = image_stencil[image];
+      vec3_add(rshift,rveci0,rveci);
+
+      nneigh_image = 0;
+
+      for (int j=0;j<nparticlesj;j++) {
+
+	jtype = type_index[particlesj[j].get_type()];
+	particlesj[j].get_x(rvecj);
+	rsq = vec3_distsq(rveci,rvecj);
+	rcutneighsq = rcutneighsq_table[itype][jtype];
+	
+	if (rsq <= rcutneighsq) {
+	  if (nneigh_image == 0) {
+	    ncosps++;
+	    cosp_tmp.i = i;
+	    cosp_tmp.image = image;
+	    cosp_tmp.first = nneighbors;
+	    cosp_list.push_back(cosp_tmp);
+	  }
+	  neigh_list.push_back(j);
+	  nneighbors++;
+	  nneigh_image++;
+	}
+      }
+    }
+  }
+  
+  //Add dummy cosp to mark end of last cosp in cosp_list
+  cosp_tmp.i = -1;
+  cosp_tmp.image = -1;
+  cosp_tmp.first = nneighbors;
+  cosp_list.push_back(cosp_tmp);
+
+  comm->get_nodefile() << "ncosps = " << ncosps << endl;
+  comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+
+}  
+
+void Neighbor::SetupNeighborListNsqWallCosp(
+	       const vector<Fixed_Object>& walls,
+	       const int& nparticles, const Particle* particles,
+	       const int* type_index, double* const rcutneighsq_table[],
+	       Comm* comm) {
+  int nwalls,nneigh_image;
+  double rcutneighsq,rsq;
+  double* rshift;
+  double pos,pos0,rveci[3],rvecj[3];
+  int iaxis,jtype;
+  cosp cosp_tmp;
+  int node;
+
+  node = comm->get_node();
+
+  // Clear out previous entries, if necessary
+  if (ncosps > 0) {
+    ncosps = 0;
+    cosp_list.clear();
+  }
+
+  if (nneighbors > 0) {
+    nneighbors = 0;
+    neigh_list.clear();
+  }
+
+  nwalls = walls.size();
+
+  for (int i=0;i<nwalls;i++) {
+    walls[i].get_x(rveci);
+    iaxis = walls[i].get_color();
+    pos0 = rveci[iaxis-1];
+    for (int image=0;image<nimages;image++) {
+      rshift = image_stencil[image];
+
+      switch(iaxis) {
+      case 1:
+	if(rshift[1]!=0.0||rshift[2]!=0.0) continue;
+	break;
+      case 2:
+	if(rshift[0]!=0.0||rshift[2]!=0.0) continue;
+	break;
+      case 3:
+	if(rshift[0]!=0.0||rshift[1]!=0.0) continue;
+	break;
+      default:
+	glog.error("Neighbor::SetupNeighborListNsqWall:\n"
+		   "Invalid iaxis value");
+      }
+
+      pos = pos0+rshift[iaxis-1];
+
+      nneigh_image = 0;
+
+      for (int j=0;j<nparticles;j++) {
+
+	jtype = type_index[particles[j].get_type()];
+	particles[j].get_x(rvecj);
+	rsq = pow(pos-rvecj[iaxis-1],2);
+	rcutneighsq = rcutneighsq_table[i][jtype];
+	if (rsq <= rcutneighsq) {
+	  if (nneigh_image == 0) {
+	    ncosps++;
+	    cosp_tmp.i = i;
+	    cosp_tmp.image = image;
+	    cosp_tmp.first = nneighbors;
+	    cosp_list.push_back(cosp_tmp);
+	  }
+	  neigh_list.push_back(j);
+	  nneighbors++;
+	  nneigh_image++;
+	}
+      }
+    }
+  }
+  
+  //Add dummy cosp to mark end of last cosp in cosp_list
+  cosp_tmp.i = -1;
+  cosp_tmp.image = -1;
+  cosp_tmp.first = nneighbors;
+  cosp_list.push_back(cosp_tmp);
+
+  comm->get_nodefile() << "ncosps = " << ncosps << endl;
+  comm->get_nodefile() << "nneighbors = " << nneighbors << endl;
+
+}  
+a327 57
+
+void Neighbor::AddImage(
+               const int& i, const int& j, const int& k,
+	       const double lva[], const double lvb[], const double lvc[]) {
+  double* rvec = new double[3];
+  rvec[0] = 0.0;
+  rvec[1] = 0.0;
+  rvec[2] = 0.0;
+  vec3_scaleadd(i,lva,rvec,rvec);
+  vec3_scaleadd(j,lvb,rvec,rvec);
+  vec3_scaleadd(k,lvc,rvec,rvec);
+
+  nimages++;
+  image_stencil.push_back(rvec);
+}
+
+double Neighbor::ImageDist(
+		 const int& i, const int& j, const int& k,
+		 const double lva[], const double lvb[], 
+                 const double lvc[]) const {
+  double delr[3];
+  double deli,delj,delk;
+
+  if (i>0) {
+    deli= i-1;
+  } else if (i==0) {
+    deli = 0;
+  } else {
+    deli = i+1;
+  }
+
+  if (j>0) {
+    delj= j-1;
+  } else if (j==0) {
+    delj = 0;
+  } else {
+    delj = j+1;
+  }
+
+  if (k>0) {
+    delk= k-1;
+  } else if (k==0) {
+    delk = 0;
+  } else {
+    delk = k+1;
+  }
+
+  delr[0] = 0.0;
+  delr[1] = 0.0;
+  delr[2] = 0.0;
+  vec3_scaleadd(deli,lva,delr,delr);
+  vec3_scaleadd(delj,lvb,delr,delr);
+  vec3_scaleadd(delk,lvc,delr,delr);
+    
+  return vec3_dot(delr,delr);
+}
+
+d593 3
+a595 1
+    ibin = Coord2Bin(rveci,b);
+d693 1
+d704 1
+a704 1
+	if (j >= nparticles) {
+d725 13
+d762 13
+d820 1
+a820 1
+    ibin = Coord2Bin(rveci,b);
+d829 2
+a830 1
+    ibin = Coord2Bin(rveci,b);
+d839 72
+a910 3
+/* convert atom coords into local bin #
+   take special care to insure ghost atoms with
+   coord >= prd or coord < 0.0 are put in correct bins */
+d912 1
+a912 1
+int Neighbor::Coord2Bin(const double x[], const Box* b)
+@
+
+
+2.10
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d29 3
+a801 2
+// by Steve Plimpton (May 2003), extended to nonorthorhombic
+// simulations boxes.  
+a997 3
+
+// The binning scheme is based on the Neighbor class written
+// by Steve Plimpton.
+@
+
+
+2.9
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d1 28
+@
+
+
+2.8
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d27 3
+d61 1
+a61 1
+      glog.error("Neighbor::Neighboring:\n"
+a364 5
+  if (ONEATOM > PAGESIZE) {
+    glog.error("Neighbor::SetupNeighborListNsq:\n"
+	       "ONEATOM > PAGESIZE");
+  }
+
+d379 1
+d394 1
+a986 5
+  if (ONEATOM > PAGESIZE) {
+    glog.error("Neighbor::SetupNeighborListBin:\n"
+	       "ONEATOM > PAGESIZE");
+  }
+
+d1008 1
+d1024 1
+@
+
+
+2.7
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d29 1
+a29 1
+	  const int& neighbor_style_in, 
+@
+
+
+2.6
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d42 2
+d69 1
+d1290 17
+@
+
+
+2.5
+log
+@Removed some diagnostic output.
+@
+text
+@d16 1
+d25 3
+d41 1
+d72 6
+a77 1
+				type_index,rcutneighsq_table,comm,b);
+d121 4
+d129 1
+a129 1
+               const Forcefield& ff, const Box* b, Comm* comm) {
+d169 1
+a169 2
+  rcutneighsq_max = ff.get_rcut_max()+rskin;
+  rcutneighsq_max = rcutneighsq_max*rcutneighsq_max;
+d347 1
+a347 1
+	       double* const rcutneighsq_table[],Comm* comm, const Box* b) {
+d354 9
+d365 1
+a365 1
+  // and size first_list to number of local particles
+d367 12
+d380 2
+a381 2
+  neigh_list.clear();
+  first_list.resize(nparticles+1);
+d385 11
+a395 1
+    first_list[i] = nneighbors;
+d409 8
+a416 2
+	  neigh_list.push_back(j);
+	  nneighbors++;
+d428 8
+a435 2
+	neigh_list.push_back(j);
+	nneighbors++;
+d473 8
+a480 2
+	neigh_list.push_back(j);
+	nneighbors++;
+d483 5
+a489 2
+  first_list[nparticles] = nneighbors;
+
+d491 2
+d787 1
+a787 1
+void Neighbor::SetupBins(const Box* b, const ForceFieldList* ff, Comm* comm)
+d789 1
+a789 1
+  double w[3];
+d791 1
+a791 1
+  double rcutneighmax,rcutneighred[3];
+d795 2
+d798 1
+a800 1
+  rcutneighmax = ff->get_rcutneighmax();
+d824 2
+a825 1
+  coord = myloc[0]/procgrid[0] - rcutneighred[0] - small;
+d828 2
+a829 1
+  coord = (myloc[0]+1)/procgrid[0] + rcutneighred[0] + small;
+d832 2
+a833 1
+  coord = myloc[1]/procgrid[1] - rcutneighred[1] - small;
+d836 2
+a837 1
+  coord = (myloc[1]+1)/procgrid[1] + rcutneighred[1] + small;
+d840 2
+a841 1
+  coord = myloc[2]/procgrid[2] - rcutneighred[2] - small;
+d844 2
+a845 1
+  coord = (myloc[2]+1)/procgrid[2] + rcutneighred[2] + small;
+a865 1
+  maxbin = mbins;
+a881 1
+  maxstencil = nmax;
+d891 1
+a891 1
+	  if (BinDistance(i,j,k,w) < rcutsq)
+d893 29
+d925 1
+a925 1
+// compute closest distance between central bin (0,0,0) and bin (i,j,k)
+d928 2
+a929 1
+			      const int& k, const double w[])
+d931 1
+a931 1
+  double delx,dely,delz;
+d934 1
+a934 1
+    delx = (i-1)*binsizex*w[0];
+d938 1
+a938 1
+    delx = (i+1)*binsizex*w[0];
+d941 1
+a941 1
+    dely = (j-1)*binsizey*w[1];
+d945 1
+a945 1
+    dely = (j+1)*binsizey*w[1];
+d948 1
+a948 1
+    delz = (k-1)*binsizez*w[2];
+d952 1
+a952 1
+    delz = (k+1)*binsizez*w[2];
+d954 4
+a957 1
+  return (delx*delx + dely*dely + delz*delz);
+d961 2
+a962 1
+	       const int& nparticles, const Particle* particles,
+d966 1
+a966 1
+}
+d970 161
+d1132 50
+d1183 101
+a1283 160
+// /* binned neighbor list construction with full Newton's 3rd law
+//    every pair stored exactly once by some processor
+//    each owned atom i checks its own bin and other bins in Newton stencil */
+
+// void Neighbor::pair_bin_newton()
+// {
+//   int j,k,m,n,itype,jtype,ibin,which;
+//   double xtmp,ytmp,ztmp,delx,dely,delz,rsq;
+//   int *neighptr;
+
+//   // bin local & ghost atoms
+
+//   bin_atoms();
+
+//   // loop over each atom, storing neighbors
+
+//   double **x = atom->x;
+//   int *type = atom->type;
+//   int nlocal = atom->nlocal;
+//   int nall = atom->nlocal + atom->nghost;
+//   int molecular = atom->molecular;
+
+//   npage = 0;
+//   int npnt = 0;
+
+//   for (int i = 0; i < nlocal; i++) {
+
+//     // if necessary, goto next page and add pages
+
+//     if (PAGESIZE - npnt < ONEATOM) {
+//       npnt = 0;
+//       npage++;
+//       if (npage == maxpage) {
+// 	maxpage += PAGEDELTA;
+// 	pages = (int **) memory->srealloc(pages,maxpage*sizeof(int *),"pages");
+// 	for (m = npage; m < maxpage; m++)
+// 	  pages[m] = (int *) memory->smalloc(PAGESIZE*sizeof(int),"pages[m]");
+//       }
+//     }
+
+//     neighptr = &pages[npage][npnt];
+//     n = 0;
+
+//     itype = type[i];
+//     xtmp = x[i][0];
+//     ytmp = x[i][1];
+//     ztmp = x[i][2];
+
+//     // loop over rest of atoms in i's bin, ghosts are at end of linked list
+//     // if j is owned atom, store it, since j is beyond i in linked list
+//     // if j is ghost, only store if j coords are "above and to the right" of i
+
+//     j = bins[i];
+//     while (j >= 0) {
+//       if (j >= nlocal) {
+// 	if ((x[j][2] < ztmp) || (x[j][2] == ztmp && x[j][1] < ytmp) ||
+// 	    (x[j][2] == ztmp && x[j][1]  == ytmp && x[j][0] < xtmp)) {
+// 	  j = bins[j];
+// 	  continue;
+// 	}
+//       }
+
+//       jtype = type[j];
+//       delx = xtmp - x[j][0];
+//       dely = ytmp - x[j][1];
+//       delz = ztmp - x[j][2];
+//       rsq = delx*delx + dely*dely + delz*delz;
+
+//       if (rsq <= rcutneighsq[itype][jtype]) {
+// 	if (molecular) which = find_special(i,j);
+// 	else which = 0;
+// 	if (which == 0) neighptr[n++] = j;
+// 	else if (which > 0) neighptr[n++] = which*nall + j;
+//       }
+
+//       j = bins[j];
+//     }
+
+//     // loop over all atoms in other bins in stencil, store every pair
+
+//     ibin = Coord2Bin(x[i]);
+//     for (k = 0; k < nstencil; k++) {
+//       j = binhead[ibin+stencil[k]];
+//       while (j >= 0) {
+// 	jtype = type[j];
+// 	delx = xtmp - x[j][0];
+// 	dely = ytmp - x[j][1];
+// 	delz = ztmp - x[j][2];
+// 	rsq = delx*delx + dely*dely + delz*delz;
+
+// 	if (rsq <= rcutneighsq[itype][jtype]) {
+// 	  if (molecular) which = find_special(i,j);
+// 	  else which = 0;
+// 	  if (which == 0) neighptr[n++] = j;
+// 	  else if (which > 0) neighptr[n++] = which*nall + j;
+// 	}
+
+// 	j = bins[j];
+//       }
+//     }
+
+//     firstneigh[i] = neighptr;
+//     numneigh[i] = n;
+//     npnt += n;
+//   }
+// }
+
+
+// /* bin local atoms */
+
+// void Neighbor::BinParticlesLocal(const int& nparticles, const Particle* particles,
+// 	       const Box* b, Comm* comm) {
+// {
+//   int i,ibin,nlocal,nall;
+
+//   for (i = 0; i < mbins; i++) binhead[i] = -1;
+
+//   for (i = nlocal; i < nall; i++) {
+//     ibin = Coord2Bin(x[i]);
+//     bins[i] = binhead[ibin];
+//     binhead[ibin] = i;
+//   }
+
+//   // bin owned atoms
+
+//   for (i = 0; i < nlocal; i++) {
+//     ibin = Coord2Bin(x[i]);
+//     bins[i] = binhead[ibin];
+//     binhead[ibin] = i;
+//   }
+// }
+
+// /* convert atom coords into local bin #
+//    take special care to insure ghost atoms with
+//    coord >= prd or coord < 0.0 are put in correct bins */
+
+// int Neighbor::Coord2Bin(double *x)
+// {
+//   int ix,iy,iz;
+
+//   if (x[0] >= domain->boxxhi)
+//     ix = static_cast<int> ((x[0]-domain->boxxhi)*bininvx) + nbinx - mbinxlo;
+//   else if (x[0] >= domain->boxxlo)
+//     ix = static_cast<int> ((x[0]-domain->boxxlo)*bininvx) - mbinxlo;
+//   else
+//     ix = static_cast<int> ((x[0]-domain->boxxlo)*bininvx) - mbinxlo - 1;
+  
+//   if (x[1] >= domain->boxyhi)
+//     iy = static_cast<int> ((x[1]-domain->boxyhi)*bininvy) + nbiny - mbinylo;
+//   else if (x[1] >= domain->boxylo)
+//     iy = static_cast<int> ((x[1]-domain->boxylo)*bininvy) - mbinylo;
+//   else
+//     iy = static_cast<int> ((x[1]-domain->boxylo)*bininvy) - mbinylo - 1;
+  
+//   if (x[2] >= domain->boxzhi)
+//     iz = static_cast<int> ((x[2]-domain->boxzhi)*bininvz) + nbinz - mbinzlo;
+//   else if (x[2] >= domain->boxzlo)
+//     iz = static_cast<int> ((x[2]-domain->boxzlo)*bininvz) - mbinzlo;
+//   else
+//     iz = static_cast<int> ((x[2]-domain->boxzlo)*bininvz) - mbinzlo - 1;
+d1285 2
+a1286 2
+//   return (iz*mbiny*mbinx + iy*mbinx + ix + 1);
+// }
+@
+
+
+2.4
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@a355 4
+    comm->get_nodefile() << "i = " << i << 
+      " " << b->Fractional(0,rveci) << 
+      " " << b->Fractional(1,rveci) << 
+      " " << b->Fractional(2,rveci) << endl;
+a362 11
+	comm->get_nodefile() << "i = " << std::setw(3) << i << 
+	  " j = " << std::setw(3) << j << 
+	  std::setw(9) << b->Fractional(0,rvecj) << 
+	  std::setw(9) << b->Fractional(1,rvecj) << 
+	  std::setw(9) << b->Fractional(2,rvecj);
+	if (fabs(rsq-4.17578) < 1e-3) {
+	  comm->get_nodefile() << " " << rsq 
+			       << " " << rcutneighsq << endl;
+	} else {
+	  comm->get_nodefile() << endl;
+	}
+a368 1
+      comm->get_nodefile() << "j<i nneighbors = " << nneighbors << endl;
+a371 1
+
+a375 11
+      comm->get_nodefile() << "i = " << std::setw(3) << i << 
+	" j = " << std::setw(3) << j << 
+	std::setw(9) << b->Fractional(0,rvecj) << 
+	std::setw(9) << b->Fractional(1,rvecj) << 
+	std::setw(9) << b->Fractional(2,rvecj);
+      if (fabs(rsq-4.17578) < 1e-3) {
+	comm->get_nodefile() << " " << rsq 
+			     << " " << rcutneighsq << endl;
+      } else {
+	comm->get_nodefile() << endl;
+      }
+a381 1
+    comm->get_nodefile() << "j>i nneighbors = " << nneighbors << endl;
+a414 11
+      comm->get_nodefile() << "i = " << std::setw(3) << i << 
+	" j = " << std::setw(3) << j << 
+	std::setw(9) << b->Fractional(0,rvecj) << 
+	std::setw(9) << b->Fractional(1,rvecj) << 
+	std::setw(9) << b->Fractional(2,rvecj);
+      if (fabs(rsq-4.17578) < 1e-3) {
+	comm->get_nodefile() << " " << rsq 
+			     << " " << rcutneighsq << endl;
+      } else {
+	comm->get_nodefile() << endl;
+      }
+a420 2
+    comm->get_nodefile() << "j>=nparticles nneighbors = " << nneighbors << endl;
+
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d5 1
+a33 2
+  nneighbors_local = 0;
+  nneighbors_ghost = 0;
+d39 1
+a39 1
+void Neighbor::Neighboring(
+d47 1
+a47 1
+      SetupNeighborListNsq(p->get_nparticles(),p->get_particles(),
+d57 1
+a57 1
+void Neighbor::NeighboringGhost(
+d65 3
+a67 7
+      SetupNeighborListNsqLocal(p->get_nparticles(),p->get_particles(),
+				type_index,rcutneighsq_table,comm);
+      SetupNeighborListNsqGhost(p->get_nparticles(),p->get_particles(),
+				p->get_nghost_particles(),
+				p->get_ghost_particles(),
+				type_index,rcutneighsq_table,comm);
+      nneighbors = nneighbors_local + nneighbors_ghost;
+d76 1
+a76 1
+void Neighbor::NeighboringWall(
+d83 1
+a83 1
+    SetupNeighborListNsqWall(walls,p->get_nparticles(),p->get_particles(),type_index,rcutneighsq_table,comm);
+d91 1
+a91 1
+void Neighbor::NeighboringWallLocal(
+d98 1
+a98 1
+    SetupNeighborListNsqWallLocal(walls,p->get_nparticles(),
+d114 1
+a114 1
+void Neighbor::SetupImageStencil(
+d207 1
+a207 1
+void Neighbor::SetupNeighborListNsq(
+d330 3
+a332 2
+void Neighbor::SetupNeighborListNsqLocal(
+	       const int& nparticles, const Particle* particles,
+d334 1
+a334 1
+	       double* const rcutneighsq_table[],Comm* comm) {
+d338 1
+a338 1
+  int itype,jtype,itype_particle;
+d340 1
+a340 1
+  double rveci[3],rvecj[3];
+d345 3
+a347 3
+  nneighbors_local = 0;
+  neigh_list_local.clear();
+  first_list_local.resize(nparticles+1);
+d351 1
+a351 1
+    first_list_local[i] = nneighbors_local;
+d356 4
+d367 11
+d380 2
+a381 2
+	  neigh_list_local.push_back(j);
+	  nneighbors_local++;
+d384 1
+d393 12
+a404 1
+      
+d406 2
+a407 2
+	neigh_list_local.push_back(j);
+	nneighbors_local++;
+d410 1
+a410 28
+  }
+  
+  first_list_local[nparticles] = nneighbors_local;
+
+  comm->get_nodefile() << "nneighbors_local = " << nneighbors_local << endl;
+
+}  
+	
+void Neighbor::SetupNeighborListNsqGhost(
+	       const int& nparticles, const Particle* particles,
+	       const int& nghost_particles, const Particle* ghost_particles,
+	       const int* type_index,
+	       double* const rcutneighsq_table[],Comm* comm) {
+  //This function does a brute force search for ghost particles
+  //lying within the cut-off. 
+
+  int itype,jtype,itype_particle,itag,jtag;
+  double rcutneighsq,rsq;
+  double rveci[3],rvecj[3],delr[3];
+
+  // Clear out previous entries,
+  // and size first_list to number of local particles
+
+  nneighbors_ghost = 0;
+  neigh_list_ghost.clear();
+  first_list_ghost.resize(nparticles+1);
+
+  for (int i=0;i<nparticles;i++) {
+a411 4
+    first_list_ghost[i] = nneighbors_ghost;
+    itype_particle = particles[i].get_type();
+    itype = type_index[itype_particle];
+    particles[i].get_x(rveci);
+d413 1
+d415 1
+a415 3
+    for (int j=0;j<nghost_particles;j++) {
+
+      jtag = ghost_particles[j].get_tag();
+d425 1
+a425 1
+      ghost_particles[j].get_x(rvecj);
+d442 1
+a442 1
+      jtype = type_index[ghost_particles[j].get_type()];
+d444 12
+a455 1
+      
+d457 2
+a458 2
+	neigh_list_ghost.push_back(j);
+	nneighbors_ghost++;
+d461 2
+d465 1
+a465 2
+  first_list_ghost[nparticles] = nneighbors_ghost;
+  comm->get_nodefile() << "nneighbors_ghost = " << nneighbors_ghost << endl;
+d467 1
+a467 1
+}
+d469 3
+a471 1
+void Neighbor::SetupNeighborListNsqNonself(
+d545 1
+a545 1
+void Neighbor::SetupNeighborListNsqWall(
+d632 1
+a632 1
+void Neighbor::SetupNeighborListNsqWallLocal(
+d647 3
+a649 3
+  nneighbors_local = 0;
+  neigh_list_local.clear();
+  first_list_local.resize(nwalls+1);
+d653 1
+a653 1
+    first_list_local[i] = nneighbors_local;
+d666 2
+a667 2
+	neigh_list_local.push_back(j);
+	nneighbors_local++;
+d672 1
+a672 1
+  first_list_local[nwalls] = nneighbors_local;
+d674 1
+a674 1
+  comm->get_nodefile() << "nneighbors_local = " << nneighbors_local << endl;
+d896 1
+a896 1
+void Neighbor::SetupNeighborListBinLocal(
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d17 1
+d43 1
+a43 1
+	       double* const cutneighsq_table[],
+a44 5
+  float t1,t2,tneigh;
+  int node;
+
+  node = comm->get_node();
+
+a47 1
+      t1 = clock();
+d49 1
+a49 8
+				type_index,cutneighsq_table,comm);
+      t2 = clock();
+      tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+      if (node == 0) {
+	glog.logfile << "Neighboring style is [enum Neighbor::neighbor_styles] " <<
+	  neighbor_style << endl;
+	glog.logfile << "Neighboring time is " << tneigh << endl;
+      }
+d61 1
+a61 1
+	       double* const cutneighsq_table[],
+a62 5
+  float t1,t2,tneigh;
+  int node;
+
+  node = comm->get_node();
+
+a65 1
+      t1 = clock();
+d67 1
+a67 1
+				type_index,cutneighsq_table,comm);
+d71 2
+a72 8
+				type_index,cutneighsq_table,comm);
+      t2 = clock();
+      tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+      if (node == 0) {
+	glog.logfile << "Neighboring style is [enum Neighbor::neighbor_styles] " <<
+	  neighbor_style << endl;
+	glog.logfile << "Neighboring time is " << tneigh << endl;
+      }
+d84 1
+a84 1
+	       double* const cutneighsq_table[],
+a85 5
+  float t1,t2,tneigh;
+  int node;
+
+  node = comm->get_node();
+
+d88 1
+a88 9
+    t1 = clock();
+    SetupNeighborListNsqWall(walls,p->get_nparticles(),p->get_particles(),type_index,cutneighsq_table,comm);
+    t2 = clock();
+    tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+    if (node == 0) {
+      glog.logfile << "Neighboring style is [enum Neighbor::neighbor_styles] " <<
+	neighbor_style << endl;
+      glog.logfile << "Neighboring time is " << tneigh << endl;
+    }
+d99 1
+a99 1
+	       double* const cutneighsq_table[],
+a100 5
+  float t1,t2,tneigh;
+  int node;
+
+  node = comm->get_node();
+
+a102 1
+    t1 = clock();
+d104 1
+a104 8
+	   p->get_particles(),type_index,cutneighsq_table,comm);
+    t2 = clock();
+    tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+    if (node == 0) {
+      glog.logfile << "Neighboring style is [enum Neighbor::neighbor_styles] " <<
+	neighbor_style << endl;
+      glog.logfile << "Neighboring time is " << tneigh << endl;
+    }
+d122 1
+a122 1
+  double rcutsq_max,rminsq;
+d160 2
+a161 2
+  rcutsq_max = ff.get_rcut_max();
+  rcutsq_max = rcutsq_max*rcutsq_max;
+d163 1
+a163 1
+    glog.logfile << "rcutsq_max = " << rcutsq_max << endl;
+d178 1
+a178 1
+	if (rminsq <= rcutsq_max) {
+d189 1
+a189 1
+	if (rminsq <= rcutsq_max) {
+d200 1
+a200 1
+	if (rminsq <= rcutsq_max) {
+d215 1
+a215 1
+	       double* const cutneighsq_table[],Comm* comm) {
+d273 1
+a273 1
+	  rcutneighsq = cutneighsq_table[itype][jtype];
+d295 1
+a295 1
+	rcutneighsq = cutneighsq_table[itype][jtype];
+d338 1
+a338 1
+	       double* const cutneighsq_table[],Comm* comm) {
+d366 1
+a366 1
+	rcutneighsq = cutneighsq_table[itype][jtype];
+d380 1
+a380 1
+      rcutneighsq = cutneighsq_table[itype][jtype];
+d399 1
+a399 1
+	       double* const cutneighsq_table[],Comm* comm) {
+d405 1
+a405 1
+  double rveci[3],rvecj[3],delr[3],tol;
+d439 1
+a439 2
+	  tol = 1.0e-2;
+	  if (delr[2] > tol) {
+d441 2
+a442 2
+	  } else if (fabs(delr[2]) < tol) {
+	    if (delr[1] > tol) {
+d444 2
+a445 2
+	    } else if (fabs(delr[1]) < tol) {
+	      if (delr[0] > tol) continue;
+d452 1
+a452 1
+      rcutneighsq = cutneighsq_table[itype][jtype];
+d469 1
+a469 1
+	       const int* type_index, double* const cutneighsq_table[],
+d511 1
+a511 1
+	rcutneighsq = cutneighsq_table[itype][jtype];
+d543 1
+a543 1
+	       const int* type_index, double* const cutneighsq_table[],
+d599 1
+a599 1
+	rcutneighsq = cutneighsq_table[i][jtype];
+d630 1
+a630 1
+	       const int* type_index, double* const cutneighsq_table[],
+d658 1
+a658 1
+      rcutneighsq = cutneighsq_table[i][jtype];
+d737 328
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@a6 1
+extern ofstream logfile;
+d19 2
+d58 1
+a58 1
+	logfile << "Neighboring style is [enum Neighbor::neighbor_styles] " <<
+d60 1
+a60 1
+	logfile << "Neighboring time is " << tneigh << endl;
+d64 2
+a65 4
+      if (node == 0) {
+	logfile << "Error: Invalid neighbor style" << endl;;
+      }
+      exit(0);
+d93 1
+a93 1
+	logfile << "Neighboring style is [enum Neighbor::neighbor_styles] " <<
+d95 1
+a95 1
+	logfile << "Neighboring time is " << tneigh << endl;
+d99 2
+a100 4
+      if (node == 0) { 
+	logfile << "Error: Invalid neighbor style" << endl;;
+      }
+      exit(0);
+d122 1
+a122 1
+      logfile << "Neighboring style is [enum Neighbor::neighbor_styles] " <<
+d124 1
+a124 1
+      logfile << "Neighboring time is " << tneigh << endl;
+d128 22
+d151 3
+a153 1
+      logfile << "Error: Invalid neighbor style" << endl;;
+d155 4
+a158 1
+    exit(0);
+d181 1
+a181 1
+      logfile << "Lattice vector a = " 
+d183 1
+a183 1
+      logfile << "Lattice vector b = " 
+d185 1
+a185 1
+      logfile << "Lattice vector c = " 
+d187 1
+a187 1
+      logfile << "Unit cell origin = " 
+d193 1
+a193 1
+      logfile << "Unit cell lattice spacings = "
+d213 1
+a213 1
+    logfile << "rcutsq_max = " << rcutsq_max << endl;
+d410 15
+d476 6
+a481 4
+      if (itag > jtag) {
+	if ((itag+jtag)%2 == 0) continue;
+      } else if (itag < jtag) {
+	if ((itag+jtag)%2 == 1) continue;
+d487 4
+a490 6
+      if (itag == jtag) {
+	tol = 1.0e-2;
+	if (delr[2] > tol) {
+	  continue;
+	} else if (fabs(delr[2]) < tol) {
+	  if (delr[1] > tol) {
+d492 6
+a497 2
+	  } else if (fabs(delr[1]) < tol) {
+	    if (delr[0] > tol) continue;
+d637 2
+a638 4
+	if (node == 0) {
+	  logfile << "Error: invalid iaxis value " << iaxis << endl;
+	}
+	exit(0);
+d676 45
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d5 1
+d7 2
+d19 1
+d21 4
+a24 4
+Neighbor::Neighbor(const int& neighbor_style_in, 
+                   const bool& Lasymm_in, const int& neighbor_freq_in,
+                   const double& rskin_in)
+{
+d31 2
+d35 1
+a35 1
+  cout << "Hello world" << endl;
+d38 5
+a42 3
+void Neighbor::Neighboring(ParticleList* p, int* type_index,
+			   double* const cutneighsq_table[],
+			   const Box* b) {
+d44 1
+d46 36
+a81 3
+  if (neighbor_skip++ % neighbor_freq == 0) {
+    neighbor_skip = 1;
+    p->ResetPosition(b,false);
+d85 6
+a90 1
+      SetupNeighborListNsq(p->get_particles(),type_index,cutneighsq_table);
+d93 5
+a97 3
+      cout << "Neighboring style is [enum Neighbor::neighbor_styles] " <<
+	neighbor_style << endl;
+      cout << "Neighboring time is " << tneigh << endl;
+d100 3
+a102 1
+      cout << "Error: Invalid neighbor style" << endl;;
+d108 5
+a112 4
+void Neighbor::NeighboringWall(const vector<Fixed_Object>& walls,
+			       ParticleList* p, int* type_index,
+			       double* const cutneighsq_table[],
+			       const Box* b) {
+d114 3
+a117 1
+  p->ResetPosition(b,false);
+d121 1
+a121 1
+    SetupNeighborListNsqWall(walls,p->get_particles(),type_index,cutneighsq_table);
+d124 5
+a128 3
+    cout << "Neighboring style is [enum Neighbor::neighbor_styles] " <<
+      neighbor_style << endl;
+    cout << "Neighboring time is " << tneigh << endl;
+d131 3
+a133 1
+    cout << "Error: Invalid neighbor style" << endl;;
+d138 1
+a138 2
+int Neighbor::get_nneighbors() const
+{
+d142 1
+a142 2
+Neighbor::~Neighbor()
+{
+d145 2
+a146 2
+void Neighbor::SetupImageStencil(const Forcefield& ff, const Box* b)
+{
+d150 3
+d156 10
+a165 8
+  cout << "Lattice vector a = " 
+       << lva[0] << " " << lva[1] << " " << lva[2] << " " << endl;
+  cout << "Lattice vector b = " 
+       << lvb[0] << " " << lvb[1] << " " << lvb[2] << " " << endl;
+  cout << "Lattice vector c = " 
+       << lvc[0] << " " << lvc[1] << " " << lvc[2] << " " << endl;
+  cout << "Unit cell origin = " 
+       << origin[0] << " " << origin[1] << " " << origin[2] << " " << endl;
+d168 4
+a171 2
+    cout << "Unit cell lattice spacings = "
+	 << wh << " " << wk << " " << wl << " " << endl; 
+d188 3
+a190 1
+  cout << "rcutsq_max = " << rcutsq_max << endl;
+d238 4
+a241 4
+void Neighbor::SetupNeighborListNsq(const vector<Particle>& particles,
+				    const int* type_index,
+				    double* const cutneighsq_table[])
+{
+d247 1
+a247 1
+  int nparticles,itype,jtype,itype_particle,nneigh_image;
+a265 1
+  nparticles = particles.size();
+d356 47
+a402 2
+  cout << "ncosps = " << ncosps << endl;
+  cout << "nneighbors = " << nneighbors << endl;
+d406 68
+d475 4
+a478 4
+		  const vector<Particle>& particlesi,
+		  const vector<Particle>& particlesj,
+		  const int* type_index, double* const cutneighsq_table[])
+{
+d487 1
+a487 1
+  int nparticlesi,nparticlesj,itype,jtype,itype_particle,nneigh_image;
+a503 3
+  nparticlesi = particlesi.size();
+  nparticlesj = particlesj.size();
+
+d543 2
+a544 2
+  cout << "ncosps = " << ncosps << endl;
+  cout << "nneighbors = " << nneighbors << endl;
+d549 5
+a553 5
+		  const vector<Fixed_Object>& walls,
+		  const vector<Particle>& particles,
+		  const int* type_index, double* const cutneighsq_table[])
+{
+  int nwalls,nparticles,nneigh_image;
+d559 3
+a574 1
+  nparticles = particles.size();
+d594 3
+a596 1
+	cout << "Error: invalid iaxis value " << iaxis << endl;
+d632 2
+a633 2
+  cout << "ncosps = " << ncosps << endl;
+  cout << "nneighbors = " << nneighbors << endl;
+d638 3
+a640 2
+void Neighbor::AddImage(const int& i, const int& j, const int& k,
+		   const double lva[], const double lvb[], const double lvc[]) {
+d653 4
+a656 3
+double Neighbor::ImageDist(const int& i, const int& j, const int& k,
+		   const double lva[], const double lvb[], const double lvc[]) const
+{
+d694 8
+@
+
+
+1.6
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d1 1
+a1 1
+#include <math.h>
+d4 3
+d14 1
+d17 3
+a19 1
+Neighbor::Neighbor(const bool& Lasymm_in)
+d21 1
+d23 2
+d28 50
+d89 1
+a89 1
+void Neighbor::SetupImageStencil(const Forcefield& ff)
+a93 1
+  Box& b = Box::get();
+d95 2
+a96 2
+  b.get_lv(lva,lvb,lvc);
+  b.get_o(origin);
+d105 2
+a106 2
+  if (!b.get_Lorthorhombic()) {
+    b.get_lw(wh,wk,wl);
+d174 2
+a175 1
+				    const int* type_index, const Forcefield& ff)
+d235 1
+a235 1
+	  rcutneighsq = ff.get_cutneighsq(itype,jtype);
+d254 1
+a254 1
+	jtype = type_index[particles[j].get_type()];
+d257 1
+a257 1
+	rcutneighsq = ff.get_cutneighsq(itype,jtype);
+d261 4
+a264 4
+	const double* rj = particles[j].x;
+	double delr0 = rveci[0]-rj[0];
+	double delr1 = rveci[1]-rj[1];
+	double delr2 = rveci[2]-rj[2];
+d266 1
+a266 1
+	rcutneighsq = 93.8;
+d300 1
+a300 1
+		  const int* type_index, const Forcefield& ff)
+d345 1
+a345 1
+	rcutneighsq = ff.get_cutneighsq(itype,jtype);
+d377 1
+a377 1
+		  const int* type_index, const Forcefield& ff)
+d431 1
+a431 1
+	rcutneighsq = ff.get_cutneighsq(i,jtype);
+@
+
+
+1.5
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d32 1
+a32 1
+  double lva[3],lvb[3],lvc[3],origin[3];
+d47 5
+d347 16
+a362 4
+      // Only use images in direction iaxis. 
+      if (     ((rshift[1]!=0.0||rshift[2]!=0.0) && iaxis==1)
+	   || ((rshift[0]!=0.0||rshift[2]!=0.0) && iaxis==2)
+	   || ((rshift[0]!=0.0||rshift[1]!=0.0) && iaxis==3)) continue;
+@
+
+
+1.4
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@d10 2
+d233 151
+@
+
+
+1.3
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d1 1
+d3 1
+@
+
+
+1.2
+log
+@Got rid of gratuituous "friend" declaration for class Neighobr in class Box.
+@
+text
+@a3 1
+#include "particle_types.h"
+d5 1
+a7 1
+#include "force_twobody_inline.h"
+d9 1
+a9 1
+Neighbor::Neighbor()
+d11 1
+d17 5
+d26 1
+a26 1
+void Neighbor::SetupImageStencil()
+a31 1
+  Force_Twobody& ftwobody = Force_Twobody::get();
+d56 1
+a56 1
+  rcutsq_max = ftwobody.get_rcut_max();
+d63 3
+d106 2
+a107 1
+void Neighbor::SetupNeighborListNsq(vector<Particle>& particles)
+d114 1
+a114 1
+  int nparticles,itype,jtype,ientry,itype_particle,nneigh_image;
+a132 2
+  Force_Twobody::ff_type twobody_type;
+
+a133 4
+  Force_Twobody& ftwobody = Force_Twobody::get();
+  Particle_Types& t = Particle_Types::get();
+  nneighbors = 0;
+  ncosps = 0;
+d136 1
+a136 1
+    itype = t.get_twobody_type(itype_particle);
+d144 1
+d160 24
+d185 3
+a187 4
+	jtype = t.get_twobody_type(particles[j].get_type());
+	ientry = ftwobody.get_entry(itype,jtype);
+	twobody_type = ftwobody.get_type(ientry);
+	particles[j].get_x(rvecj);
+d189 12
+a200 2
+	rcutneighsq = ftwobody.get_cutneighsq(ientry);
+	
+d218 1
+a218 1
+  //Add dummy cosp to mark end of last cosp cosp_list
+@
+
+
+1.1
+log
+@
+
+Added neighbor list object.
+@
+text
+@a59 1
+    cout << " radius = " << l << endl;
+a96 7
+  for (int i=0;i<nimages;i++) {
+    cout << "Image " << i << " = " << 
+      image_stencil[i][0] << " " <<
+      image_stencil[i][1] << " " <<
+      image_stencil[i][2] << endl;
+  }
+
+d99 1
+a99 1
+void Neighbor::SetupNeighborListNsq()
+d127 1
+a127 5
+  cout << "*************Entering SetupNeighborListNsq**********" << endl;
+
+  Box& b = Box::get();
+  nparticles = b.get_nparticles();
+  cout << "SetupNeighborListNsq::nparticles = " << nparticles << endl;
+d133 1
+a133 2
+    itype_particle = b.particles[i].get_type();
+    // cout << "i " << i << endl;
+d135 1
+a135 2
+    //    cout << "itype " << itype << endl;
+    b.particles[i].get_x(rveci0);
+a138 4
+      //      cout << "image " << image << image_stencil[image][0] << " " <<
+      //	                           image_stencil[image][2] << " " <<
+      //                                   image_stencil[image][2] << 
+      //	endl;
+d158 1
+a158 3
+	//	cout << "j " << j << endl;
+	jtype = t.get_twobody_type(b.particles[j].get_type());
+	//	cout << "jtype " << jtype << endl;
+a159 1
+	//	cout << "ientry " << ientry << endl;
+d161 1
+a161 1
+	b.particles[j].get_x(rvecj);
+a163 2
+	//	cout << "rsq = " << rsq << endl;
+	//	cout << "rcutneighsq = " << rcutneighsq << endl;
+a189 51
+  //  for (int icosp=0;icosp<ncosps;icosp++) {
+  //    cout << cosp_list[icosp].i << " " << 
+  //      cosp_list[icosp].image << " " << 
+  //      cosp_list[icosp].first << endl;
+  //  }
+
+  {
+    int icosp = 0;
+    cout << "Neighbor list for icosp = " << icosp << endl;
+    cout << "i = " << cosp_list[icosp].i << endl;
+    cout << "image = " << cosp_list[icosp].image << endl;
+    cout << "Image pos = " << image_stencil[cosp_list[icosp].image][0] << " " <<
+      image_stencil[cosp_list[icosp].image][1] << " " <<
+      image_stencil[cosp_list[icosp].image][2] <<  endl;
+    //    for (int ineigh=cosp_list[icosp].first;ineigh<cosp_list[icosp+1].first;ineigh++) {
+    //      cout << neigh_list[ineigh] << endl;
+    //    }
+
+    icosp = 4;
+    cout << "Neighbor list for icosp = " << icosp << endl;
+    cout << "i = " << cosp_list[icosp].i << endl;
+    cout << "image = " << cosp_list[icosp].image << endl;
+    cout << "Image pos = " << image_stencil[cosp_list[icosp].image][0] << " " <<
+      image_stencil[cosp_list[icosp].image][1] << " " <<
+      image_stencil[cosp_list[icosp].image][2] <<  endl;
+    //    for (int ineigh=cosp_list[icosp].first;ineigh<cosp_list[icosp+1].first;ineigh++) {
+    //      cout << neigh_list[ineigh] << endl;
+    //    }
+
+    icosp = ncosps-2;
+    cout << "Neighbor list for icosp = " << icosp << endl;
+    cout << "i = " << cosp_list[icosp].i << endl;
+    cout << "image = " << cosp_list[icosp].image << endl;
+    cout << "Image pos = " << image_stencil[cosp_list[icosp].image][0] << " " <<
+      image_stencil[cosp_list[icosp].image][1] << " " <<
+      image_stencil[cosp_list[icosp].image][2] <<  endl;
+    //    for (int ineigh=cosp_list[icosp].first;ineigh<cosp_list[icosp+1].first;ineigh++) {
+    //      cout << neigh_list[ineigh] << endl;
+    //    }
+
+    icosp = ncosps-1;
+    cout << "Neighbor list for icosp = " << icosp << endl;
+    cout << "i = " << cosp_list[icosp].i << endl;
+    cout << "image = " << cosp_list[icosp].image << endl;
+    cout << "Image pos = " << image_stencil[cosp_list[icosp].image][0] << " " <<
+      image_stencil[cosp_list[icosp].image][1] << " " <<
+      image_stencil[cosp_list[icosp].image][2] <<  endl;
+    //    for (int ineigh=cosp_list[icosp].first;ineigh<cosp_list[icosp+1].first;ineigh++) {
+    //      cout << neigh_list[ineigh] << endl;
+    //    }
+  }
+a190 1
+  cout << "*************Leaving SetupNeighborListNsq**********" << endl;
+a192 75
+
+
+	  //void Neighbor::SetupCellList()
+	  //{
+	  //  double lva[3],lvb[3],lvc[3],origin[3];
+	  //  double rcutsq_max,rminsq;
+	  //  bool Lemptyshell;
+	  //  Box& b = Box::get();
+	  //  Force_Twobody& ftwobody = Force_Twobody::get();
+	  //
+	  //  b.get_lv(lva,lvb,lvc);
+	  //  b.get_o(origin);
+	  //  cout << "Lattice vector a = " 
+	  //       << lva[0] << " " << lva[1] << " " << lva[2] << " " << endl;
+	  //  cout << "Lattice vector b = " 
+	  //       << lvb[0] << " " << lvb[1] << " " << lvb[2] << " " << endl;
+	  //  cout << "Lattice vector c = " 
+	  //       << lvc[0] << " " << lvc[1] << " " << lvc[2] << " " << endl;
+	  //  cout << "Unit cell origin = " 
+	  //       << origin[0] << " " << origin[1] << " " << origin[2] << " " << endl;
+	  //
+	  //  AddImage(0,0,0,lva,lvb,lvc);
+	  //
+	  //  rcutsq_max = ftwobody.get_rcut_max();
+	  //  rcutsq_max = rcutsq_max*rcutsq_max;
+	  //  cout << "rcutsq_max = " << rcutsq_max << endl;
+	  //  Lemptyshell = false;
+	  //  for (int l=1;l<=maxradius && !Lemptyshell;l++) {
+	  //    cout << " radius = " << l << endl;
+	  //    Lemptyshell = true;
+	  //
+	  //    for (int i=-l;i<=l;i++) {
+	  //      for (int j=-l;j<=l;j++) {
+	  //	rminsq = ImageDist(i,j,l,lva,lvb,lvc);
+	  //	if (rminsq <= rcutsq_max) {
+	  //	  Lemptyshell = false;
+	  //	  AddImage(i,j,l,lva,lvb,lvc);
+	  //	  AddImage(i,j,-l,lva,lvb,lvc);
+	  //	}
+	  //      }
+	  //    }
+	  //
+	  //    for (int i=-l;i<=l;i++) {
+	  //      for (int j=-(l-1);j<=(l-1);j++) {
+	  //	rminsq = ImageDist(i,l,j,lva,lvb,lvc);
+	  //	if (rminsq <= rcutsq_max) {
+	  //	  Lemptyshell = false;
+	  //	  AddImage(i,l,j,lva,lvb,lvc);
+	  //	  AddImage(i,-l,j,lva,lvb,lvc);
+	  //	}
+	  //      }
+	  //    }
+	  //
+	  //    for (int i=-(l-1);i<=(l-1);i++) {
+	  //      for (int j=-(l-1);j<=(l-1);j++) {
+	  //	rminsq = ImageDist(l,j,i,lva,lvb,lvc);
+	  //	if (rminsq <= rcutsq_max) {
+	  //	  Lemptyshell = false;
+	  //	  AddImage(l,j,i,lva,lvb,lvc);
+	  //	  AddImage(-l,j,i,lva,lvb,lvc);
+	  //	}
+	  //      }
+	  //    }
+	  //
+	  //  }
+	  //
+	  //  for (int i=0;i<nimages;i++) {
+	  //    cout << "Image " << i << " = " << 
+	  //      image_stencil[i][0] << " " <<
+	  //      image_stencil[i][1] << " " <<
+	  //      image_stencil[i][2] << endl;
+	  //  }
+	  //
+	  //}
+
+@
+

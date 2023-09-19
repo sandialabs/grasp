@@ -1,0 +1,5180 @@
+head	2.7;
+access;
+symbols
+	PreMonaco:2.7;
+locks; strict;
+comment	@# @;
+
+
+2.7
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.6;
+
+2.6
+date	2003.10.31.20.28.00;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.10.20.22.05.56;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.10.04.02.47.22;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.23.23.32.37;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.18.15.48.43;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.28.15.48.48;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.7
+log
+@Moved examples into subdirectories.
+@
+text
+@/tmp_mnt/Net/sana014/home/athomps/codes/Grasp/Testing/grasp.out
+Clock tick = 0.0000010000 Seconds
+
+
+
+Entering Input::ReadInput()
+forcefield threebody threebody.in Stillinger-Weber
+timestep 0.0100000000
+nsteps 100
+box dimensions	0.0000000000	7.8000000000	7.8000000000 \
+			7.8000000000	0.0000000000	7.8000000000 \
+			7.8000000000	7.8000000000	0.0000000000
+box origin	0.0000000000	0.0000000000	0.0000000000
+initialize temperature 0.0000000000 256
+thermo 1
+dump atoms 100
+dump velocities 100
+neighbor bin 10 0.1000000000
+
+
+
+Entering Box::Setup()
+volume = 949.1040000000
+widths = 9.0066641994 9.0066641994 9.0066641994
+lva = 0.0000000000 7.8000000000 7.8000000000
+lvb = 7.8000000000 0.0000000000 7.8000000000
+lvc = 7.8000000000 7.8000000000 0.0000000000
+rvh = -0.0641025641 0.0641025641 0.0641025641
+rvk = 0.0641025641 -0.0641025641 0.0641025641
+rvl = 0.0641025641 0.0641025641 -0.0641025641
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 3
+A 10.0000000000
+B 2.0000000000
+C 3.0000000000
+
+
+
+Reading Stillinger-Weber from file threebody.in
+
+id1	id2	id3	t 	n       p            p            p            p     
+A	A	A	0	15        3.771        2.514      -0.3333        4393.        8786.        14.22        4.000        0.000        2.095    6.845e+04        0.000    3.585e+04        3090.    1.711e+04        1475.
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+****************************************************
+Warning: Particle id has no ff match
+****************************************************
+-1 B 0
+****************************************************
+Warning: Particle id has no ff match
+****************************************************
+-1 C 0
+
+
+
+Entering ParticleList::ReadConfig()
+Total particles read = 54
+
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.5712313397 kJ/mol
+   Threebody        =        81.2902731109 kJ/mol
+Potential Energy    =    -21716.2809582288 kJ/mol
+Kinetic Energy      =         0.0000000000 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809582288 kJ/mol
+Temperature         =         0.0000000000 K
+Total Particles     =                   54
+--------------- Step         1 ---- CPU =     0.0072 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.5721445950 kJ/mol
+   Threebody        =        81.2899201111 kJ/mol
+Potential Energy    =    -21716.2822244839 kJ/mol
+Kinetic Energy      =         0.0012662537 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809582302 kJ/mol
+Temperature         =         0.0018801870 K
+Total Particles     =                   54
+--------------- Step         2 ---- CPU =     0.0133 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.5748843452 kJ/mol
+   Threebody        =        81.2888611180 kJ/mol
+Potential Energy    =    -21716.2860232273 kJ/mol
+Kinetic Energy      =         0.0050649930 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809582343 kJ/mol
+Temperature         =         0.0075207154 K
+Total Particles     =                   54
+--------------- Step         3 ---- CPU =     0.0195 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.5794505434 kJ/mol
+   Threebody        =        81.2870961499 kJ/mol
+Potential Energy    =    -21716.2923543935 kJ/mol
+Kinetic Energy      =         0.0113961524 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809582411 kJ/mol
+Temperature         =         0.0169214881 K
+Total Particles     =                   54
+--------------- Step         4 ---- CPU =     0.0259 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.5858431110 kJ/mol
+   Threebody        =        81.2846252377 kJ/mol
+Potential Energy    =    -21716.3012178733 kJ/mol
+Kinetic Energy      =         0.0202596226 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809582506 kJ/mol
+Temperature         =         0.0300823429 K
+Total Particles     =                   54
+--------------- Step         5 ---- CPU =     0.0327 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.5940619382 kJ/mol
+   Threebody        =        81.2814484244 kJ/mol
+Potential Energy    =    -21716.3126135138 kJ/mol
+Kinetic Energy      =         0.0316552509 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809582629 kJ/mol
+Temperature         =         0.0470030528 K
+Total Particles     =                   54
+--------------- Step         6 ---- CPU =     0.0394 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.6041068840 kJ/mol
+   Threebody        =        81.2775657655 kJ/mol
+Potential Energy    =    -21716.3265411185 kJ/mol
+Kinetic Energy      =         0.0455828405 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809582779 kJ/mol
+Temperature         =         0.0676833259 K
+Total Particles     =                   54
+--------------- Step         7 ---- CPU =     0.0465 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.6159777757 kJ/mol
+   Threebody        =        81.2729773287 kJ/mol
+Potential Energy    =    -21716.3430004471 kJ/mol
+Kinetic Energy      =         0.0620421514 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809582957 kJ/mol
+Temperature         =         0.0921228055 K
+Total Particles     =                   54
+--------------- Step         8 ---- CPU =     0.0529 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.6296744096 kJ/mol
+   Threebody        =        81.2676831939 kJ/mol
+Potential Energy    =    -21716.3619912158 kJ/mol
+Kinetic Energy      =         0.0810328996 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809583162 kJ/mol
+Temperature         =         0.1203210701 K
+Total Particles     =                   54
+--------------- Step         9 ---- CPU =     0.0592 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.6451965504 kJ/mol
+   Threebody        =        81.2616834534 kJ/mol
+Potential Energy    =    -21716.3835130969 kJ/mol
+Kinetic Energy      =         0.1025547576 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809583394 kJ/mol
+Temperature         =         0.1522776333 K
+Total Particles     =                   54
+--------------- Step        10 ---- CPU =     0.0654 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.6625439314 kJ/mol
+   Threebody        =        81.2549782120 kJ/mol
+Potential Energy    =    -21716.4075657194 kJ/mol
+Kinetic Energy      =         0.1266073541 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809583653 kJ/mol
+Temperature         =         0.1879919440 K
+Total Particles     =                   54
+--------------- Step        11 ---- CPU =     0.0728 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.6817162547 kJ/mol
+   Threebody        =        81.2475675865 kJ/mol
+Potential Energy    =    -21716.4341486683 kJ/mol
+Kinetic Energy      =         0.1531902743 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809583940 kJ/mol
+Temperature         =         0.2274633861 K
+Total Particles     =                   54
+--------------- Step        12 ---- CPU =     0.0791 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.7027131911 kJ/mol
+   Threebody        =        81.2394517061 kJ/mol
+Potential Energy    =    -21716.4632614850 kJ/mol
+Kinetic Energy      =         0.1823030597 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809584253 kJ/mol
+Temperature         =         0.2706912788 K
+Total Particles     =                   54
+--------------- Step        13 ---- CPU =     0.0851 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.7255343800 kJ/mol
+   Threebody        =        81.2306307124 kJ/mol
+Potential Energy    =    -21716.4949036676 kJ/mol
+Kinetic Energy      =         0.2139452081 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809584594 kJ/mol
+Temperature         =         0.3176748765 K
+Total Particles     =                   54
+--------------- Step        14 ---- CPU =     0.0917 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.7501794293 kJ/mol
+   Threebody        =        81.2211047591 kJ/mol
+Potential Energy    =    -21716.5290746701 kJ/mol
+Kinetic Energy      =         0.2481161739 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809584963 kJ/mol
+Temperature         =         0.3684133689 K
+Total Particles     =                   54
+--------------- Step        15 ---- CPU =     0.0978 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.7766479158 kJ/mol
+   Threebody        =        81.2108740125 kJ/mol
+Potential Energy    =    -21716.5657739033 kJ/mol
+Kinetic Energy      =         0.2848153674 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809585359 kJ/mol
+Temperature         =         0.4229058808 K
+Total Particles     =                   54
+--------------- Step        16 ---- CPU =     0.1040 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.8049393848 kJ/mol
+   Threebody        =        81.1999386508 kJ/mol
+Potential Energy    =    -21716.6050007340 kJ/mol
+Kinetic Energy      =         0.3240421559 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809585781 kJ/mol
+Temperature         =         0.4811514722 K
+Total Particles     =                   54
+--------------- Step        17 ---- CPU =     0.1103 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.8350533506 kJ/mol
+   Threebody        =        81.1882988648 kJ/mol
+Potential Energy    =    -21716.6467544858 kJ/mol
+Kinetic Energy      =         0.3657958627 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809586231 kJ/mol
+Temperature         =         0.5431491386 K
+Total Particles     =                   54
+--------------- Step        18 ---- CPU =     0.1163 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.8669892958 kJ/mol
+   Threebody        =        81.1759548574 kJ/mol
+Potential Energy    =    -21716.6910344384 kJ/mol
+Kinetic Energy      =         0.4100757675 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809586709 kJ/mol
+Temperature         =         0.6088978106 K
+Total Particles     =                   54
+--------------- Step        19 ---- CPU =     0.1225 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.9007466720 kJ/mol
+   Threebody        =        81.1629068439 kJ/mol
+Potential Energy    =    -21716.7378398281 kJ/mol
+Kinetic Energy      =         0.4568811068 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809587213 kJ/mol
+Temperature         =         0.6783963541 K
+Total Particles     =                   54
+--------------- Step        20 ---- CPU =     0.1286 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.9363248994 kJ/mol
+   Threebody        =        81.1491550518 kJ/mol
+Potential Energy    =    -21716.7871698476 kJ/mol
+Kinetic Energy      =         0.5062110730 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809587745 kJ/mol
+Temperature         =         0.7516435704 K
+Total Particles     =                   54
+--------------- Step        21 ---- CPU =     0.1362 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21797.9737233668 kJ/mol
+   Threebody        =        81.1346997209 kJ/mol
+Potential Energy    =    -21716.8390236459 kJ/mol
+Kinetic Energy      =         0.5580648155 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809588304 kJ/mol
+Temperature         =         0.8286381961 K
+Total Particles     =                   54
+--------------- Step        22 ---- CPU =     0.1427 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.0129414320 kJ/mol
+   Threebody        =        81.1195411032 kJ/mol
+Potential Energy    =    -21716.8934003287 kJ/mol
+Kinetic Energy      =         0.6124414397 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809588890 kJ/mol
+Temperature         =         0.9093789033 K
+Total Particles     =                   54
+--------------- Step        23 ---- CPU =     0.1488 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.0539784213 kJ/mol
+   Threebody        =        81.1036794632 kJ/mol
+Potential Energy    =    -21716.9502989582 kJ/mol
+Kinetic Energy      =         0.6693400078 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809589504 kJ/mol
+Temperature         =         0.9938642991 K
+Total Particles     =                   54
+--------------- Step        24 ---- CPU =     0.1550 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.0968336300 kJ/mol
+   Threebody        =        81.0871150772 kJ/mol
+Potential Energy    =    -21717.0097185528 kJ/mol
+Kinetic Energy      =         0.7287595384 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809590144 kJ/mol
+Temperature         =         1.0820929264 K
+Total Particles     =                   54
+--------------- Step        25 ---- CPU =     0.1615 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.1415063220 kJ/mol
+   Threebody        =        81.0698482343 kJ/mol
+Potential Energy    =    -21717.0716580877 kJ/mol
+Kinetic Energy      =         0.7906990065 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809590812 kJ/mol
+Temperature         =         1.1740632634 K
+Total Particles     =                   54
+--------------- Step        26 ---- CPU =     0.1675 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.1879957299 kJ/mol
+   Threebody        =        81.0518792354 kJ/mol
+Potential Energy    =    -21717.1361164945 kJ/mol
+Kinetic Energy      =         0.8551573438 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809591507 kJ/mol
+Temperature         =         1.2697737236 K
+Total Particles     =                   54
+--------------- Step        27 ---- CPU =     0.1737 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.2363010553 kJ/mol
+   Threebody        =        81.0332083940 kJ/mol
+Potential Energy    =    -21717.2030926614 kJ/mol
+Kinetic Energy      =         0.9221334385 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809592229 kJ/mol
+Temperature         =         1.3692226564 K
+Total Particles     =                   54
+--------------- Step        28 ---- CPU =     0.1797 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.2864214686 kJ/mol
+   Threebody        =        81.0138360355 kJ/mol
+Potential Energy    =    -21717.2725854331 kJ/mol
+Kinetic Energy      =         0.9916261353 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809592978 kJ/mol
+Temperature         =         1.4724083462 K
+Total Particles     =                   54
+--------------- Step        29 ---- CPU =     0.1858 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.3383561088 kJ/mol
+   Threebody        =        80.9937624978 kJ/mol
+Potential Energy    =    -21717.3445936110 kJ/mol
+Kinetic Energy      =         1.0636342356 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809593754 kJ/mol
+Temperature         =         1.5793290132 K
+Total Particles     =                   54
+--------------- Step        30 ---- CPU =     0.1918 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.3921040839 kJ/mol
+   Threebody        =        80.9729881308 kJ/mol
+Potential Energy    =    -21717.4191159531 kJ/mol
+Kinetic Energy      =         1.1381564973 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809594558 kJ/mol
+Temperature         =         1.6899828133 K
+Total Particles     =                   54
+--------------- Step        31 ---- CPU =     0.1993 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.4476644707 kJ/mol
+   Threebody        =        80.9515132969 kJ/mol
+Potential Energy    =    -21717.4961511739 kJ/mol
+Kinetic Energy      =         1.2151916350 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809595388 kJ/mol
+Temperature         =         1.8043678378 K
+Total Particles     =                   54
+--------------- Step        32 ---- CPU =     0.2054 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.5050363150 kJ/mol
+   Threebody        =        80.9293383704 kJ/mol
+Potential Energy    =    -21717.5756979446 kJ/mol
+Kinetic Energy      =         1.2947383200 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809596246 kJ/mol
+Temperature         =         1.9224821136 K
+Total Particles     =                   54
+--------------- Step        33 ---- CPU =     0.2114 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.5642186312 kJ/mol
+   Threebody        =        80.9064637380 kJ/mol
+Potential Energy    =    -21717.6577548932 kJ/mol
+Kinetic Energy      =         1.3767951802 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809597130 kJ/mol
+Temperature         =         2.0443236035 K
+Total Particles     =                   54
+--------------- Step        34 ---- CPU =     0.2174 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.6252104029 kJ/mol
+   Threebody        =        80.8828897987 kJ/mol
+Potential Energy    =    -21717.7423206043 kJ/mol
+Kinetic Energy      =         1.4613608001 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809598042 kJ/mol
+Temperature         =         2.1698902058 K
+Total Particles     =                   54
+--------------- Step        35 ---- CPU =     0.2234 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.6880105825 kJ/mol
+   Threebody        =        80.8586169633 kJ/mol
+Potential Energy    =    -21717.8293936192 kJ/mol
+Kinetic Energy      =         1.5484337211 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809598981 kJ/mol
+Temperature         =         2.2991797546 K
+Total Particles     =                   54
+--------------- Step        36 ---- CPU =     0.2294 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.7526180912 kJ/mol
+   Threebody        =        80.8336456553 kJ/mol
+Potential Energy    =    -21717.9189724359 kJ/mol
+Kinetic Energy      =         1.6380124413 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809599947 kJ/mol
+Temperature         =         2.4321900198 K
+Total Particles     =                   54
+--------------- Step        37 ---- CPU =     0.2354 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.8190318193 kJ/mol
+   Threebody        =        80.8079763099 kJ/mol
+Potential Energy    =    -21718.0110555094 kJ/mol
+Kinetic Energy      =         1.7300954155 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809600939 kJ/mol
+Temperature         =         2.5689187071 K
+Total Particles     =                   54
+--------------- Step        38 ---- CPU =     0.2415 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.8872506260 kJ/mol
+   Threebody        =        80.7816093748 kJ/mol
+Potential Energy    =    -21718.1056412513 kJ/mol
+Kinetic Energy      =         1.8246810554 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809601959 kJ/mol
+Temperature         =         2.7093634580 K
+Total Particles     =                   54
+--------------- Step        39 ---- CPU =     0.2478 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21798.9572733397 kJ/mol
+   Threebody        =        80.7545453097 kJ/mol
+Potential Energy    =    -21718.2027280300 kJ/mol
+Kinetic Energy      =         1.9217677294 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809603006 kJ/mol
+Temperature         =         2.8535218501 K
+Total Particles     =                   54
+--------------- Step        40 ---- CPU =     0.2542 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.0290987573 kJ/mol
+   Threebody        =        80.7267845865 kJ/mol
+Potential Energy    =    -21718.3023141709 kJ/mol
+Kinetic Energy      =         2.0213537629 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809604079 kJ/mol
+Temperature         =         3.0013913966 K
+Total Particles     =                   54
+--------------- Step        41 ---- CPU =     0.2620 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.1027256454 kJ/mol
+   Threebody        =        80.6983276892 kJ/mol
+Potential Energy    =    -21718.4043979562 kJ/mol
+Kinetic Energy      =         2.1234374382 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809605180 kJ/mol
+Temperature         =         3.1529695469 K
+Total Particles     =                   54
+--------------- Step        42 ---- CPU =     0.2680 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.1781527390 kJ/mol
+   Threebody        =        80.6691751141 kJ/mol
+Potential Energy    =    -21718.5089776250 kJ/mol
+Kinetic Energy      =         2.2280169942 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809606307 kJ/mol
+Temperature         =         3.3082536864 K
+Total Particles     =                   54
+--------------- Step        43 ---- CPU =     0.2741 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.2553787427 kJ/mol
+   Threebody        =        80.6393273694 kJ/mol
+Potential Energy    =    -21718.6160513734 kJ/mol
+Kinetic Energy      =         2.3350906272 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809607462 kJ/mol
+Temperature         =         3.4672411366 K
+Total Particles     =                   54
+--------------- Step        44 ---- CPU =     0.2801 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.3344023299 kJ/mol
+   Threebody        =        80.6087849756 kJ/mol
+Potential Energy    =    -21718.7256173543 kJ/mol
+Kinetic Energy      =         2.4446564900 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809608643 kJ/mol
+Temperature         =         3.6299291550 K
+Total Particles     =                   54
+--------------- Step        45 ---- CPU =     0.2861 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.4152221431 kJ/mol
+   Threebody        =        80.5775484651 kJ/mol
+Potential Energy    =    -21718.8376736779 kJ/mol
+Kinetic Energy      =         2.5567126928 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809609851 kJ/mol
+Temperature         =         3.7963149353 K
+Total Particles     =                   54
+--------------- Step        46 ---- CPU =     0.2921 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.4978367940 kJ/mol
+   Threebody        =        80.5456183827 kJ/mol
+Potential Energy    =    -21718.9522184113 kJ/mol
+Kinetic Energy      =         2.6712573027 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809611086 kJ/mol
+Temperature         =         3.9663956074 K
+Total Particles     =                   54
+--------------- Step        47 ---- CPU =     0.2982 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.5822448636 kJ/mol
+   Threebody        =        80.5129952851 kJ/mol
+Potential Energy    =    -21719.0692495785 kJ/mol
+Kinetic Energy      =         2.7882883437 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809612348 kJ/mol
+Temperature         =         4.1401682374 K
+Total Particles     =                   54
+--------------- Step        48 ---- CPU =     0.3062 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.6684449019 kJ/mol
+   Threebody        =        80.4796797411 kJ/mol
+Potential Energy    =    -21719.1887651608 kJ/mol
+Kinetic Energy      =         2.9078037972 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809613636 kJ/mol
+Temperature         =         4.3176298279 K
+Total Particles     =                   54
+--------------- Step        49 ---- CPU =     0.3124 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.7564354280 kJ/mol
+   Threebody        =        80.4456723315 kJ/mol
+Potential Energy    =    -21719.3107630966 kJ/mol
+Kinetic Energy      =         3.0298016014 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809614952 kJ/mol
+Temperature         =         4.4987773177 K
+Total Particles     =                   54
+--------------- Step        50 ---- CPU =     0.3184 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.8462149306 kJ/mol
+   Threebody        =        80.4109736493 kJ/mol
+Potential Energy    =    -21719.4352412814 kJ/mol
+Kinetic Energy      =         3.1542796520 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809616294 kJ/mol
+Temperature         =         4.6836075819 K
+Total Particles     =                   54
+--------------- Step        51 ---- CPU =     0.3256 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21799.9377818674 kJ/mol
+   Threebody        =        80.3755842994 kJ/mol
+Potential Energy    =    -21719.5621975680 kJ/mol
+Kinetic Energy      =         3.2812358017 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809617663 kJ/mol
+Temperature         =         4.8721174323 K
+Total Particles     =                   54
+--------------- Step        52 ---- CPU =     0.3316 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.0311346654 kJ/mol
+   Threebody        =        80.3395048990 kJ/mol
+Potential Energy    =    -21719.6916297663 kJ/mol
+Kinetic Energy      =         3.4106678605 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809619058 kJ/mol
+Temperature         =         5.0643036171 K
+Total Particles     =                   54
+--------------- Step        53 ---- CPU =     0.3376 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.1262717208 kJ/mol
+   Threebody        =        80.3027360771 kJ/mol
+Potential Energy    =    -21719.8235356437 kJ/mol
+Kinetic Energy      =         3.5425735957 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809620480 kJ/mol
+Temperature         =         5.2601628210 K
+Total Particles     =                   54
+--------------- Step        54 ---- CPU =     0.3440 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.2231913995 kJ/mol
+   Threebody        =        80.2652784747 kJ/mol
+Potential Energy    =    -21719.9579129248 kJ/mol
+Kinetic Energy      =         3.6769507319 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809621929 kJ/mol
+Temperature         =         5.4596916654 K
+Total Particles     =                   54
+--------------- Step        55 ---- CPU =     0.3500 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.3218920364 kJ/mol
+   Threebody        =        80.2271327449 kJ/mol
+Potential Energy    =    -21720.0947592915 kJ/mol
+Kinetic Energy      =         3.8137969511 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809623404 kJ/mol
+Temperature         =         5.6628867084 K
+Total Particles     =                   54
+--------------- Step        56 ---- CPU =     0.3565 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.4223719360 kJ/mol
+   Threebody        =        80.1882995528 kJ/mol
+Potential Energy    =    -21720.2340723831 kJ/mol
+Kinetic Energy      =         3.9531098925 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809624906 kJ/mol
+Temperature         =         5.8697444448 K
+Total Particles     =                   54
+--------------- Step        57 ---- CPU =     0.3628 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.5246293720 kJ/mol
+   Threebody        =        80.1487795755 kJ/mol
+Potential Energy    =    -21720.3758497965 kJ/mol
+Kinetic Energy      =         4.0948871530 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809626435 kJ/mol
+Temperature         =         6.0802613062 K
+Total Particles     =                   54
+--------------- Step        58 ---- CPU =     0.3690 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.6286625879 kJ/mol
+   Threebody        =        80.1085735020 kJ/mol
+Potential Energy    =    -21720.5200890859 kJ/mol
+Kinetic Energy      =         4.2391262869 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809627990 kJ/mol
+Temperature         =         6.2944336610 K
+Total Particles     =                   54
+--------------- Step        59 ---- CPU =     0.3752 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.7344697963 kJ/mol
+   Threebody        =        80.0676820332 kJ/mol
+Potential Energy    =    -21720.6667877631 kJ/mol
+Kinetic Energy      =         4.3858248059 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809629572 kJ/mol
+Temperature         =         6.5122578148 K
+Total Particles     =                   54
+--------------- Step        60 ---- CPU =     0.3812 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.8420491796 kJ/mol
+   Threebody        =        80.0261058822 kJ/mol
+Potential Energy    =    -21720.8159432974 kJ/mol
+Kinetic Energy      =         4.5349801794 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809631180 kJ/mol
+Temperature         =         6.7337300098 K
+Total Particles     =                   54
+--------------- Step        61 ---- CPU =     0.3884 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21800.9513988895 kJ/mol
+   Threebody        =        79.9838457737 kJ/mol
+Potential Energy    =    -21720.9675531158 kJ/mol
+Kinetic Energy      =         4.6865898343 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809632815 kJ/mol
+Temperature         =         6.9588464255 K
+Total Particles     =                   54
+--------------- Step        62 ---- CPU =     0.3946 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21801.0625170474 kJ/mol
+   Threebody        =        79.9409024445 kJ/mol
+Potential Energy    =    -21721.1216146028 kJ/mol
+Kinetic Energy      =         4.8406511553 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809634476 kJ/mol
+Temperature         =         7.1876031784 K
+Total Particles     =                   54
+--------------- Step        63 ---- CPU =     0.4020 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21801.1754017443 kJ/mol
+   Threebody        =        79.8972766434 kJ/mol
+Potential Energy    =    -21721.2781251009 kJ/mol
+Kinetic Energy      =         4.9971614846 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809636163 kJ/mol
+Temperature         =         7.4199963222 K
+Total Particles     =                   54
+--------------- Step        64 ---- CPU =     0.4082 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21801.2900510409 kJ/mol
+   Threebody        =        79.8529691310 kJ/mol
+Potential Energy    =    -21721.4370819099 kJ/mol
+Kinetic Energy      =         5.1561181222 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809637877 kJ/mol
+Temperature         =         7.6560218480 K
+Total Particles     =                   54
+--------------- Step        65 ---- CPU =     0.4144 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21801.4064629673 kJ/mol
+   Threebody        =        79.8079806796 kJ/mol
+Potential Energy    =    -21721.5984822877 kJ/mol
+Kinetic Energy      =         5.3175183260 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809639617 kJ/mol
+Temperature         =         7.8956756839 K
+Total Particles     =                   54
+--------------- Step        66 ---- CPU =     0.4206 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21801.5246355237 kJ/mol
+   Threebody        =        79.7623120737 kJ/mol
+Potential Energy    =    -21721.7623234500 kJ/mol
+Kinetic Energy      =         5.4813593116 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809641384 kJ/mol
+Temperature         =         8.1389536957 K
+Total Particles     =                   54
+--------------- Step        67 ---- CPU =     0.4266 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21801.6445666796 kJ/mol
+   Threebody        =        79.7159641094 kJ/mol
+Potential Energy    =    -21721.9286025702 kJ/mol
+Kinetic Energy      =         5.6476382525 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809643177 kJ/mol
+Temperature         =         8.3858516865 K
+Total Particles     =                   54
+--------------- Step        68 ---- CPU =     0.4327 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21801.7662543745 kJ/mol
+   Threebody        =        79.6689375947 kJ/mol
+Potential Energy    =    -21722.0973167798 kJ/mol
+Kinetic Energy      =         5.8163522802 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809644996 kJ/mol
+Temperature         =         8.6363653969 K
+Total Particles     =                   54
+--------------- Step        69 ---- CPU =     0.4387 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21801.8896965178 kJ/mol
+   Threebody        =        79.6212333495 kJ/mol
+Potential Energy    =    -21722.2684631683 kJ/mol
+Kinetic Energy      =         5.9874984841 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809646842 kJ/mol
+Temperature         =         8.8904905052 K
+Total Particles     =                   54
+--------------- Step        70 ---- CPU =     0.4454 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21802.0148909884 kJ/mol
+   Threebody        =        79.5728522055 kJ/mol
+Potential Energy    =    -21722.4420387829 kJ/mol
+Kinetic Energy      =         6.1610739116 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809648713 kJ/mol
+Temperature         =         9.1482226272 K
+Total Particles     =                   54
+--------------- Step        71 ---- CPU =     0.4527 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21802.1418356355 kJ/mol
+   Threebody        =        79.5237950061 kJ/mol
+Potential Energy    =    -21722.6180406293 kJ/mol
+Kinetic Energy      =         6.3370755682 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809650611 kJ/mol
+Temperature         =         9.4095573167 K
+Total Particles     =                   54
+--------------- Step        72 ---- CPU =     0.4588 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21802.2705282777 kJ/mol
+   Threebody        =        79.4740626066 kJ/mol
+Potential Energy    =    -21722.7964656712 kJ/mol
+Kinetic Energy      =         6.5155004177 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809652535 kJ/mol
+Temperature         =         9.6744900652 K
+Total Particles     =                   54
+--------------- Step        73 ---- CPU =     0.4650 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21802.4009667041 kJ/mol
+   Threebody        =        79.4236558739 kJ/mol
+Potential Energy    =    -21722.9773108302 kJ/mol
+Kinetic Energy      =         6.6963453817 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809654485 kJ/mol
+Temperature         =         9.9430163019 K
+Total Particles     =                   54
+--------------- Step        74 ---- CPU =     0.4710 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21802.5331486732 kJ/mol
+   Threebody        =        79.3725756868 kJ/mol
+Potential Energy    =    -21723.1605729864 kJ/mol
+Kinetic Energy      =         6.8796073403 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809656461 kJ/mol
+Temperature         =        10.2151313943 K
+Total Particles     =                   54
+--------------- Step        75 ---- CPU =     0.4770 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21802.6670719141 kJ/mol
+   Threebody        =        79.3208229358 kJ/mol
+Potential Energy    =    -21723.3462489782 kJ/mol
+Kinetic Energy      =         7.0652831319 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809658463 kJ/mol
+Temperature         =        10.4908306478 K
+Total Particles     =                   54
+--------------- Step        76 ---- CPU =     0.4831 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21802.8027341255 kJ/mol
+   Threebody        =        79.2683985232 kJ/mol
+Potential Energy    =    -21723.5343356023 kJ/mol
+Kinetic Energy      =         7.2533695532 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809660491 kJ/mol
+Temperature         =        10.7701093060 K
+Total Particles     =                   54
+--------------- Step        77 ---- CPU =     0.4891 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21802.9401329763 kJ/mol
+   Threebody        =        79.2153033627 kJ/mol
+Potential Energy    =    -21723.7248296136 kJ/mol
+Kinetic Energy      =         7.4438633591 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809662545 kJ/mol
+Temperature         =        11.0529625505 K
+Total Particles     =                   54
+--------------- Step        78 ---- CPU =     0.4979 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21803.0792661057 kJ/mol
+   Threebody        =        79.1615383800 kJ/mol
+Potential Energy    =    -21723.9177277257 kJ/mol
+Kinetic Energy      =         7.6367612632 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809664626 kJ/mol
+Temperature         =        11.3393855015 K
+Total Particles     =                   54
+--------------- Step        79 ---- CPU =     0.5040 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21803.2201311229 kJ/mol
+   Threebody        =        79.1071045124 kJ/mol
+Potential Energy    =    -21724.1130266106 kJ/mol
+Kinetic Energy      =         7.8320599374 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809666731 kJ/mol
+Temperature         =        11.6293732173 K
+Total Particles     =                   54
+--------------- Step        80 ---- CPU =     0.5101 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21803.3627256075 kJ/mol
+   Threebody        =        79.0520027088 kJ/mol
+Potential Energy    =    -21724.3107228987 kJ/mol
+Kinetic Energy      =         8.0297560124 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809668863 kJ/mol
+Temperature         =        11.9229206950 K
+Total Particles     =                   54
+--------------- Step        81 ---- CPU =     0.5172 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21803.5070471090 kJ/mol
+   Threebody        =        78.9962339297 kJ/mol
+Potential Energy    =    -21724.5108131793 kJ/mol
+Kinetic Energy      =         8.2298460772 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809671021 kJ/mol
+Temperature         =        12.2200228698 K
+Total Particles     =                   54
+--------------- Step        82 ---- CPU =     0.5235 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21803.6530931475 kJ/mol
+   Threebody        =        78.9397991473 kJ/mol
+Potential Energy    =    -21724.7132940003 kJ/mol
+Kinetic Energy      =         8.4323266798 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809673204 kJ/mol
+Temperature         =        12.5206746161 K
+Total Particles     =                   54
+--------------- Step        83 ---- CPU =     0.5302 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21803.8008612135 kJ/mol
+   Threebody        =        78.8826993454 kJ/mol
+Potential Energy    =    -21724.9181618681 kJ/mol
+Kinetic Energy      =         8.6371943267 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809675414 kJ/mol
+Temperature         =        12.8248707464 K
+Total Particles     =                   54
+--------------- Step        84 ---- CPU =     0.5362 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21803.9503487675 kJ/mol
+   Threebody        =        78.8249355194 kJ/mol
+Potential Energy    =    -21725.1254132481 kJ/mol
+Kinetic Energy      =         8.8444454833 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809677649 kJ/mol
+Temperature         =        13.1326060126 K
+Total Particles     =                   54
+--------------- Step        85 ---- CPU =     0.5424 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21804.1015532407 kJ/mol
+   Threebody        =        78.7665086761 kJ/mol
+Potential Energy    =    -21725.3350445646 kJ/mol
+Kinetic Energy      =         9.0540765737 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809679909 kJ/mol
+Temperature         =        13.4438751050 K
+Total Particles     =                   54
+--------------- Step        86 ---- CPU =     0.5489 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21804.2544720347 kJ/mol
+   Threebody        =        78.7074198341 kJ/mol
+Potential Energy    =    -21725.5470522006 kJ/mol
+Kinetic Energy      =         9.2660839811 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809682196 kJ/mol
+Temperature         =        13.7586726532 K
+Total Particles     =                   54
+--------------- Step        87 ---- CPU =     0.5550 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21804.4091025217 kJ/mol
+   Threebody        =        78.6476700234 kJ/mol
+Potential Energy    =    -21725.7614324984 kJ/mol
+Kinetic Energy      =         9.4804640476 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809684508 kJ/mol
+Temperature         =        14.0769932258 K
+Total Particles     =                   54
+--------------- Step        88 ---- CPU =     0.5610 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21804.5654420443 kJ/mol
+   Threebody        =        78.5872602854 kJ/mol
+Potential Energy    =    -21725.9781817589 kJ/mol
+Kinetic Energy      =         9.6972130744 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809686845 kJ/mol
+Temperature         =        14.3988313305 K
+Total Particles     =                   54
+--------------- Step        89 ---- CPU =     0.5671 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21804.7234879157 kJ/mol
+   Threebody        =        78.5261916733 kJ/mol
+Potential Energy    =    -21726.1972962424 kJ/mol
+Kinetic Energy      =         9.9163273216 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809689208 kJ/mol
+Temperature         =        14.7241814144 K
+Total Particles     =                   54
+--------------- Step        90 ---- CPU =     0.5731 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21804.8832374198 kJ/mol
+   Threebody        =        78.4644652515 kJ/mol
+Potential Energy    =    -21726.4187721683 kJ/mol
+Kinetic Energy      =        10.1378030086 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809691596 kJ/mol
+Temperature         =        15.0530378640 K
+Total Particles     =                   54
+--------------- Step        91 ---- CPU =     0.5807 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21805.0446878111 kJ/mol
+   Threebody        =        78.4020820959 kJ/mol
+Potential Energy    =    -21726.6426057152 kJ/mol
+Kinetic Energy      =        10.3616363142 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809694010 kJ/mol
+Temperature         =        15.3853950049 K
+Total Particles     =                   54
+--------------- Step        92 ---- CPU =     0.5868 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21805.2078363150 kJ/mol
+   Threebody        =        78.3390432940 kJ/mol
+Potential Energy    =    -21726.8687930210 kJ/mol
+Kinetic Energy      =        10.5878233761 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809696450 kJ/mol
+Temperature         =        15.7212471027 K
+Total Particles     =                   54
+--------------- Step        93 ---- CPU =     0.5928 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21805.3726801276 kJ/mol
+   Threebody        =        78.2753499446 kJ/mol
+Potential Energy    =    -21727.0973301831 kJ/mol
+Kinetic Energy      =        10.8163602916 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809698914 kJ/mol
+Temperature         =        16.0605883624 K
+Total Particles     =                   54
+--------------- Step        94 ---- CPU =     0.5988 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21805.5392164158 kJ/mol
+   Threebody        =        78.2110031578 kJ/mol
+Potential Energy    =    -21727.3282132580 kJ/mol
+Kinetic Energy      =        11.0472431175 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809701404 kJ/mol
+Temperature         =        16.4034129288 K
+Total Particles     =                   54
+--------------- Step        95 ---- CPU =     0.6052 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21805.7074423172 kJ/mol
+   Threebody        =        78.1460040553 kJ/mol
+Potential Energy    =    -21727.5614382619 kJ/mol
+Kinetic Energy      =        11.2804678700 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809703920 kJ/mol
+Temperature         =        16.7497148865 K
+Total Particles     =                   54
+--------------- Step        96 ---- CPU =     0.6191 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21805.8773549406 kJ/mol
+   Threebody        =        78.0803537699 kJ/mol
+Potential Energy    =    -21727.7970011707 kJ/mol
+Kinetic Energy      =        11.5160305247 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809706460 kJ/mol
+Temperature         =        17.0994882602 K
+Total Particles     =                   54
+--------------- Step        97 ---- CPU =     0.6298 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21806.0489513657 kJ/mol
+   Threebody        =        78.0140534461 kJ/mol
+Potential Energy    =    -21728.0348979195 kJ/mol
+Kinetic Energy      =        11.7539270170 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809709026 kJ/mol
+Temperature         =        17.4527270145 K
+Total Particles     =                   54
+--------------- Step        98 ---- CPU =     0.6382 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21806.2222286430 kJ/mol
+   Threebody        =        77.9471042394 kJ/mol
+Potential Energy    =    -21728.2751244036 kJ/mol
+Kinetic Energy      =        11.9941532419 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809711617 kJ/mol
+Temperature         =        17.8094250543 K
+Total Particles     =                   54
+--------------- Step        99 ---- CPU =     0.6445 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21806.3971837944 kJ/mol
+   Threebody        =        77.8795073167 kJ/mol
+Potential Energy    =    -21728.5176764777 kJ/mol
+Kinetic Energy      =        12.2367050544 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809714232 kJ/mol
+Temperature         =        18.1695762245 K
+Total Particles     =                   54
+--------------- Step       100 ---- CPU =     0.6506 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -21806.5738138127 kJ/mol
+   Threebody        =        77.8112638563 kJ/mol
+Potential Energy    =    -21728.7625499565 kJ/mol
+Kinetic Energy      =        12.4815782691 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =    -21716.2809716874 kJ/mol
+Temperature         =        18.5331743107 K
+Total Particles     =                   54
+
+
+
+Loop time: 0.6511115000 on 2 processors for 54 particles
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.4055     62.28
+          Neigh Time    0.0070      1.08
+           Comm Time    0.0170      2.61
+       Exchange Time    0.0074      1.14
+        Revcomm Time    0.0160      2.46
+          Other Time    0.1981     30.43
+          Total Time    0.6511    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+                         Force  Neighbor
+Stillinger-Weber        0.4038    0.0064
+
+
+
+Finished 
+@
+
+
+2.6
+log
+@Added fix capability example (suffix _fix).
+@
+text
+@@
+
+
+2.5
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d76 1
+a76 1
+--------------- Step         1 ---- CPU =     0.0092 (sec) ---------------
+d86 1
+a86 1
+--------------- Step         2 ---- CPU =     0.0158 (sec) ---------------
+d96 1
+a96 1
+--------------- Step         3 ---- CPU =     0.0219 (sec) ---------------
+d106 1
+a106 1
+--------------- Step         4 ---- CPU =     0.0280 (sec) ---------------
+d116 1
+a116 1
+--------------- Step         5 ---- CPU =     0.0342 (sec) ---------------
+d126 1
+a126 1
+--------------- Step         6 ---- CPU =     0.0403 (sec) ---------------
+d136 1
+a136 1
+--------------- Step         7 ---- CPU =     0.0463 (sec) ---------------
+d146 1
+a146 1
+--------------- Step         8 ---- CPU =     0.0523 (sec) ---------------
+d156 1
+a156 1
+--------------- Step         9 ---- CPU =     0.0584 (sec) ---------------
+d166 1
+a166 1
+--------------- Step        10 ---- CPU =     0.0646 (sec) ---------------
+d176 1
+a176 1
+--------------- Step        11 ---- CPU =     0.0718 (sec) ---------------
+d186 1
+a186 1
+--------------- Step        12 ---- CPU =     0.0778 (sec) ---------------
+d196 1
+a196 1
+--------------- Step        13 ---- CPU =     0.0842 (sec) ---------------
+d206 1
+a206 1
+--------------- Step        14 ---- CPU =     0.0907 (sec) ---------------
+d216 1
+a216 1
+--------------- Step        15 ---- CPU =     0.0967 (sec) ---------------
+d226 1
+a226 1
+--------------- Step        16 ---- CPU =     0.1028 (sec) ---------------
+d236 1
+a236 1
+--------------- Step        17 ---- CPU =     0.1088 (sec) ---------------
+d246 1
+a246 1
+--------------- Step        18 ---- CPU =     0.1148 (sec) ---------------
+d256 1
+a256 1
+--------------- Step        19 ---- CPU =     0.1209 (sec) ---------------
+d266 1
+a266 1
+--------------- Step        20 ---- CPU =     0.1269 (sec) ---------------
+d276 1
+a276 1
+--------------- Step        21 ---- CPU =     0.1350 (sec) ---------------
+d286 1
+a286 1
+--------------- Step        22 ---- CPU =     0.1437 (sec) ---------------
+d296 1
+a296 1
+--------------- Step        23 ---- CPU =     0.1498 (sec) ---------------
+d306 1
+a306 1
+--------------- Step        24 ---- CPU =     0.1583 (sec) ---------------
+d316 1
+a316 1
+--------------- Step        25 ---- CPU =     0.1664 (sec) ---------------
+d326 1
+a326 1
+--------------- Step        26 ---- CPU =     0.1725 (sec) ---------------
+d336 1
+a336 1
+--------------- Step        27 ---- CPU =     0.1786 (sec) ---------------
+d346 1
+a346 1
+--------------- Step        28 ---- CPU =     0.1847 (sec) ---------------
+d356 1
+a356 1
+--------------- Step        29 ---- CPU =     0.1908 (sec) ---------------
+d366 1
+a366 1
+--------------- Step        30 ---- CPU =     0.1968 (sec) ---------------
+d376 1
+a376 1
+--------------- Step        31 ---- CPU =     0.2042 (sec) ---------------
+d386 1
+a386 1
+--------------- Step        32 ---- CPU =     0.2109 (sec) ---------------
+d396 1
+a396 1
+--------------- Step        33 ---- CPU =     0.2189 (sec) ---------------
+d406 1
+a406 1
+--------------- Step        34 ---- CPU =     0.2251 (sec) ---------------
+d416 1
+a416 1
+--------------- Step        35 ---- CPU =     0.2313 (sec) ---------------
+d426 1
+a426 1
+--------------- Step        36 ---- CPU =     0.2373 (sec) ---------------
+d436 1
+a436 1
+--------------- Step        37 ---- CPU =     0.2434 (sec) ---------------
+d446 1
+a446 1
+--------------- Step        38 ---- CPU =     0.2494 (sec) ---------------
+d456 1
+a456 1
+--------------- Step        39 ---- CPU =     0.2557 (sec) ---------------
+d466 1
+a466 1
+--------------- Step        40 ---- CPU =     0.2618 (sec) ---------------
+d476 1
+a476 1
+--------------- Step        41 ---- CPU =     0.2692 (sec) ---------------
+d486 1
+a486 1
+--------------- Step        42 ---- CPU =     0.2753 (sec) ---------------
+d496 1
+a496 1
+--------------- Step        43 ---- CPU =     0.2813 (sec) ---------------
+d506 1
+a506 1
+--------------- Step        44 ---- CPU =     0.2875 (sec) ---------------
+d516 1
+a516 1
+--------------- Step        45 ---- CPU =     0.2936 (sec) ---------------
+d526 1
+a526 1
+--------------- Step        46 ---- CPU =     0.2996 (sec) ---------------
+d536 1
+a536 1
+--------------- Step        47 ---- CPU =     0.3057 (sec) ---------------
+d546 1
+a546 1
+--------------- Step        48 ---- CPU =     0.3119 (sec) ---------------
+d556 1
+a556 1
+--------------- Step        49 ---- CPU =     0.3180 (sec) ---------------
+d566 1
+a566 1
+--------------- Step        50 ---- CPU =     0.3240 (sec) ---------------
+d576 1
+a576 1
+--------------- Step        51 ---- CPU =     0.3312 (sec) ---------------
+d586 1
+a586 1
+--------------- Step        52 ---- CPU =     0.3373 (sec) ---------------
+d596 1
+a596 1
+--------------- Step        53 ---- CPU =     0.3433 (sec) ---------------
+d606 1
+a606 1
+--------------- Step        54 ---- CPU =     0.3497 (sec) ---------------
+d616 1
+a616 1
+--------------- Step        55 ---- CPU =     0.3558 (sec) ---------------
+d626 1
+a626 1
+--------------- Step        56 ---- CPU =     0.3622 (sec) ---------------
+d636 1
+a636 1
+--------------- Step        57 ---- CPU =     0.3683 (sec) ---------------
+d646 1
+a646 1
+--------------- Step        58 ---- CPU =     0.3743 (sec) ---------------
+d656 1
+a656 1
+--------------- Step        59 ---- CPU =     0.3804 (sec) ---------------
+d666 1
+a666 1
+--------------- Step        60 ---- CPU =     0.3864 (sec) ---------------
+d676 1
+a676 1
+--------------- Step        61 ---- CPU =     0.3936 (sec) ---------------
+d686 1
+a686 1
+--------------- Step        62 ---- CPU =     0.3996 (sec) ---------------
+d696 1
+a696 1
+--------------- Step        63 ---- CPU =     0.4057 (sec) ---------------
+d706 1
+a706 1
+--------------- Step        64 ---- CPU =     0.4117 (sec) ---------------
+d716 1
+a716 1
+--------------- Step        65 ---- CPU =     0.4180 (sec) ---------------
+d726 1
+a726 1
+--------------- Step        66 ---- CPU =     0.4240 (sec) ---------------
+d736 1
+a736 1
+--------------- Step        67 ---- CPU =     0.4301 (sec) ---------------
+d746 1
+a746 1
+--------------- Step        68 ---- CPU =     0.4362 (sec) ---------------
+d756 1
+a756 1
+--------------- Step        69 ---- CPU =     0.4422 (sec) ---------------
+d766 1
+a766 1
+--------------- Step        70 ---- CPU =     0.4482 (sec) ---------------
+d776 1
+a776 1
+--------------- Step        71 ---- CPU =     0.4553 (sec) ---------------
+d786 1
+a786 1
+--------------- Step        72 ---- CPU =     0.4615 (sec) ---------------
+d796 1
+a796 1
+--------------- Step        73 ---- CPU =     0.4677 (sec) ---------------
+d806 1
+a806 1
+--------------- Step        74 ---- CPU =     0.4737 (sec) ---------------
+d816 1
+a816 1
+--------------- Step        75 ---- CPU =     0.4797 (sec) ---------------
+d826 1
+a826 1
+--------------- Step        76 ---- CPU =     0.4858 (sec) ---------------
+d836 1
+a836 1
+--------------- Step        77 ---- CPU =     0.4918 (sec) ---------------
+d846 1
+a846 1
+--------------- Step        78 ---- CPU =     0.4978 (sec) ---------------
+d856 1
+a856 1
+--------------- Step        79 ---- CPU =     0.5038 (sec) ---------------
+d866 1
+a866 1
+--------------- Step        80 ---- CPU =     0.5119 (sec) ---------------
+d876 1
+a876 1
+--------------- Step        81 ---- CPU =     0.5190 (sec) ---------------
+d886 1
+a886 1
+--------------- Step        82 ---- CPU =     0.5253 (sec) ---------------
+d896 1
+a896 1
+--------------- Step        83 ---- CPU =     0.5313 (sec) ---------------
+d906 1
+a906 1
+--------------- Step        84 ---- CPU =     0.5373 (sec) ---------------
+d916 1
+a916 1
+--------------- Step        85 ---- CPU =     0.5434 (sec) ---------------
+d926 1
+a926 1
+--------------- Step        86 ---- CPU =     0.5494 (sec) ---------------
+d936 1
+a936 1
+--------------- Step        87 ---- CPU =     0.5554 (sec) ---------------
+d946 1
+a946 1
+--------------- Step        88 ---- CPU =     0.5614 (sec) ---------------
+d956 1
+a956 1
+--------------- Step        89 ---- CPU =     0.5675 (sec) ---------------
+d966 1
+a966 1
+--------------- Step        90 ---- CPU =     0.5735 (sec) ---------------
+d976 1
+a976 1
+--------------- Step        91 ---- CPU =     0.5812 (sec) ---------------
+d986 1
+a986 1
+--------------- Step        92 ---- CPU =     0.5873 (sec) ---------------
+d996 1
+a996 1
+--------------- Step        93 ---- CPU =     0.5933 (sec) ---------------
+d1006 1
+a1006 1
+--------------- Step        94 ---- CPU =     0.5993 (sec) ---------------
+d1016 1
+a1016 1
+--------------- Step        95 ---- CPU =     0.6054 (sec) ---------------
+d1026 1
+a1026 1
+--------------- Step        96 ---- CPU =     0.6114 (sec) ---------------
+d1036 1
+a1036 1
+--------------- Step        97 ---- CPU =     0.6175 (sec) ---------------
+d1046 1
+a1046 1
+--------------- Step        98 ---- CPU =     0.6235 (sec) ---------------
+d1056 1
+a1056 1
+--------------- Step        99 ---- CPU =     0.6303 (sec) ---------------
+d1066 1
+a1066 1
+--------------- Step       100 ---- CPU =     0.6383 (sec) ---------------
+d1079 1
+a1079 1
+Loop time: 0.6387825000 on 2 processors for 54 particles
+d1085 7
+a1091 7
+          Force Time    0.4012     62.81
+          Neigh Time    0.0068      1.06
+           Comm Time    0.0149      2.34
+       Exchange Time    0.0070      1.09
+        Revcomm Time    0.0157      2.45
+          Other Time    0.1932     30.24
+          Total Time    0.6388    100.00
+d1097 1
+a1097 1
+Stillinger-Weber        0.3996    0.0061
+@
+
+
+2.4
+log
+@Fixed up the output a little more.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@a6 1
+#  threebody 54-particle tetrahedral input data
+a21 1
+
+d72 1
+d75 2
+a76 1
+--------------- Step         1 ---- CPU =     0.0109 (sec) ---------------
+d82 1
+d85 2
+a86 1
+--------------- Step         2 ---- CPU =     0.0199 (sec) ---------------
+d92 1
+d95 2
+a96 1
+--------------- Step         3 ---- CPU =     0.0262 (sec) ---------------
+d102 1
+d105 2
+a106 1
+--------------- Step         4 ---- CPU =     0.0369 (sec) ---------------
+d112 1
+d115 2
+a116 1
+--------------- Step         5 ---- CPU =     0.0434 (sec) ---------------
+d122 1
+d125 2
+a126 1
+--------------- Step         6 ---- CPU =     0.0515 (sec) ---------------
+d132 1
+d135 2
+a136 1
+--------------- Step         7 ---- CPU =     0.0583 (sec) ---------------
+d142 1
+d145 2
+a146 1
+--------------- Step         8 ---- CPU =     0.0648 (sec) ---------------
+d152 1
+d155 2
+a156 1
+--------------- Step         9 ---- CPU =     0.0772 (sec) ---------------
+d162 1
+d165 2
+a166 1
+--------------- Step        10 ---- CPU =     0.0832 (sec) ---------------
+d172 1
+d175 2
+a176 1
+--------------- Step        11 ---- CPU =     0.0931 (sec) ---------------
+d182 1
+d185 2
+a186 1
+--------------- Step        12 ---- CPU =     0.1017 (sec) ---------------
+d192 1
+d195 2
+a196 1
+--------------- Step        13 ---- CPU =     0.1116 (sec) ---------------
+d202 1
+d205 2
+a206 1
+--------------- Step        14 ---- CPU =     0.1178 (sec) ---------------
+d212 1
+d215 2
+a216 1
+--------------- Step        15 ---- CPU =     0.1239 (sec) ---------------
+d222 1
+d225 2
+a226 1
+--------------- Step        16 ---- CPU =     0.1300 (sec) ---------------
+d232 1
+d235 2
+a236 1
+--------------- Step        17 ---- CPU =     0.1364 (sec) ---------------
+d242 1
+d245 2
+a246 1
+--------------- Step        18 ---- CPU =     0.1431 (sec) ---------------
+d252 1
+d255 2
+a256 1
+--------------- Step        19 ---- CPU =     0.1501 (sec) ---------------
+d262 1
+d265 2
+a266 1
+--------------- Step        20 ---- CPU =     0.1584 (sec) ---------------
+d272 1
+d275 2
+a276 1
+--------------- Step        21 ---- CPU =     0.1663 (sec) ---------------
+d282 1
+d285 2
+a286 1
+--------------- Step        22 ---- CPU =     0.1728 (sec) ---------------
+d292 1
+d295 2
+a296 1
+--------------- Step        23 ---- CPU =     0.1808 (sec) ---------------
+d302 1
+d305 2
+a306 1
+--------------- Step        24 ---- CPU =     0.1901 (sec) ---------------
+d312 1
+d315 2
+a316 1
+--------------- Step        25 ---- CPU =     0.1995 (sec) ---------------
+d322 1
+d325 2
+a326 1
+--------------- Step        26 ---- CPU =     0.2057 (sec) ---------------
+d332 1
+d335 2
+a336 1
+--------------- Step        27 ---- CPU =     0.2137 (sec) ---------------
+d342 1
+d345 2
+a346 1
+--------------- Step        28 ---- CPU =     0.2216 (sec) ---------------
+d352 1
+d355 2
+a356 1
+--------------- Step        29 ---- CPU =     0.2318 (sec) ---------------
+d362 1
+d365 2
+a366 1
+--------------- Step        30 ---- CPU =     0.2422 (sec) ---------------
+d372 1
+d375 2
+a376 1
+--------------- Step        31 ---- CPU =     0.2531 (sec) ---------------
+d382 1
+d385 2
+a386 1
+--------------- Step        32 ---- CPU =     0.2619 (sec) ---------------
+d392 1
+d395 2
+a396 1
+--------------- Step        33 ---- CPU =     0.2695 (sec) ---------------
+d402 1
+d405 2
+a406 1
+--------------- Step        34 ---- CPU =     0.2758 (sec) ---------------
+d412 1
+d415 2
+a416 1
+--------------- Step        35 ---- CPU =     0.2859 (sec) ---------------
+d422 1
+d425 2
+a426 1
+--------------- Step        36 ---- CPU =     0.2927 (sec) ---------------
+d432 1
+d435 2
+a436 1
+--------------- Step        37 ---- CPU =     0.3015 (sec) ---------------
+d442 1
+d445 2
+a446 1
+--------------- Step        38 ---- CPU =     0.3099 (sec) ---------------
+d452 1
+d455 2
+a456 1
+--------------- Step        39 ---- CPU =     0.3184 (sec) ---------------
+d462 1
+d465 2
+a466 1
+--------------- Step        40 ---- CPU =     0.3245 (sec) ---------------
+d472 1
+d475 2
+a476 1
+--------------- Step        41 ---- CPU =     0.3384 (sec) ---------------
+d482 1
+d485 2
+a486 1
+--------------- Step        42 ---- CPU =     0.3445 (sec) ---------------
+d492 1
+d495 2
+a496 1
+--------------- Step        43 ---- CPU =     0.3539 (sec) ---------------
+d502 1
+d505 2
+a506 1
+--------------- Step        44 ---- CPU =     0.3610 (sec) ---------------
+d512 1
+d515 2
+a516 1
+--------------- Step        45 ---- CPU =     0.3691 (sec) ---------------
+d522 1
+d525 2
+a526 1
+--------------- Step        46 ---- CPU =     0.3755 (sec) ---------------
+d532 1
+d535 2
+a536 1
+--------------- Step        47 ---- CPU =     0.3834 (sec) ---------------
+d542 1
+d545 2
+a546 1
+--------------- Step        48 ---- CPU =     0.3903 (sec) ---------------
+d552 1
+d555 2
+a556 1
+--------------- Step        49 ---- CPU =     0.3990 (sec) ---------------
+d562 1
+d565 2
+a566 1
+--------------- Step        50 ---- CPU =     0.4070 (sec) ---------------
+d572 1
+d575 2
+a576 1
+--------------- Step        51 ---- CPU =     0.4141 (sec) ---------------
+d582 1
+d585 2
+a586 1
+--------------- Step        52 ---- CPU =     0.4217 (sec) ---------------
+d592 1
+d595 2
+a596 1
+--------------- Step        53 ---- CPU =     0.4295 (sec) ---------------
+d602 1
+d605 2
+a606 1
+--------------- Step        54 ---- CPU =     0.4359 (sec) ---------------
+d612 1
+d615 2
+a616 1
+--------------- Step        55 ---- CPU =     0.4431 (sec) ---------------
+d622 1
+d625 2
+a626 1
+--------------- Step        56 ---- CPU =     0.4509 (sec) ---------------
+d632 1
+d635 2
+a636 1
+--------------- Step        57 ---- CPU =     0.4587 (sec) ---------------
+d642 1
+d645 2
+a646 1
+--------------- Step        58 ---- CPU =     0.4652 (sec) ---------------
+d652 1
+d655 2
+a656 1
+--------------- Step        59 ---- CPU =     0.4751 (sec) ---------------
+d662 1
+d665 2
+a666 1
+--------------- Step        60 ---- CPU =     0.4830 (sec) ---------------
+d672 1
+d675 2
+a676 1
+--------------- Step        61 ---- CPU =     0.4920 (sec) ---------------
+d682 1
+d685 2
+a686 1
+--------------- Step        62 ---- CPU =     0.4996 (sec) ---------------
+d692 1
+d695 2
+a696 1
+--------------- Step        63 ---- CPU =     0.5082 (sec) ---------------
+d702 1
+d705 2
+a706 1
+--------------- Step        64 ---- CPU =     0.5159 (sec) ---------------
+d712 1
+d715 2
+a716 1
+--------------- Step        65 ---- CPU =     0.5268 (sec) ---------------
+d722 1
+d725 2
+a726 1
+--------------- Step        66 ---- CPU =     0.5335 (sec) ---------------
+d732 1
+d735 2
+a736 1
+--------------- Step        67 ---- CPU =     0.5407 (sec) ---------------
+d742 1
+d745 2
+a746 1
+--------------- Step        68 ---- CPU =     0.5493 (sec) ---------------
+d752 1
+d755 2
+a756 1
+--------------- Step        69 ---- CPU =     0.5588 (sec) ---------------
+d762 1
+d765 2
+a766 1
+--------------- Step        70 ---- CPU =     0.5674 (sec) ---------------
+d772 1
+d775 2
+a776 1
+--------------- Step        71 ---- CPU =     0.5748 (sec) ---------------
+d782 1
+d785 2
+a786 1
+--------------- Step        72 ---- CPU =     0.5830 (sec) ---------------
+d792 1
+d795 2
+a796 1
+--------------- Step        73 ---- CPU =     0.5913 (sec) ---------------
+d802 1
+d805 2
+a806 1
+--------------- Step        74 ---- CPU =     0.5999 (sec) ---------------
+d812 1
+d815 2
+a816 1
+--------------- Step        75 ---- CPU =     0.6083 (sec) ---------------
+d822 1
+d825 2
+a826 1
+--------------- Step        76 ---- CPU =     0.6143 (sec) ---------------
+d832 1
+d835 2
+a836 1
+--------------- Step        77 ---- CPU =     0.6205 (sec) ---------------
+d842 1
+d845 2
+a846 1
+--------------- Step        78 ---- CPU =     0.6269 (sec) ---------------
+d852 1
+d855 2
+a856 1
+--------------- Step        79 ---- CPU =     0.6352 (sec) ---------------
+d862 1
+d865 2
+a866 1
+--------------- Step        80 ---- CPU =     0.6476 (sec) ---------------
+d872 1
+d875 2
+a876 1
+--------------- Step        81 ---- CPU =     0.6592 (sec) ---------------
+d882 1
+d885 2
+a886 1
+--------------- Step        82 ---- CPU =     0.6687 (sec) ---------------
+d892 1
+d895 2
+a896 1
+--------------- Step        83 ---- CPU =     0.6782 (sec) ---------------
+d902 1
+d905 2
+a906 1
+--------------- Step        84 ---- CPU =     0.6859 (sec) ---------------
+d912 1
+d915 2
+a916 1
+--------------- Step        85 ---- CPU =     0.6972 (sec) ---------------
+d922 1
+d925 2
+a926 1
+--------------- Step        86 ---- CPU =     0.7082 (sec) ---------------
+d932 1
+d935 2
+a936 1
+--------------- Step        87 ---- CPU =     0.7188 (sec) ---------------
+d942 1
+d945 2
+a946 1
+--------------- Step        88 ---- CPU =     0.7249 (sec) ---------------
+d952 1
+d955 2
+a956 1
+--------------- Step        89 ---- CPU =     0.7341 (sec) ---------------
+d962 1
+d965 2
+a966 1
+--------------- Step        90 ---- CPU =     0.7403 (sec) ---------------
+d972 1
+d975 2
+a976 1
+--------------- Step        91 ---- CPU =     0.7482 (sec) ---------------
+d982 1
+d985 2
+a986 1
+--------------- Step        92 ---- CPU =     0.7583 (sec) ---------------
+d992 1
+d995 2
+a996 1
+--------------- Step        93 ---- CPU =     0.7660 (sec) ---------------
+d1002 1
+d1005 2
+a1006 1
+--------------- Step        94 ---- CPU =     0.7732 (sec) ---------------
+d1012 1
+d1015 2
+a1016 1
+--------------- Step        95 ---- CPU =     0.7809 (sec) ---------------
+d1022 1
+d1025 2
+a1026 1
+--------------- Step        96 ---- CPU =     0.7893 (sec) ---------------
+d1032 1
+d1035 2
+a1036 1
+--------------- Step        97 ---- CPU =     0.7982 (sec) ---------------
+d1042 1
+d1045 2
+a1046 1
+--------------- Step        98 ---- CPU =     0.8079 (sec) ---------------
+d1052 1
+d1055 2
+a1056 1
+--------------- Step        99 ---- CPU =     0.8141 (sec) ---------------
+d1062 1
+d1065 2
+a1066 1
+--------------- Step       100 ---- CPU =     0.8221 (sec) ---------------
+d1072 1
+d1075 1
+d1079 1
+a1079 1
+Loop time: 0.8225720000 on 2 processors for 36 particles
+d1085 7
+a1091 7
+          Force Time    0.4439     53.96
+          Neigh Time    0.0072      0.88
+           Comm Time    0.0207      2.52
+       Exchange Time    0.0099      1.21
+        Revcomm Time    0.0237      2.88
+          Other Time    0.3171     38.55
+          Total Time    0.8226    100.00
+d1097 1
+a1097 1
+Stillinger-Weber        0.4416    0.0065
+@
+
+
+2.3
+log
+@Fixed up the output log immensely. Fixed up the velocity-rescale
+thermostat, which changed the dft example a little.
+Other than that, all the other examples (NVE) stayed the same.
+@
+text
+@d69 807
+a875 605
+Stillinger-Weber    = -21716.2809582288 kJ/mol
+Potential Energy    = -21716.2809582288 kJ/mol
+Kinetic Energy      =    0.0000000000 kJ/mol
+Total Energy        = -21716.2809582288 kJ/mol
+Temperature         =    0.0000000000 K
+--------------- Step         1 ---- CPU =     0.0111 (sec) ---------------
+Stillinger-Weber    = -21716.2822244839 kJ/mol
+Potential Energy    = -21716.2822244839 kJ/mol
+Kinetic Energy      =    0.0012662537 kJ/mol
+Total Energy        = -21716.2809582301 kJ/mol
+Temperature         =    0.0018801870 K
+--------------- Step         2 ---- CPU =     0.0205 (sec) ---------------
+Stillinger-Weber    = -21716.2860232272 kJ/mol
+Potential Energy    = -21716.2860232272 kJ/mol
+Kinetic Energy      =    0.0050649930 kJ/mol
+Total Energy        = -21716.2809582342 kJ/mol
+Temperature         =    0.0075207154 K
+--------------- Step         3 ---- CPU =     0.0298 (sec) ---------------
+Stillinger-Weber    = -21716.2923543934 kJ/mol
+Potential Energy    = -21716.2923543934 kJ/mol
+Kinetic Energy      =    0.0113961524 kJ/mol
+Total Energy        = -21716.2809582410 kJ/mol
+Temperature         =    0.0169214881 K
+--------------- Step         4 ---- CPU =     0.0400 (sec) ---------------
+Stillinger-Weber    = -21716.3012178732 kJ/mol
+Potential Energy    = -21716.3012178732 kJ/mol
+Kinetic Energy      =    0.0202596226 kJ/mol
+Total Energy        = -21716.2809582505 kJ/mol
+Temperature         =    0.0300823429 K
+--------------- Step         5 ---- CPU =     0.0495 (sec) ---------------
+Stillinger-Weber    = -21716.3126135137 kJ/mol
+Potential Energy    = -21716.3126135137 kJ/mol
+Kinetic Energy      =    0.0316552509 kJ/mol
+Total Energy        = -21716.2809582628 kJ/mol
+Temperature         =    0.0470030528 K
+--------------- Step         6 ---- CPU =     0.0589 (sec) ---------------
+Stillinger-Weber    = -21716.3265411184 kJ/mol
+Potential Energy    = -21716.3265411184 kJ/mol
+Kinetic Energy      =    0.0455828405 kJ/mol
+Total Energy        = -21716.2809582779 kJ/mol
+Temperature         =    0.0676833259 K
+--------------- Step         7 ---- CPU =     0.0682 (sec) ---------------
+Stillinger-Weber    = -21716.3430004471 kJ/mol
+Potential Energy    = -21716.3430004471 kJ/mol
+Kinetic Energy      =    0.0620421514 kJ/mol
+Total Energy        = -21716.2809582957 kJ/mol
+Temperature         =    0.0921228055 K
+--------------- Step         8 ---- CPU =     0.0783 (sec) ---------------
+Stillinger-Weber    = -21716.3619912157 kJ/mol
+Potential Energy    = -21716.3619912157 kJ/mol
+Kinetic Energy      =    0.0810328996 kJ/mol
+Total Energy        = -21716.2809583161 kJ/mol
+Temperature         =    0.1203210701 K
+--------------- Step         9 ---- CPU =     0.0870 (sec) ---------------
+Stillinger-Weber    = -21716.3835130969 kJ/mol
+Potential Energy    = -21716.3835130969 kJ/mol
+Kinetic Energy      =    0.1025547576 kJ/mol
+Total Energy        = -21716.2809583393 kJ/mol
+Temperature         =    0.1522776333 K
+--------------- Step        10 ---- CPU =     0.0931 (sec) ---------------
+Stillinger-Weber    = -21716.4075657193 kJ/mol
+Potential Energy    = -21716.4075657193 kJ/mol
+Kinetic Energy      =    0.1266073541 kJ/mol
+Total Energy        = -21716.2809583652 kJ/mol
+Temperature         =    0.1879919440 K
+--------------- Step        11 ---- CPU =     0.1004 (sec) ---------------
+Stillinger-Weber    = -21716.4341486681 kJ/mol
+Potential Energy    = -21716.4341486681 kJ/mol
+Kinetic Energy      =    0.1531902743 kJ/mol
+Total Energy        = -21716.2809583938 kJ/mol
+Temperature         =    0.2274633861 K
+--------------- Step        12 ---- CPU =     0.1064 (sec) ---------------
+Stillinger-Weber    = -21716.4632614850 kJ/mol
+Potential Energy    = -21716.4632614850 kJ/mol
+Kinetic Energy      =    0.1823030597 kJ/mol
+Total Energy        = -21716.2809584253 kJ/mol
+Temperature         =    0.2706912788 K
+--------------- Step        13 ---- CPU =     0.1124 (sec) ---------------
+Stillinger-Weber    = -21716.4949036675 kJ/mol
+Potential Energy    = -21716.4949036675 kJ/mol
+Kinetic Energy      =    0.2139452081 kJ/mol
+Total Energy        = -21716.2809584594 kJ/mol
+Temperature         =    0.3176748765 K
+--------------- Step        14 ---- CPU =     0.1197 (sec) ---------------
+Stillinger-Weber    = -21716.5290746701 kJ/mol
+Potential Energy    = -21716.5290746701 kJ/mol
+Kinetic Energy      =    0.2481161739 kJ/mol
+Total Energy        = -21716.2809584962 kJ/mol
+Temperature         =    0.3684133689 K
+--------------- Step        15 ---- CPU =     0.1258 (sec) ---------------
+Stillinger-Weber    = -21716.5657739032 kJ/mol
+Potential Energy    = -21716.5657739032 kJ/mol
+Kinetic Energy      =    0.2848153674 kJ/mol
+Total Energy        = -21716.2809585357 kJ/mol
+Temperature         =    0.4229058808 K
+--------------- Step        16 ---- CPU =     0.1319 (sec) ---------------
+Stillinger-Weber    = -21716.6050007340 kJ/mol
+Potential Energy    = -21716.6050007340 kJ/mol
+Kinetic Energy      =    0.3240421559 kJ/mol
+Total Energy        = -21716.2809585781 kJ/mol
+Temperature         =    0.4811514722 K
+--------------- Step        17 ---- CPU =     0.1380 (sec) ---------------
+Stillinger-Weber    = -21716.6467544857 kJ/mol
+Potential Energy    = -21716.6467544857 kJ/mol
+Kinetic Energy      =    0.3657958627 kJ/mol
+Total Energy        = -21716.2809586231 kJ/mol
+Temperature         =    0.5431491386 K
+--------------- Step        18 ---- CPU =     0.1442 (sec) ---------------
+Stillinger-Weber    = -21716.6910344383 kJ/mol
+Potential Energy    = -21716.6910344383 kJ/mol
+Kinetic Energy      =    0.4100757675 kJ/mol
+Total Energy        = -21716.2809586707 kJ/mol
+Temperature         =    0.6088978106 K
+--------------- Step        19 ---- CPU =     0.1503 (sec) ---------------
+Stillinger-Weber    = -21716.7378398280 kJ/mol
+Potential Energy    = -21716.7378398280 kJ/mol
+Kinetic Energy      =    0.4568811068 kJ/mol
+Total Energy        = -21716.2809587213 kJ/mol
+Temperature         =    0.6783963541 K
+--------------- Step        20 ---- CPU =     0.1566 (sec) ---------------
+Stillinger-Weber    = -21716.7871698475 kJ/mol
+Potential Energy    = -21716.7871698475 kJ/mol
+Kinetic Energy      =    0.5062110730 kJ/mol
+Total Energy        = -21716.2809587744 kJ/mol
+Temperature         =    0.7516435704 K
+--------------- Step        21 ---- CPU =     0.1642 (sec) ---------------
+Stillinger-Weber    = -21716.8390236458 kJ/mol
+Potential Energy    = -21716.8390236458 kJ/mol
+Kinetic Energy      =    0.5580648155 kJ/mol
+Total Energy        = -21716.2809588303 kJ/mol
+Temperature         =    0.8286381961 K
+--------------- Step        22 ---- CPU =     0.1706 (sec) ---------------
+Stillinger-Weber    = -21716.8934003287 kJ/mol
+Potential Energy    = -21716.8934003287 kJ/mol
+Kinetic Energy      =    0.6124414397 kJ/mol
+Total Energy        = -21716.2809588890 kJ/mol
+Temperature         =    0.9093789033 K
+--------------- Step        23 ---- CPU =     0.1768 (sec) ---------------
+Stillinger-Weber    = -21716.9502989582 kJ/mol
+Potential Energy    = -21716.9502989582 kJ/mol
+Kinetic Energy      =    0.6693400078 kJ/mol
+Total Energy        = -21716.2809589503 kJ/mol
+Temperature         =    0.9938642991 K
+--------------- Step        24 ---- CPU =     0.1828 (sec) ---------------
+Stillinger-Weber    = -21717.0097185528 kJ/mol
+Potential Energy    = -21717.0097185528 kJ/mol
+Kinetic Energy      =    0.7287595384 kJ/mol
+Total Energy        = -21716.2809590144 kJ/mol
+Temperature         =    1.0820929264 K
+--------------- Step        25 ---- CPU =     0.1889 (sec) ---------------
+Stillinger-Weber    = -21717.0716580878 kJ/mol
+Potential Energy    = -21717.0716580878 kJ/mol
+Kinetic Energy      =    0.7906990065 kJ/mol
+Total Energy        = -21716.2809590813 kJ/mol
+Temperature         =    1.1740632634 K
+--------------- Step        26 ---- CPU =     0.1964 (sec) ---------------
+Stillinger-Weber    = -21717.1361164945 kJ/mol
+Potential Energy    = -21717.1361164945 kJ/mol
+Kinetic Energy      =    0.8551573438 kJ/mol
+Total Energy        = -21716.2809591507 kJ/mol
+Temperature         =    1.2697737236 K
+--------------- Step        27 ---- CPU =     0.2026 (sec) ---------------
+Stillinger-Weber    = -21717.2030926613 kJ/mol
+Potential Energy    = -21717.2030926613 kJ/mol
+Kinetic Energy      =    0.9221334385 kJ/mol
+Total Energy        = -21716.2809592228 kJ/mol
+Temperature         =    1.3692226564 K
+--------------- Step        28 ---- CPU =     0.2086 (sec) ---------------
+Stillinger-Weber    = -21717.2725854329 kJ/mol
+Potential Energy    = -21717.2725854329 kJ/mol
+Kinetic Energy      =    0.9916261353 kJ/mol
+Total Energy        = -21716.2809592976 kJ/mol
+Temperature         =    1.4724083462 K
+--------------- Step        29 ---- CPU =     0.2148 (sec) ---------------
+Stillinger-Weber    = -21717.3445936109 kJ/mol
+Potential Energy    = -21717.3445936109 kJ/mol
+Kinetic Energy      =    1.0636342356 kJ/mol
+Total Energy        = -21716.2809593753 kJ/mol
+Temperature         =    1.5793290132 K
+--------------- Step        30 ---- CPU =     0.2210 (sec) ---------------
+Stillinger-Weber    = -21717.4191159529 kJ/mol
+Potential Energy    = -21717.4191159529 kJ/mol
+Kinetic Energy      =    1.1381564973 kJ/mol
+Total Energy        = -21716.2809594556 kJ/mol
+Temperature         =    1.6899828133 K
+--------------- Step        31 ---- CPU =     0.2282 (sec) ---------------
+Stillinger-Weber    = -21717.4961511737 kJ/mol
+Potential Energy    = -21717.4961511737 kJ/mol
+Kinetic Energy      =    1.2151916350 kJ/mol
+Total Energy        = -21716.2809595387 kJ/mol
+Temperature         =    1.8043678378 K
+--------------- Step        32 ---- CPU =     0.2354 (sec) ---------------
+Stillinger-Weber    = -21717.5756979444 kJ/mol
+Potential Energy    = -21717.5756979444 kJ/mol
+Kinetic Energy      =    1.2947383200 kJ/mol
+Total Energy        = -21716.2809596243 kJ/mol
+Temperature         =    1.9224821136 K
+--------------- Step        33 ---- CPU =     0.2415 (sec) ---------------
+Stillinger-Weber    = -21717.6577548930 kJ/mol
+Potential Energy    = -21717.6577548930 kJ/mol
+Kinetic Energy      =    1.3767951802 kJ/mol
+Total Energy        = -21716.2809597129 kJ/mol
+Temperature         =    2.0443236035 K
+--------------- Step        34 ---- CPU =     0.2478 (sec) ---------------
+Stillinger-Weber    = -21717.7423206041 kJ/mol
+Potential Energy    = -21717.7423206041 kJ/mol
+Kinetic Energy      =    1.4613608001 kJ/mol
+Total Energy        = -21716.2809598040 kJ/mol
+Temperature         =    2.1698902058 K
+--------------- Step        35 ---- CPU =     0.2543 (sec) ---------------
+Stillinger-Weber    = -21717.8293936190 kJ/mol
+Potential Energy    = -21717.8293936190 kJ/mol
+Kinetic Energy      =    1.5484337211 kJ/mol
+Total Energy        = -21716.2809598979 kJ/mol
+Temperature         =    2.2991797546 K
+--------------- Step        36 ---- CPU =     0.2603 (sec) ---------------
+Stillinger-Weber    = -21717.9189724358 kJ/mol
+Potential Energy    = -21717.9189724358 kJ/mol
+Kinetic Energy      =    1.6380124413 kJ/mol
+Total Energy        = -21716.2809599945 kJ/mol
+Temperature         =    2.4321900198 K
+--------------- Step        37 ---- CPU =     0.2663 (sec) ---------------
+Stillinger-Weber    = -21718.0110555092 kJ/mol
+Potential Energy    = -21718.0110555092 kJ/mol
+Kinetic Energy      =    1.7300954155 kJ/mol
+Total Energy        = -21716.2809600938 kJ/mol
+Temperature         =    2.5689187071 K
+--------------- Step        38 ---- CPU =     0.2724 (sec) ---------------
+Stillinger-Weber    = -21718.1056412510 kJ/mol
+Potential Energy    = -21718.1056412510 kJ/mol
+Kinetic Energy      =    1.8246810554 kJ/mol
+Total Energy        = -21716.2809601956 kJ/mol
+Temperature         =    2.7093634580 K
+--------------- Step        39 ---- CPU =     0.2784 (sec) ---------------
+Stillinger-Weber    = -21718.2027280297 kJ/mol
+Potential Energy    = -21718.2027280297 kJ/mol
+Kinetic Energy      =    1.9217677294 kJ/mol
+Total Energy        = -21716.2809603003 kJ/mol
+Temperature         =    2.8535218501 K
+--------------- Step        40 ---- CPU =     0.2844 (sec) ---------------
+Stillinger-Weber    = -21718.3023141707 kJ/mol
+Potential Energy    = -21718.3023141707 kJ/mol
+Kinetic Energy      =    2.0213537629 kJ/mol
+Total Energy        = -21716.2809604077 kJ/mol
+Temperature         =    3.0013913966 K
+--------------- Step        41 ---- CPU =     0.2919 (sec) ---------------
+Stillinger-Weber    = -21718.4043979560 kJ/mol
+Potential Energy    = -21718.4043979560 kJ/mol
+Kinetic Energy      =    2.1234374382 kJ/mol
+Total Energy        = -21716.2809605178 kJ/mol
+Temperature         =    3.1529695469 K
+--------------- Step        42 ---- CPU =     0.2980 (sec) ---------------
+Stillinger-Weber    = -21718.5089776248 kJ/mol
+Potential Energy    = -21718.5089776248 kJ/mol
+Kinetic Energy      =    2.2280169942 kJ/mol
+Total Energy        = -21716.2809606306 kJ/mol
+Temperature         =    3.3082536864 K
+--------------- Step        43 ---- CPU =     0.3040 (sec) ---------------
+Stillinger-Weber    = -21718.6160513731 kJ/mol
+Potential Energy    = -21718.6160513731 kJ/mol
+Kinetic Energy      =    2.3350906272 kJ/mol
+Total Energy        = -21716.2809607460 kJ/mol
+Temperature         =    3.4672411366 K
+--------------- Step        44 ---- CPU =     0.3101 (sec) ---------------
+Stillinger-Weber    = -21718.7256173542 kJ/mol
+Potential Energy    = -21718.7256173542 kJ/mol
+Kinetic Energy      =    2.4446564900 kJ/mol
+Total Energy        = -21716.2809608641 kJ/mol
+Temperature         =    3.6299291550 K
+--------------- Step        45 ---- CPU =     0.3161 (sec) ---------------
+Stillinger-Weber    = -21718.8376736778 kJ/mol
+Potential Energy    = -21718.8376736778 kJ/mol
+Kinetic Energy      =    2.5567126928 kJ/mol
+Total Energy        = -21716.2809609850 kJ/mol
+Temperature         =    3.7963149353 K
+--------------- Step        46 ---- CPU =     0.3221 (sec) ---------------
+Stillinger-Weber    = -21718.9522184112 kJ/mol
+Potential Energy    = -21718.9522184112 kJ/mol
+Kinetic Energy      =    2.6712573027 kJ/mol
+Total Energy        = -21716.2809611085 kJ/mol
+Temperature         =    3.9663956074 K
+--------------- Step        47 ---- CPU =     0.3282 (sec) ---------------
+Stillinger-Weber    = -21719.0692495784 kJ/mol
+Potential Energy    = -21719.0692495784 kJ/mol
+Kinetic Energy      =    2.7882883437 kJ/mol
+Total Energy        = -21716.2809612346 kJ/mol
+Temperature         =    4.1401682374 K
+--------------- Step        48 ---- CPU =     0.3345 (sec) ---------------
+Stillinger-Weber    = -21719.1887651606 kJ/mol
+Potential Energy    = -21719.1887651606 kJ/mol
+Kinetic Energy      =    2.9078037972 kJ/mol
+Total Energy        = -21716.2809613635 kJ/mol
+Temperature         =    4.3176298279 K
+--------------- Step        49 ---- CPU =     0.3407 (sec) ---------------
+Stillinger-Weber    = -21719.3107630964 kJ/mol
+Potential Energy    = -21719.3107630964 kJ/mol
+Kinetic Energy      =    3.0298016014 kJ/mol
+Total Energy        = -21716.2809614950 kJ/mol
+Temperature         =    4.4987773177 K
+--------------- Step        50 ---- CPU =     0.3487 (sec) ---------------
+Stillinger-Weber    = -21719.4352412812 kJ/mol
+Potential Energy    = -21719.4352412812 kJ/mol
+Kinetic Energy      =    3.1542796520 kJ/mol
+Total Energy        = -21716.2809616292 kJ/mol
+Temperature         =    4.6836075819 K
+--------------- Step        51 ---- CPU =     0.3569 (sec) ---------------
+Stillinger-Weber    = -21719.5621975678 kJ/mol
+Potential Energy    = -21719.5621975678 kJ/mol
+Kinetic Energy      =    3.2812358017 kJ/mol
+Total Energy        = -21716.2809617661 kJ/mol
+Temperature         =    4.8721174323 K
+--------------- Step        52 ---- CPU =     0.3691 (sec) ---------------
+Stillinger-Weber    = -21719.6916297662 kJ/mol
+Potential Energy    = -21719.6916297662 kJ/mol
+Kinetic Energy      =    3.4106678605 kJ/mol
+Total Energy        = -21716.2809619057 kJ/mol
+Temperature         =    5.0643036171 K
+--------------- Step        53 ---- CPU =     0.3815 (sec) ---------------
+Stillinger-Weber    = -21719.8235356436 kJ/mol
+Potential Energy    = -21719.8235356436 kJ/mol
+Kinetic Energy      =    3.5425735957 kJ/mol
+Total Energy        = -21716.2809620478 kJ/mol
+Temperature         =    5.2601628210 K
+--------------- Step        54 ---- CPU =     0.3922 (sec) ---------------
+Stillinger-Weber    = -21719.9579129246 kJ/mol
+Potential Energy    = -21719.9579129246 kJ/mol
+Kinetic Energy      =    3.6769507319 kJ/mol
+Total Energy        = -21716.2809621927 kJ/mol
+Temperature         =    5.4596916654 K
+--------------- Step        55 ---- CPU =     0.4015 (sec) ---------------
+Stillinger-Weber    = -21720.0947592913 kJ/mol
+Potential Energy    = -21720.0947592913 kJ/mol
+Kinetic Energy      =    3.8137969511 kJ/mol
+Total Energy        = -21716.2809623403 kJ/mol
+Temperature         =    5.6628867084 K
+--------------- Step        56 ---- CPU =     0.4108 (sec) ---------------
+Stillinger-Weber    = -21720.2340723829 kJ/mol
+Potential Energy    = -21720.2340723829 kJ/mol
+Kinetic Energy      =    3.9531098925 kJ/mol
+Total Energy        = -21716.2809624904 kJ/mol
+Temperature         =    5.8697444448 K
+--------------- Step        57 ---- CPU =     0.4202 (sec) ---------------
+Stillinger-Weber    = -21720.3758497964 kJ/mol
+Potential Energy    = -21720.3758497964 kJ/mol
+Kinetic Energy      =    4.0948871530 kJ/mol
+Total Energy        = -21716.2809626434 kJ/mol
+Temperature         =    6.0802613062 K
+--------------- Step        58 ---- CPU =     0.4280 (sec) ---------------
+Stillinger-Weber    = -21720.5200890858 kJ/mol
+Potential Energy    = -21720.5200890858 kJ/mol
+Kinetic Energy      =    4.2391262869 kJ/mol
+Total Energy        = -21716.2809627989 kJ/mol
+Temperature         =    6.2944336610 K
+--------------- Step        59 ---- CPU =     0.4341 (sec) ---------------
+Stillinger-Weber    = -21720.6667877630 kJ/mol
+Potential Energy    = -21720.6667877630 kJ/mol
+Kinetic Energy      =    4.3858248059 kJ/mol
+Total Energy        = -21716.2809629571 kJ/mol
+Temperature         =    6.5122578148 K
+--------------- Step        60 ---- CPU =     0.4401 (sec) ---------------
+Stillinger-Weber    = -21720.8159432974 kJ/mol
+Potential Energy    = -21720.8159432974 kJ/mol
+Kinetic Energy      =    4.5349801794 kJ/mol
+Total Energy        = -21716.2809631180 kJ/mol
+Temperature         =    6.7337300098 K
+--------------- Step        61 ---- CPU =     0.4473 (sec) ---------------
+Stillinger-Weber    = -21720.9675531158 kJ/mol
+Potential Energy    = -21720.9675531158 kJ/mol
+Kinetic Energy      =    4.6865898343 kJ/mol
+Total Energy        = -21716.2809632815 kJ/mol
+Temperature         =    6.9588464255 K
+--------------- Step        62 ---- CPU =     0.4534 (sec) ---------------
+Stillinger-Weber    = -21721.1216146028 kJ/mol
+Potential Energy    = -21721.1216146028 kJ/mol
+Kinetic Energy      =    4.8406511553 kJ/mol
+Total Energy        = -21716.2809634475 kJ/mol
+Temperature         =    7.1876031784 K
+--------------- Step        63 ---- CPU =     0.4597 (sec) ---------------
+Stillinger-Weber    = -21721.2781251009 kJ/mol
+Potential Energy    = -21721.2781251009 kJ/mol
+Kinetic Energy      =    4.9971614846 kJ/mol
+Total Energy        = -21716.2809636163 kJ/mol
+Temperature         =    7.4199963222 K
+--------------- Step        64 ---- CPU =     0.4657 (sec) ---------------
+Stillinger-Weber    = -21721.4370819100 kJ/mol
+Potential Energy    = -21721.4370819100 kJ/mol
+Kinetic Energy      =    5.1561181222 kJ/mol
+Total Energy        = -21716.2809637878 kJ/mol
+Temperature         =    7.6560218480 K
+--------------- Step        65 ---- CPU =     0.4717 (sec) ---------------
+Stillinger-Weber    = -21721.5984822878 kJ/mol
+Potential Energy    = -21721.5984822878 kJ/mol
+Kinetic Energy      =    5.3175183260 kJ/mol
+Total Energy        = -21716.2809639618 kJ/mol
+Temperature         =    7.8956756839 K
+--------------- Step        66 ---- CPU =     0.4777 (sec) ---------------
+Stillinger-Weber    = -21721.7623234500 kJ/mol
+Potential Energy    = -21721.7623234500 kJ/mol
+Kinetic Energy      =    5.4813593116 kJ/mol
+Total Energy        = -21716.2809641384 kJ/mol
+Temperature         =    8.1389536957 K
+--------------- Step        67 ---- CPU =     0.4837 (sec) ---------------
+Stillinger-Weber    = -21721.9286025702 kJ/mol
+Potential Energy    = -21721.9286025702 kJ/mol
+Kinetic Energy      =    5.6476382525 kJ/mol
+Total Energy        = -21716.2809643177 kJ/mol
+Temperature         =    8.3858516865 K
+--------------- Step        68 ---- CPU =     0.4897 (sec) ---------------
+Stillinger-Weber    = -21722.0973167798 kJ/mol
+Potential Energy    = -21722.0973167798 kJ/mol
+Kinetic Energy      =    5.8163522802 kJ/mol
+Total Energy        = -21716.2809644996 kJ/mol
+Temperature         =    8.6363653969 K
+--------------- Step        69 ---- CPU =     0.4957 (sec) ---------------
+Stillinger-Weber    = -21722.2684631683 kJ/mol
+Potential Energy    = -21722.2684631683 kJ/mol
+Kinetic Energy      =    5.9874984841 kJ/mol
+Total Energy        = -21716.2809646842 kJ/mol
+Temperature         =    8.8904905052 K
+--------------- Step        70 ---- CPU =     0.5029 (sec) ---------------
+Stillinger-Weber    = -21722.4420387830 kJ/mol
+Potential Energy    = -21722.4420387830 kJ/mol
+Kinetic Energy      =    6.1610739116 kJ/mol
+Total Energy        = -21716.2809648714 kJ/mol
+Temperature         =    9.1482226272 K
+--------------- Step        71 ---- CPU =     0.5157 (sec) ---------------
+Stillinger-Weber    = -21722.6180406293 kJ/mol
+Potential Energy    = -21722.6180406293 kJ/mol
+Kinetic Energy      =    6.3370755682 kJ/mol
+Total Energy        = -21716.2809650611 kJ/mol
+Temperature         =    9.4095573167 K
+--------------- Step        72 ---- CPU =     0.5234 (sec) ---------------
+Stillinger-Weber    = -21722.7964656711 kJ/mol
+Potential Energy    = -21722.7964656711 kJ/mol
+Kinetic Energy      =    6.5155004177 kJ/mol
+Total Energy        = -21716.2809652534 kJ/mol
+Temperature         =    9.6744900652 K
+--------------- Step        73 ---- CPU =     0.5295 (sec) ---------------
+Stillinger-Weber    = -21722.9773108301 kJ/mol
+Potential Energy    = -21722.9773108301 kJ/mol
+Kinetic Energy      =    6.6963453817 kJ/mol
+Total Energy        = -21716.2809654484 kJ/mol
+Temperature         =    9.9430163019 K
+--------------- Step        74 ---- CPU =     0.5358 (sec) ---------------
+Stillinger-Weber    = -21723.1605729864 kJ/mol
+Potential Energy    = -21723.1605729864 kJ/mol
+Kinetic Energy      =    6.8796073403 kJ/mol
+Total Energy        = -21716.2809656461 kJ/mol
+Temperature         =   10.2151313943 K
+--------------- Step        75 ---- CPU =     0.5429 (sec) ---------------
+Stillinger-Weber    = -21723.3462489782 kJ/mol
+Potential Energy    = -21723.3462489782 kJ/mol
+Kinetic Energy      =    7.0652831319 kJ/mol
+Total Energy        = -21716.2809658462 kJ/mol
+Temperature         =   10.4908306478 K
+--------------- Step        76 ---- CPU =     0.5493 (sec) ---------------
+Stillinger-Weber    = -21723.5343356022 kJ/mol
+Potential Energy    = -21723.5343356022 kJ/mol
+Kinetic Energy      =    7.2533695532 kJ/mol
+Total Energy        = -21716.2809660491 kJ/mol
+Temperature         =   10.7701093060 K
+--------------- Step        77 ---- CPU =     0.5554 (sec) ---------------
+Stillinger-Weber    = -21723.7248296136 kJ/mol
+Potential Energy    = -21723.7248296136 kJ/mol
+Kinetic Energy      =    7.4438633591 kJ/mol
+Total Energy        = -21716.2809662545 kJ/mol
+Temperature         =   11.0529625505 K
+--------------- Step        78 ---- CPU =     0.5615 (sec) ---------------
+Stillinger-Weber    = -21723.9177277257 kJ/mol
+Potential Energy    = -21723.9177277257 kJ/mol
+Kinetic Energy      =    7.6367612632 kJ/mol
+Total Energy        = -21716.2809664625 kJ/mol
+Temperature         =   11.3393855015 K
+--------------- Step        79 ---- CPU =     0.5675 (sec) ---------------
+Stillinger-Weber    = -21724.1130266106 kJ/mol
+Potential Energy    = -21724.1130266106 kJ/mol
+Kinetic Energy      =    7.8320599374 kJ/mol
+Total Energy        = -21716.2809666732 kJ/mol
+Temperature         =   11.6293732173 K
+--------------- Step        80 ---- CPU =     0.5736 (sec) ---------------
+Stillinger-Weber    = -21724.3107228987 kJ/mol
+Potential Energy    = -21724.3107228987 kJ/mol
+Kinetic Energy      =    8.0297560124 kJ/mol
+Total Energy        = -21716.2809668863 kJ/mol
+Temperature         =   11.9229206950 K
+--------------- Step        81 ---- CPU =     0.5807 (sec) ---------------
+Stillinger-Weber    = -21724.5108131793 kJ/mol
+Potential Energy    = -21724.5108131793 kJ/mol
+Kinetic Energy      =    8.2298460772 kJ/mol
+Total Energy        = -21716.2809671020 kJ/mol
+Temperature         =   12.2200228698 K
+--------------- Step        82 ---- CPU =     0.5868 (sec) ---------------
+Stillinger-Weber    = -21724.7132940002 kJ/mol
+Potential Energy    = -21724.7132940002 kJ/mol
+Kinetic Energy      =    8.4323266798 kJ/mol
+Total Energy        = -21716.2809673204 kJ/mol
+Temperature         =   12.5206746161 K
+--------------- Step        83 ---- CPU =     0.5928 (sec) ---------------
+Stillinger-Weber    = -21724.9181618680 kJ/mol
+Potential Energy    = -21724.9181618680 kJ/mol
+Kinetic Energy      =    8.6371943267 kJ/mol
+Total Energy        = -21716.2809675413 kJ/mol
+Temperature         =   12.8248707464 K
+--------------- Step        84 ---- CPU =     0.5988 (sec) ---------------
+Stillinger-Weber    = -21725.1254132482 kJ/mol
+Potential Energy    = -21725.1254132482 kJ/mol
+Kinetic Energy      =    8.8444454833 kJ/mol
+Total Energy        = -21716.2809677650 kJ/mol
+Temperature         =   13.1326060126 K
+--------------- Step        85 ---- CPU =     0.6048 (sec) ---------------
+Stillinger-Weber    = -21725.3350445646 kJ/mol
+Potential Energy    = -21725.3350445646 kJ/mol
+Kinetic Energy      =    9.0540765737 kJ/mol
+Total Energy        = -21716.2809679910 kJ/mol
+Temperature         =   13.4438751050 K
+--------------- Step        86 ---- CPU =     0.6112 (sec) ---------------
+Stillinger-Weber    = -21725.5470522007 kJ/mol
+Potential Energy    = -21725.5470522007 kJ/mol
+Kinetic Energy      =    9.2660839811 kJ/mol
+Total Energy        = -21716.2809682196 kJ/mol
+Temperature         =   13.7586726532 K
+--------------- Step        87 ---- CPU =     0.6173 (sec) ---------------
+Stillinger-Weber    = -21725.7614324984 kJ/mol
+Potential Energy    = -21725.7614324984 kJ/mol
+Kinetic Energy      =    9.4804640476 kJ/mol
+Total Energy        = -21716.2809684508 kJ/mol
+Temperature         =   14.0769932258 K
+--------------- Step        88 ---- CPU =     0.6233 (sec) ---------------
+Stillinger-Weber    = -21725.9781817588 kJ/mol
+Potential Energy    = -21725.9781817588 kJ/mol
+Kinetic Energy      =    9.6972130744 kJ/mol
+Total Energy        = -21716.2809686844 kJ/mol
+Temperature         =   14.3988313305 K
+--------------- Step        89 ---- CPU =     0.6295 (sec) ---------------
+Stillinger-Weber    = -21726.1972962423 kJ/mol
+Potential Energy    = -21726.1972962423 kJ/mol
+Kinetic Energy      =    9.9163273216 kJ/mol
+Total Energy        = -21716.2809689208 kJ/mol
+Temperature         =   14.7241814144 K
+--------------- Step        90 ---- CPU =     0.6357 (sec) ---------------
+Stillinger-Weber    = -21726.4187721683 kJ/mol
+Potential Energy    = -21726.4187721683 kJ/mol
+Kinetic Energy      =   10.1378030086 kJ/mol
+Total Energy        = -21716.2809691597 kJ/mol
+Temperature         =   15.0530378640 K
+--------------- Step        91 ---- CPU =     0.6434 (sec) ---------------
+Stillinger-Weber    = -21726.6426057152 kJ/mol
+Potential Energy    = -21726.6426057152 kJ/mol
+Kinetic Energy      =   10.3616363142 kJ/mol
+Total Energy        = -21716.2809694010 kJ/mol
+Temperature         =   15.3853950049 K
+--------------- Step        92 ---- CPU =     0.6497 (sec) ---------------
+Stillinger-Weber    = -21726.8687930210 kJ/mol
+Potential Energy    = -21726.8687930210 kJ/mol
+Kinetic Energy      =   10.5878233761 kJ/mol
+Total Energy        = -21716.2809696450 kJ/mol
+Temperature         =   15.7212471027 K
+--------------- Step        93 ---- CPU =     0.6559 (sec) ---------------
+Stillinger-Weber    = -21727.0973301831 kJ/mol
+Potential Energy    = -21727.0973301831 kJ/mol
+Kinetic Energy      =   10.8163602916 kJ/mol
+Total Energy        = -21716.2809698915 kJ/mol
+Temperature         =   16.0605883624 K
+--------------- Step        94 ---- CPU =     0.6619 (sec) ---------------
+Stillinger-Weber    = -21727.3282132581 kJ/mol
+Potential Energy    = -21727.3282132581 kJ/mol
+Kinetic Energy      =   11.0472431175 kJ/mol
+Total Energy        = -21716.2809701405 kJ/mol
+Temperature         =   16.4034129288 K
+--------------- Step        95 ---- CPU =     0.6679 (sec) ---------------
+Stillinger-Weber    = -21727.5614382620 kJ/mol
+Potential Energy    = -21727.5614382620 kJ/mol
+Kinetic Energy      =   11.2804678700 kJ/mol
+Total Energy        = -21716.2809703920 kJ/mol
+Temperature         =   16.7497148865 K
+--------------- Step        96 ---- CPU =     0.6746 (sec) ---------------
+Stillinger-Weber    = -21727.7970011708 kJ/mol
+Potential Energy    = -21727.7970011708 kJ/mol
+Kinetic Energy      =   11.5160305247 kJ/mol
+Total Energy        = -21716.2809706461 kJ/mol
+Temperature         =   17.0994882602 K
+--------------- Step        97 ---- CPU =     0.6807 (sec) ---------------
+Stillinger-Weber    = -21728.0348979196 kJ/mol
+Potential Energy    = -21728.0348979196 kJ/mol
+Kinetic Energy      =   11.7539270170 kJ/mol
+Total Energy        = -21716.2809709027 kJ/mol
+Temperature         =   17.4527270145 K
+--------------- Step        98 ---- CPU =     0.6867 (sec) ---------------
+Stillinger-Weber    = -21728.2751244037 kJ/mol
+Potential Energy    = -21728.2751244037 kJ/mol
+Kinetic Energy      =   11.9941532419 kJ/mol
+Total Energy        = -21716.2809711617 kJ/mol
+Temperature         =   17.8094250543 K
+--------------- Step        99 ---- CPU =     0.6950 (sec) ---------------
+Stillinger-Weber    = -21728.5176764777 kJ/mol
+Potential Energy    = -21728.5176764777 kJ/mol
+Kinetic Energy      =   12.2367050544 kJ/mol
+Total Energy        = -21716.2809714233 kJ/mol
+Temperature         =   18.1695762245 K
+--------------- Step       100 ---- CPU =     0.7013 (sec) ---------------
+Stillinger-Weber    = -21728.7625499566 kJ/mol
+Potential Energy    = -21728.7625499566 kJ/mol
+Kinetic Energy      =   12.4815782691 kJ/mol
+Total Energy        = -21716.2809716875 kJ/mol
+Temperature         =   18.5331743107 K
+d879 1
+a879 1
+Loop time: 0.7018475000 on 2 processors for 36 particles
+d885 7
+a891 7
+          Force Time    0.4155     59.20
+          Neigh Time    0.0068      0.97
+           Comm Time    0.0175      2.49
+       Exchange Time    0.0081      1.15
+        Revcomm Time    0.0188      2.69
+          Other Time    0.2351     33.50
+          Total Time    0.7018    100.00
+d897 1
+a897 1
+Stillinger-Weber        0.4137    0.0062
+@
+
+
+2.2
+log
+@Switched the neighbor style from nsq to binning in all examples.
+@
+text
+@d2 4
+d8 2
+a9 2
+forcefield threebody threebody.in
+timestep 0.01000000000
+d11 5
+a15 5
+box dimensions	0.000000000	7.800000000	7.800000000 \
+			7.800000000	0.000000000	7.800000000 \
+			7.800000000	7.800000000	0.000000000
+box origin	0.000000000	0.000000000	0.000000000
+initialize temperature 0.000000000 256
+d21 3
+a23 1
+Entering Stepper::Setup()
+d25 11
+a35 8
+volume = 949.1040000
+widths = 9.006664199 9.006664199 9.006664199
+lva = 0.000000000 7.800000000 7.800000000
+lvb = 7.800000000 0.000000000 7.800000000
+lvc = 7.800000000 7.800000000 0.000000000
+rvh = -0.06410256410 0.06410256410 0.06410256410
+rvk = 0.06410256410 -0.06410256410 0.06410256410
+rvl = 0.06410256410 0.06410256410 -0.06410256410
+d38 3
+a40 4
+A 10.00000000
+B 2.000000000
+C 3.000000000
+Entering ForceFieldList::Setup()
+a41 2
+i 	ii 	id 	t 	n       p            p            p            p     
+0	0	A	0	15  3.771180000  2.514120000-0.3333333333  4393.200000  8786.400000  14.22179859  4.000000000  0.000000000  2.095100000  68448.02833  0.000000000  35851.36604  3089.784704  17112.00708  1474.767173
+a42 1
+i 	ii 	jj 	id1 	id2 	t 	n       p            p            p            p     
+d44 4
+d49 3
+a51 3
+rcutmax = 3.771180000
+rskin = 0.1000000000
+rcutneighmax = 3.871180000
+d60 3
+a62 3
+Entering Comm::Setup()
+Exiting Comm::Setup()
+Entering ParticleList::Setup()
+d64 634
+a697 1
+Exchange Communicate time is 0.000000000
+a698 1321
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.28096
+Energy/particle [kJ/mol] = -402.1533511
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.28222
+Energy/particle [kJ/mol] = -402.1533745
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 4.470348258e-10
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.28602
+Energy/particle [kJ/mol] = -402.1534449
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.01000000071
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.29235
+Energy/particle [kJ/mol] = -402.1535621
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.01999999955
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.30122
+Energy/particle [kJ/mol] = -402.1537263
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.01999999955
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.31261
+Energy/particle [kJ/mol] = -402.1539373
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.03000000119
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.32654
+Energy/particle [kJ/mol] = -402.1541952
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.03000000119
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.34300
+Energy/particle [kJ/mol] = -402.1545000
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.03000000119
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.36199
+Energy/particle [kJ/mol] = -402.1548517
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.03999999911
+Communicate time is 0.009999999776
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.38351
+Energy/particle [kJ/mol] = -402.1552502
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.05000000075
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.40757
+Energy/particle [kJ/mol] = -402.1556957
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.05999999866
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.43415
+Energy/particle [kJ/mol] = -402.1561879
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.07000000030
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.46326
+Energy/particle [kJ/mol] = -402.1567271
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.07000000030
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.49490
+Energy/particle [kJ/mol] = -402.1573130
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.07999999821
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.52907
+Energy/particle [kJ/mol] = -402.1579458
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.07999999821
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.56577
+Energy/particle [kJ/mol] = -402.1586254
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.09000000358
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.60500
+Energy/particle [kJ/mol] = -402.1593519
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1000000015
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.64675
+Energy/particle [kJ/mol] = -402.1601251
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1000000015
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.69103
+Energy/particle [kJ/mol] = -402.1609451
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1099999994
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.73784
+Energy/particle [kJ/mol] = -402.1618118
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1099999994
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.78717
+Energy/particle [kJ/mol] = -402.1627254
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1199999973
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.83902
+Energy/particle [kJ/mol] = -402.1636856
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1199999973
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.89340
+Energy/particle [kJ/mol] = -402.1646926
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1299999952
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21716.95030
+Energy/particle [kJ/mol] = -402.1657463
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1400000006
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.00972
+Energy/particle [kJ/mol] = -402.1668466
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1400000006
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.07166
+Energy/particle [kJ/mol] = -402.1679937
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1500000060
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.13612
+Energy/particle [kJ/mol] = -402.1691873
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1500000060
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.20309
+Energy/particle [kJ/mol] = -402.1704276
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1599999964
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.27259
+Energy/particle [kJ/mol] = -402.1717145
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1700000018
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.34459
+Energy/particle [kJ/mol] = -402.1730480
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1700000018
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.41912
+Energy/particle [kJ/mol] = -402.1744281
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1800000072
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.49615
+Energy/particle [kJ/mol] = -402.1758547
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1800000072
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.57570
+Energy/particle [kJ/mol] = -402.1773277
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.1899999976
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.65775
+Energy/particle [kJ/mol] = -402.1788473
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2000000030
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.74232
+Energy/particle [kJ/mol] = -402.1804133
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2000000030
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.82939
+Energy/particle [kJ/mol] = -402.1820258
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2099999934
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21717.91897
+Energy/particle [kJ/mol] = -402.1836847
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2199999988
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.01106
+Energy/particle [kJ/mol] = -402.1853899
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2199999988
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.10564
+Energy/particle [kJ/mol] = -402.1871415
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2300000042
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.20273
+Energy/particle [kJ/mol] = -402.1889394
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2300000042
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.30231
+Energy/particle [kJ/mol] = -402.1907836
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2399999946
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.40440
+Energy/particle [kJ/mol] = -402.1926740
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2500000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.50898
+Energy/particle [kJ/mol] = -402.1946107
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2500000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.61605
+Energy/particle [kJ/mol] = -402.1965935
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2599999905
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.72562
+Energy/particle [kJ/mol] = -402.1986225
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2599999905
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.83767
+Energy/particle [kJ/mol] = -402.2006977
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2700000107
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21718.95222
+Energy/particle [kJ/mol] = -402.2028189
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2800000012
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21719.06925
+Energy/particle [kJ/mol] = -402.2049861
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2800000012
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21719.18877
+Energy/particle [kJ/mol] = -402.2071994
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2899999917
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21719.31076
+Energy/particle [kJ/mol] = -402.2094586
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.2899999917
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21719.43524
+Energy/particle [kJ/mol] = -402.2117637
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3000000119
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21719.56220
+Energy/particle [kJ/mol] = -402.2141148
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3000000119
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21719.69163
+Energy/particle [kJ/mol] = -402.2165117
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3100000024
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21719.82354
+Energy/particle [kJ/mol] = -402.2189544
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3199999928
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21719.95791
+Energy/particle [kJ/mol] = -402.2214428
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3199999928
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21720.09476
+Energy/particle [kJ/mol] = -402.2239770
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3300000131
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21720.23407
+Energy/particle [kJ/mol] = -402.2265569
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3300000131
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21720.37585
+Energy/particle [kJ/mol] = -402.2291824
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3400000036
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21720.52009
+Energy/particle [kJ/mol] = -402.2318535
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3499999940
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21720.66679
+Energy/particle [kJ/mol] = -402.2345701
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3499999940
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21720.81594
+Energy/particle [kJ/mol] = -402.2373323
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3600000143
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21720.96755
+Energy/particle [kJ/mol] = -402.2401399
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3700000048
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21721.12161
+Energy/particle [kJ/mol] = -402.2429929
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.009999999776
+Elapse Time is 0.3799999952
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21721.27813
+Energy/particle [kJ/mol] = -402.2458912
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3799999952
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21721.43708
+Energy/particle [kJ/mol] = -402.2488349
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3799999952
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21721.59848
+Energy/particle [kJ/mol] = -402.2518237
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3899999857
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21721.76232
+Energy/particle [kJ/mol] = -402.2548578
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.3899999857
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21721.92860
+Energy/particle [kJ/mol] = -402.2579371
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4000000060
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21722.09732
+Energy/particle [kJ/mol] = -402.2610614
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4099999964
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21722.26846
+Energy/particle [kJ/mol] = -402.2642308
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4199999869
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21722.44204
+Energy/particle [kJ/mol] = -402.2674452
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4199999869
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21722.61804
+Energy/particle [kJ/mol] = -402.2707045
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4300000072
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21722.79647
+Energy/particle [kJ/mol] = -402.2740086
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4300000072
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21722.97731
+Energy/particle [kJ/mol] = -402.2773576
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4399999976
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21723.16057
+Energy/particle [kJ/mol] = -402.2807514
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4499999881
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21723.34625
+Energy/particle [kJ/mol] = -402.2841898
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4499999881
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21723.53434
+Energy/particle [kJ/mol] = -402.2876729
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4600000083
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21723.72483
+Energy/particle [kJ/mol] = -402.2912005
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4600000083
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21723.91773
+Energy/particle [kJ/mol] = -402.2947727
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4699999988
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21724.11303
+Energy/particle [kJ/mol] = -402.2983894
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4799999893
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21724.31072
+Energy/particle [kJ/mol] = -402.3020504
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4799999893
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21724.51081
+Energy/particle [kJ/mol] = -402.3057558
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4900000095
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21724.71329
+Energy/particle [kJ/mol] = -402.3095054
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.4900000095
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21724.91816
+Energy/particle [kJ/mol] = -402.3132993
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21725.12541
+Energy/particle [kJ/mol] = -402.3171373
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21725.33504
+Energy/particle [kJ/mol] = -402.3210193
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5099999905
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21725.54705
+Energy/particle [kJ/mol] = -402.3249454
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5199999809
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21725.76143
+Energy/particle [kJ/mol] = -402.3289154
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5199999809
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21725.97818
+Energy/particle [kJ/mol] = -402.3329293
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5299999714
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21726.19730
+Energy/particle [kJ/mol] = -402.3369870
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5299999714
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21726.41877
+Energy/particle [kJ/mol] = -402.3410884
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5400000215
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21726.64261
+Energy/particle [kJ/mol] = -402.3452334
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5500000119
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21726.86879
+Energy/particle [kJ/mol] = -402.3494221
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5500000119
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21727.09733
+Energy/particle [kJ/mol] = -402.3536543
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5600000024
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21727.32821
+Energy/particle [kJ/mol] = -402.3579299
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5600000024
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21727.56144
+Energy/particle [kJ/mol] = -402.3622489
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5699999928
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21727.79700
+Energy/particle [kJ/mol] = -402.3666111
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5799999833
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21728.03490
+Energy/particle [kJ/mol] = -402.3710166
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5799999833
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21728.27512
+Energy/particle [kJ/mol] = -402.3754653
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5899999738
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21728.51768
+Energy/particle [kJ/mol] = -402.3799570
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.5899999738
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 864
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -21728.76255
+Energy/particle [kJ/mol] = -402.3844917
+Force time [s] = 0.009999999776
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.6000000238
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@d1 1
+d15 1
+a15 1
+neighbor nsq 10 0.1000000000
+d39 4
+a42 6
+Lattice vector a = 0.000000000 7.800000000 7.800000000 
+Lattice vector b = 7.800000000 0.000000000 7.800000000 
+Lattice vector c = 7.800000000 7.800000000 0.000000000 
+Unit cell origin = 1.000000000e-10 1.000000000e-10 1.000000000e-10 
+Unit cell lattice spacings = 9.006664199 9.006664199 9.006664199 
+rcutsq_max = 14.22179859
+d55 1
+d57 1
+a57 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d59 1
+d62 1
+a62 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d66 3
+d70 3
+d75 1
+a75 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d78 4
+a81 1
+Force time [s] = 0.009999999776
+d83 3
+d88 1
+a88 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d92 3
+d96 3
+d101 1
+a101 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d104 4
+a107 1
+Force time [s] = 0.000000000
+d109 3
+d114 1
+a114 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d117 4
+a120 1
+Force time [s] = 0.009999999776
+d122 3
+d127 1
+a127 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d131 3
+d135 3
+d140 1
+a140 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d144 3
+d148 3
+d153 1
+a153 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d156 4
+a159 1
+Force time [s] = 0.009999999776
+d161 3
+d166 1
+a166 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d169 4
+a172 1
+Force time [s] = 0.000000000
+d174 3
+d179 1
+a179 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d182 3
+a184 1
+Force time [s] = 0.009999999776
+d186 1
+d188 1
+a188 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d190 1
+d193 1
+a193 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d196 4
+a199 1
+Force time [s] = 0.000000000
+d201 3
+d206 1
+a206 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d210 3
+d214 3
+d219 1
+a219 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d223 3
+d227 3
+d232 1
+a232 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d236 3
+d240 3
+d245 1
+a245 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d248 4
+a251 1
+Force time [s] = 0.009999999776
+d253 3
+d258 1
+a258 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d261 4
+a264 1
+Force time [s] = 0.000000000
+d266 3
+d271 1
+a271 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d275 3
+d279 3
+d284 1
+a284 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d287 4
+a290 1
+Force time [s] = 0.009999999776
+d292 3
+d297 1
+a297 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d300 4
+a303 1
+Force time [s] = 0.000000000
+d305 3
+d310 1
+a310 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d313 3
+a315 1
+Force time [s] = 0.009999999776
+d317 1
+d319 1
+a319 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d321 1
+d324 1
+a324 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d327 4
+a330 1
+Force time [s] = 0.000000000
+d332 3
+d337 1
+a337 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d340 4
+a343 1
+Force time [s] = 0.009999999776
+d345 3
+d350 1
+a350 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d353 4
+a356 1
+Force time [s] = 0.000000000
+d358 3
+d363 1
+a363 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d367 3
+d371 3
+d376 1
+a376 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d379 4
+a382 1
+Force time [s] = 0.009999999776
+d384 3
+d389 1
+a389 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d392 4
+a395 1
+Force time [s] = 0.000000000
+d397 3
+d402 1
+a402 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d406 3
+d410 3
+d415 1
+a415 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d418 4
+a421 1
+Force time [s] = 0.000000000
+d423 3
+d428 1
+a428 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d432 3
+d436 3
+d441 1
+a441 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d445 2
+d448 1
+d450 1
+a450 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d452 1
+d455 1
+a455 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d459 3
+d463 3
+d468 1
+a468 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d472 3
+d476 3
+d481 1
+a481 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d485 3
+d489 3
+d494 1
+a494 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d497 4
+a500 1
+Force time [s] = 0.000000000
+d502 3
+d507 1
+a507 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d510 4
+a513 1
+Force time [s] = 0.009999999776
+d515 3
+d520 1
+a520 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d524 3
+d528 3
+d533 1
+a533 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d536 4
+a539 1
+Force time [s] = 0.000000000
+d541 3
+d546 1
+a546 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d549 4
+a552 1
+Force time [s] = 0.009999999776
+d554 3
+d559 1
+a559 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d562 4
+a565 1
+Force time [s] = 0.000000000
+d567 3
+d572 1
+a572 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d575 3
+a577 1
+Force time [s] = 0.009999999776
+d579 1
+d581 1
+a581 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d583 1
+d586 1
+a586 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d590 3
+d594 3
+d599 1
+a599 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d603 3
+d607 3
+d612 1
+a612 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d615 4
+a618 1
+Force time [s] = 0.009999999776
+d620 3
+d625 1
+a625 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d628 4
+a631 1
+Force time [s] = 0.000000000
+d633 3
+d638 1
+a638 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d641 4
+a644 1
+Force time [s] = 0.009999999776
+d646 3
+d651 1
+a651 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d654 4
+a657 1
+Force time [s] = 0.000000000
+d659 3
+d664 1
+a664 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d668 3
+d672 3
+d677 1
+a677 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d681 3
+d685 3
+d690 1
+a690 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d693 4
+a696 1
+Force time [s] = 0.000000000
+d698 3
+d703 1
+a703 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d706 3
+a708 1
+Force time [s] = 0.009999999776
+d710 1
+d712 1
+a712 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d714 1
+d717 1
+a717 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d720 4
+a723 1
+Force time [s] = 0.000000000
+d725 3
+d730 1
+a730 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d733 4
+a736 1
+Force time [s] = 0.009999999776
+d738 3
+d743 1
+a743 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d746 4
+a749 1
+Force time [s] = 0.000000000
+d751 3
+d756 1
+a756 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d760 3
+d764 3
+d769 1
+a769 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d773 3
+d777 3
+d782 1
+a782 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d785 4
+a788 1
+Force time [s] = 0.000000000
+d790 3
+d795 1
+a795 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d799 3
+d803 3
+d808 1
+a808 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d812 3
+d816 3
+d821 1
+a821 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d825 3
+d829 3
+d834 1
+a834 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d838 2
+d841 1
+d843 1
+a843 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d845 1
+d848 1
+a848 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d851 4
+a854 1
+Force time [s] = 0.000000000
+d856 3
+d861 1
+a861 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d864 4
+a867 1
+Force time [s] = 0.009999999776
+d869 3
+d874 1
+a874 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d878 3
+d882 3
+d887 1
+a887 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d890 4
+a893 1
+Force time [s] = 0.009999999776
+d895 3
+d900 1
+a900 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d904 3
+d908 3
+d913 1
+a913 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d917 3
+d921 3
+d926 1
+a926 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d929 4
+a932 1
+Force time [s] = 0.009999999776
+d934 3
+d939 1
+a939 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d942 4
+a945 1
+Force time [s] = 0.000000000
+d947 3
+d952 1
+a952 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d955 4
+a958 1
+Force time [s] = 0.009999999776
+d960 3
+d965 1
+a965 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d968 3
+a970 1
+Force time [s] = 0.000000000
+d972 1
+d974 1
+a974 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d976 1
+d979 1
+a979 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d982 4
+a985 1
+Force time [s] = 0.009999999776
+d987 3
+d992 1
+a992 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d996 3
+d1000 3
+d1005 1
+a1005 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1009 3
+d1013 3
+d1018 1
+a1018 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1022 3
+d1026 3
+d1031 1
+a1031 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1034 4
+a1037 1
+Force time [s] = 0.000000000
+d1039 3
+d1044 1
+a1044 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1047 4
+a1050 1
+Force time [s] = 0.009999999776
+d1052 3
+d1057 1
+a1057 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1060 4
+a1063 1
+Force time [s] = 0.000000000
+d1065 3
+d1070 1
+a1070 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1073 4
+a1076 1
+Force time [s] = 0.009999999776
+d1078 3
+d1083 1
+a1083 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1086 4
+a1089 1
+Force time [s] = 0.000000000
+d1091 3
+d1096 1
+a1096 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1100 2
+d1103 1
+d1105 1
+a1105 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d1107 1
+d1110 1
+a1110 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1113 4
+a1116 1
+Force time [s] = 0.009999999776
+d1118 3
+d1123 1
+a1123 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1126 4
+a1129 1
+Force time [s] = 0.000000000
+d1131 3
+d1136 1
+a1136 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1140 3
+d1144 3
+d1149 1
+a1149 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1153 3
+d1157 3
+d1162 1
+a1162 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1165 4
+a1168 1
+Force time [s] = 0.009999999776
+d1170 3
+d1175 1
+a1175 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1178 4
+a1181 1
+Force time [s] = 0.000000000
+d1183 3
+d1188 1
+a1188 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1192 3
+d1196 3
+d1201 1
+a1201 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1205 3
+d1209 3
+d1214 1
+a1214 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1217 4
+a1220 1
+Force time [s] = 0.000000000
+d1222 3
+d1227 1
+a1227 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1230 3
+a1232 1
+Force time [s] = 0.009999999776
+d1234 1
+d1236 1
+a1236 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d1238 1
+d1241 1
+a1241 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1245 3
+d1249 3
+d1254 1
+a1254 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1257 4
+a1260 1
+Force time [s] = 0.000000000
+d1262 3
+d1267 1
+a1267 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1270 4
+a1273 1
+Force time [s] = 0.009999999776
+d1275 3
+d1280 1
+a1280 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1284 3
+d1288 3
+d1293 1
+a1293 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1297 3
+d1301 3
+d1306 1
+a1306 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1310 3
+d1314 3
+d1319 1
+a1319 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1322 4
+a1325 1
+Force time [s] = 0.000000000
+d1327 3
+d1332 1
+a1332 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1335 4
+a1338 1
+Force time [s] = 0.009999999776
+d1340 3
+d1345 1
+a1345 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1348 4
+a1351 1
+Force time [s] = 0.000000000
+d1353 3
+d1358 1
+a1358 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1361 3
+a1363 1
+Force time [s] = 0.009999999776
+d1365 1
+d1367 1
+a1367 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d1369 1
+d1372 1
+a1372 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d1375 3
+a1377 1
+Force time [s] = 0.000000000
+@
+
+
+2.0
+log
+@Switchtched the primary output file from out_*.dat to graps_*.dat.
+@
+text
+@d1 1
+a1 1
+Entered Input::ReadInput
+d4 1
+a4 1
+timestep 0.0100000
+d6 5
+a10 5
+box dimensions	0.00000	7.80000	7.80000 \
+			7.80000	0.00000	7.80000 \
+			7.80000	7.80000	0.00000
+box origin	0.00000	0.00000	0.00000
+initialize temperature 0.00000 256
+d14 13
+a26 9
+neighbor none
+volume = 949.104
+widths = 9.00666 9.00666 9.00666
+lva = 0.00000 7.80000 7.80000
+lvb = 7.80000 0.00000 7.80000
+lvc = 7.80000 7.80000 0.00000
+rvh = -0.0641026 0.0641026 0.0641026
+rvk = 0.0641026 -0.0641026 0.0641026
+rvl = 0.0641026 0.0641026 -0.0641026
+d28 4
+a31 4
+A 10.0000
+B 2.00000
+C 3.00000
+Resetting particles in box 
+d34 1
+a34 1
+0	0	A	0	15      3.77118      2.51412    -0.333333      4393.20      8786.40      14.2218      4.00000      0.00000      2.09510      68448.0      0.00000      35851.4      3089.78      17112.0      1474.77
+d38 7
+d46 1
+d48 1
+d50 1
+d52 7
+d61 5
+a65 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+d68 5
+a72 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+d75 5
+a79 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+d82 5
+a86 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+d89 5
+a93 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+d96 5
+a100 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+d103 5
+a107 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0400000
+d110 5
+a114 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.3
+Forcefield force time [s] = 0.0300000
+d117 5
+a121 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.4
+Forcefield force time [s] = 0.0300000
+d124 8
+a131 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.4
+Forcefield force time [s] = 0.0300000
+d134 5
+a138 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.4
+Forcefield force time [s] = 0.0300000
+d141 5
+a145 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.4
+Forcefield force time [s] = 0.0300000
+d148 5
+a152 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.5
+Forcefield force time [s] = 0.0300000
+d155 5
+a159 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.5
+Forcefield force time [s] = 0.0300000
+d162 5
+a166 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.5
+Forcefield force time [s] = 0.0400000
+d169 5
+a173 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.6
+Forcefield force time [s] = 0.0300000
+d176 5
+a180 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.6
+Forcefield force time [s] = 0.0300000
+d183 5
+a187 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.6
+Forcefield force time [s] = 0.0300000
+d190 5
+a194 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.7
+Forcefield force time [s] = 0.0300000
+d197 8
+a204 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.7
+Forcefield force time [s] = 0.0300000
+d207 5
+a211 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.8
+Forcefield force time [s] = 0.0300000
+d214 5
+a218 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.8
+Forcefield force time [s] = 0.0300000
+d221 5
+a225 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21716.9
+Forcefield force time [s] = 0.0400000
+d228 5
+a232 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.0
+Forcefield force time [s] = 0.0300000
+d235 5
+a239 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.0
+Forcefield force time [s] = 0.0300000
+d242 5
+a246 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.1
+Forcefield force time [s] = 0.0300000
+d249 5
+a253 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.1
+Forcefield force time [s] = 0.0300000
+d256 5
+a260 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.2
+Forcefield force time [s] = 0.0300000
+d263 5
+a267 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.3
+Forcefield force time [s] = 0.0300000
+d270 8
+a277 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.3
+Forcefield force time [s] = 0.0300000
+d280 5
+a284 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.4
+Forcefield force time [s] = 0.0400000
+d287 5
+a291 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.5
+Forcefield force time [s] = 0.0300000
+d294 5
+a298 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.6
+Forcefield force time [s] = 0.0300000
+d301 5
+a305 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.7
+Forcefield force time [s] = 0.0300000
+d308 5
+a312 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.7
+Forcefield force time [s] = 0.0300000
+d315 5
+a319 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.8
+Forcefield force time [s] = 0.0300000
+d322 5
+a326 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21717.9
+Forcefield force time [s] = 0.0300000
+d329 5
+a333 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.0
+Forcefield force time [s] = 0.0300000
+d336 5
+a340 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.1
+Forcefield force time [s] = 0.0400000
+d343 8
+a350 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.2
+Forcefield force time [s] = 0.0300000
+d353 5
+a357 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.3
+Forcefield force time [s] = 0.0300000
+d360 5
+a364 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.4
+Forcefield force time [s] = 0.0300000
+d367 5
+a371 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.5
+Forcefield force time [s] = 0.0300000
+d374 5
+a378 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.6
+Forcefield force time [s] = 0.0300000
+d381 5
+a385 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.7
+Forcefield force time [s] = 0.0300000
+d388 5
+a392 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21718.8
+Forcefield force time [s] = 0.0300000
+d395 5
+a399 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.0
+Forcefield force time [s] = 0.0400000
+d402 5
+a406 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.1
+Forcefield force time [s] = 0.0300000
+d409 5
+a413 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.2
+Forcefield force time [s] = 0.0300000
+d416 8
+a423 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.3
+Forcefield force time [s] = 0.0300000
+d426 5
+a430 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.4
+Forcefield force time [s] = 0.0300000
+d433 5
+a437 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.6
+Forcefield force time [s] = 0.0300000
+d440 5
+a444 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.7
+Forcefield force time [s] = 0.0300000
+d447 5
+a451 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21719.8
+Forcefield force time [s] = 0.0300000
+d454 5
+a458 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.0
+Forcefield force time [s] = 0.0400000
+d461 5
+a465 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.1
+Forcefield force time [s] = 0.0300000
+d468 5
+a472 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.2
+Forcefield force time [s] = 0.0300000
+d475 5
+a479 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.4
+Forcefield force time [s] = 0.0300000
+d482 5
+a486 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.5
+Forcefield force time [s] = 0.0300000
+d489 8
+a496 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.7
+Forcefield force time [s] = 0.0300000
+d499 5
+a503 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21720.8
+Forcefield force time [s] = 0.0300000
+d506 5
+a510 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.0
+Forcefield force time [s] = 0.0300000
+d513 5
+a517 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.1
+Forcefield force time [s] = 0.0300000
+d520 5
+a524 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.3
+Forcefield force time [s] = 0.0300000
+d527 5
+a531 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.4
+Forcefield force time [s] = 0.0400000
+d534 5
+a538 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.6
+Forcefield force time [s] = 0.0300000
+d541 5
+a545 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.8
+Forcefield force time [s] = 0.0300000
+d548 5
+a552 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21721.9
+Forcefield force time [s] = 0.0300000
+d555 5
+a559 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.1
+Forcefield force time [s] = 0.0300000
+d562 8
+a569 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.3
+Forcefield force time [s] = 0.0300000
+d572 5
+a576 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.4
+Forcefield force time [s] = 0.0300000
+d579 5
+a583 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.6
+Forcefield force time [s] = 0.0300000
+d586 5
+a590 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21722.8
+Forcefield force time [s] = 0.0400000
+d593 5
+a597 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.0
+Forcefield force time [s] = 0.0300000
+d600 5
+a604 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.2
+Forcefield force time [s] = 0.0300000
+d607 5
+a611 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.3
+Forcefield force time [s] = 0.0300000
+d614 5
+a618 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.5
+Forcefield force time [s] = 0.0300000
+d621 5
+a625 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.7
+Forcefield force time [s] = 0.0300000
+d628 5
+a632 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21723.9
+Forcefield force time [s] = 0.0300000
+d635 8
+a642 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.1
+Forcefield force time [s] = 0.0300000
+d645 5
+a649 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.3
+Forcefield force time [s] = 0.0400000
+d652 5
+a656 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.5
+Forcefield force time [s] = 0.0300000
+d659 5
+a663 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.7
+Forcefield force time [s] = 0.0300000
+d666 5
+a670 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21724.9
+Forcefield force time [s] = 0.0300000
+d673 5
+a677 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21725.1
+Forcefield force time [s] = 0.0300000
+d680 5
+a684 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21725.3
+Forcefield force time [s] = 0.0300000
+d687 5
+a691 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21725.5
+Forcefield force time [s] = 0.0300000
+d694 5
+a698 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21725.8
+Forcefield force time [s] = 0.0300000
+d701 5
+a705 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.0
+Forcefield force time [s] = 0.0400000
+d708 8
+a715 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.2
+Forcefield force time [s] = 0.0300000
+d718 5
+a722 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.4
+Forcefield force time [s] = 0.0300000
+d725 5
+a729 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.6
+Forcefield force time [s] = 0.0300000
+d732 5
+a736 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21726.9
+Forcefield force time [s] = 0.0300000
+d739 5
+a743 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21727.1
+Forcefield force time [s] = 0.0300000
+d746 5
+a750 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21727.3
+Forcefield force time [s] = 0.0300000
+d753 5
+a757 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21727.6
+Forcefield force time [s] = 0.0300000
+d760 5
+a764 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21727.8
+Forcefield force time [s] = 0.0400000
+d767 5
+a771 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21728.0
+Forcefield force time [s] = 0.0300000
+d774 5
+a778 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21728.3
+Forcefield force time [s] = 0.0300000
+d781 8
+a788 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21728.5
+Forcefield force time [s] = 0.0300000
+d791 5
+a795 3
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Forcefield energy [kJ/mol] = -21728.8
+Forcefield force time [s] = 0.0300000
+@
+

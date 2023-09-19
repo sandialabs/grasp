@@ -1,0 +1,170 @@
+head	1.1;
+access;
+symbols
+	Monaco:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2005.05.03.22.14.52;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file grasp.out was initially added on branch Monaco.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 130
+/Users/athomps/netapp/codes/Grasp_Monaco/Grasp/Testing/testr/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /Users/athomps/netapp/codes/Grasp_Monaco/Grasp/Testing/testr/
+PATH_MAX is 1024
+
+
+
+Entering Input::ReadInput()
+units metal
+forcefield eam cu1.set EAM
+timestep 1.0000000000
+nsteps 1
+box dimensions	6.0000000000	0.0000000000	0.0000000000 \
+			0.0000000000	6.0000000000	0.0000000000 \
+			0.0000000000	0.0000000000	6.0000000000
+box origin	-2.5000000000	-2.5000000000	-2.5000000000
+initialize temperature 0.0000000000 256
+neighbor bin 10 1.0000000000
+MonteCarlo
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 1
+29 63.5500000000
+
+
+
+Reading EAM from file cu1.set
+id = 29
+
+
+
+Setting up force field class 3 called EAM
+Cutoffs for this forcefield
+rcutmax = 2.0000000000
+rskin = 1.0000000000
+rcutneighmax = 3.0000000000
+
+
+
+Entering ParticleList::ReadConfig()
+Will not read an initial velocity file 
+Will not read an initial displacement file 
+Total particles read = 864
+
+
+
+Entering Output::Setup()
+
+
+
+Entering FixList::Setup()
+
+
+
+Entering MonteCarlo::Setup()
+
+
+
+Entering BinList::Setup()
+w[0] = 6.0000000000
+w[1] = 6.0000000000
+w[2] = 6.0000000000
+rcut = 3.0000000000
+rcutneigh[0] = 0.5000000000
+rcutneigh[1] = 0.5000000000
+rcutneigh[2] = 0.5000000000
+nbinx = 4
+nbiny = 4
+nbinz = 4
+
+nbins = 64
+
+globalbounds
+-0.5001000000	1.5001000000	-0.5001000000	1.5001000000	-0.5001000000	1.5001000000
+mbinx = 8
+mbiny = 8
+mbinz = 8
+
+mbins = 512
+
+binsizex = 0.2500250000
+binsizey = 0.2500250000
+binsizez = 0.2500250000
+mbinxlo = 2
+mbinxhi = 6
+mbinylo = 2
+mbinyhi = 6
+mbinzlo = 2
+mbinzhi = 6
+Energy Change (1) :nan
+      Embedding = 323.9686955979
+      Pair      = nan
+
+Boost is 1.0000000000 1.0000000000 1.0000000000
+Energy Change (2) :nan
+      Embedding = -162.8802580877
+      Pair      = nan
+
+
+
+Loop time: 0.0000039339 on 2 processors for 864 particles for 1 steps
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.27907092251.52
+          Neigh Time    0.0000    193.94
+           Comm Time    0.0172 437642.42
+       Exchange Time    0.0000      0.00
+        Revcomm Time    0.0250 635845.45
+        Barrier Time    0.05901500078.79
+          Other Time   -0.3802-9665912.12
+          Total Time    0.0000    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+EAM                     0.2790 (     3)     0.0000 (     0) 
+
+
+
+Finished 
+@
+

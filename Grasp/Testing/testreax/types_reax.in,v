@@ -1,0 +1,107 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.1
+	REAX-2:1.1.2.1
+	P_MonacoTesting:1.1.0.6
+	InitialGraspTesting:1.1
+	P_Monaco:1.1.0.4
+	InitialGrasp:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2005.04.02.04.05.15;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.00.06.54;	author athomps;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.12.17.15.57.22;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@# Specification of particle id's.
+#
+# Currently, these must be entered in the same order as
+# they appear in the ReaxFF ffield file
+#
+C    atom  12.0000
+H    atom   1.0080
+O    atom  15.9990
+N    atom  14.0000
+
+
+@
+
+
+1.3
+log
+@Trying again to clean up testreax
+@
+text
+@@
+
+
+1.2
+log
+@Trying to clean up testreax.
+@
+text
+@@
+
+
+1.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added testreax example to REAXFF branch
+@
+text
+@@
+

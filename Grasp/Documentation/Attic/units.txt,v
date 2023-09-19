@@ -1,0 +1,182 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2004.05.20.22.11.18;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2004.01.15.20.12.23;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.18.09;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.04.24.16.46.19;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.21.23.12.01;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.18.00.23.41;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@Units for the Grasp MD code:
+
+Output/Input
+------------
+Mass		g/mol
+Distance	A (angstroms)
+Time		fs
+Velocity	A/fs
+Energy		kJ/mol
+Force		kJ/mol/A
+Temperature	K
+
+Internal
+--------
+Mass		g/mol
+Distance	A
+Time		100 fs
+Velocity	A/(100 fs)
+Energy		kJ/mol
+Force		kJ/mol/A
+Temperature	K
+
+
+Where does 100 fs come from?
+----------------------------
+We want to be able to calculate dv = F dt/m without conversion factors,
+with F in units of kJ/mol/A and m in units of g/mol. We would like 
+distance in units of A
+.
+Let tau be the unit of time. Then, we can express the quantity equation
+
+dv = F dt/m
+
+as the numerical-value equation: 
+
+v/[A/tau] = F/[kJ/mol/A] dt/[tau] / ( m/[g/mol] )
+
+Dividing the first equation by the second, we obtain:
+
+1/tau^2 = 10^3 kg(m/s)^2/(10^-10 m)^2/(10^-3 kg) = 10^26/s^2
+
+So tau = 10^-13 s = 100 fs.
+
+Note, by using the same time and distance units for v,dt and F,
+we ensure that mv^2 has same units of energy as F. 
+
+[g/mol].[A/100 fs]^2 = (10^-3 kg/mol).(10^-10 m)^2/(10^-13 s)^2 
+
+	       = 10^3 kg/mol m^2/s^2 = 1 kJ/mol
+
+
+
+@
+
+
+2.1
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@@
+
+
+2.0
+log
+@This is starting point for verison 2.0.
+The functionality is unchanged, even slightly degraded,
+as some items have not yet been converted, primarily
+output features such as energy conservation.
+
+The compartmentalization between different operations has
+been greatly enhanced.
+
+Performance is unchanged.
+@
+text
+@d6 1
+a6 1
+Distance	A (Angstroms)
+d27 12
+a38 2
+with F in kJ/mol/A and m in g/mol. We would like distance in A.
+Let tau be the measure of time. Them,
+a39 1
+A/tau = (kJ/mol/A) tau/(g/mol)
+d41 1
+d47 1
+a47 1
+(g/mol).(A/100 fs)^2 = (10^-3 kg/mol).(10^-10 m)^2/(10^-13 s)^2 
+@
+
+
+1.3
+log
+@This is final update of version 1, before switching to version 2
+@
+text
+@@
+
+
+1.2
+log
+@Error in write-up of time unit derivation.
+@
+text
+@d26 10
+a35 1
+We want to calculate KE = m v^2 in kJ/mol without conversion factors.
+d39 1
+a39 1
+	       = 10^3 kg/mol m^2/s^2 = 1 kJ/mol Q.E.D.
+@
+
+
+1.1
+log
+@
+Added project files, including new file units.txt
+@
+text
+@d28 1
+a28 1
+(g/mol).(A/100 fs)^2 = (10^-3 kg/mol).(10^10 m)^2/(10^13 s)^2 
+@
+

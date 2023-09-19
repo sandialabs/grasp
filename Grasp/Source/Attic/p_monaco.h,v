@@ -1,0 +1,313 @@
+head	1.1;
+access;
+symbols
+	PreMonaco:1.1
+	PMONACO:1.1.0.4
+	P_MonacoSource:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.01.14.17.37.07;	author saubry;	state dead;
+branches
+	1.1.2.1
+	1.1.4.1;
+next	;
+
+1.1.2.1
+date	2005.01.14.17.37.07;	author saubry;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.03.01.19.00.53;	author saubry;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2005.04.12.22.58.05;	author saubry;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file p_monaco.h was initially added on branch P_MonacoSource.
+@
+text
+@@
+
+
+1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a0 82
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#ifndef MONTECARLO_H
+#define MONTECARLO_H
+
+#include "move.h"
+
+class MonteCarlo : public Move
+{
+ private:
+  
+  int current_octant;
+  int next_octant;
+  
+  int calc_next_octant();
+
+  void pack_ghost_buffer();
+  void unpack_ghost_buffer();
+
+  void receive_ghost_buffer();
+  void send_ghost_buffer();
+
+  void propose_move(Particle , Particle &);
+  double energy_change(Particle , Particle &);
+  bool decide(double);
+  void update(bool);
+
+ public:
+
+  MonteCarlo();
+
+  void Setup(const ParticleList* , const Box* , Comm* , ForceFieldList *);
+
+  void Run(const int, const double, 
+           Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           Output*, FixList*, Comm*);
+
+  void Front(const double, Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           FixList*, Comm*);
+
+  void Sweep(const double, Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           FixList*, Comm*);
+
+  void Back(const double, Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           FixList*, Comm*);
+
+
+ protected:
+  // brute force approach
+  virtual double EnergyChange0(int*,Box*, ParticleTypeList*, ParticleList*, 
+			       ForceFieldList*, Comm*);
+
+};
+  
+#endif
+@
+
+
+1.1.2.1
+log
+@Implementation of brute force energy change for Monte Carlo.
+Includes P_Monaco class which does nothing for now except calling energy change.
+Sylvie Aubry, Jan. 14 2005
+@
+text
+@a0 48
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+
+// added saubry (01-13-05)
+
+#ifndef P_MONACO_H
+#define P_MONACO_H
+
+class MonteCarlo {
+ public:
+  MonteCarlo();
+  virtual void Setup(Comm*);
+  virtual void Run(Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, Comm*);
+
+ protected:
+  double EnergyChange(int*,double[],Box*, ParticleTypeList*, 
+		      ParticleList*, ForceFieldList*, Comm*);
+
+};
+  
+#endif
+@
+
+
+1.1.2.2
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@d43 1
+a43 2
+  // brute force approach
+  virtual double EnergyChange0(int*,vector <double>,Box*, ParticleTypeList*, 
+d45 1
+@
+
+
+1.1.2.3
+log
+@Add move class.
+
+Sylvie Aubry (03-01-05).
+@
+text
+@d36 1
+a36 4
+#include "move.h"
+
+class MonteCarlo : public Move
+{
+d38 1
+a38 3
+  MonteCarlo(){};
+  ~MonteCarlo(){};
+  
+d41 1
+a41 1
+  
+d44 2
+a45 2
+  virtual double EnergyChange0(int*,Box*, ParticleTypeList*, ParticleList*, 
+			       ForceFieldList*, Comm*);
+@
+
+
+1.1.2.4
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d30 5
+a34 2
+#ifndef MONTECARLO_H
+#define MONTECARLO_H
+d40 3
+a42 1
+ private:
+d44 2
+a45 2
+  int current_octant;
+  int next_octant;
+a46 33
+  int calc_next_octant();
+
+  void pack_ghost_buffer();
+  void unpack_ghost_buffer();
+
+  void receive_ghost_buffer();
+  void send_ghost_buffer();
+
+  void propose_move(Particle , Particle &);
+  double energy_change(Particle , Particle &);
+  bool decide(double);
+  void update(bool);
+
+ public:
+
+  MonteCarlo();
+
+  void Setup(const ParticleList* , const Box* , Comm* , ForceFieldList *);
+
+  void Run(const int, const double, 
+           Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           Output*, FixList*, Comm*);
+
+  void Front(const double, Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           FixList*, Comm*);
+
+  void Sweep(const double, Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           FixList*, Comm*);
+
+  void Back(const double, Box*, ParticleTypeList*, ParticleList*, ForceFieldList*, 
+           FixList*, Comm*);
+
+
+a50 1
+
+@
+
+

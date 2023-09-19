@@ -1,0 +1,3129 @@
+head	4.18;
+access;
+symbols
+	ReverseComm_branch:4.7.0.2
+	ADTools_branch:4.6.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.5
+	REAX-2:3.3
+	P_MonacoSource:3.3.0.6
+	GraspSource:3.3
+	P_Monaco:3.3.0.4
+	InitialGrasp:3.3
+	REAXFF:3.3.0.2
+	premerge_cjkimme_version:3.1
+	CRAY:2.18.0.2
+	cjkimme_version_merge_from_trunk_1:2.14.2.4
+	cjkimme_version:2.14.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.18
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.17;
+
+4.17
+date	2007.11.15.21.31.40;	author athomps;	state Exp;
+branches;
+next	4.16;
+
+4.16
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.15;
+
+4.15
+date	2007.05.24.05.10.39;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.03.16.06.18.30;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2007.03.15.22.01.01;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.01.16.21.56.22;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.08.26.02.04.29;	author athomps;	state Exp;
+branches
+	4.7.2.1;
+next	4.6;
+
+4.6
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.10.11.01.40.34;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.06.08.21.19.05;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.6;
+
+3.6
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.02.23.19.56.59;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.3.6.1;
+next	3.2;
+
+3.2
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.19.21.01.03;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	2.14.2.1;
+next	2.13;
+
+2.13
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2003.11.03.23.52.04;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.31.20.20.43;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.23.16.01.59;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	;
+
+2.14.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.2;
+
+2.14.2.2
+date	2004.05.14.16.12.58;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.3;
+
+2.14.2.3
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.4;
+
+2.14.2.4
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.3.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.3.6.2;
+
+3.3.6.2
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	3.3.6.3;
+
+3.3.6.3
+date	2005.04.07.16.13.44;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.06.21.17.34.07;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2005.07.19.22.56.35;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.4;
+
+4.3.2.1.2.4
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	;
+
+4.7.2.1
+date	2006.09.07.19.49.27;	author athomps;	state Exp;
+branches;
+next	4.7.2.2;
+
+4.7.2.2
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.18
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "controller.h"
+#include "input_string.h"
+#include "input.h"
+#include "comm.h"
+#include "log.h"
+#include "stepper.h"
+#include "box.h"
+#include "particlelist.h"
+#include "output.h"
+#include "forcefieldlist.h"
+#include "fixlist.h"
+extern Log glog;
+
+Input::Input(char *inpFileName):
+  defFileName("inp.dat") {
+  if (inpFileName) {
+    defFileName = inpFileName;
+  }
+  Lworldinpfile = false;
+}
+
+void Input::ReadInput(Controller* controller, Stepper* stepper, Box* b,
+            ParticleList* p ,Output* outp, ForceFieldList* ff, 
+	    FixList* fix_list, Comm* comm) {
+  string buf;
+  string filename;
+  int node;
+  int isize;
+  ifstream infile;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering Input::ReadInput()" << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Input::ReadInput()" << endl;
+  }
+
+  // Only read world-specific file if nworlds > 1 and Lworldinpfile set.
+  if (comm->get_nworlds() > 1 && !Lworldinpfile) {
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Exiting Input::ReadInput()" << endl;
+    }
+    return;
+  }
+
+  if (node == 0) {
+
+    filename = glog.path_str + defFileName + glog.world_suffix;
+
+    infile.open(filename.c_str()); 
+
+    if (!infile) {
+      // If nworlds > 1, then master input file already read
+      if (comm->get_nworlds() > 1) {
+	glog.get_logfile() << "Skipped world input" << endl;
+      } else {
+	infile.close();
+	infile.open(filename.c_str()); 
+	if (!infile) {
+	  glog.abort("Input::ReadInput:\n"
+		     "Failed to open "+filename,comm);
+	}
+      }
+    } else {
+      glog.get_logfile() << "Opened " << filename << " for input" << endl;
+    }
+  }
+
+  do {
+    if (node==0) {
+      if(input_string_get(infile,buf)) {
+	if(buf != "End of Input") {
+	  glog.abort("Input::ReadInput:\n"
+		     "Read error in "+filename,comm);
+	}
+      }
+      isize = buf.size();
+    }
+
+    MPI_Bcast(&isize,1,MPI_INT,0,comm->get_world());
+    if (node != 0) buf.resize(isize);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << isize << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << buf << endl;
+    }
+
+    if (input_string_match(buf,"End of Input")) {
+      if (comm->get_Lnodefile()) {
+	comm->get_nodefile() << "Breaking " << endl;
+      }
+      break;
+    } else if (input_string_match(buf,"forcefield")) {
+      glog.get_logfile() << "forcefield";
+      ff->input_forcefield(buf);
+    } else if (input_string_match(buf,"timestep")) {
+      glog.get_logfile() << "timestep";
+      controller->input_timestep(buf);
+    } else if (input_string_match(buf,"nsteps")) {
+      glog.get_logfile() << "nsteps";
+      controller->input_nsteps(buf);
+    } else if (input_string_match(buf,"box dimensions")) {
+      glog.get_logfile() << "box dimensions";
+      b->input_box_dimensions(buf);
+    } else if (input_string_match(buf,"box origin")) {
+      glog.get_logfile() << "box origin";
+      b->input_box_origin(buf);
+    } else if (input_string_match(buf,"box periodicity")) {
+      glog.get_logfile() << "box periodicity";
+      b->input_box_perflag(buf);
+    } else if (input_string_match(buf,"initialize temperature")) {
+      glog.get_logfile() << "initialize temperature";
+      p->input_initialize_temperature(buf);
+    } else if (input_string_match(buf,"density profile")) {
+      glog.get_logfile() << "density profile";
+      outp->input_density_profile(buf);
+    } else if (input_string_match(buf,"neighbor")) {
+      glog.get_logfile() << "neighbor";
+      ff->input_neighbor(buf);
+    } else if (input_string_match(buf,"thermo")) {
+      glog.get_logfile() << "thermo";
+      outp->input_thermo(buf);
+    } else if (input_string_match(buf,"dump particles")) {
+      glog.get_logfile() << "dump particles";
+      outp->input_dump_particles(buf);
+    } else if (input_string_match(buf,"dump shift")) {
+      glog.get_logfile() << "dump shift";
+      outp->input_dump_shift(buf);
+    } else if (input_string_match(buf,"dump velocities")) {
+      glog.get_logfile() << "dump velocities";
+      outp->input_dump_velocities(buf);
+    } else if (input_string_match(buf,"dump displacements")) {
+      glog.get_logfile() << "dump displacements";
+      outp->input_dump_displacements(buf);
+    } else if (input_string_match(buf,"dump cfg")) {
+      glog.get_logfile() << "dump cfg";
+      outp->input_dump_cfg(buf);
+    } else if (input_string_match(buf,"dump extended cfg")) {
+      glog.get_logfile() << "dump extended cfg";
+      outp->input_dump_extended_cfg(buf);
+    } else if (input_string_match(buf,"dump forces")) {
+      glog.get_logfile() << "dump forces";
+      outp->input_dump_forces(buf);
+    } else if (input_string_match(buf,"dump restart")) {
+      glog.get_logfile() << "dump restart";
+      outp->input_dump_restart(buf);
+    } else if (input_string_match(buf,"dump ref config")) {
+      glog.get_logfile() << "dump ref config";
+      outp->input_dump_ref_config(buf);
+    } else if (input_string_match(buf,"dump alpha")) {
+      glog.get_logfile() << "dump alpha";
+      outp->input_dump_alpha(buf);
+    } else if (input_string_match(buf,"dump stress")) {
+      glog.get_logfile() << "dump stress";
+      outp->input_dump_atom_stress(buf);
+    } else if (input_string_match(buf,"dump energies")) {
+      glog.get_logfile() << "dump energies";
+      outp->input_dump_energies(buf);
+    } else if (input_string_match(buf,"dump reaxbonds")) {
+      glog.get_logfile() << "dump reaxbonds";
+      outp->input_dump_reax_bonds(buf);
+    } else if (input_string_match(buf,"dump reaxallbonds")) {
+      glog.get_logfile() << "dump reaxallbonds";
+      outp->input_dump_reax_allbonds(buf);
+    } else if (input_string_match(buf,"nstep_prev")) {
+      glog.get_logfile() << "nstep_prev";
+      outp->input_nstep_prev(buf);
+    } else if (input_string_match(buf,"fixed particles")) {
+      glog.get_logfile() << "fixed particles";
+      p->input_fixed_particles(buf);
+    } else if (input_string_match(buf,"minimized particles")) {
+      glog.get_logfile() << "minimized particles";
+      p->input_minimized_particles(buf);
+    } else if (input_string_match(buf,"cohesive energy")) {
+      glog.get_logfile() << "cohesive energy";
+      p->input_cohesive_energy(buf);
+    } else if (input_string_match(buf,"units")) {
+      glog.get_logfile() << "units";
+      controller->input_units(buf);
+    } else if (input_string_match(buf,"temperature control")) {
+      glog.get_logfile() << "temperature control";
+      stepper->input_temperature_control(buf);
+    } else if (input_string_match(buf,"temperature damping")) {
+      glog.get_logfile() << "temperature damping";
+      stepper->input_temperature_damping(buf);
+    } else if (input_string_match(buf,"pressure control")) {
+      glog.get_logfile() << "pressure control";
+      stepper->input_pressure_control(buf);
+    } else if (input_string_match(buf,"pressure damping")) {
+      glog.get_logfile() << "pressure damping";
+      stepper->input_pressure_damping(buf);
+    } else if (input_string_match(buf,"minimize")) {
+      glog.get_logfile() << "minimize";
+      controller->input_minimize(buf,Controller::run_relax);
+    } else if (input_string_match(buf,"conjugate gradient")) {
+      glog.get_logfile() << "conjugate gradient";
+      controller->input_minimize(buf,Controller::run_conjugate_gradient);
+    } else if (input_string_match(buf,"interfacial minimizer")) {
+      glog.get_logfile() << "interfacial minimizer";
+      controller->input_minimize(buf,Controller::run_interfacial_minimizer);
+    } else if (input_string_match(buf,"grain boundary minimizer")) {
+      glog.get_logfile() << "grain boundary minimizer";
+      controller->input_minimize(buf,Controller::run_grain_boundary_minimizer);
+    } else if (input_string_match(buf,"fix")) {
+      glog.get_logfile() << "fix";
+      fix_list->input_fix(buf);
+    } else if (input_string_match(buf,"init config")) {
+      glog.get_logfile() << "init config";
+      p->input_init_config(buf);
+    } else if (input_string_match(buf,"init velocities")) {
+      glog.get_logfile() << "init velocity";
+      p->input_init_velocity(buf);
+    } else if (input_string_match(buf,"dumpfile root")) {
+      glog.get_logfile() << "dumpfile root";
+      outp->input_dumpfile_root(buf);
+    } else if (input_string_match(buf,"read atoms")) {
+      glog.get_logfile() << "read atoms";
+      p->input_read_atoms(buf);
+    } else if (input_string_match(buf,"read velocities")) {
+      glog.get_logfile() << "read velocities";
+      p->input_read_velocities(buf);
+    } else if (input_string_match(buf,"read displacements")) {
+      glog.get_logfile() << "read displacements";
+      p->input_read_displacements(buf);
+    } else if (input_string_match(buf,"read shift")) {
+      glog.get_logfile() << "read shift";
+      p->input_read_shift(buf);
+    } else if (input_string_match(buf,"read timestep")) {
+      glog.get_logfile() << "read timestep";
+      p->input_read_timestep(buf);
+    } else if (input_string_match(buf,"write timestep")) {
+      glog.get_logfile() << "write timestep";
+      p->input_write_timestep(buf);
+    } else if (input_string_match(buf,"read box")) {
+      glog.get_logfile() << "read box";
+      p->input_read_box(buf);
+    } else if (input_string_match(buf,"write box")) {
+      glog.get_logfile() << "write box";
+      p->input_write_box(buf);
+    } else if (input_string_match(buf,"read extvar")) {
+      glog.get_logfile() << "read extvar";
+      stepper->input_read_extvar(buf);
+    } else if (input_string_match(buf,"write extvar")) {
+      glog.get_logfile() << "write extvar";
+      stepper->input_write_extvar(buf);
+    } else if (input_string_match(buf,"scale displacements")) {
+      glog.get_logfile() << "scale displacements";
+      p->input_scale_displacements(buf);
+    } else if (input_string_match(buf,"velocity factor")) {
+      glog.get_logfile() << "velocity factor";
+      p->input_velocity_factor(buf);
+    } else if (input_string_match(buf,"velocity add")) {
+      glog.get_logfile() << "velocity add";
+      p->input_velocity_add(buf);
+    } else if (input_string_match(buf,"read ref config")) {
+      glog.get_logfile() << "read ref config";
+      p->input_read_ref_config(buf);
+    } else if (input_string_match(buf,"processor grid")) {
+      glog.get_logfile() << "processor grid";
+      comm->input_procgrid(buf);
+    } else if (input_string_match(buf,"use_nodefiles")) {
+      glog.get_logfile() << "use_nodefiles";
+      comm->input_nodefile(buf);
+    } else if (input_string_match(buf,"barrier timing")) {
+      glog.get_logfile() << "barrier timing";
+      glog.input_timebarrier(buf);
+    } else if (input_string_match(buf,"nworlds")) {
+      glog.get_logfile() << "nworlds";
+      comm->input_nworlds(buf);
+    } else if (input_string_match(buf,"world input file")) {
+      glog.get_logfile() << "world input file" << endl;
+      Lworldinpfile = true;
+    } else if (input_string_match(buf,"world seed")) {
+      glog.get_logfile() << "world seed";
+      comm->input_world_seed();
+    } else if (input_string_match(buf,"virial style")) {
+      glog.get_logfile() << "virial style";
+      ff->input_virial_style(buf);
+    } else if (input_string_match(buf,"output stress tensor")) {
+      glog.get_logfile() << "output stress tensor";
+      outp->input_stress_tensor(buf);
+    } else if (input_string_match(buf,"output sum momentum")) {
+      glog.get_logfile() << "output sum momentum";
+      outp->input_sum_momentum(buf);
+    } else if (input_string_match(buf,"dump format style")) {
+      glog.get_logfile() << "dump stress tensor";
+      outp->input_format_style(buf);
+    } else if (input_string_match(buf,"reax iprune")) {
+      glog.get_logfile() << "reax iprune";
+      ff->input_reax_iprune(buf);
+    } else if (input_string_match(buf,"reax ihb")) {
+      glog.get_logfile() << "reax ihb";
+      ff->input_reax_ihb(buf);
+    } else if (input_string_match(buf,"reax hbcut")) {
+      glog.get_logfile() << "reax hbcut";
+      ff->input_reax_hbcut(buf);
+    } else if (input_string_match(buf,"midpoint")) {
+      glog.get_logfile() << "midpoint";
+      ff->input_midpoint(buf);
+    } else {
+      glog.error("Invalid input command\n" + buf);
+    }
+
+  } while (!input_string_match(buf,"End of Input"));
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exiting Input::ReadInput()" << endl;
+  }
+}
+
+@
+
+
+4.17
+log
+@Added 'output sum momentum' command
+@
+text
+@d303 6
+@
+
+
+4.16
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d339 3
+@
+
+
+4.15
+log
+@Added command dump format style
+@
+text
+@a156 3
+      if (comm->get_Lnodefile()) {
+	comm->get_nodefile() << "Before input_forcefield " << endl;
+      }
+a157 3
+      if (comm->get_Lnodefile()) {
+	comm->get_nodefile() << "Before input_forcefield " << endl;
+      }
+a158 4
+      if (comm->get_Lnodefile()) {
+	comm->get_nodefile() << "After input_forcefield " << endl;
+      }
+
+d342 12
+@
+
+
+4.14
+log
+@Added commands to carry box dimensions in restart file and to output stress tensor
+@
+text
+@d349 3
+@
+
+
+4.13
+log
+@Fixed some FORTRAN lapses and changed dump timestep to write timestep
+@
+text
+@d307 6
+d346 3
+@
+
+
+4.12
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d304 3
+a306 3
+    } else if (input_string_match(buf,"dump timestep")) {
+      glog.get_logfile() << "dump timestep";
+      p->input_dump_timestep(buf);
+@
+
+
+4.11
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d181 3
+d313 3
+@
+
+
+4.10
+log
+@Added nstep_prev command.
+@
+text
+@d196 3
+d295 9
+@
+
+
+4.9
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@d232 3
+@
+
+
+4.8
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d223 9
+@
+
+
+4.7
+log
+@Added damping constant commands for Nose-Hoover barostats and thermostats
+@
+text
+@d220 3
+d307 3
+@
+
+
+4.7.2.1
+log
+@Implemented ri*Fi pressure calc
+@
+text
+@a303 3
+    } else if (input_string_match(buf,"virial style")) {
+      glog.get_logfile() << "virial style";
+      ff->input_virial_style(buf);
+@
+
+
+4.7.2.2
+log
+@Added atom stress for ReaxFF
+@
+text
+@a219 3
+    } else if (input_string_match(buf,"dump stress")) {
+      glog.get_logfile() << "dump stress";
+      outp->input_dump_atom_stress(buf);
+@
+
+
+4.6
+log
+@Added multiple replica feature.
+@
+text
+@d235 3
+d241 3
+@
+
+
+4.5
+log
+@Added some new barostats and thermostats.
+@
+text
+@d69 2
+a70 3
+  defFileName("inp.dat")
+{
+  if (inpFileName)
+d72 3
+a74 1
+}  
+d88 2
+a89 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Input::ReadInput()" << endl;
+d96 8
+d106 2
+a107 2
+    filename = glog.path_str + defFileName;
+    //filename = defFileName;
+d111 10
+a120 5
+      infile.close();
+      infile.open(filename.c_str()); 
+      if (!infile) {
+	glog.abort("Input::ReadInput:\n"
+	"Failed to open "+filename,comm);
+d122 2
+a125 5
+  else
+  {
+	if (node == 0)
+	  glog.logfile << "Opened " << filename << " for input \n";
+  }
+d141 3
+a143 3
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << isize << endl;
+  }
+d152 3
+d157 7
+a163 1
+      glog.logfile << "forcefield";
+d165 4
+d170 1
+a170 1
+      glog.logfile << "timestep";
+d173 1
+a173 1
+      glog.logfile << "nsteps";
+d176 1
+a176 1
+      glog.logfile << "box dimensions";
+d179 1
+a179 1
+      glog.logfile << "box origin";
+d182 1
+a182 1
+      glog.logfile << "initialize temperature";
+d185 1
+a185 1
+      glog.logfile << "density profile";
+d188 1
+a188 1
+      glog.logfile << "neighbor";
+d191 1
+a191 1
+      glog.logfile << "thermo";
+d194 1
+a194 1
+      glog.logfile << "dump particles";
+d197 1
+a197 1
+      glog.logfile << "dump velocities";
+d200 1
+a200 1
+      glog.logfile << "dump displacements";
+d203 1
+a203 1
+      glog.logfile << "dump cfg";
+d206 1
+a206 1
+      glog.logfile << "dump extended cfg";
+d209 1
+a209 1
+      glog.logfile << "dump forces";
+d212 1
+a212 1
+      glog.logfile << "dump restart";
+d215 1
+a215 1
+      glog.logfile << "dump ref config";
+d218 1
+a218 1
+      glog.logfile << "dump alpha";
+d221 1
+a221 1
+      glog.logfile << "fixed particles";
+d224 1
+a224 1
+      glog.logfile << "minimized particles";
+d227 1
+a227 1
+      glog.logfile << "cohesive energy";
+d230 1
+a230 1
+      glog.logfile << "units";
+d233 1
+a233 1
+      glog.logfile << "temperature control";
+d236 1
+a236 1
+      glog.logfile << "pressure control";
+d239 1
+a239 1
+      glog.logfile << "minimize";
+d242 1
+a242 1
+      glog.logfile << "conjugate gradient";
+d245 1
+a245 1
+      glog.logfile << "interfacial minimizer";
+d248 1
+a248 1
+      glog.logfile << "grain boundary minimizer";
+d251 1
+a251 1
+      glog.logfile << "fix";
+d254 1
+a254 1
+      glog.logfile << "init config";
+d257 1
+a257 1
+      glog.logfile << "init velocity";
+d260 1
+a260 1
+      glog.logfile << "dumpfile root";
+d263 1
+a263 1
+      glog.logfile << "read atoms";
+d266 1
+a266 1
+      glog.logfile << "read velocities";
+d269 1
+a269 1
+      glog.logfile << "read displacements";
+d272 1
+a272 1
+      glog.logfile << "scale displacements";
+d275 1
+a275 1
+      glog.logfile << "velocity factor";
+d278 1
+a278 1
+      glog.logfile << "read ref config";
+d281 1
+a281 1
+      glog.logfile << "processor grid";
+d284 1
+a284 1
+      glog.logfile << "use_nodefiles";
+d287 1
+a287 1
+      glog.logfile << "barrier timing";
+d289 9
+@
+
+
+4.4
+log
+@Added a feature to turn on and off nodefiles.
+@
+text
+@d232 1
+a232 1
+    } else if (input_string_match(buf,"init velocity")) {
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d259 2
+a260 2
+    } else if (input_string_match(buf,"nodefile")) {
+      glog.logfile << "nodefile";
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a216 3
+    } else if (input_string_match(buf,"montecarlo")) {
+      glog.logfile << "MonteCarlo";
+      controller->input_mc(buf,Controller::run_monte_carlo);
+@
+
+
+4.3.2.1.2.1
+log
+@Added use_nodefile command to Monaco_Aidan branch
+@
+text
+@d262 2
+a263 2
+    } else if (input_string_match(buf,"use_nodefiles")) {
+      glog.logfile << "use_nodefiles";
+@
+
+
+4.3.2.1.2.2
+log
+@Correct
+@
+text
+@d262 2
+a263 2
+    } else if (input_string_match(buf,"nodefile")) {
+      glog.logfile << "nodefile";
+@
+
+
+4.3.2.1.2.3
+log
+@Correct several bugs
+@
+text
+@a216 1
+
+a219 1
+
+@
+
+
+4.3.2.1.2.4
+log
+@Added EAM energy change calculation
+@
+text
+@d217 1
+d221 1
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+a216 3
+    } else if (input_string_match(buf,"montecarlo")) {
+      glog.logfile << "MonteCarlo";
+      controller->input_mc(buf,Controller::run_monte_carlo);
+d256 9
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d201 3
+a242 9
+    } else if (input_string_match(buf,"processor grid")) {
+      glog.logfile << "processor grid";
+      comm->input_procgrid(buf);
+    } else if (input_string_match(buf,"nodefile")) {
+      glog.logfile << "nodefile";
+      comm->input_nodefile(buf);
+    } else if (input_string_match(buf,"barrier timing")) {
+      glog.logfile << "barrier timing";
+      glog.input_timebarrier(buf);
+@
+
+
+3.6
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.5
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.4
+log
+@Added input_procgrid function.
+@
+text
+@d243 6
+@
+
+
+3.3
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d240 3
+@
+
+
+3.3.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a200 7
+
+      // Added saubry (01-13-05)
+    } else if (input_string_match(buf,"p_monaco")) {
+      glog.logfile << "p_monaco";
+      controller->input_p_monaco(Controller::run_p_monaco);
+
+
+@
+
+
+3.3.6.2
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d201 7
+a207 3
+    } else if (input_string_match(buf,"MonteCarlo")) {
+      glog.logfile << "MonteCarlo";
+      controller->input_mc(buf,Controller::run_monte_carlo);
+@
+
+
+3.3.6.3
+log
+@Correct small error.
+@
+text
+@d201 1
+a201 1
+    } else if (input_string_match(buf,"montecarlo")) {
+@
+
+
+3.2
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d74 4
+a77 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Input::ReadInput()" << endl;
+#endif
+d113 2
+a114 1
+#ifdef USE_NODEFILES
+d116 1
+a116 1
+#endif
+d119 4
+a122 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << buf << endl;
+#endif
+d245 4
+a248 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exiting Input::ReadInput()" << endl;
+#endif
+@
+
+
+3.1
+log
+@Added ability to read velocities from the config.in file
+and write velocities to the config.out and cfg.out files.
+@
+text
+@d52 5
+a56 1
+Input::Input() {
+d74 1
+d76 1
+d80 2
+a81 1
+    filename = glog.path_str+"inp.dat";
+d93 5
+d112 1
+d114 1
+d117 1
+a117 1
+
+d119 1
+d156 3
+d162 3
+d171 15
+d197 10
+a206 1
+      controller->input_minimize(buf);
+d216 21
+d242 1
+a242 1
+
+d244 1
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d168 3
+@
+
+
+2.18
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.17
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.16
+log
+@Various
+@
+text
+@d155 3
+@
+
+
+2.15
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+d146 3
+@
+
+
+2.14
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@d107 3
+a109 12
+    } else if (input_string_match(buf,"forcefield twobody")) {
+      glog.logfile << "forcefield twobody";
+      ff->input_forcefield_twobody(buf);
+    } else if (input_string_match(buf,"forcefield threebody")) {
+      glog.logfile << "forcefield threebody";
+      ff->input_forcefield_threebody(buf);
+    } else if (input_string_match(buf,"forcefield external")) {
+      glog.logfile << "forcefield external";
+      ff->input_forcefield_external(buf);
+    } else if (input_string_match(buf,"forcefield eam")) {
+      glog.logfile << "forcefield eam";
+      ff->input_forcefield_eam(buf);
+@
+
+
+2.14.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@d51 1
+a51 5
+Input::Input(char *inpFileName):
+  defFileName("inp.dat")
+{
+  if (inpFileName)
+    defFileName = inpFileName;
+a68 1
+#ifdef USE_NODEFILES
+a69 1
+#endif
+d73 1
+a73 2
+    filename = glog.path_str + defFileName;
+    //filename = defFileName;
+a84 5
+  else
+  {
+	if (node == 0)
+	  glog.logfile << "Opened " << filename << " for input \n";
+  }
+a98 1
+#ifdef USE_NODEFILES
+a99 1
+#endif
+d102 1
+a102 1
+#ifdef USE_NODEFILES
+a103 1
+#endif
+a169 9
+    } else if (input_string_match(buf,"dumpfile root")) {
+      glog.logfile << "dumpfile root";
+      outp->input_dumpfile_root(buf);
+    } else if (input_string_match(buf,"read atoms")) {
+      glog.logfile << "read atoms";
+      p->input_read_atoms(buf);
+    } else if (input_string_match(buf,"read velocities")) {
+      glog.logfile << "read velocities";
+      p->input_read_velocities(buf);
+d175 1
+a175 1
+#ifdef USE_NODEFILES
+a176 1
+#endif
+@
+
+
+2.14.2.2
+log
+@Keeping track of displacements for each particle.
+@
+text
+@a163 3
+    } else if (input_string_match(buf,"dump displacements")) {
+      glog.logfile << "dump displacements";
+      outp->input_dump_displacements(buf);
+a193 6
+    } else if (input_string_match(buf,"read displacements")) {
+      glog.logfile << "read displacements";
+      p->input_read_displacements(buf);
+    } else if (input_string_match(buf,"scale displacements")) {
+      glog.logfile << "scale displacements";
+      p->input_scale_displacements(buf);
+@
+
+
+2.14.2.3
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a169 3
+    } else if (input_string_match(buf,"dump extended cfg")) {
+      glog.logfile << "dump extended cfg";
+      outp->input_dump_extended_cfg(buf);
+a172 15
+    } else if (input_string_match(buf,"dump ref config")) {
+      glog.logfile << "dump ref config";
+      outp->input_dump_ref_config(buf);
+    } else if (input_string_match(buf,"dump alpha")) {
+      glog.logfile << "dump alpha";
+      outp->input_dump_alpha(buf);
+    } else if (input_string_match(buf,"fixed particles")) {
+      glog.logfile << "fixed particles";
+      p->input_fixed_particles(buf);
+    } else if (input_string_match(buf,"minimized particles")) {
+      glog.logfile << "minimized particles";
+      p->input_minimized_particles(buf);
+    } else if (input_string_match(buf,"cohesive energy")) {
+      glog.logfile << "cohesive energy";
+      p->input_cohesive_energy(buf);
+d181 1
+a181 10
+      controller->input_minimize(buf,Controller::run_relax);
+    } else if (input_string_match(buf,"conjugate gradient")) {
+      glog.logfile << "conjugate gradient";
+      controller->input_minimize(buf,Controller::run_conjugate_gradient);
+    } else if (input_string_match(buf,"interfacial minimizer")) {
+      glog.logfile << "interfacial minimizer";
+      controller->input_minimize(buf,Controller::run_interfacial_minimizer);
+    } else if (input_string_match(buf,"grain boundary minimizer")) {
+      glog.logfile << "grain boundary minimizer";
+      controller->input_minimize(buf,Controller::run_grain_boundary_minimizer);
+a202 6
+    } else if (input_string_match(buf,"velocity factor")) {
+      glog.logfile << "velocity factor";
+      p->input_velocity_factor(buf);
+    } else if (input_string_match(buf,"read ref config")) {
+      glog.logfile << "read ref config";
+      p->input_read_ref_config(buf);
+@
+
+
+2.14.2.4
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d122 12
+a133 3
+    } else if (input_string_match(buf,"forcefield")) {
+      glog.logfile << "forcefield";
+      ff->input_forcefield(buf);
+a190 3
+    } else if (input_string_match(buf,"dump restart")) {
+      glog.logfile << "dump restart";
+      outp->input_dump_restart(buf);
+a196 3
+    } else if (input_string_match(buf,"pressure control")) {
+      glog.logfile << "pressure control";
+      stepper->input_pressure_control(buf);
+@
+
+
+2.13
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d101 1
+a101 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,comm->get_world());
+@
+
+
+2.12
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d97 1
+a97 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,comm->get_world());
+d116 3
+@
+
+
+2.11
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.10
+log
+@Pushed examples down into subdirectories.
+@
+text
+@d10 1
+d15 6
+a23 27
+  // Set defaults
+  timestep = 1.0;
+  nsteps = 0;
+  lva[0] = 1.0;
+  lva[1] = 0.0;
+  lva[2] = 0.0;
+  lvb[0] = 0.0;
+  lvb[1] = 1.0;
+  lvb[2] = 0.0;
+  lvc[0] = 0.0;
+  lvc[1] = 0.0;
+  lvc[2] = 1.0;
+  origin[0] = 0.0;
+  origin[1] = 0.0;
+  origin[2] = 0.0;
+  temp_init = 0.0;
+  temp_iseed = 0;
+  Ldensity_profile = false;
+  neighbor_style = "none";
+  Ldump = false;
+  Ldumpvel = false;
+  Ldumpforce = false;
+  Ldumpcfg = false;
+  Lthermo = false;
+  units_style = "real";
+  temp_control_style = "none";
+  run_mode = "dynamics";
+d26 3
+a28 1
+void Input::ReadInput(Comm* comm) {
+d81 1
+a81 1
+      input_forcefield_twobody(buf);
+d84 1
+a84 1
+      input_forcefield_threebody(buf);
+d87 1
+a87 1
+      input_forcefield_external(buf);
+d90 1
+a90 1
+      input_timestep(buf);
+d93 1
+a93 1
+      input_nsteps(buf);
+d96 1
+a96 1
+      input_box_dimensions(buf);
+d99 1
+a99 1
+      input_box_origin(buf);
+d102 1
+a102 1
+      input_initialize_temperature(buf);
+d105 1
+a105 1
+      input_density_profile(buf);
+d108 1
+a108 1
+      input_neighbor(buf);
+d111 1
+a111 1
+      input_thermo(buf);
+d114 1
+a114 1
+      input_dump_particles(buf);
+d117 1
+a117 1
+      input_dump_velocities(buf);
+d120 1
+a120 1
+      input_dump_cfg(buf);
+d123 1
+a123 1
+      input_dump_forces(buf);
+d126 1
+a126 1
+      input_units(buf);
+d129 1
+a129 1
+      input_temperature_control(buf);
+d132 1
+a132 1
+      input_minimize(buf);
+d135 4
+a138 1
+      input_fix(buf);
+a145 519
+}
+
+void Input::input_forcefield_twobody(const string& buf)
+{
+  string filename,label;
+  stringstream buf_in(buf);
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_forcefield_twobody:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << filename << " ";
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_forcefield_twobody:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << label << endl;
+
+  ff_classname_list.push_back("twobody");
+  ff_filename_list.push_back(filename);
+  ff_label_list.push_back(label);
+}
+
+void Input::input_forcefield_threebody(const string& buf)
+{
+  string filename,label;
+
+  stringstream buf_in(buf);
+  buf_in >> filename;
+  
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_forcefield_threebody:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << filename << " ";
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_forcefield_threebody:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << label << endl;
+
+  ff_classname_list.push_back("threebody");
+  ff_filename_list.push_back(filename);
+  ff_label_list.push_back(label);
+}
+
+void Input::input_forcefield_external(const string& buf)
+{
+  string filename,label;
+  stringstream buf_in(buf);
+  buf_in >> filename;
+  
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_forcefield_external:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << filename;
+  
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_forcefield_external:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << label << endl;
+
+  ff_classname_list.push_back("external");
+  ff_filename_list.push_back(filename);
+  ff_label_list.push_back(label);
+}
+
+void Input::input_timestep(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> timestep;
+  
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_timestep:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << timestep << endl;
+
+  if (timestep < 0) {
+    glog.error("Input::input_timestep:\n"
+	       "Invalid input parameter");
+    exit(0);
+  }
+
+}
+
+void Input::input_nsteps(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> nsteps;
+  
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_nsteps:\n"
+	       "Read error in input file");
+    exit(0);
+  }
+  glog.logfile << " " << nsteps << endl;
+
+  if (nsteps < 0) {
+    glog.error("Input::input_nsteps:\n"
+	       "Invalid input parameter");
+    exit(0);
+  }
+}
+
+void Input::input_box_dimensions(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> lva[0];
+  buf_in >> lva[1];
+  buf_in >> lva[2];
+  buf_in >> lvb[0];
+  buf_in >> lvb[1];
+  buf_in >> lvb[2];
+  buf_in >> lvc[0];
+  buf_in >> lvc[1];
+  buf_in >> lvc[2];
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_box_dimensions:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << "\t" << lva[0] << "\t" << lva[1] << "\t" << lva[2] << " \\" << endl;
+  glog.logfile << "\t\t\t" << lvb[0] << "\t" << lvb[1] << "\t" << lvb[2] << " \\" << endl;
+  glog.logfile << "\t\t\t" << lvc[0] << "\t" << lvc[1] << "\t" << lvc[2]<< endl;
+}
+
+void Input::input_box_origin(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> origin[0];
+  buf_in >> origin[1];
+  buf_in >> origin[2];
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_box_origin:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << "\t" << origin[0] << "\t" << origin[1] << "\t" << origin[2] << endl;
+}
+
+void Input::input_initialize_temperature(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> temp_init;
+  buf_in >> temp_iseed;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_initialize_temperature:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << temp_init << " " << temp_iseed << endl;
+
+  if (temp_init < 0 || temp_iseed <= 0) {
+    glog.logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+  }
+}
+
+void Input::input_density_profile(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> density_freq;
+  buf_in >> density_nbins;
+  buf_in >> density_iaxis;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_density_profile:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << density_freq << " " << density_nbins << " " << density_iaxis << endl;
+
+  if (density_freq <= 0 || density_nbins <= 0 || 
+      (density_iaxis < 0 || density_iaxis > 3) ) {
+    glog.logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+  }
+
+  Ldensity_profile = true;
+}
+
+void Input::input_neighbor(const string& buf)
+{
+  string str_tmp;
+
+  stringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_neighbor:\n"
+	       "Read error in input file");
+  }
+
+  glog.logfile << " " << str_tmp;
+
+  if (str_tmp == "none") {
+    neighbor_style = str_tmp;
+    glog.logfile << endl;
+  } else if (str_tmp == "nsq") {
+    neighbor_style = str_tmp;
+
+    buf_in >> neighbor_freq;
+    buf_in >> neighbor_rskin;
+
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Input::input_neighbor:\n"
+		 "Read error in input file");
+    }
+    glog.logfile << " " << neighbor_freq << " " << neighbor_rskin  << endl;
+
+    if (neighbor_freq <= 0 || neighbor_rskin <= 0.0) {
+      glog.logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+    }
+  } else if (str_tmp == "bin") {
+    neighbor_style = str_tmp;
+
+    buf_in >> neighbor_freq;
+    buf_in >> neighbor_rskin;
+
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Input::input_neighbor:\n"
+		 "Read error in input file");
+    }
+    glog.logfile << " " << neighbor_freq << " " << neighbor_rskin  << endl;
+
+    if (neighbor_freq <= 0 || neighbor_rskin <= 0.0) {
+      glog.logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+    }
+  } else {
+    glog.logfile << endl << "Error: unrecognized neighbor style" << endl;
+    exit(0);
+  }
+}
+
+void Input::input_thermo(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> thermo_freq;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_thermo:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << thermo_freq << endl;
+
+  if (thermo_freq <= 0) {
+    glog.logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+  }
+
+  Lthermo = true;
+}
+
+void Input::input_dump_particles(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> dump_freq;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_dump_particles:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << dump_freq << endl;
+
+  if (dump_freq <= 0) {
+    glog.logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+  }
+
+  Ldump = true;
+}
+
+void Input::input_dump_velocities(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> dumpvel_freq;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_dump_velocities:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << dumpvel_freq << endl;
+
+  if (dumpvel_freq <= 0) {
+    glog.logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+  }
+
+  Ldumpvel = true;
+}
+
+void Input::input_dump_cfg(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> dumpcfg_freq;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_dump_cfg:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << dumpcfg_freq << endl;
+
+  if (dumpcfg_freq <= 0) {
+    glog.logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+  }
+
+  Ldumpcfg = true;
+}
+
+void Input::input_dump_forces(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> dumpforce_freq;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_dump_forces:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << dumpforce_freq << endl;
+
+  if (dumpforce_freq <= 0) {
+    glog.logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+  }
+
+  Ldumpforce = true;
+}
+
+void Input::input_units(const string& buf)
+{
+  string str_tmp;
+  stringstream buf_in(buf);
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_units:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << str_tmp << endl;
+
+  units_style = str_tmp;
+}
+
+void Input::input_temperature_control(const string& buf)
+{
+  string str_tmp;
+  stringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_temperature_control:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << str_tmp;
+
+  if (str_tmp == "none") {
+    temp_control_style = str_tmp;
+  } else if (str_tmp == "nose-hoover") {
+    temp_control_style = str_tmp;
+    buf_in >> temp_target;
+    buf_in >> nose_hoover_freq;
+
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Input::input_temperature_control:\n"
+		 "Read error in input file");
+    }
+
+    glog.logfile << " " << temp_target << " " << nose_hoover_freq << endl;
+
+    if (temp_target <= 0.0) {
+      glog.logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+    }
+
+    if (nose_hoover_freq <= 0.0) {
+      glog.logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+    }
+
+  } else if (str_tmp == "rescale") {
+    temp_control_style = str_tmp;
+    buf_in >> temp_target;
+    buf_in >> temp_freq;
+    buf_in >> temp_window;
+    buf_in >> temp_factor;
+
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Input::input_temperature_control:\n"
+		 "Read error in input file");
+    }
+    glog.logfile << " " << temp_target << " " << temp_freq << " " << 
+      temp_window << " "  << temp_factor << endl;
+
+    if (temp_target < 0.0) {
+      glog.logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+    }
+
+    if (temp_freq <= 0) {
+      glog.logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+    }
+
+    if (temp_window < 0.0) {
+      glog.logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+    }
+
+    if (temp_factor <= 0.0 || temp_factor > 1.0) {
+      glog.logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+    }
+  } else if (str_tmp == "nose_hoover") {
+    temp_control_style = str_tmp;
+    glog.logfile << endl << "Error: Nose-Hoover not implemented yet" << endl;
+  } else {
+    glog.logfile << endl << "Error: unrecognized temperature control style" << endl;
+    exit(0);
+  }
+}
+
+void Input::input_minimize(const string& buf)
+{
+  string str_tmp;
+
+  run_mode = "relax";
+  stringstream buf_in(buf);
+  buf_in >> str_tmp;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_minimize:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << str_tmp;
+  if (str_tmp == "steepest_descent") {
+    minimize_style = str_tmp;
+    buf_in >> relax_coord[0] >> relax_coord[1] >> relax_coord[2];
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Input::input_minimize:\n"
+		 "Read error in input file");
+    }
+    glog.logfile << " " << relax_coord[0] << " " << relax_coord[1] << 
+      " " << relax_coord[2] << " " << endl;
+  } else {
+    glog.logfile << endl << "Error: unrecognized minimizer style" << endl;
+    exit(0);
+  }
+}
+
+void Input::input_fix(const string& buf)
+{
+  string fix_style,fix_string;
+
+  stringstream buf_in(buf);
+  buf_in >> fix_style;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Input::input_fix:\n"
+	       "Read error in input file");
+  }
+
+  glog.logfile << " " << fix_style;
+
+  if (fix_style == "temp_rescale") {
+    buf_in.ignore();
+    getline(buf_in,fix_string);
+
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Input::input_neighbor:\n"
+		 "Read error in input file");
+    }
+    glog.logfile << " " << fix_string << endl;
+  } else if (fix_style == "none") {
+    fix_string = "";
+    glog.logfile << endl;
+  } else {
+    glog.logfile << endl << "Error: unrecognized fix style" << endl;
+    exit(0);
+  }
+  fix_style_list.push_back(fix_style);
+  fix_string_list.push_back(fix_string);
+@
+
+
+2.9
+log
+@Removed Thermo class
+@
+text
+@d130 3
+a132 3
+    } else if (input_string_match(buf,"dump atoms")) {
+      glog.logfile << "dump atoms";
+      input_dump_atoms(buf);
+d440 1
+a440 1
+void Input::input_dump_atoms(const string& buf)
+d447 1
+a447 1
+    glog.error("Input::input_dump_atoms:\n"
+@
+
+
+2.8
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@d151 3
+d645 35
+@
+
+
+2.7
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d67 6
+a72 1
+      glog.abort("Failed to open " + filename,comm);
+@
+
+
+2.6
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d39 1
+d47 1
+a47 1
+  string buf,buf2;
+d73 4
+a76 12
+      if(!getline(infile,buf)) {
+	buf = "End of Input";
+      } else {
+	// Concatenate continuation lines, if requested.
+	if (buf[buf.size()-1] == '\\') {
+	  buf2 = buf;
+	  while (buf2[buf2.size()-1] == '\\') {
+	    buf.replace(buf.size()-1,1," ");
+	    // buf.replace(buf.size()-1,1,&char_tmp);
+	    getline(infile,buf2);
+	    buf+=buf2;
+	  }
+a91 6
+    } else if (input_string_match(buf,"")) {
+      glog.logfile << endl;
+      continue;
+    } else if (input_string_match(buf,"#")) {
+      glog.logfile << "#" << " " << buf << endl;
+      continue;
+d131 3
+d472 20
+d544 24
+a567 1
+  } else   if (str_tmp == "rescale") {
+@
+
+
+2.5
+log
+@Redoing temperature functions. Not finished yet.
+@
+text
+@a11 6
+#include "forcefield.h"
+#include "constants.h"
+#include "controller.h"
+#include "stepper.h"
+#include "minimizer.h"
+#include "neighbor.h"
+d35 1
+a35 1
+  neighbor_style = Neighbor::neighbor_none;
+d40 3
+a42 3
+  units_style = real_units;
+  temp_control_style = Stepper::temp_control_none;
+  run_mode = Controller::run_dynamics;
+a50 1
+  MPI_Comm world;
+a59 2
+  world = comm->get_world();
+
+d89 1
+a89 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,world);
+d93 1
+a93 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+d186 1
+a186 1
+  ff_classname_list.push_back(ForceField::twobody);
+d213 1
+a213 1
+  ff_classname_list.push_back(ForceField::threebody);
+d239 1
+a239 1
+  ff_classname_list.push_back(ForceField::external);
+d365 1
+a365 1
+  string strtmp;
+d369 1
+a369 1
+  buf_in >> strtmp;
+d377 1
+a377 1
+  glog.logfile << " " << strtmp;
+d379 2
+a380 2
+  if (strtmp == "none") {
+    neighbor_style = Neighbor::neighbor_none;
+d382 2
+a383 2
+  } else if (strtmp == "nsq") {
+    neighbor_style = Neighbor::neighbor_nsq;
+d399 2
+a400 2
+  } else if (strtmp == "bin") {
+    neighbor_style = Neighbor::neighbor_bin;
+d504 1
+a504 1
+  string strtmp;
+d506 1
+a506 1
+  buf_in >> strtmp;
+d513 1
+a513 1
+  glog.logfile << " " << strtmp << endl;
+d515 1
+a515 8
+  if (strtmp == "real") {
+    units_style = real_units;
+  } else if (strtmp == "reduced") {
+    units_style = reduced_units;
+  } else {
+    glog.logfile << "Error: unrecognized units style" << endl;
+    exit(0);
+  }
+d520 1
+a520 1
+  string strtmp;
+d523 1
+a523 1
+  buf_in >> strtmp;
+d530 1
+a530 1
+  glog.logfile << " " << strtmp;
+d532 4
+a535 4
+  if (strtmp == "none") {
+    temp_control_style = Stepper::temp_control_none;
+  } else   if (strtmp == "rescale") {
+    temp_control_style = Stepper::temp_control_rescale;
+d568 2
+a569 2
+  } else if (strtmp == "nose_hoover") {
+    temp_control_style = Stepper::temp_control_nose_hoover;
+d579 3
+a581 2
+  string strtmp;
+  run_mode = Controller::run_relax;
+d583 1
+a583 1
+  buf_in >> strtmp;
+d589 3
+a591 3
+  glog.logfile << " " << strtmp;
+  if (strtmp == "steepest_descent") {
+    minimize_style = Minimizer::minimize_steepest_descent;
+@
+
+
+2.4
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d238 1
+a238 1
+  glog.logfile << " " << filename << endl;
+a537 3
+
+  glog.error("Input::input_temperature_control:\n"
+	     "Temperature control temporariliy broken");
+@
+
+
+2.3
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d61 4
+a64 1
+  if (node == 0) glog.logfile << "Entering Input::ReadInput()" << endl;
+a69 3
+    glog.logfile.setf(ios::showpoint);
+    //cin.setf(boolalpha);
+    //logpnt->setf(boolalpha);
+d176 1
+a176 1
+  string filename;
+a179 1
+  
+d185 11
+a195 2
+  glog.logfile << " " << filename << endl;
+  ff_classname_list.push_back(Forcefield::twobody);
+d197 1
+d202 1
+a202 1
+  string filename;
+d212 11
+a222 3
+  glog.logfile << " " << filename << endl;
+  
+  ff_classname_list.push_back(Forcefield::threebody);
+d224 1
+d229 1
+a229 1
+  string filename;
+d240 9
+a248 1
+  ff_classname_list.push_back(Forcefield::external);
+d250 1
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d45 1
+d71 2
+a72 1
+    infile.open("inp.dat"); 
+d75 1
+a75 1
+      glog.abort("Failed to open inp.dat");
+d383 15
+a397 2
+    glog.logfile << endl << "Error: Neighbor style bin not implemented" << endl;
+    exit(0);
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d14 1
+d16 1
+d19 2
+a20 1
+extern ofstream logfile;
+d47 1
+d60 1
+a60 1
+  if (node == 0) logfile << "Entering Input::ReadInput()" << endl;
+d66 1
+a66 1
+    logfile.setf(ios::showpoint);
+d73 1
+a73 2
+      logfile << "Failed to open inp.dat" << endl;
+      exit(0);
+d107 1
+a107 1
+      logfile << endl;
+d110 1
+a110 1
+      logfile << "#" << " " << buf << endl;
+d113 1
+a113 1
+      logfile << "forcefield twobody";
+d116 1
+a116 1
+      logfile << "forcefield threebody";
+d119 1
+a119 1
+      logfile << "forcefield external";
+d122 1
+a122 1
+      logfile << "timestep";
+d125 1
+a125 1
+      logfile << "nsteps";
+d128 1
+a128 1
+      logfile << "box dimensions";
+d131 1
+a131 1
+      logfile << "box origin";
+d134 1
+a134 1
+      logfile << "initialize temperature";
+d137 1
+a137 1
+      logfile << "density profile";
+d140 1
+a140 1
+      logfile << "neighbor";
+d143 1
+a143 1
+      logfile << "thermo";
+d146 1
+a146 1
+      logfile << "dump atoms";
+d149 1
+a149 1
+      logfile << "dump velocities";
+d152 1
+a152 1
+      logfile << "dump forces";
+d155 1
+a155 1
+      logfile << "units";
+d158 1
+a158 1
+      logfile << "temperature control";
+d160 3
+d164 1
+a164 2
+      logfile  << "Error: invalid input command" << endl;
+      exit(0);
+d180 3
+a182 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d184 1
+a184 1
+  logfile << " " << filename << endl;
+d197 3
+a199 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d201 1
+a201 1
+  logfile << " " << filename << endl;
+d214 3
+a216 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d218 1
+a218 1
+  logfile << " " << filename << endl;
+d230 9
+a238 1
+    logfile << endl << "Error: Invalid input parameter" << endl;
+d241 1
+a241 1
+  logfile << " " << timestep << endl;
+d250 3
+a252 1
+    logfile << endl << "Error: Invalid input parameter" << endl;
+d255 1
+a255 1
+  logfile << " " << nsteps << endl;
+d258 2
+a259 1
+    logfile << endl << "Error: Invalid input parameter" << endl;
+a261 1
+
+d277 7
+a283 6
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+  }
+  logfile << "\t" << lva[0] << "\t" << lva[1] << "\t" << lva[2] << " \\" << endl;
+  logfile << "\t\t\t" << lvb[0] << "\t" << lvb[1] << "\t" << lvb[2] << " \\" << endl;
+  logfile << "\t\t\t" << lvc[0] << "\t" << lvc[1] << "\t" << lvc[2]<< endl;
+d294 3
+a296 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d298 1
+a298 1
+  logfile << "\t" << origin[0] << "\t" << origin[1] << "\t" << origin[2] << endl;
+d308 3
+a310 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d312 1
+a312 1
+  logfile << " " << temp_init << " " << temp_iseed << endl;
+d315 1
+a315 1
+    logfile << endl << "Error: Invalid input parameter" << endl;
+d328 3
+a330 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d332 1
+a332 1
+  logfile << " " << density_freq << " " << density_nbins << " " << density_iaxis << endl;
+d336 1
+a336 1
+    logfile << endl << "Error: Invalid input parameter" << endl;
+d352 3
+a354 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d357 1
+a357 1
+  logfile << " " << strtmp;
+d361 1
+a361 1
+    logfile << endl;
+d369 3
+a371 2
+      logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+d373 1
+a373 1
+    logfile << " " << neighbor_freq << " " << neighbor_rskin  << endl;
+d376 1
+a376 1
+      logfile << endl << "Error: Invalid input parameter" << endl;
+d381 1
+a381 1
+    logfile << endl << "Error: Neighbor style bin not implemented" << endl;
+d384 1
+a384 1
+    logfile << endl << "Error: unrecognized neighbor style" << endl;
+d395 3
+a397 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d399 1
+a399 1
+  logfile << " " << thermo_freq << endl;
+d402 1
+a402 1
+    logfile << endl << "Error: Invalid input parameter" << endl;
+d415 3
+a417 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d419 1
+a419 1
+  logfile << " " << dump_freq << endl;
+d422 1
+a422 1
+    logfile << endl << "Error: Invalid input parameter" << endl;
+d435 3
+a437 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d439 1
+a439 1
+  logfile << " " << dumpvel_freq << endl;
+d442 1
+a442 1
+    logfile << endl << "Error: Invalid input parameter" << endl;
+d455 3
+a457 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d459 1
+a459 1
+  logfile << " " << dumpforce_freq << endl;
+d462 1
+a462 1
+    logfile << endl << "Error: Invalid input parameter" << endl;
+d476 3
+a478 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d480 1
+a480 1
+  logfile << " " << strtmp << endl;
+d487 1
+a487 1
+    logfile << "Error: unrecognized units style" << endl;
+d497 3
+d503 3
+a505 2
+    logfile << endl << "Error: Invalid input parameter" << endl;
+    exit(0);
+d507 1
+a507 1
+  logfile << " " << strtmp;
+d519 3
+a521 2
+      logfile << endl << "Error: Invalid input parameter" << endl;
+      exit(0);
+d523 1
+a523 1
+    logfile << " " << temp_target << " " << temp_freq << " " << 
+d527 1
+a527 1
+      logfile << endl << "Error: Invalid input parameter" << endl;
+d532 1
+a532 1
+      logfile << endl << "Error: Invalid input parameter" << endl;
+d537 1
+a537 1
+      logfile << endl << "Error: Invalid input parameter" << endl;
+d542 1
+a542 1
+      logfile << endl << "Error: Invalid input parameter" << endl;
+d547 1
+a547 1
+    logfile << "Error: Nose-Hoover not implemented yet";
+d549 1
+a549 1
+    logfile << "Error: unrecognized temperature control style" << endl;
+d553 29
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d8 1
+d16 2
+d41 1
+d46 1
+a46 1
+void Input::ReadInput() {
+d49 4
+d54 1
+a54 3
+  cout.setf(ios::showpoint);
+  //cin.setf(boolalpha);
+  //cout.setf(boolalpha);
+d56 2
+a57 1
+  ifstream infile("inp.dat"); 
+d59 13
+a71 3
+  if (!infile) {
+    cout << "Failed to open inp.dat" << endl;
+    exit(0);
+d73 16
+a88 10
+  
+  while (getline(infile,buf)){
+    // Concatenate continuation lines, if requested.
+    if (buf[buf.size()-1] == '\\') {
+      buf2 = buf;
+      while (buf2[buf2.size()-1] == '\\') {
+	buf.replace(buf.size()-1,1," ");
+	// buf.replace(buf.size()-1,1,&char_tmp);
+	getline(infile,buf2);
+	buf+=buf2;
+d90 1
+d92 13
+a104 2
+    if (input_string_match(buf,"")) {
+      cout << endl;
+d107 1
+a107 1
+      cout << "#" << " " << buf << endl;
+d110 1
+a110 1
+      cout << "forcefield twobody";
+d113 1
+a113 1
+      cout << "forcefield threebody";
+d116 1
+a116 1
+      cout << "forcefield external";
+d119 1
+a119 1
+      cout << "timestep";
+d122 1
+a122 1
+      cout << "nsteps";
+d125 1
+a125 1
+      cout << "box dimensions";
+d128 1
+a128 1
+      cout << "box origin";
+d131 1
+a131 1
+      cout << "initialize temperature";
+d134 1
+a134 1
+      cout << "density profile";
+d137 1
+a137 1
+      cout << "neighbor";
+d140 1
+a140 1
+      cout << "thermo";
+d143 1
+a143 1
+      cout << "dump atoms";
+d146 1
+a146 1
+      cout << "dump velocities";
+d148 3
+d152 1
+a152 1
+      cout << "units";
+d155 1
+a155 1
+      cout << "temperature control";
+d158 1
+a158 1
+      cout << "Error: invalid input command" << endl;
+d161 4
+a164 1
+  }
+d171 1
+d175 1
+a175 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d178 1
+a178 1
+  cout << " " << filename << endl;
+d186 1
+d191 1
+a191 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d194 1
+a194 1
+  cout << " " << filename << endl;
+d207 1
+a207 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d210 1
+a210 1
+  cout << " " << filename << endl;
+d222 1
+a222 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d225 1
+a225 1
+  cout << " " << timestep << endl;
+d234 1
+a234 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d237 1
+a237 1
+  cout << " " << nsteps << endl;
+d240 1
+a240 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d259 1
+a259 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d262 3
+a264 3
+  cout << "\t" << lva[0] << "\t" << lva[1] << "\t" << lva[2] << " \\" << endl;
+  cout << "\t\t\t" << lvb[0] << "\t" << lvb[1] << "\t" << lvb[2] << " \\" << endl;
+  cout << "\t\t\t" << lvc[0] << "\t" << lvc[1] << "\t" << lvc[2]<< endl;
+d275 1
+a275 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d278 1
+a278 1
+  cout << "\t" << origin[0] << "\t" << origin[1] << "\t" << origin[2] << endl;
+d288 1
+a288 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d291 1
+a291 1
+  cout << " " << temp_init << " " << temp_iseed << endl;
+d294 1
+a294 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d307 1
+a307 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d310 1
+a310 1
+  cout << " " << density_freq << " " << density_nbins << " " << density_iaxis << endl;
+d314 1
+a314 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d330 1
+a330 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d334 1
+a334 1
+  cout << " " << strtmp;
+d338 1
+a338 1
+    cout << endl;
+d346 1
+a346 1
+      cout << endl << "Error: Invalid input parameter" << endl;
+d349 1
+a349 1
+    cout << " " << neighbor_freq << " " << neighbor_rskin  << endl;
+d352 1
+a352 1
+      cout << endl << "Error: Invalid input parameter" << endl;
+d357 1
+a357 1
+    cout << endl << "Error: Neighbor style bin not implemented" << endl;
+d360 1
+a360 1
+    cout << endl << "Error: unrecognized neighbor style" << endl;
+d371 1
+a371 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d374 1
+a374 1
+  cout << " " << thermo_freq << endl;
+d377 1
+a377 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d390 1
+a390 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d393 1
+a393 1
+  cout << " " << dump_freq << endl;
+d396 1
+a396 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d409 1
+a409 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d412 1
+a412 1
+  cout << " " << dumpvel_freq << endl;
+d415 1
+a415 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d422 19
+d448 1
+a448 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d451 1
+a451 1
+  cout << " " << strtmp << endl;
+d458 1
+a458 1
+    cout << "Error: unrecognized units style" << endl;
+d471 1
+a471 1
+    cout << endl << "Error: Invalid input parameter" << endl;
+d474 1
+a474 1
+  cout << " " << strtmp;
+d486 1
+a486 1
+      cout << endl << "Error: Invalid input parameter" << endl;
+d489 1
+a489 1
+    cout << " " << temp_target << " " << temp_freq << " " << 
+d493 1
+a493 1
+      cout << endl << "Error: Invalid input parameter" << endl;
+d498 1
+a498 1
+      cout << endl << "Error: Invalid input parameter" << endl;
+d503 1
+a503 1
+      cout << endl << "Error: Invalid input parameter" << endl;
+d508 1
+a508 1
+      cout << endl << "Error: Invalid input parameter" << endl;
+d513 1
+a513 1
+    cout << "Error: Nose-Hoover not implemented yet";
+d515 1
+a515 1
+    cout << "Error: unrecognized temperature control style" << endl;
+@
+
+
+1.1
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d1 2
+a3 1
+#include <string>
+d7 2
+a8 1
+#include <vector>
+d13 1
+a13 1
+#include "integrator.h"
+d16 1
+a16 7
+Input::Input() {};
+
+void Input::ReadInput()
+{
+  string buf,buf2;
+  string filename;
+
+d39 7
+a45 2
+  temp_control_style = Integrator::temp_control_none;
+  
+d62 2
+a63 1
+	buf.replace(buf.size()-1,1,' ');
+d415 1
+a415 1
+    temp_control_style = Integrator::temp_control_none;
+d417 1
+a417 1
+    temp_control_style = Integrator::temp_control_rescale;
+d450 1
+a450 1
+    temp_control_style = Integrator::temp_control_nose_hoover;
+@
+

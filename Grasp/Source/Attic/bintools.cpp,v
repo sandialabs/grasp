@@ -1,0 +1,526 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2005.07.28.23.17.30;	author saubry;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.07.28.23.17.30;	author saubry;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.08.04.18.28.14;	author saubry;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	2005.11.01.21.17.20;	author saubry;	state Exp;
+branches;
+next	1.1.2.6;
+
+1.1.2.6
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file bintools.cpp was initially added on branch Monaco_Aidan.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Implemented tools for bins lists:
+  - intersection
+  - union
+  - copy constructor
+
+Created a new class:  BinTools.
+Tested these tools.
+
+Seems to work ok in serial and parallel.
+@
+text
+@a0 190
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+#include <cmath>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "particle.h"
+#include "vec3.h"
+#include "bintools.h"
+#include "binlist.h"
+#include "bin.h"
+#include "forcefield.h"
+#include "box.h"
+#include "box_inline.h"
+#include "fixed_object.h"
+#include "particlelist.h"
+#include "forcefieldlist.h"
+#include "machine.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+
+void BinTools::PrintIds(vector<Bin *> bin)
+{
+  vector<Bin *>::iterator pbin;
+  for (pbin = bin.begin();pbin!=bin.end();pbin++)
+      glog.logfile << (*pbin)->get_id() << "\t";
+  glog.logfile << endl;
+}
+
+void BinTools::PrintIds(vector<Bin *> bin, Comm *comm)
+{
+  vector<Bin *>::iterator pbin;
+  for (pbin = bin.begin();pbin!=bin.end();pbin++)
+    if (comm->get_Lnodefile()) 
+      comm->get_nodefile() << (*pbin)->get_id() << "\t";
+  
+  if (comm->get_Lnodefile()) 
+    comm->get_nodefile() << endl;
+}
+
+void BinTools::PrintRegion(vector<Bin *> bin)
+{
+  vector<Bin *>::iterator pbin;
+  double fcb[6];
+
+  for (pbin = bin.begin();pbin!=bin.end();pbin++)
+    {
+      (*pbin)->get_binregion(fcb);
+      glog.logfile << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+	   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+    }
+  glog.logfile << endl << endl;
+}
+
+void BinTools::PrintRegion(vector<Bin *> bin,Comm *comm)
+{
+  vector<Bin *>::iterator pbin;
+  double fcb[6];
+
+  for (pbin = bin.begin();pbin!=bin.end();pbin++)
+    {
+      (*pbin)->get_binregion(fcb);
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile()<< fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+			    << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+    }
+
+  if (comm->get_Lnodefile()) 
+    comm->get_nodefile() << endl << endl;
+}
+
+vector<Bin *> BinTools::Intersection(vector<Bin *> bins1, vector<Bin *> bins2)
+{
+  vector <Bin*> InterBins;
+  vector<Bin *>::iterator pbin1, pbin2;
+
+  for (pbin1 = bins1.begin();pbin1!=bins1.end();pbin1++)
+    for (pbin2 = bins2.begin();pbin2!=bins2.end();pbin2++)
+      {
+	if ((*pbin1)->get_id() == (*pbin2)->get_id() )
+	  InterBins.push_back(*pbin2);
+      }
+
+  return InterBins;
+}
+
+vector<Bin *> BinTools::Union(vector<Bin *> bins1, vector<Bin *> bins2)
+{
+  // assumed each binlists contains no duplicate
+  vector <Bin*> UnionBins;
+  vector<Bin *>::iterator pbin1, pbin2;
+
+  for (pbin1 = bins1.begin();pbin1!=bins1.end();pbin1++)
+      UnionBins.push_back(*pbin1);	 
+  
+  for (pbin2 = bins2.begin();pbin2!=bins2.end();pbin2++)
+    {
+      bool found = false;
+      for (pbin1 = bins1.begin();pbin1!=bins1.end();pbin1++)
+	{
+	  if ((*pbin1)->get_id() == (*pbin2)->get_id() )
+	  {
+	    found = true;
+	    break;
+	  }
+	}
+      if (found == false) 
+	{
+	  UnionBins.push_back(*pbin2);
+	}
+    }
+
+  // sort UnionBins - not working (saubry 07-28-05)
+  // SortBins(UnionBins,UnionBins.size());
+
+  return UnionBins;
+}
+
+
+void BinTools::SortBins(vector<Bin *> bins, int size)
+{
+  for (int i = 0;i<size-1;i++)
+    {
+      int k = i;
+      for (int j = i+1;j<size;j++)
+	{
+	  if( bins[j]->get_id() < bins[i]->get_id() )
+	      k = j;
+	  SwapBins(bins[i],bins[k]);
+	}
+      
+    }
+}
+
+void BinTools::SwapBins(Bin* bin1, Bin* bin2)
+{
+  Bin *aux;
+
+  *aux = *bin2;
+  *bin2= *bin1;
+  *bin1= *aux;
+}
+
+
+@
+
+
+1.1.2.2
+log
+@Implement Alex's algorithm to send specific octant bin lists.
+No communication implemented yet.
+@
+text
+@a117 24
+
+vector<Bin *> BinTools::Subtract(vector<Bin *> bins1, vector<Bin *> bins2)
+{
+  vector <Bin*> AuxBins,SubtractBins;
+  vector<Bin *>::iterator pbin1, pbin2;
+
+  for (pbin1 = bins1.begin();pbin1!=bins1.end();pbin1++)
+    {
+      bool found = false;
+      for (pbin2 = bins2.begin();pbin2!=bins2.end();pbin2++)
+	{
+	  if ((*pbin1)->get_id() == (*pbin2)->get_id() )
+	    {
+	      found = true;
+	      break;
+	    }
+	}
+      if (found == false) SubtractBins.push_back(*pbin1);      
+    } 
+ 
+  return SubtractBins;
+}
+
+
+d135 1
+a135 1
+  // assume each binlists contains no duplicate
+a153 20
+	UnionBins.push_back(*pbin2);
+    }
+
+  //SortBins(&UnionBins,UnionBins.size());
+
+  return UnionBins;
+}
+
+vector<Bin *> BinTools::UnionFast(vector<Bin *> bins1, vector<Bin *> bins2)
+{
+  // assume each binlists contains no duplicate
+  // assume each binlists is sorted
+  vector <Bin*> UnionBins;
+
+  UnionBins = bins1; 
+  
+  for (int pbin2 = 0; pbin2 < bins2.size(); pbin2++)
+    {
+      bool found = false;
+      for (int pbin1 = pbin2;pbin1 < bins1.size();pbin1++)
+d155 1
+a155 5
+	  if (bins1[pbin1]->get_id() == bins2[pbin2]->get_id() )
+	  {
+	    found = true;
+	    break;
+	  }
+a156 2
+      if (found == false) 
+	UnionBins.push_back(bins2[pbin2]);
+d159 2
+a160 1
+  SortBins(&UnionBins,UnionBins.size());
+d166 1
+a166 1
+void BinTools::SortBins(vector<Bin *> *bins, int size)
+a170 2
+
+      // Find the index of the minimum element
+a171 5
+	if( (*bins)[j]->get_id() < (*bins)[k]->get_id() )
+	  k = j;
+	  
+      // Swap (*bins) if i-th element not already smallest
+      if (k > i)
+d173 3
+a175 4
+	  Bin *aux;
+	  aux     = (*bins)[i];
+	  (*bins)[i] = (*bins)[k];
+	  (*bins)[k] = aux;
+d177 1
+d180 11
+@
+
+
+1.1.2.3
+log
+@Correct several bugs
+@
+text
+@d119 1
+a119 35
+void BinTools::PrintBins(vector<Bin *> bin)
+{
+  vector<Bin *>::iterator pbin;
+  double fcb[6];
+
+  for (pbin = bin.begin();pbin!=bin.end();pbin++)
+    {
+      int binx = (*pbin)->get_binx();
+      int biny = (*pbin)->get_biny();
+      int binz = (*pbin)->get_binz();
+      glog.logfile << binx << "\t" << biny << "\t" << binz << "\n";
+    }
+  glog.logfile << endl << endl;
+}
+
+void BinTools::PrintBins(vector<Bin *> bin,Comm *comm)
+{
+  vector<Bin *>::iterator pbin;
+  double fcb[6];
+
+  for (pbin = bin.begin();pbin!=bin.end();pbin++)
+    {
+      int binx = (*pbin)->get_binx();
+      int biny = (*pbin)->get_biny();
+      int binz = (*pbin)->get_binz();
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile()<< binx << "\t" << biny << "\t" << binz << "\n";
+    }
+
+  if (comm->get_Lnodefile()) 
+    comm->get_nodefile() << endl << endl;
+}
+
+
+vector<Bin *> BinTools::Subtract(vector <Bin *> bins1, vector <Bin *> bins2)
+@
+
+
+1.1.2.4
+log
+@Correct a few things.
+@
+text
+@d122 1
+d137 1
+a152 42
+void BinTools::PrintParticles(vector<Bin *> bin)
+{
+  vector<Bin *>::iterator pbin;
+  vector<Particle >::iterator ppart;
+  double x[3];
+
+  for (pbin = bin.begin();pbin!=bin.end();pbin++)
+    {
+      glog.logfile << (*pbin)->particles.size() << endl;
+      for (ppart = (*pbin)->particles.begin();ppart!=(*pbin)->particles.end();ppart++)
+	{
+	  (*ppart).get_x(x); 
+	  glog.logfile << x[0] << "\t" << x[1] << "\t" << x[2] << "\n";
+	}
+    }
+
+    glog.logfile << endl << endl;
+}
+
+
+void BinTools::PrintParticles(vector<Bin *> bin,Comm *comm)
+{
+  vector<Bin *>::iterator pbin;
+  vector<Particle >::iterator ppart;
+  double x[3];
+
+  for (pbin = bin.begin();pbin!=bin.end();pbin++)
+    {
+      //if (comm->get_Lnodefile()) comm->get_nodefile() << (*pbin)->particles.size() << endl;
+      for (ppart = (*pbin)->particles.begin();ppart!=(*pbin)->particles.end();ppart++)
+	{
+	  (*ppart).get_x(x);
+	  if (comm->get_Lnodefile()) 
+	    comm->get_nodefile()<< x[0] << "\t" << x[1] << "\t" << x[2] << "\n";
+	}
+    }
+
+  if (comm->get_Lnodefile()) 
+    comm->get_nodefile() << endl << endl;
+}
+
+
+@
+
+
+1.1.2.5
+log
+@Add a pointer to particle instead of an array of particle.
+
+Bug in particles coordinates.
+@
+text
+@d154 1
+a154 1
+  vector<Particle *>::iterator ppart;
+d162 1
+a162 1
+	  (*ppart)->get_x(x); 
+d174 1
+a174 1
+  vector<Particle *>::iterator ppart;
+d182 1
+a182 1
+	  (*ppart)->get_x(x);
+@
+
+
+1.1.2.6
+log
+@Bin Communication fixed
+@
+text
+@a61 1
+#include "particlelist_inline.h"
+d151 2
+a152 1
+void BinTools::PrintParticles(vector<Bin *> bin, ParticleList* p) {
+d154 1
+a154 3
+  vector<int>::iterator ppart;
+  Particle* pp;
+
+d157 8
+a164 6
+  for (pbin = bin.begin();pbin!=bin.end();pbin++) {
+    glog.logfile << (*pbin)->particles.size() << endl;
+    for (ppart = (*pbin)->particles.begin();ppart!=(*pbin)->particles.end();ppart++) {
+      pp = p->get_particle(*ppart);
+      pp->get_x(x); 
+      glog.logfile << x[0] << "\t" << x[1] << "\t" << x[2] << "\n";
+d166 2
+a167 3
+  }
+  
+  glog.logfile << endl << endl;
+d170 3
+a172 1
+void BinTools::PrintParticles(vector<Bin *> bin,ParticleList* p,Comm *comm) {
+d174 1
+a174 2
+  vector<int>::iterator ppart;
+  Particle* pp;
+d177 9
+a185 7
+  for (pbin = bin.begin();pbin!=bin.end();pbin++) {
+    //if (comm->get_Lnodefile()) comm->get_nodefile() << (*pbin)->particles.size() << endl;
+    for (ppart = (*pbin)->particles.begin();ppart!=(*pbin)->particles.end();ppart++) {
+      pp = p->get_particle(*ppart);
+      pp->get_x(x); 
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile()<< x[0] << "\t" << x[1] << "\t" << x[2] << "\n";
+d187 1
+a187 2
+  }
+  
+@
+
+

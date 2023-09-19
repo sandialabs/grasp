@@ -1,0 +1,1048 @@
+head	2.8;
+access;
+symbols
+	PreMonaco:2.8;
+locks; strict;
+comment	@# @;
+
+
+2.8
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.31.20.28.01;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.10.20.22.05.56;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.10.04.02.47.22;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.23.23.32.37;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.18.15.48.44;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.08.15.17.05.47;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.28.15.48.48;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.8
+log
+@Moved examples into subdirectories.
+@
+text
+@/tmp_mnt/Net/sana014/home/athomps/codes/Grasp/Testing/grasp.out
+Clock tick = 0.0000010000 Seconds
+
+
+
+Entering Input::ReadInput()
+forcefield external external.inLJ-93-Wall
+timestep 1.0000000000
+nsteps 10
+box dimensions	2.0000000000	0.0000000000	0.0000000000 \
+			0.0000000000	2.0000000000	0.0000000000 \
+			0.0000000000	0.0000000000	2.0000000000
+box origin	-1.0000000000	-1.0000000000	-1.0000000000
+initialize temperature 0.0000000000 256
+neighbor nsq 10 1.0000000000
+thermo 1
+dump atoms 10
+dump velocities 10
+density profile 2 10 1
+
+
+
+Entering Box::Setup()
+volume = 8.0000000000
+widths = 2.0000000000 2.0000000000 2.0000000000
+lva = 2.0000000000 0.0000000000 0.0000000000
+lvb = 0.0000000000 2.0000000000 0.0000000000
+lvc = 0.0000000000 0.0000000000 2.0000000000
+rvh = 0.5000000000 0.0000000000 0.0000000000
+rvk = 0.0000000000 0.5000000000 0.0000000000
+rvl = 0.0000000000 0.0000000000 0.5000000000
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 3
+A 10.0000000000
+B 2.0000000000
+C 3.0000000000
+
+
+
+Reading LJ-93-Wall from file external.in
+id_external 	type 	tag 	id iaxis        x            y            z     
+Yeehaw!		0	0	Yeehaw!	2        0.000       0.5000        0.000 
+Heehaw!		1	1	Heehaw!	3        0.000        0.000      -0.4500 
+id_external 	id 	t 	n       p            p            p            p     
+Yeehaw!		A	0	5    4.724e-06      0.01620    5.249e-07     0.005400       0.6000
+Yeehaw!		B	0	5    9.448e-06      0.03240    1.050e-06      0.01080       0.6000
+Heehaw!		A	1	6    6.144e-08     0.002400    6.827e-09    0.0008000        1.460   -0.0002571
+Heehaw!		B	1	6    1.229e-07     0.004800    1.365e-08     0.001600        1.460   -0.0005141
+Cutoffs for this forcefield
+rcutmax = 1.460
+rskin = 1.000
+rcutneighmax = 2.460
+****************************************************
+Warning: Particle id has no ff match
+****************************************************
+-1 C 0
+
+
+
+Entering ParticleList::ReadConfig()
+Total particles read = 4
+
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+LJ-93-Wall          =        -0.1250513554 kJ/mol
+Potential Energy    =        -0.1250513554 kJ/mol
+Kinetic Energy      =         0.0000000000 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513554 kJ/mol
+Temperature         =         0.0000000000 K
+Total Particles     =                    4
+--------------- Step         1 ---- CPU =     0.0002 (sec) ---------------
+LJ-93-Wall          =        -0.1250524319 kJ/mol
+Potential Energy    =        -0.1250524319 kJ/mol
+Kinetic Energy      =         0.0000010766 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513554 kJ/mol
+Temperature         =         0.0000215804 K
+Total Particles     =                    4
+--------------- Step         2 ---- CPU =     0.0004 (sec) ---------------
+LJ-93-Wall          =        -0.1250556618 kJ/mol
+Potential Energy    =        -0.1250556618 kJ/mol
+Kinetic Energy      =         0.0000043064 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513553 kJ/mol
+Temperature         =         0.0000863241 K
+Total Particles     =                    4
+--------------- Step         3 ---- CPU =     0.0005 (sec) ---------------
+LJ-93-Wall          =        -0.1250610452 kJ/mol
+Potential Energy    =        -0.1250610452 kJ/mol
+Kinetic Energy      =         0.0000096900 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513553 kJ/mol
+Temperature         =         0.0001942387 K
+Total Particles     =                    4
+--------------- Step         4 ---- CPU =     0.0007 (sec) ---------------
+LJ-93-Wall          =        -0.1250685830 kJ/mol
+Potential Energy    =        -0.1250685830 kJ/mol
+Kinetic Energy      =         0.0000172278 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513552 kJ/mol
+Temperature         =         0.0003453371 K
+Total Particles     =                    4
+--------------- Step         5 ---- CPU =     0.0008 (sec) ---------------
+LJ-93-Wall          =        -0.1250782759 kJ/mol
+Potential Energy    =        -0.1250782759 kJ/mol
+Kinetic Energy      =         0.0000269208 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513552 kJ/mol
+Temperature         =         0.0005396369 K
+Total Particles     =                    4
+--------------- Step         6 ---- CPU =     0.0010 (sec) ---------------
+LJ-93-Wall          =        -0.1250901252 kJ/mol
+Potential Energy    =        -0.1250901252 kJ/mol
+Kinetic Energy      =         0.0000387701 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513551 kJ/mol
+Temperature         =         0.0007771613 K
+Total Particles     =                    4
+--------------- Step         7 ---- CPU =     0.0012 (sec) ---------------
+LJ-93-Wall          =        -0.1251041322 kJ/mol
+Potential Energy    =        -0.1251041322 kJ/mol
+Kinetic Energy      =         0.0000527772 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513550 kJ/mol
+Temperature         =         0.0010579382 K
+Total Particles     =                    4
+--------------- Step         8 ---- CPU =     0.0013 (sec) ---------------
+LJ-93-Wall          =        -0.1251202985 kJ/mol
+Potential Energy    =        -0.1251202985 kJ/mol
+Kinetic Energy      =         0.0000689436 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513549 kJ/mol
+Temperature         =         0.0013820009 K
+Total Particles     =                    4
+--------------- Step         9 ---- CPU =     0.0015 (sec) ---------------
+LJ-93-Wall          =        -0.1251386261 kJ/mol
+Potential Energy    =        -0.1251386261 kJ/mol
+Kinetic Energy      =         0.0000872714 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513547 kJ/mol
+Temperature         =         0.0017493877 K
+Total Particles     =                    4
+--------------- Step        10 ---- CPU =     0.0017 (sec) ---------------
+LJ-93-Wall          =        -0.1251591172 kJ/mol
+Potential Energy    =        -0.1251591172 kJ/mol
+Kinetic Energy      =         0.0001077626 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =        -0.1250513546 kJ/mol
+Temperature         =         0.0021601420 K
+Total Particles     =                    4
+
+
+
+Loop time: 0.0016850000 on 1 processors for 4 particles
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.0001      8.37
+          Neigh Time    0.0002     10.09
+           Comm Time    0.0002     10.74
+       Exchange Time    0.0001      8.84
+        Revcomm Time    0.0001      6.82
+          Other Time    0.0009     55.13
+          Total Time    0.0017    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+                         Force  Neighbor
+LJ-93-Wall              0.0001    0.0001
+
+
+
+Finished 
+@
+
+
+2.7
+log
+@Added fix capability example (suffix _fix).
+@
+text
+@@
+
+
+2.6
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d116 1
+a116 1
+--------------- Step         6 ---- CPU =     0.0011 (sec) ---------------
+d132 1
+a132 1
+--------------- Step         8 ---- CPU =     0.0014 (sec) ---------------
+d159 1
+a159 1
+Loop time: 0.0016920000 on 1 processors for 4 particles
+d165 6
+a170 6
+          Force Time    0.0001      7.33
+          Neigh Time    0.0002     10.17
+           Comm Time    0.0002      9.28
+       Exchange Time    0.0001      8.81
+        Revcomm Time    0.0001      7.80
+          Other Time    0.0010     56.62
+@
+
+
+2.5
+log
+@Fixed up the output a little more.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@a6 1
+#  twobody 4-particle input data 
+a22 4
+
+
+
+
+d72 1
+d75 1
+d80 1
+d83 1
+d88 1
+d91 1
+d96 1
+d99 1
+d104 1
+d107 1
+d112 1
+d115 2
+a116 1
+--------------- Step         6 ---- CPU =     0.0009 (sec) ---------------
+d120 1
+d123 2
+a124 1
+--------------- Step         7 ---- CPU =     0.0032 (sec) ---------------
+d128 1
+d131 2
+a132 1
+--------------- Step         8 ---- CPU =     0.0034 (sec) ---------------
+d136 1
+d139 2
+a140 1
+--------------- Step         9 ---- CPU =     0.0035 (sec) ---------------
+d144 1
+d147 2
+a148 1
+--------------- Step        10 ---- CPU =     0.0036 (sec) ---------------
+d152 1
+d155 1
+d159 1
+a159 1
+Loop time: 0.0036480000 on 1 processors for 4 particles
+d165 7
+a171 7
+          Force Time    0.0001      3.97
+          Neigh Time    0.0002      5.13
+           Comm Time    0.0002      4.88
+       Exchange Time    0.0002      4.14
+        Revcomm Time    0.0001      3.43
+          Other Time    0.0029     78.45
+          Total Time    0.0036    100.00
+@
+
+
+2.4
+log
+@Fixed up the output log immensely. Fixed up the velocity-rescale
+thermostat, which changed the dft example a little.
+Other than that, all the other examples (NVE) stayed the same.
+@
+text
+@d74 5
+a78 5
+LJ-93-Wall          =   -0.1250513554 kJ/mol
+Potential Energy    =   -0.1250513554 kJ/mol
+Kinetic Energy      =    0.0000000000 kJ/mol
+Total Energy        =   -0.1250513554 kJ/mol
+Temperature         =    0.0000000000 K
+d80 5
+a84 5
+LJ-93-Wall          =   -0.1250524319 kJ/mol
+Potential Energy    =   -0.1250524319 kJ/mol
+Kinetic Energy      =    0.0000010766 kJ/mol
+Total Energy        =   -0.1250513554 kJ/mol
+Temperature         =    0.0000215804 K
+d86 5
+a90 5
+LJ-93-Wall          =   -0.1250556618 kJ/mol
+Potential Energy    =   -0.1250556618 kJ/mol
+Kinetic Energy      =    0.0000043064 kJ/mol
+Total Energy        =   -0.1250513553 kJ/mol
+Temperature         =    0.0000863241 K
+d92 11
+a102 11
+LJ-93-Wall          =   -0.1250610452 kJ/mol
+Potential Energy    =   -0.1250610452 kJ/mol
+Kinetic Energy      =    0.0000096900 kJ/mol
+Total Energy        =   -0.1250513553 kJ/mol
+Temperature         =    0.0001942387 K
+--------------- Step         4 ---- CPU =     0.0006 (sec) ---------------
+LJ-93-Wall          =   -0.1250685830 kJ/mol
+Potential Energy    =   -0.1250685830 kJ/mol
+Kinetic Energy      =    0.0000172278 kJ/mol
+Total Energy        =   -0.1250513552 kJ/mol
+Temperature         =    0.0003453371 K
+d104 5
+a108 5
+LJ-93-Wall          =   -0.1250782759 kJ/mol
+Potential Energy    =   -0.1250782759 kJ/mol
+Kinetic Energy      =    0.0000269208 kJ/mol
+Total Energy        =   -0.1250513552 kJ/mol
+Temperature         =    0.0005396369 K
+d110 29
+a138 29
+LJ-93-Wall          =   -0.1250901252 kJ/mol
+Potential Energy    =   -0.1250901252 kJ/mol
+Kinetic Energy      =    0.0000387701 kJ/mol
+Total Energy        =   -0.1250513551 kJ/mol
+Temperature         =    0.0007771613 K
+--------------- Step         7 ---- CPU =     0.0010 (sec) ---------------
+LJ-93-Wall          =   -0.1251041322 kJ/mol
+Potential Energy    =   -0.1251041322 kJ/mol
+Kinetic Energy      =    0.0000527772 kJ/mol
+Total Energy        =   -0.1250513550 kJ/mol
+Temperature         =    0.0010579382 K
+--------------- Step         8 ---- CPU =     0.0012 (sec) ---------------
+LJ-93-Wall          =   -0.1251202985 kJ/mol
+Potential Energy    =   -0.1251202985 kJ/mol
+Kinetic Energy      =    0.0000689436 kJ/mol
+Total Energy        =   -0.1250513549 kJ/mol
+Temperature         =    0.0013820009 K
+--------------- Step         9 ---- CPU =     0.0014 (sec) ---------------
+LJ-93-Wall          =   -0.1251386261 kJ/mol
+Potential Energy    =   -0.1251386261 kJ/mol
+Kinetic Energy      =    0.0000872714 kJ/mol
+Total Energy        =   -0.1250513547 kJ/mol
+Temperature         =    0.0017493877 K
+--------------- Step        10 ---- CPU =     0.0015 (sec) ---------------
+LJ-93-Wall          =   -0.1251591172 kJ/mol
+Potential Energy    =   -0.1251591172 kJ/mol
+Kinetic Energy      =    0.0001077626 kJ/mol
+Total Energy        =   -0.1250513546 kJ/mol
+Temperature         =    0.0021601420 K
+d142 1
+a142 1
+Loop time: 0.0015420000 on 1 processors for 4 particles
+d148 7
+a154 7
+          Force Time    0.0001      7.98
+          Neigh Time    0.0002     11.28
+           Comm Time    0.0002     10.05
+       Exchange Time    0.0001      9.60
+        Revcomm Time    0.0001      7.33
+          Other Time    0.0008     53.76
+          Total Time    0.0015    100.00
+@
+
+
+2.3
+log
+@Switched the neighbor style from nsq to binning in all examples.
+@
+text
+@d2 4
+d8 2
+a9 2
+forcefield external external.in
+timestep 1.000000000
+d11 6
+a16 6
+box dimensions	2.000000000	0.000000000	0.000000000 \
+			0.000000000	2.000000000	0.000000000 \
+			0.000000000	0.000000000	2.000000000
+box origin	-1.000000000	-1.000000000	-1.000000000
+initialize temperature 0.000000000 256
+neighbor nsq 10 1.000000000
+d25 3
+a27 1
+Entering Stepper::Setup()
+d29 11
+a39 8
+volume = 8.000000000
+widths = 2.000000000 2.000000000 2.000000000
+lva = 2.000000000 0.000000000 0.000000000
+lvb = 0.000000000 2.000000000 0.000000000
+lvc = 0.000000000 0.000000000 2.000000000
+rvh = 0.5000000000 0.000000000 0.000000000
+rvk = 0.000000000 0.5000000000 0.000000000
+rvl = 0.000000000 0.000000000 0.5000000000
+d42 3
+a44 17
+A 10.00000000
+B 2.000000000
+C 3.000000000
+Entering ForceFieldList::Setup()
+Yeehaw! self
+Yeehaw! A
+Yeehaw! B
+Heehaw! self
+Heehaw! A
+Heehaw! B
+i 	ii 	id_ext 		type 	tag 	id iaxis        x            y            z     
+0	0	Yeehaw!		0	0	Yeehaw!	2  0.000000000 0.5000000000  0.000000000 
+1	3	Heehaw!		1	1	Heehaw!	3  0.000000000  0.000000000-0.4500000000 
+
+ientry 	i 	ii 	id_external 	id 	t 	n       p            p            p            p     
+0	0	1	Yeehaw!		A	0	54.723920000e-060.016200000005.248800000e-070.005400000000 0.6000000000
+1	0	2	Yeehaw!		B	0	59.447840000e-060.032400000001.049760000e-060.01080000000 0.6000000000
+a45 2
+2	3	4	Heehaw!		A	1	66.144000000e-080.0024000000006.826666667e-090.0008000000000  1.460000000-0.0002570579484
+3	3	5	Heehaw!		B	1	61.228800000e-070.0048000000001.365333333e-080.001600000000  1.460000000-0.0005141158967
+d47 10
+d58 3
+a60 3
+rcutmax = 1.460000000
+rskin = 1.000000000
+rcutneighmax = 2.460000000
+d65 3
+a67 3
+Entering Comm::Setup()
+Exiting Comm::Setup()
+Entering ParticleList::Setup()
+d69 94
+a162 1
+Exchange Communicate time is 0.000000000
+a163 156
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1250513554
+Energy/particle [kJ/mol] = -0.03126283884
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+iaxis = 1
+nbins = 10
+xbin = 0.2000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1250524319
+Energy/particle [kJ/mol] = -0.03126310798
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1250556618
+Energy/particle [kJ/mol] = -0.03126391544
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1250610452
+Energy/particle [kJ/mol] = -0.03126526131
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1250685830
+Energy/particle [kJ/mol] = -0.03126714575
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1250782759
+Energy/particle [kJ/mol] = -0.03126956898
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1250901252
+Energy/particle [kJ/mol] = -0.03127253130
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1251041322
+Energy/particle [kJ/mol] = -0.03127603304
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1251202985
+Energy/particle [kJ/mol] = -0.03128007462
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1251386261
+Energy/particle [kJ/mol] = -0.03128465653
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+Resetting particles in box 
+Exchange Communicate time is 0.000000000
+
+Forcefield class is [enum Forcefield::ff_class_type] 2
+Neighboring time is 0.000000000
+Number of neighbors is 8
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+Energy [kJ/mol] = -0.1251591172
+Energy/particle [kJ/mol] = -0.03128977930
+Force time [s] = 0.000000000
+Force-pair time [s/pair] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+@
+
+
+2.2
+log
+@Revised the lj92 example because it no longer includes
+multiple periodic images of the external fields, just
+the one in the centrl periodic box.
+
+This could be changed again in the future if "ghost" fields
+were added (see not in force_external.cpp).
+@
+text
+@d1 1
+d23 8
+d54 4
+d70 1
+d87 1
+d101 1
+d115 1
+d124 1
+a124 1
+Elapse Time is 0.009999999776
+d129 1
+d138 1
+a138 1
+Elapse Time is 0.009999999776
+d143 1
+d152 1
+a152 1
+Elapse Time is 0.009999999776
+d157 1
+d166 1
+a166 1
+Elapse Time is 0.009999999776
+d171 1
+d180 1
+a180 1
+Elapse Time is 0.009999999776
+d185 1
+d194 1
+a194 1
+Elapse Time is 0.009999999776
+d199 1
+d208 1
+a208 1
+Elapse Time is 0.009999999776
+d214 1
+d223 1
+a223 1
+Elapse Time is 0.009999999776
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@a44 5
+Lattice vector a = 2.000000000 0.000000000 0.000000000 
+Lattice vector b = 0.000000000 2.000000000 0.000000000 
+Lattice vector c = 0.000000000 0.000000000 2.000000000 
+Unit cell origin = -0.9999999999 -0.9999999999 -0.9999999999 
+rcutsq_max = 2.131600000
+d53 1
+d55 1
+a55 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d59 3
+a61 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2831428434
+Energy/particle [kJ/mol] = -0.07078571084
+d63 2
+a64 1
+Force-pair time [s/pair] = nan
+d68 2
+d71 1
+a71 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d75 3
+a77 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2831567886
+Energy/particle [kJ/mol] = -0.07078919714
+d79 4
+a82 1
+Force-pair time [s/pair] = nan
+d84 1
+a84 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d88 3
+a90 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2831986346
+Energy/particle [kJ/mol] = -0.07079965865
+d92 4
+a95 1
+Force-pair time [s/pair] = nan
+d97 1
+a97 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d101 3
+a103 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2832684125
+Energy/particle [kJ/mol] = -0.07081710313
+d105 4
+a108 1
+Force-pair time [s/pair] = nan
+d110 1
+a110 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d114 3
+a116 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2833661742
+Energy/particle [kJ/mol] = -0.07084154355
+d118 4
+a121 1
+Force-pair time [s/pair] = nan
+d123 1
+a123 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d127 3
+a129 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2834919924
+Energy/particle [kJ/mol] = -0.07087299810
+d131 4
+a134 1
+Force-pair time [s/pair] = nan
+d136 1
+a136 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d140 3
+a142 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2836459609
+Energy/particle [kJ/mol] = -0.07091149023
+d144 4
+a147 1
+Force-pair time [s/pair] = nan
+d149 1
+a149 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d153 3
+a155 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2838281948
+Energy/particle [kJ/mol] = -0.07095704869
+d157 4
+a160 1
+Force-pair time [s/pair] = nan
+d162 1
+a162 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d166 3
+a168 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2840388303
+Energy/particle [kJ/mol] = -0.07100970758
+d170 4
+a173 1
+Force-pair time [s/pair] = nan
+d175 1
+a175 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d179 3
+a181 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2842780256
+Energy/particle [kJ/mol] = -0.07106950640
+d183 3
+a185 1
+Force-pair time [s/pair] = nan
+d187 1
+d189 1
+a189 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d193 3
+a195 3
+Forcefield classname [enum Forcefield::ff_class_types] is 2
+Energy [kJ/mol] = -0.2845459607
+Energy/particle [kJ/mol] = -0.07113649017
+d197 3
+a199 1
+Force-pair time [s/pair] = nan
+@
+
+
+2.0
+log
+@Switchtched the primary output file from out_*.dat to graps_*.dat.
+@
+text
+@d1 1
+a1 1
+Entered Input::ReadInput
+d4 1
+a4 1
+timestep 1.00000
+d6 6
+a11 6
+box dimensions	2.00000	0.00000	0.00000 \
+			0.00000	2.00000	0.00000 \
+			0.00000	0.00000	2.00000
+box origin	-1.00000	-1.00000	-1.00000
+initialize temperature 0.00000 256
+neighbor nsq 10 1.00000
+d20 3
+d24 4
+a27 5
+A 10.0000
+B 2.00000
+C 3.00000
+Resetting particles in box 
+Hello world
+d35 2
+a36 2
+0	0	Yeehaw!		0	0	Yeehaw!	2      0.00000     0.500000      0.00000 
+1	3	Heehaw!		1	1	Heehaw!	3      0.00000      0.00000    -0.450000 
+d39 2
+a40 2
+0	0	1	Yeehaw!		A	0	5  4.72392e-06    0.0162000  5.24880e-07   0.00540000     0.600000
+1	0	2	Yeehaw!		B	0	5  9.44784e-06    0.0324000  1.04976e-06    0.0108000     0.600000
+d42 2
+a43 2
+2	3	4	Heehaw!		A	1	6  6.14400e-08   0.00240000  6.82667e-09  0.000800000      1.46000 -0.000257058
+3	3	5	Heehaw!		B	1	6  1.22880e-07   0.00480000  1.36533e-08   0.00160000      1.46000 -0.000514116
+d45 6
+a50 5
+Lattice vector a = 2.00000 0.00000 0.00000 
+Lattice vector b = 0.00000 2.00000 0.00000 
+Lattice vector c = 0.00000 0.00000 2.00000 
+Unit cell origin = -1.00000 -1.00000 -1.00000 
+rcutsq_max = 2.13160
+d52 1
+d54 4
+a58 2
+ncosps = 5
+nneighbors = 18
+d60 1
+a60 1
+Neighboring time is 0.00000
+d63 8
+a70 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.296792
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a71 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d73 1
+a73 1
+Neighboring time is 0.00000
+d76 5
+a80 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.296806
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a81 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d83 1
+a83 1
+Neighboring time is 0.00000
+d86 5
+a90 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.296849
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a91 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d93 1
+a93 1
+Neighboring time is 0.00000
+d96 5
+a100 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.296919
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a101 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d103 1
+a103 1
+Neighboring time is 0.00000
+d106 5
+a110 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.297017
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a111 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d113 1
+a113 1
+Neighboring time is 0.00000
+d116 5
+a120 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.297143
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a121 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d123 1
+a123 1
+Neighboring time is 0.00000
+d126 5
+a130 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.297298
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a131 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d133 1
+a133 1
+Neighboring time is 0.00000
+d136 5
+a140 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.297481
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a141 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d143 1
+a143 1
+Neighboring time is 0.00000
+d146 5
+a150 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.297693
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a151 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d153 1
+a153 1
+Neighboring time is 0.00000
+d156 6
+a161 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.297933
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+a162 3
+Resetting particles in box 
+ncosps = 6
+nneighbors = 18
+d164 1
+a164 1
+Neighboring time is 0.00000
+d167 6
+a172 4
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [kJ/mol] = -0.298202
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+@
+

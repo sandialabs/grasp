@@ -1,0 +1,65 @@
+head	1.1;
+access;
+symbols
+	PreMonaco:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.02.09.08.04.53;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.02.09.08.04.53;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.02.10.01.57.05;	author athomps;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file reax_params_n4968.h was initially added on branch REAXFF.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added testrdx222 example to repository
+@
+text
+@a0 9
+class ReaxParams {
+ public:
+  enum {nneighmax=50, 
+	nat=11776, 
+	nattot=4968, 
+        nsort=20,
+	mbond=20, 
+  };
+};
+@
+
+
+1.1.2.2
+log
+@Added origin shift (6.25A) to input.
+Included reax_defs.h file for each example.
+@
+text
+@@
+
+

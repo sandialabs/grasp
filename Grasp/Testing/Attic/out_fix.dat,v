@@ -1,0 +1,40 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.10.31.20.28.01;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Moved examples into subdirectories.
+@
+text
+@Warning: your default path uses the automounter; this may
+cause some problems if you use other NFS-connected systems.
+@
+
+
+2.1
+log
+@Added fix capability example (suffix _fix).
+@
+text
+@@
+

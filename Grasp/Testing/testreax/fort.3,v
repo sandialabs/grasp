@@ -1,0 +1,126 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.1
+	REAX-2:1.1.2.1
+	P_MonacoTesting:1.1.0.6
+	InitialGraspTesting:1.1
+	P_Monaco:1.1.0.4
+	InitialGrasp:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@.\" @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2005.04.02.04.05.15;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.00.06.54;	author athomps;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.12.17.15.57.22;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@XTLGRF 200                                                                      
+DESCRP rdx                                                                      
+REMARK                                                                          
+RUTYPE NORMAL RUN                                                               
+CRYSTX     13.0        13.0        13.0       90.0       90.0       90.0
+FORMAT ATOM   (a6,1x,i5,1x,a5,1x,a3,1x,a1,1x,a5,3f10.5,1x,a5,i3,i2,1x,f8.5)     
+HETATM     1 C                  39.24155  41.46863  38.92277    C   1 1  0.07350
+HETATM     2 N                  39.27964  41.53820  40.44084    N   1 1 -0.38539
+HETATM     3 C                  40.64521  41.50620  41.10779    C   1 1  0.07318
+HETATM     4 N                  41.60957  40.51708  40.47343    N   1 1 -0.38518
+HETATM     5 C                  41.62276  40.43167  38.95576    C   1 1  0.07321
+HETATM     6 N                  40.23819  40.48531  38.33063    N   1 1 -0.38542
+HETATM     7 N                  38.24418  40.70058  41.12136    N   1 1  0.54178
+HETATM     8 N                  41.66978  39.19116  41.16286    N   1 1  0.54167
+HETATM     9 N                  39.66004  39.14553  38.00265    N   1 1  0.54179
+HETATM    10 O                  37.19348  40.43753  40.52718    O   1 1 -0.30064
+HETATM    11 O                  38.34902  40.47543  42.33157    O   1 1 -0.30033
+HETATM    12 O                  41.39553  39.12212  42.36547    O   1 1 -0.30011
+HETATM    13 O                  42.20174  38.23511  40.58913    O   1 1 -0.30014
+HETATM    14 O                  40.42044  38.20021  37.76930    O   1 1 -0.30038
+HETATM    15 O                  38.45458  39.05315  37.74847    O   1 1 -0.30066
+HETATM    16 H                  38.20622  41.30517  38.53402    H   1 1  0.22372
+HETATM    17 H                  39.53639  42.48383  38.55015    H   1 1  0.14762
+HETATM    18 H                  41.09313  42.52384  40.96591    H   1 1  0.14739
+HETATM    19 H                  40.57077  41.37146  42.21506    H   1 1  0.22349
+HETATM    20 H                  42.17264  41.33745  38.59030    H   1 1  0.14741
+HETATM    21 H                  42.21828  39.56012  38.58766    H   1 1  0.22351
+FORMAT CONECT (a6,12i6)                                                         
+END                                                                             
+                                                                                
+@
+
+
+1.3
+log
+@Trying again to clean up testreax
+@
+text
+@@
+
+
+1.2
+log
+@Trying to clean up testreax.
+@
+text
+@@
+
+
+1.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added testreax example to REAXFF branch
+@
+text
+@@
+

@@ -1,0 +1,35 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2005.10.28.17.57.55;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Added GaAs force field example in testr.
+@
+text
+@# This is the Zincblende phase for GaAs
+#
+# The volume is 45.16 A^3, which corresponds to
+# the minimum energy state for the force field
+# of Albe et al., Phys. Rev. B, v. 66, p.035205/1-14 (2002)
+#
+# 0.00000000  2.82645  2.82645 
+# 2.82645  0.00000000  2.82645 \
+# 2.82645  2.82645  0.00000000
+#
+  1 Ga  1   0.0  0.0         0.0         0.0
+  2 As  1   0.0  1.413225    1.413225    1.413225
+@

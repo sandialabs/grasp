@@ -1,0 +1,166 @@
+head	1.1;
+access;
+symbols
+	Monaco:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2005.05.03.22.14.52;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file nodefile_0000.out was initially added on branch Monaco.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 126
+/Users/athomps/netapp/codes/Grasp_Monaco/Grasp/Testing/testr/nodefile_0000.out
+Setting up Comm object 
+nprocs = 2
+node = 0
+Entering Input::ReadInput()
+11
+units metal
+26
+forcefield eam cu1.set EAM
+10
+timestep 1
+8
+nsteps 1
+50
+box dimensions 6.0 0.0 0.0 0.0 6.0 0.0 0.0 0.0 6.0
+25
+box origin -2.5 -2.5 -2.5
+30
+initialize temperature 0.0 256
+19
+neighbor bin 10 1.0
+10
+montecarlo
+12
+End of Input
+Exiting Input::ReadInput()
+Entering Box::Setup()
+Entering ParticleTypeList::Setup()
+13
+29 atom 63.55
+12
+End of Input
+Entering ForceFieldList::Setup()
+Entering Comm::Setup()
+Entering Comm::procs2box()
+Procgrid =  1 1 2
+Myloc =  0 0 0
+Procneigha =  0 0
+Procneighb =  0 0
+Procneighc =  1 1
+Suba =  0.0000000000 1.0000000000
+Subb =  0.0000000000 1.0000000000
+Subc =  0.0000000000 0.5000000000
+Slablo = 0.0000000000 0.0000000000
+Slabhi = 0.5000000000 -0.5000000000
+PBC Flags =  1 1 0 0
+
+Slablo = 0.5000000000 0.5000000000
+Slabhi = 1.0000000000 0.0000000000
+PBC Flags =  1 -1 0 0
+
+Slablo = 0.0000000000 0.0000000000
+Slabhi = 0.5000000000 -0.5000000000
+PBC Flags =  1 0 1 0
+
+Slablo = 0.5000000000 0.5000000000
+Slabhi = 1.0000000000 0.0000000000
+PBC Flags =  1 0 -1 0
+
+Slablo = 0.0000000000 0.0000000000
+Slabhi = 0.5000000000 0.0000000000
+PBC Flags =  1 0 0 1
+
+Slablo = 0.0000000000 0.0000000000
+Slabhi = 0.5000000000 0.0000000000
+PBC Flags =  0 0 0 0
+
+Slablo = 0.5000000000 0.0000000000
+Slabhi = 0.5000000000 -1.0000000000
+PBC Flags =  1 0 0 1
+
+Slablo = 0.0000000000 1.0000000000
+Slabhi = 0.0000000000 0.0000000000
+PBC Flags =  0 0 0 0
+
+Will not read an initial velocity file 
+Will not read an initial velocity file 
+Entering ParticleList::ReadConfig()
+Read 864 particles
+Read 0 particles
+Nparticles = 432
+Entering Output::Setup()
+EAM::Lneighbor 1
+Entered Neighbor::SetupNeighborListBin
+Entered Neighbor::SetupBins
+rcutneighmax = 3.0000000000
+rcutneighmaxall = 3.0000000000
+w[0] = 6.0000000000
+w[1] = 6.0000000000
+w[2] = 6.0000000000
+rcutneighred[0] = 0.5000000000
+rcutneighred[1] = 0.5000000000
+rcutneighred[2] = 0.5000000000
+mbinxlo = -4
+mbinxhi = 7
+mbinylo = -4
+mbinyhi = 7
+mbinzlo = -4
+mbinzhi = 5
+mbinx = 12
+mbiny = 12
+mbinz = 10
+nbinx = 4
+nbiny = 4
+nbinz = 4
+binsizex = 0.2500000000
+binsizey = 0.2500000000
+binsizez = 0.2500000000
+mbins = 1440
+nextx = 2
+nexty = 2
+nextz = 2
+nstencil = 62
+Entered Neighbor::BinParticles
+Exited Neighbor::BinParticles
+Bin nneighbors = 98928
+Bin npages = 13
+Bin nparticles = 432
+Bin nghost_particles = 4752
+Exited Neighbor::SetupNeighborListBin
+Entering FixList::Setup()
+Entering Monte Carlo::Setup()
+Entered BinList::Setup
+Entered BinList::BinParticles
+Entered Output::Finish
+Entered Comm::~Comm
+@
+

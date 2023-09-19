@@ -1,0 +1,684 @@
+head	4.3;
+access;
+symbols
+	ReverseComm_branch:4.3.0.10
+	ADTools_branch:4.3.0.8
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.1.2.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.10.0.2
+	cjkimme_version_merge_from_trunk_1:2.6.2.2
+	cjkimme_version:2.6.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches
+	3.1.2.1;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.03.20.00.15.37;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.6.2.1;
+next	2.5;
+
+2.5
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.11.03.23.52.04;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.10.04.02.46.52;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	;
+
+2.6.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.6.2.2;
+
+2.6.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.1.2.1
+date	2005.01.04.00.23.00;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
+using namespace std;
+
+//List of global constants
+class Constants {
+ public:
+  // enum class for units styles
+  enum UnitsStyle {units_real,units_reduced,units_metal,units_kcal} units_style;
+  //
+  // Values accessed by code
+  double tfactor,boltz,evfactor,esfactor,pfactor;
+  static const double pi;
+  Constants();
+  void ApplyUnitsStyle(const string&);
+ private:
+  // Values for converting from eV to kJ/mol
+  static const double ev2kjpermol_nist;
+  static const double ev2kjpermol_eam;
+  static const double cal2kj;
+  //
+  // Values to be used when working in real (SI) units.
+  static const double tfactor_real; 
+  static const double boltz_real;
+  static const double evfactor_real;
+  static const double esfactor_real;
+  static const double pfactor_real;
+  //
+  // Values to be used when working in reduced units.
+  static const double tfactor_reduced; 
+  static const double boltz_reduced;
+  static const double evfactor_reduced;
+  static const double esfactor_reduced;
+  static const double pfactor_reduced;
+  //
+  // Values to be used when working in metal units.
+  static const double tfactor_metal; 
+  static const double boltz_metal;
+  static const double evfactor_metal;
+  static const double esfactor_metal;
+  static const double pfactor_metal;
+  //
+  // Values to be used when working in kcal units.
+  static const double tfactor_kcal; 
+  static const double boltz_kcal;
+  static const double evfactor_kcal;
+  static const double esfactor_kcal;
+  static const double pfactor_kcal;
+};
+
+#endif
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d55 1
+a55 1
+  enum UnitsStyle {units_real,units_reduced,units_metal} units_style;
+d66 1
+d88 7
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d39 1
+a39 1
+  enum UnitsStyle {units_real,units_reduced,units_metal,units_kcal} units_style;
+a49 1
+  static const double cal2kj;
+a70 7
+  //
+  // Values to be used when working in kcal units.
+  static const double tfactor_kcal; 
+  static const double boltz_kcal;
+  static const double evfactor_kcal;
+  static const double esfactor_kcal;
+  static const double pfactor_kcal;
+@
+
+
+3.2
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d39 1
+a39 1
+  enum UnitsStyle {units_real,units_reduced,units_metal} units_style;
+d50 1
+d72 7
+@
+
+
+3.1.2.1
+log
+@Added energies to Reax code, added kcal unit style and added
+the example testrdx to Makefile.testing
+@
+text
+@d39 1
+a39 1
+  enum UnitsStyle {units_real,units_reduced,units_metal,units_kcal} units_style;
+a49 1
+  static const double cal2kj;
+a70 7
+  //
+  // Values to be used when working in kcal units.
+  static const double tfactor_kcal; 
+  static const double boltz_kcal;
+  static const double evfactor_kcal;
+  static const double esfactor_kcal;
+  static const double pfactor_kcal;
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d33 2
+@
+
+
+2.10
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.9
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.8
+log
+@Various
+@
+text
+@d39 1
+a39 1
+  double tfactor,boltz,evfactor,esfactor;
+d53 1
+d60 1
+d67 1
+@
+
+
+2.7
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.6
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d39 2
+a40 1
+  double tfactor,boltz,evfactor;
+d44 3
+d52 1
+d58 1
+d64 1
+a64 3
+  // Values for converting from eV to kJ/mol
+  static const double ev2kjpermol_nist;
+  static const double ev2kjpermol_eam;
+@
+
+
+2.6.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a31 2
+using namespace std;
+
+@
+
+
+2.6.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d41 1
+a41 2
+  double tfactor,boltz,evfactor,esfactor,pfactor;
+  static const double pi;
+a44 3
+  // Values for converting from eV to kJ/mol
+  static const double ev2kjpermol_nist;
+  static const double ev2kjpermol_eam;
+a49 2
+  static const double esfactor_real;
+  static const double pfactor_real;
+a54 2
+  static const double esfactor_reduced;
+  static const double pfactor_reduced;
+d60 3
+a62 2
+  static const double esfactor_metal;
+  static const double pfactor_metal;
+@
+
+
+2.5
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d36 1
+a36 1
+  enum UnitsStyle {units_real,units_reduced} units_style;
+d39 1
+a39 1
+  double tfactor,boltz;
+d47 1
+d52 9
+@
+
+
+2.4
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.3
+log
+@Pushed examples down into subdirectories.
+@
+text
+@d12 1
+@
+
+
+2.2
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d4 1
+d6 7
+a12 1
+//List of global constants
+a21 7
+ public:
+  // enum class for units styles
+  enum UnitsStyle {units_real,units_reduced} units_style;
+  //
+  // Values accessed by code
+  double tfactor,boltz;
+  void ApplyUnitsStyle(const string&);
+@
+
+
+2.1
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d9 2
+a10 4
+  // tfactor = 100.0 fs/100fs
+  // k_B = 8.314472e-3 kJ/mol/K
+  static const double tfactor_real = 100.0; 
+  static const double boltz_real = 8.314472e-3;
+d13 2
+a14 2
+  static const double tfactor_reduced = 1.0; 
+  static const double boltz_reduced = 1.0;
+d23 1
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d3 2
+d6 19
+a24 19
+//
+//C++ const keyword suppresses external linkage,
+//so this file must be included everywhere it is needed.
+//
+//Values are folded into code at compile time.
+//
+//
+//
+enum units_styles {real_units,reduced_units};
+//
+// Values to be used when working in real (SI) units.
+// tfactor = 100.0 fs/100fs
+// k_B = 8.314472e-3 kJ/mol/K
+const double tfactor_real = 100.0; 
+const double boltz_real = 8.314472e-3;
+//
+// Values to be used when working in reduced units.
+const double tfactor_reduced = 1.0; 
+const double boltz_reduced = 1.0;
+@
+
+
+1.2
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d12 1
+a12 1
+enum units_style {real_units,reduced_units};
+@
+
+
+1.1
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@d10 5
+a15 1
+const double tfactor = 100.0; 
+d17 6
+a22 1
+const double boltz = 8.314472e-3;
+@
+

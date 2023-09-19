@@ -1,0 +1,166 @@
+head	2.3;
+access;
+symbols
+	PreMonaco:2.3;
+locks; strict;
+comment	@# @;
+
+
+2.3
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.2;
+
+2.2
+date	2003.08.15.17.05.47;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.03.20.28.04;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.3
+log
+@Moved examples into subdirectories.
+@
+text
+@# Unit cell lattice vectors:
+# 2 0 0
+# 0 2 0
+# 0 0 2
+# 
+# Unit cell origin:
+# -1 -1 -1
+# 
+# Timestep 0
+# 
+# Number of particles 4
+# 
+# Particle positions 
+       1        A      11        0.1000000000        0.1000000000         0.000000000         0.000000000
+       2        B      12        0.2000000000        -1.000000000        -1.000000000         0.000000000
+       3        A      13        0.3000000000        -1.000000000         0.000000000        -1.000000000
+       4        B      14        0.4000000000         0.000000000        -1.000000000        -1.000000000
+# 
+# Timestep 10
+# 
+# Number of particles 4
+# 
+# Particle positions 
+       1        A      11        0.1000000000        0.1000000000     0.0001272021012    -2.917485572e-05
+       2        B      12        0.2000000000        -1.000000000        -1.000000000    -0.0002918604795
+       3        A      13        0.3000000000        -1.000000000     0.0001272021012       -0.9999868981
+       4        B      14        0.4000000000         0.000000000        -1.000000000       -0.9998689621
+# 
+@
+
+
+2.2
+log
+@Revised the lj92 example because it no longer includes
+multiple periodic images of the external fields, just
+the one in the centrl periodic box.
+
+This could be changed again in the future if "ghost" fields
+were added (see not in force_external.cpp).
+@
+text
+@@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@d15 3
+a17 3
+       2        B      12        0.2000000000         1.000000000         1.000000000         0.000000000
+       3        A      13        0.3000000000         1.000000000         0.000000000         1.000000000
+       4        B      14        0.4000000000         0.000000000         1.000000000         1.000000000
+d25 3
+a27 3
+       2        B      12        0.2000000000         1.000000000        0.9987261060    -0.0002918604795
+       3        A      13        0.3000000000         1.000000000     0.0001272021012        0.9999997285
+       4        B      14        0.4000000000         0.000000000        0.9987261060        0.9999972854
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d15 3
+a17 3
+       2        B      12        0.2000000000        -1.000000000        -1.000000000         0.000000000
+       3        A      13        0.3000000000        -1.000000000         0.000000000        -1.000000000
+       4        B      14        0.4000000000         0.000000000        -1.000000000        -1.000000000
+d25 3
+a27 3
+       2        B      12        0.2000000000        -1.000000000        0.9987261060    -0.0002918604795
+       3        A      13        0.3000000000        -1.000000000     0.0001272021012       -0.9999871695
+       4        B      14        0.4000000000         0.000000000        0.9987261060       -0.9998716770
+@
+
+
+1.1
+log
+@Implemented a new forcefield type: Class Force_External
+This is designed primarily for external force fields with
+simple geometric forms, such as the Lennard-Jones 9-3 wall,
+although it might also be used for a set of fixed atoms.
+
+Currently, the only types implemented are lj93_cut and lj93_cut_shift.
+These work for both arbitrary cut-off neighbor list and also
+within the minimum image convention (although this is not used
+by external force field with only truncated interactions.
+
+Periodic boundary conditions are applied in all directions.
+
+Initialization and output of velocities have also been added.
+@
+text
+@a0 2
+# Timestep 0
+# 
+d2 3
+a4 3
+# 2.000000000 0.000000000 0.000000000
+# 0.000000000 2.000000000 0.000000000
+# 0.000000000 0.000000000 2.000000000
+d7 3
+a9 1
+# -1.000000000 -1.000000000 -1.000000000
+a19 8
+# 
+# Unit cell lattice vectors:
+# 2.000000000 0.000000000 0.000000000
+# 0.000000000 2.000000000 0.000000000
+# 0.000000000 0.000000000 2.000000000
+# 
+# Unit cell origin:
+# -1.000000000 -1.000000000 -1.000000000
+@
+

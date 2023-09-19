@@ -1,0 +1,48 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.10.31.20.28.01;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Moved examples into subdirectories.
+@
+text
+@#
+#	Truncated Lennard-Jones interactions
+#
+Hot   Hot   lj_cut_shift  1.0 1.4142136  1.5874011
+A       A   lj_cut_shift  1.0 1.4142136  1.5874011
+B       B   lj_cut_shift  1.0 1.4142136  1.5874011
+C       C   lj_cut_shift  1.0 1.4142136  1.5874011
+D       D   lj_cut_shift  1.0 1.4142136  1.5874011
+E       E   lj_cut_shift  1.0 1.4142136  1.5874011
+Cold Cold   lj_cut_shift  1.0 1.4142136  1.5874011
+@
+
+
+2.1
+log
+@Added fix capability example (suffix _fix).
+@
+text
+@@
+

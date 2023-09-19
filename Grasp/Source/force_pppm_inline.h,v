@@ -1,0 +1,86 @@
+head	4.1;
+access;
+symbols
+	ReverseComm_branch:4.1.0.6
+	ADTools_branch:4.1.0.4
+	PPPM_Crozier2:4.1.0.2
+	PPPM_Crozier:4.1
+	Root-of-PPPM_Crozier:4.1;
+locks; strict;
+comment	@ * @;
+
+
+4.1
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.1
+log
+@Added prototype for Force_PPPM class
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCE_PPPM_INLINE_H
+#define FORCE_PPPM_INLINE_H
+
+#include <iostream>
+#include <math.h>
+
+// INLINE(inline) FUNCTION DEFINITIONS
+//
+// Inlining inner loop operations provides significant performance gain
+//
+
+
+#endif
+@

@@ -1,0 +1,875 @@
+head	4.7;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	cjkimme_version_merge_from_trunk_1:1.1.2.2
+	cjkimme_version:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.7
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.4.4.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.09.09.21.01.42;	author cjkimme;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+4.4.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.7
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "interfacial_minimizer.h"
+#include "constants.h"
+#include "particletypelist.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+#include "vec3.h"
+extern Log glog;
+extern Constants constants;
+
+Interfacial_Minimizer::Interfacial_Minimizer():
+  r_old(3)
+{
+}
+
+void Interfacial_Minimizer::Setup(const string input_string,
+                Comm* commp) {
+
+  int node;
+  string str_tmp;
+
+  comm = commp;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering Interfacial_Minimizer::Setup()" << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Interfacial_Minimizer::Setup()" << endl;
+  }
+
+  glog.get_logfile() << "interfacial minimizer";
+
+  std::stringstream buf_in(input_string);
+  minimize_style = minimize_interfacial;
+  buf_in >> strtypeA >> strtypeB;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Interfacial_Minimizer::Setup:\n"
+	       "Read error in input string"+str_tmp);
+  }
+  glog.get_logfile() << " " << strtypeA << " " << strtypeB;
+  buf_in >> max_cg_its;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Interfacial_Minimizer::input_minimize:\n"
+  	       "Cannot read in max_cg_its");
+  }
+  glog.get_logfile() << " " << max_cg_its;
+  buf_in >> max_ls_its;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Interfacial_Minimizer::input_minimize:\n"
+  	       "Cannot read in maximum number of line search iterations");
+  }
+  glog.get_logfile() << " " << max_ls_its;
+  buf_in >> line_search_tol;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in line search tolerance");
+  }
+  glog.get_logfile() << " " << line_search_tol;
+  buf_in >> max_cg_force;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Interfacial_Minimizer::input_minimize:\n"
+  	       "Cannot read max_cg_force");
+  }
+  glog.get_logfile() << " " << max_cg_force;
+
+}
+
+void Interfacial_Minimizer::Run(const int nsteps, const double timestep,
+           Box* bp, ParticleTypeList* tp,
+           ParticleList* pp, ForceFieldList* ffp,
+           Output* outpp, FixList* fix_listp, Comm* commp) 
+{
+  double t0,t1;
+
+  // initialize class members
+  box = bp;
+  t = tp;
+  p = pp;
+  ff = ffp;
+  comm = commp;
+
+  t0 = MPI_Wtime();
+  if (!(t->find_id(strtypeA,typeA)))
+      glog.abort("Interfacial_Minimizer::Run"
+		 "Cannot find type "+strtypeA);
+  if (!(t->find_id(strtypeB,typeB)))
+    glog.abort("Interfacial_Minimizer::Run"
+	       "Cannot find type "+strtypeB);
+
+  //lastScalar = 0.;
+  //lastDirection[0] = lastDirection[1] = lastDirection[2] = 0.;
+  //lastPoint[0] = lastPoint[1] = lastPoint[2] = 0.;
+  double energy;
+  valarray<double> r(3), f(3);
+  r *= 0.;
+  r_old = r;
+ 
+  glog.get_logfile() << "Minimizing 3 degrees of freedom\n";
+
+  if (linesearch_x0)
+    delete linesearch_x0;
+  linesearch_x0 = new valarray<double>(3);
+  if (linesearch_x)
+    delete linesearch_x;
+  linesearch_x = new valarray<double>(3);
+  if (linesearch_dir)
+    delete linesearch_dir;
+  linesearch_dir = new valarray<double>(3);
+
+  // returns rigid-body separation R between typeA and typeB
+  EvaluateFunctionAndGradient(&energy, r, f); 
+  int nits = NRMinimize(&energy, r, f); 
+
+  glog.get_logfile() << "First time took " << nits << "\n";
+
+  // restart it to verify minimum
+  nits = NRMinimize(&energy, r, f);
+
+  glog.get_logfile() << "Second time took " << nits << "\n";
+    
+  t1 = MPI_Wtime();
+  glog.timetotal = t1-t0;
+  int istep = 1;
+  outpp->WriteOutput(istep,p,box,t,comm,ff,fix_listp,0,false,false,NULL);
+
+}
+
+/* Evaluate interfacial energy at the point lastPoint + x * lastDirection  */
+void Interfacial_Minimizer::EvaluateFunctionAndGradient(double* energy, valarray<double>&x, valarray<double>& force)
+{
+
+  ForceField* const* forcefields;
+  int node;
+  int nforcefields;
+  vector<double> tmp;
+  vector<double> e_ff;
+  int npieces;
+
+  node = comm->get_node();
+
+  // shift typeB by R
+  valarray<double> dr(3);
+  dr = x - r_old;
+  p->TranslateByType(typeB,dr);
+  r_old = x;
+  ff->Neighboring(p, box, comm, false);
+  ff->ComputeForce(true,ForceFieldList::none,false,box,t,p,comm);
+  *energy = 0.;
+  forcefields = ff->get_forcefields();
+  nforcefields = ff->get_nforcefields();
+  for (int iff = 0;iff<nforcefields;iff++) {
+    ForceField* ffiff = forcefields[iff];
+    npieces = ffiff->get_npieces();
+    tmp = ffiff->get_energy();
+    e_ff.resize(npieces);
+    MPI_Allreduce(&tmp[0],&e_ff[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    if (node == 0) 
+      for (int ipiece=0;ipiece<npieces;ipiece++) 
+	 *energy += e_ff[ipiece];
+  }
+  MPI_Bcast(energy,1,MPI_DOUBLE,0,comm->get_world());
+  p->SumForceByType(typeB, force, comm);
+  double res = 0.;
+  for (int i = 0; i < force.size(); i++)
+    res += force[i]*force[i];
+  force *= -1.; // convert force to gradient
+  if (node == 0)
+    glog.get_logfile() << " Energy = " << *energy << " Res = " << res << "\n";
+}
+@
+
+
+4.6
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@d191 1
+a191 1
+  outpp->WriteOutput(istep,p,box,t,comm,ff,fix_listp,0,false,false);
+@
+
+
+4.5
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d75 1
+a75 1
+                Comm* comm) {
+d80 2
+d143 1
+a143 1
+  b = bp;
+d191 1
+a191 1
+  outpp->WriteOutput(istep,p,b,t,comm,ff,fix_listp,0,false,false);
+d213 2
+a214 2
+  ff->Neighboring(p, b, comm, false);
+  ff->ComputeForce(true,ForceFieldList::none,false,b,t,p,comm);
+@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@d212 1
+a212 1
+  ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+@
+
+
+4.4.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d212 1
+a212 1
+  ff->ComputeForce(true,ForceFieldList::none,false,b,t,p,comm);
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d83 2
+a84 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Interfacial_Minimizer::Setup()" << endl;
+d91 1
+a91 1
+  glog.logfile << "interfacial minimizer";
+d97 1
+a97 1
+    glog.logfile << endl;
+d101 1
+a101 1
+  glog.logfile << " " << strtypeA << " " << strtypeB;
+d104 1
+a104 1
+    glog.logfile << endl;
+d108 1
+a108 1
+  glog.logfile << " " << max_cg_its;
+d111 1
+a111 1
+    glog.logfile << endl;
+d115 1
+a115 1
+  glog.logfile << " " << max_ls_its;
+d118 1
+a118 1
+    glog.logfile << endl;
+d122 1
+a122 1
+  glog.logfile << " " << line_search_tol;
+d125 1
+a125 1
+    glog.logfile << endl;
+d129 1
+a129 1
+  glog.logfile << " " << max_cg_force;
+d163 1
+a163 1
+  glog.logfile << "Minimizing 3 degrees of freedom\n";
+d179 1
+a179 1
+  glog.logfile << "First time took " << nits << "\n";
+d184 1
+a184 1
+  glog.logfile << "Second time took " << nits << "\n";
+d234 1
+a234 1
+    glog.logfile << " Energy = " << *energy << " Res = " << res << "\n";
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: 8 January 2004
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 1
+a13 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d15 1
+a15 1
+//    Primary Author: Aidan P. Thompson
+d19 4
+a22 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a25 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: 8 January 2004
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d69 4
+a72 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Interfacial_Minimizer::Setup()" << endl;
+#endif
+@
+
+
+1.1
+log
+@file interfacial_minimizer.cpp was initially added on branch cjkimme_version.
+@
+text
+@d1 217
+@
+
+
+1.1.2.1
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a0 221
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: 8 January 2004
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "interfacial_minimizer.h"
+#include "constants.h"
+#include "particletypelist.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+#include "vec3.h"
+extern Log glog;
+extern Constants constants;
+
+#define MAX_ITERATIONS 10
+#define LINESEARCHMAX 100
+#define XIDAMP 10000.
+
+Interfacial_Minimizer::Interfacial_Minimizer():
+  r_old(3)
+{
+}
+
+void Interfacial_Minimizer::Setup(const string input_string,
+                Comm* comm) {
+
+  int node;
+  string str_tmp;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Interfacial_Minimizer::Setup()" << endl;
+  }
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Interfacial_Minimizer::Setup()" << endl;
+#endif
+
+  glog.logfile << "interfacial minimizer";
+
+  stringstream buf_in(input_string);
+  minimize_style = minimize_interfacial;
+  buf_in >> strtypeA >> strtypeB;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Interfacial_Minimizer::Setup:\n"
+	       "Read error in input string"+str_tmp);
+  }
+  glog.logfile << " " << strtypeA << " " << strtypeB;
+  buf_in >> max_cg_its;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Interfacial_Minimizer::input_minimize:\n"
+  	       "Cannot read in max_cg_its");
+  }
+  glog.logfile << " " << max_cg_its;
+  buf_in >> tolerance;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Interfacial_Minimizer::input_minimize:\n"
+  	       "Cannot read in tolerance");
+  }
+  glog.logfile << " " << tolerance;
+  buf_in >> line_search_tol;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in line search tolerance");
+  }
+  glog.logfile << " " << line_search_tol;
+  buf_in >> max_cg_force;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Interfacial_Minimizer::input_minimize:\n"
+  	       "Cannot read max_cg_force");
+  }
+  glog.logfile << " " << max_cg_force;
+
+}
+
+void Interfacial_Minimizer::Run(const int nsteps, const double timestep,
+           Box* bp, ParticleTypeList* tp,
+           ParticleList* pp, ForceFieldList* ffp,
+           Output* outpp, FixList* fix_listp, Comm* commp) 
+{
+  double t0,t1;
+
+  // initialize class members
+  b = bp;
+  t = tp;
+  p = pp;
+  ff = ffp;
+  comm = commp;
+
+  t0 = MPI_Wtime();
+  if (!(t->find_id(strtypeA,typeA)))
+      glog.abort("Interfacial_Minimizer::Run"
+		 "Cannot find type "+strtypeA);
+  if (!(t->find_id(strtypeB,typeB)))
+    glog.abort("Interfacial_Minimizer::Run"
+	       "Cannot find type "+strtypeB);
+
+  //lastScalar = 0.;
+  //lastDirection[0] = lastDirection[1] = lastDirection[2] = 0.;
+  //lastPoint[0] = lastPoint[1] = lastPoint[2] = 0.;
+  double energy;
+  valarray<double> r(3), f(3);
+  r *= 0.;
+  r_old = r;
+ 
+  glog.logfile << "Minimizing 3 degrees of freedom\n";
+
+  if (linesearch_x0)
+    delete linesearch_x0;
+  linesearch_x0 = new valarray<double>(3);
+  if (linesearch_x)
+    delete linesearch_x;
+  linesearch_x = new valarray<double>(3);
+  if (linesearch_dir)
+    delete linesearch_dir;
+  linesearch_dir = new valarray<double>(3);
+
+  // returns rigid-body separation R between typeA and typeB
+  EvaluateFunctionAndGradient(&energy, r, f); 
+  int nits = NRMinimize(&energy, r, f); 
+
+  glog.logfile << "First time took " << nits << "\n";
+
+  // restart it to verify minimum
+  nits = NRMinimize(&energy, r, f);
+
+  glog.logfile << "Second time took " << nits << "\n";
+    
+  t1 = MPI_Wtime();
+  glog.timetotal = t1-t0;
+  int istep = 1;
+  outpp->WriteOutput(istep,p,b,t,comm,ff,fix_listp,0);
+
+}
+
+/* Evaluate interfacial energy at the point lastPoint + x * lastDirection  */
+void Interfacial_Minimizer::EvaluateFunctionAndGradient(double* energy, valarray<double>&x, valarray<double>& force)
+{
+
+  ForceField* const* forcefields;
+  int node;
+  int nforcefields;
+  vector<double> tmp;
+  vector<double> e_ff;
+  int npieces;
+
+  node = comm->get_node();
+
+  // shift typeB by R
+  valarray<double> dr(3);
+  dr = x - r_old;
+  p->TranslateByType(typeB,dr);
+  r_old = x;
+  ff->Neighboring(p, b, comm);
+  ff->ComputeForce(b,t,p,comm);
+  *energy = 0.;
+  forcefields = ff->get_forcefields();
+  nforcefields = ff->get_nforcefields();
+  for (int iff = 0;iff<nforcefields;iff++) {
+    ForceField* ffiff = forcefields[iff];
+    npieces = ffiff->get_npieces();
+    tmp = ffiff->get_energy();
+    e_ff.resize(npieces);
+    MPI_Allreduce(&tmp[0],&e_ff[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    if (node == 0) 
+      for (int ipiece=0;ipiece<npieces;ipiece++) 
+	 *energy += e_ff[ipiece];
+  }
+  MPI_Bcast(energy,1,MPI_DOUBLE,0,comm->get_world());
+  p->SumForceByType(typeB, force, comm);
+  double res = 0.;
+  for (int i = 0; i < force.size(); i++)
+    res += force[i]*force[i];
+  force *= -1.; // convert force to gradient
+  if (node == 0)
+    glog.logfile << " Energy = " << *energy << " Res = " << res << "\n";
+}
+@
+
+
+1.1.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d52 4
+d79 1
+a79 1
+  std::stringstream buf_in(input_string);
+d175 1
+a175 1
+  outpp->WriteOutput(istep,p,b,t,comm,ff,fix_listp,0,false,false);
+d197 2
+a198 2
+  ff->Neighboring(p, b, comm, false);
+  ff->ComputeForce(true,false,b,t,p,comm);
+@
+
+
+1.1.2.3
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d91 1
+a91 1
+  buf_in >> max_ls_its;
+d95 1
+a95 1
+  	       "Cannot read in maximum number of line search iterations");
+d97 1
+a97 1
+  glog.logfile << " " << max_ls_its;
+d194 1
+a194 1
+  ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+@
+
+

@@ -1,0 +1,4656 @@
+head	4.21;
+access;
+symbols
+	ReverseComm_branch:4.8.0.2
+	ADTools_branch:4.7.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.3
+	REAX-2:3.2.2.1
+	P_MonacoSource:3.3.0.4
+	GraspSource:3.3
+	P_Monaco:3.3.0.2
+	InitialGrasp:3.3
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.21.0.2
+	cjkimme_version_merge_from_trunk_1:2.11.2.2
+	cjkimme_version:2.11.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.21
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.20;
+
+4.20
+date	2007.11.15.21.31.40;	author athomps;	state Exp;
+branches;
+next	4.19;
+
+4.19
+date	2007.10.15.20.52.10;	author athomps;	state Exp;
+branches;
+next	4.18;
+
+4.18
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.17;
+
+4.17
+date	2007.05.31.21.20.58;	author athomps;	state Exp;
+branches;
+next	4.16;
+
+4.16
+date	2007.05.24.05.10.39;	author athomps;	state Exp;
+branches;
+next	4.15;
+
+4.15
+date	2007.05.15.19.30.48;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.04.02.19.30.02;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2007.03.31.01.06.13;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.02.28.04.01.06;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.08.26.02.04.29;	author athomps;	state Exp;
+branches
+	4.8.2.1;
+next	4.7;
+
+4.7
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2005.10.28.19.10.56;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.10.11.01.40.34;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.09.02.23.03.05;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.01.11.16.06.05;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.07.21.18.33.20;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.07.21.18.07.12;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.07.21.17.46.50;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.07.13.21.21.16;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.05.20.22.11.34;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.03.20.00.15.39;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.11.2.1;
+next	2.10;
+
+2.10
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.31.20.20.44;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.23.23.33.34;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.23.16.01.59;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+2.11.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.11.2.2;
+
+2.11.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	2.11.2.3;
+
+2.11.2.3
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2005.01.11.22.49.41;	author athomps;	state Exp;
+branches;
+next	;
+
+4.8.2.1
+date	2006.09.07.19.49.27;	author athomps;	state Exp;
+branches;
+next	4.8.2.2;
+
+4.8.2.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.21
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "constants.h"
+#include "stepper.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefieldlist.h"
+#include "box.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+#include "fixlist.h"
+extern Log glog;
+extern Constants constants;
+
+Stepper::Stepper() {
+  ensemble_style = ensemble_nve;
+  t_nh_drag = 0.0;
+  p_nh_drag = 0.0;
+  temp_ramp = 0.0;
+
+  Lwriteextvar = false;
+  Lreadextvar = false;
+  for (int i = 0; i < numextvar; i++) extvarbuf[i] = 0.0;
+}
+
+void Stepper::Setup(const ParticleList* p, const Box* b, 
+		    const double& timestep, Comm* comm) {
+
+  int node;
+
+  node = comm->get_node();
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Stepper::Setup()" << endl;
+  }
+
+  switch(ensemble_style) {
+  case ensemble_nve:
+    break;
+  case ensemble_nvt_nh:
+    temp_ramp *= 0.5;
+    t_nh_tau = t_nh_tau/constants.tfactor;
+    t_nh_drag = 1.0-t_nh_drag*constants.tfactor*timestep;
+    t_nh_eta = 0.0;
+    t_nh_etadot = 0.0;
+    break;
+  case ensemble_nph_nh:
+    if (!(b->get_perflagall())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_drag = 1.0-p_nh_drag*constants.tfactor*timestep;
+    p_nh_omega = 0.0;
+    p_nh_omegadot = 0.0;
+    p_target = p_target*constants.pfactor;
+    vol0 =  b->get_volume();
+    nkt = p->get_nparticles_tot()*constants.boltz*p->get_temperature();
+    break;
+  case ensemble_npt_nh:
+    temp_ramp *= 0.5;
+    if (!(b->get_perflagall())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    t_nh_tau = t_nh_tau/constants.tfactor;
+    t_nh_drag = 1.0-t_nh_drag*constants.tfactor*timestep;
+    t_nh_eta = 0.0;
+    t_nh_etadot = 0.0;
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_drag = 1.0-p_nh_drag*constants.tfactor*timestep;
+    p_nh_omega = 0.0;
+    p_nh_omegadot = 0.0;
+    p_target = p_target*constants.pfactor;
+    vol0 =  b->get_volume();
+    nkt = p->get_nparticles_tot()*constants.boltz*p->get_temperature();
+    break;
+  case ensemble_nph_nh_full:
+    if (!(b->get_perflagall())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_drag = 1.0-p_nh_drag*constants.tfactor*timestep;
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	p_nh_omega_full[i][j] = 0.0;
+	p_nh_omegadot_full[i][j] = 0.0;
+      }
+    }
+    p_target = p_target*constants.pfactor;
+    vol0 =  b->get_volume();
+    nkt = p->get_nparticles_tot()*constants.boltz*p->get_temperature();
+    break;
+  case ensemble_npt_nh_full:
+    temp_ramp *= 0.5;
+    if (!(b->get_perflagall())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    t_nh_tau = t_nh_tau/constants.tfactor;
+    t_nh_drag = 1.0-t_nh_drag*constants.tfactor*timestep;
+    t_nh_eta = 0.0;
+    t_nh_etadot = 0.0;
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_drag = 1.0-p_nh_drag*constants.tfactor*timestep;
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	p_nh_omega_full[i][j] = 0.0;
+	p_nh_omegadot_full[i][j] = 0.0;
+      }
+    }
+    p_target = p_target*constants.pfactor;
+    vol0 =  b->get_volume();
+    nkt = p->get_nparticles_tot()*constants.boltz*p->get_temperature();
+    break;
+  case ensemble_nph_nh_partial:
+    if (!(b->get_perflagall())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_drag = 1.0-p_nh_drag*constants.tfactor*timestep;
+    p_nh_dim = 0;
+    if (Lpflag_a) {
+      p_nh_omega_a = 0.0;
+      p_nh_omegadot_a = 0.0;
+      p_target_a = p_target_a*constants.pfactor;
+      p_nh_dim++;
+      p_target = p_target_a; 
+    }
+    if (Lpflag_b) {
+      p_nh_omega_b = 0.0;
+      p_nh_omegadot_b = 0.0;
+      p_target_b = p_target_b*constants.pfactor;
+      p_nh_dim++;
+      if (Lpflag_a && p_target_a != p_target_b) {
+	glog.error("Stepper::Setup:\n"
+		   "pressure control nose-hoover-partial requires "
+		   "isotropic pressure");
+      } else {
+	p_target = p_target_b; 
+      }
+    }
+    if (Lpflag_c) {
+      p_nh_omega_c = 0.0;
+      p_nh_omegadot_c = 0.0;
+
+      p_target_c = p_target_c*constants.pfactor;
+      p_nh_dim++;
+      if ((Lpflag_a && p_target_a != p_target_c) || 
+	  (Lpflag_b && p_target_b != p_target_c)) {
+	glog.error("Stepper::Setup:\n"
+		   "pressure control nose-hoover-partial requires "
+		   "isotropic pressure");
+      } else {
+	p_target = p_target_c; 
+      }
+    }
+    vol0 =  b->get_volume();
+    nkt = p->get_nparticles_tot()*constants.boltz*p->get_temperature();
+    break;
+  case ensemble_npt_nh_partial:
+    temp_ramp *= 0.5;
+    if (!(b->get_perflagall())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    t_nh_tau = t_nh_tau/constants.tfactor;
+    t_nh_drag = 1.0-t_nh_drag*constants.tfactor*timestep;
+    t_nh_eta = 0.0;
+    t_nh_etadot = 0.0;
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_drag = 1.0-p_nh_drag*constants.tfactor*timestep;
+    p_nh_dim = 0;
+    if (Lpflag_a) {
+      p_nh_omega_a = 0.0;
+      p_nh_omegadot_a = 0.0;
+      p_target_a = p_target_a*constants.pfactor;
+      p_nh_dim++;
+      p_target = p_target_a; 
+    }
+    if (Lpflag_b) {
+      p_nh_omega_b = 0.0;
+      p_nh_omegadot_b = 0.0;
+      p_target_b = p_target_b*constants.pfactor;
+      p_nh_dim++;
+      if (Lpflag_a && p_target != p_target_b) {
+	glog.error("Stepper::Setup:\n"
+		   "pressure control nose-hoover-partial requires "
+		   "isotropic pressure");
+      } else {
+	p_target = p_target_b; 
+      }
+    }
+    if (Lpflag_c) {
+      p_nh_omega_c = 0.0;
+      p_nh_omegadot_c = 0.0;
+      p_target_c = p_target_c*constants.pfactor;
+      p_nh_dim++;
+      if ((Lpflag_a && p_target_a != p_target_c) || 
+	  (Lpflag_b && p_target_b != p_target_c)) {
+	glog.error("Stepper::Setup:\n"
+		   "pressure control nose-hoover-partial requires "
+		   "isotropic pressure");
+      } else {
+	p_target = p_target_c; 
+      }
+    }
+    vol0 =  b->get_volume();
+    nkt = p->get_nparticles_tot()*constants.boltz*p->get_temperature();
+    break;
+  case ensemble_nvt_rescale:
+    temp_skip = 1;
+    temp_ramp *= temp_freq;
+    break;
+  default:
+    glog.error("Stepper::Setup: Invalid temperature control style");
+  }
+  extended_energy = 0.0;
+
+  // Copy thermostat/barostat extended variables from buffer
+  if (Lreadextvar) {
+    t_nh_eta = extvarbuf[0];
+    t_nh_etadot = extvarbuf[1];
+    p_nh_omega = extvarbuf[2];
+    p_nh_omegadot = extvarbuf[3];
+    p_nh_omega_a = extvarbuf[4];
+    p_nh_omegadot_a = extvarbuf[5];
+    p_nh_omega_b = extvarbuf[6];
+    p_nh_omegadot_b = extvarbuf[7];
+    p_nh_omega_c = extvarbuf[8];
+    p_nh_omegadot_c = extvarbuf[9];
+    p_nh_omega_full[0][0] = extvarbuf[10];
+    p_nh_omega_full[0][1] = extvarbuf[11];
+    p_nh_omega_full[0][2] = extvarbuf[12];
+    p_nh_omega_full[1][0] = extvarbuf[13];
+    p_nh_omega_full[1][1] = extvarbuf[14];
+    p_nh_omega_full[1][2] = extvarbuf[15];
+    p_nh_omega_full[2][0] = extvarbuf[16];
+    p_nh_omega_full[2][1] = extvarbuf[17];
+    p_nh_omega_full[2][2] = extvarbuf[18];
+    p_nh_omegadot_full[0][0] = extvarbuf[19];
+    p_nh_omegadot_full[0][1] = extvarbuf[20];
+    p_nh_omegadot_full[0][2] = extvarbuf[21];
+    p_nh_omegadot_full[1][0] = extvarbuf[22];
+    p_nh_omegadot_full[1][1] = extvarbuf[23];
+    p_nh_omegadot_full[1][2] = extvarbuf[24];
+    p_nh_omegadot_full[2][0] = extvarbuf[25];
+    p_nh_omegadot_full[2][1] = extvarbuf[26];
+    p_nh_omegadot_full[2][2] = extvarbuf[27];
+    vol0 = extvarbuf[28];
+    nkt = extvarbuf[29];
+    extended_energy = extvarbuf[30];
+  }
+
+}
+
+void Stepper::Run(const int nsteps_in, const double timestep, 
+	   Box* b, ParticleTypeList* t,
+           ParticleList* p,ForceFieldList* ff,
+           Output* outp,FixList* fix_list,Comm* comm) {
+  double t0,t1;
+  bool Lenergy,Lvolume,Lnparticles,Lvirial,Latomvirial,Lreneigh;
+
+  // This quantity sometimes needed by ramp functions
+  nsteps = nsteps_in;
+  // Apply nsteps to ramp general quantities
+  temp_ramp /= nsteps;
+
+  t0 = MPI_Wtime();
+  for (int istep=1;istep<=nsteps;istep++) {
+
+    if (outp->Need_Thermo()) {
+      Lenergy = true;
+      Lvirial = true;
+    } else {
+      Lenergy = false;
+      Lvirial = false;
+    }
+
+    if (outp->Need_AtomVirial()) {
+      Latomvirial = true;
+    } else {
+      Latomvirial = false;
+    }
+
+    Lvolume = false;
+    Lnparticles = false;
+    switch(ensemble_style) {
+    case ensemble_nph_nh:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    case ensemble_npt_nh:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    case ensemble_nph_nh_full:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    case ensemble_npt_nh_full:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    case ensemble_nph_nh_partial:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    case ensemble_npt_nh_partial:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    default:
+      ;
+    }
+
+    Front(timestep,b,t,p,ff,fix_list,comm);
+    if (fix_list->get_Lvolume()) Lvolume = true;
+  
+    if (b->get_Lremap()) {
+      comm->Setup(b,ff);
+      p->Remap(b,comm);
+      b->set_Lremap(false);
+      Lreneigh = true;
+      Lvolume = true;
+      glog.get_logfile() << "Remapping box dimensions" << endl;
+    } else {
+      Lreneigh = false;
+    }
+
+    ff->Neighboring(p,b,comm,Lvolume,Lreneigh);
+    ff->ComputeForce(Lenergy,Lvirial,Latomvirial,b,t,p,comm);
+
+     Back(timestep,b,t,p,ff,fix_list,comm);
+    if (fix_list->get_Lvolume()) Lvolume = true;
+  
+    t1 = MPI_Wtime();
+    glog.timetotal = t1-t0;
+    if (Lenergy) ComputeExtendedEnergy(p,b);
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,extended_energy,
+		      Lvolume,Lnparticles,this);
+  }
+
+}
+
+void Stepper::Front(const double timestep, Box* b, ParticleTypeList* t,
+           ParticleList* p,ForceFieldList* ff,
+           FixList* fix_list,Comm* comm) {
+
+  double etadotdot,expfacv,expfacx,p_tmp;
+  double dthalf,dtquarter;
+  double dilation[3],omegadotdot;
+  double omegadotdot_a,omegadotdot_b,omegadotdot_c;
+  double p_tmp_a,p_tmp_b,p_tmp_c,p_tmp_full[3][3],p_tmp_abc[3];
+  double scalev[3];
+  vector <double> k_virial_tmp(6),f_virial_tmp(6);
+  double vol_tmp;
+  double p_target_tmp;
+
+  fix_list->Start(p,b,comm);
+
+  dthalf = timestep/2.0;
+  dtquarter = timestep/4.0;
+
+  switch(ensemble_style) {
+  case ensemble_nve:
+    p->StepVelocity(dthalf);
+    p->StepPosition(timestep);
+    break;
+  case ensemble_nvt_nh:
+    // This implementation is based closely on Section VII of
+    // Tuckerman, Berne and Martyna (1992).
+    // Their Q is equivalent to ndof*boltz*temp_target*t_nh_tau^2
+    // The phase space distribution is affected by the choice of ndof.
+    // Regardless of definition of ndof, this scheme conserves
+    // the corresponding total energy to first order in timestep,
+    // It uses the following Trotter factorization of Liouville operator:
+    //              L -> Letadot,(Leta,(Letav,(Lv,Lx)))), 
+    // where the notation L -> (L1,L2) indicates the factorization
+    //
+    // exp(i(L1+L2)t) ~= exp(iL1 t/2)exp(iL2 t)exp(iL1 t/2).
+    // assuming L = L1+L2
+    //
+    temp_target += temp_ramp;
+    p->ComputeTemperature(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_etadot += etadotdot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_eta += t_nh_etadot*dthalf;
+    expfacv = exp(-t_nh_etadot*dthalf);
+    p->ScaleVelocity(expfacv);
+    p->StepVelocity(dthalf);
+    p->StepPosition(timestep);
+    break;
+  case ensemble_nph_nh:
+    // This implementation is basically that of Hoover, 
+    // Phys. Rev. A, v. 34, 2499 (1986)
+    p->ComputeTemperature(comm);
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    rhokt = nkt/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+    p_nh_omegadot += omegadotdot*dthalf;
+    p_nh_omegadot *= p_nh_drag;
+    p_nh_omega += p_nh_omegadot*dthalf;
+    expfacv = exp(-dthalf*p_nh_omegadot);
+    p->ScaleVelocity(expfacv);
+    p->StepVelocity(dthalf);
+
+    expfacx = 1.0/expfacv;
+    dilation[0] = expfacx;
+    dilation[1] = expfacx;
+    dilation[2] = expfacx;
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    p->StepPosition(timestep);
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    break;
+  case ensemble_npt_nh:
+    temp_target += temp_ramp;
+    p->ComputeTemperature(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_etadot += etadotdot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_eta += t_nh_etadot*dthalf;
+
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    rhokt = nkt/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+    p_nh_omegadot += omegadotdot*dthalf;
+    p_nh_omegadot *= p_nh_drag;
+    p_nh_omega += p_nh_omegadot*dthalf;
+
+    expfacv = exp(-dthalf*(p_nh_omegadot+t_nh_etadot));
+    p->ScaleVelocity(expfacv);
+    p->StepVelocity(dthalf);
+
+    expfacx = exp(dthalf*p_nh_omegadot);
+    dilation[0] = expfacx;
+    dilation[1] = expfacx;
+    dilation[2] = expfacx;
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    p->StepPosition(timestep);
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    break;
+  case ensemble_nph_nh_full:
+    vol_tmp = b->get_volume();
+    // This computes temperature and kinetic virial tensor
+    p->ComputeKineticVirial(comm);
+    rhokt = nkt/vol_tmp;
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+    p_tmp_full[0][0] = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+    p_tmp_full[1][1] = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+    p_tmp_full[2][2] = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+    p_tmp_full[0][1] = (k_virial_tmp[3]+f_virial_tmp[3])/vol_tmp;
+    p_tmp_full[0][2] = (k_virial_tmp[4]+f_virial_tmp[4])/vol_tmp;
+    p_tmp_full[1][2] = (k_virial_tmp[5]+f_virial_tmp[5])/vol_tmp;
+    p_tmp_full[1][0] = p_tmp_full[0][1];
+    p_tmp_full[2][0] = p_tmp_full[0][2];
+    p_tmp_full[2][1] = p_tmp_full[1][2];
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	p_target_tmp = 0.0;
+	if (i==j) p_target_tmp = p_target;
+	omegadotdot = (p_tmp_full[i][j]-p_target_tmp)/(rhokt*p_nh_tau*p_nh_tau);
+	p_nh_omegadot_full[i][j] += omegadotdot*dthalf;
+	p_nh_omegadot_full[i][j] *= p_nh_drag;
+	deldeform[i][j] = p_nh_omegadot_full[i][j]*dthalf;
+	p_nh_omega_full[i][j] += deldeform[i][j];
+      }
+    }
+
+    // deformation matrix for velocity
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	deformv[i][j] = -deldeform[i][j];
+      }
+    }
+    p->ScaleVelocity(b,deformv);
+    p->StepVelocity(dthalf);
+
+    // deformation matrix for position
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	deformx[i][j] = deldeform[i][j];
+      }
+    }
+
+    p->ScaledDeform(b,deformx);
+    b->BoxDeform(deformx,comm,false);
+    p->StepPosition(timestep);
+    p->ScaledDeform(b,deformx);
+    b->BoxDeform(deformx,comm,false);
+    break;
+  case ensemble_npt_nh_full:
+    temp_target += temp_ramp;
+    // This computes temperature and kinetic virial tensor
+    p->ComputeKineticVirial(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_etadot += etadotdot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_eta += t_nh_etadot*dthalf;
+
+    vol_tmp = b->get_volume();
+    rhokt = nkt/vol_tmp;
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+    p_tmp_full[0][0] = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+    p_tmp_full[1][1] = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+    p_tmp_full[2][2] = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+    p_tmp_full[0][1] = (k_virial_tmp[3]+f_virial_tmp[3])/vol_tmp;
+    p_tmp_full[0][2] = (k_virial_tmp[4]+f_virial_tmp[4])/vol_tmp;
+    p_tmp_full[1][2] = (k_virial_tmp[5]+f_virial_tmp[5])/vol_tmp;
+    p_tmp_full[1][0] = p_tmp_full[0][1];
+    p_tmp_full[2][0] = p_tmp_full[0][2];
+    p_tmp_full[2][1] = p_tmp_full[1][2];
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	p_target_tmp = 0.0;
+	if (i==j) p_target_tmp = p_target;
+	omegadotdot = (p_tmp_full[i][j]-p_target_tmp)/(rhokt*p_nh_tau*p_nh_tau);
+	p_nh_omegadot_full[i][j] += omegadotdot*dthalf;
+	p_nh_omegadot_full[i][j] *= p_nh_drag;
+	deldeform[i][j] = p_nh_omegadot_full[i][j]*dthalf;
+	p_nh_omega_full[i][j] += deldeform[i][j];
+      }
+    }
+
+    // deformation matrix for velocity
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	deformv[i][j] = -deldeform[i][j];
+      }
+      deformv[i][i] += -dthalf*t_nh_etadot;
+    }
+    p->ScaleVelocity(b,deformv);
+    p->StepVelocity(dthalf);
+
+    // deformation matrix for position
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	deformx[i][j] = deldeform[i][j];
+      }
+    }
+    p->ScaledDeform(b,deformx);
+    b->BoxDeform(deformx,comm,false);
+    p->StepPosition(timestep);
+    p->ScaledDeform(b,deformx);
+    b->BoxDeform(deformx,comm,false);
+    break;
+  case ensemble_nph_nh_partial:
+    vol_tmp = b->get_volume();
+    p->ComputeKineticVirial(comm);
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+
+    if (!b->get_Lorthorhombic()) {
+      p_tmp_full[0][0] = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+      p_tmp_full[1][1] = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+      p_tmp_full[2][2] = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+      p_tmp_full[0][1] = (k_virial_tmp[3]+f_virial_tmp[3])/vol_tmp;
+      p_tmp_full[0][2] = (k_virial_tmp[4]+f_virial_tmp[4])/vol_tmp;
+      p_tmp_full[1][2] = (k_virial_tmp[5]+f_virial_tmp[5])/vol_tmp;
+      p_tmp_full[1][0] = p_tmp_full[0][1];
+      p_tmp_full[2][0] = p_tmp_full[0][2];
+      p_tmp_full[2][1] = p_tmp_full[1][2];
+      b->XYZ2ABC(p_tmp_full,p_tmp_abc);
+    }
+
+    rhokt = nkt/vol_tmp;
+
+    if (Lpflag_a) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+      } else {
+	p_tmp_a = p_tmp_abc[0];
+      }
+      omegadotdot_a = (p_tmp_a-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_a += omegadotdot_a*dthalf;
+      p_nh_omegadot_a *= p_nh_drag;
+      p_nh_omega_a += p_nh_omegadot_a*dthalf;
+      scalev[0] = exp(-dthalf*p_nh_omegadot_a);
+    } else {
+      scalev[0] = 1.0;
+    }
+
+    if (Lpflag_b) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+      } else {
+	p_tmp_b = p_tmp_abc[1];
+      }
+      omegadotdot_b = (p_tmp_b-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_b += omegadotdot_b*dthalf;
+      p_nh_omegadot_b *= p_nh_drag;
+      p_nh_omega_b += p_nh_omegadot_b*dthalf;
+      scalev[1] = exp(-dthalf*p_nh_omegadot_b);
+    } else {
+      scalev[1] = 1.0;
+    }
+
+    if (Lpflag_c) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+      } else {
+	p_tmp_c = p_tmp_abc[2];
+      }
+      omegadotdot_c = (p_tmp_c-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_c += omegadotdot_c*dthalf;
+      p_nh_omegadot_c *= p_nh_drag;
+      p_nh_omega_c += p_nh_omegadot_c*dthalf;
+      scalev[2] = exp(-dthalf*p_nh_omegadot_c);
+    } else {
+      scalev[2] = 1.0;
+    }
+
+    p->ScaleVelocity(b,scalev);
+    p->StepVelocity(dthalf);
+
+    dilation[0] = 1.0/scalev[0];
+    dilation[1] = 1.0/scalev[1];
+    dilation[2] = 1.0/scalev[2];
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    p->StepPosition(timestep);
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+
+    break;
+  case ensemble_npt_nh_partial:
+    temp_target += temp_ramp;
+    p->ComputeKineticVirial(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_etadot += etadotdot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_eta += t_nh_etadot*dthalf;
+
+    vol_tmp = b->get_volume();
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+
+    if (!b->get_Lorthorhombic()) {
+      p_tmp_full[0][0] = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+      p_tmp_full[1][1] = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+      p_tmp_full[2][2] = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+      p_tmp_full[0][1] = (k_virial_tmp[3]+f_virial_tmp[3])/vol_tmp;
+      p_tmp_full[0][2] = (k_virial_tmp[4]+f_virial_tmp[4])/vol_tmp;
+      p_tmp_full[1][2] = (k_virial_tmp[5]+f_virial_tmp[5])/vol_tmp;
+      p_tmp_full[1][0] = p_tmp_full[0][1];
+      p_tmp_full[2][0] = p_tmp_full[0][2];
+      p_tmp_full[2][1] = p_tmp_full[1][2];
+      b->XYZ2ABC(p_tmp_full,p_tmp_abc);
+    }
+
+    rhokt = nkt/vol_tmp;
+
+    if (Lpflag_a) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+      } else {
+	p_tmp_a = p_tmp_abc[0];
+      }
+      omegadotdot_a = (p_tmp_a-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_a += omegadotdot_a*dthalf;
+      p_nh_omegadot_a *= p_nh_drag;
+      p_nh_omega_a += p_nh_omegadot_a*dthalf;
+      scalev[0] = exp(-dthalf*(p_nh_omegadot_a+t_nh_etadot));
+    } else {
+      scalev[0] = exp(-dthalf*t_nh_etadot);
+    }
+
+    if (Lpflag_b) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+      } else {
+	p_tmp_b = p_tmp_abc[1];
+      }
+      omegadotdot_b = (p_tmp_b-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_b += omegadotdot_b*dthalf;
+      p_nh_omegadot_b *= p_nh_drag;
+      p_nh_omega_b += p_nh_omegadot_b*dthalf;
+      scalev[1] = exp(-dthalf*(p_nh_omegadot_b+t_nh_etadot));
+    } else {
+      scalev[1] = exp(-dthalf*t_nh_etadot);
+    }
+
+    if (Lpflag_c) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+      } else {
+	p_tmp_c = p_tmp_abc[2];
+      }
+      omegadotdot_c = (p_tmp_c-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_c += omegadotdot_c*dthalf;
+      p_nh_omegadot_c *= p_nh_drag;
+      p_nh_omega_c += p_nh_omegadot_c*dthalf;
+      scalev[2] = exp(-dthalf*(p_nh_omegadot_c+t_nh_etadot));
+    } else {
+      scalev[2] = exp(-dthalf*t_nh_etadot);
+    }
+
+    p->ScaleVelocity(b,scalev);
+    p->StepVelocity(dthalf);
+
+    if (Lpflag_a) {
+      dilation[0] = exp(dthalf*p_nh_omegadot_a);
+    } else {
+      dilation[0] = 1.0;
+    }
+    if (Lpflag_b) {
+      dilation[1] = exp(dthalf*p_nh_omegadot_b);
+    } else {
+      dilation[1] = 1.0;
+    }
+    if (Lpflag_c) {
+      dilation[2] = exp(dthalf*p_nh_omegadot_c);
+    } else {
+      dilation[2] = 1.0;
+    }
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    p->StepPosition(timestep);
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+
+    break;
+  case ensemble_nvt_rescale:
+    p->StepVelocity(dthalf);
+    p->StepPosition(timestep);
+    break;
+  }
+
+  p->ApplyBoundaryConditions(b);
+
+}
+
+void Stepper::Back(const double timestep, Box* b, ParticleTypeList* t,
+           ParticleList* p,ForceFieldList* ff,
+           FixList* fix_list,Comm* comm) {
+  double etadotdot,expfacv,expfacx,p_tmp;
+  double dthalf,dtquarter;
+  double dilation[3],omegadotdot;
+  double omegadotdot_a,omegadotdot_b,omegadotdot_c;
+  double p_tmp_a,p_tmp_b,p_tmp_c,p_tmp_full[3][3],p_tmp_abc[3];
+  double scalev[3];
+  vector <double> k_virial_tmp(6),f_virial_tmp(6);
+  double vol_tmp;
+  double p_target_tmp;
+
+  dthalf = timestep/2.0;
+  dtquarter = timestep/4.0;
+
+
+  switch(ensemble_style) {
+  case ensemble_nve:
+    p->StepVelocity(dthalf);
+    break;
+  case ensemble_nvt_nh:
+    temp_target += temp_ramp;
+    expfacv = exp(-t_nh_etadot*dthalf);
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(expfacv);
+    p->ComputeTemperature(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_eta += t_nh_etadot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_etadot += etadotdot*dthalf;
+    break;
+  case ensemble_nph_nh:
+    expfacv = exp(-dthalf*p_nh_omegadot);
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(expfacv);
+
+    p->ComputeTemperature(comm);
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    rhokt = nkt/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+    p_nh_omega += p_nh_omegadot*dthalf;
+    p_nh_omegadot *= p_nh_drag;
+    p_nh_omegadot += omegadotdot*dthalf;
+    break;
+  case ensemble_npt_nh:
+    expfacv = exp(-dthalf*(p_nh_omegadot+t_nh_etadot));
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(expfacv);
+    temp_target += temp_ramp;
+    p->ComputeTemperature(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_eta += t_nh_etadot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_etadot += etadotdot*dthalf;
+
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    rhokt = nkt/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+    p_nh_omega += p_nh_omegadot*dthalf;
+    p_nh_omegadot *= p_nh_drag;
+    p_nh_omegadot += omegadotdot*dthalf;
+
+    break;
+  case ensemble_nph_nh_full:
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(b,deformv);
+
+    vol_tmp = b->get_volume();
+    // This computes temperature and kinetic virial tensor
+    p->ComputeKineticVirial(comm);
+    rhokt = nkt/vol_tmp;
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+    p_tmp_full[0][0] = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+    p_tmp_full[1][1] = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+    p_tmp_full[2][2] = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+    p_tmp_full[0][1] = (k_virial_tmp[3]+f_virial_tmp[3])/vol_tmp;
+    p_tmp_full[0][2] = (k_virial_tmp[4]+f_virial_tmp[4])/vol_tmp;
+    p_tmp_full[1][2] = (k_virial_tmp[5]+f_virial_tmp[5])/vol_tmp;
+    p_tmp_full[1][0] = p_tmp_full[0][1];
+    p_tmp_full[2][0] = p_tmp_full[0][2];
+    p_tmp_full[2][1] = p_tmp_full[1][2];
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	p_target_tmp = 0.0;
+	if (i==j) p_target_tmp = p_target;
+	omegadotdot = (p_tmp_full[i][j]-p_target_tmp)/(rhokt*p_nh_tau*p_nh_tau);
+	p_nh_omega_full[i][j] += deldeform[i][j];
+	p_nh_omegadot_full[i][j] += omegadotdot*dthalf;
+	p_nh_omegadot_full[i][j] *= p_nh_drag;
+      }
+    }
+
+    break;
+  case ensemble_npt_nh_full:
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(b,deformv);
+
+    vol_tmp = b->get_volume();
+    temp_target += temp_ramp;
+    // This computes temperature and kinetic virial tensor
+    p->ComputeKineticVirial(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_eta += t_nh_etadot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_etadot += etadotdot*dthalf;
+
+    rhokt = nkt/vol_tmp;
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+    p_tmp_full[0][0] = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+    p_tmp_full[1][1] = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+    p_tmp_full[2][2] = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+    p_tmp_full[0][1] = (k_virial_tmp[3]+f_virial_tmp[3])/vol_tmp;
+    p_tmp_full[0][2] = (k_virial_tmp[4]+f_virial_tmp[4])/vol_tmp;
+    p_tmp_full[1][2] = (k_virial_tmp[5]+f_virial_tmp[5])/vol_tmp;
+    p_tmp_full[1][0] = p_tmp_full[0][1];
+    p_tmp_full[2][0] = p_tmp_full[0][2];
+    p_tmp_full[2][1] = p_tmp_full[1][2];
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	p_target_tmp = 0.0;
+	if (i==j) p_target_tmp = p_target;
+	omegadotdot = (p_tmp_full[i][j]-p_target_tmp)/(rhokt*p_nh_tau*p_nh_tau);
+	p_nh_omega_full[i][j] += deldeform[i][j];
+	p_nh_omegadot_full[i][j] += omegadotdot*dthalf;
+	p_nh_omegadot_full[i][j] *= p_nh_drag;
+      }
+    }
+
+    break;
+  case ensemble_nph_nh_partial:
+    if (Lpflag_a) {
+      scalev[0] = exp(-dthalf*p_nh_omegadot_a);
+    } else {
+      scalev[0] = 1.0;
+    }
+
+    if (Lpflag_b) {
+      scalev[1] = exp(-dthalf*p_nh_omegadot_b);
+    } else {
+      scalev[1] = 1.0;
+    }
+
+    if (Lpflag_c) {
+      scalev[2] = exp(-dthalf*p_nh_omegadot_c);
+    } else {
+      scalev[2] = 1.0;
+    }
+
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(b,scalev);
+
+    vol_tmp = b->get_volume();
+    p->ComputeKineticVirial(comm);
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+
+    if (!b->get_Lorthorhombic()) {
+      p_tmp_full[0][0] = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+      p_tmp_full[1][1] = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+      p_tmp_full[2][2] = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+      p_tmp_full[0][1] = (k_virial_tmp[3]+f_virial_tmp[3])/vol_tmp;
+      p_tmp_full[0][2] = (k_virial_tmp[4]+f_virial_tmp[4])/vol_tmp;
+      p_tmp_full[1][2] = (k_virial_tmp[5]+f_virial_tmp[5])/vol_tmp;
+      p_tmp_full[1][0] = p_tmp_full[0][1];
+      p_tmp_full[2][0] = p_tmp_full[0][2];
+      p_tmp_full[2][1] = p_tmp_full[1][2];
+      b->XYZ2ABC(p_tmp_full,p_tmp_abc);
+    }
+
+    rhokt = nkt/vol_tmp;
+
+    if (Lpflag_a) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+      } else {
+	p_tmp_a = p_tmp_abc[0];
+      }
+      omegadotdot_a = (p_tmp_a-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omega_a += p_nh_omegadot_a*dthalf;
+      p_nh_omegadot_a *= p_nh_drag;
+      p_nh_omegadot_a += omegadotdot_a*dthalf;
+    }
+    if (Lpflag_b) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+      } else {
+	p_tmp_b = p_tmp_abc[1];
+      }
+      omegadotdot_b = (p_tmp_b-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omega_b += p_nh_omegadot_b*dthalf;
+      p_nh_omegadot_b *= p_nh_drag;
+      p_nh_omegadot_b += omegadotdot_b*dthalf;
+    }
+    if (Lpflag_c) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+      } else {
+	p_tmp_c = p_tmp_abc[2];
+      }
+      omegadotdot_c = (p_tmp_c-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omega_c += p_nh_omegadot_c*dthalf;
+      p_nh_omegadot_c *= p_nh_drag;
+      p_nh_omegadot_c += omegadotdot_c*dthalf;
+    }
+
+    break;
+  case ensemble_npt_nh_partial:
+    temp_target += temp_ramp;
+
+    expfacv = exp(-dthalf*t_nh_etadot);
+
+    if (Lpflag_a) {
+      scalev[0] = expfacv*exp(-dthalf*p_nh_omegadot_a);
+    } else {
+      scalev[0] = expfacv;
+    }
+
+    if (Lpflag_b) {
+      scalev[1] = expfacv*exp(-dthalf*p_nh_omegadot_b);
+    } else {
+      scalev[1] = expfacv;
+    }
+
+    if (Lpflag_c) {
+      scalev[2] = expfacv*exp(-dthalf*p_nh_omegadot_c);
+    } else {
+      scalev[2] = expfacv;
+    }
+
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(b,scalev);
+
+    p->ComputeKineticVirial(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_eta += t_nh_etadot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_etadot += etadotdot*dthalf;
+
+    vol_tmp = b->get_volume();
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+
+    if (!b->get_Lorthorhombic()) {
+      p_tmp_full[0][0] = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+      p_tmp_full[1][1] = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+      p_tmp_full[2][2] = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+      p_tmp_full[0][1] = (k_virial_tmp[3]+f_virial_tmp[3])/vol_tmp;
+      p_tmp_full[0][2] = (k_virial_tmp[4]+f_virial_tmp[4])/vol_tmp;
+      p_tmp_full[1][2] = (k_virial_tmp[5]+f_virial_tmp[5])/vol_tmp;
+      p_tmp_full[1][0] = p_tmp_full[0][1];
+      p_tmp_full[2][0] = p_tmp_full[0][2];
+      p_tmp_full[2][1] = p_tmp_full[1][2];
+      b->XYZ2ABC(p_tmp_full,p_tmp_abc);
+    }
+
+    rhokt = nkt/vol_tmp;
+
+    if (Lpflag_a) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+      } else {
+	p_tmp_a = p_tmp_abc[0];
+      }
+      omegadotdot_a = (p_tmp_a-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omega_a += p_nh_omegadot_a*dthalf;
+      p_nh_omegadot_a *= p_nh_drag;
+      p_nh_omegadot_a += omegadotdot_a*dthalf;
+    }
+
+    if (Lpflag_b) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+      } else {
+	p_tmp_b = p_tmp_abc[1];
+      }
+      omegadotdot_b = (p_tmp_b-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omega_b += p_nh_omegadot_b*dthalf;
+      p_nh_omegadot_b *= p_nh_drag;
+      p_nh_omegadot_b += omegadotdot_b*dthalf;
+    }
+
+    if (Lpflag_c) {
+      if (b->get_Lorthorhombic()) {
+	p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+      } else {
+	p_tmp_c = p_tmp_abc[2];
+      }
+      omegadotdot_c = (p_tmp_c-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+      p_nh_omega_c += p_nh_omegadot_c*dthalf;
+      p_nh_omegadot_c *= p_nh_drag;
+      p_nh_omegadot_c += omegadotdot_c*dthalf;
+    }
+    break;
+  case ensemble_nvt_rescale:
+    p->StepVelocity(dthalf);
+    if (temp_skip++ % temp_freq == 0) {
+      temp_target += temp_ramp;
+      TemperatureControlRescale(p,comm);
+    }
+    break;
+  }
+  fix_list->Final(p,b,comm);
+}
+
+void Stepper::TemperatureControlRescale(ParticleList* p,Comm* comm) {
+  double temp_tmp;
+
+  p->ComputeTemperature(comm);
+  temp_tmp = p->get_temperature();
+  if (fabs(temp_tmp - temp_target) > temp_window) {
+    //Rescale particle velocities
+    p->RescaleTemperature(temp_tmp - 
+		       temp_factor*(temp_tmp-temp_target),temp_tmp);
+    extended_energy += 0.5*p->get_ndof()*constants.boltz*temp_factor*(temp_tmp-temp_target);
+  }
+}
+
+
+double Stepper::ComputeExtendedEnergy(const ParticleList* p, const Box* b) {
+  int ndof;
+  double sumsq;
+
+  switch(ensemble_style) {
+  case ensemble_nvt_nh:
+    ndof = p->get_ndof();
+    extended_energy = 0.5*t_nh_etadot*t_nh_etadot*
+      ndof*constants.boltz*temp_target*t_nh_tau*t_nh_tau +
+      ndof*constants.boltz*temp_target*t_nh_eta;
+    break;
+  case ensemble_nph_nh:
+    extended_energy = 
+      0.5*3.0*nkt*
+      p_nh_omegadot*p_nh_omegadot*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0);
+    break;
+  case ensemble_npt_nh:
+    ndof = p->get_ndof();
+    extended_energy = 0.5*t_nh_etadot*t_nh_etadot*
+      ndof*constants.boltz*temp_target*t_nh_tau*t_nh_tau + 
+      ndof*constants.boltz*temp_target*t_nh_eta +
+      0.5*3.0*nkt*
+      p_nh_omegadot*p_nh_omegadot*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0);
+    break;
+  case ensemble_nph_nh_full:
+    sumsq = 0.0;
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	sumsq += p_nh_omegadot_full[i][j]*p_nh_omegadot_full[i][j];
+      }
+    }
+    extended_energy = 
+      0.5*nkt*sumsq*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0);
+    break;
+  case ensemble_npt_nh_full:
+    ndof = p->get_ndof();
+    sumsq = 0.0;
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	sumsq += p_nh_omegadot_full[i][j]*p_nh_omegadot_full[i][j];
+      }
+    }
+    extended_energy = 0.5*t_nh_etadot*t_nh_etadot*
+      ndof*constants.boltz*temp_target*t_nh_tau*t_nh_tau + 
+      ndof*constants.boltz*temp_target*t_nh_eta +
+      0.5*nkt*sumsq*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0);
+    break;
+  case ensemble_nph_nh_partial:
+
+    extended_energy = 0.0;
+
+    if (Lpflag_a) {
+      extended_energy +=
+      0.5*p_nh_omegadot_a*p_nh_omegadot_a*
+      nkt*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0)/p_nh_dim;
+    }
+
+    if (Lpflag_b) {
+      extended_energy +=
+      0.5*p_nh_omegadot_b*p_nh_omegadot_b*
+      nkt*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0)/p_nh_dim;
+    }
+
+    if (Lpflag_c) {
+      extended_energy +=
+      0.5*p_nh_omegadot_c*p_nh_omegadot_c*
+      nkt*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0)/p_nh_dim;
+    }
+
+    break;
+  case ensemble_npt_nh_partial:
+    ndof = p->get_ndof();
+    extended_energy = 0.5*t_nh_etadot*t_nh_etadot*
+      ndof*constants.boltz*temp_target*t_nh_tau*t_nh_tau + 
+      ndof*constants.boltz*temp_target*t_nh_eta;
+
+    if (Lpflag_a) {
+      extended_energy +=
+      0.5*p_nh_omegadot_a*p_nh_omegadot_a*
+      nkt*p_nh_tau*p_nh_tau 
+	+ p_target*(b->get_volume()-vol0)/p_nh_dim;
+    }
+
+    if (Lpflag_b) {
+      extended_energy +=
+      0.5*p_nh_omegadot_b*p_nh_omegadot_b*
+      nkt*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0)/p_nh_dim;
+    }
+
+    if (Lpflag_c) {
+      extended_energy +=
+      0.5*p_nh_omegadot_c*p_nh_omegadot_c*
+      nkt*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0)/p_nh_dim;
+    }
+
+    break;
+  case ensemble_nvt_rescale:
+    // extended energy is computed in TemperatureControlRescale()
+    break;
+  default:
+    extended_energy = 0.0;
+    break;
+  }
+  return extended_energy;
+}
+
+void Stepper::input_temperature_control(const string& buf)
+{
+  string str_tmp;
+  std::istringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Stepper::input_temperature_control:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << str_tmp;
+
+  if (str_tmp == "none") {
+    glog.get_logfile() << endl;
+  } else if (str_tmp == "nose-hoover") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nvt_nh;
+    } else if (ensemble_style == ensemble_nph_nh) {
+      ensemble_style = ensemble_npt_nh;
+    } else if (ensemble_style == ensemble_nph_nh_full) {
+      ensemble_style = ensemble_npt_nh_full;
+    } else if (ensemble_style == ensemble_nph_nh_partial) {
+      ensemble_style = ensemble_npt_nh_partial;
+    } else { 
+      glog.error("Stepper::input_temperature_control:\n"
+		 "nose-hoover can not be used in this ensemble");
+    }      
+
+    buf_in >> temp_target;
+    buf_in >> t_nh_tau;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Stepper::input_temperature_control:\n"
+		 "Read error in input file");
+    }
+
+    glog.get_logfile() << " " << temp_target << " " << t_nh_tau << endl;
+
+    if (temp_target <= 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (t_nh_tau <= 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+  } else if (str_tmp == "nose-hoover_ramp") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nvt_nh;
+    } else if (ensemble_style == ensemble_nph_nh) {
+      ensemble_style = ensemble_npt_nh;
+    } else if (ensemble_style == ensemble_nph_nh_full) {
+      ensemble_style = ensemble_npt_nh_full;
+    } else if (ensemble_style == ensemble_nph_nh_partial) {
+      ensemble_style = ensemble_npt_nh_partial;
+    } else { 
+      glog.error("Stepper::input_temperature_control:\n"
+		 "nose-hoover can not be used in this ensemble");
+    }      
+
+    buf_in >> temp_target;
+    buf_in >> temp_final;
+    buf_in >> t_nh_tau;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Stepper::input_temperature_control:\n"
+		 "Read error in input file");
+    }
+
+    temp_ramp = temp_final-temp_target;
+
+    glog.get_logfile() << " " << temp_target << " " << temp_final << " " << 
+      t_nh_tau << endl;
+
+    if (temp_target <= 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (temp_final <= 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (t_nh_tau <= 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+  } else if (str_tmp == "rescale") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nvt_rescale;
+    } else { 
+      glog.error("Stepper::input_temperature_control:\n"
+		 "rescale can not be used in this ensemble");
+    }      
+    buf_in >> temp_target;
+    buf_in >> temp_freq;
+    buf_in >> temp_window;
+    buf_in >> temp_factor;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Stepper::input_temperature_control:\n"
+		 "Read error in input file");
+    }
+    glog.get_logfile() << " " << temp_target <<
+      " " << temp_freq << " " << 
+      temp_window << " "  << temp_factor << endl;
+
+    if (temp_target < 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (temp_freq <= 0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (temp_window < 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (temp_factor <= 0.0 || temp_factor > 1.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+  } else if (str_tmp == "rescale_ramp") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nvt_rescale;
+    } else { 
+      glog.error("Stepper::input_temperature_control:\n"
+		 "rescale can not be used in this ensemble");
+    }      
+    buf_in >> temp_target;
+    buf_in >> temp_final;
+    buf_in >> temp_freq;
+    buf_in >> temp_window;
+    buf_in >> temp_factor;
+
+    temp_ramp = temp_final-temp_target;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Stepper::input_temperature_control:\n"
+		 "Read error in input file");
+    }
+    glog.get_logfile() << " " << temp_target << " " << temp_final << 
+      " " << temp_freq << " " << 
+      temp_window << " "  << temp_factor << endl;
+
+    if (temp_target < 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (temp_final < 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (temp_freq <= 0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (temp_window < 0.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (temp_factor <= 0.0 || temp_factor > 1.0) {
+      glog.error("Stepper::input_temperature_control:\n"
+	"Invalid input parameter");
+    }
+  } else {
+    glog.error("Unrecognized temperature control style");
+  }
+}
+
+void Stepper::input_temperature_damping(const string& buf) {
+  string str_tmp;
+  std::istringstream buf_in(buf);
+
+  buf_in >> t_nh_drag;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Stepper::input_temperature_damping:\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << t_nh_drag << endl;
+
+  if (t_nh_drag < 0.0) {
+    glog.error("Stepper::input_temperature_damping:\n"
+	       "Invalid input parameter");
+  }
+
+}
+
+void Stepper::input_pressure_control(const string& buf) {
+  string str_tmp,str_tmp2;
+  std::istringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Stepper::input_pressure_control:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << str_tmp;
+
+  if (str_tmp == "none") {
+    ;
+  } else if (str_tmp == "nose-hoover") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nph_nh;
+    } else if (ensemble_style == ensemble_nvt_nh) {
+      ensemble_style = ensemble_npt_nh;
+    } else { 
+      glog.error("Stepper::input_pressure_control:\n"
+      "nose-hoover pressure control can not be used in this ensemble");
+    }      
+
+    buf_in >> p_target;
+    buf_in >> p_nh_tau;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Stepper::input_pressure_control:\n"
+		 "Read error in input file");
+    }
+
+    glog.get_logfile() << " " << p_target << " " << p_nh_tau << endl;
+
+    if (p_nh_tau <= 0.0) {
+      glog.error("Stepper::input_pressure_control:\n"
+	"Invalid input parameter");
+    }
+
+  } else if (str_tmp == "nose-hoover-full") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nph_nh_full;
+    } else if (ensemble_style == ensemble_nvt_nh) {
+      ensemble_style = ensemble_npt_nh_full;
+    } else { 
+      glog.error("Stepper::input_pressure_control:\n"
+      "nose-hoover pressure control can not be used in this ensemble");
+    }      
+
+    buf_in >> p_target;
+    buf_in >> p_nh_tau;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Stepper::input_pressure_control:\n"
+		 "Read error in input file");
+    }
+
+    glog.get_logfile() << " " << p_target << " " << p_nh_tau << endl;
+
+    if (p_nh_tau <= 0.0) {
+      glog.error("Stepper::input_pressure_control:\n"
+	"Invalid input parameter");
+    }
+
+  } else if (str_tmp == "nose-hoover-partial") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nph_nh_partial;
+    } else if (ensemble_style == ensemble_nvt_nh) {
+      ensemble_style = ensemble_npt_nh_partial;
+    } else { 
+      glog.error("Stepper::input_pressure_control:\n"
+      "nose-hoover pressure control can not be used in this ensemble");
+    }      
+
+    buf_in >> str_tmp;
+    if (str_tmp == "NULL") {
+      Lpflag_a = false;
+      glog.get_logfile() << " " << str_tmp; 
+    } else {
+      std::istringstream buf_in_tmp(str_tmp);
+      buf_in_tmp >> p_target_a;
+      Lpflag_a = true;
+      glog.get_logfile() << " " << p_target_a; 
+    }
+
+    buf_in >> str_tmp;
+    if (str_tmp == "NULL") {
+      Lpflag_b = false;
+      glog.get_logfile() << " " << str_tmp; 
+    } else {
+      std::istringstream buf_in_tmp(str_tmp);
+      buf_in_tmp >> p_target_b;
+      Lpflag_b = true;
+      glog.get_logfile() << " " << p_target_b; 
+    }
+
+    buf_in >> str_tmp;
+    if (str_tmp == "NULL") {
+      Lpflag_c = false;
+      glog.get_logfile() << " " << str_tmp; 
+    } else {
+      std::istringstream buf_in_tmp(str_tmp);
+      buf_in_tmp >> p_target_c;
+      Lpflag_c = true;
+      glog.get_logfile() << " " << p_target_c; 
+    }
+
+    buf_in >> p_nh_tau;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Stepper::input_pressure_control:\n"
+		 "Read error in input file");
+    }
+
+    glog.get_logfile() << " " << p_nh_tau << endl;
+
+    if (p_nh_tau <= 0.0) {
+      glog.error("Stepper::input_pressure_control:\n"
+	"Invalid input parameter");
+    }
+
+    if (!(Lpflag_a || Lpflag_b || Lpflag_c)) {
+      glog.error("Stepper::input_pressure_control:\n"
+	"nose-hoover_partial: Must specify pressure in at least one direction");
+    }
+
+  } else {
+    glog.error("Unrecognized pressure control style");
+  }
+}
+
+void Stepper::input_pressure_damping(const string& buf) {
+  string str_tmp,str_tmp2;
+  std::istringstream buf_in(buf);
+
+  buf_in >> p_nh_drag;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Stepper::input_pressure_damping:\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << p_nh_drag << endl;
+
+  if (p_nh_drag < 0.0) {
+    glog.error("Stepper::input_pressure_damping:\n"
+	       "Invalid input parameter");
+  }
+}
+
+void Stepper::input_read_extvar(const string& buf) {
+  Lreadextvar = true;
+  glog.get_logfile() << endl;
+}
+
+ void Stepper::input_write_extvar(const string& buf) {
+  Lwriteextvar = true;
+  glog.get_logfile() << endl;
+}
+
+double* Stepper::get_extvar() {
+  return extvarbuf;
+}
+
+void Stepper::update_extvar() {
+  // Copy the thermostat/barostat extended variables to buffer
+  extvarbuf[0] = t_nh_eta;
+  extvarbuf[1] = t_nh_etadot;
+  extvarbuf[2] = p_nh_omega;
+  extvarbuf[3] = p_nh_omegadot;
+  extvarbuf[4] = p_nh_omega_a;
+  extvarbuf[5] = p_nh_omegadot_a;
+  extvarbuf[6] = p_nh_omega_b;
+  extvarbuf[7] = p_nh_omegadot_b;
+  extvarbuf[8] = p_nh_omega_c;
+  extvarbuf[9] = p_nh_omegadot_c;
+  extvarbuf[10] = p_nh_omega_full[0][0];
+  extvarbuf[11] = p_nh_omega_full[0][1];
+  extvarbuf[12] = p_nh_omega_full[0][2];
+  extvarbuf[13] = p_nh_omega_full[1][0];
+  extvarbuf[14] = p_nh_omega_full[1][1];
+  extvarbuf[15] = p_nh_omega_full[1][2];
+  extvarbuf[16] = p_nh_omega_full[2][0];
+  extvarbuf[17] = p_nh_omega_full[2][1];
+  extvarbuf[18] = p_nh_omega_full[2][2];
+  extvarbuf[19] = p_nh_omegadot_full[0][0];
+  extvarbuf[20] = p_nh_omegadot_full[0][1];
+  extvarbuf[21] = p_nh_omegadot_full[0][2];
+  extvarbuf[22] = p_nh_omegadot_full[1][0];
+  extvarbuf[23] = p_nh_omegadot_full[1][1];
+  extvarbuf[24] = p_nh_omegadot_full[1][2];
+  extvarbuf[25] = p_nh_omegadot_full[2][0];
+  extvarbuf[26] = p_nh_omegadot_full[2][1];
+  extvarbuf[27] = p_nh_omegadot_full[2][2];
+  extvarbuf[28] = vol0;
+  extvarbuf[29] = nkt;
+  extvarbuf[30] = extended_energy;
+}
+@
+
+
+4.20
+log
+@Added 'output sum momentum' command
+@
+text
+@d74 4
+d274 36
+d396 1
+a396 1
+		      Lvolume,Lnparticles);
+d1595 48
+@
+
+
+4.19
+log
+@Improved stability of steepest descent minimizer
+@
+text
+@d508 1
+a508 1
+    b->BoxDeform(deformx,comm);
+d511 1
+a511 1
+    b->BoxDeform(deformx,comm);
+d564 1
+a564 1
+    b->BoxDeform(deformx,comm);
+d567 1
+a567 1
+    b->BoxDeform(deformx,comm);
+@
+
+
+4.18
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@d1071 1
+d1181 3
+@
+
+
+4.17
+log
+@Minor twiddles
+@
+text
+@d367 1
+a367 1
+  double dilation[3],rhokt,omegadotdot;
+d760 1
+a760 1
+  double dilation[3],rhokt,omegadotdot;
+d1055 1
+a1055 2
+      TemperatureControlRescale(temp_target,temp_window,
+				temp_factor,p,comm);
+d1062 1
+a1062 3
+void Stepper::TemperatureControlRescale(const double& temp_target,
+      const double& temp_window, const double& temp_factor,
+      ParticleList* p,Comm* comm) {
+@
+
+
+4.16
+log
+@Added command dump format style
+@
+text
+@d1205 1
+a1205 1
+    ;
+@
+
+
+4.15
+log
+@Added nose-hoover-full version of pressure control to allow fully flexible fluctuations in box dimensions
+@
+text
+@d341 1
+d1407 1
+a1407 1
+    glog.error("Stepper::input_temperature_control:\n"
+@
+
+
+4.14
+log
+@Fixed problem with invalid neighbor list with fix deformation.
+@
+text
+@d127 39
+a261 39
+  case ensemble_nph_nh_full:
+    if (!(b->get_perflagall())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_drag = 1.0-p_nh_drag*constants.tfactor*timestep;
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	p_nh_omega_full[i][j] = 0.0;
+	p_nh_omegadot_full[i][j] = 0.0;
+      }
+    }
+    p_target = p_target*constants.pfactor;
+    vol0 =  b->get_volume();
+    nkt = p->get_nparticles_tot()*constants.boltz*p->get_temperature();
+    break;
+  case ensemble_npt_nh_full:
+    temp_ramp *= 0.5;
+    if (!(b->get_perflagall())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    t_nh_tau = t_nh_tau/constants.tfactor;
+    t_nh_drag = 1.0-t_nh_drag*constants.tfactor*timestep;
+    t_nh_eta = 0.0;
+    t_nh_etadot = 0.0;
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_drag = 1.0-p_nh_drag*constants.tfactor*timestep;
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	p_nh_omega_full[i][j] = 0.0;
+	p_nh_omegadot_full[i][j] = 0.0;
+      }
+    }
+    p_target = p_target*constants.pfactor;
+    vol0 =  b->get_volume();
+    nkt = p->get_nparticles_tot()*constants.boltz*p->get_temperature();
+    break;
+d312 1
+a312 1
+    case ensemble_nph_nh_partial:
+d316 1
+a316 1
+    case ensemble_npt_nh_partial:
+d320 1
+a320 1
+    case ensemble_nph_nh_full:
+d324 1
+a324 1
+    case ensemble_npt_nh_full:
+d348 1
+a348 1
+    Back(timestep,b,t,p,ff,fix_list,comm);
+d372 1
+d461 94
+d556 11
+a743 67
+  case ensemble_nph_nh_full:
+    vol_tmp = b->get_volume();
+    p->ComputeTemperature(comm);
+    rhokt = nkt/vol_tmp;
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+    p_tmp_full[0][0] = (k_virial_tmp[0]+f_virial_tmp[0])/vol_tmp;
+    p_tmp_full[1][1] = (k_virial_tmp[1]+f_virial_tmp[1])/vol_tmp;
+    p_tmp_full[2][2] = (k_virial_tmp[2]+f_virial_tmp[2])/vol_tmp;
+    p_tmp_full[0][1] = (k_virial_tmp[3]+f_virial_tmp[3])/vol_tmp;
+    p_tmp_full[0][2] = (k_virial_tmp[4]+f_virial_tmp[4])/vol_tmp;
+    p_tmp_full[1][2] = (k_virial_tmp[5]+f_virial_tmp[5])/vol_tmp;
+    p_tmp_full[1][0] = p_tmp_full[0][1];
+    p_tmp_full[2][0] = p_tmp_full[0][2];
+    p_tmp_full[2][1] = p_tmp_full[1][2];
+    for (int i=0;i<3;i++) {
+      for (int j=0;j<3;j++) {
+	omegadotdot = (p_tmp_full[i][j]-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+	p_nh_omegadot_full[i][j] += omegadotdot*dthalf;
+	p_nh_omegadot_full[i][j] *= p_nh_drag;
+	p_nh_omega_full[i][j] += p_nh_omegadot_full[i][j]*dthalf;
+      }
+    }
+    expfacv = exp(-dthalf*p_nh_omegadot);
+    p->ScaleVelocity(expfacv);
+    p->StepVelocity(dthalf);
+
+    expfacx = 1.0/expfacv;
+    dilation[0] = expfacx;
+    dilation[1] = expfacx;
+    dilation[2] = expfacx;
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    p->StepPosition(timestep);
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    break;
+  case ensemble_npt_nh_full:
+    temp_target += temp_ramp;
+    p->ComputeTemperature(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_etadot += etadotdot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_eta += t_nh_etadot*dthalf;
+
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    rhokt = nkt/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+    p_nh_omegadot += omegadotdot*dthalf;
+    p_nh_omegadot *= p_nh_drag;
+    p_nh_omega += p_nh_omegadot*dthalf;
+
+    expfacv = exp(-dthalf*(p_nh_omegadot+t_nh_etadot));
+    p->ScaleVelocity(expfacv);
+    p->StepVelocity(dthalf);
+
+    expfacx = exp(dthalf*p_nh_omegadot);
+    dilation[0] = expfacx;
+    dilation[1] = expfacx;
+    dilation[2] = expfacx;
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    p->StepPosition(timestep);
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+
+    break;
+d765 1
+d818 68
+a1049 32
+  case ensemble_nph_nh_full:
+    expfacv = exp(-dthalf*p_nh_omegadot);
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(expfacv);
+
+    p->ComputeTemperature(comm);
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    rhokt = nkt/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+    p_nh_omega += p_nh_omegadot*dthalf;
+    p_nh_omegadot *= p_nh_drag;
+    p_nh_omegadot += omegadotdot*dthalf;
+    break;
+  case ensemble_npt_nh_full:
+    expfacv = exp(-dthalf*(p_nh_omegadot+t_nh_etadot));
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(expfacv);
+    temp_target += temp_ramp;
+    p->ComputeTemperature(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_eta += t_nh_etadot*dthalf;
+    t_nh_etadot *= t_nh_drag;
+    t_nh_etadot += etadotdot*dthalf;
+
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    rhokt = nkt/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(rhokt*p_nh_tau*p_nh_tau);
+    p_nh_omega += p_nh_omegadot*dthalf;
+    p_nh_omegadot *= p_nh_drag;
+    p_nh_omegadot += omegadotdot*dthalf;
+
+    break;
+d1079 1
+d1103 25
+a1181 15
+  case ensemble_nph_nh_full:
+    extended_energy = 
+      0.5*3.0*nkt*
+      p_nh_omegadot*p_nh_omegadot*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0);
+    break;
+  case ensemble_npt_nh_full:
+    ndof = p->get_ndof();
+    extended_energy = 0.5*t_nh_etadot*t_nh_etadot*
+      ndof*constants.boltz*temp_target*t_nh_tau*t_nh_tau + 
+      ndof*constants.boltz*temp_target*t_nh_eta +
+      0.5*3.0*nkt*
+      p_nh_omegadot*p_nh_omegadot*p_nh_tau*p_nh_tau +
+      p_target*(b->get_volume()-vol0);
+    break;
+d1210 2
+d1245 2
+d1439 26
+a1522 2
+    glog.get_logfile() << " " << Lpflag_a << " " << Lpflag_b << " " << Lpflag_c;
+
+a1527 26
+  } else if (str_tmp == "nose-hoover-full") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nph_nh_full;
+    } else if (ensemble_style == ensemble_nvt_nh) {
+      ensemble_style = ensemble_npt_nh_full;
+    } else { 
+      glog.error("Stepper::input_pressure_control:\n"
+      "nose-hoover pressure control can not be used in this ensemble");
+    }      
+
+    buf_in >> p_target;
+    buf_in >> p_nh_tau;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("Stepper::input_pressure_control:\n"
+		 "Read error in input file");
+    }
+
+    glog.get_logfile() << " " << p_target << " " << p_nh_tau << endl;
+
+    if (p_nh_tau <= 0.0) {
+      glog.error("Stepper::input_pressure_control:\n"
+	"Invalid input parameter");
+    }
+
+@
+
+
+4.13
+log
+@Modifed fix deformation to correctly remap vectors
+@
+text
+@d277 1
+a277 1
+  bool Lenergy,Lvolume,Lnparticles,Lvirial,Latomvirial;
+a335 1
+      Lvolume = true;
+d339 4
+d345 1
+a345 1
+    ff->Neighboring(p,b,comm,Lvolume);
+@
+
+
+4.12
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@d334 7
+@
+
+
+4.11
+log
+@Fixed bug in stepper.cpp
+@
+text
+@d333 1
+d339 1
+d363 2
+@
+
+
+4.10
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d73 1
+@
+
+
+4.9
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d96 1
+a96 1
+    if (!(b->get_perflag())) {
+d110 1
+a110 1
+    if (!(b->get_perflag())) {
+d127 1
+a127 1
+    if (!(b->get_perflag())) {
+d174 1
+a174 1
+    if (!(b->get_perflag())) {
+d223 1
+a223 1
+    if (!(b->get_perflag())) {
+d241 1
+a241 1
+    if (!(b->get_perflag())) {
+d696 2
+@
+
+
+4.8
+log
+@Added damping constant commands for Nose-Hoover barostats and thermostats
+@
+text
+@d276 1
+a276 2
+  bool Lenergy,Lvolume,Lnparticles;
+  ForceFieldList::VirialStyles Lvirial;
+d288 1
+a288 1
+      Lvirial = ForceFieldList::all_particles;
+d291 7
+a297 1
+      Lvirial = ForceFieldList::none;
+d304 1
+a304 1
+      Lvirial = ForceFieldList::all_particles;
+d308 1
+a308 1
+      Lvirial = ForceFieldList::all_particles;
+d312 1
+a312 1
+      Lvirial = ForceFieldList::all_particles;
+d316 1
+a316 1
+      Lvirial = ForceFieldList::all_particles;
+d320 1
+a320 1
+      Lvirial = ForceFieldList::all_particles;
+d324 1
+a324 1
+      Lvirial = ForceFieldList::all_particles;
+d334 1
+a334 1
+    ff->ComputeForce(Lenergy,Lvirial,b,t,p,comm);
+@
+
+
+4.8.2.1
+log
+@Implemented ri*Fi pressure calc
+@
+text
+@d276 2
+a277 1
+  bool Lenergy,Lvolume,Lnparticles,Lvirial;
+d289 1
+a289 1
+      Lvirial = true;
+d292 1
+a292 1
+      Lvirial = false;
+d299 1
+a299 1
+      Lvirial = true;
+d303 1
+a303 1
+      Lvirial = true;
+d307 1
+a307 1
+      Lvirial = true;
+d311 1
+a311 1
+      Lvirial = true;
+d315 1
+a315 1
+      Lvirial = true;
+d319 1
+a319 1
+      Lvirial = true;
+@
+
+
+4.8.2.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d276 1
+a276 1
+  bool Lenergy,Lvolume,Lnparticles,Lvirial,Latomvirial;
+a293 6
+    if (outp->Need_AtomVirial()) {
+      Latomvirial = true;
+    } else {
+      Latomvirial = false;
+    }
+
+d328 1
+a328 1
+    ff->ComputeForce(Lenergy,Lvirial,Latomvirial,b,t,p,comm);
+@
+
+
+4.7
+log
+@Added multiple replica feature.
+@
+text
+@d71 2
+d75 2
+a76 1
+void Stepper::Setup(const ParticleList* p, const Box* b, Comm* comm) {
+d91 1
+d101 1
+d115 1
+d119 1
+d132 1
+d179 1
+d183 1
+d228 1
+d246 1
+d250 1
+d381 1
+d396 1
+d417 1
+d424 1
+d471 1
+d486 1
+d501 1
+d526 1
+d556 1
+d571 1
+d586 1
+d637 1
+d660 1
+d667 1
+d721 1
+d734 1
+d745 1
+d752 1
+d806 1
+d817 1
+d828 1
+d862 1
+d892 1
+d904 1
+d916 1
+d930 1
+d941 1
+d948 1
+d1101 2
+d1134 2
+d1264 21
+d1422 20
+@
+
+
+4.6
+log
+@Added GaAs version of Tersoff
+@
+text
+@d1047 1
+a1047 1
+    glog.logfile << endl;
+d1051 1
+a1051 1
+  glog.logfile << " " << str_tmp;
+d1069 1
+a1069 1
+      glog.logfile << endl;
+d1074 1
+a1074 1
+    glog.logfile << " " << temp_target << " " << t_nh_tau << endl;
+d1101 1
+a1101 1
+      glog.logfile << endl;
+d1108 1
+a1108 1
+    glog.logfile << " " << temp_target << " " << temp_final << " " << 
+d1139 1
+a1139 1
+      glog.logfile << endl;
+d1143 1
+a1143 1
+    glog.logfile << " " << temp_target <<
+d1182 1
+a1182 1
+      glog.logfile << endl;
+d1186 1
+a1186 1
+    glog.logfile << " " << temp_target << " " << temp_final << 
+d1226 1
+a1226 1
+    glog.logfile << endl;
+d1230 1
+a1230 1
+  glog.logfile << " " << str_tmp;
+d1248 1
+a1248 1
+      glog.logfile << endl;
+d1253 1
+a1253 1
+    glog.logfile << " " << p_target << " " << p_nh_tau << endl;
+d1273 1
+a1273 1
+      glog.logfile << " " << str_tmp; 
+d1278 1
+a1278 1
+      glog.logfile << " " << p_target_a; 
+d1284 1
+a1284 1
+      glog.logfile << " " << str_tmp; 
+d1289 1
+a1289 1
+      glog.logfile << " " << p_target_b; 
+d1295 1
+a1295 1
+      glog.logfile << " " << str_tmp; 
+d1300 1
+a1300 1
+      glog.logfile << " " << p_target_c; 
+d1306 1
+a1306 1
+      glog.logfile << endl;
+d1311 1
+a1311 1
+    glog.logfile << " " << p_nh_tau << endl;
+d1318 1
+a1318 1
+    glog.logfile << " " << Lpflag_a << " " << Lpflag_b << " " << Lpflag_c;
+d1339 1
+a1339 1
+      glog.logfile << endl;
+d1344 1
+a1344 1
+    glog.logfile << " " << p_target << " " << p_nh_tau << endl;
+@
+
+
+4.5
+log
+@Added some new barostats and thermostats.
+@
+text
+@d352 1
+a352 1
+    // Tuckerman, Berne and Martyna (1990).
+@
+
+
+4.4
+log
+@Added ramp variants for thermostats
+@
+text
+@a95 4
+    if (!(b->get_Lorthorhombic())) {
+      glog.error("Stepper::Setup:\n"
+	       "Must use fully-flexible barostat with triclinic system");
+    }
+d100 2
+a101 2
+    p_ref0 = (p->get_nparticles_tot()*constants.boltz*p->get_temperature()) / 
+      b->get_volume();
+a108 4
+    if (!(b->get_Lorthorhombic())) {
+      glog.error("Stepper::Setup:\n"
+	       "Must use fully-flexible barostat with triclinic system");
+    }
+d116 2
+a117 2
+    p_ref0 = (p->get_nparticles_tot()*constants.boltz*p->get_temperature()) / 
+      b->get_volume();
+d119 1
+a119 1
+  case ensemble_nph_nh_anisotropic:
+a123 4
+    if (!(b->get_Lorthorhombic())) {
+      glog.error("Stepper::Setup:\n"
+	       "Must use fully-flexible barostat with triclinic system");
+    }
+d125 1
+d130 2
+d137 8
+d149 1
+d151 9
+d161 2
+a162 2
+    p_ref0 = (p->get_nparticles_tot()*constants.boltz*p->get_temperature()) / 
+      b->get_volume();
+d164 1
+a164 1
+  case ensemble_npt_nh_anisotropic:
+a169 4
+    if (!(b->get_Lorthorhombic())) {
+      glog.error("Stepper::Setup:\n"
+	       "Must use fully-flexible barostat with triclinic system");
+    }
+d174 1
+d179 2
+d186 8
+d199 24
+d224 23
+a246 2
+    p_ref0 = (p->get_nparticles_tot()*constants.boltz*p->get_temperature()) / 
+      b->get_volume();
+d293 1
+a293 1
+    case ensemble_nph_nh_anisotropic:
+d297 9
+a305 1
+    case ensemble_npt_nh_anisotropic:
+d337 1
+a337 1
+  double p_tmp_a,p_tmp_b,p_tmp_c;
+d339 2
+a340 1
+  vector <double> k_virial_tmp,f_virial_tmp;
+d375 2
+a376 2
+    // This implementation is based closely on that of
+    // Martyna, tTobias and Klein, J.C.P. v. 101, p. 4177  (1994).
+d379 2
+a380 1
+    omegadotdot = (p_tmp-p_target)/(p_ref0*p_nh_tau*p_nh_tau);
+a382 1
+
+a395 1
+
+d405 2
+a406 1
+    omegadotdot = (p_tmp-p_target)/(p_ref0*p_nh_tau*p_nh_tau);
+d425 2
+a426 1
+  case ensemble_nph_nh_anisotropic:
+d431 15
+d447 6
+a452 2
+      p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/b->get_volume();
+      omegadotdot_a = (p_tmp_a-p_target_a)/(p_ref0*p_nh_tau*p_nh_tau);
+d461 6
+a466 2
+      p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/b->get_volume();
+      omegadotdot_b = (p_tmp_b-p_target_b)/(p_ref0*p_nh_tau*p_nh_tau);
+d475 6
+a480 2
+      p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/b->get_volume();
+      omegadotdot_c = (p_tmp_c-p_target_c)/(p_ref0*p_nh_tau*p_nh_tau);
+d488 1
+a488 1
+    p->ScaleVelocity(scalev);
+d501 1
+a501 1
+  case ensemble_npt_nh_anisotropic:
+d508 1
+d512 15
+d528 6
+a533 2
+      p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/b->get_volume();
+      omegadotdot_a = (p_tmp_a-p_target_a)/(p_ref0*p_nh_tau*p_nh_tau);
+d542 6
+a547 2
+      p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/b->get_volume();
+      omegadotdot_b = (p_tmp_b-p_target_b)/(p_ref0*p_nh_tau*p_nh_tau);
+d556 6
+a561 2
+      p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/b->get_volume();
+      omegadotdot_c = (p_tmp_c-p_target_c)/(p_ref0*p_nh_tau*p_nh_tau);
+d569 1
+a569 1
+    p->ScaleVelocity(scalev);
+d594 64
+d673 1
+a673 1
+  double p_tmp_a,p_tmp_b,p_tmp_c;
+d675 2
+a676 1
+  vector <double> k_virial_tmp,f_virial_tmp;
+d703 2
+a704 1
+    omegadotdot = (p_tmp-p_target)/(p_ref0*p_nh_tau*p_nh_tau);
+a708 1
+    temp_target += temp_ramp;
+d712 1
+a712 1
+
+d719 2
+a720 1
+    omegadotdot = (p_tmp-p_target)/(p_ref0*p_nh_tau*p_nh_tau);
+d723 1
+d725 1
+a725 1
+  case ensemble_nph_nh_anisotropic:
+d745 1
+a745 1
+    p->ScaleVelocity(scalev);
+d747 1
+d751 16
+d768 6
+a773 2
+      p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/b->get_volume();
+      omegadotdot_a = (p_tmp_a-p_target_a)/(p_ref0*p_nh_tau*p_nh_tau);
+d778 6
+a783 2
+      p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/b->get_volume();
+      omegadotdot_b = (p_tmp_b-p_target_b)/(p_ref0*p_nh_tau*p_nh_tau);
+d788 6
+a793 2
+      p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/b->get_volume();
+      omegadotdot_c = (p_tmp_c-p_target_c)/(p_ref0*p_nh_tau*p_nh_tau);
+d799 1
+a799 1
+  case ensemble_npt_nh_anisotropic:
+d823 1
+a823 1
+    p->ScaleVelocity(scalev);
+d830 1
+d834 15
+d850 6
+a855 2
+      p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/b->get_volume();
+      omegadotdot_a = (p_tmp_a-p_target_a)/(p_ref0*p_nh_tau*p_nh_tau);
+d861 6
+a866 2
+      p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/b->get_volume();
+      omegadotdot_b = (p_tmp_b-p_target_b)/(p_ref0*p_nh_tau*p_nh_tau);
+d872 6
+a877 2
+      p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/b->get_volume();
+      omegadotdot_c = (p_tmp_c-p_target_c)/(p_ref0*p_nh_tau*p_nh_tau);
+d882 29
+d950 3
+a952 3
+      0.5*p_nh_omegadot*p_nh_omegadot*
+      (3.0*b->get_volume())*p_ref0*p_nh_tau*p_nh_tau +
+      p_target*b->get_volume();
+d959 3
+a961 3
+      0.5*p_nh_omegadot*p_nh_omegadot*
+      (3.0*b->get_volume())*p_ref0*p_nh_tau*p_nh_tau +
+      p_target*b->get_volume();
+d963 1
+a963 1
+  case ensemble_nph_nh_anisotropic:
+d970 2
+a971 2
+      b->get_volume()*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_a*b->get_volume();
+d977 2
+a978 2
+      b->get_volume()*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_b*b->get_volume();
+d984 2
+a985 2
+      b->get_volume()*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_c*b->get_volume();
+d989 1
+a989 1
+  case ensemble_npt_nh_anisotropic:
+d998 2
+a999 2
+      b->get_volume()*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_a*b->get_volume();
+d1005 2
+a1006 2
+      b->get_volume()*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_b*b->get_volume();
+d1012 2
+a1013 2
+      b->get_volume()*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_c*b->get_volume();
+d1017 15
+d1260 1
+a1260 1
+  } else if (str_tmp == "nose-hoover-anisotropic") {
+d1262 1
+a1262 1
+      ensemble_style = ensemble_nph_nh_anisotropic;
+d1264 1
+a1264 1
+      ensemble_style = ensemble_npt_nh_anisotropic;
+d1311 7
+d1320 25
+a1344 1
+    glog.logfile << " " << p_nh_tau << endl;
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d86 1
+d108 1
+d156 1
+d189 1
+d197 1
+a197 1
+void Stepper::Run(const int nsteps, const double timestep, 
+d205 5
+d294 1
+d329 1
+d404 1
+d490 1
+d496 1
+d517 1
+d578 1
+d635 1
+d792 40
+d849 45
+a893 1
+    glog.logfile << " " << temp_target << " " << temp_freq << " " << 
+d901 5
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.4
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.3
+log
+@Fixed two bugs in nph_anisotropic integration scheme that
+were causing the wrong dynamics. The scheme now conserves
+the pseudohamiltonian well.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d279 2
+a627 1
+  double wh,wk,wl;
+a651 1
+    b->get_lw(wh,wk,wl);
+d658 1
+a658 1
+      wh*p_ref0*p_nh_tau*p_nh_tau +
+d665 1
+a665 1
+      wk*p_ref0*p_nh_tau*p_nh_tau +
+d672 1
+a672 1
+      wl*p_ref0*p_nh_tau*p_nh_tau +
+a678 1
+    b->get_lw(wh,wk,wl);
+d686 1
+a686 1
+      wh*p_ref0*p_nh_tau*p_nh_tau +
+d693 1
+a693 1
+      wk*p_ref0*p_nh_tau*p_nh_tau +
+d700 1
+a700 1
+      wl*p_ref0*p_nh_tau*p_nh_tau +
+@
+
+
+3.2.2.1
+log
+@Modified use of nat to allow treatment of big parallel systems.
+@
+text
+@a278 2
+    // This implementation is based closely on that of
+    // Martyna, tTobias and Klein, J.C.P. v. 101, p. 4177  (1994).
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d62 3
+a64 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Stepper::Setup()" << endl;
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d62 1
+a62 1
+
+d64 1
+d182 2
+a183 1
+  bool Lenergy,Lvirial,Lvolume,Lnparticles;
+d190 1
+a190 1
+      Lvirial = true;
+d193 1
+a193 1
+      Lvirial = false;
+d200 1
+a200 1
+      Lvirial = true;
+d204 1
+a204 1
+      Lvirial = true;
+d208 1
+a208 1
+      Lvirial = true;
+d212 1
+a212 1
+      Lvirial = true;
+@
+
+
+2.21
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.20
+log
+@Updated header
+@
+text
+@d117 15
+a131 9
+    p_nh_omega_a = 0.0;
+    p_nh_omega_b = 0.0;
+    p_nh_omega_c = 0.0;
+    p_nh_omegadot_a = 0.0;
+    p_nh_omegadot_b = 0.0;
+    p_nh_omegadot_c = 0.0;
+    p_target_a = p_target_a*constants.pfactor;
+    p_target_b = p_target_b*constants.pfactor;
+    p_target_c = p_target_c*constants.pfactor;
+d148 15
+a162 9
+    p_nh_omega_a = 0.0;
+    p_nh_omega_b = 0.0;
+    p_nh_omega_c = 0.0;
+    p_nh_omegadot_a = 0.0;
+    p_nh_omegadot_b = 0.0;
+    p_nh_omegadot_c = 0.0;
+    p_target_a = p_target_a*constants.pfactor;
+    p_target_b = p_target_b*constants.pfactor;
+    p_target_c = p_target_c*constants.pfactor;
+d413 15
+a427 3
+    dilation[0] = exp(dthalf*p_nh_omegadot_a);
+    dilation[1] = exp(dthalf*p_nh_omegadot_b);
+    dilation[2] = exp(dthalf*p_nh_omegadot_c);
+@
+
+
+2.19
+log
+@Finished barostat for now
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.18
+log
+@Found bug in stepper.cpp (affects only NPH with nose-hoover-anisotropic)
+@
+text
+@d73 8
+d89 8
+d108 8
+d130 8
+@
+
+
+2.17
+log
+@Added anisotropic style to pressure control,
+and included in Tersoff example testp.
+@
+text
+@d592 2
+@
+
+
+2.16
+log
+@Added NPT ensemble
+@
+text
+@d91 31
+d160 8
+d195 4
+d279 100
+d393 4
+d440 99
+d567 1
+d591 54
+d671 1
+a671 1
+    } else if (ensemble_style = ensemble_nph_nh) {
+d744 1
+a744 1
+  string str_tmp;
+d761 1
+a761 1
+    } else if (ensemble_style = ensemble_nvt_nh) {
+d778 60
+@
+
+
+2.15
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d32 1
+d56 1
+a56 1
+void Stepper::Setup(Comm* comm) {
+d65 2
+d68 1
+a68 1
+    t_nh_freq = t_nh_freq*constants.tfactor;
+a71 3
+  case ensemble_nvt_rescale:
+    temp_skip = 1;
+    break;
+d73 1
+a73 1
+    p_nh_freq = p_nh_freq*constants.tfactor;
+d77 2
+d81 1
+a81 1
+    t_nh_freq = t_nh_freq*constants.tfactor;
+d84 1
+a84 1
+    p_nh_freq = p_nh_freq*constants.tfactor;
+d88 2
+d91 2
+a92 1
+  case ensemble_nve:
+d141 1
+a142 1
+    glog.timetotal = t1-t0;
+d153 1
+a153 1
+  double temp_tmp,etadotdot,expfac,p_tmp;
+d161 4
+d168 2
+a169 1
+    // Their Q is equivalent to ndof*boltz*temp_target/t_nh_freq^2
+d171 8
+a178 1
+    // the corresponding total energy to first order in timestep. 
+d180 1
+a180 3
+    temp_tmp = p->get_temperature();
+    etadotdot = t_nh_freq*t_nh_freq*
+      (temp_tmp/temp_target-1.0);
+d183 3
+a185 3
+    expfac = exp(-t_nh_etadot*dthalf);
+    p->ScaleVelocity(expfac);
+    p->StepVelocity((1.0+expfac)*dtquarter);
+a189 1
+    temp_tmp = p->get_temperature();
+d191 1
+a191 5
+
+    rhokt = (p->get_nparticles_tot()*constants.boltz*temp_target) / 
+      b->get_volume();
+
+    omegadotdot = p_nh_freq*p_nh_freq*(p_tmp-p_target)/rhokt;
+a193 4
+    expfac = exp(-dthalf*(p_nh_omegadot));
+    dilation[0] = exp(p_nh_omegadot*dthalf);
+    dilation[1] = exp(p_nh_omegadot*dthalf);
+    dilation[2] = exp(p_nh_omegadot*dthalf);
+d195 8
+a202 2
+    p->ScaleVelocity(expfac);
+    p->StepVelocity((1.0+expfac)*dtquarter);
+d206 2
+d212 1
+a212 4
+    temp_tmp = p->get_temperature();
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    etadotdot = t_nh_freq*t_nh_freq*
+      (temp_tmp/temp_target-1.0);
+d216 2
+a217 4
+    rhokt = (p->get_nparticles_tot()*constants.boltz*temp_target) / 
+      b->get_volume();
+
+    omegadotdot = p_nh_freq*p_nh_freq*(p_tmp-p_target)/rhokt;
+a219 4
+    expfac = exp(-dthalf*(t_nh_etadot+p_nh_omegadot));
+    dilation[0] = exp(p_nh_omegadot*dthalf);
+    dilation[1] = exp(p_nh_omegadot*dthalf);
+    dilation[2] = exp(p_nh_omegadot*dthalf);
+d221 8
+a228 2
+    p->ScaleVelocity(expfac);
+    p->StepVelocity((1.0+expfac)*dtquarter);
+d232 2
+a239 4
+  case ensemble_nve:
+    p->StepVelocity(dthalf);
+    p->StepPosition(timestep);
+    break;
+d247 1
+a247 1
+  double temp_tmp,etadotdot,expfac,p_tmp;
+d255 3
+d259 3
+a261 3
+    expfac = exp(-t_nh_etadot*dthalf);
+    p->ScaleVelocity(expfac);
+    p->StepVelocity((1.0+expfac)*dtquarter);
+d263 1
+a263 3
+    temp_tmp = p->get_temperature();
+    etadotdot = t_nh_freq*t_nh_freq*
+      (temp_tmp/temp_target-1.0);
+d268 4
+a271 3
+    expfac = exp(-dthalf*(p_nh_omegadot));
+    p->ScaleVelocity(expfac);
+    p->StepVelocity((1.0+expfac)*dtquarter);
+d274 2
+a275 5
+
+    rhokt = (p->get_nparticles_tot()*constants.boltz*temp_target) / 
+      b->get_volume();
+
+    omegadotdot = p_nh_freq*p_nh_freq*(p_tmp-p_target)/rhokt;
+a276 1
+    p_nh_omega += p_nh_omegadot*dthalf;
+d279 4
+a282 3
+    expfac = exp(-dthalf*(p_nh_omegadot));
+    p->ScaleVelocity(expfac);
+    p->StepVelocity((1.0+expfac)*dtquarter);
+d284 1
+a284 4
+    temp_tmp = p->get_temperature();
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    etadotdot = t_nh_freq*t_nh_freq*
+      (temp_tmp/temp_target-1.0);
+d288 3
+a290 4
+    rhokt = (p->get_nparticles_tot()*constants.boltz*temp_target) / 
+      b->get_volume();
+
+    omegadotdot = p_nh_freq*p_nh_freq*(p_tmp-p_target)/rhokt;
+a291 1
+    p_nh_omega += p_nh_omegadot*dthalf;
+a299 3
+  case ensemble_nve:
+    p->StepVelocity(dthalf);
+    break;
+d325 2
+a326 3
+    extended_energy = ndof*constants.boltz*temp_target*
+    t_nh_etadot*t_nh_etadot/
+     (2.0*t_nh_freq*t_nh_freq) +
+a329 1
+    ndof = p->get_ndof();
+d331 2
+a332 3
+      ndof*constants.boltz*temp_target*
+      p_nh_omegadot*p_nh_omegadot/
+      (2.0*p_nh_freq*p_nh_freq) +
+d337 2
+a338 3
+    extended_energy = ndof*constants.boltz*temp_target*
+    t_nh_etadot*t_nh_etadot/
+      (2.0*t_nh_freq*t_nh_freq) +
+d340 2
+a341 3
+      ndof*constants.boltz*temp_target*
+      p_nh_omegadot*p_nh_omegadot/
+      (2.0*p_nh_freq*p_nh_freq) +
+d343 1
+d378 1
+a378 1
+    buf_in >> t_nh_freq;
+d386 1
+a386 1
+    glog.logfile << " " << temp_target << " " << t_nh_freq << endl;
+d393 1
+a393 1
+    if (t_nh_freq <= 0.0) {
+d459 1
+a459 1
+      ensemble_style = ensemble_npt_nh;
+d468 1
+a468 1
+    buf_in >> p_nh_freq;
+d476 1
+a476 1
+    glog.logfile << " " << p_target << " " << p_nh_freq << endl;
+d478 1
+a478 1
+    if (p_nh_freq <= 0.0) {
+@
+
+
+2.14
+log
+@Various
+@
+text
+@d43 1
+d52 1
+a52 1
+  temp_control_style = temp_control_none;
+d63 5
+a67 5
+  switch(temp_control_style) {
+  case temp_control_nose_hoover:
+    nose_hoover_freq = nose_hoover_freq*constants.tfactor;
+    nose_hoover_eta = 0.0;
+    nose_hoover_etadot = 0.0;
+d69 1
+a69 1
+  case temp_control_rescale:
+d72 16
+a87 1
+  case temp_control_none:
+d100 1
+a100 1
+  bool Lenergy,Lvirial;
+d113 15
+d130 1
+a130 1
+    ff->Neighboring(p,b,comm);
+d136 1
+a136 1
+    if (Lenergy) ComputeExtendedEnergy(p);
+d138 2
+a139 1
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,extended_energy);
+d148 3
+a150 1
+  double temp_tmp,etadotdot,expfac;
+d152 5
+a156 2
+  switch(temp_control_style) {
+  case temp_control_nose_hoover:
+d159 1
+a159 1
+    // Their Q is equivalent to ndof*boltz*temp_target/nose_hoover_freq^2
+d164 37
+a200 1
+    etadotdot = nose_hoover_freq*nose_hoover_freq*
+d202 14
+a215 3
+    nose_hoover_etadot += etadotdot*timestep/2.0;
+    nose_hoover_eta += nose_hoover_etadot*timestep/2.0;
+    expfac = exp(-nose_hoover_etadot*timestep/2.0);
+d217 3
+a219 1
+    p->StepVelocity((1.0+expfac)*timestep/4.0);
+d221 1
+d223 2
+a224 2
+  case temp_control_rescale:
+    p->StepVelocity(timestep/2.0);
+d227 2
+a228 2
+  case temp_control_none:
+    p->StepVelocity(timestep/2.0);
+d238 25
+a262 1
+  double temp_tmp,etadotdot,expfac;
+d264 9
+a272 3
+  switch(temp_control_style) {
+  case temp_control_nose_hoover:
+    expfac = exp(-nose_hoover_etadot*timestep/2.0);
+d274 1
+a274 1
+    p->StepVelocity((1.0+expfac)*timestep/4.0);
+d277 2
+a278 1
+    etadotdot = nose_hoover_freq*nose_hoover_freq*
+d280 9
+a288 2
+    nose_hoover_eta += nose_hoover_etadot*timestep/2.0;
+    nose_hoover_etadot += etadotdot*timestep/2.0;
+d290 2
+a291 2
+  case temp_control_rescale:
+    p->StepVelocity(timestep/2.0);
+d297 2
+a298 2
+  case temp_control_none:
+    p->StepVelocity(timestep/2.0);
+d319 1
+a319 1
+void  Stepper::ComputeExtendedEnergy(ParticleList* p) {
+d322 2
+a323 2
+  switch(temp_control_style) {
+  case temp_control_nose_hoover:
+d326 3
+a328 3
+    nose_hoover_etadot*nose_hoover_etadot/
+     (2.0*nose_hoover_freq*nose_hoover_freq) +
+      ndof*constants.boltz*temp_target*nose_hoover_eta;
+d330 18
+d352 1
+d370 1
+a370 1
+    temp_control_style = temp_control_none;
+d372 9
+a380 1
+    temp_control_style = temp_control_nose_hoover;
+d382 1
+a382 1
+    buf_in >> nose_hoover_freq;
+d390 1
+a390 1
+    glog.logfile << " " << temp_target << " " << nose_hoover_freq << endl;
+d397 1
+a397 1
+    if (nose_hoover_freq <= 0.0) {
+d403 6
+a408 1
+    temp_control_style = temp_control_rescale;
+d443 46
+@
+
+
+2.13
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+d105 1
+a106 1
+    if (Lenergy) ComputeExtendedEnergy(p);
+@
+
+
+2.12
+log
+@Added Ewald sum example
+@
+text
+@d214 1
+a214 1
+  stringstream buf_in(buf);
+@
+
+
+2.11
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d84 1
+d89 8
+d100 1
+a100 1
+    ff->ComputeForce(b,t,p,comm);
+d106 1
+a106 1
+    ComputeExtendedEnergy(p);
+@
+
+
+2.11.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@d59 1
+a59 1
+#ifdef USE_NODEFILES
+a60 1
+#endif
+@
+
+
+2.11.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a31 1
+#include <iomanip>
+a42 1
+#include "box.h"
+d51 1
+a51 1
+  ensemble_style = ensemble_nve;
+d54 1
+a54 1
+void Stepper::Setup(const ParticleList* p, const Box* b, Comm* comm) {
+d63 5
+a67 2
+  switch(ensemble_style) {
+  case ensemble_nve:
+d69 2
+a70 67
+  case ensemble_nvt_nh:
+    t_nh_tau = t_nh_tau/constants.tfactor;
+    t_nh_eta = 0.0;
+    t_nh_etadot = 0.0;
+    break;
+  case ensemble_nph_nh:
+    if (!(b->get_perflag())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    if (!(b->get_Lorthorhombic())) {
+      glog.error("Stepper::Setup:\n"
+	       "Must use fully-flexible barostat with triclinic system");
+    }
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_omega = 0.0;
+    p_nh_omegadot = 0.0;
+    p_target = p_target*constants.pfactor;
+    p_ref0 = (p->get_nparticles_tot()*constants.boltz*p->get_temperature()) / 
+      b->get_volume();
+    break;
+  case ensemble_npt_nh:
+    if (!(b->get_perflag())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    if (!(b->get_Lorthorhombic())) {
+      glog.error("Stepper::Setup:\n"
+	       "Must use fully-flexible barostat with triclinic system");
+    }
+    t_nh_tau = t_nh_tau/constants.tfactor;
+    t_nh_eta = 0.0;
+    t_nh_etadot = 0.0;
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    p_nh_omega = 0.0;
+    p_nh_omegadot = 0.0;
+    p_target = p_target*constants.pfactor;
+    p_ref0 = (p->get_nparticles_tot()*constants.boltz*p->get_temperature()) / 
+      b->get_volume();
+    break;
+  case ensemble_nph_nh_anisotropic:
+    if (!(b->get_perflag())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    if (!(b->get_Lorthorhombic())) {
+      glog.error("Stepper::Setup:\n"
+	       "Must use fully-flexible barostat with triclinic system");
+    }
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    if (Lpflag_a) {
+      p_nh_omega_a = 0.0;
+      p_nh_omegadot_a = 0.0;
+      p_target_a = p_target_a*constants.pfactor;
+    }
+    if (Lpflag_b) {
+      p_nh_omega_b = 0.0;
+      p_nh_omegadot_b = 0.0;
+      p_target_b = p_target_b*constants.pfactor;
+    }
+    if (Lpflag_c) {
+      p_nh_omega_c = 0.0;
+      p_nh_omegadot_c = 0.0;
+      p_target_c = p_target_c*constants.pfactor;
+    }
+    p_ref0 = (p->get_nparticles_tot()*constants.boltz*p->get_temperature()) / 
+      b->get_volume();
+d72 1
+a72 33
+  case ensemble_npt_nh_anisotropic:
+    if (!(b->get_perflag())) {
+      glog.error("Stepper::Setup:\n"
+		 "Cannot use barostat with non-periodic system");
+    }
+    if (!(b->get_Lorthorhombic())) {
+      glog.error("Stepper::Setup:\n"
+	       "Must use fully-flexible barostat with triclinic system");
+    }
+    t_nh_tau = t_nh_tau/constants.tfactor;
+    t_nh_eta = 0.0;
+    t_nh_etadot = 0.0;
+    p_nh_tau = p_nh_tau/constants.tfactor;
+    if (Lpflag_a) {
+      p_nh_omega_a = 0.0;
+      p_nh_omegadot_a = 0.0;
+      p_target_a = p_target_a*constants.pfactor;
+    }
+    if (Lpflag_b) {
+      p_nh_omega_b = 0.0;
+      p_nh_omegadot_b = 0.0;
+      p_target_b = p_target_b*constants.pfactor;
+    }
+    if (Lpflag_c) {
+      p_nh_omega_c = 0.0;
+      p_nh_omegadot_c = 0.0;
+      p_target_c = p_target_c*constants.pfactor;
+    }
+    p_ref0 = (p->get_nparticles_tot()*constants.boltz*p->get_temperature()) / 
+      b->get_volume();
+    break;
+  case ensemble_nvt_rescale:
+    temp_skip = 1;
+a84 1
+  bool Lenergy,Lvirial,Lvolume,Lnparticles;
+a88 31
+    if (outp->Need_Thermo()) {
+      Lenergy = true;
+      Lvirial = true;
+    } else {
+      Lenergy = false;
+      Lvirial = false;
+    }
+
+    Lvolume = false;
+    Lnparticles = false;
+    switch(ensemble_style) {
+    case ensemble_nph_nh:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    case ensemble_npt_nh:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    case ensemble_nph_nh_anisotropic:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    case ensemble_npt_nh_anisotropic:
+      Lvirial = true;
+      Lvolume = true;
+      break;
+    default:
+      ;
+    }
+
+d91 2
+a92 2
+    ff->Neighboring(p,b,comm,Lvolume);
+    ff->ComputeForce(Lenergy,Lvirial,b,t,p,comm);
+d98 2
+a99 3
+    if (Lenergy) ComputeExtendedEnergy(p,b);
+    outp->WriteOutput(istep,p,b,t,comm,ff,fix_list,extended_energy,
+		      Lvolume,Lnparticles);
+d108 4
+a111 17
+  double etadotdot,expfacv,expfacx,p_tmp;
+  double dthalf,dtquarter;
+  double dilation[3],rhokt,omegadotdot;
+  double omegadotdot_a,omegadotdot_b,omegadotdot_c;
+  double p_tmp_a,p_tmp_b,p_tmp_c;
+  double scalev[3];
+  vector <double> k_virial_tmp,f_virial_tmp;
+
+  dthalf = timestep/2.0;
+  dtquarter = timestep/4.0;
+
+  switch(ensemble_style) {
+  case ensemble_nve:
+    p->StepVelocity(dthalf);
+    p->StepPosition(timestep);
+    break;
+  case ensemble_nvt_nh:
+d114 1
+a114 2
+    // Their Q is equivalent to ndof*boltz*temp_target*t_nh_tau^2
+    // The phase space distribution is affected by the choice of ndof.
+d116 1
+a116 8
+    // the corresponding total energy to first order in timestep,
+    // It uses the following Trotter factorization of Liouville operator:
+    //              L -> Letadot,(Leta,(Letav,(Lv,Lx)))), 
+    // where the notation L -> (L1,L2) indicates the factorization
+    //
+    // exp(i(L1+L2)t) ~= exp(iL1 t/2)exp(iL2 t)exp(iL1 t/2).
+    // assuming L = L1+L2
+    //
+d118 8
+a125 6
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_etadot += etadotdot*dthalf;
+    t_nh_eta += t_nh_etadot*dthalf;
+    expfacv = exp(-t_nh_etadot*dthalf);
+    p->ScaleVelocity(expfacv);
+    p->StepVelocity(dthalf);
+d128 2
+a129 17
+  case ensemble_nph_nh:
+    p->ComputeTemperature(comm);
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(p_ref0*p_nh_tau*p_nh_tau);
+    p_nh_omegadot += omegadotdot*dthalf;
+    p_nh_omega += p_nh_omegadot*dthalf;
+
+    expfacv = exp(-dthalf*p_nh_omegadot);
+    p->ScaleVelocity(expfacv);
+    p->StepVelocity(dthalf);
+
+    expfacx = 1.0/expfacv;
+    dilation[0] = expfacx;
+    dilation[1] = expfacx;
+    dilation[2] = expfacx;
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+a130 3
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+
+d132 2
+a133 140
+  case ensemble_npt_nh:
+    p->ComputeTemperature(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_etadot += etadotdot*dthalf;
+    t_nh_eta += t_nh_etadot*dthalf;
+
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(p_ref0*p_nh_tau*p_nh_tau);
+    p_nh_omegadot += omegadotdot*dthalf;
+    p_nh_omega += p_nh_omegadot*dthalf;
+
+    expfacv = exp(-dthalf*(p_nh_omegadot+t_nh_etadot));
+    p->ScaleVelocity(expfacv);
+    p->StepVelocity(dthalf);
+
+    expfacx = exp(dthalf*p_nh_omegadot);
+    dilation[0] = expfacx;
+    dilation[1] = expfacx;
+    dilation[2] = expfacx;
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    p->StepPosition(timestep);
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+
+    break;
+  case ensemble_nph_nh_anisotropic:
+    p->ComputeKineticVirial(comm);
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+
+    if (Lpflag_a) {
+      p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/b->get_volume();
+      omegadotdot_a = (p_tmp_a-p_target_a)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_a += omegadotdot_a*dthalf;
+      p_nh_omega_a += p_nh_omegadot_a*dthalf;
+      scalev[0] = exp(-dthalf*p_nh_omegadot_a);
+    } else {
+      scalev[0] = 1.0;
+    }
+
+    if (Lpflag_b) {
+      p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/b->get_volume();
+      omegadotdot_b = (p_tmp_b-p_target_b)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_b += omegadotdot_b*dthalf;
+      p_nh_omega_b += p_nh_omegadot_b*dthalf;
+      scalev[1] = exp(-dthalf*p_nh_omegadot_b);
+    } else {
+      scalev[1] = 1.0;
+    }
+
+    if (Lpflag_c) {
+      p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/b->get_volume();
+      omegadotdot_c = (p_tmp_c-p_target_c)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_c += omegadotdot_c*dthalf;
+      p_nh_omega_c += p_nh_omegadot_c*dthalf;
+      scalev[2] = exp(-dthalf*p_nh_omegadot_c);
+    } else {
+      scalev[2] = 1.0;
+    }
+
+    p->ScaleVelocity(scalev);
+    p->StepVelocity(dthalf);
+
+    dilation[0] = 1.0/scalev[0];
+    dilation[1] = 1.0/scalev[1];
+    dilation[2] = 1.0/scalev[2];
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    p->StepPosition(timestep);
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+
+    break;
+  case ensemble_npt_nh_anisotropic:
+    p->ComputeKineticVirial(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_etadot += etadotdot*dthalf;
+    t_nh_eta += t_nh_etadot*dthalf;
+
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+
+    if (Lpflag_a) {
+      p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/b->get_volume();
+      omegadotdot_a = (p_tmp_a-p_target_a)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_a += omegadotdot_a*dthalf;
+      p_nh_omega_a += p_nh_omegadot_a*dthalf;
+      scalev[0] = exp(-dthalf*(p_nh_omegadot_a+t_nh_etadot));
+    } else {
+      scalev[0] = exp(-dthalf*t_nh_etadot);
+    }
+
+    if (Lpflag_b) {
+      p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/b->get_volume();
+      omegadotdot_b = (p_tmp_b-p_target_b)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_b += omegadotdot_b*dthalf;
+      p_nh_omega_b += p_nh_omegadot_b*dthalf;
+      scalev[1] = exp(-dthalf*(p_nh_omegadot_b+t_nh_etadot));
+    } else {
+      scalev[1] = exp(-dthalf*t_nh_etadot);
+    }
+
+    if (Lpflag_c) {
+      p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/b->get_volume();
+      omegadotdot_c = (p_tmp_c-p_target_c)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omegadot_c += omegadotdot_c*dthalf;
+      p_nh_omega_c += p_nh_omegadot_c*dthalf;
+      scalev[2] = exp(-dthalf*(p_nh_omegadot_c+t_nh_etadot));
+    } else {
+      scalev[2] = exp(-dthalf*t_nh_etadot);
+    }
+
+    p->ScaleVelocity(scalev);
+    p->StepVelocity(dthalf);
+
+    if (Lpflag_a) {
+      dilation[0] = exp(dthalf*p_nh_omegadot_a);
+    } else {
+      dilation[0] = 1.0;
+    }
+    if (Lpflag_b) {
+      dilation[1] = exp(dthalf*p_nh_omegadot_b);
+    } else {
+      dilation[1] = 1.0;
+    }
+    if (Lpflag_c) {
+      dilation[2] = exp(dthalf*p_nh_omegadot_c);
+    } else {
+      dilation[2] = 1.0;
+    }
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+    p->StepPosition(timestep);
+    b->BoxDilate(dilation);
+    p->ScalePosition(b,dilation);
+
+    break;
+  case ensemble_nvt_rescale:
+    p->StepVelocity(dthalf);
+d143 1
+a143 39
+  double etadotdot,expfacv,expfacx,p_tmp;
+  double dthalf,dtquarter;
+  double dilation[3],rhokt,omegadotdot;
+  double omegadotdot_a,omegadotdot_b,omegadotdot_c;
+  double p_tmp_a,p_tmp_b,p_tmp_c;
+  double scalev[3];
+  vector <double> k_virial_tmp,f_virial_tmp;
+
+  dthalf = timestep/2.0;
+  dtquarter = timestep/4.0;
+
+  switch(ensemble_style) {
+  case ensemble_nve:
+    p->StepVelocity(dthalf);
+    break;
+  case ensemble_nvt_nh:
+    expfacv = exp(-t_nh_etadot*dthalf);
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(expfacv);
+    p->ComputeTemperature(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_eta += t_nh_etadot*dthalf;
+    t_nh_etadot += etadotdot*dthalf;
+    break;
+  case ensemble_nph_nh:
+    expfacv = exp(-dthalf*p_nh_omegadot);
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(expfacv);
+
+    p->ComputeTemperature(comm);
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(p_ref0*p_nh_tau*p_nh_tau);
+    p_nh_omega += p_nh_omegadot*dthalf;
+    p_nh_omegadot += omegadotdot*dthalf;
+    break;
+  case ensemble_npt_nh:
+    expfacv = exp(-dthalf*(p_nh_omegadot+t_nh_etadot));
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(expfacv);
+d145 5
+d151 5
+a155 107
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_eta += t_nh_etadot*dthalf;
+    t_nh_etadot += etadotdot*dthalf;
+
+    p_tmp = (p->get_kinetic_virial()+ff->get_virial())/b->get_volume();
+    omegadotdot = (p_tmp-p_target)/(p_ref0*p_nh_tau*p_nh_tau);
+    p_nh_omega += p_nh_omegadot*dthalf;
+    p_nh_omegadot += omegadotdot*dthalf;
+    break;
+  case ensemble_nph_nh_anisotropic:
+    if (Lpflag_a) {
+      scalev[0] = exp(-dthalf*p_nh_omegadot_a);
+    } else {
+      scalev[0] = 1.0;
+    }
+
+    if (Lpflag_b) {
+      scalev[1] = exp(-dthalf*p_nh_omegadot_b);
+    } else {
+      scalev[1] = 1.0;
+    }
+
+    if (Lpflag_c) {
+      scalev[2] = exp(-dthalf*p_nh_omegadot_c);
+    } else {
+      scalev[2] = 1.0;
+    }
+
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(scalev);
+
+    p->ComputeKineticVirial(comm);
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+    if (Lpflag_a) {
+      p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/b->get_volume();
+      omegadotdot_a = (p_tmp_a-p_target_a)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omega_a += p_nh_omegadot_a*dthalf;
+      p_nh_omegadot_a += omegadotdot_a*dthalf;
+    }
+    if (Lpflag_b) {
+      p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/b->get_volume();
+      omegadotdot_b = (p_tmp_b-p_target_b)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omega_b += p_nh_omegadot_b*dthalf;
+      p_nh_omegadot_b += omegadotdot_b*dthalf;
+    }
+    if (Lpflag_c) {
+      p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/b->get_volume();
+      omegadotdot_c = (p_tmp_c-p_target_c)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omega_c += p_nh_omegadot_c*dthalf;
+      p_nh_omegadot_c += omegadotdot_c*dthalf;
+    }
+
+    break;
+  case ensemble_npt_nh_anisotropic:
+
+    expfacv = exp(-dthalf*t_nh_etadot);
+
+    if (Lpflag_a) {
+      scalev[0] = expfacv*exp(-dthalf*p_nh_omegadot_a);
+    } else {
+      scalev[0] = expfacv;
+    }
+
+    if (Lpflag_b) {
+      scalev[1] = expfacv*exp(-dthalf*p_nh_omegadot_b);
+    } else {
+      scalev[1] = expfacv;
+    }
+
+    if (Lpflag_c) {
+      scalev[2] = expfacv*exp(-dthalf*p_nh_omegadot_c);
+    } else {
+      scalev[2] = expfacv;
+    }
+
+    p->StepVelocity(dthalf);
+    p->ScaleVelocity(scalev);
+
+    p->ComputeKineticVirial(comm);
+    etadotdot = (p->get_temperature()/temp_target-1.0)/(t_nh_tau*t_nh_tau);
+    t_nh_eta += t_nh_etadot*dthalf;
+    t_nh_etadot += etadotdot*dthalf;
+
+    p->get_kinetic_virial(k_virial_tmp);
+    ff->get_virial(f_virial_tmp);
+
+    if (Lpflag_a) {
+      p_tmp_a = (k_virial_tmp[0]+f_virial_tmp[0])/b->get_volume();
+      omegadotdot_a = (p_tmp_a-p_target_a)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omega_a += p_nh_omegadot_a*dthalf;
+      p_nh_omegadot_a += omegadotdot_a*dthalf;
+    }
+
+    if (Lpflag_b) {
+      p_tmp_b = (k_virial_tmp[1]+f_virial_tmp[1])/b->get_volume();
+      omegadotdot_b = (p_tmp_b-p_target_b)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omega_b += p_nh_omegadot_b*dthalf;
+      p_nh_omegadot_b += omegadotdot_b*dthalf;
+    }
+
+    if (Lpflag_c) {
+      p_tmp_c = (k_virial_tmp[2]+f_virial_tmp[2])/b->get_volume();
+      omegadotdot_c = (p_tmp_c-p_target_c)/(p_ref0*p_nh_tau*p_nh_tau);
+      p_nh_omega_c += p_nh_omegadot_c*dthalf;
+      p_nh_omegadot_c += omegadotdot_c*dthalf;
+    }
+d157 2
+a158 2
+  case ensemble_nvt_rescale:
+    p->StepVelocity(dthalf);
+d164 3
+d186 1
+a186 1
+double Stepper::ComputeExtendedEnergy(const ParticleList* p, const Box* b) {
+a187 42
+  double wh,wk,wl;
+
+  switch(ensemble_style) {
+  case ensemble_nvt_nh:
+    ndof = p->get_ndof();
+    extended_energy = 0.5*t_nh_etadot*t_nh_etadot*
+      ndof*constants.boltz*temp_target*t_nh_tau*t_nh_tau +
+      ndof*constants.boltz*temp_target*t_nh_eta;
+    break;
+  case ensemble_nph_nh:
+    extended_energy = 
+      0.5*p_nh_omegadot*p_nh_omegadot*
+      (3.0*b->get_volume())*p_ref0*p_nh_tau*p_nh_tau +
+      p_target*b->get_volume();
+    break;
+  case ensemble_npt_nh:
+    ndof = p->get_ndof();
+    extended_energy = 0.5*t_nh_etadot*t_nh_etadot*
+      ndof*constants.boltz*temp_target*t_nh_tau*t_nh_tau + 
+      ndof*constants.boltz*temp_target*t_nh_eta +
+      0.5*p_nh_omegadot*p_nh_omegadot*
+      (3.0*b->get_volume())*p_ref0*p_nh_tau*p_nh_tau +
+      p_target*b->get_volume();
+    break;
+  case ensemble_nph_nh_anisotropic:
+    b->get_lw(wh,wk,wl);
+
+    extended_energy = 0.0;
+
+    if (Lpflag_a) {
+      extended_energy +=
+      0.5*p_nh_omegadot_a*p_nh_omegadot_a*
+      wh*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_a*b->get_volume();
+    }
+
+    if (Lpflag_b) {
+      extended_energy +=
+      0.5*p_nh_omegadot_b*p_nh_omegadot_b*
+      wk*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_b*b->get_volume();
+    }
+d189 2
+a190 9
+    if (Lpflag_c) {
+      extended_energy +=
+      0.5*p_nh_omegadot_c*p_nh_omegadot_c*
+      wl*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_c*b->get_volume();
+    }
+
+    break;
+  case ensemble_npt_nh_anisotropic:
+d192 4
+a195 26
+    b->get_lw(wh,wk,wl);
+    extended_energy = 0.5*t_nh_etadot*t_nh_etadot*
+      ndof*constants.boltz*temp_target*t_nh_tau*t_nh_tau + 
+      ndof*constants.boltz*temp_target*t_nh_eta;
+
+    if (Lpflag_a) {
+      extended_energy +=
+      0.5*p_nh_omegadot_a*p_nh_omegadot_a*
+      wh*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_a*b->get_volume();
+    }
+
+    if (Lpflag_b) {
+      extended_energy +=
+      0.5*p_nh_omegadot_b*p_nh_omegadot_b*
+      wk*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_b*b->get_volume();
+    }
+
+    if (Lpflag_c) {
+      extended_energy +=
+      0.5*p_nh_omegadot_c*p_nh_omegadot_c*
+      wl*p_ref0*p_nh_tau*p_nh_tau +
+      p_target_c*b->get_volume();
+    }
+
+a200 1
+  return extended_energy;
+d206 1
+a206 1
+  std::istringstream buf_in(buf);
+d218 1
+a218 1
+    ;
+d220 1
+a220 9
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nvt_nh;
+    } else if (ensemble_style == ensemble_nph_nh) {
+      ensemble_style = ensemble_npt_nh;
+    } else { 
+      glog.error("Stepper::input_temperature_control:\n"
+		 "nose-hoover can not be used in this ensemble");
+    }      
+
+d222 1
+a222 1
+    buf_in >> t_nh_tau;
+d230 1
+a230 1
+    glog.logfile << " " << temp_target << " " << t_nh_tau << endl;
+d237 1
+a237 1
+    if (t_nh_tau <= 0.0) {
+d243 1
+a243 6
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nvt_rescale;
+    } else { 
+      glog.error("Stepper::input_temperature_control:\n"
+		 "rescale can not be used in this ensemble");
+    }      
+a277 106
+  }
+}
+
+void Stepper::input_pressure_control(const string& buf) {
+  string str_tmp,str_tmp2;
+  std::istringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Stepper::input_temperature_control:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << str_tmp;
+
+  if (str_tmp == "none") {
+    ;
+  } else if (str_tmp == "nose-hoover") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nph_nh;
+    } else if (ensemble_style == ensemble_nvt_nh) {
+      ensemble_style = ensemble_npt_nh;
+    } else { 
+      glog.error("Stepper::input_pressure_control:\n"
+      "nose-hoover pressure control can not be used in this ensemble");
+    }      
+
+    buf_in >> p_target;
+    buf_in >> p_nh_tau;
+
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Stepper::input_pressure_control:\n"
+		 "Read error in input file");
+    }
+
+    glog.logfile << " " << p_target << " " << p_nh_tau << endl;
+
+    if (p_nh_tau <= 0.0) {
+      glog.error("Stepper::input_pressure_control:\n"
+	"Invalid input parameter");
+    }
+
+  } else if (str_tmp == "nose-hoover-anisotropic") {
+    if (ensemble_style == ensemble_nve) {
+      ensemble_style = ensemble_nph_nh_anisotropic;
+    } else if (ensemble_style == ensemble_nvt_nh) {
+      ensemble_style = ensemble_npt_nh_anisotropic;
+    } else { 
+      glog.error("Stepper::input_pressure_control:\n"
+      "nose-hoover pressure control can not be used in this ensemble");
+    }      
+
+    buf_in >> str_tmp;
+    if (str_tmp == "NULL") {
+      Lpflag_a = false;
+      glog.logfile << " " << str_tmp; 
+    } else {
+      std::istringstream buf_in_tmp(str_tmp);
+      buf_in_tmp >> p_target_a;
+      Lpflag_a = true;
+      glog.logfile << " " << p_target_a; 
+    }
+
+    buf_in >> str_tmp;
+    if (str_tmp == "NULL") {
+      Lpflag_b = false;
+      glog.logfile << " " << str_tmp; 
+    } else {
+      std::istringstream buf_in_tmp(str_tmp);
+      buf_in_tmp >> p_target_b;
+      Lpflag_b = true;
+      glog.logfile << " " << p_target_b; 
+    }
+
+    buf_in >> str_tmp;
+    if (str_tmp == "NULL") {
+      Lpflag_c = false;
+      glog.logfile << " " << str_tmp; 
+    } else {
+      std::istringstream buf_in_tmp(str_tmp);
+      buf_in_tmp >> p_target_c;
+      Lpflag_c = true;
+      glog.logfile << " " << p_target_c; 
+    }
+
+    buf_in >> p_nh_tau;
+
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("Stepper::input_pressure_control:\n"
+		 "Read error in input file");
+    }
+
+    glog.logfile << " " << Lpflag_a << " " << Lpflag_b << " " << Lpflag_c;
+
+    glog.logfile << " " << p_nh_tau << endl;
+
+    if (p_nh_tau <= 0.0) {
+      glog.error("Stepper::input_pressure_control:\n"
+	"Invalid input parameter");
+    }
+
+  } else {
+    glog.error("Unrecognized pressure control style");
+@
+
+
+2.11.2.3
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d181 1
+a181 2
+  bool Lenergy,Lvolume,Lnparticles;
+  ForceFieldList::VirialStyles Lvirial;
+d188 1
+a188 1
+      Lvirial = ForceFieldList::all_particles;
+d191 1
+a191 1
+      Lvirial = ForceFieldList::none;
+d198 1
+a198 1
+      Lvirial = ForceFieldList::all_particles;
+d202 1
+a202 1
+      Lvirial = ForceFieldList::all_particles;
+d206 1
+a206 1
+      Lvirial = ForceFieldList::all_particles;
+d210 1
+a210 1
+      Lvirial = ForceFieldList::all_particles;
+@
+
+
+2.10
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.9
+log
+@Removed Thermo class
+@
+text
+@d6 1
+a10 1
+#include "input.h"
+d23 1
+d26 1
+a26 1
+void Stepper::Setup(const Input* inp, Comm* comm) {
+a28 1
+  string str_tmp;
+a33 15
+  timestep = inp->timestep/constants.tfactor;
+
+  nsteps = inp->nsteps;
+  str_tmp = inp->temp_control_style;
+
+  if (str_tmp == "rescale") {
+    temp_control_style = temp_control_rescale;
+  } else if (str_tmp == "nose-hoover") {
+    temp_control_style = temp_control_nose_hoover;
+  } else if (str_tmp == "none") {
+    temp_control_style = temp_control_none;
+  } else {
+    glog.error("Stepper::Setup: Invalid temperature control style");
+  }
+
+d36 1
+a36 2
+    temp_target = inp->temp_target;
+    nose_hoover_freq = inp->nose_hoover_freq*constants.tfactor;
+a40 4
+    temp_target = inp->temp_target;
+    temp_freq = inp->temp_freq;
+    temp_window = inp->temp_window;
+    temp_factor = inp->temp_factor;
+d51 2
+a52 1
+void Stepper::Run(Box* b, ParticleTypeList* t,
+d60 1
+a60 1
+    Front(b,t,p,ff,fix_list,comm);
+d65 1
+a65 1
+    Back(b,t,p,ff,fix_list,comm);
+d75 1
+a75 1
+void Stepper::Front(Box* b, ParticleTypeList* t,
+d111 1
+a111 1
+void Stepper::Back(Box* b, ParticleTypeList* t,
+d173 79
+@
+
+
+2.8
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d18 1
+d73 1
+a73 1
+           Thermo* thermo,Output* outp,Comm* comm) {
+d79 1
+a79 1
+    Front(b,t,p,ff,thermo,outp,comm);
+d84 1
+a84 1
+    Back(b,t,p,ff,thermo,outp,comm);
+d89 1
+a89 1
+    outp->WriteOutput(istep,p,b,t,comm,ff,extended_energy);
+d96 1
+a96 1
+           Thermo* thermo,Output* outp,Comm* comm) {
+d132 1
+a132 1
+           Thermo* thermo,Output* outp,Comm* comm) {
+d158 1
+@
+
+
+2.7
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d40 2
+d49 6
+d60 1
+d67 1
+d78 1
+a78 2
+    p->StepVelocity(timestep/2.0);
+    p->StepPosition(timestep);
+d82 2
+d85 11
+a95 1
+    p->StepVelocity(timestep/2.0);
+d97 1
+a97 1
+    TemperatureControl(istep,p,comm);
+d99 26
+a124 3
+    t1 = MPI_Wtime();
+    glog.timetotal = t1-t0;
+    outp->WriteOutput(istep,p,b,t,comm,ff);
+d129 4
+a132 2
+void Stepper::TemperatureControl(const int& istep, ParticleList* p,
+				 Comm* comm) {
+d135 11
+d147 2
+a148 1
+    if (istep % temp_freq == 0) {
+d154 1
+a155 2
+  default:
+    glog.error("Stepper::Setup: Invalid temperature control style");
+d174 16
+@
+
+
+2.6
+log
+@Fixed up the output log immensely.  Fixed some bugs in the
+rescale thermostat.
+@
+text
+@d9 1
+a11 1
+#include "constants.h"
+d13 1
+d19 1
+d27 1
+d33 11
+a43 9
+  switch(inp->units_style) {
+  case (real_units):
+    timestep = inp->timestep/tfactor_real;
+    break;
+  case (reduced_units):
+    timestep = inp->timestep/tfactor_reduced;
+    break;
+  default:
+    glog.error("Stepper::Setup: Invalid units_style");
+d45 1
+a45 2
+  nsteps = inp->nsteps;
+  temp_control_style = inp->temp_control_style;
+@
+
+
+2.5
+log
+@Redoing temperature functions. Not finished yet.
+@
+text
+@d103 2
+a104 4
+  temp_tmp = p->ComputeTemperature(comm);
+  comm->get_nodefile() << "Pre " << temp_target << " " << temp_tmp << " " << 
+      p->ComputeTemperature(comm) << endl;
+
+a109 4
+
+  comm->get_nodefile() << "Post " << temp_target << " " << temp_tmp << " " << 
+      p->ComputeTemperature(comm) << endl;
+
+@
+
+
+2.4
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d101 6
+a106 2
+  double temp_tmp,ke_tmp;
+  p->ComputeTemperature(temp_tmp,ke_tmp);
+d112 4
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@a27 1
+  if (node == 0) glog.logfile << "Entering Stepper::Setup()" << endl;
+d59 1
+a59 1
+  float telapse,telapse0;
+d61 1
+a61 1
+  telapse0 = clock()/float(CLOCKS_PER_SEC);
+d68 1
+a68 1
+    ff->ComputeForce(true,b,t,p,comm);
+d74 3
+a76 3
+    telapse = clock()/float(CLOCKS_PER_SEC)-telapse0;
+    outp->WriteOutput(istep,p,b,t,comm,telapse);
+
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d60 1
+d62 1
+d75 2
+a76 1
+    outp->WriteOutput(istep,p,b,t,comm);
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d16 2
+a17 1
+extern ofstream logfile;
+d28 1
+a28 1
+  if (node == 0) logfile << "Entering Stepper::Setup()" << endl;
+d39 1
+a39 2
+    logfile << "Error: invalid units_style" << endl;
+    exit(0);
+d43 12
+d81 1
+d92 1
+a92 2
+    logfile << "Error: invalid temperature control style" << endl;
+    exit(0);
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d4 1
+d7 1
+d15 14
+a29 1
+void Stepper::Setup(const Input* inp) {
+d38 1
+a38 1
+    cout << "Error: invalid units_style" << endl;
+d47 1
+a47 1
+           Thermo* thermo,Output* outp) {
+d54 2
+a55 3
+    ff->Neighboring(p,b);
+
+    ff->ComputeForce(true,b,t,p);
+d59 1
+a59 1
+    TemperatureControl(istep,p);
+d61 1
+a61 1
+    outp->WriteOutput(istep,p,b);
+d67 2
+a68 1
+void Stepper::TemperatureControl(const int& istep, ParticleList* p) {
+d73 1
+a73 1
+				temp_factor,p);
+d79 1
+a79 1
+    cout << "Error: invalid temperature control style" << endl;
+d86 1
+a86 1
+      ParticleList* p) {
+@
+

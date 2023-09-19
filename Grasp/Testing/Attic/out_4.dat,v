@@ -1,0 +1,1854 @@
+head	2.3;
+access;
+symbols
+	PreMonaco:2.3;
+locks; strict;
+comment	@# @;
+
+
+2.3
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.04.28.15.48.48;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.04.24.16.46.53;	author athomps;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.03.12.23.27.06;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.03.12.20.06.45;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.03.03.20.28.04;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.25.22.51.36;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.21.23.04.33;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.05.00.38.56;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.04.00.28.32;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.3
+log
+@Moved examples into subdirectories.
+@
+text
+@Warning: your default path uses the automounter; this may
+cause some problems if you use other NFS-connected systems.
+@
+
+
+2.2
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@@
+
+
+2.1
+log
+@Switchtched the primary output file from out_*.dat to graps_*.dat.
+@
+text
+@d1 2
+a2 126
+#  twobody 4-particle input data
+forcefield twobody twobody.in
+timestep 1.00000
+nsteps 10
+box dimensions	2.00000	0.00000	0.00000 \
+			0.00000	2.00000	0.00000 \
+			0.00000	0.00000	2.00000
+box origin	-1.00000	-1.00000	-1.00000
+initialize temperature 0.00000 256
+neighbor nsq 10 1.00000
+thermo 1
+dump atoms 10
+dump velocities 10
+
+
+
+
+ntypes = 3
+A 10.0000
+B 2.00000
+C 3.00000
+Resetting particles in box 
+Hello world
+
+i 	ii 	id 	t 	n       p            p            p            p     
+0	0	A	0	5      48.0000      24.0000      4.00000      4.00000      75.4292
+1	3	B	0	5  3.93216e+17  3.07200e+09  3.27680e+16  5.12000e+08      75.4292
+2	4	C	0	5  7.65275e+19  5.24880e+10  6.37729e+18  8.74800e+09      75.4292
+
+i 	ii 	jj 	id1 	id2 	t 	n       p            p            p            p     
+3	1	 	A	B	0	5  9.34174e+15  4.10062e+08  7.78478e+14  6.83438e+07      75.4292
+4	2	 	A	C	0	5  3.93216e+17  3.07200e+09  3.27680e+16  5.12000e+08      75.4292
+
+5	3	4	B	C	0	5  7.00805e+18  1.43525e+10  5.84004e+17  2.39208e+09      75.4292
+
+Lattice vector a = 2.00000 0.00000 0.00000 
+Lattice vector b = 0.00000 2.00000 0.00000 
+Lattice vector c = 0.00000 0.00000 2.00000 
+Unit cell origin = -1.00000 -1.00000 -1.00000 
+rcutsq_max = 75.4292
+
+ncosps = 1812
+nneighbors = 3776
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+Neighboring time is 0.00000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9829
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9829
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9830
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9830
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9832
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9833
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9835
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 2.64831e-06
+
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9838
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9840
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9843
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Resetting particles in box 
+ncosps = 1842
+nneighbors = 3776
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+Neighboring time is 0.00000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [kJ/mol] = -12.9847
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.8
+log
+@This is final update of version 1, before switching to version 2
+This is final update of version 1 before switching to verison 2
+This is final update of version 1 before switching to verison 2
+@
+text
+@d22 2
+a40 1
+Finished ForcefieldSetup
+a41 3
+Neighboring for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Lneighbor twobody = 1
+d44 2
+a45 8
+Twobody Neighboring time is 0.00000
+Number of particles in box = 4
+Number of particle types = 3
+Number of twobody force types = 3
+Number of twobody force pairs = 3776
+
+****************************************************
+Timestep = 0
+a52 8
+Temperature [K] = 0.000000000
+Kinetic Energy [kJ/mol/particle] = 0.000000000
+Potential Energy [kJ/mol/particle] = -3.245721547
+Total Energy [kJ/mol/particle] = -3.245721547
+****************************************************
+
+****************************************************
+Timestep = 1
+a59 12
+Temperature [K] = 0.0003584195190
+Kinetic Energy [kJ/mol/particle] = 4.470103583e-06
+Potential Energy [kJ/mol/particle] = -3.245726017
+Total Energy [kJ/mol/particle] = -3.245721546
+Change in Kinetic Energy [kJ/mol/particle] = 4.47010e-06
+Change in Potential Energy [kJ/mol/particle] = -4.46977e-06
+Change in Total Energy [kJ/mol/particle] = 3.33930e-10
+Error in Total Energy [%] = 0.00747029
+****************************************************
+
+****************************************************
+Timestep = 2
+a66 12
+Temperature [K] = 0.001434106545
+Kinetic Energy [kJ/mol/particle] = 1.788575806e-05
+Potential Energy [kJ/mol/particle] = -3.245739431
+Total Energy [kJ/mol/particle] = -3.245721545
+Change in Kinetic Energy [kJ/mol/particle] = 1.78858e-05
+Change in Potential Energy [kJ/mol/particle] = -1.78844e-05
+Change in Total Energy [kJ/mol/particle] = 1.33609e-09
+Error in Total Energy [%] = 0.00747014
+****************************************************
+
+****************************************************
+Timestep = 3
+a73 12
+Temperature [K] = 0.003228346955
+Kinetic Energy [kJ/mol/particle] = 4.026300054e-05
+Potential Energy [kJ/mol/particle] = -3.245761807
+Total Energy [kJ/mol/particle] = -3.245721544
+Change in Kinetic Energy [kJ/mol/particle] = 4.02630e-05
+Change in Potential Energy [kJ/mol/particle] = -4.02600e-05
+Change in Total Energy [kJ/mol/particle] = 3.00760e-09
+Error in Total Energy [%] = 0.00746988
+****************************************************
+
+****************************************************
+Timestep = 4
+a80 12
+Temperature [K] = 0.005743285458
+Kinetic Energy [kJ/mol/particle] = 7.162857919e-05
+Potential Energy [kJ/mol/particle] = -3.245793170
+Total Energy [kJ/mol/particle] = -3.245721541
+Change in Kinetic Energy [kJ/mol/particle] = 7.16286e-05
+Change in Potential Energy [kJ/mol/particle] = -7.16232e-05
+Change in Total Energy [kJ/mol/particle] = 5.35023e-09
+Error in Total Energy [%] = 0.00746940
+****************************************************
+
+****************************************************
+Timestep = 5
+a87 12
+Temperature [K] = 0.008981927960
+Kinetic Energy [kJ/mol/particle] = 0.0001120199828
+Potential Energy [kJ/mol/particle] = -3.245833558
+Total Energy [kJ/mol/particle] = -3.245721538
+Change in Kinetic Energy [kJ/mol/particle] = 0.000112020
+Change in Potential Energy [kJ/mol/particle] = -0.000112012
+Change in Total Energy [kJ/mol/particle] = 8.36653e-09
+Error in Total Energy [%] = 0.00746878
+****************************************************
+
+****************************************************
+Timestep = 6
+a94 12
+Temperature [K] = 0.01294814488
+Kinetic Energy [kJ/mol/particle] = 0.0001614854820
+Potential Energy [kJ/mol/particle] = -3.245883020
+Total Energy [kJ/mol/particle] = -3.245721535
+Change in Kinetic Energy [kJ/mol/particle] = 0.000161485
+Change in Potential Energy [kJ/mol/particle] = -0.000161473
+Change in Total Energy [kJ/mol/particle] = 1.20597e-08
+Error in Total Energy [%] = 0.00746797
+****************************************************
+
+****************************************************
+Timestep = 7
+a101 12
+Temperature [K] = 0.01764667540
+Kinetic Energy [kJ/mol/particle] = 0.0002200841828
+Potential Energy [kJ/mol/particle] = -3.245941615
+Total Energy [kJ/mol/particle] = -3.245721530
+Change in Kinetic Energy [kJ/mol/particle] = 0.000220084
+Change in Potential Energy [kJ/mol/particle] = -0.000220068
+Change in Total Energy [kJ/mol/particle] = 1.64338e-08
+Error in Total Energy [%] = 0.00746704
+****************************************************
+
+****************************************************
+Timestep = 8
+a108 12
+Temperature [K] = 0.02308313271
+Kinetic Energy [kJ/mol/particle] = 0.0002878860909
+Potential Energy [kJ/mol/particle] = -3.246009411
+Total Energy [kJ/mol/particle] = -3.245721525
+Change in Kinetic Energy [kJ/mol/particle] = 0.000287886
+Change in Potential Energy [kJ/mol/particle] = -0.000287865
+Change in Total Energy [kJ/mol/particle] = 2.14934e-08
+Error in Total Energy [%] = 0.00746594
+****************************************************
+
+****************************************************
+Timestep = 9
+d116 1
+a116 13
+Temperature [K] = 0.02926401016
+Kinetic Energy [kJ/mol/particle] = 0.0003649721896
+Potential Energy [kJ/mol/particle] = -3.246086492
+Total Energy [kJ/mol/particle] = -3.245721520
+Change in Kinetic Energy [kJ/mol/particle] = 0.000364972
+Change in Potential Energy [kJ/mol/particle] = -0.000364945
+Change in Total Energy [kJ/mol/particle] = 2.72441e-08
+Error in Total Energy [%] = 0.00746469
+****************************************************
+
+Neighboring for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Lneighbor twobody = 1
+d119 2
+a120 4
+Twobody Neighboring time is 0.00000
+
+****************************************************
+Timestep = 10
+a126 11
+
+Temperature [K] = 0.03619668834
+Kinetic Energy [kJ/mol/particle] = 0.0004514345276
+Potential Energy [kJ/mol/particle] = -3.246172948
+Total Energy [kJ/mol/particle] = -3.245721513
+Change in Kinetic Energy [kJ/mol/particle] = 0.000451435
+Change in Potential Energy [kJ/mol/particle] = -0.000451401
+Change in Total Energy [kJ/mol/particle] = 3.36919e-08
+Error in Total Energy [%] = 0.00746329
+****************************************************
+Total run time is 0.01000000
+@
+
+
+1.7
+log
+@This is another example demonstrating use of reduced units
+and LJ93 walls and density profile to compare with dft
+calculations.
+@
+text
+@d168 2
+a169 2
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+d187 2
+a188 2
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 2.64831e-06
+@
+
+
+1.6
+log
+@New input and output for old examples reflects two important changes:
+
+1. Created a full command interface with input commands echoed to output.
+2. Fixed bug in evaluation of kinetic energy so that report error
+	in total energy is now much, much smaller. Before we were
+	evaluating kinetic energy at t-delt/2 and potential energy at t.
+@
+text
+@d5 2
+a6 2
+box dimensions	2.00000	0.00000	0.00000\
+			0.00000	2.00000	0.00000\
+d10 1
+a10 1
+neighbor 10 1.00000
+d130 2
+a131 2
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 2.64831e-06
+d187 2
+a188 2
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+@
+
+
+1.5
+log
+@Implemented a new forcefield type: Class Force_External
+This is designed primarily for external force fields with
+simple geometric forms, such as the Lennard-Jones 9-3 wall,
+although it might also be used for a set of fixed atoms.
+
+Currently, the only types implemented are lj93_cut and lj93_cut_shift.
+These work for both arbitrary cut-off neighbor list and also
+within the minimum image convention (although this is not used
+by external force field with only truncated interactions.
+
+Periodic boundary conditions are applied in all directions.
+
+Initialization and output of velocities have also been added.
+@
+text
+@d1 17
+a17 22
+Input Ltwobody:
+Input Lthreebody:
+Input Lexternal:
+Input timestep size [fs]:
+Input number of timesteps:
+Input unit cell lattice vector a [A]:
+Input unit cell lattice vector b [A]:
+Input unit cell lattice vector c [A]:
+Input unit cell origin [A]:
+Input velocity initialization temperature [K]
+Input velocity initialization seed [-]
+Ltwobody = true
+Lthreebody = false
+Lexternal = false
+Timestep size [fs] = 1.00000
+Number of timesteps = 10
+Lattice vector a [A] = 2.00000 0.00000 0.00000 
+Lattice vector b [A] = 0.00000 2.00000 0.00000 
+Lattice vector c [A] = 0.00000 0.00000 2.00000 
+Unit cell origin [A] = -1.00000 -1.00000 -1.00000 
+Velocity initialization temperature [K] = 0.00000
+Velocity initialization seed [-] = 256
+d40 3
+d54 3
+d60 1
+d69 3
+d75 3
+a77 2
+Temperature [K] = 8.959149240e-05
+Kinetic Energy [kJ/mol/particle] = 1.117358933e-06
+d79 2
+a80 2
+Total Energy [kJ/mol/particle] = -3.245724899
+Change in Kinetic Energy [kJ/mol/particle] = 1.11736e-06
+d82 2
+a83 2
+Change in Total Energy [kJ/mol/particle] = -3.35241e-06
+Error in Total Energy [%] = -300.030
+d88 3
+d94 3
+a96 2
+Temperature [K] = 0.0008064840821
+Kinetic Energy [kJ/mol/particle] = 1.005823398e-05
+d98 2
+a99 2
+Total Energy [kJ/mol/particle] = -3.245729373
+Change in Kinetic Energy [kJ/mol/particle] = 1.00582e-05
+d101 2
+a102 2
+Change in Total Energy [kJ/mol/particle] = -7.82619e-06
+Error in Total Energy [%] = -77.8088
+d107 3
+d113 3
+a115 2
+Temperature [K] = 0.002241126261
+Kinetic Energy [kJ/mol/particle] = 2.795067232e-05
+d117 2
+a118 2
+Total Energy [kJ/mol/particle] = -3.245733856
+Change in Kinetic Energy [kJ/mol/particle] = 2.79507e-05
+d120 2
+a121 2
+Change in Total Energy [kJ/mol/particle] = -1.23093e-05
+Error in Total Energy [%] = -44.0394
+d126 3
+d130 5
+a134 4
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+Temperature [K] = 0.004395232976
+Kinetic Energy [kJ/mol/particle] = 5.481606227e-05
+d136 2
+a137 2
+Total Energy [kJ/mol/particle] = -3.245738354
+Change in Kinetic Energy [kJ/mol/particle] = 5.48161e-05
+d139 2
+a140 2
+Change in Total Energy [kJ/mol/particle] = -1.68072e-05
+Error in Total Energy [%] = -30.6610
+d145 3
+d151 3
+a153 2
+Temperature [K] = 0.007271379011
+Kinetic Energy [kJ/mol/particle] = 9.068651578e-05
+d155 2
+a156 2
+Total Energy [kJ/mol/particle] = -3.245742872
+Change in Kinetic Energy [kJ/mol/particle] = 9.06865e-05
+d158 2
+a159 2
+Change in Total Energy [kJ/mol/particle] = -2.13251e-05
+Error in Total Energy [%] = -23.5152
+d164 3
+d170 3
+a172 2
+Temperature [K] = 0.01087300183
+Kinetic Energy [kJ/mol/particle] = 0.0001356049039
+d174 2
+a175 2
+Total Energy [kJ/mol/particle] = -3.245747415
+Change in Kinetic Energy [kJ/mol/particle] = 0.000135605
+d177 2
+a178 2
+Change in Total Energy [kJ/mol/particle] = -2.58685e-05
+Error in Total Energy [%] = -19.0764
+d183 3
+d189 3
+a191 2
+Temperature [K] = 0.01520440538
+Kinetic Energy [kJ/mol/particle] = 0.0001896249042
+d193 2
+a194 2
+Total Energy [kJ/mol/particle] = -3.245751990
+Change in Kinetic Energy [kJ/mol/particle] = 0.000189625
+d196 2
+a197 2
+Change in Total Energy [kJ/mol/particle] = -3.04428e-05
+Error in Total Energy [%] = -16.0542
+d202 3
+d208 3
+a210 2
+Temperature [K] = 0.02027076479
+Kinetic Energy [kJ/mol/particle] = 0.0002528110594
+d212 2
+a213 2
+Total Energy [kJ/mol/particle] = -3.245756600
+Change in Kinetic Energy [kJ/mol/particle] = 0.000252811
+d215 2
+a216 2
+Change in Total Energy [kJ/mol/particle] = -3.50535e-05
+Error in Total Energy [%] = -13.8655
+d221 3
+d227 3
+a229 2
+Temperature [K] = 0.02607813211
+Kinetic Energy [kJ/mol/particle] = 0.0003252388489
+d231 2
+a232 2
+Total Energy [kJ/mol/particle] = -3.245761253
+Change in Kinetic Energy [kJ/mol/particle] = 0.000325239
+d234 2
+a235 2
+Change in Total Energy [kJ/mol/particle] = -3.97061e-05
+Error in Total Energy [%] = -12.2083
+d238 2
+a239 2
+****************************************************
+Timestep = 10
+d241 1
+a241 1
+ncosps = 1812
+d244 6
+d253 3
+a255 2
+Temperature [K] = 0.03263344293
+Kinetic Energy [kJ/mol/particle] = 0.0004069947712
+d257 2
+a258 2
+Total Energy [kJ/mol/particle] = -3.245765953
+Change in Kinetic Energy [kJ/mol/particle] = 0.000406995
+d260 2
+a261 2
+Change in Total Energy [kJ/mol/particle] = -4.44061e-05
+Error in Total Energy [%] = -10.9107
+@
+
+
+1.4
+log
+@Added config.out files for the test runs to the repository.
+Shifted the origin on some of the examples.
+@
+text
+@d3 1
+d10 2
+d14 2
+a15 1
+Timestep size [fs] = 0.0100000
+d20 3
+a22 1
+Unit cell origin = -1.00000 -1.00000 -1.00000 
+d44 1
+d56 3
+a58 2
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+d67 11
+a77 10
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+Temperature [K] = 8.959149240e-09
+Kinetic Energy [kJ/mol/particle] = 1.117358933e-10
+Potential Energy [kJ/mol/particle] = -3.245721547
+Total Energy [kJ/mol/particle] = -3.245721547
+Change in Kinetic Energy [kJ/mol/particle] = 1.11736e-10
+Change in Potential Energy [kJ/mol/particle] = -4.46942e-10
+Change in Total Energy [kJ/mol/particle] = -3.35207e-10
+Error in Total Energy [%] = -299.999
+d82 11
+a92 10
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+Temperature [K] = 8.063234477e-08
+Kinetic Energy [kJ/mol/particle] = 1.005623059e-09
+Potential Energy [kJ/mol/particle] = -3.245721549
+Total Energy [kJ/mol/particle] = -3.245721548
+Change in Kinetic Energy [kJ/mol/particle] = 1.00562e-09
+Change in Potential Energy [kJ/mol/particle] = -1.78776e-09
+Change in Total Energy [kJ/mol/particle] = -7.82140e-10
+Error in Total Energy [%] = -77.7767
+d97 11
+a107 10
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+Temperature [K] = 2.239787444e-07
+Kinetic Energy [kJ/mol/particle] = 2.793397498e-09
+Potential Energy [kJ/mol/particle] = -3.245721551
+Total Energy [kJ/mol/particle] = -3.245721548
+Change in Kinetic Energy [kJ/mol/particle] = 2.79340e-09
+Change in Potential Energy [kJ/mol/particle] = -4.02252e-09
+Change in Total Energy [kJ/mol/particle] = -1.22912e-09
+Error in Total Energy [%] = -44.0009
+d112 11
+a122 10
+Twobody force time is 0.01000000
+Twobody force-pair time is 2.64831e-06
+Temperature [K] = 4.389983653e-07
+Kinetic Energy [kJ/mol/particle] = 5.475059424e-09
+Potential Energy [kJ/mol/particle] = -3.245721554
+Total Energy [kJ/mol/particle] = -3.245721548
+Change in Kinetic Energy [kJ/mol/particle] = 5.47506e-09
+Change in Potential Energy [kJ/mol/particle] = -7.15111e-09
+Change in Total Energy [kJ/mol/particle] = -1.67605e-09
+Error in Total Energy [%] = -30.6125
+d127 11
+a137 10
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+Temperature [K] = 7.256912330e-07
+Kinetic Energy [kJ/mol/particle] = 9.050609157e-09
+Potential Energy [kJ/mol/particle] = -3.245721558
+Total Energy [kJ/mol/particle] = -3.245721549
+Change in Kinetic Energy [kJ/mol/particle] = 9.05061e-09
+Change in Potential Energy [kJ/mol/particle] = -1.11736e-08
+Change in Total Energy [kJ/mol/particle] = -2.12301e-09
+Error in Total Energy [%] = -23.4571
+d142 11
+a152 10
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+Temperature [K] = 1.084057382e-06
+Kinetic Energy [kJ/mol/particle] = 1.352004712e-08
+Potential Energy [kJ/mol/particle] = -3.245721563
+Total Energy [kJ/mol/particle] = -3.245721549
+Change in Kinetic Energy [kJ/mol/particle] = 1.35200e-08
+Change in Potential Energy [kJ/mol/particle] = -1.60900e-08
+Change in Total Energy [kJ/mol/particle] = -2.56994e-09
+Error in Total Energy [%] = -19.0084
+d157 11
+a167 10
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+Temperature [K] = 1.514096855e-06
+Kinetic Energy [kJ/mol/particle] = 1.888337386e-08
+Potential Energy [kJ/mol/particle] = -3.245721569
+Total Energy [kJ/mol/particle] = -3.245721550
+Change in Kinetic Energy [kJ/mol/particle] = 1.88834e-08
+Change in Potential Energy [kJ/mol/particle] = -2.19003e-08
+Change in Total Energy [kJ/mol/particle] = -3.01689e-09
+Error in Total Energy [%] = -15.9764
+d172 11
+a182 10
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+Temperature [K] = 2.015809704e-06
+Kinetic Energy [kJ/mol/particle] = 2.514059001e-08
+Potential Energy [kJ/mol/particle] = -3.245721575
+Total Energy [kJ/mol/particle] = -3.245721550
+Change in Kinetic Energy [kJ/mol/particle] = 2.51406e-08
+Change in Potential Energy [kJ/mol/particle] = -2.86044e-08
+Change in Total Energy [kJ/mol/particle] = -3.46382e-09
+Error in Total Energy [%] = -13.7778
+d187 11
+a197 10
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+Temperature [K] = 2.589195987e-06
+Kinetic Energy [kJ/mol/particle] = 3.229169631e-08
+Potential Energy [kJ/mol/particle] = -3.245721583
+Total Energy [kJ/mol/particle] = -3.245721551
+Change in Kinetic Energy [kJ/mol/particle] = 3.22917e-08
+Change in Potential Energy [kJ/mol/particle] = -3.62025e-08
+Change in Total Energy [kJ/mol/particle] = -3.91080e-09
+Error in Total Energy [%] = -12.1109
+d206 11
+a216 10
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+Temperature [K] = 3.234255775e-06
+Kinetic Energy [kJ/mol/particle] = 4.033669363e-08
+Potential Energy [kJ/mol/particle] = -3.245721591
+Total Energy [kJ/mol/particle] = -3.245721551
+Change in Kinetic Energy [kJ/mol/particle] = 4.03367e-08
+Change in Potential Energy [kJ/mol/particle] = -4.46944e-08
+Change in Total Energy [kJ/mol/particle] = -4.35770e-09
+Error in Total Energy [%] = -10.8033
+@
+
+
+1.3
+log
+@Finally finished implementing Stillinger-Weber forcefield
+Increased number of examples to six. The LJ and SW force
+fields have been tested for energy conservation, and so are
+have high confidence.
+
+The first three are short MD runs using perturbed FCC LJ systems.
+The fourth is an energy evaluation of a dense tetrahedral
+Stillinger-Weber Silicon crystal, which matches a TOWHEE example
+to seven decimal places.
+The fifth and sixth are short MD runs using perturbed tetrahedral
+Stillinger-Weber Silicon.
+@
+text
+@d16 1
+a16 1
+Unit cell origin = 0.00000 0.00000 0.00000 
+d36 1
+a36 1
+Unit cell origin = 0.00000 0.00000 0.00000 
+d39 1
+a39 1
+ncosps = 1841
+d66 1
+a66 1
+Change in Potential Energy [kJ/mol/particle] = -4.46943e-10
+d68 1
+a68 1
+Error in Total Energy [%] = -300.000
+d81 1
+a81 1
+Change in Total Energy [kJ/mol/particle] = -7.82141e-10
+d96 1
+a96 1
+Error in Total Energy [%] = -44.0010
+d101 2
+a102 2
+Twobody force time is 0.00000
+Twobody force-pair time is 0.00000
+d129 2
+a130 2
+Twobody force time is 0.01000000
+Twobody force-pair time is 2.64831e-06
+d186 1
+a186 1
+ncosps = 1841
+@
+
+
+1.2
+log
+@
+Cleaned up the output a little.
+@
+text
+@d1 3
+a3 1
+Input timestep size (fs):
+d5 7
+a11 5
+Input unit cell lattice vector a (A):
+Input unit cell lattice vector b (A):
+Input unit cell lattice vector c (A):
+Input unit cell origin (A):
+Timestep size = 1.00000
+d13 3
+a15 3
+Lattice vector a = 2.00000 0.00000 0.00000 
+Lattice vector b = 0.00000 2.00000 0.00000 
+Lattice vector c = 0.00000 0.00000 2.00000 
+d18 3
+a20 49
+41 1.0000042 2.0000043 3.00000-------------------------------------------
+id1 = 41
+id2 = 41
+forcefieldname = lj_cut
+eps = 1.00000
+sigma = 1.00000
+rcut = 8.68500
+itype = 0
+jtype = 0
+-------------------------------------------
+id1 = 41
+id2 = 42
+forcefieldname = lj_cut
+eps = 1.50000
+sigma = 15.0000
+rcut = 8.68500
+itype = 0
+jtype = 1
+-------------------------------------------
+id1 = 41
+id2 = 43
+forcefieldname = lj_cut
+eps = 2.00000
+sigma = 20.0000
+rcut = 8.68500
+itype = 0
+jtype = 2
+-------------------------------------------
+id1 = 42
+id2 = 42
+forcefieldname = lj_cut
+eps = 2.00000
+sigma = 20.0000
+rcut = 8.68500
+itype = 1
+jtype = 1
+-------------------------------------------
+id1 = 43
+id2 = 43
+forcefieldname = lj_cut
+eps = 3.00000
+sigma = 30.0000
+rcut = 8.68500
+itype = 2
+jtype = 2
+
+0	0	3	1.00000	1.00000	8.68500		1	0	3	1.50000	15.0000	8.68500		2	0	3	2.00000	20.0000	8.68500		
+1	0	3	1.50000	15.0000	8.68500		3	0	3	2.00000	20.0000	8.68500		-1 ----------------------------------		
+2	0	3	2.00000	20.0000	8.68500		-1 ----------------------------------		4	0	3	3.00000	30.0000	8.68500		
+d23 3
+a25 3
+0	0	41	0	5      48.0000      24.0000      4.00000      4.00000      75.4292
+1	3	42	0	5  3.93216e+17  3.07200e+09  3.27680e+16  5.12000e+08      75.4292
+2	4	43	0	5  7.65275e+19  5.24880e+10  6.37729e+18  8.74800e+09      75.4292
+d28 2
+a29 2
+3	1	 	41	42	0	5  9.34174e+15  4.10062e+08  7.78478e+14  6.83438e+07      75.4292
+4	2	 	41	43	0	5  3.93216e+17  3.07200e+09  3.27680e+16  5.12000e+08      75.4292
+d31 1
+a31 1
+5	3	4	42	43	0	5  7.00805e+18  1.43525e+10  5.84004e+17  2.39208e+09      75.4292
+d39 3
+a41 2
+ncosps = 1826
+nneighbors = 3728
+d45 140
+a184 22
+Number of twobody force pairs = 3728
+Force time is 0.00000
+Force-pair time is 0.00000
+Energy = -3.228137035 kJ/mol/particle 
+Force time is 0.00000
+Force-pair time is 0.00000
+Force time is 0.00000
+Force-pair time is 0.00000
+Force time is 0.00000
+Force-pair time is 0.00000
+Force time is 0.00000
+Force-pair time is 0.00000
+Force time is 0.00000
+Force-pair time is 0.00000
+Force time is 0.01000000
+Force-pair time is 2.68240e-06
+Force time is 0.00000
+Force-pair time is 0.00000
+Force time is 0.00000
+Force-pair time is 0.00000
+Force time is 0.00000
+Force-pair time is 0.00000
+d186 15
+a200 5
+ncosps = 1826
+nneighbors = 3728
+Force time is 0.00000
+Force-pair time is 0.00000
+Energy = -3.228137035 kJ/mol/particle 
+@
+
+
+1.1
+log
+@
+
+Added new test runs to data set.
+@
+text
+@a79 837
+ radius = 1
+ radius = 2
+ radius = 3
+ radius = 4
+ radius = 5
+ radius = 6
+Image 0 = 0.00000 0.00000 0.00000
+Image 1 = -2.00000 -2.00000 2.00000
+Image 2 = -2.00000 -2.00000 -2.00000
+Image 3 = -2.00000 0.00000 2.00000
+Image 4 = -2.00000 0.00000 -2.00000
+Image 5 = -2.00000 2.00000 2.00000
+Image 6 = -2.00000 2.00000 -2.00000
+Image 7 = 0.00000 -2.00000 2.00000
+Image 8 = 0.00000 -2.00000 -2.00000
+Image 9 = 0.00000 0.00000 2.00000
+Image 10 = 0.00000 0.00000 -2.00000
+Image 11 = 0.00000 2.00000 2.00000
+Image 12 = 0.00000 2.00000 -2.00000
+Image 13 = 2.00000 -2.00000 2.00000
+Image 14 = 2.00000 -2.00000 -2.00000
+Image 15 = 2.00000 0.00000 2.00000
+Image 16 = 2.00000 0.00000 -2.00000
+Image 17 = 2.00000 2.00000 2.00000
+Image 18 = 2.00000 2.00000 -2.00000
+Image 19 = -2.00000 2.00000 0.00000
+Image 20 = -2.00000 -2.00000 0.00000
+Image 21 = 0.00000 2.00000 0.00000
+Image 22 = 0.00000 -2.00000 0.00000
+Image 23 = 2.00000 2.00000 0.00000
+Image 24 = 2.00000 -2.00000 0.00000
+Image 25 = 2.00000 0.00000 0.00000
+Image 26 = -2.00000 0.00000 0.00000
+Image 27 = -4.00000 -4.00000 4.00000
+Image 28 = -4.00000 -4.00000 -4.00000
+Image 29 = -4.00000 -2.00000 4.00000
+Image 30 = -4.00000 -2.00000 -4.00000
+Image 31 = -4.00000 0.00000 4.00000
+Image 32 = -4.00000 0.00000 -4.00000
+Image 33 = -4.00000 2.00000 4.00000
+Image 34 = -4.00000 2.00000 -4.00000
+Image 35 = -4.00000 4.00000 4.00000
+Image 36 = -4.00000 4.00000 -4.00000
+Image 37 = -2.00000 -4.00000 4.00000
+Image 38 = -2.00000 -4.00000 -4.00000
+Image 39 = -2.00000 -2.00000 4.00000
+Image 40 = -2.00000 -2.00000 -4.00000
+Image 41 = -2.00000 0.00000 4.00000
+Image 42 = -2.00000 0.00000 -4.00000
+Image 43 = -2.00000 2.00000 4.00000
+Image 44 = -2.00000 2.00000 -4.00000
+Image 45 = -2.00000 4.00000 4.00000
+Image 46 = -2.00000 4.00000 -4.00000
+Image 47 = 0.00000 -4.00000 4.00000
+Image 48 = 0.00000 -4.00000 -4.00000
+Image 49 = 0.00000 -2.00000 4.00000
+Image 50 = 0.00000 -2.00000 -4.00000
+Image 51 = 0.00000 0.00000 4.00000
+Image 52 = 0.00000 0.00000 -4.00000
+Image 53 = 0.00000 2.00000 4.00000
+Image 54 = 0.00000 2.00000 -4.00000
+Image 55 = 0.00000 4.00000 4.00000
+Image 56 = 0.00000 4.00000 -4.00000
+Image 57 = 2.00000 -4.00000 4.00000
+Image 58 = 2.00000 -4.00000 -4.00000
+Image 59 = 2.00000 -2.00000 4.00000
+Image 60 = 2.00000 -2.00000 -4.00000
+Image 61 = 2.00000 0.00000 4.00000
+Image 62 = 2.00000 0.00000 -4.00000
+Image 63 = 2.00000 2.00000 4.00000
+Image 64 = 2.00000 2.00000 -4.00000
+Image 65 = 2.00000 4.00000 4.00000
+Image 66 = 2.00000 4.00000 -4.00000
+Image 67 = 4.00000 -4.00000 4.00000
+Image 68 = 4.00000 -4.00000 -4.00000
+Image 69 = 4.00000 -2.00000 4.00000
+Image 70 = 4.00000 -2.00000 -4.00000
+Image 71 = 4.00000 0.00000 4.00000
+Image 72 = 4.00000 0.00000 -4.00000
+Image 73 = 4.00000 2.00000 4.00000
+Image 74 = 4.00000 2.00000 -4.00000
+Image 75 = 4.00000 4.00000 4.00000
+Image 76 = 4.00000 4.00000 -4.00000
+Image 77 = -4.00000 4.00000 -2.00000
+Image 78 = -4.00000 -4.00000 -2.00000
+Image 79 = -4.00000 4.00000 0.00000
+Image 80 = -4.00000 -4.00000 0.00000
+Image 81 = -4.00000 4.00000 2.00000
+Image 82 = -4.00000 -4.00000 2.00000
+Image 83 = -2.00000 4.00000 -2.00000
+Image 84 = -2.00000 -4.00000 -2.00000
+Image 85 = -2.00000 4.00000 0.00000
+Image 86 = -2.00000 -4.00000 0.00000
+Image 87 = -2.00000 4.00000 2.00000
+Image 88 = -2.00000 -4.00000 2.00000
+Image 89 = 0.00000 4.00000 -2.00000
+Image 90 = 0.00000 -4.00000 -2.00000
+Image 91 = 0.00000 4.00000 0.00000
+Image 92 = 0.00000 -4.00000 0.00000
+Image 93 = 0.00000 4.00000 2.00000
+Image 94 = 0.00000 -4.00000 2.00000
+Image 95 = 2.00000 4.00000 -2.00000
+Image 96 = 2.00000 -4.00000 -2.00000
+Image 97 = 2.00000 4.00000 0.00000
+Image 98 = 2.00000 -4.00000 0.00000
+Image 99 = 2.00000 4.00000 2.00000
+Image 100 = 2.00000 -4.00000 2.00000
+Image 101 = 4.00000 4.00000 -2.00000
+Image 102 = 4.00000 -4.00000 -2.00000
+Image 103 = 4.00000 4.00000 0.00000
+Image 104 = 4.00000 -4.00000 0.00000
+Image 105 = 4.00000 4.00000 2.00000
+Image 106 = 4.00000 -4.00000 2.00000
+Image 107 = 4.00000 -2.00000 -2.00000
+Image 108 = -4.00000 -2.00000 -2.00000
+Image 109 = 4.00000 0.00000 -2.00000
+Image 110 = -4.00000 0.00000 -2.00000
+Image 111 = 4.00000 2.00000 -2.00000
+Image 112 = -4.00000 2.00000 -2.00000
+Image 113 = 4.00000 -2.00000 0.00000
+Image 114 = -4.00000 -2.00000 0.00000
+Image 115 = 4.00000 0.00000 0.00000
+Image 116 = -4.00000 0.00000 0.00000
+Image 117 = 4.00000 2.00000 0.00000
+Image 118 = -4.00000 2.00000 0.00000
+Image 119 = 4.00000 -2.00000 2.00000
+Image 120 = -4.00000 -2.00000 2.00000
+Image 121 = 4.00000 0.00000 2.00000
+Image 122 = -4.00000 0.00000 2.00000
+Image 123 = 4.00000 2.00000 2.00000
+Image 124 = -4.00000 2.00000 2.00000
+Image 125 = -6.00000 -6.00000 6.00000
+Image 126 = -6.00000 -6.00000 -6.00000
+Image 127 = -6.00000 -4.00000 6.00000
+Image 128 = -6.00000 -4.00000 -6.00000
+Image 129 = -6.00000 -2.00000 6.00000
+Image 130 = -6.00000 -2.00000 -6.00000
+Image 131 = -6.00000 0.00000 6.00000
+Image 132 = -6.00000 0.00000 -6.00000
+Image 133 = -6.00000 2.00000 6.00000
+Image 134 = -6.00000 2.00000 -6.00000
+Image 135 = -6.00000 4.00000 6.00000
+Image 136 = -6.00000 4.00000 -6.00000
+Image 137 = -6.00000 6.00000 6.00000
+Image 138 = -6.00000 6.00000 -6.00000
+Image 139 = -4.00000 -6.00000 6.00000
+Image 140 = -4.00000 -6.00000 -6.00000
+Image 141 = -4.00000 -4.00000 6.00000
+Image 142 = -4.00000 -4.00000 -6.00000
+Image 143 = -4.00000 -2.00000 6.00000
+Image 144 = -4.00000 -2.00000 -6.00000
+Image 145 = -4.00000 0.00000 6.00000
+Image 146 = -4.00000 0.00000 -6.00000
+Image 147 = -4.00000 2.00000 6.00000
+Image 148 = -4.00000 2.00000 -6.00000
+Image 149 = -4.00000 4.00000 6.00000
+Image 150 = -4.00000 4.00000 -6.00000
+Image 151 = -4.00000 6.00000 6.00000
+Image 152 = -4.00000 6.00000 -6.00000
+Image 153 = -2.00000 -6.00000 6.00000
+Image 154 = -2.00000 -6.00000 -6.00000
+Image 155 = -2.00000 -4.00000 6.00000
+Image 156 = -2.00000 -4.00000 -6.00000
+Image 157 = -2.00000 -2.00000 6.00000
+Image 158 = -2.00000 -2.00000 -6.00000
+Image 159 = -2.00000 0.00000 6.00000
+Image 160 = -2.00000 0.00000 -6.00000
+Image 161 = -2.00000 2.00000 6.00000
+Image 162 = -2.00000 2.00000 -6.00000
+Image 163 = -2.00000 4.00000 6.00000
+Image 164 = -2.00000 4.00000 -6.00000
+Image 165 = -2.00000 6.00000 6.00000
+Image 166 = -2.00000 6.00000 -6.00000
+Image 167 = 0.00000 -6.00000 6.00000
+Image 168 = 0.00000 -6.00000 -6.00000
+Image 169 = 0.00000 -4.00000 6.00000
+Image 170 = 0.00000 -4.00000 -6.00000
+Image 171 = 0.00000 -2.00000 6.00000
+Image 172 = 0.00000 -2.00000 -6.00000
+Image 173 = 0.00000 0.00000 6.00000
+Image 174 = 0.00000 0.00000 -6.00000
+Image 175 = 0.00000 2.00000 6.00000
+Image 176 = 0.00000 2.00000 -6.00000
+Image 177 = 0.00000 4.00000 6.00000
+Image 178 = 0.00000 4.00000 -6.00000
+Image 179 = 0.00000 6.00000 6.00000
+Image 180 = 0.00000 6.00000 -6.00000
+Image 181 = 2.00000 -6.00000 6.00000
+Image 182 = 2.00000 -6.00000 -6.00000
+Image 183 = 2.00000 -4.00000 6.00000
+Image 184 = 2.00000 -4.00000 -6.00000
+Image 185 = 2.00000 -2.00000 6.00000
+Image 186 = 2.00000 -2.00000 -6.00000
+Image 187 = 2.00000 0.00000 6.00000
+Image 188 = 2.00000 0.00000 -6.00000
+Image 189 = 2.00000 2.00000 6.00000
+Image 190 = 2.00000 2.00000 -6.00000
+Image 191 = 2.00000 4.00000 6.00000
+Image 192 = 2.00000 4.00000 -6.00000
+Image 193 = 2.00000 6.00000 6.00000
+Image 194 = 2.00000 6.00000 -6.00000
+Image 195 = 4.00000 -6.00000 6.00000
+Image 196 = 4.00000 -6.00000 -6.00000
+Image 197 = 4.00000 -4.00000 6.00000
+Image 198 = 4.00000 -4.00000 -6.00000
+Image 199 = 4.00000 -2.00000 6.00000
+Image 200 = 4.00000 -2.00000 -6.00000
+Image 201 = 4.00000 0.00000 6.00000
+Image 202 = 4.00000 0.00000 -6.00000
+Image 203 = 4.00000 2.00000 6.00000
+Image 204 = 4.00000 2.00000 -6.00000
+Image 205 = 4.00000 4.00000 6.00000
+Image 206 = 4.00000 4.00000 -6.00000
+Image 207 = 4.00000 6.00000 6.00000
+Image 208 = 4.00000 6.00000 -6.00000
+Image 209 = 6.00000 -6.00000 6.00000
+Image 210 = 6.00000 -6.00000 -6.00000
+Image 211 = 6.00000 -4.00000 6.00000
+Image 212 = 6.00000 -4.00000 -6.00000
+Image 213 = 6.00000 -2.00000 6.00000
+Image 214 = 6.00000 -2.00000 -6.00000
+Image 215 = 6.00000 0.00000 6.00000
+Image 216 = 6.00000 0.00000 -6.00000
+Image 217 = 6.00000 2.00000 6.00000
+Image 218 = 6.00000 2.00000 -6.00000
+Image 219 = 6.00000 4.00000 6.00000
+Image 220 = 6.00000 4.00000 -6.00000
+Image 221 = 6.00000 6.00000 6.00000
+Image 222 = 6.00000 6.00000 -6.00000
+Image 223 = -6.00000 6.00000 -4.00000
+Image 224 = -6.00000 -6.00000 -4.00000
+Image 225 = -6.00000 6.00000 -2.00000
+Image 226 = -6.00000 -6.00000 -2.00000
+Image 227 = -6.00000 6.00000 0.00000
+Image 228 = -6.00000 -6.00000 0.00000
+Image 229 = -6.00000 6.00000 2.00000
+Image 230 = -6.00000 -6.00000 2.00000
+Image 231 = -6.00000 6.00000 4.00000
+Image 232 = -6.00000 -6.00000 4.00000
+Image 233 = -4.00000 6.00000 -4.00000
+Image 234 = -4.00000 -6.00000 -4.00000
+Image 235 = -4.00000 6.00000 -2.00000
+Image 236 = -4.00000 -6.00000 -2.00000
+Image 237 = -4.00000 6.00000 0.00000
+Image 238 = -4.00000 -6.00000 0.00000
+Image 239 = -4.00000 6.00000 2.00000
+Image 240 = -4.00000 -6.00000 2.00000
+Image 241 = -4.00000 6.00000 4.00000
+Image 242 = -4.00000 -6.00000 4.00000
+Image 243 = -2.00000 6.00000 -4.00000
+Image 244 = -2.00000 -6.00000 -4.00000
+Image 245 = -2.00000 6.00000 -2.00000
+Image 246 = -2.00000 -6.00000 -2.00000
+Image 247 = -2.00000 6.00000 0.00000
+Image 248 = -2.00000 -6.00000 0.00000
+Image 249 = -2.00000 6.00000 2.00000
+Image 250 = -2.00000 -6.00000 2.00000
+Image 251 = -2.00000 6.00000 4.00000
+Image 252 = -2.00000 -6.00000 4.00000
+Image 253 = 0.00000 6.00000 -4.00000
+Image 254 = 0.00000 -6.00000 -4.00000
+Image 255 = 0.00000 6.00000 -2.00000
+Image 256 = 0.00000 -6.00000 -2.00000
+Image 257 = 0.00000 6.00000 0.00000
+Image 258 = 0.00000 -6.00000 0.00000
+Image 259 = 0.00000 6.00000 2.00000
+Image 260 = 0.00000 -6.00000 2.00000
+Image 261 = 0.00000 6.00000 4.00000
+Image 262 = 0.00000 -6.00000 4.00000
+Image 263 = 2.00000 6.00000 -4.00000
+Image 264 = 2.00000 -6.00000 -4.00000
+Image 265 = 2.00000 6.00000 -2.00000
+Image 266 = 2.00000 -6.00000 -2.00000
+Image 267 = 2.00000 6.00000 0.00000
+Image 268 = 2.00000 -6.00000 0.00000
+Image 269 = 2.00000 6.00000 2.00000
+Image 270 = 2.00000 -6.00000 2.00000
+Image 271 = 2.00000 6.00000 4.00000
+Image 272 = 2.00000 -6.00000 4.00000
+Image 273 = 4.00000 6.00000 -4.00000
+Image 274 = 4.00000 -6.00000 -4.00000
+Image 275 = 4.00000 6.00000 -2.00000
+Image 276 = 4.00000 -6.00000 -2.00000
+Image 277 = 4.00000 6.00000 0.00000
+Image 278 = 4.00000 -6.00000 0.00000
+Image 279 = 4.00000 6.00000 2.00000
+Image 280 = 4.00000 -6.00000 2.00000
+Image 281 = 4.00000 6.00000 4.00000
+Image 282 = 4.00000 -6.00000 4.00000
+Image 283 = 6.00000 6.00000 -4.00000
+Image 284 = 6.00000 -6.00000 -4.00000
+Image 285 = 6.00000 6.00000 -2.00000
+Image 286 = 6.00000 -6.00000 -2.00000
+Image 287 = 6.00000 6.00000 0.00000
+Image 288 = 6.00000 -6.00000 0.00000
+Image 289 = 6.00000 6.00000 2.00000
+Image 290 = 6.00000 -6.00000 2.00000
+Image 291 = 6.00000 6.00000 4.00000
+Image 292 = 6.00000 -6.00000 4.00000
+Image 293 = 6.00000 -4.00000 -4.00000
+Image 294 = -6.00000 -4.00000 -4.00000
+Image 295 = 6.00000 -2.00000 -4.00000
+Image 296 = -6.00000 -2.00000 -4.00000
+Image 297 = 6.00000 0.00000 -4.00000
+Image 298 = -6.00000 0.00000 -4.00000
+Image 299 = 6.00000 2.00000 -4.00000
+Image 300 = -6.00000 2.00000 -4.00000
+Image 301 = 6.00000 4.00000 -4.00000
+Image 302 = -6.00000 4.00000 -4.00000
+Image 303 = 6.00000 -4.00000 -2.00000
+Image 304 = -6.00000 -4.00000 -2.00000
+Image 305 = 6.00000 -2.00000 -2.00000
+Image 306 = -6.00000 -2.00000 -2.00000
+Image 307 = 6.00000 0.00000 -2.00000
+Image 308 = -6.00000 0.00000 -2.00000
+Image 309 = 6.00000 2.00000 -2.00000
+Image 310 = -6.00000 2.00000 -2.00000
+Image 311 = 6.00000 4.00000 -2.00000
+Image 312 = -6.00000 4.00000 -2.00000
+Image 313 = 6.00000 -4.00000 0.00000
+Image 314 = -6.00000 -4.00000 0.00000
+Image 315 = 6.00000 -2.00000 0.00000
+Image 316 = -6.00000 -2.00000 0.00000
+Image 317 = 6.00000 0.00000 0.00000
+Image 318 = -6.00000 0.00000 0.00000
+Image 319 = 6.00000 2.00000 0.00000
+Image 320 = -6.00000 2.00000 0.00000
+Image 321 = 6.00000 4.00000 0.00000
+Image 322 = -6.00000 4.00000 0.00000
+Image 323 = 6.00000 -4.00000 2.00000
+Image 324 = -6.00000 -4.00000 2.00000
+Image 325 = 6.00000 -2.00000 2.00000
+Image 326 = -6.00000 -2.00000 2.00000
+Image 327 = 6.00000 0.00000 2.00000
+Image 328 = -6.00000 0.00000 2.00000
+Image 329 = 6.00000 2.00000 2.00000
+Image 330 = -6.00000 2.00000 2.00000
+Image 331 = 6.00000 4.00000 2.00000
+Image 332 = -6.00000 4.00000 2.00000
+Image 333 = 6.00000 -4.00000 4.00000
+Image 334 = -6.00000 -4.00000 4.00000
+Image 335 = 6.00000 -2.00000 4.00000
+Image 336 = -6.00000 -2.00000 4.00000
+Image 337 = 6.00000 0.00000 4.00000
+Image 338 = -6.00000 0.00000 4.00000
+Image 339 = 6.00000 2.00000 4.00000
+Image 340 = -6.00000 2.00000 4.00000
+Image 341 = 6.00000 4.00000 4.00000
+Image 342 = -6.00000 4.00000 4.00000
+Image 343 = -8.00000 -2.00000 8.00000
+Image 344 = -8.00000 -2.00000 -8.00000
+Image 345 = -8.00000 0.00000 8.00000
+Image 346 = -8.00000 0.00000 -8.00000
+Image 347 = -8.00000 2.00000 8.00000
+Image 348 = -8.00000 2.00000 -8.00000
+Image 349 = -6.00000 -6.00000 8.00000
+Image 350 = -6.00000 -6.00000 -8.00000
+Image 351 = -6.00000 -4.00000 8.00000
+Image 352 = -6.00000 -4.00000 -8.00000
+Image 353 = -6.00000 -2.00000 8.00000
+Image 354 = -6.00000 -2.00000 -8.00000
+Image 355 = -6.00000 0.00000 8.00000
+Image 356 = -6.00000 0.00000 -8.00000
+Image 357 = -6.00000 2.00000 8.00000
+Image 358 = -6.00000 2.00000 -8.00000
+Image 359 = -6.00000 4.00000 8.00000
+Image 360 = -6.00000 4.00000 -8.00000
+Image 361 = -6.00000 6.00000 8.00000
+Image 362 = -6.00000 6.00000 -8.00000
+Image 363 = -4.00000 -6.00000 8.00000
+Image 364 = -4.00000 -6.00000 -8.00000
+Image 365 = -4.00000 -4.00000 8.00000
+Image 366 = -4.00000 -4.00000 -8.00000
+Image 367 = -4.00000 -2.00000 8.00000
+Image 368 = -4.00000 -2.00000 -8.00000
+Image 369 = -4.00000 0.00000 8.00000
+Image 370 = -4.00000 0.00000 -8.00000
+Image 371 = -4.00000 2.00000 8.00000
+Image 372 = -4.00000 2.00000 -8.00000
+Image 373 = -4.00000 4.00000 8.00000
+Image 374 = -4.00000 4.00000 -8.00000
+Image 375 = -4.00000 6.00000 8.00000
+Image 376 = -4.00000 6.00000 -8.00000
+Image 377 = -2.00000 -8.00000 8.00000
+Image 378 = -2.00000 -8.00000 -8.00000
+Image 379 = -2.00000 -6.00000 8.00000
+Image 380 = -2.00000 -6.00000 -8.00000
+Image 381 = -2.00000 -4.00000 8.00000
+Image 382 = -2.00000 -4.00000 -8.00000
+Image 383 = -2.00000 -2.00000 8.00000
+Image 384 = -2.00000 -2.00000 -8.00000
+Image 385 = -2.00000 0.00000 8.00000
+Image 386 = -2.00000 0.00000 -8.00000
+Image 387 = -2.00000 2.00000 8.00000
+Image 388 = -2.00000 2.00000 -8.00000
+Image 389 = -2.00000 4.00000 8.00000
+Image 390 = -2.00000 4.00000 -8.00000
+Image 391 = -2.00000 6.00000 8.00000
+Image 392 = -2.00000 6.00000 -8.00000
+Image 393 = -2.00000 8.00000 8.00000
+Image 394 = -2.00000 8.00000 -8.00000
+Image 395 = 0.00000 -8.00000 8.00000
+Image 396 = 0.00000 -8.00000 -8.00000
+Image 397 = 0.00000 -6.00000 8.00000
+Image 398 = 0.00000 -6.00000 -8.00000
+Image 399 = 0.00000 -4.00000 8.00000
+Image 400 = 0.00000 -4.00000 -8.00000
+Image 401 = 0.00000 -2.00000 8.00000
+Image 402 = 0.00000 -2.00000 -8.00000
+Image 403 = 0.00000 0.00000 8.00000
+Image 404 = 0.00000 0.00000 -8.00000
+Image 405 = 0.00000 2.00000 8.00000
+Image 406 = 0.00000 2.00000 -8.00000
+Image 407 = 0.00000 4.00000 8.00000
+Image 408 = 0.00000 4.00000 -8.00000
+Image 409 = 0.00000 6.00000 8.00000
+Image 410 = 0.00000 6.00000 -8.00000
+Image 411 = 0.00000 8.00000 8.00000
+Image 412 = 0.00000 8.00000 -8.00000
+Image 413 = 2.00000 -8.00000 8.00000
+Image 414 = 2.00000 -8.00000 -8.00000
+Image 415 = 2.00000 -6.00000 8.00000
+Image 416 = 2.00000 -6.00000 -8.00000
+Image 417 = 2.00000 -4.00000 8.00000
+Image 418 = 2.00000 -4.00000 -8.00000
+Image 419 = 2.00000 -2.00000 8.00000
+Image 420 = 2.00000 -2.00000 -8.00000
+Image 421 = 2.00000 0.00000 8.00000
+Image 422 = 2.00000 0.00000 -8.00000
+Image 423 = 2.00000 2.00000 8.00000
+Image 424 = 2.00000 2.00000 -8.00000
+Image 425 = 2.00000 4.00000 8.00000
+Image 426 = 2.00000 4.00000 -8.00000
+Image 427 = 2.00000 6.00000 8.00000
+Image 428 = 2.00000 6.00000 -8.00000
+Image 429 = 2.00000 8.00000 8.00000
+Image 430 = 2.00000 8.00000 -8.00000
+Image 431 = 4.00000 -6.00000 8.00000
+Image 432 = 4.00000 -6.00000 -8.00000
+Image 433 = 4.00000 -4.00000 8.00000
+Image 434 = 4.00000 -4.00000 -8.00000
+Image 435 = 4.00000 -2.00000 8.00000
+Image 436 = 4.00000 -2.00000 -8.00000
+Image 437 = 4.00000 0.00000 8.00000
+Image 438 = 4.00000 0.00000 -8.00000
+Image 439 = 4.00000 2.00000 8.00000
+Image 440 = 4.00000 2.00000 -8.00000
+Image 441 = 4.00000 4.00000 8.00000
+Image 442 = 4.00000 4.00000 -8.00000
+Image 443 = 4.00000 6.00000 8.00000
+Image 444 = 4.00000 6.00000 -8.00000
+Image 445 = 6.00000 -6.00000 8.00000
+Image 446 = 6.00000 -6.00000 -8.00000
+Image 447 = 6.00000 -4.00000 8.00000
+Image 448 = 6.00000 -4.00000 -8.00000
+Image 449 = 6.00000 -2.00000 8.00000
+Image 450 = 6.00000 -2.00000 -8.00000
+Image 451 = 6.00000 0.00000 8.00000
+Image 452 = 6.00000 0.00000 -8.00000
+Image 453 = 6.00000 2.00000 8.00000
+Image 454 = 6.00000 2.00000 -8.00000
+Image 455 = 6.00000 4.00000 8.00000
+Image 456 = 6.00000 4.00000 -8.00000
+Image 457 = 6.00000 6.00000 8.00000
+Image 458 = 6.00000 6.00000 -8.00000
+Image 459 = 8.00000 -2.00000 8.00000
+Image 460 = 8.00000 -2.00000 -8.00000
+Image 461 = 8.00000 0.00000 8.00000
+Image 462 = 8.00000 0.00000 -8.00000
+Image 463 = 8.00000 2.00000 8.00000
+Image 464 = 8.00000 2.00000 -8.00000
+Image 465 = -8.00000 8.00000 -2.00000
+Image 466 = -8.00000 -8.00000 -2.00000
+Image 467 = -8.00000 8.00000 0.00000
+Image 468 = -8.00000 -8.00000 0.00000
+Image 469 = -8.00000 8.00000 2.00000
+Image 470 = -8.00000 -8.00000 2.00000
+Image 471 = -6.00000 8.00000 -6.00000
+Image 472 = -6.00000 -8.00000 -6.00000
+Image 473 = -6.00000 8.00000 -4.00000
+Image 474 = -6.00000 -8.00000 -4.00000
+Image 475 = -6.00000 8.00000 -2.00000
+Image 476 = -6.00000 -8.00000 -2.00000
+Image 477 = -6.00000 8.00000 0.00000
+Image 478 = -6.00000 -8.00000 0.00000
+Image 479 = -6.00000 8.00000 2.00000
+Image 480 = -6.00000 -8.00000 2.00000
+Image 481 = -6.00000 8.00000 4.00000
+Image 482 = -6.00000 -8.00000 4.00000
+Image 483 = -6.00000 8.00000 6.00000
+Image 484 = -6.00000 -8.00000 6.00000
+Image 485 = -4.00000 8.00000 -6.00000
+Image 486 = -4.00000 -8.00000 -6.00000
+Image 487 = -4.00000 8.00000 -4.00000
+Image 488 = -4.00000 -8.00000 -4.00000
+Image 489 = -4.00000 8.00000 -2.00000
+Image 490 = -4.00000 -8.00000 -2.00000
+Image 491 = -4.00000 8.00000 0.00000
+Image 492 = -4.00000 -8.00000 0.00000
+Image 493 = -4.00000 8.00000 2.00000
+Image 494 = -4.00000 -8.00000 2.00000
+Image 495 = -4.00000 8.00000 4.00000
+Image 496 = -4.00000 -8.00000 4.00000
+Image 497 = -4.00000 8.00000 6.00000
+Image 498 = -4.00000 -8.00000 6.00000
+Image 499 = -2.00000 8.00000 -6.00000
+Image 500 = -2.00000 -8.00000 -6.00000
+Image 501 = -2.00000 8.00000 -4.00000
+Image 502 = -2.00000 -8.00000 -4.00000
+Image 503 = -2.00000 8.00000 -2.00000
+Image 504 = -2.00000 -8.00000 -2.00000
+Image 505 = -2.00000 8.00000 0.00000
+Image 506 = -2.00000 -8.00000 0.00000
+Image 507 = -2.00000 8.00000 2.00000
+Image 508 = -2.00000 -8.00000 2.00000
+Image 509 = -2.00000 8.00000 4.00000
+Image 510 = -2.00000 -8.00000 4.00000
+Image 511 = -2.00000 8.00000 6.00000
+Image 512 = -2.00000 -8.00000 6.00000
+Image 513 = 0.00000 8.00000 -6.00000
+Image 514 = 0.00000 -8.00000 -6.00000
+Image 515 = 0.00000 8.00000 -4.00000
+Image 516 = 0.00000 -8.00000 -4.00000
+Image 517 = 0.00000 8.00000 -2.00000
+Image 518 = 0.00000 -8.00000 -2.00000
+Image 519 = 0.00000 8.00000 0.00000
+Image 520 = 0.00000 -8.00000 0.00000
+Image 521 = 0.00000 8.00000 2.00000
+Image 522 = 0.00000 -8.00000 2.00000
+Image 523 = 0.00000 8.00000 4.00000
+Image 524 = 0.00000 -8.00000 4.00000
+Image 525 = 0.00000 8.00000 6.00000
+Image 526 = 0.00000 -8.00000 6.00000
+Image 527 = 2.00000 8.00000 -6.00000
+Image 528 = 2.00000 -8.00000 -6.00000
+Image 529 = 2.00000 8.00000 -4.00000
+Image 530 = 2.00000 -8.00000 -4.00000
+Image 531 = 2.00000 8.00000 -2.00000
+Image 532 = 2.00000 -8.00000 -2.00000
+Image 533 = 2.00000 8.00000 0.00000
+Image 534 = 2.00000 -8.00000 0.00000
+Image 535 = 2.00000 8.00000 2.00000
+Image 536 = 2.00000 -8.00000 2.00000
+Image 537 = 2.00000 8.00000 4.00000
+Image 538 = 2.00000 -8.00000 4.00000
+Image 539 = 2.00000 8.00000 6.00000
+Image 540 = 2.00000 -8.00000 6.00000
+Image 541 = 4.00000 8.00000 -6.00000
+Image 542 = 4.00000 -8.00000 -6.00000
+Image 543 = 4.00000 8.00000 -4.00000
+Image 544 = 4.00000 -8.00000 -4.00000
+Image 545 = 4.00000 8.00000 -2.00000
+Image 546 = 4.00000 -8.00000 -2.00000
+Image 547 = 4.00000 8.00000 0.00000
+Image 548 = 4.00000 -8.00000 0.00000
+Image 549 = 4.00000 8.00000 2.00000
+Image 550 = 4.00000 -8.00000 2.00000
+Image 551 = 4.00000 8.00000 4.00000
+Image 552 = 4.00000 -8.00000 4.00000
+Image 553 = 4.00000 8.00000 6.00000
+Image 554 = 4.00000 -8.00000 6.00000
+Image 555 = 6.00000 8.00000 -6.00000
+Image 556 = 6.00000 -8.00000 -6.00000
+Image 557 = 6.00000 8.00000 -4.00000
+Image 558 = 6.00000 -8.00000 -4.00000
+Image 559 = 6.00000 8.00000 -2.00000
+Image 560 = 6.00000 -8.00000 -2.00000
+Image 561 = 6.00000 8.00000 0.00000
+Image 562 = 6.00000 -8.00000 0.00000
+Image 563 = 6.00000 8.00000 2.00000
+Image 564 = 6.00000 -8.00000 2.00000
+Image 565 = 6.00000 8.00000 4.00000
+Image 566 = 6.00000 -8.00000 4.00000
+Image 567 = 6.00000 8.00000 6.00000
+Image 568 = 6.00000 -8.00000 6.00000
+Image 569 = 8.00000 8.00000 -2.00000
+Image 570 = 8.00000 -8.00000 -2.00000
+Image 571 = 8.00000 8.00000 0.00000
+Image 572 = 8.00000 -8.00000 0.00000
+Image 573 = 8.00000 8.00000 2.00000
+Image 574 = 8.00000 -8.00000 2.00000
+Image 575 = 8.00000 -6.00000 -6.00000
+Image 576 = -8.00000 -6.00000 -6.00000
+Image 577 = 8.00000 -4.00000 -6.00000
+Image 578 = -8.00000 -4.00000 -6.00000
+Image 579 = 8.00000 -2.00000 -6.00000
+Image 580 = -8.00000 -2.00000 -6.00000
+Image 581 = 8.00000 0.00000 -6.00000
+Image 582 = -8.00000 0.00000 -6.00000
+Image 583 = 8.00000 2.00000 -6.00000
+Image 584 = -8.00000 2.00000 -6.00000
+Image 585 = 8.00000 4.00000 -6.00000
+Image 586 = -8.00000 4.00000 -6.00000
+Image 587 = 8.00000 6.00000 -6.00000
+Image 588 = -8.00000 6.00000 -6.00000
+Image 589 = 8.00000 -6.00000 -4.00000
+Image 590 = -8.00000 -6.00000 -4.00000
+Image 591 = 8.00000 -4.00000 -4.00000
+Image 592 = -8.00000 -4.00000 -4.00000
+Image 593 = 8.00000 -2.00000 -4.00000
+Image 594 = -8.00000 -2.00000 -4.00000
+Image 595 = 8.00000 0.00000 -4.00000
+Image 596 = -8.00000 0.00000 -4.00000
+Image 597 = 8.00000 2.00000 -4.00000
+Image 598 = -8.00000 2.00000 -4.00000
+Image 599 = 8.00000 4.00000 -4.00000
+Image 600 = -8.00000 4.00000 -4.00000
+Image 601 = 8.00000 6.00000 -4.00000
+Image 602 = -8.00000 6.00000 -4.00000
+Image 603 = 8.00000 -6.00000 -2.00000
+Image 604 = -8.00000 -6.00000 -2.00000
+Image 605 = 8.00000 -4.00000 -2.00000
+Image 606 = -8.00000 -4.00000 -2.00000
+Image 607 = 8.00000 -2.00000 -2.00000
+Image 608 = -8.00000 -2.00000 -2.00000
+Image 609 = 8.00000 0.00000 -2.00000
+Image 610 = -8.00000 0.00000 -2.00000
+Image 611 = 8.00000 2.00000 -2.00000
+Image 612 = -8.00000 2.00000 -2.00000
+Image 613 = 8.00000 4.00000 -2.00000
+Image 614 = -8.00000 4.00000 -2.00000
+Image 615 = 8.00000 6.00000 -2.00000
+Image 616 = -8.00000 6.00000 -2.00000
+Image 617 = 8.00000 -6.00000 0.00000
+Image 618 = -8.00000 -6.00000 0.00000
+Image 619 = 8.00000 -4.00000 0.00000
+Image 620 = -8.00000 -4.00000 0.00000
+Image 621 = 8.00000 -2.00000 0.00000
+Image 622 = -8.00000 -2.00000 0.00000
+Image 623 = 8.00000 0.00000 0.00000
+Image 624 = -8.00000 0.00000 0.00000
+Image 625 = 8.00000 2.00000 0.00000
+Image 626 = -8.00000 2.00000 0.00000
+Image 627 = 8.00000 4.00000 0.00000
+Image 628 = -8.00000 4.00000 0.00000
+Image 629 = 8.00000 6.00000 0.00000
+Image 630 = -8.00000 6.00000 0.00000
+Image 631 = 8.00000 -6.00000 2.00000
+Image 632 = -8.00000 -6.00000 2.00000
+Image 633 = 8.00000 -4.00000 2.00000
+Image 634 = -8.00000 -4.00000 2.00000
+Image 635 = 8.00000 -2.00000 2.00000
+Image 636 = -8.00000 -2.00000 2.00000
+Image 637 = 8.00000 0.00000 2.00000
+Image 638 = -8.00000 0.00000 2.00000
+Image 639 = 8.00000 2.00000 2.00000
+Image 640 = -8.00000 2.00000 2.00000
+Image 641 = 8.00000 4.00000 2.00000
+Image 642 = -8.00000 4.00000 2.00000
+Image 643 = 8.00000 6.00000 2.00000
+Image 644 = -8.00000 6.00000 2.00000
+Image 645 = 8.00000 -6.00000 4.00000
+Image 646 = -8.00000 -6.00000 4.00000
+Image 647 = 8.00000 -4.00000 4.00000
+Image 648 = -8.00000 -4.00000 4.00000
+Image 649 = 8.00000 -2.00000 4.00000
+Image 650 = -8.00000 -2.00000 4.00000
+Image 651 = 8.00000 0.00000 4.00000
+Image 652 = -8.00000 0.00000 4.00000
+Image 653 = 8.00000 2.00000 4.00000
+Image 654 = -8.00000 2.00000 4.00000
+Image 655 = 8.00000 4.00000 4.00000
+Image 656 = -8.00000 4.00000 4.00000
+Image 657 = 8.00000 6.00000 4.00000
+Image 658 = -8.00000 6.00000 4.00000
+Image 659 = 8.00000 -6.00000 6.00000
+Image 660 = -8.00000 -6.00000 6.00000
+Image 661 = 8.00000 -4.00000 6.00000
+Image 662 = -8.00000 -4.00000 6.00000
+Image 663 = 8.00000 -2.00000 6.00000
+Image 664 = -8.00000 -2.00000 6.00000
+Image 665 = 8.00000 0.00000 6.00000
+Image 666 = -8.00000 0.00000 6.00000
+Image 667 = 8.00000 2.00000 6.00000
+Image 668 = -8.00000 2.00000 6.00000
+Image 669 = 8.00000 4.00000 6.00000
+Image 670 = -8.00000 4.00000 6.00000
+Image 671 = 8.00000 6.00000 6.00000
+Image 672 = -8.00000 6.00000 6.00000
+Image 673 = -4.00000 -4.00000 10.0000
+Image 674 = -4.00000 -4.00000 -10.0000
+Image 675 = -4.00000 -2.00000 10.0000
+Image 676 = -4.00000 -2.00000 -10.0000
+Image 677 = -4.00000 0.00000 10.0000
+Image 678 = -4.00000 0.00000 -10.0000
+Image 679 = -4.00000 2.00000 10.0000
+Image 680 = -4.00000 2.00000 -10.0000
+Image 681 = -4.00000 4.00000 10.0000
+Image 682 = -4.00000 4.00000 -10.0000
+Image 683 = -2.00000 -4.00000 10.0000
+Image 684 = -2.00000 -4.00000 -10.0000
+Image 685 = -2.00000 -2.00000 10.0000
+Image 686 = -2.00000 -2.00000 -10.0000
+Image 687 = -2.00000 0.00000 10.0000
+Image 688 = -2.00000 0.00000 -10.0000
+Image 689 = -2.00000 2.00000 10.0000
+Image 690 = -2.00000 2.00000 -10.0000
+Image 691 = -2.00000 4.00000 10.0000
+Image 692 = -2.00000 4.00000 -10.0000
+Image 693 = 0.00000 -4.00000 10.0000
+Image 694 = 0.00000 -4.00000 -10.0000
+Image 695 = 0.00000 -2.00000 10.0000
+Image 696 = 0.00000 -2.00000 -10.0000
+Image 697 = 0.00000 0.00000 10.0000
+Image 698 = 0.00000 0.00000 -10.0000
+Image 699 = 0.00000 2.00000 10.0000
+Image 700 = 0.00000 2.00000 -10.0000
+Image 701 = 0.00000 4.00000 10.0000
+Image 702 = 0.00000 4.00000 -10.0000
+Image 703 = 2.00000 -4.00000 10.0000
+Image 704 = 2.00000 -4.00000 -10.0000
+Image 705 = 2.00000 -2.00000 10.0000
+Image 706 = 2.00000 -2.00000 -10.0000
+Image 707 = 2.00000 0.00000 10.0000
+Image 708 = 2.00000 0.00000 -10.0000
+Image 709 = 2.00000 2.00000 10.0000
+Image 710 = 2.00000 2.00000 -10.0000
+Image 711 = 2.00000 4.00000 10.0000
+Image 712 = 2.00000 4.00000 -10.0000
+Image 713 = 4.00000 -4.00000 10.0000
+Image 714 = 4.00000 -4.00000 -10.0000
+Image 715 = 4.00000 -2.00000 10.0000
+Image 716 = 4.00000 -2.00000 -10.0000
+Image 717 = 4.00000 0.00000 10.0000
+Image 718 = 4.00000 0.00000 -10.0000
+Image 719 = 4.00000 2.00000 10.0000
+Image 720 = 4.00000 2.00000 -10.0000
+Image 721 = 4.00000 4.00000 10.0000
+Image 722 = 4.00000 4.00000 -10.0000
+Image 723 = -4.00000 10.0000 -4.00000
+Image 724 = -4.00000 -10.0000 -4.00000
+Image 725 = -4.00000 10.0000 -2.00000
+Image 726 = -4.00000 -10.0000 -2.00000
+Image 727 = -4.00000 10.0000 0.00000
+Image 728 = -4.00000 -10.0000 0.00000
+Image 729 = -4.00000 10.0000 2.00000
+Image 730 = -4.00000 -10.0000 2.00000
+Image 731 = -4.00000 10.0000 4.00000
+Image 732 = -4.00000 -10.0000 4.00000
+Image 733 = -2.00000 10.0000 -4.00000
+Image 734 = -2.00000 -10.0000 -4.00000
+Image 735 = -2.00000 10.0000 -2.00000
+Image 736 = -2.00000 -10.0000 -2.00000
+Image 737 = -2.00000 10.0000 0.00000
+Image 738 = -2.00000 -10.0000 0.00000
+Image 739 = -2.00000 10.0000 2.00000
+Image 740 = -2.00000 -10.0000 2.00000
+Image 741 = -2.00000 10.0000 4.00000
+Image 742 = -2.00000 -10.0000 4.00000
+Image 743 = 0.00000 10.0000 -4.00000
+Image 744 = 0.00000 -10.0000 -4.00000
+Image 745 = 0.00000 10.0000 -2.00000
+Image 746 = 0.00000 -10.0000 -2.00000
+Image 747 = 0.00000 10.0000 0.00000
+Image 748 = 0.00000 -10.0000 0.00000
+Image 749 = 0.00000 10.0000 2.00000
+Image 750 = 0.00000 -10.0000 2.00000
+Image 751 = 0.00000 10.0000 4.00000
+Image 752 = 0.00000 -10.0000 4.00000
+Image 753 = 2.00000 10.0000 -4.00000
+Image 754 = 2.00000 -10.0000 -4.00000
+Image 755 = 2.00000 10.0000 -2.00000
+Image 756 = 2.00000 -10.0000 -2.00000
+Image 757 = 2.00000 10.0000 0.00000
+Image 758 = 2.00000 -10.0000 0.00000
+Image 759 = 2.00000 10.0000 2.00000
+Image 760 = 2.00000 -10.0000 2.00000
+Image 761 = 2.00000 10.0000 4.00000
+Image 762 = 2.00000 -10.0000 4.00000
+Image 763 = 4.00000 10.0000 -4.00000
+Image 764 = 4.00000 -10.0000 -4.00000
+Image 765 = 4.00000 10.0000 -2.00000
+Image 766 = 4.00000 -10.0000 -2.00000
+Image 767 = 4.00000 10.0000 0.00000
+Image 768 = 4.00000 -10.0000 0.00000
+Image 769 = 4.00000 10.0000 2.00000
+Image 770 = 4.00000 -10.0000 2.00000
+Image 771 = 4.00000 10.0000 4.00000
+Image 772 = 4.00000 -10.0000 4.00000
+Image 773 = 10.0000 -4.00000 -4.00000
+Image 774 = -10.0000 -4.00000 -4.00000
+Image 775 = 10.0000 -2.00000 -4.00000
+Image 776 = -10.0000 -2.00000 -4.00000
+Image 777 = 10.0000 0.00000 -4.00000
+Image 778 = -10.0000 0.00000 -4.00000
+Image 779 = 10.0000 2.00000 -4.00000
+Image 780 = -10.0000 2.00000 -4.00000
+Image 781 = 10.0000 4.00000 -4.00000
+Image 782 = -10.0000 4.00000 -4.00000
+Image 783 = 10.0000 -4.00000 -2.00000
+Image 784 = -10.0000 -4.00000 -2.00000
+Image 785 = 10.0000 -2.00000 -2.00000
+Image 786 = -10.0000 -2.00000 -2.00000
+Image 787 = 10.0000 0.00000 -2.00000
+Image 788 = -10.0000 0.00000 -2.00000
+Image 789 = 10.0000 2.00000 -2.00000
+Image 790 = -10.0000 2.00000 -2.00000
+Image 791 = 10.0000 4.00000 -2.00000
+Image 792 = -10.0000 4.00000 -2.00000
+Image 793 = 10.0000 -4.00000 0.00000
+Image 794 = -10.0000 -4.00000 0.00000
+Image 795 = 10.0000 -2.00000 0.00000
+Image 796 = -10.0000 -2.00000 0.00000
+Image 797 = 10.0000 0.00000 0.00000
+Image 798 = -10.0000 0.00000 0.00000
+Image 799 = 10.0000 2.00000 0.00000
+Image 800 = -10.0000 2.00000 0.00000
+Image 801 = 10.0000 4.00000 0.00000
+Image 802 = -10.0000 4.00000 0.00000
+Image 803 = 10.0000 -4.00000 2.00000
+Image 804 = -10.0000 -4.00000 2.00000
+Image 805 = 10.0000 -2.00000 2.00000
+Image 806 = -10.0000 -2.00000 2.00000
+Image 807 = 10.0000 0.00000 2.00000
+Image 808 = -10.0000 0.00000 2.00000
+Image 809 = 10.0000 2.00000 2.00000
+Image 810 = -10.0000 2.00000 2.00000
+Image 811 = 10.0000 4.00000 2.00000
+Image 812 = -10.0000 4.00000 2.00000
+Image 813 = 10.0000 -4.00000 4.00000
+Image 814 = -10.0000 -4.00000 4.00000
+Image 815 = 10.0000 -2.00000 4.00000
+Image 816 = -10.0000 -2.00000 4.00000
+Image 817 = 10.0000 0.00000 4.00000
+Image 818 = -10.0000 0.00000 4.00000
+Image 819 = 10.0000 2.00000 4.00000
+Image 820 = -10.0000 2.00000 4.00000
+Image 821 = 10.0000 4.00000 4.00000
+Image 822 = -10.0000 4.00000 4.00000
+nentries = 6
+Entries in rcutneighsq: 
+93.7992
+93.7992
+93.7992
+93.7992
+93.7992
+93.7992
+a80 2
+*************Entering SetupNeighborListNsq**********
+SetupNeighborListNsq::nparticles = 4
+a82 17
+Neighbor list for icosp = 0
+i = 0
+image = 0
+Image pos = 0.00000 0.00000 0.00000
+Neighbor list for icosp = 4
+i = 0
+image = 4
+Image pos = -2.00000 0.00000 -2.00000
+Neighbor list for icosp = 1824
+i = 3
+image = 651
+Image pos = 8.00000 0.00000 4.00000
+Neighbor list for icosp = 1825
+i = 3
+image = 653
+Image pos = 8.00000 2.00000 4.00000
+*************Leaving SetupNeighborListNsq**********
+d86 1
+a89 21
+*************Entering SetupNeighborListNsq**********
+SetupNeighborListNsq::nparticles = 4
+ncosps = 1775
+nneighbors = 3720
+Neighbor list for icosp = 0
+i = 0
+image = 0
+Image pos = 0.00000 0.00000 0.00000
+Neighbor list for icosp = 4
+i = 0
+image = 4
+Image pos = -2.00000 0.00000 -2.00000
+Neighbor list for icosp = 1773
+i = 3
+image = 651
+Image pos = 8.00000 0.00000 4.00000
+Neighbor list for icosp = 1774
+i = 3
+image = 653
+Image pos = 8.00000 2.00000 4.00000
+*************Leaving SetupNeighborListNsq**********
+d100 2
+a105 2
+Force time is 0.01000000
+Force-pair time is 2.68240e-06
+d108 3
+@
+

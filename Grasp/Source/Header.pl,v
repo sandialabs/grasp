@@ -1,0 +1,395 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.4.0.10
+	ADTools_branch:4.4.0.8
+	Monaco_Aidan:4.4.0.6
+	Root-of-Monaco_Aidan:4.4
+	PPPM_Crozier2:4.4.0.4
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.4.0.2
+	PreMonaco:4.4
+	Recovery-2004-04-12:4.2
+	BRANCH:4.2.0.6
+	PMONACO:4.2.0.4
+	ROOT:4.2
+	initial:4.2.0.2
+	pmonaco:4.2
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoSource:3.0.0.6
+	GraspSource:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.3.0.2
+	cjkimme_version_merge_from_trunk_1:2.1.2.1
+	cjkimme_version:2.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.4
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.04.22.15.58.16;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.04.07.17.22.34;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.05.22.58.37;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.03.20.00.15.36;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2004.01.09.19.01.07;	author athomps;	state Exp;
+branches
+	2.1.2.1;
+next	;
+
+2.1.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Fixed glitch in header.
+@
+text
+@#!/usr/bin/perl -w
+#-----------------------------------------------------------------------
+#
+#   G R A S P
+#   ____________
+#   \           \
+#    \ General   \
+#     \ Reactive  \
+#      \ Atomistic \
+#       \ Simulation\
+#        \ Program   \
+#         \___________\
+#
+#    Timestamp: April 1, 2005
+#    Version: 4.0
+#
+#    Primary Author: Aidan P. Thompson
+#
+#    e-mail: athomps@@sandia.gov
+#   
+#    Copyright (2005) Sandia National Laboratories
+#
+#    Sandia National Laboratories is a multiprogram laboratory 
+#    operated by Sandia Corporation, a Lockheed Martin company,
+#    for the United States Department of Energy under contract
+#    No. DE-AC04-94AL-85000.
+#
+#    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+#    Corporation, the U.S. Government retains certain rights in 
+#    this software.
+#
+#    This software is distributed under the terms of the GNU Public 
+#    License (GPL). For a copy of the GPL see the file 
+#    Grasp/Documentation/LICENSE or visit the GNU website at 
+#    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+#    entitles you to use the software, modify it and redistribute it. 
+#    The main thing you can not do is apply any other licensing 
+#    terms to the software. Also, if any part of this sofware is added 
+#    to other software, then that software must also be released under 
+#    the GPL.
+#
+#    This software comes with no warranty of any kind. 
+#
+#----------------------------------------------------------------------- 
+#///:EOH~
+
+# Syntax: Header.pl files  (*)
+
+# Removes the old header (if it exists) from each 
+# file and replaces it with the contents of header.txt,
+# with commenting suitable for that file type.
+#
+# The header is that part of the file which ends with
+# a line containing the EOH reg-exp.
+#
+# (Don't write the EOH reg-exp in a file unless you want to
+# mark the EOH. In the code it appears as  \/\/\/:EOH~, so
+# you can run this script on itself!).
+#
+# If multiple occurrence of EOH are found, 
+# a warning is generated
+# and only first header is updated.
+
+# Example: Header.pl *.pl *.cpp *.h M*[^~] ../Documentation/README ../Documentation/manual.txt
+
+
+if (@@ARGV == 0) {
+    print "Syntax: Header.pl files\n";
+    exit;
+}
+
+open(HEADER,"<header.txt") or die "Can't open header.txt: $!\n";
+
+# Slurp header into @@header
+@@header = <HEADER>;
+close(HEADER);
+
+foreach $file (@@ARGV) {
+
+    open(FILE,$file) || die "Could not open file $file\n";
+    @@headerlines = ();
+
+#     if ($file =~ /reax_defs.h/) {
+# 	$lentmp = 72;
+# 	push @@headerlines,"#ifdef THIS_IS_JUST_A_COMMENT_BLOCK\n";
+# 	unshift @@header,
+# 	      "Need to do it this way for FORTRAN C-preprocessors\n";
+# 	foreach $line (@@header) {
+# 	    $tmp = $line;
+# 	    chop $tmp;
+# 	    $pad = $lentmp-length($tmp);
+# 	    $pad = $pad > 0? $pad :0;
+# 	    $tmp = $tmp.(" " x $pad);
+# 	    push @@headerlines,"/* $tmp */\n";
+# 	}
+# 	$_ = pop @@headerlines;
+# 	s/       //;
+# 	push @@headerlines, "#endif ",$_ 
+    if ($file =~ /reax_defs.h/) {
+	$lentmp = 72;
+	foreach $line (@@header) {
+	    $tmp = $line;
+	    chop $tmp;
+	    $pad = $lentmp-length($tmp);
+	    $pad = $pad > 0? $pad :0;
+	    $tmp = $tmp.(" " x $pad);
+	    push @@headerlines,"# /* $tmp */\n";
+	}
+    } elsif ($file =~ /\.h/ || $file =~ /\.cpp/) {
+	foreach $line (@@header) {
+	    push @@headerlines,"//$line";
+	}
+    } else {
+	foreach $line (@@header) {
+	    push @@headerlines,"#$line";
+	}
+    }
+
+    # Append file to @@lines
+
+    @@filelines = <FILE>;
+    close(FILE);
+
+    # Check if first line is script interpreter directive
+    # If so, put it in front of new header
+    if ($filelines[0] =~ /#!/) {
+	unshift @@headerlines, shift @@filelines;
+    }
+
+    # Copy file to new file body and step through file until
+    # either end-of-file or EOH is reached
+    # If EOH, repeat process again.
+    # To avoid losing source, only two copies are performed.
+
+    $count=0;
+    @@bodylines = ();
+    while (@@filelines) {
+	$count++;
+	if ($count <= 2) {
+	    @@bodylines = @@filelines;
+	} else {
+	    print "*" x 40,"\n";
+	    print "Warning: Multiple headers in $file\n";
+	    print "\t Only updated first header\n";
+	    print "*" x 40,"\n";
+	}
+	while (@@filelines) {
+	    last if ((shift @@filelines) =~ /\/\/\/:EOH~/);
+	} 
+    }
+	
+    open(FILE,">$file");
+    print FILE @@headerlines,@@bodylines;
+    close(FILE);
+}
+@
+
+
+4.3
+log
+@Came up with local fix for BGL problem with C preprocessor comments.
+@
+text
+@d44 1
+a44 1
+#------------------------------------------------------------------------ 
+@
+
+
+4.2
+log
+@I hope this is my final fix for hadling comments in reax_defs.h
+@
+text
+@d83 16
+a100 3
+	push @@headerlines,"#ifdef THIS_IS_JUST_A_COMMENT_BLOCK\n";
+	unshift @@header,
+	      "Need to do it this way for FORTRAN C-preprocessors\n";
+d107 1
+a107 1
+	    push @@headerlines,"/* $tmp */\n";
+a108 3
+	$_ = pop @@headerlines;
+	s/       //;
+	push @@headerlines, "#endif ",$_ 
+@
+
+
+4.1
+log
+@Fixed problem with comment symbols in header text for file reax_defs.h
+@
+text
+@d84 4
+d91 3
+d96 3
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d64 2
+a65 1
+# Example: Header.pl *.pl *.cpp *.h M*[^~]
+d87 1
+a87 1
+	    push @@headerlines,"# /* $tmp */\n";
+@
+
+
+3.1
+log
+@Merged REAX version with main version
+@
+text
+@d17 1
+a17 1
+#    Author: Aidan P. Thompson
+d21 4
+a24 4
+#    Copyright (2004) Sandia National Laboratories
+#   
+#    Sandia is a multiprogram laboratory operated by 
+#    Sandia Corporation, a Lockheed Martin company,
+d28 16
+d82 7
+a88 1
+    if ($file =~ /\.h/ || $file =~ /\.cpp/) {
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d14 2
+a15 2
+#    Timestamp: September 22, 2004
+#    Version: 3.0
+@
+
+
+2.3
+log
+@Updated header
+@
+text
+@d14 2
+a15 1
+#    Timestamp: July 26, 2004
+@
+
+
+2.2
+log
+@Various
+@
+text
+@d14 1
+a14 1
+#    Timestamp: 1 March 2004
+@
+
+
+2.1
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d14 1
+a14 1
+#    Timestamp: 8 January 2004
+@
+
+
+2.1.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d14 1
+a14 1
+#    Timestamp: July 26, 2004
+@
+
+

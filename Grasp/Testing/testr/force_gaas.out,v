@@ -1,0 +1,95 @@
+head	1.4;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2007.09.05.22.51.10;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2007.06.02.03.27.22;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2006.05.04.22.00.58;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.10.28.17.57.55;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@Reran most test problems using Apple laptop with 2.33 GHz Intel core 2 Duo
+@
+text
+@# Timestep 0
+# 
+# Number of particles 2
+# 
+# Particle forces 
+         1         -1.776356839e-15         -1.776356839e-15         -8.881784197e-16
+         2         3.552713679e-15         -3.552713679e-15         -8.881784197e-16
+# 
+# Timestep 800
+# 
+# Number of particles 2
+# 
+# Particle forces 
+         2         0.07801512874         -0.3808626282         -0.01731813543
+         1         -0.07801512874         0.3808626282         0.01731813543
+# 
+@
+
+
+1.3
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d6 2
+a7 2
+       1    -1.776356839e-15    -1.776356839e-15    -8.881784197e-16
+       2     3.552713679e-15    -3.552713679e-15    -8.881784197e-16
+d14 2
+a15 2
+       2       0.07801512874       -0.3808626282      -0.01731813543
+       1      -0.07801512874        0.3808626282       0.01731813543
+@
+
+
+1.2
+log
+@Fixed bug in parameter selection for Tersoff alloys.
+@
+text
+@d6 2
+a7 2
+       1    -3.552713679e-15    -1.776356839e-15    -8.881784197e-16
+       2     1.776356839e-15         0.000000000    -8.881784197e-16
+@
+
+
+1.1
+log
+@Added GaAs force field example in testr.
+@
+text
+@d14 2
+a15 2
+       2        0.1550251349       0.05586428031        0.3541657304
+       1       -0.1550251349      -0.05586428031       -0.3541657304
+@
+

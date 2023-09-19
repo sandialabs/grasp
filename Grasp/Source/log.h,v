@@ -1,0 +1,581 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.3
+	REAX-2:3.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.9.0.2
+	cjkimme_version_merge_from_trunk_1:2.5.2.3
+	cjkimme_version:2.5.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.02.12.21.58.18;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches
+	3.1.6.1;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.08.02.21.10.26;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.02.12.23.57.39;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.5.2.1;
+next	2.4;
+
+2.4
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	;
+
+2.5.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.5.2.2;
+
+2.5.2.2
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.5.2.3;
+
+2.5.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.1.6.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef LOG_H
+#define LOG_H
+
+class Log {
+ public:
+  // The handling of logfiles is now a little convoluted,
+  // due to the possibility of multiple worlds.
+  //
+  // logfile_world is the stream that writes to the world log file
+  // logfile_universe is a stream that writes to the 
+  // global log file. open_logfile_universe() opens logfile_universe 
+  // and logfile. logfile is redirected
+  // to the logfile_universe stream buffer. Later, if 
+  // multiple worlds are in use, open_logfile_world()
+  // opens logfile_world, and logfile is redirected to that.
+  // 
+ 
+  ofstream logfile_universe;
+  ofstream logfile_world;
+  ofstream logfile_null;
+  ofstream* logfile;
+  MPI_Comm world;
+  MPI_Comm universe;
+  string path_str,null_str,world_suffix;
+  string logfile_str,logfile_str_base;
+  double timeforce,timeneigh,timecomm,timeborders;
+  double timeexchange,timerevcomm,timetotal,timebarrier;
+  bool Ltimebarrier;
+ public:
+  Log(const string&);
+  void open_logfile_universe();
+  void open_logfile_world(const string&, const MPI_Comm&);
+  void close_logfile_universe();
+  void close_logfile_world();
+  void prepend_path(char*);
+  void error(const string&);
+  void abort(const string&, Comm*);
+  void abort(const string&);
+  void warning(const string&);
+  void input_timebarrier(const string&);
+  ofstream& get_logfile();
+};
+
+#endif
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d51 19
+a69 2
+  ofstream logfile;
+  string path_str,null_str;
+d76 4
+a79 2
+  void open_logfile();
+  void close_logfile();
+d86 1
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d56 1
+d66 1
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+a39 1
+  bool Ltimebarrier;
+a48 1
+  void input_timebarrier(const string&);
+@
+
+
+3.4
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.3
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.2
+log
+@Added a bunch of preprocessor flags to turn
+on and off various kinds of I/O
+@
+text
+@d40 1
+d50 1
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@a32 4
+#ifdef _ICC_INTEL_
+using namespace std;
+#endif
+
+@
+
+
+3.1.6.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d33 4
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d33 4
+d48 1
+@
+
+
+2.9
+log
+@Finalized addition of RUNDIR variable to fix problem on liberty
+and added in the Barrier timing category to avoid spurious
+attributions of waiting times to Other.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.8
+log
+@Updated header
+@
+text
+@d38 1
+a38 1
+  double timeexchange,timerevcomm,timetotal;
+@
+
+
+2.7
+log
+@Various
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.6
+log
+@Fixed up a problem with nodefile output.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.5
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d35 1
+a35 1
+  string path_str;
+@
+
+
+2.5.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a31 4
+#ifdef _ICC_INTEL_
+using namespace std;
+#endif
+
+@
+
+
+2.5.2.2
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a46 1
+  void prepend_path(char*);
+@
+
+
+2.5.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d39 1
+a39 1
+  string path_str,null_str;
+d42 1
+a42 1
+  double timeexchange,timerevcomm,timetotal,timebarrier;
+@
+
+
+2.4
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.3
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d8 1
+a8 1
+  string logfile_str;
+@
+
+
+2.2
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d9 2
+@
+
+
+2.1
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d7 1
+a7 1
+ private:
+d14 1
+@
+

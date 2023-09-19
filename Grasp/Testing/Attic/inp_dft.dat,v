@@ -1,0 +1,123 @@
+head	2.3;
+access;
+symbols
+	PreMonaco:2.3;
+locks; strict;
+comment	@# @;
+
+
+2.3
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.23.23.32.37;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.12.23.27.06;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.3
+log
+@Moved examples into subdirectories.
+@
+text
+@# dft 256-particle input data
+# x-dimension must be made big enough to avoid
+# particle-wall periodic interactions, i.e.
+# xlo <= x_leftwall - rcut/2.0 
+# xhi >= x_rightwall + rcut/2.0 
+forcefield external 	external.in LJ-93-Wall
+forcefield twobody 	twobody.in Lennard-Jones
+timestep 		0.005
+nsteps 			1000
+box dimensions		12.0  0.00000000  0.00000000 		\
+			0.00000000  6.34960440  0.00000000	\
+			0.00000000  0.00000000  6.34960440
+box origin 		-6.0 	0.0 	0.0
+initialize temperature 	2.0		256
+neighbor 		nsq		10 		0.2
+thermo 			100
+dump atoms 		1000
+dump velocities 	1000
+density profile		10 		120 		1
+units			reduced
+temperature control	rescale	2.0 100 0.05 1.0
+
+@
+
+
+2.2
+log
+@Fixed up the output log immensely. Fixed up the velocity-rescale
+thermostat, which changed the dft example a little.
+Other than that, all the other examples (NVE) stayed the same.
+@
+text
+@@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@d6 2
+a7 2
+forcefield external 	external.in
+forcefield twobody 	twobody.in
+d21 1
+a21 1
+#temperature control	rescale	2.0 100 0.05 1.0
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d9 1
+a9 1
+nsteps 			10000
+d15 1
+a15 1
+neighbor 		none
+d21 1
+a21 1
+temperature control	rescale	2.0 100 0.05 1.0
+@
+
+
+1.1
+log
+@This is another example demonstrating use of reduced units
+and LJ93 walls and density profile to compare with dft
+calculations.
+@
+text
+@@
+

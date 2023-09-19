@@ -1,0 +1,105 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAX-2:3.2.2.4
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.23;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2005.01.11.22.49.40;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.01.31.04.22.50;	author athomps;	state Exp;
+branches;
+next	3.2.2.4;
+
+3.2.2.4
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@      common
+     $/cbkc/ c(nat,3)@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Modified use of nat to allow treatment of big parallel systems.
+@
+text
+@d2 1
+a2 1
+     $/cbkc/ c(nattot,3)
+@
+
+
+3.2.2.3
+log
+@Streamlined memory for global and local data
+@
+text
+@d2 1
+a2 1
+     $/cbkc/ c(nat,3),cglobal(nattot,3)
+@
+
+
+3.2.2.4
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@a2 2
+
+
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

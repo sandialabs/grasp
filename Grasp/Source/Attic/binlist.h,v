@@ -1,0 +1,1107 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.6.5.0.2
+	Root-of-Monaco_Aidan:1.1.6.5
+	Monaco:1.1.0.6
+	PreMonaco:1.1
+	PMONACO:1.1.0.4
+	P_MonacoSource:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.04.07.00.04.52;	author saubry;	state dead;
+branches
+	1.1.2.1
+	1.1.4.1
+	1.1.6.1;
+next	;
+
+1.1.2.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.04.08.00.04.39;	author saubry;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.04.12.16.31.04;	author saubry;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2005.04.12.17.25.34;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2005.04.12.22.58.05;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.6.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	1.1.6.2;
+
+1.1.6.2
+date	2005.05.04.21.40.07;	author saubry;	state Exp;
+branches;
+next	1.1.6.3;
+
+1.1.6.3
+date	2005.05.10.23.31.54;	author saubry;	state Exp;
+branches;
+next	1.1.6.4;
+
+1.1.6.4
+date	2005.05.23.18.33.40;	author saubry;	state Exp;
+branches;
+next	1.1.6.5;
+
+1.1.6.5
+date	2005.06.06.17.30.01;	author saubry;	state Exp;
+branches
+	1.1.6.5.2.1;
+next	;
+
+1.1.6.5.2.1
+date	2005.06.15.20.29.11;	author athomps;	state Exp;
+branches;
+next	1.1.6.5.2.2;
+
+1.1.6.5.2.2
+date	2005.06.15.23.26.07;	author athomps;	state Exp;
+branches;
+next	1.1.6.5.2.3;
+
+1.1.6.5.2.3
+date	2005.07.05.22.39.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.4;
+
+1.1.6.5.2.4
+date	2005.07.08.23.16.36;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.5;
+
+1.1.6.5.2.5
+date	2005.07.20.23.18.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.6;
+
+1.1.6.5.2.6
+date	2005.07.28.23.17.30;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.7;
+
+1.1.6.5.2.7
+date	2005.08.04.18.28.14;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.8;
+
+1.1.6.5.2.8
+date	2005.08.09.22.50.06;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.9;
+
+1.1.6.5.2.9
+date	2005.08.12.23.55.22;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.10;
+
+1.1.6.5.2.10
+date	2005.09.12.21.02.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.11;
+
+1.1.6.5.2.11
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.12;
+
+1.1.6.5.2.12
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.13;
+
+1.1.6.5.2.13
+date	2005.11.01.21.17.20;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.14;
+
+1.1.6.5.2.14
+date	2005.11.17.20.43.30;	author athomps;	state Exp;
+branches;
+next	1.1.6.5.2.15;
+
+1.1.6.5.2.15
+date	2005.11.28.23.08.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.5.2.16;
+
+1.1.6.5.2.16
+date	2005.12.09.18.35.27;	author athomps;	state Exp;
+branches;
+next	1.1.6.5.2.17;
+
+1.1.6.5.2.17
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	1.1.6.5.2.18;
+
+1.1.6.5.2.18
+date	2006.01.18.18.24.50;	author athomps;	state Exp;
+branches;
+next	1.1.6.5.2.19;
+
+1.1.6.5.2.19
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	1.1.6.5.2.20;
+
+1.1.6.5.2.20
+date	2006.02.06.19.15.25;	author athomps;	state Exp;
+branches;
+next	1.1.6.5.2.21;
+
+1.1.6.5.2.21
+date	2006.02.16.00.32.33;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file binlist.h was initially added on branch P_MonacoSource.
+@
+text
+@@
+
+
+1.1.6.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 100
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef BINLIST_H
+#define BINLIST_H
+
+#include <vector>
+using namespace std;
+#include "bin.h"
+
+
+class BinList 
+{
+ protected: 
+  double localbounds[6];
+  double globalbounds[6];
+  double rcutneigh[3];
+  
+  // binning parameters
+  int mbins;
+  int mbinx,mbiny,mbinz;           
+  int nbins;
+  int nbinx,nbiny,nbinz;           
+  int pbins;
+  int pbinx,pbiny,pbinz;           
+  double binsizex,binsizey,binsizez;
+  int mbinxlo,mbinxhi,mbinylo,mbinyhi,mbinzlo,mbinzhi;
+
+ public:
+  BinList();
+  
+  vector<Bin> bins;
+  vector<Bin>::iterator bin_it;
+  
+  void Setup(const ParticleList*, const Box*, Comm*, ForceFieldList*);  
+  vector<Bin *> ReturnBins(const double reg[6], const Box* b);
+  vector<Bin *> SelectRegionBins(const double [6],const Box*);
+  vector<Bin *> SelectGhostRegionBins(const double [6],const Box*);
+  vector<Bin *> SelectNbrBins(const int,const int, const int);
+
+ private:
+  void BinParticles(const int& , const int& , 
+		    const Particle* , const Box* , Comm* );
+  void Coord2Bin(const double[], const Box*,int*,int*,int*);
+  void Coord2GhostBin(const double[],const Box*,int*,int*,int*);
+
+  void LocalBounds(const double [],double []);
+  void GlobalBounds(const double [],double []);
+  void InvGlobalBounds(const double [],double []);
+
+  int CheckBin(int,int,int);
+
+  int Map(int,int,int);
+  void Bin2Bnds(int,int,int,double []);
+};
+
+#endif
+
+@
+
+
+1.1.6.2
+log
+@Region for octant's ghost bins implemented
+@
+text
+@d78 1
+a78 1
+  vector<Bin *> ReturnBins(const double [6], const Box*);
+@
+
+
+1.1.6.3
+log
+@Alex's algorithm implemented. Need more checks in parallel
+@
+text
+@a61 1
+  int ioctbin[3];
+d70 3
+a73 1
+ protected:
+a75 2
+
+ public:
+a82 4
+ public:
+  BinList();
+  ~BinList(){};
+
+a83 1
+  void BinSize(Comm*);
+a87 1
+  void Coord2GhostBin2(double x,int nbin,int mbinlo,int *ix);
+d93 2
+a96 5
+
+ public:
+  inline double get_binsizex(){return binsizex;};
+  inline double get_binsizey(){return binsizey;};
+  inline double get_binsizez(){return binsizez;};
+@
+
+
+1.1.6.4
+log
+@Correct a few bugs
+@
+text
+@a79 1
+  vector<Bin *> ReturnBins2(const double, const int, const int, const Box*);
+d94 1
+@
+
+
+1.1.6.5
+log
+@Routine ReturnBins2 works ok. Correct a bug
+@
+text
+@d100 1
+a100 1
+  int Map(const int,const int,const int);
+@
+
+
+1.1.6.5.2.1
+log
+@Added class Comm_Octant
+@
+text
+@a70 1
+  enum {size_comm = 3, size_reverse = 3};
+a83 18
+  // Compute size of buffer needed to store data
+  int pack_comm_size(const int& num, const vector<int>& list);
+  // Pack up data for list of bins into buf, 
+  // applying pbc shifts if indicated 
+  void pack_comm(const int& num, const vector<int>& list, 
+		 double* buf, const int pbc[], const Box* b);
+  // Extract data from list of bins from buf 
+  void unpack_comm(const int& num, const vector<int>& list , const double* buf); 
+  // Compute size of buffer needed to store reverse data
+  int pack_reverse_size(const int& num, const vector<int>& list);
+  // Pack up reverse data for list of bins into buf, 
+  // applying pbc shifts if indicated 
+  void pack_reverse(const int& num, const vector<int>& list, 
+		 double* buf, const int pbc[], const Box* b);
+  // Extract reverse data from list of bins from buf 
+  void unpack_reverse(const int& num, const vector<int>& list , const double* buf); 
+
+
+@
+
+
+1.1.6.5.2.2
+log
+@Finished fist pass of testing on Comm_Octant class
+@
+text
+@a125 3
+
+  friend class OctantList;
+
+@
+
+
+1.1.6.5.2.3
+log
+@Correct a few bugs
+@
+text
+@d57 1
+d80 5
+a84 5
+  vector<Bin *> ReturnBins(const double [6], const Box*, Comm*);
+  vector<Bin *> ReturnBins2(const double, const int, const int, const Box*, Comm *);
+  vector<Bin *> SelectRegionBins(const double [6],const Box*, Comm *);
+  vector<Bin *> SelectGhostRegionBins(const double [6],const Box*,Comm *);
+  vector<Bin *> SelectNbrBins(const int,const int, const int, Comm *);
+d115 1
+d119 1
+a119 1
+  int Map(const int,const int,const int,Comm*);
+@
+
+
+1.1.6.5.2.4
+log
+@Implement correctly bin and ghost bin lists
+@
+text
+@d57 1
+d63 1
+a63 1
+  int mbinx,mbiny,mbinz;     // global numbering of bins with periodic region       
+d65 1
+a65 1
+  int nbinx,nbiny,nbinz;     // global numbering of bins without periodic region
+d67 1
+a67 3
+  int pbinx,pbiny,pbinz;     // local  numbering of bins without periodic region
+  int qbins;
+  int qbinx,qbiny,qbinz;     // local  numbering of bins with periofic region       
+a70 3
+
+  int procgrid[3];
+  int nprocs;
+a83 4
+
+  vector<Bin *> BinList::SelectGhostRegionBins(const int [6], const Box* , 
+					       Comm *);
+
+d111 2
+a112 2
+  void Coord2Bin(const double[], const Box*,int *,int *, int *);
+  void Coord2GhostBin(const double[],const Box*,int *,int *, int *);
+d114 5
+a118 2
+  int CreateMap(const int,const int,const int,int*,Comm*);
+  int Map(const int,const int,const int,Comm *);
+a124 9
+
+  inline int get_qbinx(){return qbinx;};
+  inline int get_qbiny(){return qbiny;};
+  inline int get_qbinz(){return qbinz;};
+
+  inline int get_pbinx(){return pbinx;};
+  inline int get_pbiny(){return pbiny;};
+  inline int get_pbinz(){return pbinz;};
+
+@
+
+
+1.1.6.5.2.5
+log
+@Implementation of 2 routines:
+1./ Return ghost bins of an octant on the proc. of that octant.
+2./ Return bins of a given translated region.
+@
+text
+@a82 2
+  void PrintBins(const Box*, Comm* comm);
+
+a84 2
+  vector<Bin *> TranslatedBins(const double [6],const double [3],
+			       const Box*,Comm *);
+d89 1
+a89 1
+  vector<Bin *> SelectGhostRegionBins(const int [6], const Box* , 
+@
+
+
+1.1.6.5.2.6
+log
+@Implemented tools for bins lists:
+  - intersection
+  - union
+  - copy constructor
+
+Created a new class:  BinTools.
+Tested these tools.
+
+Seems to work ok in serial and parallel.
+@
+text
+@a90 1
+  vector<Bin *> SelectGhostRegionBins(const int [6], const Box*,Comm *);
+d93 2
+a94 6
+  vector<Bin *> Intersection(vector<Bin *>, vector<Bin *>);
+  vector<Bin *> Union(vector<Bin *>, vector<Bin *>);
+  void PrintIds(vector<Bin *> bin);
+  void PrintIds(vector<Bin *> bin, Comm *comm);
+  void PrintRegion(vector<Bin *> bin);
+  void PrintRegion(vector<Bin *> bin,Comm *comm);
+@
+
+
+1.1.6.5.2.7
+log
+@Implement Alex's algorithm to send specific octant bin lists.
+No communication implemented yet.
+@
+text
+@d69 1
+a69 2
+
+  double binsize[3];
+d82 1
+a82 1
+  void Setup(const ParticleList*, BinTools *bt,const Box*, Comm*, ForceFieldList*);  
+d87 2
+a88 1
+  vector<Bin *> TranslatedBins(const double [6],const int,const Box*,Comm *);
+d94 6
+a99 3
+  vector<Bin *> GenerateGhostBinsDir(int,BinTools *,const Box*,Comm *);
+  void GetRegion(vector<Bin *>,double[6]);
+
+d135 4
+a138 3
+  inline double get_binsizex(){return binsize[0];};
+  inline double get_binsizey(){return binsize[1];};
+  inline double get_binsizez(){return binsize[2];};
+@
+
+
+1.1.6.5.2.8
+log
+@Link communication scheme with send bins.
+@
+text
+@d72 1
+d97 20
+@
+
+
+1.1.6.5.2.9
+log
+@Problem with pbc_flags.
+Update recent modifications.
+@
+text
+@d62 1
+a62 1
+  int mbin[3];     // global numbering of bins with periodic region       
+d66 1
+a66 1
+  int pbin[3];     // local  numbering of bins without periodic region
+d68 1
+a68 1
+  int qbin[3];     // local  numbering of bins with periofic region       
+d87 1
+a87 1
+  vector<Bin *> TranslateBins(vector<Bin *>,const int,const Box*,Comm *,vector<int*>);
+d94 1
+d115 7
+a121 7
+  inline int get_qbinx(){return qbin[0];};
+  inline int get_qbiny(){return qbin[1];};
+  inline int get_qbinz(){return qbin[2];};
+
+  inline int get_pbinx(){return pbin[0];};
+  inline int get_pbiny(){return pbin[1];};
+  inline int get_pbinz(){return pbin[2];};
+@
+
+
+1.1.6.5.2.10
+log
+@Correct boundary flags.
+Implement send/receive bins.
+@
+text
+@d64 1
+a64 1
+  int nbin[3];     // global numbering of bins without periodic region
+@
+
+
+1.1.6.5.2.11
+log
+@Correct several bugs
+@
+text
+@d87 1
+a87 2
+  vector<Bin *> TranslateBins(int [3],vector<Bin *>,const int,const Box*,Comm *);
+  vector<Bin *> SelectRegionBins(const int [6],const Box*, Comm *);
+a121 11
+
+  void get_binsize(double bs[3]){
+    for (int i=0;i<3;i++) bs[i] = binsize[i];};
+
+  void get_pbin(int pb[3]){
+    for (int i=0;i<3;i++) pb[i] = pbin[i];};
+
+  void get_qbin(int qb[3]){
+    for (int i=0;i<3;i++) qb[i] = qbin[i];};
+
+
+@
+
+
+1.1.6.5.2.12
+log
+@Correct a few things.
+@
+text
+@d81 1
+a81 4
+  BinList();
+  ~BinList(){};
+
+ public:
+d86 2
+d95 4
+a98 2
+  vector<Bin *> TranslateBins(const int,const int,const Box*,
+			      vector<Bin *>,Comm *);
+a132 18
+  int Map(const int,Comm *);
+  void GetBins(const int,int[3]);
+
+ public:
+  // Communication scheme
+  enum {size_comm = 3, size_reverse = 3};
+ public:
+  int pack_comm_size(Comm*,const int&, const vector<int>&);
+  void pack_comm(const int& num, const vector<int>& list, 
+		 double* buf, const int pbc[], const Box* b, Comm *);
+  void unpack_comm(const int& num, const vector<int>& list , 
+		   const double* buf, Comm *); 
+  int pack_reverse_size(const int& num, const vector<int>& list,Comm *);
+  void pack_reverse(const int& num, const vector<int>& list, 
+		    double* buf, const int pbc[], const Box* b,Comm *);
+  void unpack_reverse(const int& num, const vector<int>& list , 
+		      const double* buf, Comm *); 
+
+@
+
+
+1.1.6.5.2.13
+log
+@Add a pointer to particle instead of an array of particle.
+
+Bug in particles coordinates.
+@
+text
+@d76 1
+a76 1
+ private:
+d78 1
+d85 1
+a85 1
+  void Setup(ParticleList* const , BinTools *bt,const Box*, Comm*, ForceFieldList*);  
+d101 2
+a102 1
+  void BinParticles(ParticleList * const, const Particle *, const Box* , Comm* );
+a134 3
+  void PrintVec(double x[3],Comm*);
+
+
+d139 2
+a140 2
+  int pack_comm_size(Comm*,const int&, const vector<int>&,vector<Bin *>);
+  void pack_comm(const int&, const vector<int>& list,vector<Bin *>,
+d142 1
+a142 1
+  void unpack_comm(const int& num, const vector<int>& list,vector<Bin *>,  
+d144 2
+a145 3
+
+  int pack_reverse_size(const int&, const vector<int>&, vector<Bin *>, Comm *);
+  void pack_reverse(const int& num, const vector<int>& list, vector<Bin *>,
+d147 1
+a147 1
+  void unpack_reverse(const int& num, const vector<int>& list,vector<Bin *>, 
+a151 1
+  friend class bin;
+@
+
+
+1.1.6.5.2.14
+log
+@Latest additions to Monte Carlo branch
+@
+text
+@a97 2
+  void GetShift(double[3],double[3],int ,int ,const Box *, Comm *);
+
+d140 5
+a144 5
+  int pack_comm_size(Comm*, const int&, const vector<int>&, vector<Bin *>);
+  void pack_comm(const int&, const vector<int>&, vector<Bin *>,
+		 double* buf, const int[], const Box*, Comm *);
+  void unpack_comm(const int&, const vector<int>&, vector<Bin *>,  
+		   const double*, Comm *); 
+d147 4
+a150 4
+  void pack_reverse(const int&, const vector<int>&, vector<Bin *>,
+		    double*, Comm *);
+  void unpack_reverse(const int&, const vector<int>&, vector<Bin *>, 
+		      double*, const int[], const Box*, Comm *); 
+@
+
+
+1.1.6.5.2.15
+log
+@Correct a few bugs.
+Segmentation fault when domain is not squared.
+@
+text
+@d98 2
+@
+
+
+1.1.6.5.2.16
+log
+@Tweaked Monaco branch
+@
+text
+@d130 1
+@
+
+
+1.1.6.5.2.17
+log
+@Bin Communication fixed
+@
+text
+@d85 1
+a85 1
+  void PrintBins(const Box*, const ParticleList*, Comm*) const;
+a87 4
+  vector<Bin *> ReturnBinsLocal(
+			   const int&, const int&, const int&, 
+			   const int&, const int&, const int&, 
+			   const Box*, Comm*);
+d105 1
+a105 1
+  int Map(const int,const int,const int,Comm *) const;
+d137 1
+a137 1
+  enum {size_comm = 6, size_reverse = 3, head_comm = 1, head_reverse = 7};
+d140 1
+a140 1
+  void pack_comm(const ParticleList*, const int&, const vector<int>&, vector<Bin *>,
+d142 1
+a142 1
+  void unpack_comm(ParticleList*, const int&, const vector<int>&, vector<Bin *>,  
+d144 1
+d146 1
+a146 1
+  void pack_reverse(const ParticleList*, const int&, const vector<int>&, vector<Bin *>,
+d148 1
+a148 1
+  void unpack_reverse(ParticleList*, const int&, const vector<int>&, vector<Bin *>, 
+@
+
+
+1.1.6.5.2.18
+log
+@Remove a const qualifier that was tripping up some compilers.
+@
+text
+@a0 1
+
+d85 1
+a85 1
+  void PrintBins(const Box*, const ParticleList*, Comm*);
+d87 1
+d93 2
+d136 3
+d154 1
+@
+
+
+1.1.6.5.2.19
+log
+@Added EAM energy change calculation
+@
+text
+@d76 1
+a76 3
+
+  int iseed;
+
+d136 1
+a136 1
+  enum {head_comm = 1, head_reverse = 7};
+d138 1
+a138 1
+  int pack_comm_size(const ParticleList*, const int&, const vector<int>&, vector<Bin *>);
+d140 1
+a140 1
+		 double*, const int[], const Box*, Comm *);
+d143 1
+a143 1
+  int pack_reverse_size(const ParticleList*, const int&, const vector<int>&, vector<Bin *>);
+d147 1
+a147 3
+		      double*, const int[], const Box*, Comm*); 
+
+  void Cycle(ParticleList*, vector<Bin*>&, ForceFieldList*, const Box*, Comm*);
+@
+
+
+1.1.6.5.2.20
+log
+@Added in bin reallocation in montecarlo.cpp
+@
+text
+@a89 2
+  void BinParticles(ParticleList * const, const Particle *, const Box* , Comm* );
+  void ClearParticles() {for (int m = 0; m < bins.size(); m++) bins[m].clear_particles();};
+d104 1
+@
+
+
+1.1.6.5.2.21
+log
+@Added transmutation move (semigrand ensemble)
+@
+text
+@d152 1
+a152 2
+  void Translate(ParticleList*, vector<Bin*>&, ForceFieldList*, const Box*, Comm*);
+  void Transmutate(ParticleList*, vector<Bin*>&, ForceFieldList*, const Box*, Comm*);
+@
+
+
+1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a0 79
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#ifndef BINLIST_H
+#define BINLIST_H
+
+#include <vector>
+using namespace std;
+#include "bin.h"
+
+
+class BinList 
+{
+ protected: 
+  double globalbounds[6];
+  double rcut;
+  
+  // binning parameters
+  int mbins;
+  int mbinx,mbiny,mbinz;           
+  int nbins;
+  int nbinx,nbiny,nbinz;           
+  double binsizex,binsizey,binsizez;
+  int mbinxlo,mbinxhi,mbinylo,mbinyhi,mbinzlo,mbinzhi;
+
+  int* map;
+ public:
+  BinList();
+  
+  vector<Bin> bins;
+  vector<Bin>::iterator bin_it;
+  
+  void Setup(const ParticleList*, const Box*, Comm*, ForceFieldList*);  
+  vector<Bin *> SelectRegionBins(double [6],const Box*, Comm*);
+  vector<Bin *> SelectGhostRegionBins(double [6],const Box*, Comm*);
+  vector<int > SelectNbrBins(const int,const int, const int);
+
+ private:
+  void BinParticles(const int& , const int& , 
+		    const Particle* , const Box* , Comm* );
+  int Coord2BinLocal(const double[], const Box*);
+  int Coord2BinGhost(const double[], const Box*);
+
+  void GlobalBounds(double [],double []);
+  void InvGlobalBounds(double [],double []);
+
+  int CheckBin(const Comm*,double []);
+  int CheckBin2(const Comm*,int,int,int);
+  int CheckPoint(const Box*,const Comm *, const double[]);
+};
+
+#endif
+
+@
+
+
+1.1.2.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a0 84
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#ifndef BINLIST_H
+#define BINLIST_H
+
+#include <vector>
+#include "bin.h"
+
+using namespace std;
+
+
+class BinList 
+{
+  friend class Bin;
+
+ protected: 
+  double bounds[6];
+  double ghostbounds[6];
+  double rcut;
+  
+  // binning parameters
+  int mbins;
+  int mbinx,mbiny,mbinz;           
+  int nbins;
+  int nbinx,nbiny,nbinz;           
+  double binsizex,binsizey,binsizez;
+  int mbinxlo,mbinxhi,mbinylo,mbinyhi,mbinzlo,mbinzhi;
+
+ public:
+  BinList();
+  
+  vector<Bin> bins;
+  vector<Bin>::iterator bin_it;
+  
+  void Setup(const ParticleList*, const Box*, Comm*, ForceFieldList*);
+
+  double BinDistance(const int&, const int&,const int&, const double[],
+		     const double[], const double[]);
+
+  
+  vector<Bin *> SelectRegionBins(double [6],const Box*);
+  vector<Bin *> SelectGhostRegionBins(double [6],const Box*);
+  vector<Bin *> SelectNbrBins(Bin*);
+
+
+  int Coord2BinLocal(const double[], const Box*);
+  int Coord2BinGhost(const double[], const Box*);
+
+ private:
+  void BinParticles(const int& , const int& , 
+		    const Particle* , const Box* , Comm* );
+
+  vector<double> GhostBounds(double r[]);
+
+};
+
+#endif
+@
+
+
+1.1.2.2
+log
+@Modify binlist to create bins array locally (to each proc).
+Begin implementing octantlist.
+
+saubry (04-07-05).
+@
+text
+@d34 2
+a36 1
+#include "bin.h"
+d41 2
+d44 1
+d62 6
+a67 1
+  void Setup(const ParticleList*, const Box*, Comm*, ForceFieldList*);  
+d72 4
+d79 3
+a81 5
+  int Coord2BinLocal(const double[], const Box*);
+  int Coord2BinGhost(const double[], const Box*);
+  void GhostBounds(double [],double []);
+  void InvGhostBounds(double [],double []);
+  int CheckBin(Comm*,double []);
+a84 1
+
+@
+
+
+1.1.2.3
+log
+@Correct binparticles routine.
+Add map index.
+
+saubry 04-12-05
+@
+text
+@d41 1
+a41 2
+  double globalbounds[6];
+  int addon[3];
+a51 1
+  int* map;
+d59 3
+a61 3
+  vector<Bin *> SelectRegionBins(double [6],const Box*, Comm*);
+  vector<Bin *> SelectGhostRegionBins(double [6],const Box*, Comm*);
+  vector<Bin *> SelectNbrBins(Bin*, Comm*);
+d68 3
+a70 7
+
+  void GlobalBounds(double [],double []);
+  void InvGlobalBounds(double [],double []);
+
+  int CheckBin(const Comm*,double []);
+  int CheckBin2(const Comm*,int,int,int);
+  int CheckPoint(const Box*,const Comm *, const double[]);
+@
+
+
+1.1.2.4
+log
+@Correct neighboring bins.
+@
+text
+@d63 1
+a63 1
+  vector<Bin *> SelectNbrBins(const int,const int, const int, Comm*);
+@
+
+

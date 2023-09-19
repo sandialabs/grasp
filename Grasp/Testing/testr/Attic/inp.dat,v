@@ -1,0 +1,176 @@
+head	1.1;
+access;
+symbols
+	Monaco:1.1.0.4
+	PreMonaco:1.1
+	P_MonacoTesting:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2005.01.14.17.53.12;	author saubry;	state dead;
+branches
+	1.1.2.1
+	1.1.4.1;
+next	;
+
+1.1.2.1
+date	2005.01.14.17.53.12;	author saubry;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.02.25.21.44.06;	author saubry;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.02.26.00.36.23;	author saubry;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2005.04.12.17.40.30;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	1.1.4.2;
+
+1.1.4.2
+date	2005.05.12.18.02.41;	author saubry;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file inp.dat was initially added on branch P_MonacoTesting.
+@
+text
+@@
+
+
+1.1.4.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 12
+# EAM run using nialhjea force field
+units			metal
+forcefield eam 		cu1.set  EAM
+timestep 		1
+nsteps 			1
+box dimensions 	        6.0    0.0    0.0	\
+			0.0    6.0    0.0	\
+			0.0    0.0    6.0
+box origin              -2.5 -2.5 -2.5
+initialize temperature 	0.0 		256
+neighbor		bin 		10   1.0 
+montecarlo
+@
+
+
+1.1.4.2
+log
+@Update test case to have a proc. domain larger than 4*rcut
+@
+text
+@d11 1
+a11 1
+neighbor		bin 		10   0.5
+@
+
+
+1.1.2.1
+log
+@Basic example to run P-Monaco version of Grasp.
+Sylvie Aubry, Jan. 14 2005.
+@
+text
+@a0 19
+# EAM run using nialhjea force field
+units			metal
+forcefield eam 		nialhjea EAM
+timestep 		1
+nsteps 			1
+box dimensions 		3.52	0.0	0.0	\
+			0.0	3.52	0.0	\
+			0.0	0.0	3.52
+box origin 		0.0 		0.0 		0.0
+initialize temperature 	0.0 		256
+neighbor		bin 		10 		1.0
+thermo 			1
+dump particles 		10
+dump velocities 	10
+dump forces	 	10
+p_monaco
+
+
+
+@
+
+
+1.1.2.2
+log
+@Add new example with 500 copper particles.
+@
+text
+@d3 1
+a3 1
+forcefield eam 		cu1.set  EAM
+d6 4
+a9 4
+box dimensions 	        18.05    0.0     0.0	\
+			0.0	18.05	 0.0	\
+			0.0 	 0.0	18.05
+box origin              -9.025  -9.025  -9.025 
+d11 1
+a11 1
+neighbor		bin 		10 	1.0	
+d19 1
+@
+
+
+1.1.2.3
+log
+@Add new input file.
+@
+text
+@d6 4
+a9 4
+box dimensions 	        30.00    0.0     0.0	\
+			0.0    30.00	 0.0	\
+			0.0 	 0.0	30.00
+box origin              -9.  -9.  -9. 
+d11 1
+a11 1
+neighbor		bin 		10   1.0 
+@
+
+
+1.1.2.4
+log
+@Change example files.
+@
+text
+@d6 4
+a9 4
+box dimensions 	        6.0    0.0    0.0	\
+			0.0    6.0    0.0	\
+			0.0    0.0    6.0
+box origin              -2.5 -2.5 -2.5
+d12 7
+a18 1
+montecarlo
+@
+
+

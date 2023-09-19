@@ -1,0 +1,129 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.2
+	REAX-2:1.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.03.12.01.54.18;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.03.12.00.10.10;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@*********************************
+Started Grasp run with 2 processes 
+*********************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Force field has no pure entry for particle type A
+****************************************************
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Missing pure entry for this cross pair
+No interaction for this cross pair (B,C)
+****************************************************
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Using mixing rule for cross pair (B,C)
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+*********************************
+Successfully completed Grasp run 
+Elapsed Time = 0 secs
+*********************************
+@
+
+
+1.2
+log
+@added use of mixing rule to example
+@
+text
+@@
+
+
+1.1
+log
+@Added a example of mixing twobos force fields
+@
+text
+@a29 8
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type C
+****************************************************
+****************************************************
+d31 1
+a31 9
+Force field has no pure entry for particle type B
+****************************************************
+****************************************************
+Warning: Force_Twobody::SetupInteractions:
+Force field has no pure entry for particle type C
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type A
+a36 4
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield type for particle type B
+****************************************************
+@
+

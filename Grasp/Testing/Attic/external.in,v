@@ -1,0 +1,57 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.07.23.15.43.58;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Removed external.in, which does not belong in repository.
+@
+text
+@# This is a test problem for the lj93 type external field
+# It generates a set of periodic walls normal to the y direction
+# of type Yeehaw! and another set normal to the z direction of
+# type Heehaw!. It was chosen to work with a 2x2x2 periodic
+# box containing four atoms in the fcc positions.
+# Note the crazy positions of the "central" image walls.
+# These get shifted to the actual central box, so that all
+# interactions are calculated correctly.
+
+Yeehaw! self lj93_cut 100.5 2
+Yeehaw! A lj93_cut 0.2 0.3 0.6
+Yeehaw! B lj93_cut 0.4 0.3 0.6
+Heehaw! self lj93_cut_shift 101.55 3
+Heehaw! A lj93_cut_shift 0.1 0.2 1.46
+Heehaw! B lj93_cut_shift 0.2 0.2 1.46
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@@
+

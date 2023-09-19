@@ -1,0 +1,207 @@
+head	4.0;
+access;
+symbols
+	ReverseComm_branch:4.0.0.16
+	ADTools_branch:4.0.0.14
+	Monaco_Aidan:4.0.0.12
+	Root-of-Monaco_Aidan:4.0
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:1.3.0.2
+	cjkimme_version_merge_from_trunk_1:1.1.2.1
+	cjkimme_version:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches
+	4.0.12.1;
+next	3.1;
+
+3.1
+date	2004.12.08.19.35.13;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2004.09.21.23.18.28;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.02.12.18.18.48;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+4.0.12.1
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@# Makefile for MPI stubs - edit this for your platform
+
+SHELL = /bin/sh
+.IGNORE:
+
+# Files
+
+SRC =		mpi.c
+INC =		mpi.h
+
+# Definitions
+
+EXE =		libmpi.a
+OBJ = 		$(SRC:.c=.o)
+
+# System-specific settings
+
+CC =		c++
+CCFLAGS =	-O
+ARCHIVE =	ar
+ARCHFLAG =	r
+
+# Target
+
+$(EXE):	$(OBJ)
+	$(ARCHIVE) $(ARCHFLAG) $(EXE) $(OBJ)
+
+# Clean
+
+clean:
+	rm *.o libmpi.a
+
+# Compilation rules
+
+.cpp.o:
+	$(CC) $(CCFLAGS) -c $<
+
+# Individual dependencies
+
+$(OBJ):	$(INC)
+
+@
+
+
+4.0.12.1
+log
+@Bin Communication fixed
+@
+text
+@d18 2
+a19 3
+CC =		g++
+# CCFLAGS =	-O
+CCFLAGS =	-g
+@
+
+
+3.1
+log
+@Fixed uninitialized value in output.cpp and switched CC to c++ in STUBS/Makefile
+@
+text
+@@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d18 1
+a18 1
+CC =		CC
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.2
+log
+@Further clean-up of Makefiles
+@
+text
+@d18 1
+a18 1
+CC =		g++
+@
+
+
+1.1
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@d13 1
+a13 2
+#EXE =		libmpi.a
+EXE =		libmpich.a
+@
+
+
+1.1.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 2
+a14 1
+EXE =		libmpi.a
+@
+
+

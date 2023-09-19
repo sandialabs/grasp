@@ -1,0 +1,72 @@
+head	1.1;
+access;
+symbols
+	PPPM_Crozier2:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2005.06.20.22.21.43;	author pscrozi;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.06.20.22.21.43;	author pscrozi;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file fft3d_wrap.h was initially added on branch PPPM_Crozier2.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@latest version of PPPM for Grasp
+@
+text
+@a0 32
+/* ----------------------------------------------------------------------
+   LAMMPS - Large-scale Atomic/Molecular Massively Parallel Simulator
+   www.cs.sandia.gov/~sjplimp/lammps.html
+   Steve Plimpton, sjplimp@@sandia.gov, Sandia National Laboratories
+
+   Copyright (2003) Sandia Corporation.  Under the terms of Contract
+   DE-AC04-94AL85000 with Sandia Corporation, the U.S. Government retains
+   certain rights in this software.  This software is distributed under 
+   the GNU General Public License.
+
+   See the README file in the top-level LAMMPS directory.
+------------------------------------------------------------------------- */
+
+#ifndef FFT3D_WRAP_H
+#define FFT3D_WRAP_H
+
+//#include "system.h"
+#include "fft3d.h"
+
+class FFT3d { //: public System {
+ public:
+  FFT3d(MPI_Comm,int,int,int,int,int,int,int,int,int,
+	int,int,int,int,int,int,int,int,int *);
+  ~FFT3d();
+  void compute(double *, double *, int);
+  void timing1d(double *, int, int);
+
+ private:
+  struct fft_plan_3d *plan;
+};
+
+#endif
+@
+

@@ -1,0 +1,334 @@
+head	1.2;
+access;
+symbols
+	PreMonaco:1.2
+	BeforeREAXMerge:1.1
+	P_MonacoTesting:1.1.0.4
+	InitialGraspTesting:1.1
+	P_Monaco:1.1.0.2
+	InitialGrasp:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2005.04.02.00.06.54;	author athomps;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Trying to clean up testreax.
+@
+text
+@  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+  Iter.      Ebond       Eatom       Elp        Emol       Eval       Ecoa       Ehbo       Etors      Econj      Evdw      Ecoul    Echarge  Efield
+@
+
+
+1.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

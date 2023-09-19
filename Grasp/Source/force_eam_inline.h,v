@@ -1,0 +1,1139 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.3.0.8
+	ADTools_branch:4.3.0.6
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoSource:3.0.0.6
+	GraspSource:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.7.0.2
+	cjkimme_version_merge_from_trunk_1:2.1.2.1
+	cjkimme_version:2.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.4
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches
+	3.0.6.1;
+next	2.7;
+
+2.7
+date	2004.08.24.15.32.11;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.07.13.21.21.16;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.1.2.1;
+next	;
+
+2.1.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.0.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.0.6.2;
+
+3.0.6.2
+date	2005.02.23.19.34.30;	author saubry;	state Exp;
+branches;
+next	3.0.6.3;
+
+3.0.6.3
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.0.6.4;
+
+3.0.6.4
+date	2005.02.26.00.35.18;	author saubry;	state Exp;
+branches;
+next	3.0.6.5;
+
+3.0.6.5
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCE_EAM_INLINE_H
+#define FORCE_EAM_INLINE_H
+
+// INLINE(inline) FUNCTION DEFINITIONS
+//
+// Inlining inner loop operations provides significant performance gain
+//
+
+inline void Force_Eam::rho_standard(
+		       const double xi[], const double xj[],
+		       double& rhoi, double& rhoj,
+		       const int& itype,
+                       const int& jtype) const {
+  double rsq;
+  double p;
+  int m;
+
+  rsq = vec3_distsq(xi,xj);
+
+  if (rsq <= rcutmaxsq) {
+    
+    p = sqrt(rsq)*rdr + 1.0;
+    m = static_cast<int> (p);
+    m = min(m,nr-1);
+    p -= m;
+    p = min(p,1.0);
+    rhoi = ((rhor_3[jtype][m]*p + rhor_2[jtype][m])*p +
+	       rhor_1[jtype][m])*p + rhor_0[jtype][m];
+    rhoj = ((rhor_3[itype][m]*p + rhor_2[itype][m])*p +
+	       rhor_1[itype][m])*p + rhor_0[itype][m];
+  }  else {
+    rhoi = 0.0;
+    rhoj = 0.0;
+  }
+}
+
+inline void Force_Eam::fp_standard(const double& rhoi, double& fpi,
+		       const bool& Lenergy, 
+				   double& energy, const int& itype) const {
+  double p;
+  int m;
+  p = rhoi*rdrho + 1.0;
+  m = static_cast<int> (p);
+  m = max(1,min(m,nrho-1));
+  p -= m;
+  fpi = (frho_6[itype][m]*p + frho_5[itype][m])*p + frho_4[itype][m];
+  if (Lenergy) {
+    energy = ((frho_3[itype][m]*p + frho_2[itype][m])*p + 
+	      frho_1[itype][m])*p + frho_0[itype][m];
+  }
+}
+
+inline void Force_Eam::force_standard(
+                       const double xi[], const double xj[], 
+		       const double& fpi, const double& fpj, 
+		       double f[], 
+		       const bool& Lenergy, const bool& Lvirial,
+		       double& energy, double virial_ij[],
+		       const int& itype, 
+                       const int& jtype) const {
+  double rsq;
+  double delr[3];
+  double p;
+  int m;
+  double r,rhoip,rhojp,z2,z2p,recip,phi,phip,psip,fforce;
+
+  rsq = vec3_distsq(xi,xj,delr);
+
+  if (rsq <= rcutmaxsq) {
+
+    r = sqrt(rsq);
+
+    p = r*rdr + 1.0;
+    m = static_cast<int> (p);
+    m = min(m,nr-1);
+    p -= m;
+    p = min(p,1.0);
+    rhoip = (rhor_6[itype][m]*p + rhor_5[itype][m])*p + 
+      rhor_4[itype][m];
+    rhojp = (rhor_6[jtype][m]*p + rhor_5[jtype][m])*p + 
+      rhor_4[jtype][m];
+    z2 = ((z2r_3[itype][jtype][m]*p + z2r_2[itype][jtype][m])*p + 
+	  z2r_1[itype][jtype][m])*p + z2r_0[itype][jtype][m];
+    z2p = (z2r_6[itype][jtype][m]*p + z2r_5[itype][jtype][m])*p + 
+      z2r_4[itype][jtype][m];
+    recip = 1.0/r;
+    phi = z2*recip;
+    phip = z2p*recip - phi*recip;
+    psip = fpi*rhojp + fpj*rhoip + phip;
+    fforce = psip*recip;
+
+    f[0] = -delr[0]*fforce;
+    f[1] = -delr[1]*fforce;
+    f[2] = -delr[2]*fforce;
+
+    if (Lenergy) {
+      energy = phi;
+    }
+
+    if (Lvirial) {
+      virial_ij[0] = delr[0]*f[0];
+      virial_ij[1] = delr[1]*f[1];
+      virial_ij[2] = delr[2]*f[2];
+      virial_ij[3] = delr[0]*f[1];
+      virial_ij[4] = delr[0]*f[2];
+      virial_ij[5] = delr[1]*f[2];
+    }
+
+  }  else {
+    f[0] = 0.0;
+    f[1] = 0.0;
+    f[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ij[ivirial] = 0.0;
+      }
+    }
+  }
+
+  return ;
+}
+
+inline void Force_Eam::force_ghost(
+                       const double xi[], const double xj[], 
+		       const double& fpi,
+		       double f[], 
+		       const bool& Lenergy, const bool& Lvirial,
+		       double& energy, double virial_ij[],
+		       const int& itype, 
+                       const int& jtype, const bool& Lskip_pair) const {
+  double rsq;
+  double delr[3];
+  double p;
+  int m;
+  double r,rhojp,z2,z2p,recip,phi,phip,psip;
+  double fforce;
+
+  rsq = vec3_distsq(xi,xj,delr);
+
+  if (rsq <= rcutmaxsq) {
+
+    r = sqrt(rsq);
+    recip = 1.0/r;
+
+    p = r*rdr + 1.0;
+    m = static_cast<int> (p);
+    m = min(m,nr-1);
+    p -= m;
+    p = min(p,1.0);
+    rhojp = (rhor_6[jtype][m]*p + rhor_5[jtype][m])*p + 
+      rhor_4[jtype][m];
+    psip = fpi*rhojp;
+    fforce = psip*recip;
+    if (!Lskip_pair) {
+      z2 = ((z2r_3[itype][jtype][m]*p + z2r_2[itype][jtype][m])*p + 
+	    z2r_1[itype][jtype][m])*p + z2r_0[itype][jtype][m];
+      z2p = (z2r_6[itype][jtype][m]*p + z2r_5[itype][jtype][m])*p + 
+	z2r_4[itype][jtype][m];
+      phi = z2*recip;
+      phip = (z2p - phi)*recip;
+      fforce += phip*recip;
+    } else {
+      phi = 0.0;
+    }
+
+    f[0] = -delr[0]*fforce;
+    f[1] = -delr[1]*fforce;
+    f[2] = -delr[2]*fforce;
+
+    if (Lenergy) {
+      energy = phi;
+    }
+
+    if (Lvirial) {
+      virial_ij[0] =  delr[0]*f[0];
+      virial_ij[1] =  delr[1]*f[1];
+      virial_ij[2] =  delr[2]*f[2];
+      virial_ij[3] =  delr[0]*f[1];
+      virial_ij[4] =  delr[0]*f[2];
+      virial_ij[5] =  delr[1]*f[2];
+    }
+  }  else {
+    f[0] = 0.0;
+    f[1] = 0.0;
+    f[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ij[ivirial] = 0.0;
+      }
+    }
+  }
+
+  return ;
+}
+
+#endif
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d82 1
+a82 1
+inline void Force_Eam::fp_standard(const double& rhoi, double& fp,
+d91 1
+a91 1
+  fp = (frho_6[itype][m]*p + frho_5[itype][m])*p + frho_4[itype][m];
+d103 1
+a103 1
+		       double& energy, double virial[],
+d146 6
+a151 6
+      virial[0] = delr[0]*f[0];
+      virial[1] = delr[1]*f[1];
+      virial[2] = delr[2]*f[2];
+      virial[3] = delr[0]*f[1];
+      virial[4] = delr[0]*f[2];
+      virial[5] = delr[1]*f[2];
+d163 1
+a163 1
+	virial[ivirial] = 0.0;
+d176 1
+a176 1
+		       double& energy, double virial[],
+d223 6
+a228 6
+      virial[0] =  delr[0]*f[0];
+      virial[1] =  delr[1]*f[1];
+      virial[2] =  delr[2]*f[2];
+      virial[3] =  delr[0]*f[1];
+      virial[4] =  delr[0]*f[2];
+      virial[5] =  delr[1]*f[2];
+d239 1
+a239 1
+	virial[ivirial] = 0.0;
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a81 54
+//added saubry (01-14-05)
+inline void Force_Eam::energy_standard(
+                       const double xi[], const double xj[], 
+		       const bool& Lenergy,double& energy,
+		       const int& itype,const int& jtype) const {
+  double rsq;
+  double delr[3];
+  double p;
+  int m;
+  double r,rhoip,rhojp,z2,recip,phi;
+
+  energy = 0.0;
+
+  rsq = vec3_distsq(xi,xj,delr);
+
+  if (rsq <= rcutmaxsq) 
+    {
+      
+      r = sqrt(rsq);
+
+      p = r*rdr + 1.0;
+      m = static_cast<int> (p);
+      m = min(m,nr-1);
+      p -= m;
+      p = min(p,1.0);
+      z2 = ((z2r_3[itype][jtype][m]*p + z2r_2[itype][jtype][m])*p + 
+	    z2r_1[itype][jtype][m])*p + z2r_0[itype][jtype][m];
+      recip = 1.0/r;
+      phi = z2*recip;
+      
+      if (Lenergy) energy = phi;
+    }  
+  
+  return ;
+}
+
+
+inline void Force_Eam::fp_energy(const double& rhoi,const bool& Lenergy, 
+				 double& energy, const int& itype) const 
+{
+  double p;
+  int m;
+  p = rhoi*rdrho + 1.0;
+  m = static_cast<int> (p);
+  m = max(1,min(m,nrho-1));
+  p -= m;
+  if (Lenergy) 
+    {
+      energy = ((frho_3[itype][m]*p + frho_2[itype][m])*p + 
+		frho_1[itype][m])*p + frho_0[itype][m];
+    }
+}
+
+
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+a81 54
+//added saubry (01-14-05)
+inline void Force_Eam::energy_standard(
+                       const double xi[], const double xj[], 
+		       const bool& Lenergy,double& energy,
+		       const int& itype,const int& jtype) const {
+  double rsq;
+  double delr[3];
+  double p;
+  int m;
+  double r,rhoip,rhojp,z2,recip,phi;
+
+  energy = 0.0;
+
+  rsq = vec3_distsq(xi,xj,delr);
+
+  if (rsq <= rcutmaxsq) 
+    {
+      
+      r = sqrt(rsq);
+
+      p = r*rdr + 1.0;
+      m = static_cast<int> (p);
+      m = min(m,nr-1);
+      p -= m;
+      p = min(p,1.0);
+      z2 = ((z2r_3[itype][jtype][m]*p + z2r_2[itype][jtype][m])*p + 
+	    z2r_1[itype][jtype][m])*p + z2r_0[itype][jtype][m];
+      recip = 1.0/r;
+      phi = z2*recip;
+      
+      if (Lenergy) energy = phi;
+    }  
+  
+  return ;
+}
+
+
+inline void Force_Eam::fp_energy(const double& rhoi,const bool& Lenergy, 
+				 double& energy, const int& itype) const 
+{
+  double p;
+  int m;
+  p = rhoi*rdrho + 1.0;
+  m = static_cast<int> (p);
+  m = max(1,min(m,nrho-1));
+  p -= m;
+  if (Lenergy) 
+    {
+      energy = ((frho_3[itype][m]*p + frho_2[itype][m])*p + 
+		frho_1[itype][m])*p + frho_0[itype][m];
+    }
+}
+
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d66 54
+@
+
+
+3.1
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.0.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a65 18
+inline void Force_Eam::fp_energy(const double& rhoi,
+				 const bool& Lenergy, 
+				 double& energy, const int& itype) const 
+{
+  double p;
+  int m;
+  p = rhoi*rdrho + 1.0;
+  m = static_cast<int> (p);
+  m = max(1,min(m,nrho-1));
+  p -= m;
+  if (Lenergy) 
+    {
+      energy = ((frho_3[itype][m]*p + frho_2[itype][m])*p + 
+		frho_1[itype][m])*p + frho_0[itype][m];
+    }
+}
+
+
+d67 1
+a67 1
+				   const bool& Lenergy, 
+a81 37
+inline void Force_Eam::energy_standard(
+                       const double xi[], const double xj[], 
+		       const bool& Lenergy,double& energy,
+		       const int& itype,const int& jtype) const {
+  double rsq;
+  double delr[3];
+  double p;
+  int m;
+  double r,rhoip,rhojp,z2,recip,phi;
+
+  rsq = vec3_distsq(xi,xj,delr);
+
+  if (rsq <= rcutmaxsq) 
+    {
+      
+      r = sqrt(rsq);
+
+      p = r*rdr + 1.0;
+      m = static_cast<int> (p);
+      m = min(m,nr-1);
+      p -= m;
+      p = min(p,1.0);
+      z2 = ((z2r_3[itype][jtype][m]*p + z2r_2[itype][jtype][m])*p + 
+	    z2r_1[itype][jtype][m])*p + z2r_0[itype][jtype][m];
+      recip = 1.0/r;
+      phi = z2*recip;
+      
+      if (Lenergy) energy = phi;
+    }  
+  else 
+    {
+      if (Lenergy) energy = 0.0;
+    }
+  
+  return ;
+}
+
+a154 43
+
+inline void Force_Eam::energy_ghost(
+                       const double xi[], const double xj[], 
+		       const bool& Lenergy, double& energy,
+		       const int& itype,const int& jtype, 
+		       const bool& Lskip_pair) const 
+{
+  double rsq;
+  double delr[3];
+  double p;
+  int m;
+  double r,rhojp,z2,z2p,recip,phi;
+  
+  rsq = vec3_distsq(xi,xj,delr);
+  
+  if (rsq <= rcutmaxsq) 
+    {      
+      r = sqrt(rsq);
+      recip = 1.0/r;
+      
+      p = r*rdr + 1.0;
+      m = static_cast<int> (p);
+      m = min(m,nr-1);
+      p -= m;
+      p = min(p,1.0);
+      if (!Lskip_pair) 
+	{
+	  z2 = ((z2r_3[itype][jtype][m]*p + z2r_2[itype][jtype][m])*p + 
+		z2r_1[itype][jtype][m])*p + z2r_0[itype][jtype][m];
+	  phi = z2*recip;
+	} 
+      else 
+	phi = 0.0;
+
+    if (Lenergy) energy = phi;
+
+    }  
+  else 
+    if (Lenergy) energy = 0.0;
+
+  return ;
+}
+
+@
+
+
+3.0.6.2
+log
+@Corrections to the energy change routines.
+@
+text
+@a109 2
+  energy = 0.0;
+
+d129 4
+d210 43
+@
+
+
+3.0.6.3
+log
+@Update changes.
+@
+text
+@a88 3
+
+  energy = 0.0;
+
+@
+
+
+3.0.6.4
+log
+@Correct problem in local energy change.
+Need to define bigger box dimensions in input file.
+
+Sylvie Aubry - 02/05/05.
+@
+text
+@d66 2
+a67 1
+inline void Force_Eam::fp_energy(const double& rhoi,const bool& Lenergy, 
+d90 2
+a151 2
+  energy = 0.0;
+
+@
+
+
+3.0.6.5
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d66 34
+a99 1
+//added saubry (01-14-05)
+a134 34
+
+inline void Force_Eam::fp_energy(const double& rhoi,const bool& Lenergy, 
+				 double& energy, const int& itype) const 
+{
+  double p;
+  int m;
+  p = rhoi*rdrho + 1.0;
+  m = static_cast<int> (p);
+  m = max(1,min(m,nrho-1));
+  p -= m;
+  if (Lenergy) 
+    {
+      energy = ((frho_3[itype][m]*p + frho_2[itype][m])*p + 
+		frho_1[itype][m])*p + frho_0[itype][m];
+    }
+}
+
+
+inline void Force_Eam::fp_standard(const double& rhoi, double& fp,
+		       const bool& Lenergy, 
+				   double& energy, const int& itype) const {
+  double p;
+  int m;
+  p = rhoi*rdrho + 1.0;
+  m = static_cast<int> (p);
+  m = max(1,min(m,nrho-1));
+  p -= m;
+  fp = (frho_6[itype][m]*p + frho_5[itype][m])*p + frho_4[itype][m];
+  if (Lenergy) {
+    energy = ((frho_3[itype][m]*p + frho_2[itype][m])*p + 
+	      frho_1[itype][m])*p + frho_0[itype][m];
+  }
+}
+
+d149 2
+@
+
+
+2.7
+log
+@Added a new variant of the neighbor list, invoked by
+Ltwoway = false
+Ltwoway_ghost = true
+
+This is the same as what LAMMPS uses when Newton's Law is not used.
+
+The new variant is used in by the Force_Eam class, in order
+to eliminate the communication of fp.
+
+It was more of an experiment than anything. It works, and for
+examples with lots of ghost atoms, seems to speed things up, but
+I doubt that it is dramatic.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.6
+log
+@Updated header
+@
+text
+@d129 6
+a134 6
+      virial[0] = - delr[0]*delr[0]*fforce;
+      virial[1] = - delr[1]*delr[1]*fforce;
+      virial[2] = - delr[2]*delr[2]*fforce;
+      virial[3] = - delr[0]*delr[1]*fforce;
+      virial[4] = - delr[0]*delr[2]*fforce;
+      virial[5] = - delr[1]*delr[2]*fforce;
+d137 76
+@
+
+
+2.5
+log
+@Added NPT ensemble
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.4
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d127 1
+@
+
+
+2.3
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d66 2
+a67 1
+		       double& energy, const int& itype) const {
+d75 4
+a78 2
+  energy = ((frho_3[itype][m]*p + frho_2[itype][m])*p + 
+	 frho_1[itype][m])*p + frho_0[itype][m];
+d84 3
+a86 1
+		       double f[], double& energy,
+a119 2
+    energy = phi;
+
+d124 12
+a136 1
+    energy = 0.0;
+d140 8
+@
+
+
+2.2
+log
+@Various
+@
+text
+@d93 1
+a93 1
+    
+d95 1
+@
+
+
+2.1
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.1.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d66 1
+a66 2
+		       const bool& Lenergy, 
+				   double& energy, const int& itype) const {
+d74 2
+a75 4
+  if (Lenergy) {
+    energy = ((frho_3[itype][m]*p + frho_2[itype][m])*p + 
+	      frho_1[itype][m])*p + frho_0[itype][m];
+  }
+d81 1
+a81 3
+		       double f[], 
+		       const bool& Lenergy, const bool& Lvirial,
+		       double& energy, double virial[],
+d93 1
+a93 1
+
+a94 1
+
+d114 1
+a114 76
+    f[0] = -delr[0]*fforce;
+    f[1] = -delr[1]*fforce;
+    f[2] = -delr[2]*fforce;
+
+    if (Lenergy) {
+      energy = phi;
+    }
+
+    if (Lvirial) {
+      virial[0] = delr[0]*f[0];
+      virial[1] = delr[1]*f[1];
+      virial[2] = delr[2]*f[2];
+      virial[3] = delr[0]*f[1];
+      virial[4] = delr[0]*f[2];
+      virial[5] = delr[1]*f[2];
+    }
+
+  }  else {
+    f[0] = 0.0;
+    f[1] = 0.0;
+    f[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial[ivirial] = 0.0;
+      }
+    }
+  }
+
+  return ;
+}
+
+inline void Force_Eam::force_ghost(
+                       const double xi[], const double xj[], 
+		       const double& fpi,
+		       double f[], 
+		       const bool& Lenergy, const bool& Lvirial,
+		       double& energy, double virial[],
+		       const int& itype, 
+                       const int& jtype, const bool& Lskip_pair) const {
+  double rsq;
+  double delr[3];
+  double p;
+  int m;
+  double r,rhojp,z2,z2p,recip,phi,phip,psip;
+  double fforce;
+
+  rsq = vec3_distsq(xi,xj,delr);
+
+  if (rsq <= rcutmaxsq) {
+
+    r = sqrt(rsq);
+    recip = 1.0/r;
+
+    p = r*rdr + 1.0;
+    m = static_cast<int> (p);
+    m = min(m,nr-1);
+    p -= m;
+    p = min(p,1.0);
+    rhojp = (rhor_6[jtype][m]*p + rhor_5[jtype][m])*p + 
+      rhor_4[jtype][m];
+    psip = fpi*rhojp;
+    fforce = psip*recip;
+    if (!Lskip_pair) {
+      z2 = ((z2r_3[itype][jtype][m]*p + z2r_2[itype][jtype][m])*p + 
+	    z2r_1[itype][jtype][m])*p + z2r_0[itype][jtype][m];
+      z2p = (z2r_6[itype][jtype][m]*p + z2r_5[itype][jtype][m])*p + 
+	z2r_4[itype][jtype][m];
+      phi = z2*recip;
+      phip = (z2p - phi)*recip;
+      fforce += phip*recip;
+    } else {
+      phi = 0.0;
+    }
+a119 12
+    if (Lenergy) {
+      energy = phi;
+    }
+
+    if (Lvirial) {
+      virial[0] =  delr[0]*f[0];
+      virial[1] =  delr[1]*f[1];
+      virial[2] =  delr[2]*f[2];
+      virial[3] =  delr[0]*f[1];
+      virial[4] =  delr[0]*f[2];
+      virial[5] =  delr[1]*f[2];
+    }
+d121 1
+a124 8
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial[ivirial] = 0.0;
+      }
+    }
+@
+
+

@@ -1,0 +1,204 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.2
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2007.02.15.04.49.33;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <cmath>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "constants.h"
+#include "fix.h"
+#include "fix_temp_rescale_slab.h"
+#include "input.h"
+#include "particlelist.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+Fix_TempRescaleSlab::Fix_TempRescaleSlab() {
+  fix_style = temp_rescale_slab;
+  Lvolume = false;
+}
+
+Fix_TempRescaleSlab::~Fix_TempRescaleSlab() {
+}
+
+void Fix_TempRescaleSlab::Setup(string& fix_string,
+			    const Box* b, 
+			    const ParticleTypeList* t, Comm* comm) {
+
+  int node;
+  bool match;
+
+  node = comm->get_node();
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Fix_TempRescaleSlab::Setup()" << endl;
+  }
+
+
+  std::istringstream buf_in(fix_string);
+
+  buf_in >> slabdir >> slablo >> slabhi >> temp_target >> ramp_rate >> temp_freq >> 
+    temp_window >> temp_factor >> fix_label;
+
+  if (buf_in.fail()) {
+    glog.error("Fix_TempRescaleSlab::Setup():\n"
+	       "Read error in input string");
+  }
+  
+  if (slabdir < 0 || slabdir > 3) {
+    glog.error("Fix_TempRescaleSlab::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  if (slablo >= slabhi) {
+    glog.error("Fix_TempRescaleSlab::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  if (temp_target < 0.0) {
+    glog.error("Fix_TempRescaleSlab::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  if (temp_freq <= 0) {
+    glog.error("Fix_TempRescaleSlab::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  if (temp_window < 0.0) {
+    glog.error("Fix_TempRescaleSlab::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  if (temp_factor < 0.0 || temp_factor > 1.0) {
+    glog.error("Fix_TempRescaleSlab::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  temp_skip = 1;
+  ramp_rate *= temp_freq;
+
+}
+
+void Fix_TempRescaleSlab::Final(ParticleList* p, Box* b, 
+			   Comm* comm) {
+  double temp_tmp;
+
+  if (temp_skip++ % temp_freq == 0) {
+    temp_tmp = p->ComputeTemperatureSlab(slabdir,slablo,slabhi,comm);
+    temp_target += ramp_rate;
+    if (fabs(temp_tmp - temp_target) > temp_window) {
+      //Rescale particle velocities
+      p->RescaleTemperatureSlab(slabdir,slablo,slabhi,temp_tmp - 
+			    temp_factor*(temp_tmp-temp_target),temp_tmp);
+    }
+  }
+}
+
+void Fix_TempRescaleSlab::Start(ParticleList* p, Box* b, 
+			   Comm* comm) {
+}
+
+void Fix_TempRescaleSlab::Output(ParticleList* p, const Box* b, 
+			   Comm* comm) {
+  double temp_tmp;
+  temp_tmp = p->ComputeTemperatureSlab(slabdir,slablo,slabhi,comm);
+  glog.get_logfile().setf(ios::left,ios::adjustfield);
+  glog.get_logfile() << "Fix " << setw(10) << fix_label.c_str() << 
+    " Temperature = " << temp_tmp << endl;
+}
+
+@
+
+
+1.1
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d68 1
+d133 1
+a133 1
+void Fix_TempRescaleSlab::Final(ParticleList* p, const Box* b, 
+d148 1
+a148 1
+void Fix_TempRescaleSlab::Start(ParticleList* p, const Box* b, 
+@
+

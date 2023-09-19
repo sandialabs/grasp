@@ -1,0 +1,59 @@
+head	1.2;
+access;
+symbols
+	PreMonaco:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2004.07.13.21.21.21;	author athomps;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2004.05.20.22.11.35;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Added NPT ensemble
+@
+text
+@# twobody 4-particle input data
+forcefield twobody 	twobody.in   Lennard-Jones
+units			reduced
+timestep 		0.001
+nsteps 			10000
+box dimensions 		2.0	0.0	0.0	\
+			0.0	2.0	0.0	\
+			0.0	0.0	2.0
+box origin 		-1.0 		-1.0 		-1.0
+initialize temperature 	1.0 		256
+temperature control     nose-hoover 1.0 100.0
+pressure control     nose-hoover 5.0  1.0
+neighbor		bin 		10 		0.3
+thermo 			10
+dump particles 		10000
+dump velocities 	10000
+
+
+
+
+@
+
+
+1.1
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@@
+

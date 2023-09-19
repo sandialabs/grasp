@@ -1,0 +1,60 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.10.31.20.28.01;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Moved examples into subdirectories.
+@
+text
+@# twobody 1372-particle input data
+units			reduced
+forcefield twobody 	twobody.in   Lennard-Jones
+timestep 		0.005
+nsteps 			1000
+box dimensions 		14.0	0.0	0.0	\
+			0.0	14.0	0.0	\
+			0.0	0.0	14.0
+box origin 		0.0 		0.0 		0.0
+initialize temperature 	0.1 		256
+neighbor		bin 		10 		1.0
+thermo 			10
+fix temp_rescale Hot  0.2  10 0.005 1.0 Hot
+fix temp_rescale A    0.1  10 0.005 0.0 A
+fix temp_rescale B    0.1  10 0.005 0.0 B
+fix temp_rescale C    0.1  10 0.005 0.0 C
+fix temp_rescale D    0.1  10 0.005 0.0 D
+fix temp_rescale E    0.1  10 0.005 0.0 E
+fix temp_rescale Cold  0.05 10 0.005 1.0 Cold
+
+
+
+@
+
+
+2.1
+log
+@Added fix capability example (suffix _fix).
+@
+text
+@@
+

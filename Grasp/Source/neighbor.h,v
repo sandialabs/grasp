@@ -1,0 +1,1161 @@
+head	4.5;
+access;
+symbols
+	ReverseComm_branch:4.3.0.10
+	ADTools_branch:4.3.0.8
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.0.2.2
+	P_MonacoSource:3.0.0.6
+	GraspSource:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.17.0.2
+	cjkimme_version_merge_from_trunk_1:2.9.2.1
+	cjkimme_version:2.9.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.5
+date	2007.05.29.15.08.05;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2007.04.02.19.30.02;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.4.1
+	4.3.6.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches
+	3.0.2.1;
+next	2.18;
+
+2.18
+date	2004.09.22.17.14.40;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.09.21.23.18.28;	author athomps;	state Exp;
+branches
+	2.17.2.1;
+next	2.16;
+
+2.16
+date	2004.08.27.20.05.36;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.08.24.15.32.11;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.07.22.23.15.01;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.07.19.17.05.38;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.03.20.00.15.39;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.9.2.1;
+next	2.8;
+
+2.8
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.03.03.20.32.39;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.05.00.32.02;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.04.00.12.41;	author athomps;	state Exp;
+branches;
+next	;
+
+2.9.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+2.17.2.1
+date	2004.09.22.20.47.54;	author athomps;	state Exp;
+branches;
+next	;
+
+3.0.2.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	3.0.2.2;
+
+3.0.2.2
+date	2005.01.16.21.56.05;	author athomps;	state Exp;
+branches;
+next	;
+
+4.3.4.1
+date	2005.06.16.22.23.41;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.3.6.1
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.5
+log
+@Enabled neighboring style bin with ReaxFF
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef NEIGHBOR_H
+#define NEIGHBOR_H
+
+class Neighbor {
+ public: 
+  // enum class for neighbor styles
+  enum NeighborStyles {neighbor_none,neighbor_nsq,neighbor_bin,
+		       neighbor_nsq_ghost,neighbor_bin_ghost};
+ private:
+  Neighbor(const Neighbor&);
+  // As the person who wrote stl_alloc.h said,
+  // "Really we should use static const int x = N
+  // instead of enum { x = N }, but few compilers accept the former."
+  enum {maxradius = 100};
+  int nneighbors;
+  double rcutneighmax,rcutneighmaxall;
+  bool Ltwoway,Ltwoway_ghost;
+  double rskin;
+  NeighborStyles neighbor_style;
+  int neighbor_freq;
+  int neighbor_skip;
+  vector<int> neigh_list,nneigh_list,first_list;
+  vector<int*> first_ptr;
+  bool nflag;
+  double timeneigh;
+  int ntimeneigh;
+
+  vector<int*> pages;                     // List of pages for neighbor list
+  int npage;                              // Number of pages in neighbor list
+
+  vector<int> binhead;                    // ptr to 1st atom in each bin
+  vector<int> bins;                       // ptr to next atom in each bin
+
+  int nstencil;                    // # of bins in stencil
+  vector<int> stencil;                    // stencil list of bin offsets
+
+  int mbins;
+  int mbinx,mbiny,mbinz;           // binning parameters
+  int nbinx,nbiny,nbinz;           // binning parameters
+  int mbinxlo,mbinylo,mbinzlo;
+  double binsizex,binsizey,binsizez;
+  double bininvx,bininvy,bininvz;
+
+ public:
+  Neighbor(const NeighborStyles&, const bool&, const bool&, 
+	   const int&, const double&);
+  int get_nneighbors() const;
+  void set_rcutneighmax(const double&);
+  void set_rcutneighmaxall(const double&);
+  void Neighboring(ParticleList*, 
+	   const vector<int>&, double* const[], const Box*, Comm*);
+  void NeighboringWall(const vector<Fixed_Object>&,ParticleList*, 
+		       const vector<int>&,double* const[], const Box*, Comm*);
+  // Neighbor list set-up functions.
+  void SetupNeighborListNsq(const int&, const int&, 
+			    const Particle*, const vector<int>&, 
+			    double* const[], Comm*);
+  void SetupNeighborListBin(const int&, const int&, 
+			    const Particle*, const vector<int>&, 
+			    double* const[], const Box*, Comm*);
+  void SetupNeighborListNsqWall(const vector<Fixed_Object>&, 
+			     const int&, const Particle*, 
+			     const vector<int>&, double* const[], Comm*);
+  void SetupNeighborListNsqGhost(const int&, const int&, 
+			    const Particle*, const vector<int>&, 
+			    double* const[], Comm*);
+  void SetupNeighborListBinGhost(const int&, const int&, 
+			    const Particle*, const vector<int>&, 
+			    double* const[], const Box*, Comm*);
+
+  bool NeighboringCheck(bool=false);
+  ~Neighbor();
+
+  void SetupBins(const Box*, Comm*);
+  void BinParticles(const int&, const int&, const Particle*,
+		    const Box*, Comm* comm);  // bin all particles
+  void BinParticles(const int&, const int&, const Particle*,
+		    const Box*, const vector<int>&, 
+		    Comm* comm);  // bin all particles
+  double BinDistance(const int&, const int&, const int&,
+    const double[], const double[], const double[]); // distance between binx
+  int Coord2BinLocal(const double[], const Box*);      // mapping local particle coord to a bin
+  int Coord2BinGhost(const double[], const Box*);    // mapping ghost particle coord to a bin
+  double get_timeneigh() const;
+  int get_ntimeneigh() const;
+  void inc_timeneigh(const double&);
+  void inc_ntimeneigh();
+
+  friend class Force_Twobody;
+  friend class Force_Threebody;
+  friend class Force_External;
+  friend class Force_Eam;
+  friend class Force_Ewald;
+  friend class Force_Tersoff;
+  friend class Force_Reax;
+  friend class Force_ChargeEquil;
+};
+
+#endif
+@
+
+
+4.4
+log
+@Fixed problem with invalid neighbor list with fix deformation.
+@
+text
+@d112 3
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d113 1
+a113 1
+  bool NeighboringCheck();
+@
+
+
+4.3.6.1
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@a129 1
+  void set_nflag(const bool&);
+@
+
+
+4.3.4.1
+log
+@latest additions to the PPPM FF
+@
+text
+@a126 1
+  double get_rskin() const;
+a135 1
+  friend class Force_PPPM;
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d52 2
+a53 1
+  enum NeighborStyles {neighbor_none,neighbor_nsq,neighbor_bin};
+d109 3
+d119 3
+a121 2
+  void BinParticlesVector(const int&, const int&, const Particle*,
+		    const Box*, Comm* comm);  // bin all particles
+d137 2
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d36 1
+a36 2
+  enum NeighborStyles {neighbor_none,neighbor_nsq,neighbor_bin,
+		       neighbor_nsq_ghost,neighbor_bin_ghost};
+a91 3
+  void SetupNeighborListNsqGhost(const int&, const int&, 
+			    const Particle*, const vector<int>&, 
+			    double* const[], Comm*);
+d99 2
+a100 3
+  void BinParticles(const int&, const int&, const Particle*,
+		    const Box*, const vector<int>&, 
+		    Comm* comm);  // bin all particles
+a115 2
+  friend class Force_Reax;
+  friend class Force_ChargeEquil;
+@
+
+
+3.2
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.1
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d36 2
+a37 1
+  enum NeighborStyles {neighbor_none,neighbor_nsq,neighbor_bin};
+d93 3
+d121 2
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d99 3
+a101 2
+  void BinParticlesVector(const int&, const int&, const Particle*,
+		    const Box*, Comm* comm);  // bin all particles
+@
+
+
+3.0.2.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@d36 1
+a36 2
+  enum NeighborStyles {neighbor_none,neighbor_nsq,neighbor_bin,
+		       neighbor_nsq_ghost,neighbor_bin_ghost};
+a91 3
+  void SetupNeighborListNsqGhost(const int&, const int&, 
+			    const Particle*, const vector<int>&, 
+			    double* const[], Comm*);
+a115 1
+  friend class Force_Reax;
+@
+
+
+3.0.2.2
+log
+@Separated charge equilibration part of REAXFF into separate force field.
+@
+text
+@a120 1
+  friend class Force_ChargeEquil;
+@
+
+
+2.18
+log
+@Fixed problem with messed up neighbor.cpp
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.17
+log
+@*** empty log message ***
+@
+text
+@a59 1
+  vector< *vector <int> > binvector;      // ptr to atoms in each bin
+@
+
+
+2.17.2.1
+log
+@Fixed problems with vectorized neighbor code
+@
+text
+@d60 1
+a60 1
+  vector< vector <int> > binvector;       // vector of atoms in each bin
+@
+
+
+2.16
+log
+@Eliminated troublesome use of inline static const initializations
+to define compile-time integer constants. Replaced with enumeration constants.
+@
+text
+@d60 1
+d99 2
+@
+
+
+2.15
+log
+@Added a new variant of the neighbor list, invoked by
+Ltwoway = false
+Ltwoway_ghost = true
+
+This is the same as what LAMMPS uses when Newton's Law is not used.
+
+The new variant is used in by the Force_Eam class, in order
+to eliminate the communication of fp.
+
+It was more of an experiment than anything. It works, and for
+examples with lots of ghost atoms, seems to speed things up, but
+I doubt that it is dramatic.
+@
+text
+@d38 4
+a41 1
+  static const int maxradius = 100;
+@
+
+
+2.14
+log
+@Updated header
+@
+text
+@d41 1
+a41 1
+  bool Ltwoway;
+d69 2
+a70 1
+  Neighbor(const NeighborStyles&, const bool&, const int&, const double&);
+@
+
+
+2.13
+log
+@Fixed problem with rcutneighmax when using multiple
+force fields with different cut off distances.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.12
+log
+@Added the Tersoff force field class
+@
+text
+@d40 1
+a40 1
+  double rcutneighmax;
+d72 1
+@
+
+
+2.11
+log
+@Various
+@
+text
+@d41 1
+a41 1
+  bool Lasymm;
+d107 1
+@
+
+
+2.10
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.9
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d46 2
+a47 2
+  vector <int> neigh_list,nneigh_list,first_list;
+  vector <int*> first_ptr;
+d73 1
+a73 1
+			int*, double* const[], const Box*, Comm*);
+d75 1
+a75 1
+		       int*,double* const[], const Box*, Comm*);
+d78 1
+a78 1
+			    const Particle*, const int*, 
+d81 1
+a81 1
+			    const Particle*, const int*, 
+d85 1
+a85 1
+			     const int*, double* const[], Comm*);
+d106 1
+@
+
+
+2.9.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d38 1
+a38 4
+  // As the person who wrote stl_alloc.h said,
+  // "Really we should use static const int x = N
+  // instead of enum { x = N }, but few compilers accept the former."
+  enum {maxradius = 100};
+d40 2
+a41 2
+  double rcutneighmax,rcutneighmaxall;
+  bool Ltwoway,Ltwoway_ghost;
+d46 2
+a47 2
+  vector<int> neigh_list,nneigh_list,first_list;
+  vector<int*> first_ptr;
+d69 1
+a69 2
+  Neighbor(const NeighborStyles&, const bool&, const bool&, 
+	   const int&, const double&);
+a71 1
+  void set_rcutneighmaxall(const double&);
+d73 1
+a73 1
+	   const vector<int>&, double* const[], const Box*, Comm*);
+d75 1
+a75 1
+		       const vector<int>&,double* const[], const Box*, Comm*);
+d78 1
+a78 1
+			    const Particle*, const vector<int>&, 
+d81 1
+a81 1
+			    const Particle*, const vector<int>&, 
+d85 1
+a85 1
+			     const vector<int>&, double* const[], Comm*);
+a105 2
+  friend class Force_Ewald;
+  friend class Force_Tersoff;
+@
+
+
+2.8
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d39 1
+a39 3
+  // Each entry points to a double[3] array which is the shift vector.
+  vector<double*> image_stencil;
+  int nimages,nneighbors,ncosps;
+a40 2
+  struct cosp {int i;int image;int first;};
+  vector<cosp> cosp_list;
+a71 1
+  void NeighboringCosp(ParticleList*, int*, double* const[], const Box*, Comm*);
+a73 2
+  void NeighboringWallCosp(const vector<Fixed_Object>&,ParticleList*, 
+		       int*,double* const[], const Box*, Comm*);
+a75 1
+  void SetupImageStencilCosp(const Box*, Comm*);
+a76 2
+  void SetupNeighborListNsqCosp(const int&, const Particle*, const int*, 
+			    double* const[], Comm*);
+a82 6
+  void SetupNeighborListNsqNonselfCosp(
+	 const int&, const Particle*, const int&, const Particle*, 
+			    const int*, double* const[], Comm*);
+  void SetupNeighborListNsqWallCosp(const vector<Fixed_Object>&, 
+			     const int&, const Particle*, 
+			     const int*, double* const[], Comm*);
+a86 4
+  void AddImage(const int&, const int&, const int&,
+		const double[], const double[], const double[]);
+  double ImageDist(const int&, const int&, const int&,
+		   const double[], const double[], const double[]) const;
+d95 2
+a96 1
+  int Coord2Bin(const double[], const Box*);         // mapping atom coord to a bin
+d105 1
+@
+
+
+2.7
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d1 28
+@
+
+
+2.6
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d6 2
+a7 1
+  enum neighbor_styles {neighbor_none,neighbor_nsq,neighbor_bin};
+d19 1
+a19 1
+  int neighbor_style;
+d45 1
+a45 1
+  Neighbor(const int&, const bool&, const int&, const double&);
+@
+
+
+2.5
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@a3 6
+class Forcefield;
+class Force_Twobody;
+class Force_Threebody;
+class Force_External;
+class Fixed_Object;
+
+d24 2
+d87 4
+@
+
+
+2.4
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@d19 1
+d27 2
+a28 1
+  vector <int> neigh_list,first_list;
+d31 3
+a35 1
+  int maxbin;
+a38 1
+  int maxstencil;
+a46 1
+
+d50 1
+d58 1
+a58 1
+  void SetupImageStencilCosp(const Forcefield&, const Box*, Comm*);
+d64 4
+a67 1
+			    double* const[], Comm*, const Box*);
+d85 2
+a86 6
+  void SetupBins(const Box*, const ForceFieldList*, Comm*);
+  void SetupNeighborListBin(
+	       const int&, const Particle*,
+	       const int*,
+	       double* const[], const Box*, Comm* comm);
+  void BinParticles(const int&, const Particle*,
+d89 2
+a90 2
+		      const double[]);   // distance between binx
+  int Coord2Bin(const double[]);         // mapping atom coord to a bin
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@a20 1
+  vector<int> neigh_list;
+d26 1
+a26 3
+  int nneighbors_local,nneighbors_ghost;
+  vector <int> neigh_list_local,first_list_local;
+  vector <int> neigh_list_ghost,first_list_ghost;
+d48 2
+a49 2
+  void Neighboring(ParticleList*, int*, double* const[], const Box*, Comm*);
+  void NeighboringGhost(ParticleList*, 
+d51 2
+d55 1
+a55 3
+  void NeighboringWallLocal(const vector<Fixed_Object>&,ParticleList*, 
+		       int*,double* const[], const Box*, Comm*);
+  void SetupImageStencil(const Forcefield&, const Box*, Comm*);
+d57 1
+a57 3
+  void SetupNeighborListNsq(const int&, const Particle*, const int*, 
+			    double* const[], Comm*);
+  void SetupNeighborListNsqLocal(const int&, const Particle*, const int*, 
+d59 4
+a62 4
+  void SetupNeighborListNsqGhost(const int&, const Particle*, 
+			      const int&, const Particle*, 
+			      const int*, double* const[], Comm*);
+  void SetupNeighborListNsqNonself(
+d65 1
+a65 1
+  void SetupNeighborListNsqWall(const vector<Fixed_Object>&, 
+d68 1
+a68 1
+  void SetupNeighborListNsqWallLocal(const vector<Fixed_Object>&, 
+d80 1
+a80 1
+  void SetupNeighborListBinLocal(
+d84 1
+a84 1
+  void BinParticlesLocal(const int&, const Particle*,
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d31 17
+d83 11
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d39 2
+d54 3
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d27 4
+d34 3
+a36 1
+  void Neighboring(ParticleList*, int*,double* const[], const Box*);
+d38 2
+a39 2
+		       int*,double* const[], const Box*);
+  void SetupImageStencil(const Forcefield&, const Box*);
+d41 7
+a47 2
+  void SetupNeighborListNsq(const vector<Particle>&, const int*, 
+			    double* const[]);
+d49 2
+a50 2
+	 const vector<Particle>&, const vector<Particle>&, 
+			    const int*, double* const[]);
+d52 2
+a53 2
+			     const vector<Particle>&, 
+			     const int*, double* const[]);
+d59 1
+@
+
+
+1.5
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d10 1
+a10 2
+class Neighbor
+{
+d12 1
+a12 1
+  enum neighbor_style {neighbor_none,neighbor_nsq,neighbor_bin};
+d23 4
+a26 1
+
+d28 1
+a28 1
+  Neighbor(const bool&);
+d30 4
+a33 1
+  void SetupImageStencil(const Forcefield&);
+d36 1
+a36 1
+			    const Forcefield&);
+d39 1
+a39 1
+			    const int*, const Forcefield&);
+d42 1
+a42 1
+			     const int*, const Forcefield&);
+d50 3
+a52 3
+  friend Force_Twobody;
+  friend Force_Threebody;
+  friend Force_External;
+@
+
+
+1.4
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d12 2
+@
+
+
+1.3
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d7 2
+d27 1
+d30 7
+d45 1
+@
+
+
+1.2
+log
+@Got rid of gratuituous "friend" declaration for class Neighobr in class Box.
+@
+text
+@d4 1
+d6 1
+d19 1
+d22 5
+a26 3
+  Neighbor();
+  void SetupImageStencil();
+  void SetupNeighborListNsq(vector<Particle>&);
+d34 1
+@
+
+
+1.1
+log
+@
+
+Added neighbor list object.
+@
+text
+@d21 1
+a21 1
+  void SetupNeighborListNsq();
+@
+

@@ -1,0 +1,688 @@
+head	4.3;
+access;
+symbols
+	ReverseComm_branch:4.3.0.10
+	ADTools_branch:4.3.0.8
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoSource:3.0.0.6
+	GraspSource:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.8.0.2
+	cjkimme_version_merge_from_trunk_1:2.3.2.1
+	cjkimme_version:2.3.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.07.30.20.18.47;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.02.12.00.13.00;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.3.2.1;
+next	2.2;
+
+2.2
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	;
+
+2.3.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+using namespace std;
+#include "input_string.h"
+
+// Uncomment this to use compile test program
+//
+//  g++ [-DGNU_2_96] input_string.cpp -o test.exe
+// 
+// int main() {
+//   input_string_test();
+// }
+
+void input_string_test() {
+
+  //
+  // Test out the input_String functions
+  // The only valid non-trivial command is
+  // "Go to bed in" followed by a number
+  //
+  string buf,buf2;
+  int secs;
+
+  while (getline(cin,buf)) {
+    // Reduce string to standard form
+    input_string_reduce(buf);
+    // Concatenate continuation lines, if requested.
+    if (buf[buf.size()-1] == '\\') {
+      buf2 = buf;
+      while (buf2[buf2.size()-1] == '\\') {
+	buf.replace(buf.size()-1,1," ");
+	// buf.replace(buf.size()-1,1,&char_tmp);
+	if(getline(cin,buf2)) {
+	  // Reduce string to standard form
+	  input_string_reduce(buf2);
+	  buf+=buf2;
+	} else {
+	  buf2 = "";
+	}
+      }
+    }
+    if (input_string_match(buf,"")) {
+      continue;
+    } else if (input_string_match(buf,"#")) {
+      continue;
+    } else if (input_string_match(buf,"Go to bed in")) {
+      std::istringstream buf_in(buf);
+      buf_in >> secs;
+
+      if (buf_in.fail()) {
+	cout << "Invalid input parameter" << endl;
+	exit(0);
+      }
+      cout << "How about " << 2*secs << " minutes?" << endl;
+
+    } else {
+      cout << "Invalid command" << endl;
+      exit(0);
+    }
+  }
+};
+
+bool input_string_match(string& s, const string& ss)
+  // Check if leading part of input string s matches
+  // the string ss. Both strings are assumed to be in
+  // standard form (non-white string followed by
+  // zero or more non-white strings, each prefixed by
+  // a single blank character)
+{
+  int slen,sslen;
+
+  slen = s.size();
+  sslen = ss.size();
+  // Check if input string or test string is empty
+  if (sslen==0 && slen==0) return true;
+  if (sslen==0) return false;
+  if (slen<sslen) return false;
+  // Do test
+#ifdef GNU_2_96
+    if (s.compare(ss,0,sslen)!=0) return false;
+#else
+    if (s.compare(0,sslen,ss)!=0) return false;
+#endif
+  s.erase(0,sslen);
+  return true;
+}
+
+void input_string_reduce(string& s) {
+  // Reduce string to standard form
+  // (non-white string followed by
+  // zero or more non-white strings, each prefixed by
+  // a single blank character)
+  int slen,ii,i;
+
+  // Strip off leading whitespace
+  slen = s.size();
+  i = 0;
+  while(i<slen) {
+    if (!input_string_whitechar(s[i])) break;
+    i++;
+  }
+  if (i>0) s.erase(0,i);
+
+  // Reduce separating white space to a single blank character.
+  slen = s.size();
+  ii = 0;
+  i = 1;
+  while(i<slen) {
+    if (input_string_whitechar(s[i])) {
+      if (input_string_whitechar(s[ii])) {
+	i++;
+	continue;
+      }
+      ii++;
+      s[ii] = ' ';
+    } else {
+      ii++;
+      s[ii] = s[i];
+    }
+    i++;
+  }
+  if (ii<slen-1) s.erase(ii+1,slen-ii);
+
+  // Strip off trailing whitespace
+  slen = s.size();
+  ii = slen-1;
+  i = 0;
+  while(i<slen) {
+    if (!input_string_whitechar(s[ii])) break;
+    ii--;
+    i++;
+  }
+  if (i>0) s.erase(ii+1,i);
+
+}
+
+bool input_string_whitechar(const char& c) {
+  // Test for whitespace character
+  return c == ' ' || c == '\t';
+}
+
+int input_string_get(ifstream& infile, string& buf) {
+  string buf2;
+  int istatus;
+
+  istatus = 0;
+
+  do {
+    if(!getline(infile,buf)) {
+      if(infile.eof()) {
+	buf = "End of Input";
+	istatus = 1;
+      }	else {
+	buf = "";
+	istatus = 1;
+      }
+    } else {
+      // Reduce string to standard form
+      input_string_reduce(buf);
+      // Skip if line empty
+      if (buf.size() > 0) {
+	// Concatenate continuation lines, if requested.
+	if (buf[buf.size()-1] == '\\') {
+	  buf2 = buf;
+	  while (buf2.size() > 0 && buf2[buf2.size()-1] == '\\') {
+	    buf.replace(buf.size()-1,1," ");
+	    if(getline(infile,buf2)) {
+	      // Reduce string to standard form
+	      input_string_reduce(buf2);
+	      buf+=buf2;
+	    } else {
+	      buf2 = "";
+	    }
+	  }
+	  input_string_reduce(buf);
+	}
+      }
+    }
+  } while (buf.size() == 0 || buf[0] == '#');
+
+  return istatus;
+}
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.1
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+2.8
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.7
+log
+@Updated header
+@
+text
+@d190 14
+a203 11
+      // Concatenate continuation lines, if requested.
+      if (buf[buf.size()-1] == '\\') {
+	buf2 = buf;
+	while (buf2[buf2.size()-1] == '\\') {
+	  buf.replace(buf.size()-1,1," ");
+	  if(getline(infile,buf2)) {
+	    // Reduce string to standard form
+	    input_string_reduce(buf2);
+	    buf+=buf2;
+	  } else {
+	    buf2 = "";
+d205 1
+a206 1
+	input_string_reduce(buf);
+@
+
+
+2.6
+log
+@Various
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.5
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.4
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@d77 1
+a77 1
+      stringstream buf_in(buf);
+@
+
+
+2.3
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d38 1
+a38 1
+//  g++ [-DGNU] input_string.cpp -o test.exe
+d109 1
+a109 1
+#ifdef GNU
+@
+
+
+2.3.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d38 1
+a38 1
+//  g++ [-DGNU_2_96] input_string.cpp -o test.exe
+d77 1
+a77 1
+      std::istringstream buf_in(buf);
+d109 1
+a109 1
+#ifdef GNU_2_96
+d190 11
+a200 14
+      // Skip if line empty
+      if (buf.size() > 0) {
+	// Concatenate continuation lines, if requested.
+	if (buf[buf.size()-1] == '\\') {
+	  buf2 = buf;
+	  while (buf2.size() > 0 && buf2[buf2.size()-1] == '\\') {
+	    buf.replace(buf.size()-1,1," ");
+	    if(getline(infile,buf2)) {
+	      // Reduce string to standard form
+	      input_string_reduce(buf2);
+	      buf+=buf2;
+	    } else {
+	      buf2 = "";
+	    }
+a201 1
+	  input_string_reduce(buf);
+d203 1
+@
+
+
+2.2
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d1 28
+@
+
+
+2.1
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d2 1
+d7 8
+a14 1
+using namespace std;
+d17 7
+a23 1
+  string buf;
+d27 17
+d66 5
+d72 1
+a72 1
+  int slen,sslen,ii;
+a73 6
+  // Strip off leading whitespace
+  slen = s.size();
+  for (int i=0;i<slen;i++) {
+    if (!input_string_whitechar(s[0])) break;
+    s.erase(0,1);
+  }
+d80 28
+a107 1
+  // Reduce each separating white space to a single blank character.
+d109 2
+a110 1
+  for (int i=1;i<slen;i++) {
+d112 4
+a115 1
+      if (input_string_whitechar(s[ii])) continue;
+d122 1
+d124 3
+a126 1
+  s.erase(ii+1,slen-ii);
+d128 9
+a136 8
+  // Do test
+#ifdef GNU
+    if (s.compare(ss,0,sslen)!=0) return false;
+#else
+    if (s.compare(0,sslen,ss)!=0) return false;
+#endif
+  s.erase(0,sslen);
+  return true;
+d139 2
+a140 2
+bool input_string_whitechar(const char& c)
+{
+d144 38
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d65 5
+a69 4
+  // This one works under linux and is non-standard
+  if (s.compare(ss,0,sslen)!=0) return false;
+  // This one works under SGI, and is the standard form
+  // if (s.compare(0,sslen,ss)!=0) return false;
+@
+
+
+1.1
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d4 1
+d65 1
+d67 2
+@
+

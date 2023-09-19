@@ -1,0 +1,2370 @@
+head	4.11;
+access;
+symbols
+	ReverseComm_branch:4.6.0.4
+	ADTools_branch:4.6.0.2
+	Monaco_Aidan:4.4.2.1.0.2
+	Root-of-Monaco_Aidan:4.4.2.1
+	PPPM_Crozier2:4.5.0.2
+	PPPM_Crozier:4.5
+	Root-of-PPPM_Crozier:4.5
+	Monaco:4.4.0.2
+	PreMonaco:4.4
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.5
+	REAX-2:3.4.2.4
+	P_MonacoSource:3.4.0.6
+	GraspSource:3.4
+	P_Monaco:3.4.0.4
+	InitialGrasp:3.4
+	REAXFF:3.4.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.15.0.4
+	cjkimme_version_merge_from_trunk_1:2.15.2.1
+	cjkimme_version:2.15.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.11
+date	2008.02.04.22.53.41;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.09.09.20.58.36;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.12.12.18.03.39;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.11.09.20.13.51;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2005.10.28.19.10.56;	author athomps;	state Exp;
+branches
+	4.6.4.1;
+next	4.5;
+
+4.5
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.02.22.44.55;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.6;
+
+3.6
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2004.12.16.21.07.08;	author athomps;	state Exp;
+branches
+	3.4.2.1;
+next	3.3;
+
+3.3
+date	2004.11.30.21.38.46;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.24.23.39.28;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.08.13.22.54.43;	author athomps;	state Exp;
+branches
+	2.15.2.1;
+next	2.14;
+
+2.14
+date	2004.08.04.19.55.46;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.08.02.21.10.26;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.08.02.19.23.16;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.08.02.18.00.46;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.07.19.17.05.38;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.07.13.21.21.16;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.03.20.00.15.36;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.02.12.23.36.09;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.02.12.21.22.24;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.02.12.21.10.17;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2004.02.12.00.13.00;	author athomps;	state Exp;
+branches;
+next	;
+
+2.15.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.4.2.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	3.4.2.2;
+
+3.4.2.2
+date	2005.01.04.00.23.00;	author athomps;	state Exp;
+branches;
+next	3.4.2.3;
+
+3.4.2.3
+date	2005.02.09.07.53.27;	author athomps;	state Exp;
+branches;
+next	3.4.2.4;
+
+3.4.2.4
+date	2005.03.30.23.32.07;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	;
+
+4.6.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.11
+log
+@Added ReaxFF test target testallreax
+@
+text
+@#-----------------------------------------------------------------------
+#
+#   G R A S P
+#   ____________
+#   \           \
+#    \ General   \
+#     \ Reactive  \
+#      \ Atomistic \
+#       \ Simulation\
+#        \ Program   \
+#         \___________\
+#
+#    Timestamp: April 1, 2005
+#    Version: 4.0
+#
+#    Primary Author: Aidan P. Thompson
+#
+#    e-mail: athomps@@sandia.gov
+#   
+#    Copyright (2005) Sandia National Laboratories
+#
+#    Sandia National Laboratories is a multiprogram laboratory 
+#    operated by Sandia Corporation, a Lockheed Martin company,
+#    for the United States Department of Energy under contract
+#    No. DE-AC04-94AL-85000.
+#
+#    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+#    Corporation, the U.S. Government retains certain rights in 
+#    this software.
+#
+#    This software is distributed under the terms of the GNU Public 
+#    License (GPL). For a copy of the GPL see the file 
+#    Grasp/Documentation/LICENSE or visit the GNU website at 
+#    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+#    entitles you to use the software, modify it and redistribute it. 
+#    The main thing you can not do is apply any other licensing 
+#    terms to the software. Also, if any part of this sofware is added 
+#    to other software, then that software must also be released under 
+#    the GPL.
+#
+#    This software comes with no warranty of any kind. 
+#
+#----------------------------------------------------------------------- 
+#///:EOH~
+# The targets 'test[all,a,b,c,..]' links all executables and runs them.
+
+# Target testall runs all the standard tests.
+
+testall: testa testb testc testd teste testf testg testh testi testj testk \
+	 testl testm testn testo testp testr
+
+testallreax: testreax testrdx testrdx222 testtatb
+
+CLEAN_TEST = 	echo '*** Cleaning test space ***'; \
+	if -e inp.dat rm inp.dat; \
+	if -e types.in rm types.in; \
+	if -e config.in rm config.in; \
+	if -e twobody.in rm twobody.in; \
+	if -e threebody.in rm threebody.in; \
+	if -e external.in rm external.in; \
+	if -e tersoff.in rm tersoff.in; \
+	if -e restart.in rm restart.in; \
+	if -e restart.out rm restart.out; \
+	if -e out.dat rm out.dat; \
+	if -e grasp.out rm grasp.out; \
+	if -e config.out rm config.out; \
+	if -e vel.out rm vel.out; \
+	if -e force.out rm force.out; \
+	if -e density_profile.out rm density_profile.out; \
+	if -e nodefile_0000.out rm nodefile_0000.out; \
+	if -e nodefile_0001.out rm nodefile_0001.out; \
+	if -e fort.65 rm fort.65; \
+        $(SLEEP);
+testa: all
+	@@echo '*** Performing testa ***'; 
+	@@echo '*** Starting 4 atom run ***';
+	@@cd $(TESTDIR)/testa; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testa; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp twobody_lj_cut.in $(RUNDIR)/twobody.in; \
+	cp config_4.in $(RUNDIR)/config.in; \
+	cp inp_4.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testa; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_4.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_4.dat; \
+	mv $(RUNDIR)/config.out config_4.out; \
+	mv $(RUNDIR)/vel.out vel_4.out; 
+	@@echo '*** Finishing 4 atom run ***'; 
+	@@echo '*** Finished Performing testa ***'; 
+	@@echo ' ';
+testb: all 
+	@@echo '*** Performing testb ***'; 
+	@@echo '*** Starting 1372 atom run ***';
+	@@cd $(TESTDIR)/testb; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testb; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp twobody_lj_cut.in $(RUNDIR)/twobody.in; \
+	cp config_1372.in $(RUNDIR)/config.in; \
+	cp inp_1372.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testb; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_1372.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_1372.dat; \
+	mv $(RUNDIR)/config.out config_1372.out; \
+	mv $(RUNDIR)/vel.out vel_1372.out;
+	@@echo '*** Finishing 1372 atom run ***';
+	@@echo '*** Finished Performing testb ***'; 
+	@@echo ' ';
+testb_mix: all 
+	@@echo '*** Performing testb_mix ***'; 
+	@@echo '*** Starting Lennard-Jones mixture run, 1 force field ***';
+	@@cd $(TESTDIR)/testb_mix; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testb_mix; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp config_abc.in $(RUNDIR)/config.in; \
+	cp inp_abc.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testb_mix; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_abc.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_abc.dat; 
+	@@echo '*** Finishing Lennard-Jones mixture run, 1 force field ***';
+	@@echo '*** Starting Lennard-Jones mixture run, 5(6) force fields ***';
+	@@cd $(TESTDIR)/testb_mix; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testb_mix; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp config_abc.in $(RUNDIR)/config.in; \
+	cp inp_abc_mix.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testb_mix; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_abc_mix.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_abc_mix.dat; 
+	@@echo '*** Finishing Lennard-Jones mixture run, 5(6) force fields ***';
+	@@echo '*** Finished Performing testb_mix ***'; 
+	@@echo ' ';
+testc: all 
+	@@echo '*** Performing testc ***'; 
+	@@echo '*** Starting 1372 atom minimg run ***';
+	@@cd $(TESTDIR)/testc; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testc; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp twobody_lj_cut_minimg.in $(RUNDIR)/twobody.in; \
+	cp config_1372.in $(RUNDIR)/config.in; \
+	cp inp_1372_minimg.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(SINGLENODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testc; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_1372_minimg.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_1372_minimg.dat; \
+	mv $(RUNDIR)/config.out config_1372_minimg.out; \
+	mv $(RUNDIR)/vel.out vel_1372_minimg.out;
+	@@echo '*** Finishing 1372 atom minimg run ***';
+	@@echo '*** Finished Performing testc ***'; 
+	@@echo ' ';
+testd: all 
+	@@echo '*** Performing testd ***'; 
+	@@echo '*** Starting 250 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(TESTDIR)/testd; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testd; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp threebody_sw_cut.in $(RUNDIR)/threebody.in; \
+	cp config_250tet.in $(RUNDIR)/config.in; \
+	cp inp_250tet_threebody.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testd; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_250tet_sw_cut.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_250tet_sw_cut.dat; \
+	mv $(RUNDIR)/config.out config_250tet_sw_cut.out; \
+	mv $(RUNDIR)/vel.out vel_250tet_sw_cut.out;
+	@@echo '*** Finishing 250 atom tetrahedral Stillinger-Weber run ***';
+	@@echo '*** Finished Performing testd ***'; 
+	@@echo ' ';
+teste: all 
+	@@echo '*** Performing teste ***'; 
+	@@echo '*** Starting 54 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(TESTDIR)/teste; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/teste; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp threebody_sw_cut.in $(RUNDIR)/threebody.in; \
+	cp config_54tet_delta.in $(RUNDIR)/config.in; \
+	cp inp_54tet_threebody.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/teste; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_54tet_sw_cut.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_54tet_sw_cut.dat; \
+	mv $(RUNDIR)/config.out config_54tet_sw_cut.out; \
+	mv $(RUNDIR)/vel.out vel_54tet_sw_cut.out;
+	@@echo '*** Finishing 54 atom tetrahedral Stillinger-Weber run ***';
+	@@echo '*** Finished Performing teste ***'; 
+	@@echo ' ';
+testf: all 
+	@@echo '*** Performing testf ***'; 
+	@@echo '*** Starting 128 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(TESTDIR)/testf; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testf; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp threebody_sw_cut.in $(RUNDIR)/threebody.in; \
+	cp config_128tet_delta.in $(RUNDIR)/config.in; \
+	cp inp_128tet_threebody.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testf; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_128tet_sw_cut.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_128tet_sw_cut.dat; \
+	mv $(RUNDIR)/config.out config_128tet_sw_cut.out; \
+	mv $(RUNDIR)/vel.out vel_128tet_sw_cut.out;
+	@@echo '*** Finishing 128 atom tetrahedral Stillinger-Weber run ***';
+	@@echo '*** Finished Performing testf ***'; 
+	@@echo ' ';
+testf_mix: all 
+	@@echo '*** Performing testf_mix ***'; 
+	@@echo '*** Starting Stillinger-Weber mixture run, 1 force field ***';
+	@@cd $(TESTDIR)/testf_mix; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testf_mix; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp config_abc.in $(RUNDIR)/config.in; \
+	cp inp_abc.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testf_mix; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_abc.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_abc.dat; 
+	@@echo '*** Finishing Stillinger-Weber mixture run, 1 force field ***';
+	@@echo '*** Starting Stillinger-Weber mixture run, 18 force fields ***';
+	@@cd $(TESTDIR)/testf_mix; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testf_mix; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp config_abc.in $(RUNDIR)/config.in; \
+	cp inp_abc_mix.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testf_mix; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_abc_mix.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_abc_mix.dat; 
+	@@echo '*** Finishing Stillinger-Weber mixture run, 18 force fields ***';
+	@@echo '*** Finished Performing testf_mix ***'; 
+	@@echo ' ';
+testg: all 
+	@@echo '*** Performing testg ***'; 
+	@@echo '*** Starting 4 atom lj93 wall run ***';
+	@@cd $(TESTDIR)/testg; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testg; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp external_lj93.in $(RUNDIR)/external.in; \
+	cp config_lj93.in $(RUNDIR)/config.in; \
+	cp inp_lj93.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testg; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_lj93.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_lj93.dat; \
+	mv $(RUNDIR)/config.out config_lj93.out; \
+	mv $(RUNDIR)/vel.out vel_lj93.out;
+	@@echo '*** Finishing 4 atom lj93 wall run ***';
+	@@echo '*** Finished Performing testg ***'; 
+	@@echo ' ';
+testh: all 
+	@@echo '*** Performing testh ***'; 
+	@@echo '*** Starting dft run ***';
+	@@cd $(TESTDIR)/testh; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testh; \
+	cp types_dft.in $(RUNDIR)/types.in; \
+	cp twobody_dft.in $(RUNDIR)/twobody.in; \
+	cp external_dft.in $(RUNDIR)/external.in; \
+	cp config_dft.in $(RUNDIR)/config.in; \
+	cp inp_dft.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testh; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_dft.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_dft.dat; \
+	mv $(RUNDIR)/config.out config_dft.out; \
+	mv $(RUNDIR)/vel.out vel_dft.out; \
+	mv $(RUNDIR)/density_profile.out density_dft.out;
+	@@echo '*** Finishing dft run ***';
+	@@echo '*** Finished Performing testh ***'; 
+	@@echo ' ';
+testi: all 
+	@@echo '*** Performing testi ***'; 
+	@@echo '*** Starting multinode relaxation run ***';
+	@@cd $(TESTDIR)/testi; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testi; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp twobody_lj_cut.in $(RUNDIR)/twobody.in; \
+	cp config_relax.in $(RUNDIR)/config.in; \
+	cp inp_relax.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(SINGLENODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testi; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_relax.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_relax.dat; \
+	mv $(RUNDIR)/config.out config_relax.out; \
+	mv $(RUNDIR)/force.out force_relax.out;
+	@@echo '*** Finishing multinode relaxation run ***';
+	@@echo '*** Finished Performing testi ***'; 
+	@@echo ' ';
+testj: all 
+	@@echo '*** Performing testj ***'; 
+	@@echo '*** Starting 2 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(TESTDIR)/testj; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testj; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp threebody_sw_cut.in $(RUNDIR)/threebody.in; \
+	cp config_2tet.in $(RUNDIR)/config.in; \
+	cp inp_2tet_threebody.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testj; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_2tet_sw_cut.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_2tet_sw_cut.dat; \
+	mv $(RUNDIR)/config.out config_2tet_sw_cut.out; \
+	mv $(RUNDIR)/vel.out vel_2tet_sw_cut.out;
+	@@echo '*** Finishing 2 atom tetrahedral Stillinger-Weber run ***';
+	@@echo '*** Finished Performing testj ***'; 
+	@@echo ' ';
+testk: all 
+	@@echo '*** Performing testk ***'; 
+	@@echo '*** Starting fix run ***';
+	@@cd $(TESTDIR)/testk; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testk; \
+	cp types_fix.in $(RUNDIR)/types.in; \
+	cp twobody_fix.in $(RUNDIR)/twobody.in; \
+	cp config_fix.in $(RUNDIR)/config.in; \
+	cp inp_fix.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testk; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_fix.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_fix.dat; 
+	@@echo '*** Finishing fix run ***';
+	@@echo '*** Finished Performing testk ***'; 
+	@@echo ' ';
+testl: all
+	@@echo '*** Performing testl ***'; 
+	@@echo '*** Starting EAM run ***';
+	@@cd $(TESTDIR)/testl; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testl; \
+	cp nialhjea $(RUNDIR)/nialhjea; \
+	cp types_nialhjea.in $(RUNDIR)/types.in; \
+	cp config_nialhjea.in $(RUNDIR)/config.in; \
+	cp inp_nialhjea.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testl; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_nialhjea.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_nialhjea.dat; \
+	mv $(RUNDIR)/config.out config_nialhjea.out; \
+	mv $(RUNDIR)/vel.out vel_nialhjea.out; \
+	mv $(RUNDIR)/force.out force_nialhjea.out;
+	@@echo '*** Finishing EAM run ***';
+	@@echo '*** Finished Performing testl ***'; 
+	@@echo ' ';
+testm: all
+	@@echo '*** Performing testm ***'; 
+	@@echo '*** Starting 4 atom NVT run ***';
+	@@cd $(TESTDIR)/testm; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testm; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp twobody_lj_cut.in $(RUNDIR)/twobody.in; \
+	cp config_4.in $(RUNDIR)/config.in; \
+	cp inp_4.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testm; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_4.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_4.dat; \
+	mv $(RUNDIR)/config.out config_4.out; \
+	mv $(RUNDIR)/vel.out vel_4.out;
+	@@echo '*** Finishing 4 atom NVT run ***'; 
+	@@echo '*** Finished Performing testm ***'; 
+	@@echo ' ';
+testn: all
+	@@echo '*** Performing testn ***'; 
+	@@echo '*** Starting 2 atom Ewald run ***';
+	@@cd $(TESTDIR)/testn; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testn; \
+	cp types_ewald.in $(RUNDIR)/types.in; \
+	cp twobody_ewald.in $(RUNDIR)/twobody.in; \
+	cp config_ewald.in $(RUNDIR)/config.in; \
+	cp inp_ewald.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testn; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_ewald.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_ewald.dat; \
+	mv $(RUNDIR)/config.out config_ewald.out; \
+	mv $(RUNDIR)/vel.out vel_ewald.out;
+	@@echo '*** Finishing 2 atom Ewald run ***'; 
+	@@echo '*** Finished Performing testn ***'; 
+	@@echo ' ';
+testo: all
+	@@echo '*** Performing testo ***'; 
+	@@echo '*** Starting 4 atom NPT run ***';
+	@@cd $(TESTDIR)/testo; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testo; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp twobody_lj_cut.in $(RUNDIR)/twobody.in; \
+	cp config_4.in $(RUNDIR)/config.in; \
+	cp inp_01.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testo; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_01.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_01.dat; \
+	mv $(RUNDIR)/config.out config_01.out; \
+	mv $(RUNDIR)/vel.out vel_01.out; \
+	mv $(RUNDIR)/restart.out restart.in; \
+	cp inp_02.dat $(RUNDIR)/inp.dat; \
+	cp restart.in $(RUNDIR)/restart.in; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testo; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_02.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_02.dat; \
+	mv $(RUNDIR)/config.out config_02.out; \
+	mv $(RUNDIR)/vel.out vel_02.out;
+	@@echo '*** Finishing 4 atom NPT run ***'; 
+	@@echo '*** Finished Performing testo ***'; 
+	@@echo ' ';
+testp: all
+	@@echo '*** Performing testp ***'; 
+	@@echo '*** Starting Tersoff Silicon run ***';
+	@@cd $(TESTDIR)/testp; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testp; \
+	cp types_si.in $(RUNDIR)/types.in; \
+	cp tersoff_si.in $(RUNDIR)/tersoff.in; \
+	cp config_si.in $(RUNDIR)/config.in; \
+	cp inp_si.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testp; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_si.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_si.dat; \
+	mv $(RUNDIR)/config.out config_si.out; \
+	mv $(RUNDIR)/vel.out vel_si.out; \
+	mv $(RUNDIR)/force.out force_si.out;
+	@@echo '*** Finishing Tersoff Silicon run ***'; 
+	@@echo '*** Finished Performing testp ***'; 
+	@@echo ' ';
+testq: all
+	@@echo '*** Performing testq ***'; 
+	@@echo '*** Starting BKS Quartz Defect run ***';
+	@@cd $(TESTDIR)/testq; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testq; \
+	cp types_bks.in $(RUNDIR)/types.in; \
+	cp twobody_bks.in $(RUNDIR)/twobody.in; \
+	cp config_bks.in $(RUNDIR)/config.in; \
+	cp inp_bks.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(SINGLENODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testq; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_bks.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_bks.dat; \
+	mv $(RUNDIR)/config.out config_bks.out; \
+	mv $(RUNDIR)/vel.out vel_bks.out; \
+	mv $(RUNDIR)/cfg.out cfg_bks.out; \
+	mv $(RUNDIR)/force.out force_bks.out;
+	@@echo '*** Finishing BKS Quartz Defect run ***'; 
+	@@echo '*** Finished Performing testq ***'; 
+	@@echo ' ';
+testreax: all
+	@@echo '*** Performing testreax ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testreax; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testreax; \
+	cp types_reax.in $(RUNDIR)/types.in; \
+	cp inp_reax.dat $(RUNDIR)/inp.dat; \
+	cp chargeequil_reax.in $(RUNDIR)/chargeequil.in; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testreax; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_reax.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_reax.dat; \
+	mv $(RUNDIR)/config.out config_reax.out; \
+	mv $(RUNDIR)/vel.out vel_reax.out; \
+	mv $(RUNDIR)/force.out force_reax.out; \
+	mv $(RUNDIR)/stress.out stress_reax.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testreax ***'; 
+	@@echo ' ';
+testrdx: all
+	@@echo '*** Performing testrdx ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testrdx; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testrdx; \
+	cp types_rdx.in $(RUNDIR)/types.in; \
+	cp inp_rdx.dat $(RUNDIR)/inp.dat; \
+	cp chargeequil_reax.in $(RUNDIR)/chargeequil.in; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testrdx; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_rdx.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_rdx.dat; \
+	mv $(RUNDIR)/config.out config_rdx.out; \
+	mv $(RUNDIR)/vel.out vel_rdx.out; \
+	mv $(RUNDIR)/force.out force_rdx.out; \
+	mv $(RUNDIR)/stress.out stress_rdx.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testrdx ***'; 
+	@@echo ' ';
+testrdx222: all
+	@@echo '*** Performing testrdx222 ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testrdx222; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testrdx222; \
+	cp types_rdx.in $(RUNDIR)/types.in; \
+	cp inp_rdx.dat $(RUNDIR)/inp.dat; \
+	cp chargeequil_reax.in $(RUNDIR)/chargeequil.in; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testrdx222; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_rdx.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_rdx.dat; \
+	mv $(RUNDIR)/config.out config_rdx.out; \
+	mv $(RUNDIR)/vel.out vel_rdx.out; \
+	mv $(RUNDIR)/force.out force_rdx.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testrdx222 ***'; 
+	@@echo ' ';
+testtatb: all
+	@@echo '*** Performing testtatb ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testtatb; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testtatb; \
+	cp types_tatb.in $(RUNDIR)/types.in; \
+	cp fort_tatb.3 $(RUNDIR)/fort.3; \
+	cp fort_tatb.4 $(RUNDIR)/fort.4; \
+	cp fort_tatb.35 $(RUNDIR)/fort.35; \
+	cp inp_tatb.dat $(RUNDIR)/inp.dat; \
+	cp chargeequil_tatb.in $(RUNDIR)/chargeequil.in; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testtatb; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_tatb.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_tatb.dat; \
+	mv $(RUNDIR)/config.out config_tatb.out; \
+	mv $(RUNDIR)/vel.out vel_tatb.out; \
+	mv $(RUNDIR)/force.out force_tatb.out; \
+	mv $(RUNDIR)/stress.out stress_tatb.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testtatb ***'; 
+	@@echo ' ';
+testr: all
+	@@echo '*** Performing testr ***'; 
+	@@echo '*** Starting 2 atom GaAs run ***';
+	@@cd $(TESTDIR)/testr; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testr; \
+	cp types_gaas.in $(RUNDIR)/types.in; \
+	cp tersoff_gaas.in $(RUNDIR)/tersoff.in; \
+	cp config_gaas.in $(RUNDIR)/config.in; \
+	cp inp_gaas.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testr; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_gaas.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_gaas.dat; \
+	mv $(RUNDIR)/config.out config_gaas.out; \
+	mv $(RUNDIR)/vel.out vel_gaas.out; \
+	mv $(RUNDIR)/force.out force_gaas.out;
+	@@echo '*** Finishing 2 atom GaAs run ***';
+	@@echo '*** Finished Performing testr ***'; 
+	@@echo ' ';
+tests: all
+	@@echo '*** Performing tests ***'; 
+	@@echo '*** Starting 1372 atom PPPM run ***';
+	@@cd $(TESTDIR)/tests; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/tests; \
+	cp types_pppm.in $(RUNDIR)/types.in; \
+	cp twobody_pppm.in $(RUNDIR)/twobody.in; \
+	cp config_pppm.in $(RUNDIR)/config.in; \
+	cp inp_pppm.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/tests; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_pppm.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_pppm.dat; \
+	mv $(RUNDIR)/config.out config_pppm.out; \
+	mv $(RUNDIR)/vel.out vel_pppm.out;
+	@@echo '*** Finishing 1372 atom PPPM run ***'; 
+	@@echo '*** Finished Performing tests ***'; 
+	@@echo ' ';
+
+
+
+
+@
+
+
+4.10
+log
+@Fixed problem with hbonds in ReaxFF implementation. Now matches pre-midpoint results
+@
+text
+@d52 2
+@
+
+
+4.9
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@d50 1
+a50 1
+	 testl testm testn testo testp
+@
+
+
+4.8
+log
+@More aftershocks from the ReaxFF upgrade
+@
+text
+@d50 1
+a50 1
+	 testl testm testn testo testp testq
+@
+
+
+4.7
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d622 27
+@
+
+
+4.6
+log
+@Added GaAs version of Tersoff
+@
+text
+@d570 2
+a571 1
+	mv $(RUNDIR)/force.out force_reax.out; 
+d594 2
+a595 1
+	mv $(RUNDIR)/force.out force_rdx.out; 
+@
+
+
+4.6.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d570 1
+a570 2
+	mv $(RUNDIR)/force.out force_reax.out; \
+	mv $(RUNDIR)/stress.out stress_reax.out; 
+d593 1
+a593 2
+	mv $(RUNDIR)/force.out force_rdx.out; \
+	mv $(RUNDIR)/stress.out stress_rdx.out; 
+@
+
+
+4.5
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d620 24
+@
+
+
+4.4
+log
+@Fixed glitch in header.
+@
+text
+@d620 23
+@
+
+
+4.4.2.1
+log
+@Added new files to Monaco branch.
+@
+text
+@d50 1
+a50 1
+	 testl testm testn testo testp testq testr
+a619 10
+testr: all
+	@@echo '*** Performing testr ***'; 
+	@@echo '*** Starting Monte Carlo run ***';
+	@@cd $(TESTDIR)/testr; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat $(RUNDIR)/grasp.out; \
+	cat $(RUNDIR)/out.dat;
+	@@echo '*** Finishing Monte Carlo run ***'; 
+	@@echo '*** Finished Performing testr ***'; 
+	@@echo ' ';
+@
+
+
+4.3
+log
+@Recovered from corruption that occurred on April 12, 2005.
+@
+text
+@d43 1
+a43 1
+#------------------------------------------------------------------------ 
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d50 1
+a50 1
+	 testl testm testn testo testp testq testreax
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+#    Timestamp: September 22, 2004
+#    Version: 3.0
+d16 1
+a16 1
+#    Author: Aidan P. Thompson
+d20 4
+a23 4
+#    Copyright (2004) Sandia National Laboratories
+#   
+#    Sandia is a multiprogram laboratory operated by 
+#    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d46 6
+d70 1
+d118 36
+d169 1
+a169 1
+	mv $(RUNDIR)/grasp.out grasp_1372_minimg_2.dat; \
+d246 36
+d551 70
+a620 2
+testall: testa testb testc testd teste testf testg testh testi testj testk \
+	 testl testm testn testo testp testq
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+#    Timestamp: April 1, 2005
+#    Version: 4.0
+d16 1
+a16 1
+#    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+#    Copyright (2005) Sandia National Laboratories
+#
+#    Sandia National Laboratories is a multiprogram laboratory 
+#    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+#    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+#    Corporation, the U.S. Government retains certain rights in 
+#    this software.
+#
+#    This software is distributed under the terms of the GNU Public 
+#    License (GPL). For a copy of the GPL see the file 
+#    Grasp/Documentation/LICENSE or visit the GNU website at 
+#    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+#    entitles you to use the software, modify it and redistribute it. 
+#    The main thing you can not do is apply any other licensing 
+#    terms to the software. Also, if any part of this sofware is added 
+#    to other software, then that software must also be released under 
+#    the GPL.
+#
+#    This software comes with no warranty of any kind. 
+#
+a29 6
+
+# Target testall runs all the standard tests.
+
+testall: testa testb testc testd teste testf testg testh testi testj testk \
+	 testl testm testn testo testp testq testreax
+
+a47 1
+	if -e fort.65 rm fort.65; \
+a94 36
+testb_mix: all 
+	@@echo '*** Performing testb_mix ***'; 
+	@@echo '*** Starting Lennard-Jones mixture run, 1 force field ***';
+	@@cd $(TESTDIR)/testb_mix; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testb_mix; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp config_abc.in $(RUNDIR)/config.in; \
+	cp inp_abc.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testb_mix; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_abc.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_abc.dat; 
+	@@echo '*** Finishing Lennard-Jones mixture run, 1 force field ***';
+	@@echo '*** Starting Lennard-Jones mixture run, 5(6) force fields ***';
+	@@cd $(TESTDIR)/testb_mix; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testb_mix; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp config_abc.in $(RUNDIR)/config.in; \
+	cp inp_abc_mix.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testb_mix; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_abc_mix.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_abc_mix.dat; 
+	@@echo '*** Finishing Lennard-Jones mixture run, 5(6) force fields ***';
+	@@echo '*** Finished Performing testb_mix ***'; 
+	@@echo ' ';
+d110 1
+a110 1
+	mv $(RUNDIR)/grasp.out grasp_1372_minimg.dat; \
+a186 36
+testf_mix: all 
+	@@echo '*** Performing testf_mix ***'; 
+	@@echo '*** Starting Stillinger-Weber mixture run, 1 force field ***';
+	@@cd $(TESTDIR)/testf_mix; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testf_mix; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp config_abc.in $(RUNDIR)/config.in; \
+	cp inp_abc.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testf_mix; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_abc.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_abc.dat; 
+	@@echo '*** Finishing Stillinger-Weber mixture run, 1 force field ***';
+	@@echo '*** Starting Stillinger-Weber mixture run, 18 force fields ***';
+	@@cd $(TESTDIR)/testf_mix; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testf_mix; \
+	cp types_3.in $(RUNDIR)/types.in; \
+	cp config_abc.in $(RUNDIR)/config.in; \
+	cp inp_abc_mix.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testf_mix; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_abc_mix.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_abc_mix.dat; 
+	@@echo '*** Finishing Stillinger-Weber mixture run, 18 force fields ***';
+	@@echo '*** Finished Performing testf_mix ***'; 
+	@@echo ' ';
+d456 2
+a457 70
+testreax: all
+	@@echo '*** Performing testreax ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testreax; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testreax; \
+	cp types_reax.in $(RUNDIR)/types.in; \
+	cp inp_reax.dat $(RUNDIR)/inp.dat; \
+	cp chargeequil_reax.in $(RUNDIR)/chargeequil.in; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testreax; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_reax.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_reax.dat; \
+	mv $(RUNDIR)/config.out config_reax.out; \
+	mv $(RUNDIR)/vel.out vel_reax.out; \
+	mv $(RUNDIR)/force.out force_reax.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testreax ***'; 
+	@@echo ' ';
+testrdx: all
+	@@echo '*** Performing testrdx ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testrdx; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testrdx; \
+	cp types_rdx.in $(RUNDIR)/types.in; \
+	cp inp_rdx.dat $(RUNDIR)/inp.dat; \
+	cp chargeequil_reax.in $(RUNDIR)/chargeequil.in; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testrdx; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_rdx.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_rdx.dat; \
+	mv $(RUNDIR)/config.out config_rdx.out; \
+	mv $(RUNDIR)/vel.out vel_rdx.out; \
+	mv $(RUNDIR)/force.out force_rdx.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testrdx ***'; 
+	@@echo ' ';
+testrdx222: all
+	@@echo '*** Performing testrdx222 ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testrdx222; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testrdx222; \
+	cp types_rdx.in $(RUNDIR)/types.in; \
+	cp inp_rdx.dat $(RUNDIR)/inp.dat; \
+	cp chargeequil_reax.in $(RUNDIR)/chargeequil.in; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testrdx222; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_rdx.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_rdx.dat; \
+	mv $(RUNDIR)/config.out config_rdx.out; \
+	mv $(RUNDIR)/vel.out vel_rdx.out; \
+	mv $(RUNDIR)/force.out force_rdx.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testrdx222 ***'; 
+	@@echo ' ';
+
+@
+
+
+3.6
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+#    Author: Aidan P. Thompson
+d20 4
+a23 4
+#    Copyright (2004) Sandia National Laboratories
+#   
+#    Sandia is a multiprogram laboratory operated by 
+#    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.5
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+#    Timestamp: September 22, 2004
+#    Version: 3.0
+d30 6
+d54 1
+d535 69
+a603 2
+testall: testa testb testc testd teste testf testg testh testi testj testk \
+	 testl testm testn testo testp testq testb_mix testf_mix
+@
+
+
+3.4
+log
+@Miscellaneous additions prior to adding Reax
+@
+text
+@d95 36
+d146 1
+a146 1
+	mv $(RUNDIR)/grasp.out grasp_1372_minimg_2.dat; \
+d223 36
+d529 2
+a530 1
+	 testl testm testn testo testp testq
+@
+
+
+3.4.2.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@a47 1
+	if -e fort.65 rm fort.65; \
+a48 22
+testreax: all
+	@@echo '*** Performing testreax ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testreax; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testreax; \
+	cp types_reax.in $(RUNDIR)/types.in; \
+	cp inp_reax.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testreax; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_reax.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_reax.dat; \
+	mv $(RUNDIR)/config.out config_reax.out; \
+	mv $(RUNDIR)/vel.out vel_reax.out; \
+	mv $(RUNDIR)/force.out force_reax.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testreax ***'; 
+	@@echo ' ';
+@
+
+
+3.4.2.2
+log
+@Added energies to Reax code, added kcal unit style and added
+the example testrdx to Makefile.testing
+@
+text
+@a71 22
+testrdx: all
+	@@echo '*** Performing testrdx ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testrdx; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testrdx; \
+	cp types_rdx.in $(RUNDIR)/types.in; \
+	cp inp_rdx.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testrdx; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_rdx.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_rdx.dat; \
+	mv $(RUNDIR)/config.out config_rdx.out; \
+	mv $(RUNDIR)/vel.out vel_rdx.out; \
+	mv $(RUNDIR)/force.out force_rdx.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testrdx ***'; 
+	@@echo ' ';
+@
+
+
+3.4.2.3
+log
+@Added testrdx222 to test suite.
+@
+text
+@a93 22
+testrdx222: all
+	@@echo '*** Performing testrdx222 ***'; 
+	@@echo '*** Starting ReaxFF run ***';
+	@@cd $(TESTDIR)/testrdx222; \
+	cd $(RUNDIR); \
+	$(CLEAN_TEST); \
+	cd $(TESTDIR)/testrdx222; \
+	cp types_rdx.in $(RUNDIR)/types.in; \
+	cp inp_rdx.dat $(RUNDIR)/inp.dat; \
+	cd $(RUNDIR); \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cd $(TESTDIR)/testrdx222; \
+	cat $(RUNDIR)/grasp.out; \
+	mv $(RUNDIR)/grasp.out grasp_rdx.dat; \
+	cat $(RUNDIR)/out.dat; \
+	mv $(RUNDIR)/out.dat out_rdx.dat; \
+	mv $(RUNDIR)/config.out config_rdx.out; \
+	mv $(RUNDIR)/vel.out vel_rdx.out; \
+	mv $(RUNDIR)/force.out force_rdx.out; 
+	@@echo '*** Finishing ReaxFF run ***'; 
+	@@echo '*** Finished Performing testrdx222 ***'; 
+	@@echo ' ';
+@
+
+
+3.4.2.4
+log
+@Separated charge equilibration input from REAX
+@
+text
+@a58 1
+	cp chargeequil_reax.in $(RUNDIR)/chargeequil.in; \
+a80 1
+	cp chargeequil_reax.in $(RUNDIR)/chargeequil.in; \
+a102 1
+	cp chargeequil_reax.in $(RUNDIR)/chargeequil.in; \
+@
+
+
+3.3
+log
+@Fixed error with CLEAN_TEST in Makefile.testing
+@
+text
+@a36 1
+	if -e nialhjea rm nialhjea; \
+@
+
+
+3.2
+log
+@Added a ForceTwobody exp6 example (BKS SiO2) to the
+test suite.
+@
+text
+@d53 2
+a54 1
+	@@cd $(RUNDIR); \
+d76 2
+a77 1
+	@@cd $(RUNDIR); \
+d99 2
+a100 1
+	@@cd $(RUNDIR); \
+d122 2
+a123 1
+	@@cd $(RUNDIR); \
+d145 2
+a146 1
+	@@cd $(RUNDIR); \
+d168 2
+a169 1
+	@@cd $(RUNDIR); \
+d191 2
+a192 1
+	@@cd $(RUNDIR); \
+d214 2
+a215 1
+	@@cd $(RUNDIR); \
+d239 2
+a240 1
+	@@cd $(RUNDIR); \
+d262 2
+a263 1
+	@@cd $(RUNDIR); \
+d285 2
+a286 1
+	@@cd $(RUNDIR); \
+d306 2
+a307 1
+	@@cd $(RUNDIR); \
+d330 2
+a331 1
+	@@cd $(RUNDIR); \
+d353 2
+a354 1
+	@@cd $(RUNDIR); \
+d376 2
+a377 1
+	@@cd $(RUNDIR); \
+d411 2
+a412 1
+	@@cd $(RUNDIR); \
+d435 2
+a436 1
+	@@cd $(RUNDIR); \
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d71 1
+d93 1
+d115 1
+d137 1
+d159 1
+d181 1
+d203 1
+d227 1
+d249 1
+d271 1
+d291 1
+d314 1
+d336 1
+d358 1
+d392 1
+d415 25
+d441 1
+a441 1
+	 testl testm testn testo testp
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d106 1
+a106 1
+	mv $(RUNDIR)/grasp.out grasp_1372_minimg.dat; \
+@
+
+
+2.15
+log
+@Fixed bug in minimixer.cpp, and tweaked parameters to
+improve performance. Result very sensitive to maxstep.
+@
+text
+@d13 2
+a14 1
+#    Timestamp: July 26, 2004
+@
+
+
+2.15.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@@
+
+
+2.14
+log
+@Fiddles some more with Makefile settings for ICC Liberty
+@
+text
+@d230 1
+a230 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+@
+
+
+2.13
+log
+@Finalized addition of RUNDIR variable to fix problem on liberty
+and added in the Barrier timing category to avoid spurious
+attributions of waiting times to Other.
+@
+text
+@d35 5
+d52 1
+a52 1
+	@@cd $(TESTDIR)/testa; \
+d54 1
+d67 1
+a67 1
+	mv $(RUNDIR)/vel.out vel_4.out;
+d73 1
+a73 1
+	@@cd $(TESTDIR)/testb; \
+d75 1
+d94 1
+a94 1
+	@@cd $(TESTDIR)/testc; \
+d96 1
+d115 1
+a115 1
+	@@cd $(TESTDIR)/testd; \
+d117 1
+d136 1
+a136 1
+	@@cd $(TESTDIR)/teste; \
+d138 1
+d157 1
+a157 1
+	@@cd $(TESTDIR)/testf; \
+d159 1
+d178 1
+a178 1
+	@@cd $(TESTDIR)/testg; \
+d180 1
+d199 1
+a199 1
+	@@cd $(TESTDIR)/testh; \
+d201 1
+d222 1
+a222 1
+	@@cd $(TESTDIR)/testi; \
+d224 1
+d243 1
+a243 1
+	@@cd $(TESTDIR)/testj; \
+d245 1
+d264 1
+a264 1
+	@@cd $(TESTDIR)/testk; \
+d266 1
+d283 1
+a283 1
+	@@cd $(TESTDIR)/testl; \
+d285 1
+d305 1
+a305 1
+	@@cd $(TESTDIR)/testm; \
+d307 1
+d326 1
+a326 1
+	@@cd $(TESTDIR)/testn; \
+d328 1
+d347 1
+a347 1
+	@@cd $(TESTDIR)/testo; \
+d349 1
+d380 1
+a380 1
+	@@cd $(TESTDIR)/testp; \
+d382 1
+@
+
+
+2.12
+log
+@Added extra environment variable to define
+directory where tests are >run<, as opposed to >saved<.
+This was necessary to handle weird behavior on ICC liberty.
+@
+text
+@d49 5
+a53 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp twobody_lj_cut.in $(TMPDIR)/twobody.in; \
+	cp config_4.in $(TMPDIR)/config.in; \
+	cp inp_4.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d56 6
+a61 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_4.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_4.dat; \
+	mv $(TMPDIR)/config.out config_4.out; \
+	mv $(TMPDIR)/vel.out vel_4.out;
+d69 5
+a73 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp twobody_lj_cut.in $(TMPDIR)/twobody.in; \
+	cp config_1372.in $(TMPDIR)/config.in; \
+	cp inp_1372.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d76 6
+a81 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_1372.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_1372.dat; \
+	mv $(TMPDIR)/config.out config_1372.out; \
+	mv $(TMPDIR)/vel.out vel_1372.out;
+d89 5
+a93 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp twobody_lj_cut_minimg.in $(TMPDIR)/twobody.in; \
+	cp config_1372.in $(TMPDIR)/config.in; \
+	cp inp_1372_minimg.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d96 6
+a101 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_1372_minimg.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_1372_minimg.dat; \
+	mv $(TMPDIR)/config.out config_1372_minimg.out; \
+	mv $(TMPDIR)/vel.out vel_1372_minimg.out;
+d109 5
+a113 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp threebody_sw_cut.in $(TMPDIR)/threebody.in; \
+	cp config_250tet.in $(TMPDIR)/config.in; \
+	cp inp_250tet_threebody.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d116 6
+a121 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_250tet_sw_cut.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_250tet_sw_cut.dat; \
+	mv $(TMPDIR)/config.out config_250tet_sw_cut.out; \
+	mv $(TMPDIR)/vel.out vel_250tet_sw_cut.out;
+d129 5
+a133 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp threebody_sw_cut.in $(TMPDIR)/threebody.in; \
+	cp config_54tet_delta.in $(TMPDIR)/config.in; \
+	cp inp_54tet_threebody.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d136 6
+a141 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_54tet_sw_cut.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_54tet_sw_cut.dat; \
+	mv $(TMPDIR)/config.out config_54tet_sw_cut.out; \
+	mv $(TMPDIR)/vel.out vel_54tet_sw_cut.out;
+d149 5
+a153 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp threebody_sw_cut.in $(TMPDIR)/threebody.in; \
+	cp config_128tet_delta.in $(TMPDIR)/config.in; \
+	cp inp_128tet_threebody.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d156 6
+a161 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_128tet_sw_cut.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_128tet_sw_cut.dat; \
+	mv $(TMPDIR)/config.out config_128tet_sw_cut.out; \
+	mv $(TMPDIR)/vel.out vel_128tet_sw_cut.out;
+d169 5
+a173 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp external_lj93.in $(TMPDIR)/external.in; \
+	cp config_lj93.in $(TMPDIR)/config.in; \
+	cp inp_lj93.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d176 6
+a181 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_lj93.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_lj93.dat; \
+	mv $(TMPDIR)/config.out config_lj93.out; \
+	mv $(TMPDIR)/vel.out vel_lj93.out;
+d189 6
+a194 6
+	cp types_dft.in $(TMPDIR)/types.in; \
+	cp twobody_dft.in $(TMPDIR)/twobody.in; \
+	cp external_dft.in $(TMPDIR)/external.in; \
+	cp config_dft.in $(TMPDIR)/config.in; \
+	cp inp_dft.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d197 7
+a203 7
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_dft.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_dft.dat; \
+	mv $(TMPDIR)/config.out config_dft.out; \
+	mv $(TMPDIR)/vel.out vel_dft.out; \
+	mv $(TMPDIR)/density_profile.out density_dft.out;
+d211 5
+a215 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp twobody_lj_cut.in $(TMPDIR)/twobody.in; \
+	cp config_relax.in $(TMPDIR)/config.in; \
+	cp inp_relax.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d218 6
+a223 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_relax.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_relax.dat; \
+	mv $(TMPDIR)/config.out config_relax.out; \
+	mv $(TMPDIR)/force.out force_relax.out;
+d231 5
+a235 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp threebody_sw_cut.in $(TMPDIR)/threebody.in; \
+	cp config_2tet.in $(TMPDIR)/config.in; \
+	cp inp_2tet_threebody.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d238 6
+a243 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_2tet_sw_cut.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_2tet_sw_cut.dat; \
+	mv $(TMPDIR)/config.out config_2tet_sw_cut.out; \
+	mv $(TMPDIR)/vel.out vel_2tet_sw_cut.out;
+d251 5
+a255 5
+	cp types_fix.in $(TMPDIR)/types.in; \
+	cp twobody_fix.in $(TMPDIR)/twobody.in; \
+	cp config_fix.in $(TMPDIR)/config.in; \
+	cp inp_fix.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d258 4
+a261 4
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_fix.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_fix.dat; 
+d269 5
+a273 5
+	cp nialhjea $(TMPDIR)/nialhjea; \
+	cp types_nialhjea.in $(TMPDIR)/types.in; \
+	cp config_nialhjea.in $(TMPDIR)/config.in; \
+	cp inp_nialhjea.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d276 7
+a282 7
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_nialhjea.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_nialhjea.dat; \
+	mv $(TMPDIR)/config.out config_nialhjea.out; \
+	mv $(TMPDIR)/vel.out vel_nialhjea.out; \
+	mv $(TMPDIR)/force.out force_nialhjea.out;
+d290 5
+a294 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp twobody_lj_cut.in $(TMPDIR)/twobody.in; \
+	cp config_4.in $(TMPDIR)/config.in; \
+	cp inp_4.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d297 6
+a302 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_4.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_4.dat; \
+	mv $(TMPDIR)/config.out config_4.out; \
+	mv $(TMPDIR)/vel.out vel_4.out;
+d310 5
+a314 5
+	cp types_ewald.in $(TMPDIR)/types.in; \
+	cp twobody_ewald.in $(TMPDIR)/twobody.in; \
+	cp config_ewald.in $(TMPDIR)/config.in; \
+	cp inp_ewald.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d317 6
+a322 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_ewald.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_ewald.dat; \
+	mv $(TMPDIR)/config.out config_ewald.out; \
+	mv $(TMPDIR)/vel.out vel_ewald.out;
+d330 5
+a334 5
+	cp types_3.in $(TMPDIR)/types.in; \
+	cp twobody_lj_cut.in $(TMPDIR)/twobody.in; \
+	cp config_4.in $(TMPDIR)/config.in; \
+	cp inp_01.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d337 10
+a346 10
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_01.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_01.dat; \
+	mv $(TMPDIR)/config.out config_01.out; \
+	mv $(TMPDIR)/vel.out vel_01.out; \
+	mv $(TMPDIR)/restart.out restart.in; \
+	cp inp_02.dat $(TMPDIR)/inp.dat; \
+	cp restart.in $(TMPDIR)/restart.in; \
+	cd $(TMPDIR); \
+d349 6
+a354 6
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_02.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_02.dat; \
+	mv $(TMPDIR)/config.out config_02.out; \
+	mv $(TMPDIR)/vel.out vel_02.out;
+d362 5
+a366 5
+	cp types_si.in $(TMPDIR)/types.in; \
+	cp tersoff_si.in $(TMPDIR)/tersoff.in; \
+	cp config_si.in $(TMPDIR)/config.in; \
+	cp inp_si.dat $(TMPDIR)/inp.dat; \
+	cd $(TMPDIR); \
+d369 7
+a375 7
+	cat $(TMPDIR)/grasp.out; \
+	mv $(TMPDIR)/grasp.out grasp_si.dat; \
+	cat $(TMPDIR)/out.dat; \
+	mv $(TMPDIR)/out.dat out_si.dat; \
+	mv $(TMPDIR)/config.out config_si.out; \
+	mv $(TMPDIR)/vel.out vel_si.out; \
+	mv $(TMPDIR)/force.out force_si.out;
+@
+
+
+2.11
+log
+@Fixed problem with virial in class Force_External
+@
+text
+@d49 13
+a61 11
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_4.in config.in; \
+	cp inp_4.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_4.dat; \
+	cat out.dat; \
+	mv out.dat out_4.dat; \
+	mv config.out config_4.out; \
+	mv vel.out vel_4.out;
+d69 13
+a81 11
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_1372.in config.in; \
+	cp inp_1372.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_1372.dat; \
+	cat out.dat; \
+	mv out.dat out_1372.dat; \
+	mv config.out config_1372.out; \
+	mv vel.out vel_1372.out;
+d89 5
+a93 4
+	cp types_3.in types.in; \
+	cp twobody_lj_cut_minimg.in twobody.in; \
+	cp config_1372.in config.in; \
+	cp inp_1372_minimg.dat inp.dat; \
+d95 7
+a101 6
+	cat grasp.out; \
+	mv grasp.out grasp_1372_minimg.dat; \
+	cat out.dat; \
+	mv out.dat out_1372_minimg.dat; \
+	mv config.out config_1372_minimg.out; \
+	mv vel.out vel_1372_minimg.out;
+d109 13
+a121 11
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_250tet.in config.in; \
+	cp inp_250tet_threebody.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_250tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_250tet_sw_cut.dat; \
+	mv config.out config_250tet_sw_cut.out; \
+	mv vel.out vel_250tet_sw_cut.out;
+d129 13
+a141 11
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_54tet_delta.in config.in; \
+	cp inp_54tet_threebody.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_54tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_54tet_sw_cut.dat; \
+	mv config.out config_54tet_sw_cut.out; \
+	mv vel.out vel_54tet_sw_cut.out;
+d149 13
+a161 11
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_128tet_delta.in config.in; \
+	cp inp_128tet_threebody.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_128tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_128tet_sw_cut.dat; \
+	mv config.out config_128tet_sw_cut.out; \
+	mv vel.out vel_128tet_sw_cut.out;
+d169 13
+a181 11
+	cp types_3.in types.in; \
+	cp external_lj93.in external.in; \
+	cp config_lj93.in config.in; \
+	cp inp_lj93.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_lj93.dat; \
+	cat out.dat; \
+	mv out.dat out_lj93.dat; \
+	mv config.out config_lj93.out; \
+	mv vel.out vel_lj93.out;
+d189 15
+a203 13
+	cp types_dft.in types.in; \
+	cp twobody_dft.in twobody.in; \
+	cp external_dft.in external.in; \
+	cp config_dft.in config.in; \
+	cp inp_dft.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_dft.dat; \
+	cat out.dat; \
+	mv out.dat out_dft.dat; \
+	mv config.out config_dft.out; \
+	mv vel.out vel_dft.out; \
+	mv density_profile.out density_dft.out;
+d211 13
+a223 11
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_relax.in config.in; \
+	cp inp_relax.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_relax.dat; \
+	cat out.dat; \
+	mv out.dat out_relax.dat; \
+	mv config.out config_relax.out; \
+	mv force.out force_relax.out;
+d231 13
+a243 11
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_2tet.in config.in; \
+	cp inp_2tet_threebody.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_2tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_2tet_sw_cut.dat; \
+	mv config.out config_2tet_sw_cut.out; \
+	mv vel.out vel_2tet_sw_cut.out;
+d251 11
+a261 9
+	cp types_fix.in types.in; \
+	cp twobody_fix.in twobody.in; \
+	cp config_fix.in config.in; \
+	cp inp_fix.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_fix.dat; \
+	cat out.dat; \
+	mv out.dat out_fix.dat; 
+d269 14
+a282 11
+	cp types_nialhjea.in types.in; \
+	cp config_nialhjea.in config.in; \
+	cp inp_nialhjea.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_nialhjea.dat; \
+	cat out.dat; \
+	mv out.dat out_nialhjea.dat; \
+	mv config.out config_nialhjea.out; \
+	mv vel.out vel_nialhjea.out; \
+	mv force.out force_nialhjea.out;
+d290 13
+a302 11
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_4.in config.in; \
+	cp inp_4.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_4.dat; \
+	cat out.dat; \
+	mv out.dat out_4.dat; \
+	mv config.out config_4.out; \
+	mv vel.out vel_4.out;
+d310 13
+a322 11
+	cp types_ewald.in types.in; \
+	cp twobody_ewald.in twobody.in; \
+	cp config_ewald.in config.in; \
+	cp inp_ewald.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_ewald.dat; \
+	cat out.dat; \
+	mv out.dat out_ewald.dat; \
+	mv config.out config_ewald.out; \
+	mv vel.out vel_ewald.out;
+d330 25
+a354 20
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_4.in config.in; \
+	cp inp_01.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_01.dat; \
+	cat out.dat; \
+	mv out.dat out_01.dat; \
+	mv config.out config_01.out; \
+	mv vel.out vel_01.out; \
+	mv restart.out restart.in; \
+	cp inp_02.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_02.dat; \
+	cat out.dat; \
+	mv out.dat out_02.dat; \
+	mv config.out config_02.out; \
+	mv vel.out vel_02.out;
+d362 14
+a375 12
+	cp types_si.in types.in; \
+	cp tersoff_si.in tersoff.in; \
+	cp config_si.in config.in; \
+	cp inp_si.dat inp.dat; \
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+	cat grasp.out; \
+	mv grasp.out grasp_si.dat; \
+	cat out.dat; \
+	mv out.dat out_si.dat; \
+	mv config.out config_si.out; \
+	mv vel.out vel_si.out; \
+	mv force.out force_si.out;
+@
+
+
+2.10
+log
+@Updated header
+@
+text
+@d61 1
+d79 1
+d97 1
+d115 1
+d133 1
+d151 1
+d169 1
+d189 1
+d207 1
+d225 1
+d241 1
+d259 1
+d277 1
+d295 1
+d322 1
+d341 1
+@
+
+
+2.9
+log
+@Added the Tersoff force field class
+@
+text
+@d13 1
+a13 1
+#    Timestamp: 1 March 2004
+@
+
+
+2.8
+log
+@Added NPT ensemble
+@
+text
+@d308 18
+d327 1
+a327 1
+	 testl testm testn testo
+@
+
+
+2.7
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d290 1
+a290 1
+	cp inp_4.dat inp.dat; \
+d293 1
+a293 1
+	mv grasp.out grasp_4.dat; \
+d295 12
+a306 3
+	mv out.dat out_4.dat; \
+	mv config.out config_4.out; \
+	mv vel.out vel_4.out;
+@
+
+
+2.6
+log
+@Various
+@
+text
+@d282 17
+d300 2
+a301 1
+	 testl testm testn
+@
+
+
+2.5
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+#    Timestamp: 11 February 2004
+@
+
+
+2.4
+log
+@This might be the value round of clean-up on the make files.
+Now it works on Cplant and everything.
+@
+text
+@d265 17
+d283 2
+a284 1
+	 testl testm
+@
+
+
+2.3
+log
+@More clean-up of Makefiles
+@
+text
+@d47 1
+a47 1
+	cd $(TESTDIR)/testa; \
+d87 1
+a87 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(GRASPEXE) >& out.dat;\
+@
+
+
+2.2
+log
+@Added cygwin and cygwin_serial to list of architectures
+@
+text
+@d70 1
+a70 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d87 1
+a87 1
+	$(RUNGRASP) $(SINGLENODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d104 1
+a104 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d121 1
+a121 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d138 1
+a138 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d155 1
+a155 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d173 1
+a173 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d191 1
+a191 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d208 1
+a208 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d225 1
+a225 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d239 1
+a239 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+d257 1
+a257 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+@
+
+
+2.1
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@d47 1
+a47 1
+	@@cd $(TESTDIR)/testa; \
+d53 1
+a53 1
+	$(RUNGRASP) $(MULTINODEFLAG) $(SRCDIR)/$(OBJDIR)/grasp.exe >& out.dat;  \
+@
+

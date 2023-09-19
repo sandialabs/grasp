@@ -1,0 +1,5342 @@
+head	4.18;
+access;
+symbols
+	PPPM_Crozier2:4.1.0.2
+	PPPM_Crozier:4.1
+	Root-of-PPPM_Crozier:4.1
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.1
+	REAX-2:1.1.2.6
+	P_MonacoTesting:1.1.0.6
+	InitialGraspTesting:1.1
+	P_Monaco:1.1.0.4
+	InitialGrasp:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.18
+date	2008.02.04.22.50.49;	author athomps;	state Exp;
+branches;
+next	4.17;
+
+4.17
+date	2007.09.09.21.25.47;	author athomps;	state Exp;
+branches;
+next	4.16;
+
+4.16
+date	2007.09.05.22.51.11;	author athomps;	state Exp;
+branches;
+next	4.15;
+
+4.15
+date	2007.06.02.03.27.22;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.05.31.00.53.29;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2007.05.30.06.00.33;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.05.29.15.33.54;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.01.26.23.22.29;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2006.12.12.17.40.19;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2006.12.06.23.06.41;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.12.06.23.01.25;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.11.09.00.20.54;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.09.08.18.17.51;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.08.28.23.32.18;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.09.30.18.46.13;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.09.02.23.03.05;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.08.05.17.08.01;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2005.04.02.04.05.15;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.00.06.54;	author athomps;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.01.05.20.05.02;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.01.07.22.56.56;	author athomps;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.01.16.21.59.25;	author athomps;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2005.02.01.21.11.45;	author athomps;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	2005.02.10.01.57.05;	author athomps;	state Exp;
+branches;
+next	1.1.2.6;
+
+1.1.2.6
+date	2005.03.30.23.32.07;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.18
+log
+@Tweaked ReaxFF tests
+@
+text
+@/Users/athomps/netapp/codes/Grasp/Testing/testreax/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /Users/athomps/netapp/codes/Grasp/Testing/testreax/
+PATH_MAX is 1024
+
+
+
+Entering Input::ReadInput()
+Opened /Users/athomps/netapp/codes/Grasp/Testing/testreax/inp.dat for input
+units kcal
+forcefield reax ReaxFF
+forcefield chargeequil chargeequil.in 1.0e-6
+init config reax
+timestep 1.0000000000
+nsteps 10
+box dimensions	13.0000000000	0.0000000000	0.0000000000 \
+			0.0000000000	13.0000000000	0.0000000000 \
+			0.0000000000	0.0000000000	13.0000000000
+box origin	40.0000000000	40.0000000000	40.0000000000
+initialize temperature 0.0000000000 256
+neighbor bin 25 2.5000000000
+thermo 1
+dump particles 10
+dump velocities 10
+dump forces 10
+dump restart 10
+dump stress 10
+reax hbcut 10.0000000000
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 4
+C 12.0000000000
+H 1.0080000000
+O 15.9990000000
+N 14.0000000000
+****************************************************
+Warning: Force_Reax::ReadInteractions:
+Remember, order of atoms in types.in and fort.4 must match;
+fort.4 must contain at least all the types in types.in
+****************************************************
+
+
+
+Reading ChargeEquil from file chargeequil.in
+
+
+
+Setting up force field class 8 called ChargeEquil
+
+id 	 type 	rcutsq 	 np	 p1      p2      p3  
+0	0	100.0000000000	5   5.7254000000   6.9235000000   0.8712000000   0.0000000000  10.0000000000
+1	0	100.0000000000	5   3.8196000000   9.8832000000   0.7625000000   0.0000000000  10.0000000000
+2	0	100.0000000000	5   8.5000000000   7.8386000000   1.0804000000   0.0000000000  10.0000000000
+3	0	100.0000000000	5   6.8418000000   6.3404000000   0.8596000000   0.0000000000  10.0000000000
+Cutoffs for this forcefield
+rcutmax = 10.0000000000
+rskin = 2.5000000000
+rcutneighmax = 12.5000000000
+rcutcomm = 7.5000000000
+Lmidpoint = 1
+
+
+
+Setting up force field class 7 called ReaxFF
+Cutoffs for this forcefield
+rcutmax = 10.0000000000
+rskin = 2.5000000000
+rcutneighmax = 12.5000000000
+rcutcomm = 12.5000000000
+Lmidpoint = 1
+iprune = 4
+ihb = 1
+hbcut = 10.0000000000
+
+
+
+Entering ParticleList::ReadReax()
+Total particles read = 21
+
+
+
+Entering Output::Setup()
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 92		 94		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+
+
+
+Entering FixList::Setup()
+
+
+
+--------------- Step         0 ---- CPU =     0.0000 (sec) ---------------
+ChargeEquil         =       177.9619978069
+ReaxFF:
+   Ebond            =     -3290.6584394309
+   Eatom            =       -45.5555088090
+   Elp              =        38.8012787074
+   Emol             =         0.0000000000
+   Eval             =        64.4313307477
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3680431108
+   Ehbo             =         0.0000000000
+   Etors            =       -12.0145319848
+   Econj            =       -10.8338513404
+   Evdw             =      1332.1957114412
+   Ecoul            =      -252.5791637720
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.6192197446
+Kinetic Energy      =         0.0000000000
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6192197446
+Pressure            =       143.0315234468
+Temperature         =         0.0000000000
+Total Particles     =                   21
+Volume              =      2197.0000000000
+A Vector Norm       =        13.0000000000
+B Vector Norm       =        13.0000000000
+C Vector Norm       =        13.0000000000
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 92		 94		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step         1 ---- CPU =     0.0081 (sec) ---------------
+ChargeEquil         =       177.9610874297
+ReaxFF:
+   Ebond            =     -3290.4955140883
+   Eatom            =       -45.6369667473
+   Elp              =        38.7891805817
+   Emol             =         0.0000000000
+   Eval             =        64.4248918907
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3755155831
+   Ehbo             =         0.0000000000
+   Etors            =       -12.0486400643
+   Econj            =       -10.8168626530
+   Evdw             =      1332.1526163094
+   Ecoul            =      -252.5893850354
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.6351079600
+Kinetic Energy      =         0.0105695099
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6245384501
+Pressure            =       132.0122498561
+Temperature         =         0.1772925945
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 92		 94		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step         2 ---- CPU =     0.0144 (sec) ---------------
+ChargeEquil         =       178.0251231674
+ReaxFF:
+   Ebond            =     -3290.0428770638
+   Eatom            =       -45.8634136399
+   Elp              =        38.7542814157
+   Emol             =         0.0000000000
+   Eval             =        64.4056281654
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3964345085
+   Ehbo             =         0.0000000000
+   Etors            =       -12.1419474754
+   Econj            =       -10.7690891267
+   Evdw             =      1332.0375151789
+   Ecoul            =      -252.6839891720
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.6752030590
+Kinetic Energy      =         0.0369283081
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6382747509
+Pressure            =       103.5386214820
+Temperature         =         0.6194341670
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 92		 96		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step         3 ---- CPU =     0.0206 (sec) ---------------
+ChargeEquil         =       178.0887221732
+ReaxFF:
+   Ebond            =     -3289.3948414252
+   Eatom            =       -46.1883489010
+   Elp              =        38.7007845237
+   Emol             =         0.0000000000
+   Eval             =        64.3741917297
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4269309339
+   Ehbo             =         0.0000000000
+   Etors            =       -12.2715467324
+   Econj            =       -10.6989506828
+   Evdw             =      1331.8843381791
+   Ecoul            =      -252.7966309799
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7292130494
+Kinetic Energy      =         0.0677212335
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6614918160
+Pressure            =        67.7073996002
+Temperature         =         1.1359536351
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 96		 100		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step         4 ---- CPU =     0.0269 (sec) ---------------
+ChargeEquil         =       178.1589865417
+ReaxFF:
+   Ebond            =     -3288.6685449175
+   Eatom            =       -46.5536023091
+   Elp              =        38.6353084689
+   Emol             =         0.0000000000
+   Eval             =        64.3323472447
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4620475374
+   Ehbo             =         0.0000000000
+   Etors            =       -12.4095565648
+   Econj            =       -10.6174271392
+   Evdw             =      1331.7273307551
+   Ecoul            =      -252.9321379009
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7893433585
+Kinetic Energy      =         0.0939767553
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6953666032
+Pressure            =        33.3895473673
+Temperature         =         1.5763628530
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 98		 100		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step         5 ---- CPU =     0.0341 (sec) ---------------
+ChargeEquil         =       178.2919603858
+ReaxFF:
+   Ebond            =     -3287.9702612735
+   Eatom            =       -46.9058217490
+   Elp              =        38.5659655625
+   Emol             =         0.0000000000
+   Eval             =        64.2832169822
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4969448104
+   Ehbo             =         0.0000000000
+   Etors            =       -12.5312147179
+   Econj            =       -10.5353274708
+   Evdw             =      1331.5877665459
+   Ecoul            =      -253.0245690527
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7352295978
+Kinetic Energy      =         0.1131068486
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6221227492
+Pressure            =         5.2947342849
+Temperature         =         1.8972503782
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 98		 100		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step         6 ---- CPU =     0.0404 (sec) ---------------
+ChargeEquil         =       178.3294876085
+ReaxFF:
+   Ebond            =     -3287.3773917952
+   Eatom            =       -47.2055717520
+   Elp              =        38.5010341625
+   Emol             =         0.0000000000
+   Eval             =        64.2308543971
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5275610861
+   Ehbo             =         0.0000000000
+   Etors            =       -12.6188267941
+   Econj            =       -10.4615753876
+   Evdw             =      1331.4715876900
+   Ecoul            =      -253.1287057607
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7866687175
+Kinetic Energy      =         0.1277458545
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6589228630
+Pressure            =       -15.2268936352
+Temperature         =         2.1428045590
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 98		 100		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step         7 ---- CPU =     0.0465 (sec) ---------------
+ChargeEquil         =       178.3312507812
+ReaxFF:
+   Ebond            =     -3286.9394465784
+   Eatom            =       -47.4287662103
+   Elp              =        38.4476375430
+   Emol             =         0.0000000000
+   Eval             =        64.1796077676
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5508275529
+   Ehbo             =         0.0000000000
+   Etors            =       -12.6623274612
+   Econj            =       -10.4025524504
+   Evdw             =      1331.3774393128
+   Ecoul            =      -253.1930697220
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8410545706
+Kinetic Energy      =         0.1426693230
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6983852476
+Pressure            =       -28.3273151190
+Temperature         =         2.3931303058
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 98		 100		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step         8 ---- CPU =     0.0528 (sec) ---------------
+ChargeEquil         =       178.3673548212
+ReaxFF:
+   Ebond            =     -3286.6840737967
+   Eatom            =       -47.5641137866
+   Elp              =        38.4106935984
+   Emol             =         0.0000000000
+   Eval             =        64.1335620126
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5646445897
+   Ehbo             =         0.0000000000
+   Etors            =       -12.6580165920
+   Econj            =       -10.3621043325
+   Evdw             =      1331.3035806317
+   Ecoul            =      -253.1587114823
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7764735160
+Kinetic Energy      =         0.1619404017
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6145331143
+Pressure            =       -34.6300366226
+Temperature         =         2.7163827143
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 98		 100		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step         9 ---- CPU =     0.0591 (sec) ---------------
+ChargeEquil         =       178.3753594355
+ReaxFF:
+   Ebond            =     -3286.6236389888
+   Eatom            =       -47.6098008336
+   Elp              =        38.3923374125
+   Emol             =         0.0000000000
+   Eval             =        64.0963478591
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5678354900
+   Ehbo             =         0.0000000000
+   Etors            =       -12.6071343351
+   Econj            =       -10.3417556868
+   Evdw             =      1331.2528308241
+   Ecoul            =      -253.2149127521
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8482025551
+Kinetic Energy      =         0.1870373175
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.6611652375
+Pressure            =       -35.0331397417
+Temperature         =         3.1373575158
+
+*************** Table of Latest Reax Sizes *******************************
+Category	Minimum		Maximum		Allocated
+na_local		 10		 11		40000
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+nval    		 89		 92		300000
+ntor    		 102		 106		65000
+nhb     		 0		 0		400000
+nvpair  		 3310		 3342		4800000
+**************************************************************************
+--------------- Step        10 ---- CPU =     0.0684 (sec) ---------------
+ChargeEquil         =       178.3190994470
+ReaxFF:
+   Ebond            =     -3286.7583674450
+   Eatom            =       -47.5707999838
+   Elp              =        38.3917989629
+   Emol             =         0.0000000000
+   Eval             =        64.0709049260
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5600940684
+   Ehbo             =         0.0000000000
+   Etors            =       -12.5144798444
+   Econj            =       -10.3410082976
+   Evdw             =      1331.2331606573
+   Ecoul            =      -253.2069575122
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.9367431582
+Kinetic Energy      =         0.2161574464
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7205857118
+Pressure            =       -30.3334325205
+Temperature         =         3.6258175534
+
+
+
+Loop time: 0.0685219765 on 2 processors for 21 particles for 10 steps
+Nprocs = 2 Tgrind = 0.0006525903
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.0651     95.05
+          Neigh Time    0.0000      0.01
+           Comm Time    0.0014      2.01
+       Exchange Time    0.0000      0.00
+        Revcomm Time    0.0007      1.09
+        Barrier Time    0.0000      0.00
+          Other Time    0.0013      1.84
+          Total Time    0.0685    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+ChargeEquil             0.0099 (    10)     0.0000 (     0) 
+ReaxFF                  0.0553 (    10)     0.0000 (     0) 
+
+
+
+Finished 
+@
+
+
+4.17
+log
+@Fixed problem with hbonds in ReaxFF implementation. Now matches pre-midpoint results
+@
+text
+@d128 1
+a128 1
+Pressure            =       143.0315234470
+d147 1
+a147 1
+--------------- Step         1 ---- CPU =     0.0080 (sec) ---------------
+d167 1
+a167 1
+Pressure            =       132.0122498562
+d181 1
+a181 1
+--------------- Step         2 ---- CPU =     0.0143 (sec) ---------------
+d201 1
+a201 1
+Pressure            =       103.5386214819
+d215 1
+a215 1
+--------------- Step         3 ---- CPU =     0.0208 (sec) ---------------
+d235 1
+a235 1
+Pressure            =        67.7073996001
+d249 1
+a249 1
+--------------- Step         4 ---- CPU =     0.0311 (sec) ---------------
+d269 1
+a269 1
+Pressure            =        33.3895473675
+d283 2
+a284 2
+--------------- Step         5 ---- CPU =     0.0379 (sec) ---------------
+ChargeEquil         =       178.2919603867
+d297 1
+a297 1
+   Ecoul            =      -253.0245690526
+d299 1
+a299 1
+Potential Energy    =     -2047.7352295968
+d302 2
+a303 2
+Total Energy        =     -2047.6221227483
+Pressure            =         5.2947342847
+d317 1
+a317 1
+--------------- Step         6 ---- CPU =     0.0443 (sec) ---------------
+d337 1
+a337 1
+Pressure            =       -15.2268936354
+d351 1
+a351 1
+--------------- Step         7 ---- CPU =     0.0507 (sec) ---------------
+d371 1
+a371 1
+Pressure            =       -28.3273151191
+d385 2
+a386 2
+--------------- Step         8 ---- CPU =     0.0578 (sec) ---------------
+ChargeEquil         =       178.3673548076
+d399 1
+a399 1
+   Ecoul            =      -253.1587114836
+d401 1
+a401 1
+Potential Energy    =     -2047.7764735309
+d404 3
+a406 3
+Total Energy        =     -2047.6145331292
+Pressure            =       -34.6300366220
+Temperature         =         2.7163827144
+d419 1
+a419 1
+--------------- Step         9 ---- CPU =     0.0644 (sec) ---------------
+d422 1
+a422 1
+   Ebond            =     -3286.6236389889
+d432 1
+a432 1
+   Evdw             =      1331.2528308242
+d439 2
+a440 2
+Pressure            =       -35.0331397413
+Temperature         =         3.1373575159
+d453 1
+a453 1
+--------------- Step        10 ---- CPU =     0.0738 (sec) ---------------
+d456 1
+a456 1
+   Ebond            =     -3286.7583674452
+d466 2
+a467 2
+   Evdw             =      1331.2331606575
+   Ecoul            =      -253.2069575121
+d473 2
+a474 2
+Pressure            =       -30.3334325204
+Temperature         =         3.6258175535
+d478 2
+a479 2
+Loop time: 0.0738960505 on 2 processors for 21 particles for 10 steps
+Nprocs = 2 Tgrind = 0.0007037719
+d485 1
+a485 1
+          Force Time    0.0702     95.05
+d487 1
+a487 1
+           Comm Time    0.0014      1.84
+d489 1
+a489 1
+        Revcomm Time    0.0010      1.33
+d491 2
+a492 2
+          Other Time    0.0013      1.76
+          Total Time    0.0739    100.00
+d498 2
+a499 2
+ChargeEquil             0.0123 (    10)     0.0000 (     0) 
+ReaxFF                  0.0579 (    10)     0.0000 (     0) 
+@
+
+
+4.16
+log
+@Reran most test problems using Apple laptop with 2.33 GHz Intel core 2 Duo
+@
+text
+@a27 3
+midpoint 1
+reax iprune 4
+reax ihb 1
+d75 1
+a75 1
+rcutcomm = 7.5000000000
+d93 3
+a95 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d99 1
+a99 1
+nvpair  		 1284		 1492		4800000
+d139 3
+a141 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d145 1
+a145 1
+nvpair  		 1284		 1492		4800000
+d147 1
+a147 1
+--------------- Step         1 ---- CPU =     0.0069 (sec) ---------------
+d173 3
+a175 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d179 1
+a179 1
+nvpair  		 1284		 1492		4800000
+d181 1
+a181 1
+--------------- Step         2 ---- CPU =     0.0113 (sec) ---------------
+d207 3
+a209 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d213 1
+a213 1
+nvpair  		 1284		 1492		4800000
+d215 1
+a215 1
+--------------- Step         3 ---- CPU =     0.0159 (sec) ---------------
+d241 3
+a243 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d247 1
+a247 1
+nvpair  		 1284		 1492		4800000
+d249 1
+a249 1
+--------------- Step         4 ---- CPU =     0.0204 (sec) ---------------
+d275 3
+a277 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d281 1
+a281 1
+nvpair  		 1284		 1492		4800000
+d283 1
+a283 1
+--------------- Step         5 ---- CPU =     0.0252 (sec) ---------------
+d309 3
+a311 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d315 1
+a315 1
+nvpair  		 1284		 1492		4800000
+d317 1
+a317 1
+--------------- Step         6 ---- CPU =     0.0307 (sec) ---------------
+d343 3
+a345 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d349 1
+a349 1
+nvpair  		 1284		 1492		4800000
+d351 1
+a351 1
+--------------- Step         7 ---- CPU =     0.0353 (sec) ---------------
+d377 3
+a379 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d383 1
+a383 1
+nvpair  		 1284		 1492		4800000
+d385 1
+a385 1
+--------------- Step         8 ---- CPU =     0.0398 (sec) ---------------
+d411 3
+a413 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d417 1
+a417 1
+nvpair  		 1284		 1492		4800000
+d419 1
+a419 1
+--------------- Step         9 ---- CPU =     0.0442 (sec) ---------------
+d445 3
+a447 3
+na      		 128		 144		40000
+nbonall 		 324		 364		180000
+nbon    		 168		 223		90000
+d451 1
+a451 1
+nvpair  		 1284		 1492		4800000
+d453 1
+a453 1
+--------------- Step        10 ---- CPU =     0.0518 (sec) ---------------
+d478 2
+a479 2
+Loop time: 0.0519309044 on 2 processors for 21 particles for 10 steps
+Nprocs = 2 Tgrind = 0.0004945800
+d485 1
+a485 1
+          Force Time    0.0494     95.12
+d487 1
+a487 1
+           Comm Time    0.0012      2.27
+d489 1
+a489 1
+        Revcomm Time    0.0003      0.56
+d491 2
+a492 2
+          Other Time    0.0011      2.04
+          Total Time    0.0519    100.00
+d498 2
+a499 2
+ChargeEquil             0.0053 (    10)     0.0000 (     0) 
+ReaxFF                  0.0441 (    10)     0.0000 (     0) 
+@
+
+
+4.15
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d112 1
+a112 1
+ChargeEquil         =       177.9618978464
+d125 1
+a125 1
+   Ecoul            =      -252.5791729376
+d127 1
+a127 1
+Potential Energy    =     -2047.6193288708
+d130 2
+a131 2
+Total Energy        =     -2047.6193288708
+Pressure            =       143.0315268182
+d150 2
+a151 2
+--------------- Step         1 ---- CPU =     0.0381 (sec) ---------------
+ChargeEquil         =       177.9611419560
+d153 3
+a155 3
+   Ebond            =     -3290.4955145005
+   Eatom            =       -45.6369667023
+   Elp              =        38.7891805794
+d157 1
+a157 1
+   Eval             =        64.4248918754
+d159 1
+a159 1
+   Ecoa             =       -49.3755155712
+d161 4
+a164 4
+   Etors            =       -12.0486400874
+   Econj            =       -10.8168626605
+   Evdw             =      1332.1526167055
+   Ecoul            =      -252.5893706521
+d166 2
+a167 2
+Potential Energy    =     -2047.6350390575
+Kinetic Energy      =         0.0105695093
+d169 3
+a171 3
+Total Energy        =     -2047.6244695481
+Pressure            =       132.0122570483
+Temperature         =         0.1772925854
+d184 2
+a185 2
+--------------- Step         2 ---- CPU =     0.0828 (sec) ---------------
+ChargeEquil         =       178.0251239481
+d187 3
+a189 3
+   Ebond            =     -3290.0428771571
+   Eatom            =       -45.8634136160
+   Elp              =        38.7542814094
+d191 1
+a191 1
+   Eval             =        64.4056281414
+d193 1
+a193 1
+   Ecoa             =       -49.3964344974
+d195 4
+a198 4
+   Etors            =       -12.1419474776
+   Econj            =       -10.7690891335
+   Evdw             =      1332.0375152698
+   Ecoul            =      -252.6839900597
+d200 2
+a201 2
+Potential Energy    =     -2047.6752031726
+Kinetic Energy      =         0.0369283087
+d203 3
+a205 3
+Total Energy        =     -2047.6382748639
+Pressure            =       103.5386217669
+Temperature         =         0.6194341775
+d218 2
+a219 2
+--------------- Step         3 ---- CPU =     0.1312 (sec) ---------------
+ChargeEquil         =       178.0887223413
+d221 3
+a223 3
+   Ebond            =     -3289.3948411608
+   Eatom            =       -46.1883489062
+   Elp              =        38.7007845162
+d225 1
+a225 1
+   Eval             =        64.3741917054
+d227 1
+a227 1
+   Ecoa             =       -49.4269309265
+d229 4
+a232 4
+   Etors            =       -12.2715467155
+   Econj            =       -10.6989506871
+   Evdw             =      1331.8843379275
+   Ecoul            =      -252.7966310276
+d234 2
+a235 2
+Potential Energy    =     -2047.7292129331
+Kinetic Energy      =         0.0677212351
+d237 3
+a239 3
+Total Energy        =     -2047.6614916980
+Pressure            =        67.7073958313
+Temperature         =         1.1359536628
+d252 2
+a253 2
+--------------- Step         4 ---- CPU =     0.1809 (sec) ---------------
+ChargeEquil         =       178.1589879538
+d255 3
+a257 3
+   Ebond            =     -3288.6685443790
+   Eatom            =       -46.5536023406
+   Elp              =        38.6353084622
+d259 1
+a259 1
+   Eval             =        64.3323472264
+d261 1
+a261 1
+   Ecoa             =       -49.4620475349
+d263 4
+a266 4
+   Etors            =       -12.4095565347
+   Econj            =       -10.6174271401
+   Evdw             =      1331.7273302411
+   Ecoul            =      -252.9321395713
+d268 2
+a269 2
+Potential Energy    =     -2047.7893436173
+Kinetic Energy      =         0.0939767574
+d271 3
+a273 3
+Total Energy        =     -2047.6953668599
+Pressure            =        33.3895407908
+Temperature         =         1.5763628887
+d286 2
+a287 2
+--------------- Step         5 ---- CPU =     0.2329 (sec) ---------------
+ChargeEquil         =       178.2919592804
+d289 3
+a291 3
+   Ebond            =     -3287.9702606767
+   Eatom            =       -46.9058217974
+   Elp              =        38.5659655589
+d293 1
+a293 1
+   Eval             =        64.2832169779
+d295 1
+a295 1
+   Ecoa             =       -49.4969448145
+d297 4
+a300 4
+   Etors            =       -12.5312146856
+   Econj            =       -10.5353274669
+   Evdw             =      1331.5877659774
+   Ecoul            =      -253.0245679925
+d302 2
+a303 2
+Potential Energy    =     -2047.7352296390
+Kinetic Energy      =         0.1131068501
+d305 3
+a307 3
+Total Energy        =     -2047.6221227888
+Pressure            =         5.2947300376
+Temperature         =         1.8972504047
+d320 2
+a321 2
+--------------- Step         6 ---- CPU =     0.2817 (sec) ---------------
+ChargeEquil         =       178.3294872226
+d323 3
+a325 3
+   Ebond            =     -3287.3773913494
+   Eatom            =       -47.2055718044
+   Elp              =        38.5010341618
+d327 1
+a327 1
+   Eval             =        64.2308544070
+d329 1
+a329 1
+   Ecoa             =       -49.5275610958
+d331 4
+a334 4
+   Etors            =       -12.6188267688
+   Econj            =       -10.4615753789
+   Evdw             =      1331.4715872711
+   Ecoul            =      -253.1287054899
+d336 1
+a336 1
+Potential Energy    =     -2047.7866688249
+d339 3
+a341 3
+Total Energy        =     -2047.6589229704
+Pressure            =       -15.2268953828
+Temperature         =         2.1428045589
+d354 2
+a355 2
+--------------- Step         7 ---- CPU =     0.3301 (sec) ---------------
+ChargeEquil         =       178.3312503947
+d357 3
+a359 3
+   Ebond            =     -3286.9394464413
+   Eatom            =       -47.4287662560
+   Elp              =        38.4476375437
+d361 1
+a361 1
+   Eval             =        64.1796077885
+d363 1
+a363 1
+   Ecoa             =       -49.5508275667
+d365 4
+a368 4
+   Etors            =       -12.6623274501
+   Econj            =       -10.4025524373
+   Evdw             =      1331.3774391991
+   Ecoul            =      -253.1930694753
+d370 2
+a371 2
+Potential Energy    =     -2047.8410547008
+Kinetic Energy      =         0.1426693212
+d373 3
+a375 3
+Total Energy        =     -2047.6983853796
+Pressure            =       -28.3273132674
+Temperature         =         2.3931302746
+d388 2
+a389 2
+--------------- Step         8 ---- CPU =     0.3795 (sec) ---------------
+ChargeEquil         =       178.3673581458
+d391 3
+a393 3
+   Ebond            =     -3286.6840740136
+   Eatom            =       -47.5641138204
+   Elp              =        38.4106935982
+d395 1
+a395 1
+   Eval             =        64.1335620379
+d397 1
+a397 1
+   Ecoa             =       -49.5646446053
+d399 4
+a402 4
+   Etors            =       -12.6580165975
+   Econj            =       -10.3621043163
+   Evdw             =      1331.3035808710
+   Ecoul            =      -253.1587155739
+d404 2
+a405 2
+Potential Energy    =     -2047.7764742739
+Kinetic Energy      =         0.1619403986
+d407 3
+a409 3
+Total Energy        =     -2047.6145338754
+Pressure            =       -34.6300343433
+Temperature         =         2.7163826627
+d422 2
+a423 2
+--------------- Step         9 ---- CPU =     0.4284 (sec) ---------------
+ChargeEquil         =       178.3753598802
+d425 3
+a427 3
+   Ebond            =     -3286.6236394821
+   Eatom            =       -47.6098008567
+   Elp              =        38.3923374102
+d429 1
+a429 1
+   Eval             =        64.0963478830
+d431 1
+a431 1
+   Ecoa             =       -49.5678355055
+d433 4
+a436 4
+   Etors            =       -12.6071343547
+   Econj            =       -10.3417556687
+   Evdw             =      1331.2528313430
+   Ecoul            =      -253.2149136379
+d438 2
+a439 2
+Potential Energy    =     -2047.8482029892
+Kinetic Energy      =         0.1870373144
+d441 3
+a443 3
+Total Energy        =     -2047.6611656747
+Pressure            =       -35.0331341008
+Temperature         =         3.1373574640
+d456 2
+a457 2
+--------------- Step        10 ---- CPU =     0.4943 (sec) ---------------
+ChargeEquil         =       178.3190994875
+d459 3
+a461 3
+   Ebond            =     -3286.7583680348
+   Eatom            =       -47.5708000031
+   Elp              =        38.3917989575
+d463 1
+a463 1
+   Eval             =        64.0709049418
+d465 1
+a465 1
+   Ecoa             =       -49.5600940816
+d467 4
+a470 4
+   Etors            =       -12.5144798730
+   Econj            =       -10.3410082798
+   Evdw             =      1331.2331612836
+   Ecoul            =      -253.2069579191
+d472 2
+a473 2
+Potential Energy    =     -2047.9367435210
+Kinetic Energy      =         0.2161574445
+d475 3
+a477 3
+Total Energy        =     -2047.7205860765
+Pressure            =       -30.3334273751
+Temperature         =         3.6258175217
+d481 2
+a482 2
+Loop time: 0.4941589832 on 2 processors for 21 particles for 10 steps
+Nprocs = 2 Tgrind = 0.0047062760
+d488 1
+a488 1
+          Force Time    0.4656     94.23
+d490 1
+a490 1
+           Comm Time    0.0090      1.83
+d492 1
+a492 1
+        Revcomm Time    0.0110      2.23
+d494 2
+a495 2
+          Other Time    0.0084      1.70
+          Total Time    0.4942    100.00
+d501 2
+a502 2
+ChargeEquil             0.1134 (    10)     0.0000 (     0) 
+ReaxFF                  0.3523 (    10)     0.0000 (     0) 
+@
+
+
+4.14
+log
+@Cleaned up the midpoint method some more
+@
+text
+@d28 4
+d68 2
+d78 5
+d150 1
+a150 1
+--------------- Step         1 ---- CPU =     0.0468 (sec) ---------------
+d184 1
+a184 1
+--------------- Step         2 ---- CPU =     0.0911 (sec) ---------------
+d218 1
+a218 1
+--------------- Step         3 ---- CPU =     0.1366 (sec) ---------------
+d252 1
+a252 1
+--------------- Step         4 ---- CPU =     0.1848 (sec) ---------------
+d286 1
+a286 1
+--------------- Step         5 ---- CPU =     0.2393 (sec) ---------------
+d320 1
+a320 1
+--------------- Step         6 ---- CPU =     0.2879 (sec) ---------------
+d354 1
+a354 1
+--------------- Step         7 ---- CPU =     0.3288 (sec) ---------------
+d388 1
+a388 1
+--------------- Step         8 ---- CPU =     0.3852 (sec) ---------------
+d422 1
+a422 1
+--------------- Step         9 ---- CPU =     0.4318 (sec) ---------------
+d456 1
+a456 1
+--------------- Step        10 ---- CPU =     0.4999 (sec) ---------------
+d481 2
+a482 1
+Loop time: 0.5003650188 on 2 processors for 21 particles for 10 steps
+d488 1
+a488 1
+          Force Time    0.4667     93.28
+d490 1
+a490 1
+           Comm Time    0.0107      2.15
+d492 1
+a492 1
+        Revcomm Time    0.0072      1.44
+d494 2
+a495 2
+          Other Time    0.0157      3.13
+          Total Time    0.5004    100.00
+d501 2
+a502 2
+ChargeEquil             0.1114 (    10)     0.0000 (     0) 
+ReaxFF                  0.3553 (    10)     0.0000 (     0) 
+@
+
+
+4.13
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d87 1
+a87 1
+nbon    		 220		 237		90000
+d133 1
+a133 1
+nbon    		 220		 237		90000
+d139 1
+a139 1
+--------------- Step         1 ---- CPU =     0.0422 (sec) ---------------
+d167 1
+a167 1
+nbon    		 220		 237		90000
+d173 1
+a173 1
+--------------- Step         2 ---- CPU =     0.0843 (sec) ---------------
+d201 1
+a201 1
+nbon    		 220		 237		90000
+d207 1
+a207 1
+--------------- Step         3 ---- CPU =     0.1285 (sec) ---------------
+d235 1
+a235 1
+nbon    		 220		 237		90000
+d241 1
+a241 1
+--------------- Step         4 ---- CPU =     0.1702 (sec) ---------------
+d269 1
+a269 1
+nbon    		 220		 237		90000
+d275 1
+a275 1
+--------------- Step         5 ---- CPU =     0.2224 (sec) ---------------
+d303 1
+a303 1
+nbon    		 220		 237		90000
+d309 1
+a309 1
+--------------- Step         6 ---- CPU =     0.2666 (sec) ---------------
+d337 1
+a337 1
+nbon    		 220		 237		90000
+d343 1
+a343 1
+--------------- Step         7 ---- CPU =     0.3073 (sec) ---------------
+d371 1
+a371 1
+nbon    		 220		 237		90000
+d377 1
+a377 1
+--------------- Step         8 ---- CPU =     0.3582 (sec) ---------------
+d405 1
+a405 1
+nbon    		 220		 237		90000
+d411 1
+a411 1
+--------------- Step         9 ---- CPU =     0.4037 (sec) ---------------
+d439 1
+a439 1
+nbon    		 220		 237		90000
+d445 1
+a445 1
+--------------- Step        10 ---- CPU =     0.4674 (sec) ---------------
+d470 1
+a470 1
+Loop time: 0.4679365158 on 2 processors for 21 particles for 10 steps
+d476 1
+a476 1
+          Force Time    0.4417     94.40
+d478 1
+a478 1
+           Comm Time    0.0106      2.26
+d480 1
+a480 1
+        Revcomm Time    0.0069      1.47
+d482 2
+a483 2
+          Other Time    0.0087      1.87
+          Total Time    0.4679    100.00
+d489 2
+a490 2
+ChargeEquil             0.1021 (    10)     0.0000 (     0) 
+ReaxFF                  0.3396 (    10)     0.0000 (     0) 
+@
+
+
+4.12
+log
+@Enabled neighboring style bin with ReaxFF
+@
+text
+@d85 3
+a87 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d91 1
+a91 1
+nvpair  		 3310		 3342		4800000
+d101 1
+a101 1
+ChargeEquil         =       177.9616755166
+d114 1
+a114 1
+   Ecoul            =      -252.5791933000
+d116 1
+a116 1
+Potential Energy    =     -2047.6195715629
+d119 2
+a120 2
+Total Energy        =     -2047.6195715629
+Pressure            =       143.0315343604
+d131 3
+a133 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d137 1
+a137 1
+nvpair  		 3310		 3342		4800000
+d139 2
+a140 2
+--------------- Step         1 ---- CPU =     0.0574 (sec) ---------------
+ChargeEquil         =       177.9612517097
+d142 3
+a144 3
+   Ebond            =     -3290.4955154170
+   Eatom            =       -45.6369666023
+   Elp              =        38.7891805743
+d146 1
+a146 1
+   Eval             =        64.4248918413
+d148 1
+a148 1
+   Ecoa             =       -49.3755155446
+d150 4
+a153 4
+   Etors            =       -12.0486401385
+   Econj            =       -10.8168626771
+   Evdw             =      1332.1526175865
+   Ecoul            =      -252.5893426981
+d155 2
+a156 2
+Potential Energy    =     -2047.6349013659
+Kinetic Energy      =         0.0105695080
+d158 3
+a160 3
+Total Energy        =     -2047.6243318579
+Pressure            =       132.0122723437
+Temperature         =         0.1772925635
+d165 3
+a167 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d171 1
+a171 1
+nvpair  		 3310		 3342		4800000
+d173 2
+a174 2
+--------------- Step         2 ---- CPU =     0.1111 (sec) ---------------
+ChargeEquil         =       178.0251250536
+d176 3
+a178 3
+   Ebond            =     -3290.0428775003
+   Eatom            =       -45.8634135511
+   Elp              =        38.7542813972
+d180 1
+a180 1
+   Eval             =        64.4056280896
+d182 1
+a182 1
+   Ecoa             =       -49.3964344706
+d184 4
+a187 4
+   Etors            =       -12.1419474932
+   Econj            =       -10.7690891503
+   Evdw             =      1332.0375156010
+   Ecoul            =      -252.6839913500
+d189 2
+a190 2
+Potential Energy    =     -2047.6752033739
+Kinetic Energy      =         0.0369283099
+d192 3
+a194 3
+Total Energy        =     -2047.6382750640
+Pressure            =       103.5386243873
+Temperature         =         0.6194341975
+d199 3
+a201 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d205 1
+a205 1
+nvpair  		 3310		 3342		4800000
+d207 2
+a208 2
+--------------- Step         3 ---- CPU =     0.1677 (sec) ---------------
+ChargeEquil         =       178.0887226106
+d210 3
+a212 3
+   Ebond            =     -3289.3948407823
+   Eatom            =       -46.1883488981
+   Elp              =        38.7007845024
+d214 1
+a214 1
+   Eval             =        64.3741916528
+d216 1
+a216 1
+   Ecoa             =       -49.4269309054
+d218 4
+a221 4
+   Etors            =       -12.2715466967
+   Econj            =       -10.6989506999
+   Evdw             =      1331.8843375671
+   Ecoul            =      -252.7966310531
+d223 2
+a224 2
+Potential Energy    =     -2047.7292127026
+Kinetic Energy      =         0.0677212390
+d226 3
+a228 3
+Total Energy        =     -2047.6614914636
+Pressure            =        67.7073898513
+Temperature         =         1.1359537285
+d233 3
+a235 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d239 1
+a239 1
+nvpair  		 3310		 3342		4800000
+d241 2
+a242 2
+--------------- Step         4 ---- CPU =     0.2248 (sec) ---------------
+ChargeEquil         =       178.1589905602
+d244 3
+a246 3
+   Ebond            =     -3288.6685433811
+   Eatom            =       -46.5536023901
+   Elp              =        38.6353084513
+d248 1
+a248 1
+   Eval             =        64.3323471863
+d250 1
+a250 1
+   Ecoa             =       -49.4620475234
+d252 4
+a255 4
+   Etors            =       -12.4095564905
+   Econj            =       -10.6174271465
+   Evdw             =      1331.7273292877
+   Ecoul            =      -252.9321426463
+d257 2
+a258 2
+Potential Energy    =     -2047.7893440925
+Kinetic Energy      =         0.0939767632
+d260 3
+a262 3
+Total Energy        =     -2047.6953673293
+Pressure            =        33.3895284039
+Temperature         =         1.5763629862
+d267 3
+a269 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d273 1
+a273 1
+nvpair  		 3310		 3342		4800000
+d275 2
+a276 2
+--------------- Step         5 ---- CPU =     0.2853 (sec) ---------------
+ChargeEquil         =       178.2919571772
+d278 3
+a280 3
+   Ebond            =     -3287.9702594480
+   Eatom            =       -46.9058218890
+   Elp              =        38.5659655551
+d282 1
+a282 1
+   Eval             =        64.2832169669
+d284 1
+a284 1
+   Ecoa             =       -49.4969448162
+d286 4
+a289 4
+   Etors            =       -12.5312146351
+   Econj            =       -10.5353274636
+   Evdw             =      1331.5877648055
+   Ecoul            =      -253.0245659577
+d291 2
+a292 2
+Potential Energy    =     -2047.7352297049
+Kinetic Energy      =         0.1131068558
+d294 3
+a296 3
+Total Energy        =     -2047.6221228491
+Pressure            =         5.2947211624
+Temperature         =         1.8972504993
+d301 3
+a303 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d307 1
+a307 1
+nvpair  		 3310		 3342		4800000
+d309 2
+a310 2
+--------------- Step         6 ---- CPU =     0.3410 (sec) ---------------
+ChargeEquil         =       178.3294864778
+d312 3
+a314 3
+   Ebond            =     -3287.3773903105
+   Eatom            =       -47.2055719137
+   Elp              =        38.5010341641
+d316 1
+a316 1
+   Eval             =        64.2308544262
+d318 1
+a318 1
+   Ecoa             =       -49.5275611100
+d320 4
+a323 4
+   Etors            =       -12.6188267292
+   Econj            =       -10.4615753652
+   Evdw             =      1331.4715862913
+   Ecoul            =      -253.1287049588
+d325 2
+a326 2
+Potential Energy    =     -2047.7866690281
+Kinetic Energy      =         0.1277458576
+d328 3
+a330 3
+Total Energy        =     -2047.6589231705
+Pressure            =       -15.2268998939
+Temperature         =         2.1428046103
+d335 3
+a337 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d341 1
+a341 1
+nvpair  		 3310		 3342		4800000
+d343 2
+a344 2
+--------------- Step         7 ---- CPU =     0.3925 (sec) ---------------
+ChargeEquil         =       178.3312496586
+d346 3
+a348 3
+   Ebond            =     -3286.9394459496
+   Eatom            =       -47.4287663595
+   Elp              =        38.4476375487
+d350 1
+a350 1
+   Eval             =        64.1796078316
+d352 1
+a352 1
+   Ecoa             =       -49.5508275906
+d354 4
+a357 4
+   Etors            =       -12.6623274349
+   Econj            =       -10.4025524137
+   Evdw             =      1331.3774387636
+   Ecoul            =      -253.1930689988
+d359 2
+a360 2
+Potential Energy    =     -2047.8410549446
+Kinetic Energy      =         0.1426693205
+d362 3
+a364 3
+Total Energy        =     -2047.6983856241
+Pressure            =       -28.3273108062
+Temperature         =         2.3931302638
+d369 3
+a371 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d375 1
+a375 1
+nvpair  		 3310		 3342		4800000
+d377 2
+a378 2
+--------------- Step         8 ---- CPU =     0.4943 (sec) ---------------
+ChargeEquil         =       178.3673642594
+d380 3
+a382 3
+   Ebond            =     -3286.6840742280
+   Eatom            =       -47.5641139041
+   Elp              =        38.4106936006
+d384 1
+a384 1
+   Eval             =        64.1335620913
+d386 1
+a386 1
+   Ecoa             =       -49.5646446346
+d388 4
+a391 4
+   Etors            =       -12.6580166124
+   Econj            =       -10.3621042842
+   Evdw             =      1331.3035811423
+   Ecoul            =      -253.1587233049
+d393 2
+a394 2
+Potential Energy    =     -2047.7764758746
+Kinetic Energy      =         0.1619403949
+d396 3
+a398 3
+Total Energy        =     -2047.6145354798
+Pressure            =       -34.6300305088
+Temperature         =         2.7163826001
+d403 3
+a405 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d409 1
+a409 1
+nvpair  		 3310		 3342		4800000
+d411 2
+a412 2
+--------------- Step         9 ---- CPU =     0.5568 (sec) ---------------
+ChargeEquil         =       178.3753607358
+d414 3
+a416 3
+   Ebond            =     -3286.6236403180
+   Eatom            =       -47.6098009191
+   Elp              =        38.3923374062
+d418 1
+a418 1
+   Eval             =        64.0963479340
+d420 1
+a420 1
+   Ecoa             =       -49.5678355366
+d422 4
+a425 4
+   Etors            =       -12.6071343962
+   Econj            =       -10.3417556309
+   Evdw             =      1331.2528322434
+   Ecoul            =      -253.2149153268
+d427 2
+a428 2
+Potential Energy    =     -2047.8482038082
+Kinetic Energy      =         0.1870373097
+d430 3
+a432 3
+Total Energy        =     -2047.6611664985
+Pressure            =       -35.0331232508
+Temperature         =         3.1373573841
+d437 3
+a439 3
+na      		 396		 401		40000
+nbonall 		 802		 823		180000
+nbon    		 168		 221		90000
+d443 1
+a443 1
+nvpair  		 3310		 3342		4800000
+d445 2
+a446 2
+--------------- Step        10 ---- CPU =     0.6301 (sec) ---------------
+ChargeEquil         =       178.3190995794
+d448 3
+a450 3
+   Ebond            =     -3286.7583691775
+   Eatom            =       -47.5708000554
+   Elp              =        38.3917989444
+d452 1
+a452 1
+   Eval             =        64.0709049757
+d454 1
+a454 1
+   Ecoa             =       -49.5600941095
+d456 4
+a459 4
+   Etors            =       -12.5144799316
+   Econj            =       -10.3410082402
+   Evdw             =      1331.2331625131
+   Ecoul            =      -253.2069587094
+d461 2
+a462 2
+Potential Energy    =     -2047.9367442109
+Kinetic Energy      =         0.2161574412
+d464 3
+a466 3
+Total Energy        =     -2047.7205867698
+Pressure            =       -30.3334169370
+Temperature         =         3.6258174660
+d470 1
+a470 1
+Loop time: 0.6305710077 on 2 processors for 21 particles for 10 steps
+d476 1
+a476 1
+          Force Time    0.5934     94.10
+d478 1
+a478 1
+           Comm Time    0.0120      1.91
+d480 1
+a480 1
+        Revcomm Time    0.0124      1.97
+d482 2
+a483 2
+          Other Time    0.0127      2.02
+          Total Time    0.6306    100.00
+d489 2
+a490 2
+ChargeEquil             0.1739 (    10)     0.0000 (     0) 
+ReaxFF                  0.4195 (    10)     0.0000 (     0) 
+@
+
+
+4.11
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d21 1
+a21 1
+neighbor nsq 25 2.5000000000
+d101 1
+a101 1
+ChargeEquil         =       177.9619524200
+d114 1
+a114 1
+   Ecoul            =      -252.5791679345
+d116 1
+a116 1
+Potential Energy    =     -2047.6192692940
+d119 2
+a120 2
+Total Energy        =     -2047.6192692940
+Pressure            =       143.0315249761
+d139 2
+a140 2
+--------------- Step         1 ---- CPU =     0.0634 (sec) ---------------
+ChargeEquil         =       177.9611126215
+d142 3
+a144 3
+   Ebond            =     -3290.4955142755
+   Eatom            =       -45.6369667269
+   Elp              =        38.7891805807
+d146 1
+a146 1
+   Eval             =        64.4248918837
+d148 1
+a148 1
+   Ecoa             =       -49.3755155777
+d150 4
+a153 4
+   Etors            =       -12.0486400748
+   Econj            =       -10.8168626564
+   Evdw             =      1332.1526164892
+   Ecoul            =      -252.5893783473
+d155 2
+a156 2
+Potential Energy    =     -2047.6350760834
+Kinetic Energy      =         0.0105695096
+d158 3
+a160 3
+Total Energy        =     -2047.6245065737
+Pressure            =       132.0122531506
+Temperature         =         0.1772925904
+d173 2
+a174 2
+--------------- Step         2 ---- CPU =     0.1238 (sec) ---------------
+ChargeEquil         =       178.0251235451
+d176 3
+a178 3
+   Ebond            =     -3290.0428771010
+   Eatom            =       -45.8634136295
+   Elp              =        38.7542814128
+d180 1
+a180 1
+   Eval             =        64.4056281544
+d182 1
+a182 1
+   Ecoa             =       -49.3964345036
+d184 4
+a187 4
+   Etors            =       -12.1419474760
+   Econj            =       -10.7690891298
+   Evdw             =      1332.0375152152
+   Ecoul            =      -252.6839896003
+d189 2
+a190 2
+Potential Energy    =     -2047.6752031125
+Kinetic Energy      =         0.0369283084
+d192 3
+a194 3
+Total Energy        =     -2047.6382748041
+Pressure            =       103.5386215361
+Temperature         =         0.6194341719
+d207 2
+a208 2
+--------------- Step         3 ---- CPU =     0.1828 (sec) ---------------
+ChargeEquil         =       178.0887222536
+d210 3
+a212 3
+   Ebond            =     -3289.3948412972
+   Eatom            =       -46.1883489041
+   Elp              =        38.7007845201
+d214 1
+a214 1
+   Eval             =        64.3741917186
+d216 1
+a216 1
+   Ecoa             =       -49.4269309307
+d218 4
+a221 4
+   Etors            =       -12.2715467240
+   Econj            =       -10.6989506846
+   Evdw             =      1331.8843380573
+   Ecoul            =      -252.7966310046
+d223 2
+a224 2
+Potential Energy    =     -2047.7292129954
+Kinetic Energy      =         0.0677212342
+d226 3
+a228 3
+Total Energy        =     -2047.6614917613
+Pressure            =        67.7073977970
+Temperature         =         1.1359536475
+d241 2
+a242 2
+--------------- Step         4 ---- CPU =     0.2377 (sec) ---------------
+ChargeEquil         =       178.1589872035
+d244 3
+a246 3
+   Ebond            =     -3288.6685446654
+   Eatom            =       -46.5536023242
+   Elp              =        38.6353084657
+d248 1
+a248 1
+   Eval             =        64.3323472364
+d250 1
+a250 1
+   Ecoa             =       -49.4620475365
+d252 4
+a255 4
+   Etors            =       -12.4095565503
+   Econj            =       -10.6174271395
+   Evdw             =      1331.7273305145
+   Ecoul            =      -252.9321386840
+d257 2
+a258 2
+Potential Energy    =     -2047.7893434798
+Kinetic Energy      =         0.0939767562
+d260 3
+a262 3
+Total Energy        =     -2047.6953667236
+Pressure            =        33.3895442949
+Temperature         =         1.5763628685
+d275 2
+a276 2
+--------------- Step         5 ---- CPU =     0.3125 (sec) ---------------
+ChargeEquil         =       178.2919598870
+d278 3
+a280 3
+   Ebond            =     -3287.9702609988
+   Eatom            =       -46.9058217716
+   Elp              =        38.5659655607
+d282 1
+a282 1
+   Eval             =        64.2832169803
+d284 1
+a284 1
+   Ecoa             =       -49.4969448125
+d286 4
+a289 4
+   Etors            =       -12.5312147024
+   Econj            =       -10.5353274688
+   Evdw             =      1331.5877662842
+   Ecoul            =      -253.0245685573
+d291 2
+a292 2
+Potential Energy    =     -2047.7352295991
+Kinetic Energy      =         0.1131068492
+d294 3
+a296 3
+Total Energy        =     -2047.6221227499
+Pressure            =         5.2947323330
+Temperature         =         1.8972503889
+d309 2
+a310 2
+--------------- Step         6 ---- CPU =     0.3653 (sec) ---------------
+ChargeEquil         =       178.3294874288
+d312 3
+a314 3
+   Ebond            =     -3287.3773915944
+   Eatom            =       -47.2055717761
+   Elp              =        38.5010341620
+d316 1
+a316 1
+   Eval             =        64.2308544017
+d318 1
+a318 1
+   Ecoa             =       -49.5275610908
+d320 4
+a323 4
+   Etors            =       -12.6188267820
+   Econj            =       -10.4615753834
+   Evdw             =      1331.4715875015
+   Ecoul            =      -253.1287056350
+d325 2
+a326 2
+Potential Energy    =     -2047.7866687677
+Kinetic Energy      =         0.1277458544
+d328 3
+a330 3
+Total Energy        =     -2047.6589229133
+Pressure            =       -15.2268944060
+Temperature         =         2.1428045570
+d343 2
+a344 2
+--------------- Step         7 ---- CPU =     0.4219 (sec) ---------------
+ChargeEquil         =       178.3312506009
+d346 3
+a348 3
+   Ebond            =     -3286.9394465231
+   Eatom            =       -47.4287662310
+   Elp              =        38.4476375432
+d350 1
+a350 1
+   Eval             =        64.1796077773
+d352 1
+a352 1
+   Ecoa             =       -49.5508275594
+d354 4
+a357 4
+   Etors            =       -12.6623274558
+   Econj            =       -10.4025524443
+   Evdw             =      1331.3774392678
+   Ecoul            =      -253.1930696072
+d359 2
+a360 2
+Potential Energy    =     -2047.8410546315
+Kinetic Energy      =         0.1426693221
+d362 3
+a364 3
+Total Energy        =     -2047.6983853094
+Pressure            =       -28.3273142154
+Temperature         =         2.3931302893
+d377 2
+a378 2
+--------------- Step         8 ---- CPU =     0.4846 (sec) ---------------
+ChargeEquil         =       178.3673563309
+d380 3
+a382 3
+   Ebond            =     -3286.6840739052
+   Eatom            =       -47.5641138016
+   Elp              =        38.4106935982
+d384 1
+a384 1
+   Eval             =        64.1335620242
+d386 1
+a386 1
+   Ecoa             =       -49.5646445970
+d388 4
+a391 4
+   Etors            =       -12.6580165944
+   Econj            =       -10.3621043250
+   Evdw             =      1331.3035807500
+   Ecoul            =      -253.1587133978
+d393 2
+a394 2
+Potential Energy    =     -2047.7764739175
+Kinetic Energy      =         0.1619404002
+d396 3
+a398 3
+Total Energy        =     -2047.6145335174
+Pressure            =       -34.6300355386
+Temperature         =         2.7163826889
+d411 2
+a412 2
+--------------- Step         9 ---- CPU =     0.5595 (sec) ---------------
+ChargeEquil         =       178.3753596426
+d414 3
+a416 3
+   Ebond            =     -3286.6236392230
+   Eatom            =       -47.6098008436
+   Elp              =        38.3923374114
+d418 1
+a418 1
+   Eval             =        64.0963478701
+d420 1
+a420 1
+   Ecoa             =       -49.5678354971
+d422 4
+a425 4
+   Etors            =       -12.6071343441
+   Econj            =       -10.3417556785
+   Evdw             =      1331.2528310696
+   Ecoul            =      -253.2149131652
+d427 2
+a428 2
+Potential Energy    =     -2047.8482027579
+Kinetic Energy      =         0.1870373161
+d430 3
+a432 3
+Total Energy        =     -2047.6611654418
+Pressure            =       -35.0331371133
+Temperature         =         3.1373574912
+d445 2
+a446 2
+--------------- Step        10 ---- CPU =     0.6408 (sec) ---------------
+ChargeEquil         =       178.3190994652
+d448 3
+a450 3
+   Ebond            =     -3286.7583677200
+   Eatom            =       -47.5707999922
+   Elp              =        38.3917989605
+d452 1
+a452 1
+   Eval             =        64.0709049332
+d454 1
+a454 1
+   Ecoa             =       -49.5600940744
+d456 4
+a459 4
+   Etors            =       -12.5144798576
+   Econj            =       -10.3410082895
+   Evdw             =      1331.2331609485
+   Ecoul            =      -253.2069577013
+d461 2
+a462 2
+Potential Energy    =     -2047.9367433276
+Kinetic Energy      =         0.2161574455
+d464 3
+a466 3
+Total Energy        =     -2047.7205858820
+Pressure            =       -30.3334301425
+Temperature         =         3.6258175387
+d470 1
+a470 1
+Loop time: 0.6401083469 on 2 processors for 21 particles for 10 steps
+d476 1
+a476 1
+          Force Time    0.5877     91.81
+d478 1
+a478 1
+           Comm Time    0.0216      3.38
+d480 1
+a480 1
+        Revcomm Time    0.0185      2.90
+d482 2
+a483 2
+          Other Time    0.0122      1.91
+          Total Time    0.6401    100.00
+d489 2
+a490 2
+ChargeEquil             0.1503 (    10)     0.0000 (     0) 
+ReaxFF                  0.4374 (    10)     0.0000 (     0) 
+@
+
+
+4.10
+log
+@Updated ReaxFF examples to new version
+@
+text
+@d139 1
+a139 1
+--------------- Step         1 ---- CPU =     0.0553 (sec) ---------------
+d173 1
+a173 1
+--------------- Step         2 ---- CPU =     0.1040 (sec) ---------------
+d207 1
+a207 1
+--------------- Step         3 ---- CPU =     0.1567 (sec) ---------------
+d241 1
+a241 1
+--------------- Step         4 ---- CPU =     0.2084 (sec) ---------------
+d275 1
+a275 1
+--------------- Step         5 ---- CPU =     0.2642 (sec) ---------------
+d309 1
+a309 1
+--------------- Step         6 ---- CPU =     0.3167 (sec) ---------------
+d343 1
+a343 1
+--------------- Step         7 ---- CPU =     0.3653 (sec) ---------------
+d377 1
+a377 1
+--------------- Step         8 ---- CPU =     0.4244 (sec) ---------------
+d411 1
+a411 1
+--------------- Step         9 ---- CPU =     0.4758 (sec) ---------------
+d445 1
+a445 1
+--------------- Step        10 ---- CPU =     0.5567 (sec) ---------------
+d470 1
+a470 1
+Loop time: 0.5573915243 on 2 processors for 21 particles for 10 steps
+d476 3
+a478 3
+          Force Time    0.5188     93.07
+          Neigh Time    0.0001      0.01
+           Comm Time    0.0115      2.06
+d480 1
+a480 1
+        Revcomm Time    0.0141      2.53
+d482 2
+a483 2
+          Other Time    0.0129      2.32
+          Total Time    0.5574    100.00
+d489 2
+a490 2
+ChargeEquil             0.1328 (    10)     0.0001 (     0) 
+ReaxFF                  0.3860 (    10)     0.0000 (     0) 
+@
+
+
+4.9
+log
+@revert to good version of testreax example
+@
+text
+@d83 9
+a91 8
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+d107 1
+a107 1
+   Eval             =        64.4313000219
+d111 2
+a112 2
+   Etors            =       -12.1824882878
+   Econj            =       -10.7718129622
+d116 1
+a116 1
+Potential Energy    =     -2047.7252179448
+d119 2
+a120 2
+Total Energy        =     -2047.7252179448
+Pressure            =       145.4552286506
+d129 32
+a160 31
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+**************************************************************************
+--------------- Step         1 ---- CPU =     0.0489 (sec) ---------------
+ChargeEquil         =       177.9618188260
+ReaxFF:
+   Ebond            =     -3290.4870004559
+   Eatom            =       -45.6402295579
+   Elp              =        38.7880741271
+   Emol             =         0.0000000000
+   Eval             =        64.4253207559
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3758976054
+   Ehbo             =         0.0000000000
+   Etors            =       -12.2168914030
+   Econj            =       -10.7541874650
+   Evdw             =      1332.1478132555
+   Ecoul            =      -252.5889908698
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7401703925
+Kinetic Energy      =         0.0108539477
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7293164448
+Pressure            =       133.8995258971
+Temperature         =         0.1820637440
+d163 32
+a194 31
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+**************************************************************************
+--------------- Step         2 ---- CPU =     0.0954 (sec) ---------------
+ChargeEquil         =       178.0239109790
+ReaxFF:
+   Ebond            =     -3290.0118885478
+   Eatom            =       -45.8754656002
+   Elp              =        38.7500582941
+   Emol             =         0.0000000000
+   Eval             =        64.4077366563
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3979133681
+   Ehbo             =         0.0000000000
+   Etors            =       -12.3109121499
+   Econj            =       -10.7046409826
+   Evdw             =      1332.0202593743
+   Ecoul            =      -252.6811560998
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7800114449
+Kinetic Energy      =         0.0376110252
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7424004197
+Pressure            =       104.1074351206
+Temperature         =         0.6308860393
+d197 32
+a228 31
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+**************************************************************************
+--------------- Step         3 ---- CPU =     0.1471 (sec) ---------------
+ChargeEquil         =       178.0863010725
+ReaxFF:
+   Ebond            =     -3289.3353267895
+   Eatom            =       -46.2122462645
+   Elp              =        38.6920109221
+   Emol             =         0.0000000000
+   Eval             =        64.3800036927
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4301005768
+   Ehbo             =         0.0000000000
+   Etors            =       -12.4413005217
+   Econj            =       -10.6319427887
+   Evdw             =      1331.8518810200
+   Ecoul            =      -252.7900018544
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8307220884
+Kinetic Energy      =         0.0679816592
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7627404292
+Pressure            =        66.7655202043
+Temperature         =         1.1403220082
+d231 32
+a262 31
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+**************************************************************************
+--------------- Step         4 ---- CPU =     0.2154 (sec) ---------------
+ChargeEquil         =       178.1540895934
+ReaxFF:
+   Ebond            =     -3288.5840223289
+   Eatom            =       -46.5896330826
+   Elp              =        38.6213875805
+   Emol             =         0.0000000000
+   Eval             =        64.3449024068
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4673522179
+   Ehbo             =         0.0000000000
+   Etors            =       -12.5799733726
+   Econj            =       -10.5474981050
+   Evdw             =      1331.6825867067
+   Ecoul            =      -252.9193118851
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8848247047
+Kinetic Energy      =         0.0923243192
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7925003855
+Pressure            =        31.2064250716
+Temperature         =         1.5486449466
+d265 32
+a296 31
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+**************************************************************************
+--------------- Step         5 ---- CPU =     0.2637 (sec) ---------------
+ChargeEquil         =       178.2243065707
+ReaxFF:
+   Ebond            =     -3287.8721254294
+   Eatom            =       -46.9522169198
+   Elp              =        38.5472105304
+   Emol             =         0.0000000000
+   Eval             =        64.3063965075
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5046691251
+   Ehbo             =         0.0000000000
+   Etors            =       -12.7022315856
+   Econj            =       -10.4625012782
+   Evdw             =      1331.5379914770
+   Ecoul            =      -253.0640996674
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.9419389200
+Kinetic Energy      =         0.1079967102
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.8339422098
+Pressure            =         2.3262368898
+Temperature         =         1.8115330934
+d299 32
+a330 31
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+**************************************************************************
+--------------- Step         6 ---- CPU =     0.3196 (sec) ---------------
+ChargeEquil         =       178.3397328612
+ReaxFF:
+   Ebond            =     -3287.2820250462
+   Eatom            =       -47.2595347352
+   Elp              =        38.4785418737
+   Emol             =         0.0000000000
+   Eval             =        64.2688993995
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5378163459
+   Ehbo             =         0.0000000000
+   Etors            =       -12.7906501094
+   Econj            =       -10.3861687978
+   Evdw             =      1331.4266628787
+   Ecoul            =      -253.1035623634
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8459203848
+Kinetic Energy      =         0.1180870067
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7278333781
+Pressure            =       -18.4037558298
+Temperature         =         1.9807873788
+d333 32
+a364 31
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+**************************************************************************
+--------------- Step         7 ---- CPU =     0.3656 (sec) ---------------
+ChargeEquil         =       178.3470842171
+ReaxFF:
+   Ebond            =     -3286.8616752212
+   Eatom            =       -47.4874153320
+   Elp              =        38.4229718913
+   Emol             =         0.0000000000
+   Eval             =        64.2363732981
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5634970515
+   Ehbo             =         0.0000000000
+   Etors            =       -12.8352480004
+   Econj            =       -10.3251189750
+   Evdw             =      1331.3446670549
+   Ecoul            =      -253.1648209265
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8866790453
+Kinetic Energy      =         0.1281163061
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7585627392
+Pressure            =       -31.2712447944
+Temperature         =         2.1490185008
+d367 32
+a398 31
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+**************************************************************************
+--------------- Step         8 ---- CPU =     0.4156 (sec) ---------------
+ChargeEquil         =       178.3512856720
+ReaxFF:
+   Ebond            =     -3286.6346458033
+   Eatom            =       -47.6248410689
+   Elp              =        38.3855206692
+   Emol             =         0.0000000000
+   Eval             =        64.2119147632
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5793480403
+   Ehbo             =         0.0000000000
+   Etors            =       -12.8322663594
+   Econj            =       -10.2833810890
+   Evdw             =      1331.2861730392
+   Ecoul            =      -253.2184885526
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.9380767700
+Kinetic Energy      =         0.1429684591
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7951083109
+Pressure            =       -37.0665646865
+Temperature         =         2.3981480040
+d401 32
+a432 31
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+**************************************************************************
+--------------- Step         9 ---- CPU =     0.4662 (sec) ---------------
+ChargeEquil         =       178.3143133487
+ReaxFF:
+   Ebond            =     -3286.6079543003
+   Eatom            =       -47.6701995064
+   Elp              =        38.3680923785
+   Emol             =         0.0000000000
+   Eval             =        64.1977561105
+   Epen             =         0.0000000000
+   Ecoa             =       -49.5839125724
+   Ehbo             =         0.0000000000
+   Etors            =       -12.7826384006
+   Econj            =       -10.2626395866
+   Evdw             =      1331.2491890728
+   Ecoul            =      -253.1034072488
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8814007046
+Kinetic Energy      =         0.1647388543
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7166618503
+Pressure            =       -36.7073201273
+Temperature         =         2.7633238627
+d435 9
+a443 8
+Category 	 Minimum		 Maximum
+na_local		 10		 11
+na      		 396		 401
+nbonall 		 802		 823
+nbon    		 168		 221
+nval    		 84		 87
+ntor    		 70		 80
+nhb     		 0		 0
+d445 2
+a446 2
+--------------- Step        10 ---- CPU =     0.5374 (sec) ---------------
+ChargeEquil         =       178.3079873909
+d448 3
+a450 3
+   Ebond            =     -3286.7749962602
+   Eatom            =       -47.6286362858
+   Elp              =        38.3694573508
+d452 1
+a452 1
+   Eval             =        64.1953186900
+d454 1
+a454 1
+   Ecoa             =       -49.5766289387
+d456 4
+a459 4
+   Etors            =       -12.6907277018
+   Econj            =       -10.2625131855
+   Evdw             =      1331.2359216141
+   Ecoul            =      -253.1266194332
+d461 2
+a462 2
+Potential Energy    =     -2047.9514367595
+Kinetic Energy      =         0.1919112508
+d464 3
+a466 3
+Total Energy        =     -2047.7595255086
+Pressure            =       -31.4714438682
+Temperature         =         3.2191127051
+d470 1
+a470 1
+Loop time: 0.5372934341 on 2 processors for 21 particles for 10 steps
+d476 3
+a478 3
+          Force Time    0.4950     92.12
+          Neigh Time    0.0000      0.01
+           Comm Time    0.0143      2.67
+d480 1
+a480 1
+        Revcomm Time    0.0126      2.35
+d482 2
+a483 2
+          Other Time    0.0153      2.85
+          Total Time    0.5373    100.00
+d489 2
+a490 2
+ChargeEquil             0.1285 (    10)     0.0000 (     0) 
+ReaxFF                  0.3665 (    10)     0.0000 (     0) 
+@
+
+
+4.8
+log
+@got rid of unnecessary control file
+@
+text
+@d106 1
+a106 1
+   Eval             =        64.4312999594
+d108 1
+a108 1
+   Ecoa             =       -49.3680431075
+d110 2
+a111 2
+   Etors            =       -12.1824882988
+   Econj            =       -10.7718129589
+d115 1
+a115 1
+Potential Energy    =     -2047.7252180115
+d118 2
+a119 2
+Total Energy        =     -2047.7252180115
+Pressure            =       145.4552281486
+d137 1
+a137 1
+--------------- Step         1 ---- CPU =     0.0520 (sec) ---------------
+d140 3
+a142 3
+   Ebond            =     -3290.4870004568
+   Eatom            =       -45.6402295576
+   Elp              =        38.7880741270
+d144 1
+a144 1
+   Eval             =        64.4253206934
+d146 1
+a146 1
+   Ecoa             =       -49.3758976021
+d148 3
+a150 3
+   Etors            =       -12.2168914135
+   Econj            =       -10.7541874617
+   Evdw             =      1332.1478132559
+d153 2
+a154 2
+Potential Energy    =     -2047.7401704591
+Kinetic Energy      =         0.0108539476
+d156 3
+a158 3
+Total Energy        =     -2047.7293165115
+Pressure            =       133.8995254322
+Temperature         =         0.1820637436
+d170 2
+a171 2
+--------------- Step         2 ---- CPU =     0.1060 (sec) ---------------
+ChargeEquil         =       178.0239109791
+d173 3
+a175 3
+   Ebond            =     -3290.0118885513
+   Eatom            =       -45.8754655990
+   Elp              =        38.7500582939
+d177 1
+a177 1
+   Eval             =        64.4077365936
+d179 1
+a179 1
+   Ecoa             =       -49.3979133648
+d181 4
+a184 4
+   Etors            =       -12.3109121594
+   Econj            =       -10.7046409794
+   Evdw             =      1332.0202593758
+   Ecoul            =      -252.6811561000
+d186 2
+a187 2
+Potential Energy    =     -2047.7800115115
+Kinetic Energy      =         0.0376110251
+d189 3
+a191 3
+Total Energy        =     -2047.7424004864
+Pressure            =       104.1074347427
+Temperature         =         0.6308860381
+d203 2
+a204 2
+--------------- Step         3 ---- CPU =     0.1731 (sec) ---------------
+ChargeEquil         =       178.0863010731
+d206 3
+a208 3
+   Ebond            =     -3289.3353267971
+   Eatom            =       -46.2122462619
+   Elp              =        38.6920109217
+d210 1
+a210 1
+   Eval             =        64.3800036297
+d212 1
+a212 1
+   Ecoa             =       -49.4301005736
+d214 4
+a217 4
+   Etors            =       -12.4413005295
+   Econj            =       -10.6319427857
+   Evdw             =      1331.8518810233
+   Ecoul            =      -252.7900018552
+d219 2
+a220 2
+Potential Energy    =     -2047.8307221550
+Kinetic Energy      =         0.0679816591
+d222 3
+a224 3
+Total Energy        =     -2047.7627404958
+Pressure            =        66.7655199166
+Temperature         =         1.1403220064
+d236 2
+a237 2
+--------------- Step         4 ---- CPU =     0.2263 (sec) ---------------
+ChargeEquil         =       178.1540895949
+d239 3
+a241 3
+   Ebond            =     -3288.5840223420
+   Eatom            =       -46.5896330782
+   Elp              =        38.6213875799
+d243 1
+a243 1
+   Eval             =        64.3449023436
+d245 1
+a245 1
+   Ecoa             =       -49.4673522148
+d247 4
+a250 4
+   Etors            =       -12.5799733785
+   Econj            =       -10.5474981021
+   Evdw             =      1331.6825867128
+   Ecoul            =      -252.9193118868
+d252 2
+a253 2
+Potential Energy    =     -2047.8848247713
+Kinetic Energy      =         0.0923243191
+d255 3
+a257 3
+Total Energy        =     -2047.7925004522
+Pressure            =        31.2064248579
+Temperature         =         1.5486449447
+d269 2
+a270 2
+--------------- Step         5 ---- CPU =     0.2985 (sec) ---------------
+ChargeEquil         =       178.2243065736
+d272 3
+a274 3
+   Ebond            =     -3287.8721254495
+   Eatom            =       -46.9522169134
+   Elp              =        38.5472105296
+d276 1
+a276 1
+   Eval             =        64.3063964442
+d278 1
+a278 1
+   Ecoa             =       -49.5046691221
+d280 4
+a283 4
+   Etors            =       -12.7022315895
+   Econj            =       -10.4625012755
+   Evdw             =      1331.5379914867
+   Ecoul            =      -253.0640996709
+d285 2
+a286 2
+Potential Energy    =     -2047.9419389867
+Kinetic Energy      =         0.1079967101
+d288 3
+a290 3
+Total Energy        =     -2047.8339422766
+Pressure            =         2.3262367448
+Temperature         =         1.8115330916
+d302 2
+a303 2
+--------------- Step         6 ---- CPU =     0.3665 (sec) ---------------
+ChargeEquil         =       178.3397328609
+d305 3
+a307 3
+   Ebond            =     -3287.2820250745
+   Eatom            =       -47.2595347267
+   Elp              =        38.4785418729
+d309 1
+a309 1
+   Eval             =        64.2688993363
+d311 1
+a311 1
+   Ecoa             =       -49.5378163430
+d313 4
+a316 4
+   Etors            =       -12.7906501114
+   Econj            =       -10.3861687952
+   Evdw             =      1331.4266628929
+   Ecoul            =      -253.1035623644
+d318 2
+a319 2
+Potential Energy    =     -2047.8459204522
+Kinetic Energy      =         0.1180870066
+d321 3
+a323 3
+Total Energy        =     -2047.7278334456
+Pressure            =       -18.4037558891
+Temperature         =         1.9807873772
+d335 2
+a336 2
+--------------- Step         7 ---- CPU =     0.4254 (sec) ---------------
+ChargeEquil         =       178.3470842192
+d338 3
+a340 3
+   Ebond            =     -3286.8616752583
+   Eatom            =       -47.4874153215
+   Elp              =        38.4229718905
+d342 1
+a342 1
+   Eval             =        64.2363732353
+d344 1
+a344 1
+   Ecoa             =       -49.5634970488
+d346 4
+a349 4
+   Etors            =       -12.8352480007
+   Econj            =       -10.3251189727
+   Evdw             =      1331.3446670743
+   Ecoul            =      -253.1648209292
+d351 2
+a352 2
+Potential Energy    =     -2047.8866791119
+Kinetic Energy      =         0.1281163060
+d354 3
+a356 3
+Total Energy        =     -2047.7585628059
+Pressure            =       -31.2712447472
+Temperature         =         2.1490184993
+d368 2
+a369 2
+--------------- Step         8 ---- CPU =     0.4759 (sec) ---------------
+ChargeEquil         =       178.3512856759
+d371 3
+a373 3
+   Ebond            =     -3286.6346458494
+   Eatom            =       -47.6248410562
+   Elp              =        38.3855206684
+d375 1
+a375 1
+   Eval             =        64.2119147008
+d377 1
+a377 1
+   Ecoa             =       -49.5793480377
+d379 4
+a382 4
+   Etors            =       -12.8322663583
+   Econj            =       -10.2833810869
+   Evdw             =      1331.2861730641
+   Ecoul            =      -253.2184885574
+d384 2
+a385 2
+Potential Energy    =     -2047.9380768368
+Kinetic Energy      =         0.1429684590
+d387 3
+a389 3
+Total Energy        =     -2047.7951083777
+Pressure            =       -37.0665645140
+Temperature         =         2.3981480026
+d401 2
+a402 2
+--------------- Step         9 ---- CPU =     0.5339 (sec) ---------------
+ChargeEquil         =       178.3143133096
+d404 3
+a406 3
+   Ebond            =     -3286.6079543545
+   Eatom            =       -47.6701994919
+   Elp              =        38.3680923779
+d408 1
+a408 1
+   Eval             =        64.1977560486
+d410 1
+a410 1
+   Ecoa             =       -49.5839125698
+d412 4
+a415 4
+   Etors            =       -12.7826383985
+   Econj            =       -10.2626395847
+   Evdw             =      1331.2491891026
+   Ecoul            =      -253.1034072524
+d417 1
+a417 1
+Potential Energy    =     -2047.8814008130
+d420 3
+a422 3
+Total Energy        =     -2047.7166619588
+Pressure            =       -36.7073198198
+Temperature         =         2.7633238616
+d434 2
+a435 2
+--------------- Step        10 ---- CPU =     0.6848 (sec) ---------------
+ChargeEquil         =       178.3079874006
+d437 3
+a439 3
+   Ebond            =     -3286.7749963211
+   Eatom            =       -47.6286362697
+   Elp              =        38.3694573504
+d441 1
+a441 1
+   Eval             =        64.1953186287
+d443 1
+a443 1
+   Ecoa             =       -49.5766289362
+d445 4
+a448 4
+   Etors            =       -12.6907276990
+   Econj            =       -10.2625131838
+   Evdw             =      1331.2359216479
+   Ecoul            =      -253.1266194427
+d450 1
+a450 1
+Potential Energy    =     -2047.9514368248
+d453 3
+a455 3
+Total Energy        =     -2047.7595255740
+Pressure            =       -31.4714434467
+Temperature         =         3.2191127042
+d459 1
+a459 1
+Loop time: 0.6854224205 on 2 processors for 21 particles for 10 steps
+d465 3
+a467 3
+          Force Time    0.6321     92.22
+          Neigh Time    0.0000      0.00
+           Comm Time    0.0123      1.79
+d469 1
+a469 1
+        Revcomm Time    0.0289      4.21
+d471 2
+a472 2
+          Other Time    0.0121      1.77
+          Total Time    0.6854    100.00
+d478 2
+a479 2
+ChargeEquil             0.2274 (    10)     0.0000 (     0) 
+ReaxFF                  0.4047 (    10)     0.0000 (     0) 
+@
+
+
+4.7
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/Grasp_Reverse/Testing/testreax/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/Grasp_Reverse/Testing/testreax/
+d9 1
+a9 1
+Opened /Users/athomps/netapp/codes/Grasp_Reverse/Testing/testreax/inp.dat for input
+d106 1
+a106 1
+   Eval             =        64.4313000219
+d108 1
+a108 1
+   Ecoa             =       -49.3680431108
+d110 2
+a111 2
+   Etors            =       -12.1824882878
+   Econj            =       -10.7718129622
+d115 1
+a115 1
+Potential Energy    =     -2047.7252179448
+d118 2
+a119 2
+Total Energy        =     -2047.7252179448
+Pressure            =       145.4552286506
+d137 1
+a137 1
+--------------- Step         1 ---- CPU =     0.0397 (sec) ---------------
+d140 3
+a142 3
+   Ebond            =     -3290.4870004559
+   Eatom            =       -45.6402295579
+   Elp              =        38.7880741271
+d144 1
+a144 1
+   Eval             =        64.4253207559
+d146 1
+a146 1
+   Ecoa             =       -49.3758976054
+d148 3
+a150 3
+   Etors            =       -12.2168914030
+   Econj            =       -10.7541874650
+   Evdw             =      1332.1478132555
+d153 2
+a154 2
+Potential Energy    =     -2047.7401703925
+Kinetic Energy      =         0.0108539477
+d156 3
+a158 3
+Total Energy        =     -2047.7293164448
+Pressure            =       133.8995258971
+Temperature         =         0.1820637440
+d170 2
+a171 2
+--------------- Step         2 ---- CPU =     0.0866 (sec) ---------------
+ChargeEquil         =       178.0239109790
+d173 3
+a175 3
+   Ebond            =     -3290.0118885478
+   Eatom            =       -45.8754656002
+   Elp              =        38.7500582941
+d177 1
+a177 1
+   Eval             =        64.4077366563
+d179 1
+a179 1
+   Ecoa             =       -49.3979133681
+d181 4
+a184 4
+   Etors            =       -12.3109121499
+   Econj            =       -10.7046409826
+   Evdw             =      1332.0202593743
+   Ecoul            =      -252.6811560998
+d186 2
+a187 2
+Potential Energy    =     -2047.7800114449
+Kinetic Energy      =         0.0376110252
+d189 3
+a191 3
+Total Energy        =     -2047.7424004197
+Pressure            =       104.1074351206
+Temperature         =         0.6308860393
+d203 2
+a204 2
+--------------- Step         3 ---- CPU =     0.1329 (sec) ---------------
+ChargeEquil         =       178.0863010725
+d206 3
+a208 3
+   Ebond            =     -3289.3353267895
+   Eatom            =       -46.2122462645
+   Elp              =        38.6920109221
+d210 1
+a210 1
+   Eval             =        64.3800036927
+d212 1
+a212 1
+   Ecoa             =       -49.4301005768
+d214 4
+a217 4
+   Etors            =       -12.4413005217
+   Econj            =       -10.6319427887
+   Evdw             =      1331.8518810200
+   Ecoul            =      -252.7900018544
+d219 2
+a220 2
+Potential Energy    =     -2047.8307220884
+Kinetic Energy      =         0.0679816592
+d222 3
+a224 3
+Total Energy        =     -2047.7627404292
+Pressure            =        66.7655202043
+Temperature         =         1.1403220082
+d236 2
+a237 2
+--------------- Step         4 ---- CPU =     0.1791 (sec) ---------------
+ChargeEquil         =       178.1540895934
+d239 3
+a241 3
+   Ebond            =     -3288.5840223289
+   Eatom            =       -46.5896330826
+   Elp              =        38.6213875805
+d243 1
+a243 1
+   Eval             =        64.3449024068
+d245 1
+a245 1
+   Ecoa             =       -49.4673522179
+d247 4
+a250 4
+   Etors            =       -12.5799733726
+   Econj            =       -10.5474981050
+   Evdw             =      1331.6825867067
+   Ecoul            =      -252.9193118851
+d252 2
+a253 2
+Potential Energy    =     -2047.8848247047
+Kinetic Energy      =         0.0923243192
+d255 3
+a257 3
+Total Energy        =     -2047.7925003855
+Pressure            =        31.2064250716
+Temperature         =         1.5486449466
+d269 2
+a270 2
+--------------- Step         5 ---- CPU =     0.2243 (sec) ---------------
+ChargeEquil         =       178.2243065707
+d272 3
+a274 3
+   Ebond            =     -3287.8721254294
+   Eatom            =       -46.9522169198
+   Elp              =        38.5472105304
+d276 1
+a276 1
+   Eval             =        64.3063965075
+d278 1
+a278 1
+   Ecoa             =       -49.5046691251
+d280 4
+a283 4
+   Etors            =       -12.7022315856
+   Econj            =       -10.4625012782
+   Evdw             =      1331.5379914770
+   Ecoul            =      -253.0640996674
+d285 2
+a286 2
+Potential Energy    =     -2047.9419389200
+Kinetic Energy      =         0.1079967102
+d288 3
+a290 3
+Total Energy        =     -2047.8339422098
+Pressure            =         2.3262368898
+Temperature         =         1.8115330934
+d302 2
+a303 2
+--------------- Step         6 ---- CPU =     0.2757 (sec) ---------------
+ChargeEquil         =       178.3397328612
+d305 3
+a307 3
+   Ebond            =     -3287.2820250462
+   Eatom            =       -47.2595347352
+   Elp              =        38.4785418737
+d309 1
+a309 1
+   Eval             =        64.2688993995
+d311 1
+a311 1
+   Ecoa             =       -49.5378163459
+d313 4
+a316 4
+   Etors            =       -12.7906501094
+   Econj            =       -10.3861687978
+   Evdw             =      1331.4266628787
+   Ecoul            =      -253.1035623634
+d318 2
+a319 2
+Potential Energy    =     -2047.8459203848
+Kinetic Energy      =         0.1180870067
+d321 3
+a323 3
+Total Energy        =     -2047.7278333781
+Pressure            =       -18.4037558298
+Temperature         =         1.9807873788
+d335 2
+a336 2
+--------------- Step         7 ---- CPU =     0.3208 (sec) ---------------
+ChargeEquil         =       178.3470842171
+d338 3
+a340 3
+   Ebond            =     -3286.8616752212
+   Eatom            =       -47.4874153320
+   Elp              =        38.4229718913
+d342 1
+a342 1
+   Eval             =        64.2363732981
+d344 1
+a344 1
+   Ecoa             =       -49.5634970515
+d346 4
+a349 4
+   Etors            =       -12.8352480004
+   Econj            =       -10.3251189750
+   Evdw             =      1331.3446670549
+   Ecoul            =      -253.1648209265
+d351 2
+a352 2
+Potential Energy    =     -2047.8866790453
+Kinetic Energy      =         0.1281163061
+d354 3
+a356 3
+Total Energy        =     -2047.7585627392
+Pressure            =       -31.2712447944
+Temperature         =         2.1490185008
+d368 2
+a369 2
+--------------- Step         8 ---- CPU =     0.3671 (sec) ---------------
+ChargeEquil         =       178.3512856720
+d371 3
+a373 3
+   Ebond            =     -3286.6346458033
+   Eatom            =       -47.6248410689
+   Elp              =        38.3855206692
+d375 1
+a375 1
+   Eval             =        64.2119147632
+d377 1
+a377 1
+   Ecoa             =       -49.5793480403
+d379 4
+a382 4
+   Etors            =       -12.8322663594
+   Econj            =       -10.2833810890
+   Evdw             =      1331.2861730392
+   Ecoul            =      -253.2184885526
+d384 2
+a385 2
+Potential Energy    =     -2047.9380767700
+Kinetic Energy      =         0.1429684591
+d387 3
+a389 3
+Total Energy        =     -2047.7951083109
+Pressure            =       -37.0665646865
+Temperature         =         2.3981480040
+d401 2
+a402 2
+--------------- Step         9 ---- CPU =     0.4157 (sec) ---------------
+ChargeEquil         =       178.3143133487
+d404 3
+a406 3
+   Ebond            =     -3286.6079543003
+   Eatom            =       -47.6701995064
+   Elp              =        38.3680923785
+d408 1
+a408 1
+   Eval             =        64.1977561105
+d410 1
+a410 1
+   Ecoa             =       -49.5839125724
+d412 4
+a415 4
+   Etors            =       -12.7826384006
+   Econj            =       -10.2626395866
+   Evdw             =      1331.2491890728
+   Ecoul            =      -253.1034072488
+d417 1
+a417 1
+Potential Energy    =     -2047.8814007046
+d420 3
+a422 3
+Total Energy        =     -2047.7166618503
+Pressure            =       -36.7073201273
+Temperature         =         2.7633238627
+d434 2
+a435 2
+--------------- Step        10 ---- CPU =     0.4870 (sec) ---------------
+ChargeEquil         =       178.3079873909
+d437 3
+a439 3
+   Ebond            =     -3286.7749962602
+   Eatom            =       -47.6286362858
+   Elp              =        38.3694573508
+d441 1
+a441 1
+   Eval             =        64.1953186900
+d443 1
+a443 1
+   Ecoa             =       -49.5766289387
+d445 4
+a448 4
+   Etors            =       -12.6907277018
+   Econj            =       -10.2625131855
+   Evdw             =      1331.2359216141
+   Ecoul            =      -253.1266194332
+d450 1
+a450 1
+Potential Energy    =     -2047.9514367595
+d453 3
+a455 3
+Total Energy        =     -2047.7595255086
+Pressure            =       -31.4714438682
+Temperature         =         3.2191127051
+d459 1
+a459 1
+Loop time: 0.4878364801 on 2 processors for 21 particles for 10 steps
+d465 3
+a467 3
+          Force Time    0.4497     92.18
+          Neigh Time    0.0000      0.01
+           Comm Time    0.0120      2.45
+d469 1
+a469 1
+        Revcomm Time    0.0137      2.81
+d471 2
+a472 2
+          Other Time    0.0125      2.56
+          Total Time    0.4878    100.00
+d478 2
+a479 2
+ChargeEquil             0.1289 (    10)     0.0000 (     0) 
+ReaxFF                  0.3209 (    10)     0.0000 (     0) 
+@
+
+
+4.6
+log
+@Optimized speed and memory footprint of ReaxFF by eliminating angles and torsions made redundant by reverse communication. Also set Lprune=4 and Lhb=0 without missing and force terms. Change in testrdx222 trajectory primarily due to change in charge equilibration charges.
+@
+text
+@d27 1
+d137 1
+a137 1
+--------------- Step         1 ---- CPU =     0.0343 (sec) ---------------
+d170 1
+a170 1
+--------------- Step         2 ---- CPU =     0.0783 (sec) ---------------
+d203 1
+a203 1
+--------------- Step         3 ---- CPU =     0.1253 (sec) ---------------
+d236 1
+a236 1
+--------------- Step         4 ---- CPU =     0.1636 (sec) ---------------
+d269 1
+a269 1
+--------------- Step         5 ---- CPU =     0.2072 (sec) ---------------
+d302 2
+a303 2
+--------------- Step         6 ---- CPU =     0.2577 (sec) ---------------
+ChargeEquil         =       178.3397328533
+d316 1
+a316 1
+   Ecoul            =      -253.1035623641
+d318 1
+a318 1
+Potential Energy    =     -2047.8459203934
+d321 2
+a322 2
+Total Energy        =     -2047.7278333867
+Pressure            =       -18.4037558297
+d335 1
+a335 1
+--------------- Step         7 ---- CPU =     0.3008 (sec) ---------------
+d349 1
+a349 1
+   Ecoul            =      -253.1648209264
+d355 1
+a355 1
+Pressure            =       -31.2712447943
+d368 1
+a368 1
+--------------- Step         8 ---- CPU =     0.3374 (sec) ---------------
+d371 1
+a371 1
+   Ebond            =     -3286.6346458034
+d381 2
+a382 2
+   Evdw             =      1331.2861730393
+   Ecoul            =      -253.2184885525
+d388 1
+a388 1
+Pressure            =       -37.0665646863
+d401 2
+a402 2
+--------------- Step         9 ---- CPU =     0.3861 (sec) ---------------
+ChargeEquil         =       178.3143132074
+d404 1
+a404 1
+   Ebond            =     -3286.6079543004
+d414 2
+a415 2
+   Evdw             =      1331.2491890729
+   Ecoul            =      -253.1034072618
+d417 2
+a418 2
+Potential Energy    =     -2047.8814008589
+Kinetic Energy      =         0.1647388544
+d420 3
+a422 3
+Total Energy        =     -2047.7166620046
+Pressure            =       -36.7073201227
+Temperature         =         2.7633238631
+d434 2
+a435 2
+--------------- Step        10 ---- CPU =     0.4292 (sec) ---------------
+ChargeEquil         =       178.3079873906
+d437 2
+a438 2
+   Ebond            =     -3286.7749962615
+   Eatom            =       -47.6286362857
+d443 1
+a443 1
+   Ecoa             =       -49.5766289386
+d447 2
+a448 2
+   Evdw             =      1331.2359216153
+   Ecoul            =      -253.1266194330
+d450 2
+a451 2
+Potential Energy    =     -2047.9514367596
+Kinetic Energy      =         0.1919112509
+d453 3
+a455 3
+Total Energy        =     -2047.7595255087
+Pressure            =       -31.4714438668
+Temperature         =         3.2191127060
+d459 1
+a459 1
+Loop time: 0.4295890331 on 2 processors for 21 particles for 10 steps
+d465 3
+a467 3
+          Force Time    0.3957     92.10
+          Neigh Time    0.0001      0.02
+           Comm Time    0.0134      3.11
+d469 1
+a469 1
+        Revcomm Time    0.0088      2.05
+d471 2
+a472 2
+          Other Time    0.0117      2.72
+          Total Time    0.4296    100.00
+d478 2
+a479 2
+ChargeEquil             0.1216 (    10)     0.0001 (     0) 
+ReaxFF                  0.2741 (    10)     0.0000 (     0) 
+@
+
+
+4.5
+log
+@Added memory management diagnostic output for ReaxFF runs
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/Grasp/Testing/testreax/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/Grasp/Testing/testreax/
+d9 1
+a9 1
+Opened /Users/athomps/netapp/codes/Grasp/Testing/testreax/inp.dat for input
+d86 3
+a88 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d118 1
+d131 3
+a133 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d136 1
+a136 1
+--------------- Step         1 ---- CPU =     0.1092 (sec) ---------------
+d156 1
+d164 3
+a166 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d169 1
+a169 1
+--------------- Step         2 ---- CPU =     0.2248 (sec) ---------------
+d189 1
+d197 3
+a199 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d202 1
+a202 1
+--------------- Step         3 ---- CPU =     0.3358 (sec) ---------------
+d222 1
+d230 3
+a232 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d235 1
+a235 1
+--------------- Step         4 ---- CPU =     0.4682 (sec) ---------------
+d255 1
+d263 3
+a265 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d268 1
+a268 1
+--------------- Step         5 ---- CPU =     0.5862 (sec) ---------------
+d288 1
+d296 3
+a298 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d301 2
+a302 2
+--------------- Step         6 ---- CPU =     0.7053 (sec) ---------------
+ChargeEquil         =       178.3397328612
+d315 1
+a315 1
+   Ecoul            =      -253.1035623634
+d317 1
+a317 1
+Potential Energy    =     -2047.8459203848
+d320 2
+a321 1
+Total Energy        =     -2047.7278333781
+d329 3
+a331 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d334 1
+a334 1
+--------------- Step         7 ---- CPU =     0.8163 (sec) ---------------
+d348 1
+a348 1
+   Ecoul            =      -253.1648209265
+d354 1
+d362 3
+a364 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d367 1
+a367 1
+--------------- Step         8 ---- CPU =     0.9275 (sec) ---------------
+d370 1
+a370 1
+   Ebond            =     -3286.6346458033
+d380 2
+a381 2
+   Evdw             =      1331.2861730392
+   Ecoul            =      -253.2184885526
+d387 1
+d395 3
+a397 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d400 2
+a401 2
+--------------- Step         9 ---- CPU =     1.0479 (sec) ---------------
+ChargeEquil         =       178.3143133487
+d403 1
+a403 1
+   Ebond            =     -3286.6079543003
+d413 2
+a414 2
+   Evdw             =      1331.2491890728
+   Ecoul            =      -253.1034072488
+d416 2
+a417 2
+Potential Energy    =     -2047.8814007046
+Kinetic Energy      =         0.1647388543
+d419 3
+a421 2
+Total Energy        =     -2047.7166618503
+Temperature         =         2.7633238627
+d428 3
+a430 3
+nbon    		 287		 348
+nval    		 252		 336
+ntor    		 450		 600
+d433 2
+a434 2
+--------------- Step        10 ---- CPU =     1.1618 (sec) ---------------
+ChargeEquil         =       178.3079873909
+d436 2
+a437 2
+   Ebond            =     -3286.7749962602
+   Eatom            =       -47.6286362858
+d442 1
+a442 1
+   Ecoa             =       -49.5766289387
+d446 2
+a447 2
+   Evdw             =      1331.2359216141
+   Ecoul            =      -253.1266194332
+d449 2
+a450 2
+Potential Energy    =     -2047.9514367595
+Kinetic Energy      =         0.1919112508
+d452 3
+a454 2
+Total Energy        =     -2047.7595255086
+Temperature         =         3.2191127051
+d458 1
+a458 1
+Loop time: 1.1616744995 on 2 processors for 21 particles for 10 steps
+d464 3
+a466 3
+          Force Time    1.1450     98.56
+          Neigh Time    0.0000      0.00
+           Comm Time    0.0089      0.77
+d468 1
+a468 1
+        Revcomm Time    0.0000      0.00
+d470 2
+a471 2
+          Other Time    0.0077      0.67
+          Total Time    1.1617    100.00
+d477 2
+a478 2
+ChargeEquil             0.1065 (    10)     0.0000 (     0) 
+ReaxFF                  1.0385 (    10)     0.0000 (     0) 
+@
+
+
+4.4
+log
+@Modified definition for NPT conserved energy and time constant
+@
+text
+@d9 1
+d81 11
+d121 15
+a135 1
+--------------- Step         1 ---- CPU =     0.1036 (sec) ---------------
+d156 12
+a167 1
+--------------- Step         2 ---- CPU =     0.2064 (sec) ---------------
+d188 12
+a199 1
+--------------- Step         3 ---- CPU =     0.3136 (sec) ---------------
+d220 12
+a231 1
+--------------- Step         4 ---- CPU =     0.4201 (sec) ---------------
+d252 12
+a263 1
+--------------- Step         5 ---- CPU =     0.5234 (sec) ---------------
+d284 12
+a295 1
+--------------- Step         6 ---- CPU =     0.6358 (sec) ---------------
+d316 12
+a327 1
+--------------- Step         7 ---- CPU =     0.7681 (sec) ---------------
+d348 12
+a359 1
+--------------- Step         8 ---- CPU =     0.9211 (sec) ---------------
+d380 12
+a391 1
+--------------- Step         9 ---- CPU =     1.0591 (sec) ---------------
+d412 12
+a423 1
+--------------- Step        10 ---- CPU =     1.1763 (sec) ---------------
+d447 1
+a447 1
+Loop time: 1.1762334108 on 2 processors for 21 particles for 10 steps
+d453 1
+a453 1
+          Force Time    1.1597     98.60
+d455 1
+a455 1
+           Comm Time    0.0089      0.75
+d459 2
+a460 2
+          Other Time    0.0076      0.65
+          Total Time    1.1762    100.00
+d466 2
+a467 2
+ChargeEquil             0.1117 (    10)     0.0000 (     0) 
+ReaxFF                  1.0480 (    10)     0.0000 (     0) 
+@
+
+
+4.3
+log
+@Added ramp variants for thermostats
+@
+text
+@d2 1
+a2 1
+Clock tick = 0.0000009537 Seconds
+d109 1
+a109 1
+--------------- Step         1 ---- CPU =     0.2361 (sec) ---------------
+d130 1
+a130 1
+--------------- Step         2 ---- CPU =     0.3566 (sec) ---------------
+d151 1
+a151 1
+--------------- Step         3 ---- CPU =     0.4776 (sec) ---------------
+d172 1
+a172 1
+--------------- Step         4 ---- CPU =     0.5942 (sec) ---------------
+d193 1
+a193 1
+--------------- Step         5 ---- CPU =     0.7175 (sec) ---------------
+d214 1
+a214 1
+--------------- Step         6 ---- CPU =     0.8437 (sec) ---------------
+d235 1
+a235 1
+--------------- Step         7 ---- CPU =     0.9653 (sec) ---------------
+d256 1
+a256 1
+--------------- Step         8 ---- CPU =     1.0820 (sec) ---------------
+d277 1
+a277 1
+--------------- Step         9 ---- CPU =     1.2099 (sec) ---------------
+d298 1
+a298 1
+--------------- Step        10 ---- CPU =     1.3314 (sec) ---------------
+d322 1
+a322 1
+Loop time: 1.3312494755 on 2 processors for 21 particles for 10 steps
+d328 1
+a328 1
+          Force Time    1.3136     98.67
+d330 1
+a330 1
+           Comm Time    0.0099      0.75
+d334 2
+a335 2
+          Other Time    0.0077      0.58
+          Total Time    1.3312    100.00
+d341 2
+a342 2
+ChargeEquil             0.1105 (    10)     0.0000 (     0) 
+ReaxFF                  1.2030 (    10)     0.0000 (     0) 
+@
+
+
+4.2
+log
+@Modified argument list for chargeequil force field command
+@
+text
+@d2 1
+a2 1
+Clock tick = 0.0000010000 Seconds
+d109 1
+a109 1
+--------------- Step         1 ---- CPU =     0.2288 (sec) ---------------
+d130 1
+a130 1
+--------------- Step         2 ---- CPU =     0.3529 (sec) ---------------
+d151 1
+a151 1
+--------------- Step         3 ---- CPU =     0.4773 (sec) ---------------
+d172 1
+a172 1
+--------------- Step         4 ---- CPU =     0.5997 (sec) ---------------
+d193 1
+a193 1
+--------------- Step         5 ---- CPU =     0.7225 (sec) ---------------
+d214 1
+a214 1
+--------------- Step         6 ---- CPU =     0.8501 (sec) ---------------
+d235 1
+a235 1
+--------------- Step         7 ---- CPU =     0.9738 (sec) ---------------
+d256 1
+a256 1
+--------------- Step         8 ---- CPU =     1.0937 (sec) ---------------
+d277 1
+a277 1
+--------------- Step         9 ---- CPU =     1.2167 (sec) ---------------
+d298 1
+a298 1
+--------------- Step        10 ---- CPU =     1.3397 (sec) ---------------
+d322 1
+a322 1
+Loop time: 1.3405559063 on 2 processors for 21 particles for 10 steps
+d328 3
+a330 3
+          Force Time    1.3220     98.61
+          Neigh Time    0.0001      0.01
+           Comm Time    0.0108      0.81
+d334 2
+a335 2
+          Other Time    0.0077      0.57
+          Total Time    1.3406    100.00
+d341 2
+a342 2
+ChargeEquil             0.1080 (    10)     0.0001 (     0) 
+ReaxFF                  1.2140 (    10)     0.0000 (     0) 
+@
+
+
+4.1
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d11 3
+a13 2
+forcefield chargeequil chargeequil.in ChargeEquil
+init config reaxtimestep 1.0000000000
+d109 2
+a110 2
+--------------- Step         1 ---- CPU =     0.1924 (sec) ---------------
+ChargeEquil         =       177.9618333348
+d112 3
+a114 3
+   Ebond            =     -3290.4867574329
+   Eatom            =       -45.6402499547
+   Elp              =        38.7880739947
+d116 1
+a116 1
+   Eval             =        64.4253232762
+d118 1
+a118 1
+   Ecoa             =       -49.3758973838
+d120 4
+a123 4
+   Etors            =       -12.2168884867
+   Econj            =       -10.7541869203
+   Evdw             =      1332.1475852979
+   Ecoul            =      -252.5889854258
+d125 2
+a126 2
+Potential Energy    =     -2047.7401497006
+Kinetic Energy      =         0.0108529230
+d128 4
+a131 4
+Total Energy        =     -2047.7292967775
+Temperature         =         0.1820465564
+--------------- Step         2 ---- CPU =     0.3442 (sec) ---------------
+ChargeEquil         =       178.0239448440
+d133 3
+a135 3
+   Ebond            =     -3290.0109938686
+   Eatom            =       -45.8755422365
+   Elp              =        38.7500576993
+d137 1
+a137 1
+   Eval             =        64.4077467488
+d139 1
+a139 1
+   Ecoa             =       -49.3979124418
+d141 4
+a144 4
+   Etors            =       -12.3109030346
+   Econj            =       -10.7046388262
+   Evdw             =      1332.0194218440
+   Ecoul            =      -252.6811427277
+d146 2
+a147 2
+Potential Energy    =     -2047.7799619995
+Kinetic Energy      =         0.0376067641
+d149 4
+a152 4
+Total Energy        =     -2047.7423552354
+Temperature         =         0.6308145649
+--------------- Step         3 ---- CPU =     0.4872 (sec) ---------------
+ChargeEquil         =       178.0863816153
+d154 3
+a156 3
+   Ebond            =     -3289.3335769020
+   Eatom            =       -46.2124020643
+   Elp              =        38.6920094548
+d158 1
+a158 1
+   Eval             =        64.3800265731
+d160 1
+a160 1
+   Ecoa             =       -49.4300984304
+d162 4
+a165 4
+   Etors            =       -12.4412890069
+   Econj            =       -10.6319379554
+   Evdw             =      1331.8502491871
+   Ecoul            =      -252.7899788612
+d167 2
+a168 2
+Potential Energy    =     -2047.8306163900
+Kinetic Energy      =         0.0679718069
+d170 4
+a173 4
+Total Energy        =     -2047.7626445831
+Temperature         =         1.1401567454
+--------------- Step         4 ---- CPU =     0.6315 (sec) ---------------
+ChargeEquil         =       178.1542076827
+d175 3
+a177 3
+   Ebond            =     -3288.5814748646
+   Eatom            =       -46.5898748772
+   Elp              =        38.6213849486
+d179 1
+a179 1
+   Eval             =        64.3449437933
+d181 1
+a181 1
+   Ecoa             =       -49.4673484364
+d183 4
+a186 4
+   Etors            =       -12.5799730383
+   Econj            =       -10.5474894211
+   Evdw             =      1331.6802271884
+   Ecoul            =      -252.9192565559
+d188 2
+a189 2
+Potential Energy    =     -2047.8846535805
+Kinetic Energy      =         0.0923066305
+d191 4
+a194 4
+Total Energy        =     -2047.7923469500
+Temperature         =         1.5483482376
+--------------- Step         5 ---- CPU =     0.7940 (sec) ---------------
+ChargeEquil         =       178.2244225906
+d196 3
+a198 3
+   Ebond            =     -3287.8690654631
+   Eatom            =       -46.9525375141
+   Elp              =        38.5472068435
+d200 1
+a200 1
+   Eval             =        64.3064628150
+d202 1
+a202 1
+   Ecoa             =       -49.5046635441
+d204 4
+a207 4
+   Etors            =       -12.7022650455
+   Econj            =       -10.4624874141
+   Evdw             =      1331.5351902212
+   Ecoul            =      -253.0639441227
+d209 2
+a210 2
+Potential Energy    =     -2047.9416806333
+Kinetic Energy      =         0.1079691946
+d212 4
+a215 4
+Total Energy        =     -2047.8337114387
+Temperature         =         1.8110715473
+--------------- Step         6 ---- CPU =     0.9520 (sec) ---------------
+ChargeEquil         =       178.3398920411
+d217 3
+a219 3
+   Ebond            =     -3287.2788544986
+   Eatom            =       -47.2599186533
+   Elp              =        38.4785378442
+d221 1
+a221 1
+   Eval             =        64.2689973432
+d223 1
+a223 1
+   Ecoa             =       -49.5378090736
+d225 4
+a228 4
+   Etors            =       -12.7907443604
+   Econj            =       -10.3861484718
+   Evdw             =      1331.4238172294
+   Ecoul            =      -253.1036733719
+d230 2
+a231 2
+Potential Energy    =     -2047.8459039716
+Kinetic Energy      =         0.1180485890
+d233 4
+a236 4
+Total Energy        =     -2047.7278553826
+Temperature         =         1.9801429625
+--------------- Step         7 ---- CPU =     1.1654 (sec) ---------------
+ChargeEquil         =       178.3471994097
+d238 3
+a240 3
+   Ebond            =     -3286.8587695525
+   Eatom            =       -47.4878458968
+   Elp              =        38.4229689917
+d242 1
+a242 1
+   Eval             =        64.2365093666
+d244 1
+a244 1
+   Ecoa             =       -49.5634884693
+d246 4
+a249 4
+   Etors            =       -12.8354275532
+   Econj            =       -10.3250912966
+   Evdw             =      1331.3421443497
+   Ecoul            =      -253.1648531621
+d251 2
+a252 2
+Potential Energy    =     -2047.8866538127
+Kinetic Energy      =         0.1280678988
+d254 4
+a257 4
+Total Energy        =     -2047.7585859139
+Temperature         =         2.1482065194
+--------------- Step         8 ---- CPU =     1.3114 (sec) ---------------
+ChargeEquil         =       178.3512910071
+d259 3
+a261 3
+   Ebond            =     -3286.6322181370
+   Eatom            =       -47.6253067145
+   Elp              =        38.3855208621
+d263 1
+a263 1
+   Eval             =        64.2120939188
+d265 1
+a265 1
+   Ecoa             =       -49.5793385566
+d267 4
+a270 4
+   Etors            =       -12.8325460368
+   Econj            =       -10.2833460359
+   Evdw             =      1331.2841768976
+   Ecoul            =      -253.2183970771
+d272 2
+a273 2
+Potential Energy    =     -2047.9380698724
+Kinetic Energy      =         0.1429132460
+d275 4
+a278 4
+Total Energy        =     -2047.7951566264
+Temperature         =         2.3972218604
+--------------- Step         9 ---- CPU =     1.4598 (sec) ---------------
+ChargeEquil         =       178.3143725656
+d280 3
+a282 3
+   Ebond            =     -3286.6059820771
+   Eatom            =       -47.6706969502
+   Elp              =        38.3680976954
+d284 1
+a284 1
+   Eval             =        64.1979809126
+d286 1
+a286 1
+   Ecoa             =       -49.5839024350
+d288 4
+a291 4
+   Etors            =       -12.7830187368
+   Econj            =       -10.2625982865
+   Evdw             =      1331.2476882056
+   Ecoul            =      -253.1033471943
+d293 2
+a294 2
+Potential Energy    =     -2047.8814063009
+Kinetic Energy      =         0.1646809998
+d296 4
+a299 4
+Total Energy        =     -2047.7167253011
+Temperature         =         2.7623534125
+--------------- Step        10 ---- CPU =     1.6024 (sec) ---------------
+ChargeEquil         =       178.3077135836
+d301 3
+a303 3
+   Ebond            =     -3286.7732385535
+   Eatom            =       -47.6291692689
+   Elp              =        38.3694695269
+d305 1
+a305 1
+   Eval             =        64.1955892581
+d307 1
+a307 1
+   Ecoa             =       -49.5766181224
+d309 4
+a312 4
+   Etors            =       -12.6911947737
+   Econj            =       -10.2624679249
+   Evdw             =      1331.2346675216
+   Ecoul            =      -253.1262086686
+d314 2
+a315 2
+Potential Energy    =     -2047.9514574218
+Kinetic Energy      =         0.1918541215
+d317 2
+a318 2
+Total Energy        =     -2047.7596033003
+Temperature         =         3.2181544200
+d322 1
+a322 1
+Loop time: 1.6023150682 on 2 processors for 21 particles for 10 steps
+d328 3
+a330 3
+          Force Time    1.5861     98.99
+          Neigh Time    0.0000      0.00
+           Comm Time    0.0091      0.57
+d334 2
+a335 2
+          Other Time    0.0071      0.45
+          Total Time    1.6023    100.00
+d341 2
+a342 2
+ChargeEquil             0.1559 (    10)     0.0000 (     0) 
+ReaxFF                  1.4301 (    10)     0.0000 (     0) 
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d108 1
+a108 1
+--------------- Step         1 ---- CPU =     0.1806 (sec) ---------------
+d129 1
+a129 1
+--------------- Step         2 ---- CPU =     0.3280 (sec) ---------------
+d150 1
+a150 1
+--------------- Step         3 ---- CPU =     0.4753 (sec) ---------------
+d171 1
+a171 1
+--------------- Step         4 ---- CPU =     0.6202 (sec) ---------------
+d192 1
+a192 1
+--------------- Step         5 ---- CPU =     0.7683 (sec) ---------------
+d213 1
+a213 1
+--------------- Step         6 ---- CPU =     0.9282 (sec) ---------------
+d234 1
+a234 1
+--------------- Step         7 ---- CPU =     1.1060 (sec) ---------------
+d255 1
+a255 1
+--------------- Step         8 ---- CPU =     1.2517 (sec) ---------------
+d276 1
+a276 1
+--------------- Step         9 ---- CPU =     1.4086 (sec) ---------------
+d297 1
+a297 1
+--------------- Step        10 ---- CPU =     1.5573 (sec) ---------------
+d321 1
+a321 1
+Loop time: 1.5616104603 on 2 processors for 21 particles for 10 steps
+d327 1
+a327 1
+          Force Time    1.5304     98.00
+d329 1
+a329 1
+           Comm Time    0.0243      1.56
+d333 2
+a334 2
+          Other Time    0.0069      0.44
+          Total Time    1.5616    100.00
+d340 2
+a341 2
+ChargeEquil             0.1410 (    10)     0.0000 (     0) 
+ReaxFF                  1.3894 (    10)     0.0000 (     0) 
+@
+
+
+1.3
+log
+@Trying again to clean up testreax
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/REAXFF/Grasp/Testing/testreax/grasp.out
+d3 2
+a4 1
+path_str is /Users/athomps/netapp/codes/REAXFF/Grasp/Testing/testreax/
+d9 1
+d48 4
+d61 4
+a68 1
+rcutmaxall = 10.0000000000
+d108 2
+a109 2
+--------------- Step         1 ---- CPU =     0.2102 (sec) ---------------
+ChargeEquil         =       177.9619524200
+d111 3
+a113 3
+   Ebond            =     -3290.6174578899
+   Eatom            =       -45.5757825068
+   Elp              =        38.7981261288
+d115 1
+a115 1
+   Eval             =        64.4298655422
+d117 1
+a117 1
+   Ecoa             =       -49.3699214863
+d119 4
+a122 4
+   Etors            =       -12.1907108304
+   Econj            =       -10.7675995309
+   Evdw             =      1332.1842034620
+   Ecoul            =      -252.5806678257
+d124 2
+a125 2
+Potential Energy    =     -2047.7279925171
+Kinetic Energy      =         0.0027491263
+d127 4
+a130 4
+Total Energy        =     -2047.7252433908
+Temperature         =         0.0110214506
+--------------- Step         2 ---- CPU =     0.3712 (sec) ---------------
+ChargeEquil         =       177.9616920135
+d132 3
+a134 3
+   Ebond            =     -3290.4967672065
+   Eatom            =       -45.6355056675
+   Elp              =        38.7887584425
+d136 1
+a136 1
+   Eval             =        64.4255832420
+d138 1
+a138 1
+   Ecoa             =       -49.3754662921
+d140 4
+a143 4
+   Etors            =       -12.2148460854
+   Econj            =       -10.7551516685
+   Evdw             =      1332.1506330784
+   Ecoul            =      -252.5885169919
+d145 2
+a146 2
+Potential Energy    =     -2047.7395871356
+Kinetic Energy      =         0.0106060996
+d148 4
+a151 4
+Total Energy        =     -2047.7289810360
+Temperature         =         0.0425206379
+--------------- Step         3 ---- CPU =     0.5285 (sec) ---------------
+ChargeEquil         =       177.9895698512
+d153 3
+a155 3
+   Ebond            =     -3290.3028875639
+   Eatom            =       -45.7315016404
+   Elp              =        38.7734443282
+d157 1
+a157 1
+   Eval             =        64.4185189111
+d159 1
+a159 1
+   Ecoa             =       -49.3844176647
+d161 4
+a164 4
+   Etors            =       -12.2533570509
+   Econj            =       -10.7350278124
+   Evdw             =      1332.0976928529
+   Ecoul            =      -252.6292751405
+d166 2
+a167 2
+Potential Energy    =     -2047.7572409293
+Kinetic Energy      =         0.0224998612
+d169 4
+a172 4
+Total Energy        =     -2047.7347410682
+Temperature         =         0.0902036080
+--------------- Step         4 ---- CPU =     0.6805 (sec) ---------------
+ChargeEquil         =       177.9907072848
+d174 3
+a176 3
+   Ebond            =     -3290.0460464907
+   Eatom            =       -45.8588289715
+   Elp              =        38.7526369618
+d178 1
+a178 1
+   Eval             =        64.4088089940
+d180 1
+a180 1
+   Ecoa             =       -49.3963743801
+d182 4
+a185 4
+   Etors            =       -12.3038858653
+   Econj            =       -10.7081033209
+   Evdw             =      1332.0294481938
+   Ecoul            =      -252.6440485320
+d187 2
+a188 2
+Potential Energy    =     -2047.7756861262
+Kinetic Energy      =         0.0369337785
+d190 4
+a193 4
+Total Energy        =     -2047.7387523477
+Temperature         =         0.1480702504
+--------------- Step         5 ---- CPU =     0.8223 (sec) ---------------
+ChargeEquil         =       178.0413291586
+d195 3
+a197 3
+   Ebond            =     -3289.7391440427
+   Eatom            =       -46.0112402276
+   Elp              =        38.7269567430
+d199 1
+a199 1
+   Eval             =        64.3966420670
+d201 1
+a201 1
+   Ecoa             =       -49.4108229471
+d203 4
+a206 4
+   Etors            =       -12.3634818487
+   Econj            =       -10.6755025971
+   Evdw             =      1331.9506709538
+   Ecoul            =      -252.7174089933
+d208 2
+a209 2
+Potential Energy    =     -2047.8020017341
+Kinetic Energy      =         0.0523113203
+d211 4
+a214 4
+Total Energy        =     -2047.7496904138
+Temperature         =         0.2097199531
+--------------- Step         6 ---- CPU =     0.9699 (sec) ---------------
+ChargeEquil         =       178.0813130463
+d216 3
+a218 3
+   Ebond            =     -3289.3967345827
+   Eatom            =       -46.1817490742
+   Elp              =        38.6971903423
+d220 1
+a220 1
+   Eval             =        64.3823075670
+d222 1
+a222 1
+   Ecoa             =       -49.4271895720
+d224 4
+a227 4
+   Etors            =       -12.4289093467
+   Econj            =       -10.6385062502
+   Evdw             =      1331.8663409847
+   Ecoul            =      -252.7802733455
+d229 2
+a230 2
+Potential Energy    =     -2047.8262102310
+Kinetic Energy      =         0.0672238613
+d232 4
+a235 4
+Total Energy        =     -2047.7589863697
+Temperature         =         0.2695054331
+--------------- Step         7 ---- CPU =     1.1141 (sec) ---------------
+ChargeEquil         =       178.0969476513
+d237 3
+a239 3
+   Ebond            =     -3289.0338139124
+   Eatom            =       -46.3631626891
+   Elp              =        38.6642539738
+d241 1
+a241 1
+   Eval             =        64.3661656058
+d243 1
+a243 1
+   Ecoa             =       -49.4448692656
+d245 4
+a248 4
+   Etors            =       -12.4968895924
+   Econj            =       -10.5984700963
+   Evdw             =      1331.7810466372
+   Ecoul            =      -252.8240553136
+d250 2
+a251 2
+Potential Energy    =     -2047.8528470012
+Kinetic Energy      =         0.0806335246
+d253 4
+a256 4
+Total Energy        =     -2047.7722134765
+Temperature         =         0.3232657654
+--------------- Step         8 ---- CPU =     1.2529 (sec) ---------------
+ChargeEquil         =       178.1456358947
+d258 3
+a260 3
+   Ebond            =     -3288.6646661656
+   Eatom            =       -46.5485635486
+   Elp              =        38.6291576580
+d262 1
+a262 1
+   Eval             =        64.3486335560
+d264 1
+a264 1
+   Ecoa             =       -49.4632583675
+d266 4
+a269 4
+   Etors            =       -12.5643086127
+   Econj            =       -10.5567478675
+   Evdw             =      1331.6984696878
+   Ecoul            =      -252.9070463449
+d271 2
+a272 2
+Potential Energy    =     -2047.8826941102
+Kinetic Energy      =         0.0919562565
+d274 4
+a277 4
+Total Energy        =     -2047.7907378538
+Temperature         =         0.3686594349
+--------------- Step         9 ---- CPU =     1.3913 (sec) ---------------
+ChargeEquil         =       178.1810008034
+d279 3
+a281 3
+   Ebond            =     -3288.3023469274
+   Eatom            =       -46.7316661261
+   Elp              =        38.5929718562
+d283 1
+a283 1
+   Eval             =        64.3301956417
+d285 1
+a285 1
+   Ecoa             =       -49.4817835376
+d287 4
+a290 4
+   Etors            =       -12.6283923056
+   Econj            =       -10.5146248104
+   Evdw             =      1331.6214230403
+   Ecoul            =      -252.9878379572
+d292 2
+a293 2
+Potential Energy    =     -2047.9210603227
+Kinetic Energy      =         0.1010433363
+d295 4
+a298 4
+Total Energy        =     -2047.8200169863
+Temperature         =         0.4050902104
+--------------- Step        10 ---- CPU =     1.5387 (sec) ---------------
+ChargeEquil         =       178.2539215621
+d300 3
+a302 3
+   Ebond            =     -3287.9580904078
+   Eatom            =       -46.9070374000
+   Elp              =        38.5567775705
+d304 1
+a304 1
+   Eval             =        64.3113621496
+d306 1
+a306 1
+   Ecoa             =       -49.4999133898
+d308 4
+a311 4
+   Etors            =       -12.6867776276
+   Econj            =       -10.4732768352
+   Evdw             =      1331.5516958539
+   Ecoul            =      -252.9816902039
+d313 2
+a314 2
+Potential Energy    =     -2047.8330287282
+Kinetic Energy      =         0.1080988575
+d316 2
+a317 2
+Total Energy        =     -2047.7249298707
+Temperature         =         0.4333763167
+d321 1
+a321 1
+Loop time: 1.5386303663 on 2 processors for 21 particles
+d327 3
+a329 3
+          Force Time    1.5082     98.02
+          Neigh Time    0.0001      0.00
+           Comm Time    0.0164      1.07
+d332 3
+a334 3
+        Barrier Time    0.0067      0.44
+          Other Time    0.0073      0.48
+          Total Time    1.5386    100.00
+d340 2
+a341 2
+ChargeEquil             0.1324 (    10)     0.0000 (     0) 
+ReaxFF                  1.3741 (    10)     0.0000 (     0) 
+@
+
+
+1.2
+log
+@Trying to clean up testreax.
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/REAXFF/ReaxFF_Nov2004_Grasp/Grasp/Testing/testreax/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/REAXFF/ReaxFF_Nov2004_Grasp/Grasp/Testing/testreax/
+d9 1
+d11 1
+a11 1
+nsteps 1
+d15 1
+a15 1
+box origin	39.0000000000	39.0000000000	39.0000000000
+d17 1
+a17 1
+neighbor bin 25 2.5000000000
+d36 15
+d55 5
+a63 43
+na = 21
+ParticleList::ReadReax()
+Particle Type = C
+ParticleList::ReadReax()
+Particle Type = N
+ParticleList::ReadReax()
+Particle Type = C
+ParticleList::ReadReax()
+Particle Type = N
+ParticleList::ReadReax()
+Particle Type = C
+ParticleList::ReadReax()
+Particle Type = N
+ParticleList::ReadReax()
+Particle Type = N
+ParticleList::ReadReax()
+Particle Type = N
+ParticleList::ReadReax()
+Particle Type = N
+ParticleList::ReadReax()
+Particle Type = O
+ParticleList::ReadReax()
+Particle Type = O
+ParticleList::ReadReax()
+Particle Type = O
+ParticleList::ReadReax()
+Particle Type = O
+ParticleList::ReadReax()
+Particle Type = O
+ParticleList::ReadReax()
+Particle Type = O
+ParticleList::ReadReax()
+Particle Type = H
+ParticleList::ReadReax()
+Particle Type = H
+ParticleList::ReadReax()
+Particle Type = H
+ParticleList::ReadReax()
+Particle Type = H
+ParticleList::ReadReax()
+Particle Type = H
+ParticleList::ReadReax()
+Particle Type = H
+d77 16
+a92 2
+ReaxFF              =         0.0000000000
+Potential Energy    =         0.0000000000
+d95 1
+a95 2
+Total Energy        =         0.0000000000
+Pressure            =         0.0000000000
+d99 207
+a305 4
+--------------- Step         1 ---- CPU =     0.6936 (sec) ---------------
+ReaxFF              =         0.0000000000
+Potential Energy    =         0.0000000000
+Kinetic Energy      =         0.0080337107
+d307 2
+a308 3
+Total Energy        =         0.0080337107
+Pressure            =         0.0040480315
+Temperature         =         0.0322077404
+d312 1
+a312 1
+Loop time: 0.6943475008 on 2 processors for 21 particles
+d318 3
+a320 3
+          Force Time    0.6872     98.96
+          Neigh Time    0.0000      0.00
+           Comm Time    0.0007      0.10
+d323 3
+a325 3
+        Barrier Time    0.0065      0.93
+          Other Time    0.0000      0.00
+          Total Time    0.6943    100.00
+d331 2
+a332 1
+ReaxFF                  0.6871 (     1)     0.0000 (     0) 
+@
+
+
+1.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added output from testreax to repository
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/REAXFF/Grasp/Testing/testreax/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/REAXFF/Grasp/Testing/testreax/
+d10 1
+a10 1
+nsteps 0
+d16 1
+a16 1
+neighbor nsq 25 2.5000000000
+d43 43
+d99 2
+a100 16
+ReaxFF:
+   Ebond            =     -3290.6584394309
+   Eatom            =       -45.5555088090
+   Elp              =        38.8012787074
+   Emol             =         0.0000000000
+   Eval             =        64.4313000219
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3680431108
+   Ehbo             =         0.0000000000
+   Etors            =       -12.1824882878
+   Econj            =       -10.7718129622
+   Evdw             =      1332.1957114412
+   Ecoul            =      -252.5790825397
+   Echarge          =       177.9618701157
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7252148543
+d103 2
+a104 1
+Total Energy        =     -2047.7252148543
+d108 31
+@
+
+
+1.1.2.2
+log
+@testrdx and testreax results are now for optimized version of ReaxFF.
+Subtle changes were made to control file in both cases.
+@
+text
+@d2 1
+a2 1
+Clock tick = 0.0000009537 Seconds
+@
+
+
+1.1.2.3
+log
+@Separated charge equilibration part of REAXFF into separate force field.
+@
+text
+@d2 1
+a2 1
+Clock tick = 0.0000010000 Seconds
+a8 1
+forcefield chargeequil ChargeEquil
+a38 4
+Cutoffs for this forcefield
+rcutmax = 10.0000000000
+rskin = 2.5000000000
+rcutneighmax = 12.5000000000
+a55 1
+ChargeEquil         =       177.9618701157
+d69 1
+@
+
+
+1.1.2.4
+log
+@Removed types.in from testreax dir.
+@
+text
+@d11 1
+a11 1
+nsteps 10
+d61 1
+a61 1
+ChargeEquil         =       177.9619404294
+d74 1
+a74 1
+   Ecoul            =      -252.5791690340
+d76 1
+a76 1
+Potential Energy    =     -2047.7252310348
+d79 1
+a79 1
+Total Energy        =     -2047.7252310348
+a82 234
+--------------- Step         1 ---- CPU =     0.2188 (sec) ---------------
+ChargeEquil         =       177.9619404294
+ReaxFF:
+   Ebond            =     -3290.6174548880
+   Eatom            =       -45.5757828360
+   Elp              =        38.7981259607
+   Emol             =         0.0000000000
+   Eval             =        64.4298651923
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3699213851
+   Ehbo             =         0.0000000000
+   Etors            =       -12.1907108551
+   Econj            =       -10.7675995355
+   Evdw             =      1332.1842011363
+   Ecoul            =      -252.5806688094
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7280055904
+Kinetic Energy      =         0.0027490929
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7252564975
+Temperature         =         0.0110213169
+--------------- Step         2 ---- CPU =     0.3527 (sec) ---------------
+ChargeEquil         =       177.9616950296
+ReaxFF:
+   Ebond            =     -3290.4967553701
+   Eatom            =       -45.6355069662
+   Elp              =        38.7887577796
+   Emol             =         0.0000000000
+   Eval             =        64.4255818689
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3754658924
+   Ehbo             =         0.0000000000
+   Etors            =       -12.2148461900
+   Econj            =       -10.7551516862
+   Evdw             =      1332.1506238958
+   Ecoul            =      -252.5885152757
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7395828067
+Kinetic Energy      =         0.0106059796
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7289768271
+Temperature         =         0.0425201569
+--------------- Step         3 ---- CPU =     0.4694 (sec) ---------------
+ChargeEquil         =       177.9895623174
+ReaxFF:
+   Ebond            =     -3290.3028615294
+   Eatom            =       -45.7315044995
+   Elp              =        38.7734428734
+   Emol             =         0.0000000000
+   Eval             =        64.4185159202
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3844167865
+   Ehbo             =         0.0000000000
+   Etors            =       -12.2533573062
+   Econj            =       -10.7350278501
+   Evdw             =      1332.0976726081
+   Ecoul            =      -252.6292657893
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7572400419
+Kinetic Energy      =         0.0224996365
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7347404054
+Temperature         =         0.0902027072
+--------------- Step         4 ---- CPU =     0.5839 (sec) ---------------
+ChargeEquil         =       177.9906986210
+ReaxFF:
+   Ebond            =     -3290.0460017008
+   Eatom            =       -45.8588338981
+   Elp              =        38.7526344645
+   Emol             =         0.0000000000
+   Eval             =        64.4088039139
+   Epen             =         0.0000000000
+   Ecoa             =       -49.3963728681
+   Ehbo             =         0.0000000000
+   Etors            =       -12.3038863692
+   Econj            =       -10.7081033837
+   Evdw             =      1332.0294132663
+   Ecoul            =      -252.6440375022
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.7756854563
+Kinetic Energy      =         0.0369334766
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7387519797
+Temperature         =         0.1480690398
+--------------- Step         5 ---- CPU =     0.6996 (sec) ---------------
+ChargeEquil         =       178.0413105351
+ReaxFF:
+   Ebond            =     -3289.7390769937
+   Eatom            =       -46.0112476247
+   Elp              =        38.7269530164
+   Emol             =         0.0000000000
+   Eval             =        64.3966345911
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4108206802
+   Ehbo             =         0.0000000000
+   Etors            =       -12.3634827348
+   Econj            =       -10.6755026868
+   Evdw             =      1331.9506185084
+   Ecoul            =      -252.7173869972
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8020010663
+Kinetic Energy      =         0.0523110103
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7496900560
+Temperature         =         0.2097187101
+--------------- Step         6 ---- CPU =     0.8207 (sec) ---------------
+ChargeEquil         =       178.0812802144
+ReaxFF:
+   Ebond            =     -3289.3966429980
+   Eatom            =       -46.1817592306
+   Elp              =        38.6971852754
+   Emol             =         0.0000000000
+   Eval             =        64.3822975815
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4271864695
+   Ehbo             =         0.0000000000
+   Etors            =       -12.4289107890
+   Econj            =       -10.6385063640
+   Evdw             =      1331.8662691282
+   Ecoul            =      -252.7802350405
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8262086921
+Kinetic Energy      =         0.0672236368
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7589850553
+Temperature         =         0.2695045329
+--------------- Step         7 ---- CPU =     0.9346 (sec) ---------------
+ChargeEquil         =       178.0968987723
+ReaxFF:
+   Ebond            =     -3289.0336968393
+   Eatom            =       -46.3631757773
+   Elp              =        38.6642475403
+   Emol             =         0.0000000000
+   Eval             =        64.3661532052
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4448652912
+   Ehbo             =         0.0000000000
+   Etors            =       -12.4968918058
+   Econj            =       -10.5984702257
+   Evdw             =      1331.7809545224
+   Ecoul            =      -252.8239970130
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8528429121
+Kinetic Energy      =         0.0806334797
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7722094324
+Temperature         =         0.3232655851
+--------------- Step         8 ---- CPU =     1.0516 (sec) ---------------
+ChargeEquil         =       178.1455832696
+ReaxFF:
+   Ebond            =     -3288.6645239889
+   Eatom            =       -46.5485796317
+   Elp              =        38.6291499187
+   Emol             =         0.0000000000
+   Eval             =        64.3486190442
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4632535303
+   Ehbo             =         0.0000000000
+   Etors            =       -12.5643118473
+   Econj            =       -10.5567479970
+   Evdw             =      1331.6983575504
+   Ecoul            =      -252.9069844091
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8826916214
+Kinetic Energy      =         0.0919564630
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7907351584
+Temperature         =         0.3686602627
+--------------- Step         9 ---- CPU =     1.1705 (sec) ---------------
+ChargeEquil         =       178.1809298735
+ReaxFF:
+   Ebond            =     -3288.3021813315
+   Eatom            =       -46.7316851761
+   Elp              =        38.5929629630
+   Emol             =         0.0000000000
+   Eval             =        64.3301795323
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4817778936
+   Ehbo             =         0.0000000000
+   Etors            =       -12.6283968499
+   Econj            =       -10.5146249162
+   Evdw             =      1331.6212921925
+   Ecoul            =      -252.9877487885
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.9210503943
+Kinetic Energy      =         0.1010438280
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.8200065663
+Temperature         =         0.4050921813
+--------------- Step        10 ---- CPU =     1.2957 (sec) ---------------
+ChargeEquil         =       178.2538685272
+ReaxFF:
+   Ebond            =     -3287.9579042418
+   Eatom            =       -46.9070593125
+   Elp              =        38.5567677551
+   Emol             =         0.0000000000
+   Eval             =        64.3113451344
+   Epen             =         0.0000000000
+   Ecoa             =       -49.4999070357
+   Ehbo             =         0.0000000000
+   Etors            =       -12.6867837928
+   Econj            =       -10.4732768855
+   Evdw             =      1331.5515485795
+   Ecoul            =      -252.9816454197
+   Efield           =         0.0000000000
+Potential Energy    =     -2047.8330466917
+Kinetic Energy      =         0.1080996320
+Extended Energy     =         0.0000000000
+Total Energy        =     -2047.7249470597
+Temperature         =         0.4333794218
+
+
+
+Loop time: 1.2956504822 on 2 processors for 21 particles
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    1.2722     98.19
+          Neigh Time    0.0001      0.00
+           Comm Time    0.0102      0.79
+       Exchange Time    0.0000      0.00
+        Revcomm Time    0.0000      0.00
+        Barrier Time    0.0071      0.55
+          Other Time    0.0060      0.47
+          Total Time    1.2957    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+ChargeEquil             0.0973 (    10)     0.0000 (     0) 
+ReaxFF                  1.1742 (    10)     0.0000 (     0) 
+@
+
+
+1.1.2.5
+log
+@Added origin shift (6.25A) to input.
+Included reax_defs.h file for each example.
+@
+text
+@d83 1
+a83 1
+--------------- Step         1 ---- CPU =     0.2413 (sec) ---------------
+d104 1
+a104 1
+--------------- Step         2 ---- CPU =     0.3641 (sec) ---------------
+d125 1
+a125 1
+--------------- Step         3 ---- CPU =     0.4877 (sec) ---------------
+d146 1
+a146 1
+--------------- Step         4 ---- CPU =     0.6039 (sec) ---------------
+d167 1
+a167 1
+--------------- Step         5 ---- CPU =     0.7233 (sec) ---------------
+d188 1
+a188 1
+--------------- Step         6 ---- CPU =     0.8512 (sec) ---------------
+d209 1
+a209 1
+--------------- Step         7 ---- CPU =     0.9677 (sec) ---------------
+d230 1
+a230 1
+--------------- Step         8 ---- CPU =     1.1135 (sec) ---------------
+d251 1
+a251 1
+--------------- Step         9 ---- CPU =     1.2365 (sec) ---------------
+d272 1
+a272 1
+--------------- Step        10 ---- CPU =     1.3661 (sec) ---------------
+d296 1
+a296 1
+Loop time: 1.3696089983 on 2 processors for 21 particles
+d302 1
+a302 1
+          Force Time    1.3233     96.62
+d304 1
+a304 1
+           Comm Time    0.0244      1.78
+d307 3
+a309 3
+        Barrier Time    0.0176      1.28
+          Other Time    0.0043      0.31
+          Total Time    1.3696    100.00
+d315 2
+a316 2
+ChargeEquil             0.0961 (    10)     0.0000 (     0) 
+ReaxFF                  1.2242 (    10)     0.0000 (     0) 
+@
+
+
+1.1.2.6
+log
+@Separated charge equilibration input from REAX
+@
+text
+@d9 1
+a9 1
+forcefield chargeequil chargeequil.in ChargeEquil
+d15 1
+a15 1
+box origin	40.0000000000	40.0000000000	40.0000000000
+a35 15
+****************************************************
+Warning: Force_Reax::ReadInteractions:
+Remember, order of atoms in types.in and fort.4 must match;
+fort.4 must contain at least all the types in types.in
+****************************************************
+
+
+
+Reading ChargeEquil from file chargeequil.in
+
+id 	 type 	rcutsq 	 np	 p1      p2      p3  
+0	0	100.0000000000	5   5.7254000000   6.9235000000   0.8712000000   0.0000000000  10.0000000000
+1	0	100.0000000000	5   3.8196000000   9.8832000000   0.7625000000   0.0000000000  10.0000000000
+2	0	100.0000000000	5   8.5000000000   7.8386000000   1.0804000000   0.0000000000  10.0000000000
+3	0	100.0000000000	5   6.8418000000   6.3404000000   0.8596000000   0.0000000000  10.0000000000
+a43 1
+rcutmaxall = 10.0000000000
+d61 1
+a61 1
+ChargeEquil         =       177.9619524200
+d74 1
+a74 1
+   Ecoul            =      -252.5791679345
+d76 1
+a76 1
+Potential Energy    =     -2047.7252179448
+d79 1
+a79 1
+Total Energy        =     -2047.7252179448
+d83 2
+a84 2
+--------------- Step         1 ---- CPU =     0.2102 (sec) ---------------
+ChargeEquil         =       177.9619524200
+d86 3
+a88 3
+   Ebond            =     -3290.6174578899
+   Eatom            =       -45.5757825068
+   Elp              =        38.7981261288
+d90 1
+a90 1
+   Eval             =        64.4298655422
+d92 1
+a92 1
+   Ecoa             =       -49.3699214863
+d94 4
+a97 4
+   Etors            =       -12.1907108304
+   Econj            =       -10.7675995309
+   Evdw             =      1332.1842034620
+   Ecoul            =      -252.5806678257
+d99 2
+a100 2
+Potential Energy    =     -2047.7279925171
+Kinetic Energy      =         0.0027491263
+d102 4
+a105 4
+Total Energy        =     -2047.7252433908
+Temperature         =         0.0110214506
+--------------- Step         2 ---- CPU =     0.3712 (sec) ---------------
+ChargeEquil         =       177.9616920135
+d107 3
+a109 3
+   Ebond            =     -3290.4967672065
+   Eatom            =       -45.6355056675
+   Elp              =        38.7887584425
+d111 1
+a111 1
+   Eval             =        64.4255832420
+d113 1
+a113 1
+   Ecoa             =       -49.3754662921
+d115 4
+a118 4
+   Etors            =       -12.2148460854
+   Econj            =       -10.7551516685
+   Evdw             =      1332.1506330784
+   Ecoul            =      -252.5885169919
+d120 2
+a121 2
+Potential Energy    =     -2047.7395871356
+Kinetic Energy      =         0.0106060996
+d123 4
+a126 4
+Total Energy        =     -2047.7289810360
+Temperature         =         0.0425206379
+--------------- Step         3 ---- CPU =     0.5285 (sec) ---------------
+ChargeEquil         =       177.9895698512
+d128 3
+a130 3
+   Ebond            =     -3290.3028875639
+   Eatom            =       -45.7315016404
+   Elp              =        38.7734443282
+d132 1
+a132 1
+   Eval             =        64.4185189111
+d134 1
+a134 1
+   Ecoa             =       -49.3844176647
+d136 4
+a139 4
+   Etors            =       -12.2533570509
+   Econj            =       -10.7350278124
+   Evdw             =      1332.0976928529
+   Ecoul            =      -252.6292751405
+d141 2
+a142 2
+Potential Energy    =     -2047.7572409293
+Kinetic Energy      =         0.0224998612
+d144 4
+a147 4
+Total Energy        =     -2047.7347410682
+Temperature         =         0.0902036080
+--------------- Step         4 ---- CPU =     0.6805 (sec) ---------------
+ChargeEquil         =       177.9907072848
+d149 3
+a151 3
+   Ebond            =     -3290.0460464907
+   Eatom            =       -45.8588289715
+   Elp              =        38.7526369618
+d153 1
+a153 1
+   Eval             =        64.4088089940
+d155 1
+a155 1
+   Ecoa             =       -49.3963743801
+d157 4
+a160 4
+   Etors            =       -12.3038858653
+   Econj            =       -10.7081033209
+   Evdw             =      1332.0294481938
+   Ecoul            =      -252.6440485320
+d162 2
+a163 2
+Potential Energy    =     -2047.7756861262
+Kinetic Energy      =         0.0369337785
+d165 4
+a168 4
+Total Energy        =     -2047.7387523477
+Temperature         =         0.1480702504
+--------------- Step         5 ---- CPU =     0.8223 (sec) ---------------
+ChargeEquil         =       178.0413291586
+d170 3
+a172 3
+   Ebond            =     -3289.7391440427
+   Eatom            =       -46.0112402276
+   Elp              =        38.7269567430
+d174 1
+a174 1
+   Eval             =        64.3966420670
+d176 1
+a176 1
+   Ecoa             =       -49.4108229471
+d178 4
+a181 4
+   Etors            =       -12.3634818487
+   Econj            =       -10.6755025971
+   Evdw             =      1331.9506709538
+   Ecoul            =      -252.7174089933
+d183 2
+a184 2
+Potential Energy    =     -2047.8020017341
+Kinetic Energy      =         0.0523113203
+d186 4
+a189 4
+Total Energy        =     -2047.7496904138
+Temperature         =         0.2097199531
+--------------- Step         6 ---- CPU =     0.9699 (sec) ---------------
+ChargeEquil         =       178.0813130463
+d191 3
+a193 3
+   Ebond            =     -3289.3967345827
+   Eatom            =       -46.1817490742
+   Elp              =        38.6971903423
+d195 1
+a195 1
+   Eval             =        64.3823075670
+d197 1
+a197 1
+   Ecoa             =       -49.4271895720
+d199 4
+a202 4
+   Etors            =       -12.4289093467
+   Econj            =       -10.6385062502
+   Evdw             =      1331.8663409847
+   Ecoul            =      -252.7802733455
+d204 2
+a205 2
+Potential Energy    =     -2047.8262102310
+Kinetic Energy      =         0.0672238613
+d207 4
+a210 4
+Total Energy        =     -2047.7589863697
+Temperature         =         0.2695054331
+--------------- Step         7 ---- CPU =     1.1141 (sec) ---------------
+ChargeEquil         =       178.0969476513
+d212 3
+a214 3
+   Ebond            =     -3289.0338139124
+   Eatom            =       -46.3631626891
+   Elp              =        38.6642539738
+d216 1
+a216 1
+   Eval             =        64.3661656058
+d218 1
+a218 1
+   Ecoa             =       -49.4448692656
+d220 4
+a223 4
+   Etors            =       -12.4968895924
+   Econj            =       -10.5984700963
+   Evdw             =      1331.7810466372
+   Ecoul            =      -252.8240553136
+d225 2
+a226 2
+Potential Energy    =     -2047.8528470012
+Kinetic Energy      =         0.0806335246
+d228 4
+a231 4
+Total Energy        =     -2047.7722134765
+Temperature         =         0.3232657654
+--------------- Step         8 ---- CPU =     1.2529 (sec) ---------------
+ChargeEquil         =       178.1456358947
+d233 3
+a235 3
+   Ebond            =     -3288.6646661656
+   Eatom            =       -46.5485635486
+   Elp              =        38.6291576580
+d237 1
+a237 1
+   Eval             =        64.3486335560
+d239 1
+a239 1
+   Ecoa             =       -49.4632583675
+d241 4
+a244 4
+   Etors            =       -12.5643086127
+   Econj            =       -10.5567478675
+   Evdw             =      1331.6984696878
+   Ecoul            =      -252.9070463449
+d246 2
+a247 2
+Potential Energy    =     -2047.8826941102
+Kinetic Energy      =         0.0919562565
+d249 4
+a252 4
+Total Energy        =     -2047.7907378538
+Temperature         =         0.3686594349
+--------------- Step         9 ---- CPU =     1.3913 (sec) ---------------
+ChargeEquil         =       178.1810008034
+d254 3
+a256 3
+   Ebond            =     -3288.3023469274
+   Eatom            =       -46.7316661261
+   Elp              =        38.5929718562
+d258 1
+a258 1
+   Eval             =        64.3301956417
+d260 1
+a260 1
+   Ecoa             =       -49.4817835376
+d262 4
+a265 4
+   Etors            =       -12.6283923056
+   Econj            =       -10.5146248104
+   Evdw             =      1331.6214230403
+   Ecoul            =      -252.9878379572
+d267 2
+a268 2
+Potential Energy    =     -2047.9210603227
+Kinetic Energy      =         0.1010433363
+d270 4
+a273 4
+Total Energy        =     -2047.8200169863
+Temperature         =         0.4050902104
+--------------- Step        10 ---- CPU =     1.5387 (sec) ---------------
+ChargeEquil         =       178.2539215621
+d275 3
+a277 3
+   Ebond            =     -3287.9580904078
+   Eatom            =       -46.9070374000
+   Elp              =        38.5567775705
+d279 1
+a279 1
+   Eval             =        64.3113621496
+d281 1
+a281 1
+   Ecoa             =       -49.4999133898
+d283 4
+a286 4
+   Etors            =       -12.6867776276
+   Econj            =       -10.4732768352
+   Evdw             =      1331.5516958539
+   Ecoul            =      -252.9816902039
+d288 2
+a289 2
+Potential Energy    =     -2047.8330287282
+Kinetic Energy      =         0.1080988575
+d291 2
+a292 2
+Total Energy        =     -2047.7249298707
+Temperature         =         0.4333763167
+d296 1
+a296 1
+Loop time: 1.5386303663 on 2 processors for 21 particles
+d302 1
+a302 1
+          Force Time    1.5082     98.02
+d304 1
+a304 1
+           Comm Time    0.0164      1.07
+d307 3
+a309 3
+        Barrier Time    0.0067      0.44
+          Other Time    0.0073      0.48
+          Total Time    1.5386    100.00
+d315 2
+a316 2
+ChargeEquil             0.1324 (    10)     0.0000 (     0) 
+ReaxFF                  1.3741 (    10)     0.0000 (     0) 
+@
+
+

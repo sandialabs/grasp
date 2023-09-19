@@ -1,0 +1,877 @@
+head	4.6;
+access;
+symbols
+	ReverseComm_branch:4.5.0.4
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.3
+	REAX-2:3.1.2.3
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.14.0.2
+	cjkimme_version_merge_from_trunk_1:2.9.2.1
+	cjkimme_version:2.9.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.6
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.01.10.20.41.52;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.4.1
+	4.3.6.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.02.23.19.56.59;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.1.2.1
+	3.1.6.1;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.03.20.00.15.37;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.02.12.00.13.00;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.9.2.1;
+next	2.8;
+
+2.8
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.10.04.02.46.52;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	;
+
+2.9.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.1.2.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	3.1.2.2;
+
+3.1.2.2
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	3.1.2.3;
+
+3.1.2.3
+date	2005.01.21.22.24.30;	author athomps;	state Exp;
+branches;
+next	;
+
+3.1.6.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.4.1
+date	2005.06.16.22.23.41;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.3.6.1
+date	2005.06.15.20.29.11;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.6
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+//  Declarations for Comm class.
+//  Comm is a modified version of the LAMMPS-like
+//  spatial decomposition communication class
+//  written by Steve Plimpton (May 2003).
+// 
+#ifndef COMM_H
+#define COMM_H
+
+class Comm {
+ private:
+  ofstream nodefile;
+  MPI_Comm world;
+  MPI_Comm universe;
+
+  bool mpi_init_flag, mpi_finalize_flag;
+  bool Lnodefile, Lnodefile_input;
+  bool Lworld_seed;
+
+  int me_universe,nprocs_universe;  // gobal proc info
+  vector<int> world_root_list, world_nprocs_list; // info about worlds
+  int nworlds,myworld;                      // my world info
+  int me,nprocs;                    // proc info
+  int procgrid[3];                  // # of procs in each dim
+  int myloc[3];                     // which proc I am in each dim
+  int procneigh[3][2];              // my 6 neighboring procs
+  int nswap;                        // # of swaps to perform
+  int need[3];                      // procs I need atoms from in each dim
+  double sublo[3],subhi[3];         // Subdomain boundaries 
+                                    // in fractional coordinates.
+
+
+  int maxswap;                      // max # of swaps memory is allocated for
+  vector<int> sendnum,recvnum;      // # of atoms to send/recv in each swap
+  vector<int> sendproc,recvproc;    // proc to send/recv to/from at each swap
+  vector<int> size_comm_send;       // # of values to send in each comm
+  vector<int> size_comm_recv;       // # of values to recv in each comm
+  vector<int> size_reverse_send;    // # to send in each reverse comm
+  vector<int> size_reverse_recv;    // # to recv in each reverse comm
+  vector<double> slablo,slabhi;     // bounds of slab to send at each swap
+  vector<int*> pbc_flags;           // flags for sending atoms thru PBC
+                                    // [0] = 1 if any dim is across PBC
+                                    // [123] = +/-1 if dim 012 is across PBC
+
+  vector<int> firstrecv;            // where to put 1st recv atom in each swap
+  vector<vector<int> > sendlist;     // list of atoms to send in each swap
+  vector<int> maxsendlist;          // max size of send list for each swap
+
+  vector<double> buf_send;          // send buffer for all comm
+  vector<double> buf_recv;          // recv buffer for all comm
+  int maxsend;                      // current size of send buffer
+  int maxrecv;                      // current size of recv buffer
+
+  void procs2box(const Box*);                 // map 3d grid to box size
+  void grow_send(int);              // reallocate send buffer
+  void grow_recv(int);              // free/allocate recv buffer
+  void grow_list(int, int);         // reallocate one sendlist
+  void grow_swap();                 // grow swap arrays
+  void allocate_swap(int);          // allocate swap arrays
+  void free_swap();                 // free swap arrays
+
+ public:
+  Comm(int&, char**, const bool&, const bool&);
+  ~Comm();
+  // open file for each node
+  void open_nodefile();
+  // setup 3d grid of procs
+  void set_procs(const Box*);
+  // setup world for this process
+  void Setup_World();
+  // setup 3d communication pattern
+  void Setup(const Box*, const ForceFieldList*);
+  // perform communication of atom coords  
+  void communicate(const Box*, ParticleList*);
+  // reverse comm of forces
+  void reverse_communicate(ParticleList*);
+  // move atoms to new procs
+  void exchange(const Box*, ParticleList*);
+  // setup list of atoms to communicate
+  void borders(const Box*, ParticleList*);
+
+  int get_nprocs() const;
+  int get_node() const;
+  int get_nprocs_universe() const;
+  int get_node_universe() const;
+  int get_nworlds() const;
+  int get_myworld() const;
+  int get_world_seed() const;
+  const MPI_Comm& get_world() const;
+  const MPI_Comm& get_universe() const;
+  void itostring(int,string&,int=0) const;
+  ofstream& get_nodefile();
+  bool get_Lnodefile() const;
+  bool sub_check(const Box*, const double[]);
+  bool sub_check_strict(const Box*, const double[]);
+  void get_myloc(int[]) const;
+  void get_procgrid(int[]) const;
+  void comm_double_add(vector<double>&);
+  void comm_double_add(double[]);
+  void reverse_comm_double_add(vector<double>&);
+  void reverse_comm_double_add(double[]);
+  void comm_double(double[]);
+  void input_procgrid(const string&);
+  void input_nodefile(const string&);
+  void input_nworlds(const string&);
+  void input_world_seed();
+};
+
+// this function is deliberately global for access by 
+// classes invoked by Comm class
+int nint(const double& r);
+
+#endif
+@
+
+
+4.5
+log
+@Added multiple replica feature.
+@
+text
+@d139 1
+@
+
+
+4.4
+log
+@fixed bug in nodefile handler
+@
+text
+@d62 1
+d64 3
+d113 2
+d128 5
+d148 2
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d61 1
+a61 1
+  bool Lnodefile;
+@
+
+
+4.3.4.1
+log
+@latest additions to the PPPM FF
+@
+text
+@a129 1
+  void get_procneigh(int[][2]) const;
+@
+
+
+4.3.6.1
+log
+@Added class Comm_Octant
+@
+text
+@a129 1
+  void get_procneigh(int[3][2]) const;
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d130 5
+a134 2
+  void comm_double(vector<double>&);
+  void reverse_comm_double(vector<double>&);
+d136 1
+d139 4
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d114 2
+a115 5
+  void comm_double_add(vector<double>&);
+  void comm_double_add(double[]);
+  void reverse_comm_double_add(vector<double>&);
+  void reverse_comm_double_add(double[]);
+  void comm_double(double[]);
+a116 1
+  void input_nodefile(const string&);
+a118 4
+// this function is deliberately global for access by 
+// classes invoked by Comm class
+int nint(const double& r);
+
+@
+
+
+3.4
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.3
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d114 5
+a118 2
+  void comm_double(vector<double>&);
+  void reverse_comm_double(vector<double>&);
+d123 4
+@
+
+
+3.2
+log
+@Added input_procgrid function.
+@
+text
+@d117 1
+@
+
+
+3.1
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d116 1
+@
+
+
+3.1.6.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a115 1
+  void input_procgrid(const string&);
+@
+
+
+3.1.2.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@d114 2
+a115 4
+  void comm_double_add(vector<double>&);
+  void reverse_comm_double_add(vector<double>&);
+  void comm_double(double[]);
+  void reverse_comm_double_add(double[]);
+@
+
+
+3.1.2.2
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@a119 4
+// this function is deliberately global for access by 
+// classes invoked by Comm class
+int nint(const double& r);
+
+@
+
+
+3.1.2.3
+log
+@Implemented a parallel CG scheme. Does not exploit sparsity and
+so is still quite slow.
+@
+text
+@a114 1
+  void comm_double_add(double[]);
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d110 1
+@
+
+
+2.14
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.13
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.12
+log
+@Various
+@
+text
+@d112 2
+a113 2
+  void comm_embed(ParticleList*);
+  void reverse_comm_rho(ParticleList*);
+@
+
+
+2.11
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.10
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@d57 8
+a64 8
+  vector <int> sendnum,recvnum;     // # of atoms to send/recv in each swap
+  vector <int> sendproc,recvproc;   // proc to send/recv to/from at each swap
+  vector <int> size_comm_send;      // # of values to send in each comm
+  vector <int> size_comm_recv;      // # of values to recv in each comm
+  vector <int> size_reverse_send;   // # to send in each reverse comm
+  vector <int> size_reverse_recv;   // # to recv in each reverse comm
+  vector <double> slablo,slabhi;    // bounds of slab to send at each swap
+  vector <int*> pbc_flags;           // flags for sending atoms thru PBC
+d68 3
+a70 3
+  vector <int> firstrecv;           // where to put 1st recv atom in each swap
+  vector <vector <int> > sendlist;  // list of atoms to send in each swap
+  vector <int> maxsendlist;         // max size of send list for each swap
+d72 2
+a73 2
+  vector <double> buf_send;         // send buffer for all comm
+  vector <double> buf_recv;         // recv buffer for all comm
+@
+
+
+2.9
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d44 1
+@
+
+
+2.9.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a43 1
+  bool Lnodefile;
+d56 8
+a63 8
+  vector<int> sendnum,recvnum;      // # of atoms to send/recv in each swap
+  vector<int> sendproc,recvproc;    // proc to send/recv to/from at each swap
+  vector<int> size_comm_send;       // # of values to send in each comm
+  vector<int> size_comm_recv;       // # of values to recv in each comm
+  vector<int> size_reverse_send;    // # to send in each reverse comm
+  vector<int> size_reverse_recv;    // # to recv in each reverse comm
+  vector<double> slablo,slabhi;     // bounds of slab to send at each swap
+  vector<int*> pbc_flags;           // flags for sending atoms thru PBC
+d67 3
+a69 3
+  vector<int> firstrecv;            // where to put 1st recv atom in each swap
+  vector<vector<int> > sendlist;     // list of atoms to send in each swap
+  vector<int> maxsendlist;          // max size of send list for each swap
+d71 2
+a72 2
+  vector<double> buf_send;          // send buffer for all comm
+  vector<double> buf_recv;          // recv buffer for all comm
+d111 2
+a112 2
+  void comm_double(vector<double>&);
+  void reverse_comm_double(vector<double>&);
+@
+
+
+2.8
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d111 2
+@
+
+
+2.7
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.6
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d15 2
+d57 1
+a57 1
+  Comm(int&, char**);
+@
+
+
+2.5
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d74 2
+a75 2
+  MPI_Comm get_world() const;
+  MPI_Comm get_universe() const;
+@
+
+
+2.4
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@a80 1
+  void foo(const double&, const double&, bool&) const;
+@
+
+
+2.3
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@d57 2
+d78 1
+a78 1
+  bool sub_check(const Box*, const double[]) const;
+d81 1
+@
+
+
+2.2
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@a26 1
+  vector <int> sendnum_local;       // # of local atoms in each swap
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d22 1
+a22 1
+                                    // in units of lattice vectors
+d78 2
+@
+

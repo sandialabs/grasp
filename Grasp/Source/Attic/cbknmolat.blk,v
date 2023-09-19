@@ -1,0 +1,77 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAX-2:3.2.2.2
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.23;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@ 
+       
+             
+      common
+     $/cbknmolat/ nmolat(nmolmax,nat)       @
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@d5 1
+a5 2
+     $/cbknmolat/ nmolat(nmolmax,nat)       
+
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

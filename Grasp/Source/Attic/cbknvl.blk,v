@@ -1,0 +1,72 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2005.01.07.22.51.01;	author athomps;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@ 
+       
+      common 
+     $/cbknvl/ nvlx(nat*nat),nvly(nat*nat),nvlz(nat*nat)@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Finished optimized implementation of ReaxFF.
+Eliminates O(N^2) scaling of srttor and srtang.
+Also blanks out the ghost bonds that are not in dihedral
+with local atom.
+@
+text
+@@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

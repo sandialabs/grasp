@@ -1,0 +1,7439 @@
+head	4.7;
+access;
+symbols
+	ReverseComm_branch:4.5.0.4
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.4
+	REAX-2:3.3
+	P_MonacoSource:3.3.0.6
+	GraspSource:3.3
+	P_Monaco:3.3.0.4
+	InitialGrasp:3.3
+	REAXFF:3.3.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.27.0.2
+	cjkimme_version_merge_from_trunk_1:2.15.2.3
+	cjkimme_version:2.15.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.7
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.5.2.1
+	4.5.4.1;
+next	4.4;
+
+4.4
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2004.11.24.23.39.28;	author athomps;	state Exp;
+branches
+	3.3.6.1;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.27;
+
+2.27
+date	2004.09.21.23.18.28;	author athomps;	state Exp;
+branches;
+next	2.26;
+
+2.26
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.25;
+
+2.25
+date	2004.08.02.18.00.47;	author athomps;	state Exp;
+branches;
+next	2.24;
+
+2.24
+date	2004.07.30.20.18.47;	author athomps;	state Exp;
+branches;
+next	2.23;
+
+2.23
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.22;
+
+2.22
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.03.02.17.49.47;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.02.12.00.13.00;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	2.15.2.1;
+next	2.14;
+
+2.14
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.01.15.20.12.28;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2003.11.03.23.52.04;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.03.03.20.32.39;	author athomps;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.02.25.23.06.37;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.05.00.32.02;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.04.00.12.41;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.01.18.00.20.49;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.08.23.25.53;	author athomps;	state Exp;
+branches;
+next	;
+
+2.15.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.15.2.2;
+
+2.15.2.2
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.15.2.3;
+
+2.15.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.3.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.3.6.2;
+
+3.3.6.2
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.3.6.3;
+
+3.3.6.3
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.5.2.1
+date	2006.08.28.22.33.15;	author athomps;	state Exp;
+branches;
+next	;
+
+4.5.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.7
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "constants.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_twobody.h"
+#include "force_ewald.h"
+#include "box.h"
+#include "box_inline.h"
+#include "force_twobody_inline.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "comm.h"
+#include "log.h"
+#include "machine.h"
+
+extern Log glog;
+extern Constants constants;
+
+Force_Twobody::Force_Twobody(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = twobody;
+  timeforce = 0.0;
+  nforce = 0;
+  npieces = 1;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "n/a";
+  rcutmax = 0.0;
+  Lcoul = false;
+  input_param_index = NULL;
+  param_index = NULL;
+  rcutneighsq_table = NULL;
+}
+
+Force_Twobody::~Force_Twobody() {
+  if (input_param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []input_param_index[itype];
+    }
+    delete []input_param_index;
+  }
+  if (param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []param_index[itype];
+    }
+    delete []param_index;
+  }
+// Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+  // Free the memory allocated to param_list
+  for (int i = 0;i<param_list.size();i++) {
+    delete[] param_list[i].params;
+  }
+}
+
+void Force_Twobody::ReadInteractions(Comm* comm) {
+  string buf,buf2;
+  string id1,id2;
+  string forcefieldname;
+  string filename;
+  double eps,sigma,rmin,alpha,rcut;
+  double exp6a,exp6b,exp6c;
+  int nparams;
+  int* i_tmp;
+  int itype,jtype,ipair;
+  int isize;
+  ff_params ff_param_tmp;
+  bool match;
+  vector<int*> ff_pairs;
+  string str_tmp;
+  ifstream infile;
+  int node;
+
+  std::istringstream buf_in(arg_string);
+
+  node = comm->get_node();
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Twobody::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Twobody::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  glog.get_logfile() << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+  str_tmp = glog.path_str + filename;
+  if (node == 0) {
+    infile.open(str_tmp.c_str()); 
+  
+    if (!infile) {
+      infile.close();
+      infile.open(str_tmp.c_str()); 
+      if (!infile) {
+	glog.abort("Force_Twobody::ReadInteractions:\n"
+		   "Failed to open " + str_tmp,comm);
+      }
+    }
+  }
+
+  ntypes = 0;
+  do {
+    if (node==0) {
+      if(input_string_get(infile,buf)) {
+	if(buf != "End of Input") {
+	  glog.abort("Force_Twobody::ReadInput:\n"
+		     "Read error in "+str_tmp,comm);
+	}
+      }
+      isize = buf.size();
+    }
+
+    MPI_Bcast(&isize,1,MPI_INT,0,comm->get_world());
+    if (node != 0) buf.resize(isize);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << isize << endl;
+    }
+
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << buf << endl;
+    }
+
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (input_string_match(buf,"End of Input")) {
+      break;
+    }
+
+    buf_in.clear();
+    buf_in.str(buf);
+
+    // Construct index for ids on the fly
+    buf_in >> id1 >> id2;
+    
+    match = find_id(id1,itype);
+    if (!match) {
+      ntypes++;
+      itype = ntypes-1;
+      id_index.push_back(id1);
+    }
+
+    match = find_id(id2,jtype);
+    if (!match) {
+      ntypes++;
+      jtype = ntypes-1;
+      id_index.push_back(id2);
+    }
+
+    buf_in >> forcefieldname;
+    if (forcefieldname == "lj_cut") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 2;
+      ff_param_tmp.type = lj_cut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "lj_cut_shift") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 2;
+      ff_param_tmp.type = lj_cut_shift;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "lj_nocut") {
+      buf_in >> eps >> sigma;
+      if (eps < 0.0 || sigma <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+      nparams = 2;
+      ff_param_tmp.type = lj_nocut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      input_param_list.push_back(ff_param_tmp);
+      
+    } else if (forcefieldname == "lj_coul_cut") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 2;
+      ff_param_tmp.type = lj_coul_cut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "lj_coul_cut_shift") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 2;
+      ff_param_tmp.type = lj_coul_cut_shift;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "lj_coul_nocut") {
+      buf_in >> eps >> sigma;
+      if (eps < 0.0 || sigma <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+      nparams = 2;
+      ff_param_tmp.type = lj_coul_nocut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      input_param_list.push_back(ff_param_tmp);
+      
+    } else if (forcefieldname == "lj_ewald_cut") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 2;
+      ff_param_tmp.type = lj_ewald_cut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "lj_ewald_cut_shift") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 2;
+      ff_param_tmp.type = lj_ewald_cut_shift;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "lj_ewald_nocut") {
+      buf_in >> eps >> sigma;
+      if (eps < 0.0 || sigma <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+      nparams = 2;
+      ff_param_tmp.type = lj_ewald_nocut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      input_param_list.push_back(ff_param_tmp);
+      
+    } else if (forcefieldname == "exp6_cut") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a < 0.0 ||  exp6b < 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_cut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_cut_shift") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a < 0.0 ||  exp6b < 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_cut_shift;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_nocut") {
+      buf_in >> exp6a >> exp6b >> exp6c;
+      if (exp6a < 0.0 ||  exp6b < 0.0 || exp6c < 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_nocut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_coul_cut") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a < 0.0 ||  exp6b < 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_coul_cut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_coul_cut_shift") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a < 0.0 ||  exp6b < 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_coul_cut_shift;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_coul_nocut") {
+      buf_in >> exp6a >> exp6b >> exp6c;
+      if (exp6a < 0.0 ||  exp6b < 0.0 || exp6c < 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_coul_nocut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_ewald_cut") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a < 0.0 ||  exp6b < 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_ewald_cut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_ewald_cut_shift") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a < 0.0 ||  exp6b < 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_ewald_cut_shift;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_ewald_nocut") {
+      buf_in >> exp6a >> exp6b >> exp6c;
+      if (exp6a < 0.0 ||  exp6b < 0.0 || exp6c < 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_ewald_nocut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_eps_cut") {
+      buf_in >> eps >> rmin >> alpha >> rcut;
+      if (eps < 0.0 || rmin <= 0.0 || alpha <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_eps_cut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = rmin;
+      ff_param_tmp.params[2] = alpha;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_eps_cut_shift") {
+      buf_in >> eps >> rmin >> alpha >> rcut;
+      if (eps < 0.0 || rmin <= 0.0 || alpha <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_eps_cut_shift;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = rmin;
+      ff_param_tmp.params[2] = alpha;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_eps_nocut") {
+      buf_in >> eps >> rmin >> alpha;
+      if (eps < 0.0 || rmin <= 0.0 || alpha <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+      nparams = 3;
+      ff_param_tmp.type = exp6_eps_nocut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = rmin;
+      ff_param_tmp.params[2] = alpha;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_eps_coul_cut") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_eps_coul_cut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_eps_coul_cut_shift") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_eps_coul_cut_shift;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_eps_coul_nocut") {
+      buf_in >> exp6a >> exp6b >> exp6c;
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_eps_coul_nocut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_eps_ewald_cut") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_eps_ewald_cut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_eps_ewald_cut_shift") {
+      buf_in >> exp6a >> exp6b >> exp6c >> rcut;
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_eps_ewald_cut_shift;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else if (forcefieldname == "exp6_eps_ewald_nocut") {
+      buf_in >> exp6a >> exp6b >> exp6c;
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = exp6_eps_ewald_nocut;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = exp6a;
+      ff_param_tmp.params[1] = exp6b;
+      ff_param_tmp.params[2] = exp6c;
+      input_param_list.push_back(ff_param_tmp);
+
+    } else {
+      glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid forcefield name"+forcefieldname);
+    }
+
+    if (buf_in.fail()) {
+      glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Read error in " + str_tmp);
+    }
+
+    // Save the pair and their address for later compilation
+    i_tmp = new int[2];
+    i_tmp[0] = itype;
+    i_tmp[1] = jtype;
+    ff_pairs.push_back(i_tmp);
+
+  } while (!input_string_match(buf,"End of Input"));
+
+  if (ntypes == 0) {
+    glog.error("Force_Twobody::ReadInteractions:\n"
+	       "Zero types read from " + str_tmp);
+  }
+    
+  // Allocate ntypes x ntypes array input_param_index
+  input_param_index = new int*[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    input_param_index[itype] = new int[ntypes];
+  }
+  // Initialize input_param_index to empty value
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      input_param_index[itype][jtype] = -1;
+    }
+  }
+
+  for (ipair=0;ipair<input_param_list.size();ipair++) {
+    itype = ff_pairs[ipair][0];
+    jtype = ff_pairs[ipair][1];
+    input_param_index[itype][jtype] = ipair;
+    input_param_index[jtype][itype] = ipair;
+  }
+
+  for (ipair=0;ipair<input_param_list.size();ipair++) {
+    delete []ff_pairs[ipair];
+  }
+
+}
+
+void Force_Twobody::SetupInteractions(const Box* b, 
+                                      const double& g_ewald, 
+				      Comm* comm) {
+  int i,itype,jtype,ii,jj,iparam;
+  double eps,sigma,rmin,alpha,rcut;
+  ff_params ff_param_tmp;
+  double dielectric;
+  int node,nprocs;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  // Allocate ntypes x ntypes array param_index
+  param_index = new int*[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    param_index[itype] = new int[ntypes];
+  }
+
+  // Initialize param_index to empty value
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      param_index[itype][jtype] = -1;
+    }
+  }
+
+  Lnocut = false;
+
+  glog.get_logfile() << setprecision(4);
+  glog.get_logfile().unsetf(ios::fixed);
+  //First do pure component forms
+
+  if (node == 0) {
+    glog.get_logfile() << endl << "id1 \t id2 \t type \trcutsq \t np" << 
+      setw(13) << "\t p1      p2    ....   p_np  " <<  endl;
+  }
+
+  nentries = 0;
+  for (itype=0;itype<ntypes;itype++) {
+    ii = input_param_index[itype][itype];
+    if (ii != -1) {
+      ff_param_tmp.type = input_param_list[ii].type;
+      switch(ff_param_tmp.type) {
+      case lj_cut :
+	lj_setup(input_param_list[ii],ff_param_tmp);
+	break;
+      case lj_cut_shift :
+	lj_setup(input_param_list[ii],ff_param_tmp);
+	break;
+      case lj_nocut :
+	lj_setup(input_param_list[ii],ff_param_tmp);
+	break;
+      case lj_coul_cut :
+	dielectric = b->get_dielectric();
+	lj_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	break;
+      case lj_coul_cut_shift :
+	dielectric = b->get_dielectric();
+	lj_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	break;
+      case lj_coul_nocut :
+	dielectric = b->get_dielectric();
+	lj_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	break;
+      case lj_ewald_cut :
+	dielectric = b->get_dielectric();
+	if (g_ewald == 0.0) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type lj_ewald_cut");
+	}
+	lj_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	break;
+      case lj_ewald_cut_shift :
+	dielectric = b->get_dielectric();
+	if (g_ewald == 0.0) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type lj_ewald_cut");
+	}
+	lj_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	break;
+      case lj_ewald_nocut :
+	dielectric = b->get_dielectric();
+	if (g_ewald == 0.0) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type lj_ewald_nocut");
+	}
+	lj_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	break;
+      case exp6_cut :
+	exp6_setup(input_param_list[ii],ff_param_tmp);
+	break;
+      case exp6_cut_shift :
+	exp6_setup(input_param_list[ii],ff_param_tmp);
+	break;
+      case exp6_nocut :
+	exp6_setup(input_param_list[ii],ff_param_tmp);
+	break;
+      case exp6_coul_cut :
+	dielectric = b->get_dielectric();
+	exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	break;
+      case exp6_coul_cut_shift :
+	dielectric = b->get_dielectric();
+	exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	break;
+      case exp6_coul_nocut :
+	dielectric = b->get_dielectric();
+	exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	break;
+      case exp6_ewald_cut :
+	dielectric = b->get_dielectric();
+	if (g_ewald == 0.0) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type exp6_ewald_cut");
+	}
+	exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	break;
+      case exp6_ewald_cut_shift :
+	dielectric = b->get_dielectric();
+	if (g_ewald == 0.0) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type exp6_ewald_cut_shift");
+	}
+	exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	break;
+      case exp6_ewald_nocut :
+	dielectric = b->get_dielectric();
+	if (g_ewald == 0.0) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type exp6_ewald_nocut");
+	}
+	exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	break;
+      case exp6_eps_cut :
+	exp6_eps_setup(input_param_list[ii],ff_param_tmp);
+	break;
+      case exp6_eps_cut_shift :
+	exp6_eps_setup(input_param_list[ii],ff_param_tmp);
+	break;
+      case exp6_eps_nocut :
+	exp6_eps_setup(input_param_list[ii],ff_param_tmp);
+	break;
+      case exp6_eps_coul_cut :
+	dielectric = b->get_dielectric();
+	exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	break;
+      case exp6_eps_coul_cut_shift :
+	dielectric = b->get_dielectric();
+	exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	break;
+      case exp6_eps_coul_nocut :
+	dielectric = b->get_dielectric();
+	exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	break;
+      case exp6_eps_ewald_cut :
+	dielectric = b->get_dielectric();
+	if (g_ewald == 0.0) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type exp6_eps_ewald_cut");
+	}
+	exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	break;
+      case exp6_eps_ewald_cut_shift :
+	dielectric = b->get_dielectric();
+	if (g_ewald == 0.0) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type exp6_eps_ewald_cut_shift");
+	}
+	exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	break;
+      case exp6_eps_ewald_nocut :
+	dielectric = b->get_dielectric();
+	if (g_ewald == 0.0) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type exp6_eps_ewald_nocut");
+	}
+	exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	break;
+      default:
+	glog.error("Force_Twobody::SetupInteractions:\n"
+		   "Invalid forcefield type");
+      }
+      param_list.push_back(ff_param_tmp);
+      nentries++;
+      i = nentries-1;
+      param_index[itype][itype] = i;
+      if (node == 0) {
+	glog.get_logfile() << id_index[itype] << "\t" << id_index[itype] << "\t" 
+		<< param_list[i].type << "\t" << param_list[i].rcutsq 
+		     << "\t" << param_list[i].np; 
+	for (iparam=0;iparam<param_list[i].np;iparam++) {
+	  glog.get_logfile() << setw(13) << param_list[i].params[iparam];
+	}
+	glog.get_logfile() << endl;
+      }
+    } else {
+      glog.warning("Force_Twobody::SetupInteractions:\n"
+		 "Force field has no pure entry for particle type "
+		   + id_index[itype]);
+    }
+  }
+
+  // Now we treat the cross interactions
+  for (itype=0;itype<ntypes-1;itype++) {
+    for (jtype=itype+1;jtype<ntypes;jtype++) {
+      ii = input_param_index[itype][jtype];
+      // Obtain parameters from user input
+      if (ii!=-1) {
+
+	ff_param_tmp.type = input_param_list[ii].type;
+	switch(ff_param_tmp.type) {
+	case lj_cut :
+	  lj_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+	case lj_cut_shift :
+	  lj_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+	case lj_nocut :
+	  lj_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+	case lj_coul_cut :
+	  dielectric = b->get_dielectric();
+	  lj_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	  break;
+	case lj_coul_cut_shift :
+	  dielectric = b->get_dielectric();
+	  lj_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	  break;
+	case lj_coul_nocut :
+	  dielectric = b->get_dielectric();
+	  lj_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	  break;
+	case lj_ewald_cut :
+	  dielectric = b->get_dielectric();
+	  if (g_ewald == 0.0) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+		       "Ewald sum needed for twobody type lj_ewald_cut");
+	  }
+	  lj_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	  break;
+	case lj_ewald_cut_shift :
+	  dielectric = b->get_dielectric();
+	  if (g_ewald == 0.0) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+		       "Ewald sum needed for twobody type lj_ewald_cut");
+	  }
+	  lj_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	  break;
+	case lj_ewald_nocut :
+	  dielectric = b->get_dielectric();
+	  if (g_ewald == 0.0) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+		       "Ewald sum needed for twobody type lj_ewald_nocut");
+	  }
+	  lj_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	  break;
+	case exp6_cut :
+	  exp6_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+	case exp6_cut_shift :
+	  exp6_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+	case exp6_nocut :
+	  exp6_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+	case exp6_coul_cut :
+	  dielectric = b->get_dielectric();
+	  exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	  break;
+	case exp6_coul_cut_shift :
+	  dielectric = b->get_dielectric();
+	  exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	  break;
+	case exp6_coul_nocut :
+	  dielectric = b->get_dielectric();
+	  exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	  break;
+	case exp6_ewald_cut :
+	  dielectric = b->get_dielectric();
+	  if (g_ewald == 0.0) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+		       "Ewald sum needed for twobody type exp6_ewald_cut");
+	  }
+	  exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	  break;
+	case exp6_ewald_cut_shift :
+	  dielectric = b->get_dielectric();
+	  if (g_ewald == 0.0) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+		       "Ewald sum needed for twobody type exp6_ewald_cut_shift");
+	  }
+	  exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	  break;
+	case exp6_ewald_nocut :
+	  dielectric = b->get_dielectric();
+	  if (g_ewald == 0.0) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+		       "Ewald sum needed for twobody type exp6_ewald_nocut");
+	  }
+	  exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	  break;
+	case exp6_eps_cut :
+	  exp6_eps_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+	case exp6_eps_cut_shift :
+	  exp6_eps_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+	case exp6_eps_nocut :
+	  exp6_eps_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+	case exp6_eps_coul_cut :
+	  dielectric = b->get_dielectric();
+	  exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	  break;
+	case exp6_eps_coul_cut_shift :
+	  dielectric = b->get_dielectric();
+	  exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	  break;
+	case exp6_eps_coul_nocut :
+	  dielectric = b->get_dielectric();
+	  exp6_coul_setup(input_param_list[ii],dielectric,ff_param_tmp);
+	  break;
+	case exp6_eps_ewald_cut :
+	  dielectric = b->get_dielectric();
+	  if (g_ewald == 0.0) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+		       "Ewald sum needed for twobody type exp6_eps_ewald_cut");
+	  }
+	  exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	  break;
+	case exp6_eps_ewald_cut_shift :
+	  dielectric = b->get_dielectric();
+	  if (g_ewald == 0.0) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+		       "Ewald sum needed for twobody type exp6_eps_ewald_cut_shift");
+	  }
+	  exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	  break;
+	case exp6_eps_ewald_nocut :
+	  dielectric = b->get_dielectric();
+	  if (g_ewald == 0.0) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+		       "Ewald sum needed for twobody type exp6_eps_ewald_nocut");
+	  }
+	  exp6_ewald_setup(input_param_list[ii],dielectric,g_ewald,ff_param_tmp);
+	  break;
+	default:
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Invalid forcefield type");
+	}
+
+	param_list.push_back(ff_param_tmp);
+	nentries++;
+	i = nentries-1;
+	param_index[itype][jtype] = i;
+	param_index[jtype][itype] = i;
+	if (node == 0) {
+	  glog.get_logfile() << id_index[itype] << "\t" << id_index[jtype] << "\t"
+		       << param_list[i].type << "\t" << param_list[i].rcutsq 
+		       << "\t" << param_list[i].np; 
+	  for (iparam=0;iparam<param_list[i].np;iparam++) {
+	    glog.get_logfile() << setw(13) << param_list[i].params[iparam];
+	  }
+	  glog.get_logfile() << endl;
+	}
+
+	// Obtain parameters from mixing rule
+      } else {
+	ii = input_param_index[itype][itype];
+	jj = input_param_index[jtype][jtype];
+	if (ii==-1 || jj==-1) {
+	  glog.warning("Force_Twobody::SetupInteractions:\n"
+		 "Missing pure entry for this cross pair\n"
+		 "No interaction for this cross pair (" 
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + ")");
+	} else {
+	  if (input_param_list[ii].type!=input_param_list[jj].type) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+	     "Pure components have different forcefield types "
+             "for cross pair (" 		       
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + ")");
+	  } else {
+	    glog.warning("Force_Twobody::SetupInteractions:\n"
+		 "Using mixing rule for cross pair (" 
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + ")");
+	    // These commands should be customized for each case
+	    ff_param_tmp.type = input_param_list[ii].type;
+	    switch(ff_param_tmp.type) {
+	    case lj_cut :
+	      lj_setup(input_param_list[ii],input_param_list[jj],ff_param_tmp);
+	      break;
+	    case lj_cut_shift :
+	      lj_setup(input_param_list[ii],input_param_list[jj],ff_param_tmp);
+	      break;
+	    case lj_nocut :
+	      lj_setup(input_param_list[ii],input_param_list[jj],ff_param_tmp);
+	      break;
+	    case lj_coul_cut :
+	      dielectric = b->get_dielectric();
+	      lj_coul_setup(input_param_list[ii],input_param_list[jj],dielectric,ff_param_tmp);
+	      break;
+	    case lj_coul_cut_shift :
+	      dielectric = b->get_dielectric();
+	      lj_coul_setup(input_param_list[ii],input_param_list[jj],dielectric,ff_param_tmp);
+	      break;
+	    case lj_coul_nocut :
+	      dielectric = b->get_dielectric();
+	      lj_coul_setup(input_param_list[ii],input_param_list[jj],dielectric,ff_param_tmp);
+	      break;
+	    case lj_ewald_cut :
+	      dielectric = b->get_dielectric();
+	      lj_ewald_setup(input_param_list[ii],input_param_list[jj],dielectric,g_ewald,ff_param_tmp);
+	      break;
+	    case lj_ewald_cut_shift :
+	      dielectric = b->get_dielectric();
+	      lj_ewald_setup(input_param_list[ii],input_param_list[jj],dielectric,g_ewald,ff_param_tmp);
+	      break;
+	    case lj_ewald_nocut :
+	      dielectric = b->get_dielectric();
+	      lj_ewald_setup(input_param_list[ii],input_param_list[jj],dielectric,g_ewald,ff_param_tmp);
+	      break;
+	    case exp6_cut :
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "no mixing rule for type exp6_cut");
+	      break;
+	    case exp6_cut_shift :
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "no mixing rule for type exp6_cut_shift");
+	      break;
+	    case exp6_nocut :
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "no mixing rule for type exp6_nocut");
+	      break;
+	    case exp6_coul_cut :
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "no mixing rule for type exp6_coul_cut");
+	      break;
+	    case exp6_coul_cut_shift :
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "no mixing rule for type exp6_coul_cut_shift");
+	      break;
+	    case exp6_coul_nocut :
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "no mixing rule for type exp6_coul_nocut");
+	      break;
+	    case exp6_ewald_cut :
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "no mixing rule for type exp6_ewald_cut");
+	      break;
+	    case exp6_ewald_cut_shift :
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "no mixing rule for type exp6_ewald_cut_shift");
+	      break;
+	    case exp6_ewald_nocut :
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "no mixing rule for type exp6_ewald_nocut");
+	      break;
+	    case exp6_eps_cut :
+	      exp6_eps_setup(input_param_list[ii],input_param_list[jj],ff_param_tmp);
+	      break;
+	    case exp6_eps_cut_shift :
+	      exp6_eps_setup(input_param_list[ii],input_param_list[jj],ff_param_tmp);
+	      break;
+	    case exp6_eps_nocut :
+	      exp6_eps_setup(input_param_list[ii],input_param_list[jj],ff_param_tmp);
+	      break;
+	    case exp6_eps_coul_cut :
+	      exp6_eps_coul_setup(input_param_list[ii],input_param_list[jj],dielectric,ff_param_tmp);
+	      break;
+	    case exp6_eps_coul_cut_shift :
+	      exp6_eps_coul_setup(input_param_list[ii],input_param_list[jj],dielectric,ff_param_tmp);
+	      break;
+	    case exp6_eps_coul_nocut :
+	      exp6_eps_coul_setup(input_param_list[ii],input_param_list[jj],dielectric,ff_param_tmp);
+	      break;
+	    case exp6_eps_ewald_cut :
+	      exp6_eps_ewald_setup(input_param_list[ii],input_param_list[jj],dielectric,g_ewald,ff_param_tmp);
+	      break;
+	    case exp6_eps_ewald_cut_shift :
+	      exp6_eps_ewald_setup(input_param_list[ii],input_param_list[jj],dielectric,g_ewald,ff_param_tmp);
+	      break;
+	    case exp6_eps_ewald_nocut :
+	      exp6_eps_ewald_setup(input_param_list[ii],input_param_list[jj],dielectric,g_ewald,ff_param_tmp);
+	      break;
+	    default:
+	      glog.error("Force_Twobody::SetupInteractions:\n"
+			 "Invalid forcefield type");
+	    }
+	    param_list.push_back(ff_param_tmp);
+	    nentries++;
+	    i = nentries-1;
+	    param_index[itype][jtype] = i;
+	    param_index[jtype][itype] = i;
+	    if (node == 0) {
+	      glog.get_logfile() << id_index[itype] << "\t" << id_index[jtype] << "\t"
+			   << param_list[i].type << "\t" << param_list[i].rcutsq 
+			   << "\t" << param_list[i].np; 
+	      for (iparam=0;iparam<param_list[i].np;iparam++) {
+		glog.get_logfile() << setw(13) << param_list[i].params[iparam];
+	      }
+	      glog.get_logfile() << endl;
+	    }
+	  }
+	}
+      }
+    }
+  }
+
+  if (Lcoul) {
+    npieces = 2;
+    energy_piece.resize(npieces);
+    label_piece.resize(npieces);
+    label_piece[0] = "Dispersion";
+    label_piece[1] = "Coulombic";
+  }
+
+  // Free the memory allocated to input_param_list
+  for (i = 0;i<input_param_list.size();i++) {
+    delete[] input_param_list[i].params;
+  }
+  input_param_list.clear();
+}
+
+void Force_Twobody::SetupCutNeighSq(const double& rskin, Comm* comm) {
+  int itype,jtype,i;
+  ForceFieldTypes type;
+  int node;
+
+  node = comm->get_node();
+
+  // Allocate ntypes x ntypes array rcutneighsq_table
+  rcutneighsq_table = new double*[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    rcutneighsq_table[itype] = new double[ntypes];
+  }
+
+  // Assign values to rcutneighsq_table[][] using force field parameters
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      i = param_index[itype][jtype];
+
+      if (i != -1) {
+      type = param_list[i].type;
+      switch(type) {
+      case lj_cut :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case lj_cut_shift :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case lj_nocut :
+	glog.error("Force_Twobody::SetupCutNeighSq:\n"
+	    "No cut off defined for this ff type");
+	break;
+      case lj_coul_cut :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case lj_coul_cut_shift :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case lj_coul_nocut :
+	glog.error("Force_Twobody::SetupCutNeighSq:\n"
+	    "No cut off defined for this ff type");
+	break;
+      case lj_ewald_cut :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case lj_ewald_cut_shift :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case lj_ewald_nocut :
+	glog.error("Force_Twobody::SetupCutNeighSq:\n"
+	    "No cut off defined for this ff type");
+	break;
+      case exp6_cut :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case exp6_cut_shift :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case exp6_nocut :
+	glog.error("Force_Twobody::SetupCutNeighSq:\n"
+		   "No cut off defined for this ff type");
+	break;
+      case exp6_coul_cut :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case exp6_coul_cut_shift :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case exp6_coul_nocut :
+	glog.error("Force_Twobody::SetupCutNeighSq:\n"
+		   "No cut off defined for this ff type");
+	break;
+      case exp6_ewald_cut :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case exp6_ewald_cut_shift :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+      case exp6_ewald_nocut :
+	glog.error("Force_Twobody::SetupCutNeighSq:\n"
+		   "No cut off defined for this ff type");
+	break;
+      default:
+	glog.error("Force_Twobody::SetupCutNeighSq:\n"
+		   "Invalid forcefield type");
+      }
+      } else {
+	rcutneighsq_table[itype][jtype] = 0.0;
+      }
+    }
+  }
+}
+
+void Force_Twobody::ApplyForce(
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+		    const Box* b, Comm* comm) {
+
+  double f[3];
+  double energy_ij;
+  double virial_ij[nvirial];
+  int itype,jtype,ientry;
+  ForceFieldTypes twobody_type;
+  int i,j,image;
+  double xi[3],xj[3];
+  bool perflag;
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int nparticles;
+  int* neighptr;
+  double qi,qj,energy_coul_ij;
+
+  perflag = b->get_perflag();
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+    if (Lcoul) {
+      energy_piece[1] = 0.0;
+    }
+  }
+
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  if (Lneighbor) {
+
+    nparticles = p->get_nparticles();
+
+    for (i=0;i<nparticles;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      i_pnt->get_x(xi);
+      qi = i_pnt->get_charge();
+      neighptr = neighbor->first_ptr[i];
+
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+	qj = j_pnt->get_charge();
+	ientry = param_index[itype][jtype];
+	twobody_type = param_list[ientry].type;
+
+	switch(twobody_type) {
+	case lj_cut :
+	  force_lj(xi,xj,f,Lenergy,Lvirial,
+		       energy_ij,virial_ij,ientry);
+	  break;
+	case lj_cut_shift :
+	  force_lj(xi,xj,f,Lenergy,Lvirial,
+		       energy_ij,virial_ij,ientry);
+	  break;
+	case lj_coul_cut :
+	  force_lj_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case lj_coul_cut_shift :
+	  force_lj_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case lj_ewald_cut :
+	  force_lj_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case lj_ewald_cut_shift :
+	  force_lj_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_cut :
+	  force_exp6(xi,xj,f,Lenergy,Lvirial,
+		       energy_ij,virial_ij,ientry);
+	  break;
+	case exp6_cut_shift :
+	  force_exp6(xi,xj,f,Lenergy,Lvirial,
+		       energy_ij,virial_ij,ientry);
+	  break;
+	case exp6_coul_cut :
+	  force_exp6_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_coul_cut_shift :
+	  force_exp6_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_ewald_cut :
+	  force_exp6_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_ewald_cut_shift :
+	  force_exp6_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	default:
+	  glog.error("Force_Twobody::ApplyForce:\n"
+		     "Invalid forcefield type for Lneighbor true");
+	}
+
+	i_pnt->increment_f(f);
+	j_pnt->decrement_f(f);
+
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	  if (Lcoul) {
+	    energy_piece[1]+=energy_coul_ij;
+	  }
+	}
+
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+      }
+    }
+
+  } else {
+
+    nparticles = p->get_nparticles();
+    for (i=0;i<nparticles-1;i++) {
+      i_pnt = p->get_particle(i);
+      i_pnt->get_x(xi);
+      qi = i_pnt->get_charge();
+      itype = type_index[i_pnt->get_type()];
+      for (j=i+1;j<nparticles;j++) {
+	j_pnt = p->get_particle(j);
+	j_pnt->get_x(xj);
+	qj = j_pnt->get_charge();
+	jtype = type_index[j_pnt->get_type()];
+
+	ientry = param_index[itype][jtype];
+	twobody_type = param_list[ientry].type;
+	switch(twobody_type) {
+	case lj_cut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj(xi,xj,f,Lenergy,Lvirial,
+		   energy_ij,virial_ij,ientry);
+	  break;
+	case lj_cut_shift :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj(xi,xj,f,Lenergy,Lvirial,
+		   energy_ij,virial_ij,ientry);
+	  break;
+	case lj_nocut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj(xi,xj,f,Lenergy,Lvirial,
+		   energy_ij,virial_ij,ientry);
+	  break;
+	case lj_coul_cut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case lj_coul_cut_shift :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case lj_coul_nocut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case lj_ewald_cut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case lj_ewald_cut_shift :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case lj_ewald_nocut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_cut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_exp6(xi,xj,f,Lenergy,Lvirial,
+		     energy_ij,virial_ij,ientry);
+	  break;
+	case exp6_cut_shift:
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_exp6(xi,xj,f,Lenergy,Lvirial,
+		     energy_ij,virial_ij,ientry);
+	  break;
+	case exp6_nocut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_exp6(xi,xj,f,Lenergy,Lvirial,
+		     energy_ij,virial_ij,ientry);
+	  break;
+	case exp6_coul_cut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_exp6_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_coul_cut_shift :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_exp6_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_coul_nocut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_exp6_coul(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_ewald_cut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_exp6_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_ewald_cut_shift :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_exp6_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	case exp6_ewald_nocut :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_exp6_ewald(xi,xj,f,Lenergy,Lvirial,
+			energy_ij,energy_coul_ij,virial_ij,ientry,
+			qi,qj);
+	  break;
+	default:
+	  glog.error("Force_Twobody::ApplyForce:\n"
+		     "Invalid forcefield type for no neighboring");
+	}
+	
+	i_pnt->increment_f(f);
+	j_pnt->decrement_f(f);
+
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	}
+	if (Lcoul) {
+	  energy_piece[1]+=energy_coul_ij;
+	}
+
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+      }
+    }
+  }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+}
+
+void Force_Twobody::ApplyForceLJCutFast(
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+		    const Box* b, Comm* comm) {
+
+  double f[3];
+  double energy_ij;
+  int j;
+  double *xi,*xj;
+  Particle *i_pnt,*j_pnt,*j_pnt0;
+  int nparticles;
+  int* neighptr;
+  vector<double> xarray;
+  vector<double> farray;
+  double delr_norm,delr2,delr_2,delr_6,virial_ij;
+  double delr[3];
+
+  if (Lneighbor) {
+
+    nparticles = p->get_nparticles();
+    i_pnt = &(p->particles[0]);
+    j_pnt0 = &(p->particles[0]);
+    j_pnt = &(p->particles[0])+nparticles;
+    for (int i=0;i<nparticles;i++) {
+      neighptr = neighbor->first_ptr[i];
+      xi = i_pnt->x;
+      for (int ineigh=0;
+      	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+	//      for (int ineigh=0;
+	//	   ineigh<160;ineigh++) {
+	j = neighptr[ineigh];
+	//
+	// Adding or removing this line slows
+	// things down by 60% !!
+	//
+	j_pnt = j_pnt0+j;
+	delr2 = vec3_distsq(xi,j_pnt->x,delr);
+	//     if (delr2 <= param_list[0].rcutsq) {
+         if (ineigh<70) {
+	  delr_2 = 1.0/delr2;
+	  delr_6 = delr_2*delr_2*delr_2;
+	  virial_ij = (param_list[0].params[0]*delr_6
+		    - param_list[0].params[1])*delr_6;
+	  virial_ij = virial_ij*delr_2;
+	  f[0] = virial_ij*delr[0];
+	  f[1] = virial_ij*delr[1];
+	  f[2] = virial_ij*delr[2];
+	  vec3_add(i_pnt->f,f,i_pnt->f);
+	  vec3_subtract(j_pnt->f,f,j_pnt->f);
+	  i_pnt->f[0] += f[0];
+	  i_pnt->f[1] += f[1];
+	  i_pnt->f[2] += f[2];
+	  j_pnt->f[0] -= f[0];
+	  j_pnt->f[1] -= f[1];
+	  j_pnt->f[2] -= f[2];
+	}
+      }
+      i_pnt++;
+    }
+
+  } else {
+    glog.error("Force_Twobody::ApplyForceLJCutFast:\n"
+	       "Must use neighbor list");
+  }
+}
+
+void Force_Twobody::ApplyForceLJCutSuperFast(
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+		    const Box* b, Comm* comm) {
+
+  //  double f[3];
+  double fx,fy,fz;
+  double energy_ij;
+  int j,iarray;
+  double *xi,*xj,*xj0,*fi,*fj,*fj0;
+  Particle *i_pnt;
+  int nparticles,nghost_particles;
+  int* neighptr;
+  vector<double> xarray;
+  vector<double> farray;
+  double delr_norm,delr2,delr_2,delr_6,virial_ij;
+  double delr[3];
+  int i;
+
+  if (Lneighbor) {
+
+    nparticles = p->get_nparticles();
+    nghost_particles = p->get_nghost_particles();
+
+    xarray.resize(3*(nparticles+nghost_particles));
+    farray.resize(3*(nparticles+nghost_particles));
+
+    iarray = 0;
+    i_pnt = &(p->particles[0]);
+
+    for (i=0;i<nparticles+nghost_particles;i++) {
+      vec3_copy(i_pnt->x,&(xarray[iarray]));
+      vec3_copy(0.0,&(farray[iarray]));
+      iarray+=3;
+      i_pnt++;
+    }
+
+    xi = &xarray[0];
+    xj0 = &xarray[0];
+    fi = &farray[0];
+    fj0 = &farray[0];
+
+    for (i=0;i<nparticles;i++) {
+      neighptr = neighbor->first_ptr[i];
+
+      fx = 0.0;
+      fy = 0.0;
+      fz = 0.0;
+
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+ 	j = neighptr[ineigh];
+	xj = xj0+3*j;
+  	delr2 = vec3_distsq(xi,xj,delr);
+	if (delr2 <= param_list[0].rcutsq) {
+	  delr_2 = 1.0/delr2;
+	  delr_6 = delr_2*delr_2*delr_2;
+	  virial_ij = (param_list[0].params[0]*delr_6
+		    - param_list[0].params[1])*delr_6;
+	  virial_ij = virial_ij*delr_2;
+	  fj = fj0+3*j;
+	  fx += virial_ij*delr[0];
+	  fy += virial_ij*delr[1];
+	  fz += virial_ij*delr[2];
+	  fj[0] -= virial_ij*delr[0];
+	  fj[1] -= virial_ij*delr[1];
+	  fj[2] -= virial_ij*delr[2];
+	}
+      }
+      fi[0] += fx;
+      fi[1] += fy;
+      fi[2] += fz;
+
+      xi+=3;
+      fi+=3;
+
+    }
+
+    iarray = 0;
+    i_pnt = &(p->particles[0]);
+
+    for (i=0;i<nparticles+nghost_particles;i++) {
+      vec3_copy(&(farray[iarray]),i_pnt->f);
+      iarray+=3;
+      i_pnt++;
+    }
+
+  } else {
+    glog.error("Force_Twobody::ApplyForceLJCutFast:\n"
+	       "Must use neighbor list");
+  }
+
+}
+
+void Force_Twobody::lj_setup(const ff_params& ff_input_param_tmp, 
+			     ff_params& ff_param_tmp) {
+  double eps,sigma,rcutsq;
+  double delr_6;
+
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  eps = ff_input_param_tmp.params[0];
+  sigma = ff_input_param_tmp.params[1];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 5;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+
+  switch (type) {
+  case lj_cut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_cut_shift:
+    delr_6 = 1.0/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.params[4] = ff_param_tmp.params[2]*(delr_6*delr_6)
+      - ff_param_tmp.params[3]*delr_6;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_nocut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+}  
+
+void Force_Twobody::lj_setup(const ff_params& ff_input_param_tmpi, 
+                             const ff_params& ff_input_param_tmpj, 
+			     ff_params& ff_param_tmp) {
+  double eps,sigma,rcutsq;
+  double delr_6;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmpi.type;
+
+  eps = sqrt(ff_input_param_tmpi.params[0] *
+	     ff_input_param_tmpj.params[0]);
+  sigma = 0.5*(ff_input_param_tmpi.params[1] +
+	       ff_input_param_tmpj.params[1]);
+  rcutsq = max(ff_input_param_tmpi.rcutsq,
+	       ff_input_param_tmpj.rcutsq);
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 5;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+
+  switch (type) {
+  case lj_cut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_cut_shift:
+    delr_6 = 1.0/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.params[4] = ff_param_tmp.params[2]*(delr_6*delr_6)
+      - ff_param_tmp.params[3]*delr_6;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+    break;
+  case lj_nocut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+}  
+
+void Force_Twobody::lj_coul_setup(const ff_params& ff_input_param_tmp,
+				  const double& dielectric,
+			     ff_params& ff_param_tmp) {
+  double eps,sigma,rcutsq;
+  double delr_6;
+
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  eps = ff_input_param_tmp.params[0];
+  sigma = ff_input_param_tmp.params[1];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 6;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+  ff_param_tmp.params[5] = constants.esfactor/dielectric;
+  Lcoul = true;
+
+  switch (type) {
+  case lj_coul_cut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_coul_cut_shift:
+    delr_6 = 1.0/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.params[4] = ff_param_tmp.params[2]*(delr_6*delr_6)
+      - ff_param_tmp.params[3]*delr_6;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_coul_nocut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+}  
+
+void Force_Twobody::lj_coul_setup(const ff_params& ff_input_param_tmpi,
+				  const ff_params& ff_input_param_tmpj,
+				  const double& dielectric,
+				  ff_params& ff_param_tmp) {
+  double eps,sigma,rcutsq;
+  double delr_6;
+
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmpi.type;
+
+  eps = sqrt(ff_input_param_tmpi.params[0] *
+	     ff_input_param_tmpj.params[0]);
+  sigma = 0.5*(ff_input_param_tmpi.params[1] +
+	       ff_input_param_tmpj.params[1]);
+  rcutsq = max(ff_input_param_tmpi.rcutsq,
+	       ff_input_param_tmpj.rcutsq);
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 6;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+  ff_param_tmp.params[5] = constants.esfactor/dielectric;
+  Lcoul = true;
+
+  switch (type) {
+  case lj_coul_cut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_coul_cut_shift:
+    delr_6 = 1.0/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.params[4] = ff_param_tmp.params[2]*(delr_6*delr_6)
+      - ff_param_tmp.params[3]*delr_6;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_coul_nocut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+}  
+
+void Force_Twobody::lj_ewald_setup(const ff_params& ff_input_param_tmp,
+				  const double& dielectric, const double& g_ewald,
+			     ff_params& ff_param_tmp) {
+  double eps,sigma,rcutsq;
+  double delr_6;
+
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  eps = ff_input_param_tmp.params[0];
+  sigma = ff_input_param_tmp.params[1];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 7;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+  ff_param_tmp.params[5] = constants.esfactor/dielectric;
+  ff_param_tmp.params[6] = g_ewald;
+  Lcoul = true;
+
+  switch (type) {
+  case lj_ewald_cut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_ewald_cut_shift:
+    delr_6 = 1.0/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.params[4] = ff_param_tmp.params[2]*(delr_6*delr_6)
+      - ff_param_tmp.params[3]*delr_6;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_ewald_nocut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+}  
+
+void Force_Twobody::lj_ewald_setup(const ff_params& ff_input_param_tmpi,
+				   const ff_params& ff_input_param_tmpj,
+				  const double& dielectric, const double& g_ewald,
+			     ff_params& ff_param_tmp) {
+  double eps,sigma,rcutsq;
+  double delr_6;
+
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmpi.type;
+
+  eps = sqrt(ff_input_param_tmpi.params[0] *
+	     ff_input_param_tmpj.params[0]);
+  sigma = 0.5*(ff_input_param_tmpi.params[1] +
+	       ff_input_param_tmpj.params[1]);
+  rcutsq = max(ff_input_param_tmpi.rcutsq,
+	       ff_input_param_tmpj.rcutsq);
+
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 7;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+  ff_param_tmp.params[5] = constants.esfactor/dielectric;
+  ff_param_tmp.params[6] = g_ewald;
+  Lcoul = true;
+
+  switch (type) {
+  case lj_ewald_cut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_ewald_cut_shift:
+    delr_6 = 1.0/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.params[4] = ff_param_tmp.params[2]*(delr_6*delr_6)
+      - ff_param_tmp.params[3]*delr_6;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case lj_ewald_nocut:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+}  
+
+void Force_Twobody::exp6_setup(const ff_params& ff_input_param_tmp,
+				     ff_params& ff_param_tmp) {
+  double a,b,c,rcutsq;
+  double expr;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  a = ff_input_param_tmp.params[0];
+  b = ff_input_param_tmp.params[1];
+  c = ff_input_param_tmp.params[2];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 6;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = a*b;
+  ff_param_tmp.params[1] = c*6.0;
+  ff_param_tmp.params[2] = -b;
+  ff_param_tmp.params[3] = a;
+  ff_param_tmp.params[4] = c;
+
+  switch (type) {
+  case exp6_cut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_cut_shift:
+    expr = exp(ff_param_tmp.params[2]*sqrt(rcutsq));
+    ff_param_tmp.params[5] = ff_param_tmp.params[3]*expr
+	- ff_param_tmp.params[4]/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_nocut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+
+}  
+
+void Force_Twobody::exp6_coul_setup(const ff_params& ff_input_param_tmp,
+			       const double& dielectric,
+			       ff_params& ff_param_tmp) {
+  double a,b,c,rcutsq;
+  double expr;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  a = ff_input_param_tmp.params[0];
+  b = ff_input_param_tmp.params[1];
+  c = ff_input_param_tmp.params[2];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 7;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = a*b;
+  ff_param_tmp.params[1] = c*6.0;
+  ff_param_tmp.params[2] = -b;
+  ff_param_tmp.params[3] = a;
+  ff_param_tmp.params[4] = c;
+  ff_param_tmp.params[6] = constants.esfactor/dielectric;
+  Lcoul = true;
+
+  switch (type) {
+  case exp6_coul_cut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_coul_cut_shift:
+    expr = exp(ff_param_tmp.params[2]*sqrt(rcutsq));
+    ff_param_tmp.params[5] = ff_param_tmp.params[3]*expr
+	- ff_param_tmp.params[4]/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_coul_nocut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+
+}  
+
+void Force_Twobody::exp6_ewald_setup(const ff_params& ff_input_param_tmp,
+				     const double& dielectric, const double& g_ewald, 
+				     ff_params& ff_param_tmp) {
+  double a,b,c,rcutsq;
+  double expr;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  a = ff_input_param_tmp.params[0];
+  b = ff_input_param_tmp.params[1];
+  c = ff_input_param_tmp.params[2];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 8;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = a*b;
+  ff_param_tmp.params[1] = c*6.0;
+  ff_param_tmp.params[2] = -b;
+  ff_param_tmp.params[3] = a;
+  ff_param_tmp.params[4] = c;
+  ff_param_tmp.params[6] = constants.esfactor/dielectric;
+  ff_param_tmp.params[7] = g_ewald;
+  Lcoul = true;
+
+  switch (type) {
+  case exp6_ewald_cut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_ewald_cut_shift:
+    expr = exp(ff_param_tmp.params[2]*sqrt(rcutsq));
+    ff_param_tmp.params[5] = ff_param_tmp.params[3]*expr
+	- ff_param_tmp.params[4]/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_ewald_nocut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+
+}  
+
+void Force_Twobody::exp6_eps_setup(const ff_params& ff_input_param_tmp,
+				     ff_params& ff_param_tmp) {
+
+  double eps,rmin,alpha,rcutsq;
+  double expr;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  eps = ff_input_param_tmp.params[0];
+  rmin = ff_input_param_tmp.params[1];
+  alpha = ff_input_param_tmp.params[2];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.np = 6;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin*exp(alpha);
+  ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+  ff_param_tmp.params[2] = -alpha/rmin;
+  ff_param_tmp.params[3] = eps*6.0/(alpha-6.0)*exp(alpha);
+  ff_param_tmp.params[4] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+
+  switch (type) {
+  case exp6_eps_cut:
+    ff_param_tmp.type = exp6_cut;
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_eps_cut_shift:
+    ff_param_tmp.type = exp6_cut_shift;
+    expr = exp(ff_param_tmp.params[2]*sqrt(rcutsq));
+    ff_param_tmp.params[5] = ff_param_tmp.params[3]*expr
+	- ff_param_tmp.params[4]/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_eps_nocut:
+    ff_param_tmp.type = exp6_nocut;
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+}  
+
+void Force_Twobody::exp6_eps_setup(const ff_params& ff_input_param_tmpi,
+			       const ff_params& ff_input_param_tmpj,
+				     ff_params& ff_param_tmp) {
+
+  double eps,rmin,alpha,rcutsq;
+  double expr;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmpi.type;
+
+  eps = sqrt(ff_input_param_tmpi.params[0]*
+	     ff_input_param_tmpj.params[0]);
+  rmin = 0.5*(ff_input_param_tmpi.params[1]+
+	      ff_input_param_tmpj.params[1]);
+  alpha = sqrt(ff_input_param_tmpi.params[2]*
+	       ff_input_param_tmpj.params[2]);
+  rcutsq = max(ff_input_param_tmpi.rcutsq,
+	       ff_input_param_tmpj.rcutsq);
+
+
+  ff_param_tmp.np = 6;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin*exp(alpha);
+  ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+  ff_param_tmp.params[2] = -alpha/rmin;
+  ff_param_tmp.params[3] = eps*6.0/(alpha-6.0)*exp(alpha);
+  ff_param_tmp.params[4] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+
+  switch (type) {
+  case exp6_eps_cut:
+    ff_param_tmp.type = exp6_cut;
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_eps_cut_shift:
+    ff_param_tmp.type = exp6_cut_shift;
+    expr = exp(ff_param_tmp.params[2]*sqrt(rcutsq));
+    ff_param_tmp.params[5] = ff_param_tmp.params[3]*expr
+	- ff_param_tmp.params[4]/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_eps_nocut:
+    ff_param_tmp.type = exp6_nocut;
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+}  
+
+void Force_Twobody::exp6_eps_coul_setup(const ff_params& ff_input_param_tmp,
+			       const double& dielectric,
+			       ff_params& ff_param_tmp) {
+  double eps,rmin,alpha,rcutsq;
+  double expr;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  eps = ff_input_param_tmp.params[0];
+  rmin = ff_input_param_tmp.params[1];
+  alpha = ff_input_param_tmp.params[2];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.np = 7;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin*exp(alpha);
+  ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+  ff_param_tmp.params[2] = -alpha/rmin;
+  ff_param_tmp.params[3] = eps*6.0/(alpha-6.0)*exp(alpha);
+  ff_param_tmp.params[4] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+  ff_param_tmp.params[6] = constants.esfactor/dielectric;
+  Lcoul = true;
+
+  switch (type) {
+  case exp6_coul_cut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_coul_cut_shift:
+    expr = exp(ff_param_tmp.params[2]*sqrt(rcutsq));
+    ff_param_tmp.params[5] = ff_param_tmp.params[3]*expr
+	- ff_param_tmp.params[4]/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_coul_nocut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+
+}  
+
+void Force_Twobody::exp6_eps_coul_setup(const ff_params& ff_input_param_tmpi,
+					const ff_params& ff_input_param_tmpj,
+			       const double& dielectric,
+			       ff_params& ff_param_tmp) {
+  double eps,rmin,alpha,rcutsq;
+  double expr;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmpi.type;
+
+  eps = sqrt(ff_input_param_tmpi.params[0]*
+	     ff_input_param_tmpj.params[0]);
+  rmin = 0.5*(ff_input_param_tmpi.params[1]+
+	      ff_input_param_tmpj.params[1]);
+  alpha = sqrt(ff_input_param_tmpi.params[2]*
+	       ff_input_param_tmpj.params[2]);
+  rcutsq = max(ff_input_param_tmpi.rcutsq,
+	       ff_input_param_tmpj.rcutsq);
+
+  ff_param_tmp.np = 7;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin*exp(alpha);
+  ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+  ff_param_tmp.params[2] = -alpha/rmin;
+  ff_param_tmp.params[3] = eps*6.0/(alpha-6.0)*exp(alpha);
+  ff_param_tmp.params[4] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+  ff_param_tmp.params[6] = constants.esfactor/dielectric;
+  Lcoul = true;
+
+  switch (type) {
+  case exp6_coul_cut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_coul_cut_shift:
+    expr = exp(ff_param_tmp.params[2]*sqrt(rcutsq));
+    ff_param_tmp.params[5] = ff_param_tmp.params[3]*expr
+	- ff_param_tmp.params[4]/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_coul_nocut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+
+}  
+
+void Force_Twobody::exp6_eps_ewald_setup(const ff_params& ff_input_param_tmp,
+				     const double& dielectric, const double& g_ewald, 
+				     ff_params& ff_param_tmp) {
+  double eps,rmin,alpha,rcutsq;
+  double expr;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  eps = ff_input_param_tmp.params[0];
+  rmin = ff_input_param_tmp.params[1];
+  alpha = ff_input_param_tmp.params[2];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.np = 8;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin*exp(alpha);
+  ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+  ff_param_tmp.params[2] = -alpha/rmin;
+  ff_param_tmp.params[3] = eps*6.0/(alpha-6.0)*exp(alpha);
+  ff_param_tmp.params[4] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+  ff_param_tmp.params[6] = constants.esfactor/dielectric;
+  ff_param_tmp.params[7] = g_ewald;
+  Lcoul = true;
+
+  switch (type) {
+  case exp6_ewald_cut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_ewald_cut_shift:
+    expr = exp(ff_param_tmp.params[2]*sqrt(rcutsq));
+    ff_param_tmp.params[5] = ff_param_tmp.params[3]*expr
+	- ff_param_tmp.params[4]/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_ewald_nocut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+
+}  
+
+void Force_Twobody::exp6_eps_ewald_setup(const ff_params& ff_input_param_tmpi,
+					 const ff_params& ff_input_param_tmpj,
+				     const double& dielectric, const double& g_ewald, 
+				     ff_params& ff_param_tmp) {
+  double eps,rmin,alpha,rcutsq;
+  double expr;
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmpi.type;
+
+  eps = sqrt(ff_input_param_tmpi.params[0]*
+	     ff_input_param_tmpj.params[0]);
+  rmin = 0.5*(ff_input_param_tmpi.params[1]+
+	      ff_input_param_tmpj.params[1]);
+  alpha = sqrt(ff_input_param_tmpi.params[2]*
+	       ff_input_param_tmpj.params[2]);
+  rcutsq = max(ff_input_param_tmpi.rcutsq,
+	       ff_input_param_tmpj.rcutsq);
+
+  ff_param_tmp.np = 8;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin*exp(alpha);
+  ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+  ff_param_tmp.params[2] = -alpha/rmin;
+  ff_param_tmp.params[3] = eps*6.0/(alpha-6.0)*exp(alpha);
+  ff_param_tmp.params[4] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+  ff_param_tmp.params[6] = constants.esfactor/dielectric;
+  ff_param_tmp.params[7] = g_ewald;
+  Lcoul = true;
+
+  switch (type) {
+  case exp6_ewald_cut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_ewald_cut_shift:
+    expr = exp(ff_param_tmp.params[2]*sqrt(rcutsq));
+    ff_param_tmp.params[5] = ff_param_tmp.params[3]*expr
+	- ff_param_tmp.params[4]/(rcutsq*rcutsq*rcutsq);
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+  case exp6_ewald_nocut:
+    ff_param_tmp.params[5] = 0.0;
+    ff_param_tmp.rcutsq = 1.0/(small*small);
+    Lnocut = true;
+    break;
+  }  
+
+}  
+@
+
+
+4.6
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d203 2
+a204 1
+    std::istringstream buf_in(buf);
+d774 1
+a774 1
+	if (g_ewald == NULL) {
+d782 1
+a782 1
+	if (g_ewald == NULL) {
+d790 1
+a790 1
+	if (g_ewald == NULL) {
+d819 1
+a819 1
+	if (g_ewald == NULL) {
+d827 1
+a827 1
+	if (g_ewald == NULL) {
+d835 1
+a835 1
+	if (g_ewald == NULL) {
+d864 1
+a864 1
+	if (g_ewald == NULL) {
+d872 1
+a872 1
+	if (g_ewald == NULL) {
+d880 1
+a880 1
+	if (g_ewald == NULL) {
+d942 1
+a942 1
+	  if (g_ewald == NULL) {
+d950 1
+a950 1
+	  if (g_ewald == NULL) {
+d958 1
+a958 1
+	  if (g_ewald == NULL) {
+d987 1
+a987 1
+	  if (g_ewald == NULL) {
+d995 1
+a995 1
+	  if (g_ewald == NULL) {
+d1003 1
+a1003 1
+	  if (g_ewald == NULL) {
+d1032 1
+a1032 1
+	  if (g_ewald == NULL) {
+d1040 1
+a1040 1
+	  if (g_ewald == NULL) {
+d1048 1
+a1048 1
+	  if (g_ewald == NULL) {
+d1365 1
+a1365 1
+    for (int i=0;i<nparticles;i++) {
+d1675 1
+a1675 1
+  double delr_norm,delr2,delr_2,delr_6,virial;
+d1702 1
+a1702 1
+	  virial = (param_list[0].params[0]*delr_6
+d1704 4
+a1707 4
+	  virial = virial*delr_2;
+	  f[0] = virial*delr[0];
+	  f[1] = virial*delr[1];
+	  f[2] = virial*delr[2];
+d1743 1
+a1743 1
+  double delr_norm,delr2,delr_2,delr_6,virial;
+d1785 1
+a1785 1
+	  virial = (param_list[0].params[0]*delr_6
+d1787 1
+a1787 1
+	  virial = virial*delr_2;
+d1789 6
+a1794 6
+	  fx += virial*delr[0];
+	  fy += virial*delr[1];
+	  fz += virial*delr[2];
+	  fj[0] -= virial*delr[0];
+	  fj[1] -= virial*delr[1];
+	  fj[2] -= virial*delr[2];
+@
+
+
+4.5
+log
+@Added multiple replica feature.
+@
+text
+@d1326 3
+a1328 1
+                    const bool& Lenergy, const bool& Lvirial, ParticleList* p, 
+d1660 3
+a1662 1
+                    const bool& Lenergy, const bool& Lvirial, ParticleList* p, 
+d1727 3
+a1729 1
+                    const bool& Lenergy, const bool& Lvirial, ParticleList* p, 
+@
+
+
+4.5.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d1326 1
+a1326 3
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+d1658 1
+a1658 3
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+d1723 1
+a1723 3
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+@
+
+
+4.5.2.1
+log
+@Created automatic differentiation version for LJ force field, called lj_cut_AD
+@
+text
+@a65 1
+#include "ADTools.hpp"
+a238 16
+    } else if (forcefieldname == "lj_cut_AD") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 2;
+      ff_param_tmp.type = lj_cut_AD;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.rcutsq = rcut*rcut;
+      input_param_list.push_back(ff_param_tmp);
+
+a752 3
+      case lj_cut_AD :
+	lj_setup(input_param_list[ii],ff_param_tmp);
+	break;
+a920 3
+	case lj_cut_AD :
+	  lj_setup(input_param_list[ii],ff_param_tmp);
+	  break;
+a1100 3
+	    case lj_cut_AD :
+	      lj_setup(input_param_list[ii],input_param_list[jj],ff_param_tmp);
+	      break;
+a1256 3
+      case lj_cut_AD :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].rcutsq)+rskin,2);
+	break;
+a1384 4
+	case lj_cut_AD :
+ 	  force_lj_AD(xi,xj,f,Lenergy,Lvirial,
+ 		       energy_ij,virial_ij,ientry);
+	  break;
+a1486 7
+	case lj_cut_AD :
+	  if (perflag) {
+  	    b->Minimg_Diff_Shift(xi,xj);
+	  }
+	  force_lj_AD(xi,xj,f,Lenergy,Lvirial,
+		   energy_ij,virial_ij,ientry);
+	  break;
+d1491 1
+a1491 1
+	  force_lj_AD(xi,xj,f,Lenergy,Lvirial,
+d1498 1
+a1498 1
+	  force_lj_AD(xi,xj,f,Lenergy,Lvirial,
+a1841 5
+  case lj_cut_AD:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+a1886 5
+  case lj_cut_AD:
+    ff_param_tmp.params[4] = 0.0;
+    ff_param_tmp.rcutsq = rcutsq;
+    rcutmax = max(sqrt(rcutsq), rcutmax);
+    break;
+@
+
+
+4.4
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d142 1
+a142 1
+    glog.logfile << endl;
+d149 1
+a149 1
+    glog.logfile << endl;
+d154 1
+a154 1
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+d735 2
+a736 2
+  glog.logfile << setprecision(4);
+  glog.logfile.unsetf(ios::fixed);
+d740 1
+a740 1
+    glog.logfile << endl << "id1 \t id2 \t type \trcutsq \t np" << 
+d894 1
+a894 1
+	glog.logfile << id_index[itype] << "\t" << id_index[itype] << "\t" 
+d898 1
+a898 1
+	  glog.logfile << setw(13) << param_list[i].params[iparam];
+d900 1
+a900 1
+	glog.logfile << endl;
+d1064 1
+a1064 1
+	  glog.logfile << id_index[itype] << "\t" << id_index[jtype] << "\t"
+d1068 1
+a1068 1
+	    glog.logfile << setw(13) << param_list[i].params[iparam];
+d1070 1
+a1070 1
+	  glog.logfile << endl;
+d1204 1
+a1204 1
+	      glog.logfile << id_index[itype] << "\t" << id_index[jtype] << "\t"
+d1208 1
+a1208 1
+		glog.logfile << setw(13) << param_list[i].params[iparam];
+d1210 1
+a1210 1
+	      glog.logfile << endl;
+@
+
+
+4.4.2.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d708 1
+a708 2
+void Force_Twobody::SetupInteractions(const ParticleList* p, 
+				      const Box* b, 
+@
+
+
+4.4.2.2
+log
+@Latest PPPM version
+@
+text
+@d708 1
+a708 1
+void Force_Twobody::SetupInteractions(ParticleList* p, 
+d710 1
+a710 1
+                                      double& g_ewald, 
+d774 1
+a774 1
+	if (g_ewald == 0.0) {
+d782 1
+a782 1
+	if (g_ewald == 0.0) {
+d790 1
+a790 1
+	if (g_ewald == 0.0) {
+d819 1
+a819 1
+	if (g_ewald == 0.0) {
+d827 1
+a827 1
+	if (g_ewald == 0.0) {
+d835 1
+a835 1
+	if (g_ewald == 0.0) {
+d864 1
+a864 1
+	if (g_ewald == 0.0) {
+d872 1
+a872 1
+	if (g_ewald == 0.0) {
+d880 1
+a880 1
+	if (g_ewald == 0.0) {
+d942 1
+a942 1
+	  if (g_ewald == 0.0) {
+d950 1
+a950 1
+	  if (g_ewald == 0.0) {
+d958 1
+a958 1
+	  if (g_ewald == 0.0) {
+d987 1
+a987 1
+	  if (g_ewald == 0.0) {
+d995 1
+a995 1
+	  if (g_ewald == 0.0) {
+d1003 1
+a1003 1
+	  if (g_ewald == 0.0) {
+d1032 1
+a1032 1
+	  if (g_ewald == 0.0) {
+d1040 1
+a1040 1
+	  if (g_ewald == 0.0) {
+d1048 1
+a1048 1
+	  if (g_ewald == 0.0) {
+d1328 1
+a1328 1
+		    const Box* b, double& g_ewald, Comm* comm) {
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d709 2
+a710 2
+				      const Force_Ewald* ff_ewald,
+                                      Comm* comm) {
+d714 1
+a714 1
+  double dielectric,g_ewald;
+d773 1
+a773 1
+	if (ff_ewald == NULL) {
+a776 1
+	g_ewald = ff_ewald->get_g_ewald();
+d781 1
+a781 1
+	if (ff_ewald == NULL) {
+a784 1
+	g_ewald = ff_ewald->get_g_ewald();
+d789 1
+a789 1
+	if (ff_ewald == NULL) {
+a792 1
+	g_ewald = ff_ewald->get_g_ewald();
+d818 1
+a818 1
+	if (ff_ewald == NULL) {
+a821 1
+	g_ewald = ff_ewald->get_g_ewald();
+d826 1
+a826 1
+	if (ff_ewald == NULL) {
+a829 1
+	g_ewald = ff_ewald->get_g_ewald();
+d834 1
+a834 1
+	if (ff_ewald == NULL) {
+a837 1
+	g_ewald = ff_ewald->get_g_ewald();
+d863 1
+a863 1
+	if (ff_ewald == NULL) {
+a866 1
+	g_ewald = ff_ewald->get_g_ewald();
+d871 1
+a871 1
+	if (ff_ewald == NULL) {
+a874 1
+	g_ewald = ff_ewald->get_g_ewald();
+d879 1
+a879 1
+	if (ff_ewald == NULL) {
+a882 1
+	g_ewald = ff_ewald->get_g_ewald();
+d941 1
+a941 1
+	  if (ff_ewald == NULL) {
+a944 1
+	  g_ewald = ff_ewald->get_g_ewald();
+d949 1
+a949 1
+	  if (ff_ewald == NULL) {
+a952 1
+	  g_ewald = ff_ewald->get_g_ewald();
+d957 1
+a957 1
+	  if (ff_ewald == NULL) {
+a960 1
+	  g_ewald = ff_ewald->get_g_ewald();
+d986 1
+a986 1
+	  if (ff_ewald == NULL) {
+a989 1
+	  g_ewald = ff_ewald->get_g_ewald();
+d994 1
+a994 1
+	  if (ff_ewald == NULL) {
+a997 1
+	  g_ewald = ff_ewald->get_g_ewald();
+d1002 1
+a1002 1
+	  if (ff_ewald == NULL) {
+a1005 1
+	  g_ewald = ff_ewald->get_g_ewald();
+d1031 1
+a1031 1
+	  if (ff_ewald == NULL) {
+a1034 1
+	  g_ewald = ff_ewald->get_g_ewald();
+d1039 1
+a1039 1
+	  if (ff_ewald == NULL) {
+a1042 1
+	  g_ewald = ff_ewald->get_g_ewald();
+d1047 1
+a1047 1
+	  if (ff_ewald == NULL) {
+a1050 1
+	  g_ewald = ff_ewald->get_g_ewald();
+a1120 1
+	      g_ewald = ff_ewald->get_g_ewald();
+a1124 1
+	      g_ewald = ff_ewald->get_g_ewald();
+a1128 1
+	      g_ewald = ff_ewald->get_g_ewald();
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a2546 8
+
+// added saubry (01-24-05)
+void Force_Twobody::EnergyChange(int* atom, vector <double> boost,
+				 const bool& Lenergy,
+				 ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Twobody::EnergyChange:\n"
+	     "Not implemented yet");
+}
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d2549 1
+a2549 1
+void Force_Twobody::EnergyChange(int* atom, double boost[3],
+@
+
+
+4.3.2.1.2.2
+log
+@Added EAM energy change calculation
+@
+text
+@a82 1
+  energy_save.resize(npieces);
+@
+
+
+4.3.2.1.2.3
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d2549 7
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d662 1
+a662 1
+		   "Invalid forcefield name");
+d726 7
+d912 3
+a914 2
+      glog.error("Force_Twobody::SetupInteractions:\n"
+		 "Type has no pure entry");
+d1096 5
+a1100 2
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		 "Missing pure entry for this cross pair");
+d1104 4
+a1107 1
+	     "Pure components of cross pair have different forcefield types ");
+d1109 4
+d1272 1
+d1339 3
+a1677 8
+// added saubry (01-24-05)
+void Force_Twobody::EnergyChange(int* atom, vector <double> boost,
+				 const bool& Lenergy, 
+				 ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Twobody::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+a1884 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::lj_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+    
+a1977 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::lj_coul_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+
+a2072 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::lj_ewald_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+
+a2307 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::exp6_eps_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+    
+a2405 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::exp6_eps_coul_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+    
+a2503 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::exp6_eps_ewald_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+    
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d646 1
+a646 1
+		   "Invalid forcefield name"+forcefieldname);
+a709 7
+  // Initialize param_index to empty value
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      param_index[itype][jtype] = -1;
+    }
+  }
+
+d889 2
+a890 3
+      glog.warning("Force_Twobody::SetupInteractions:\n"
+		 "Force field has no pure entry for particle type "
+		   + id_index[itype]);
+d1072 2
+a1073 5
+	  glog.warning("Force_Twobody::SetupInteractions:\n"
+		 "Missing pure entry for this cross pair\n"
+		 "No interaction for this cross pair (" 
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + ")");
+d1077 1
+a1077 4
+	     "Pure components have different forcefield types "
+             "for cross pair (" 		       
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + ")");
+a1078 4
+	    glog.warning("Force_Twobody::SetupInteractions:\n"
+		 "Using mixing rule for cross pair (" 
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + ")");
+a1237 1
+      if (i != -1) {
+a1303 3
+      } else {
+	rcutneighsq_table[itype][jtype] = 0.0;
+      }
+d1640 8
+d1855 6
+d1954 6
+d2055 6
+d2296 6
+d2400 6
+d2504 6
+@
+
+
+3.5
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.4
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.3
+log
+@Added a ForceTwobody exp6 example (BKS SiO2) to the
+test suite.
+@
+text
+@d646 1
+a646 1
+		   "Invalid forcefield name");
+d710 7
+d896 3
+a898 2
+      glog.error("Force_Twobody::SetupInteractions:\n"
+		 "Type has no pure entry");
+d1080 5
+a1084 2
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		 "Missing pure entry for this cross pair");
+d1088 4
+a1091 1
+	     "Pure components of cross pair have different forcefield types ");
+d1093 4
+d1256 1
+d1323 3
+a1868 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::lj_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+    
+a1961 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::lj_coul_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+
+a2056 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::lj_ewald_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+
+a2291 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::exp6_eps_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+    
+a2389 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::exp6_eps_coul_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+    
+a2487 6
+  if (ff_input_param_tmpi.type != ff_input_param_tmpj.type) {
+    glog.error("Force_Twobody::exp6_eps_ewald_setup:\n"
+	       "Pure components of cross pair "
+	       "have different forcefield types ");
+  }
+    
+@
+
+
+3.3.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a1639 10
+
+// added saubry (01-24-05)
+void Force_Twobody::EnergyChange(int* atom, vector <double> boost,
+				 const bool& Lenergy, const bool& Lvirial, 
+				 ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Twobody::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+
+@
+
+
+3.3.6.2
+log
+@Update changes.
+@
+text
+@d1643 1
+a1643 1
+				 const bool& Lenergy, 
+@
+
+
+3.3.6.3
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d1640 1
+d1649 1
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d347 1
+a347 1
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+d364 1
+a364 1
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+d381 1
+a381 1
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0) {
+d397 1
+a397 1
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+d414 1
+a414 1
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+d431 1
+a431 1
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0) {
+d447 1
+a447 1
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+d464 1
+a464 1
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0 || rcut <= 0.0) {
+d481 1
+a481 1
+      if (exp6a <= 0.0 ||  exp6b <= 0.0 || exp6c < 0.0) {
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d55 2
+d108 1
+d168 5
+a172 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << isize << endl;
+#endif
+d175 5
+a179 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << buf << endl;
+#endif
+d214 1
+a214 1
+      nparams = 3;
+a216 1
+      // Need to delete this at some point
+d220 1
+a220 1
+      ff_param_tmp.params[2] = rcut;
+d222 2
+a223 2
+    }
+    else if (forcefieldname == "lj_cut_shift") {
+d230 1
+a230 1
+      nparams = 3;
+a232 1
+      // Need to delete this at some point
+d236 1
+a236 1
+      ff_param_tmp.params[2] = rcut;
+d238 2
+a239 2
+    }
+    else if (forcefieldname == "lj_nocut") {
+a247 1
+      // Need to delete this at some point
+d252 82
+a333 4
+    }
+    else if (forcefieldname == "exp6_nocut") {
+      buf_in >> eps >> rmin >> alpha;
+      if (eps < 0.0 || rmin <= 0.0 || alpha <= 0.0) {
+d337 49
+d389 133
+a521 1
+      // Need to delete this at some point
+d526 1
+d528 2
+a529 2
+    }
+    else if (forcefieldname == "square_exp6_nocut") {
+d536 1
+a536 1
+      ff_param_tmp.type = square_exp6_nocut;
+a537 1
+      // Need to delete this at some point
+d543 38
+a580 4
+    }
+    else if (forcefieldname == "lj_cut_coul") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+d586 1
+a586 1
+      ff_param_tmp.type = lj_cut_coul;
+a587 1
+      // Need to delete this at some point
+d589 3
+a591 3
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.params[2] = rcut;
+d593 5
+a597 5
+    }
+    else if (forcefieldname == "lj_cut_shift_coul") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+d602 1
+a602 1
+      ff_param_tmp.type = lj_cut_shift_coul;
+a603 1
+      // Need to delete this at some point
+d605 4
+a608 3
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.params[2] = rcut;
+d610 4
+a613 4
+    }
+    else if (forcefieldname == "lj_cut_ewald") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+d619 1
+a619 1
+      ff_param_tmp.type = lj_cut_ewald;
+a620 1
+      // Need to delete this at some point
+d622 4
+a625 3
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.params[2] = rcut;
+d627 5
+a631 5
+    }
+    else if (forcefieldname == "lj_cut_shift_ewald") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+d636 1
+a636 1
+      ff_param_tmp.type = lj_cut_shift_ewald;
+d639 3
+a641 3
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.params[2] = rcut;
+d643 2
+a644 2
+    }
+    else {
+d717 2
+a718 6
+    glog.logfile << endl << "id1\tid2\tt \tn" << 
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      endl;
+d728 1
+a728 4
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+	lj_cut_setup(eps,sigma,rcut,ff_param_tmp);
+d731 1
+a731 4
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+	lj_cut_shift_setup(eps,sigma,rcut,ff_param_tmp);
+d734 46
+a779 3
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	lj_nocut_setup(eps,sigma,ff_param_tmp);
+d782 11
+a792 15
+	eps = input_param_list[ii].params[0];
+	rmin = input_param_list[ii].params[1];
+	alpha = input_param_list[ii].params[2];
+	exp6_nocut_setup(eps,sigma,alpha,ff_param_tmp);
+	break;
+      case square_exp6_nocut :
+	eps = input_param_list[ii].params[0];
+	rmin = input_param_list[ii].params[1];
+	alpha = input_param_list[ii].params[2];
+	square_exp6_nocut_setup(eps,sigma,alpha,ff_param_tmp);
+	break;
+      case lj_cut_coul :
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+d794 1
+a794 1
+	lj_cut_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d796 1
+a796 4
+      case lj_cut_shift_coul :
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+d798 6
+a803 1
+	lj_cut_shift_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d805 1
+a805 4
+      case lj_cut_ewald :
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+d809 1
+a809 1
+		     "Ewald sum needed for twobody type lj_cut_ewald");
+d812 1
+a812 2
+	lj_cut_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,
+            ff_param_tmp);
+d814 1
+a814 4
+      case lj_cut_shift_ewald :
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+d818 1
+a818 1
+		     "Ewald sum needed for twobody type lj_cut_ewald_shift");
+d821 49
+a869 2
+	lj_cut_shift_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,
+            ff_param_tmp);
+d881 2
+a882 1
+		<< param_list[i].type << "\t" << param_list[i].np; 
+d904 1
+a904 4
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+	  lj_cut_setup(eps,sigma,rcut,ff_param_tmp);
+d907 1
+a907 4
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+	  lj_cut_shift_setup(eps,sigma,rcut,ff_param_tmp);
+d910 46
+a955 3
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  lj_nocut_setup(eps,sigma,ff_param_tmp);
+d958 7
+a964 15
+	  eps = input_param_list[ii].params[0];
+	  rmin = input_param_list[ii].params[1];
+	  alpha = input_param_list[ii].params[2];
+	  exp6_nocut_setup(eps,sigma,alpha,ff_param_tmp);
+	  break;
+	case square_exp6_nocut :
+	  eps = input_param_list[ii].params[0];
+	  rmin = input_param_list[ii].params[1];
+	  alpha = input_param_list[ii].params[2];
+	  square_exp6_nocut_setup(eps,sigma,alpha,ff_param_tmp);
+	  break;
+	case lj_cut_coul :
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+d966 1
+a966 1
+	  lj_cut_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d968 1
+a968 4
+	case lj_cut_shift_coul :
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+d970 1
+a970 1
+	  lj_cut_shift_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d972 1
+a972 4
+	case lj_cut_ewald :
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+d974 4
+d979 1
+a979 1
+	  lj_cut_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,ff_param_tmp);
+d981 1
+a981 4
+	case lj_cut_shift_ewald :
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+d983 4
+d988 58
+a1045 2
+	  lj_cut_shift_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,
+             ff_param_tmp);
+d1059 2
+a1060 1
+		  << param_list[i].type << "\t" << param_list[i].np; 
+d1075 87
+a1161 15
+	  if (input_param_list[ii].type!=input_param_list[jj].type) {
+	    glog.error("Force_Twobody::SetupInteractions:\n"
+	     "Pure components of cross pair have different forcefield types ");
+	  } else {
+	    // These commands should be customized for each case
+	    ff_param_tmp.type = input_param_list[ii].type;
+	    switch(input_param_list[ii].type) {
+	    case lj_cut :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      lj_cut_setup(eps,sigma,rcut,ff_param_tmp);
+d1163 2
+a1164 8
+	    case lj_cut_shift :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      lj_cut_shift_setup(eps,sigma,rcut,ff_param_tmp);
+d1166 2
+a1167 6
+	    case lj_nocut :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      lj_nocut_setup(eps,sigma,ff_param_tmp);
+d1169 2
+a1170 27
+	    case exp6_nocut :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      rmin = 0.5*(input_param_list[ii].params[1]+
+			  input_param_list[jj].params[1]);
+	      alpha = sqrt(input_param_list[ii].params[2]*
+			   input_param_list[jj].params[2]);
+	      exp6_nocut_setup(eps,sigma,alpha,ff_param_tmp);
+	      break;
+	    case square_exp6_nocut :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      rmin = 0.5*(input_param_list[ii].params[1]+
+			  input_param_list[jj].params[1]);
+	      alpha = sqrt(input_param_list[ii].params[2]*
+			   input_param_list[jj].params[2]);
+	      square_exp6_nocut_setup(eps,sigma,alpha,ff_param_tmp);
+	      break;
+	    case lj_cut_coul :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      dielectric = b->get_dielectric();
+	      lj_cut_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d1172 2
+a1173 9
+	    case lj_cut_shift_coul :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      dielectric = b->get_dielectric();
+	      lj_cut_shift_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d1175 2
+a1176 11
+	    case lj_cut_ewald :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      dielectric = b->get_dielectric();
+	      g_ewald = ff_ewald->get_g_ewald();
+	      lj_cut_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,
+                 ff_param_tmp);
+d1178 2
+a1179 11
+	    case lj_cut_shift_ewald :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      dielectric = b->get_dielectric();
+	      g_ewald = ff_ewald->get_g_ewald();
+	      lj_cut_shift_ewald_setup(eps,sigma,rcut,dielectric,
+                 g_ewald,ff_param_tmp);
+d1192 2
+a1193 1
+		      << param_list[i].type << "\t" << param_list[i].np; 
+d1241 1
+a1241 1
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+d1244 1
+a1244 1
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+d1250 26
+d1280 7
+a1286 1
+      case square_exp6_nocut :
+d1290 2
+a1291 2
+      case lj_cut_coul :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+d1293 2
+a1294 2
+      case lj_cut_shift_coul :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+d1296 3
+a1298 5
+      case lj_cut_ewald :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+	break;
+      case lj_cut_shift_ewald :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+d1365 1
+a1365 1
+	  force_lj_cut(xi,xj,f,Lenergy,Lvirial,
+d1369 26
+a1394 2
+	  force_lj_cut_shift(xi,xj,f,Lenergy,Lvirial,
+			     energy_ij,virial_ij,ientry);
+d1396 23
+a1418 19
+	case lj_cut_coul :
+	  force_lj_cut_coul(xi,xj,f,Lenergy,Lvirial,
+			    energy_ij,energy_coul_ij,virial_ij,
+                            ientry,qi,qj);
+	  break;
+	case lj_cut_shift_coul :
+	  force_lj_cut_shift_coul(xi,xj,f,Lenergy,Lvirial,
+				  energy_ij,energy_coul_ij,virial_ij,
+                                  ientry,qi,qj);
+	  break;
+	case lj_cut_ewald :
+	  force_lj_cut_ewald(xi,xj,f,Lenergy,Lvirial,
+			     energy_ij,energy_coul_ij,virial_ij,
+                             ientry,qi,qj);
+	  break;
+	case lj_cut_shift_ewald :
+	  force_lj_cut_shift_ewald(xi,xj,f,Lenergy,Lvirial,
+				   energy_ij,energy_coul_ij,virial_ij,
+                                   ientry,qi,qj);
+d1451 2
+d1456 2
+d1465 1
+a1465 5
+	    force_lj_cut_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				energy_ij,virial_ij,ientry,b);
+	  } else {
+	    force_lj_cut_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+			       energy_ij,virial_ij,ientry);
+d1467 2
+d1472 1
+a1472 5
+	    force_lj_cut_shift_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				      energy_ij,virial_ij,ientry,b);
+	  } else {
+	    force_lj_cut_shift_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				     energy_ij,virial_ij,ientry);
+d1474 2
+d1479 63
+a1541 5
+	    force_lj_nocut_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				  energy_ij,virial_ij,ientry,b);
+	  } else {
+	    force_lj_nocut_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				 energy_ij,virial_ij,ientry);
+d1543 2
+d1548 40
+a1587 5
+	    force_exp6_nocut_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				    energy_ij,virial_ij,ientry,b);
+	  } else {
+	    force_exp6_nocut_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				   energy_ij,virial_ij,ientry);
+d1589 3
+d1593 1
+a1593 1
+	case square_exp6_nocut :
+d1595 1
+a1595 5
+	    force_square_exp6_nocut_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+					   energy_ij,virial_ij,ientry,b);
+	  } else {
+	    force_square_exp6_nocut_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+					  energy_ij,virial_ij,ientry);
+d1597 3
+d1612 3
+d1676 1
+a1676 1
+	//	if (delr2 <= param_list[0].params[4]) {
+a1733 2
+    #pragma _CRI concurrent
+
+a1745 2
+    #pragma _CRI concurrent
+
+a1752 2
+          #pragma _CRI concurrent
+
+d1758 1
+a1758 1
+	if (delr2 <= param_list[0].params[4]) {
+a1784 2
+    //#pragma _CRI concurrent
+
+d1798 14
+a1811 5
+void Force_Twobody::lj_cut_setup(const double& eps,
+				 const double& sigma, 
+				 const double& rcut, 
+				 ff_params& ff_param_tmp) 
+{
+a1812 1
+  // Need to delete this at some point
+d1818 20
+a1837 2
+  ff_param_tmp.params[4] = rcut*rcut;
+  rcutmax = max(rcut, rcutmax);
+d1840 24
+a1863 7
+void Force_Twobody::lj_cut_shift_setup(const double& eps,
+				       const double& sigma, 
+				       const double& rcut, 
+				       ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 6;
+  // Need to delete this at some point
+d1869 21
+a1889 4
+  ff_param_tmp.params[4] = rcut*rcut;
+  ff_param_tmp.params[5] = 
+    4.0*eps*(pow(sigma/rcut,12) - pow(sigma/rcut,6));
+  rcutmax = max(rcut, rcutmax);
+d1892 16
+a1907 6
+void Force_Twobody::lj_nocut_setup(const double& eps,
+				   const double& sigma, 
+				   ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 4;
+  // Need to delete this at some point
+d1913 22
+a1934 1
+  Lnocut = true;
+d1937 8
+a1944 16
+void Force_Twobody::exp6_nocut_setup(const double& eps,
+				     const double& rmin, 
+				     const double& alpha, 
+				     ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 6;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin;
+  ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+  ff_param_tmp.params[2] = alpha;
+  ff_param_tmp.params[3] = alpha/rmin;
+  ff_param_tmp.params[4] = eps*6.0/(alpha-6.0);
+  ff_param_tmp.params[5] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+  Lnocut = true;
+}  
+d1946 14
+a1959 16
+void Force_Twobody::square_exp6_nocut_setup(const double& eps,
+					    const double& rmin, 
+					    const double& alpha, 
+					    ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 6;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/(rmin*rmin);
+  ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+  ff_param_tmp.params[2] = 0.5*alpha;
+  ff_param_tmp.params[3] = 0.5*alpha/(rmin*rmin);
+  ff_param_tmp.params[4] = eps*6.0/(alpha-6.0);
+  ff_param_tmp.params[5] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+  Lnocut = true;
+}  
+d1961 1
+a1961 6
+void Force_Twobody::lj_cut_coul_setup(const double& eps,
+				 const double& sigma, 
+				 const double& rcut, 
+				 const double& dielectric, 
+				 ff_params& ff_param_tmp) 
+{
+a1962 1
+  // Need to delete this at some point
+a1967 1
+  ff_param_tmp.params[4] = rcut*rcut;
+a1968 1
+  rcutmax = max(rcut, rcutmax);
+d1970 20
+d1992 15
+a2006 6
+void Force_Twobody::lj_cut_shift_coul_setup(const double& eps,
+				       const double& sigma, 
+				       const double& rcut, 
+				       const double& dielectric, 
+				       ff_params& ff_param_tmp) 
+{
+a2007 1
+  // Need to delete this at some point
+a2012 1
+  ff_param_tmp.params[4] = rcut*rcut;
+d2014 1
+a2014 3
+  ff_param_tmp.params[6] = 
+    4.0*eps*(pow(sigma/rcut,12) - pow(sigma/rcut,6));
+  rcutmax = max(rcut, rcutmax);
+d2016 20
+d2038 26
+a2063 7
+void Force_Twobody::lj_cut_ewald_setup(const double& eps,
+				 const double& sigma, 
+				 const double& rcut, 
+				 const double& dielectric, 
+				 const double& g_ewald,
+				 ff_params& ff_param_tmp) 
+{
+a2064 1
+  // Need to delete this at some point
+a2069 1
+  ff_param_tmp.params[4] = rcut*rcut;
+a2071 1
+  rcutmax = max(rcut, rcutmax);
+d2073 413
+d2488 25
+a2512 7
+void Force_Twobody::lj_cut_shift_ewald_setup(const double& eps,
+				       const double& sigma, 
+				       const double& rcut, 
+       				       const double& dielectric, 
+                                       const double& g_ewald,
+				       ff_params& ff_param_tmp) 
+{
+a2513 1
+  // Need to delete this at some point
+d2515 7
+a2521 10
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+  ff_param_tmp.params[4] = rcut*rcut;
+  ff_param_tmp.params[5] = constants.esfactor/dielectric;
+  ff_param_tmp.params[6] = g_ewald;
+  ff_param_tmp.params[7] = 
+    4.0*eps*(pow(sigma/rcut,12) - pow(sigma/rcut,6));
+  rcutmax = max(rcut, rcutmax);
+d2523 21
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d165 1
+d167 1
+d170 1
+a170 1
+
+d172 1
+d901 2
+a902 2
+ 	i_pnt->increment_f(f);
+ 	j_pnt->decrement_f(f);
+d906 3
+d1179 1
+a1346 2
+
+
+@
+
+
+2.27
+log
+@*** empty log message ***
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.26
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d744 1
+a744 1
+  for (int i = 0;i<input_param_list.size();i++) {
+d1078 2
+a1079 1
+  double f[3];
+d1090 1
+d1102 4
+a1105 1
+    for (int i=0;i<nparticles+nghost_particles;i++) {
+d1117 3
+a1119 1
+    for (int i=0;i<nparticles;i++) {
+d1121 7
+d1133 1
+a1133 1
+ 	if (delr2 <= param_list[0].params[4]) {
+d1140 6
+a1145 9
+	  f[0] = virial*delr[0];
+	  f[1] = virial*delr[1];
+	  f[2] = virial*delr[2];
+	  fi[0] += f[0];
+	  fi[1] += f[1];
+	  fi[2] += f[2];
+	  fj[0] -= f[0];
+	  fj[1] -= f[1];
+	  fj[2] -= f[2];
+d1148 4
+d1154 1
+d1159 4
+a1162 1
+    for (int i=0;i<nparticles+nghost_particles;i++) {
+@
+
+
+2.25
+log
+@Fixed problem with virial in class Force_External
+@
+text
+@d68 29
+a337 1
+      // Need to delete this at some point
+d742 6
+a755 1
+
+@
+
+
+2.24
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@a67 1
+  virial.resize(nvirial);
+@
+
+
+2.23
+log
+@Updated header
+@
+text
+@d943 1
+a943 1
+		     "Invalid forcefield type");
+@
+
+
+2.22
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.21
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d68 1
+d782 1
+d796 11
+a806 3
+  energy_piece[0] = 0.0;
+  if (Lcoul) {
+    energy_piece[1] = 0.0;
+d833 2
+a834 1
+	  force_lj_cut(xi,xj,f,energy_ij,ientry);
+d837 2
+a838 1
+	  force_lj_cut_shift(xi,xj,f,energy_ij,ientry);
+d841 2
+a842 1
+	  force_lj_cut_coul(xi,xj,f,energy_ij,energy_coul_ij,
+d846 2
+a847 1
+	  force_lj_cut_shift_coul(xi,xj,f,energy_ij,energy_coul_ij,
+d851 2
+a852 1
+	  force_lj_cut_ewald(xi,xj,f,energy_ij,energy_coul_ij,
+d856 2
+a857 1
+	  force_lj_cut_shift_ewald(xi,xj,f,energy_ij,energy_coul_ij,
+a866 1
+	energy_piece[0]+=energy_ij;
+d868 11
+a878 2
+	if (Lcoul) {
+	  energy_piece[1]+=energy_coul_ij;
+d898 2
+a899 1
+	    force_lj_cut_minimg(*i_pnt,*j_pnt,f,energy_ij,ientry,b);
+d901 2
+a902 1
+	    force_lj_cut_nopbc(*i_pnt,*j_pnt,f,energy_ij,ientry);
+d907 2
+a908 1
+	    force_lj_cut_shift_minimg(*i_pnt,*j_pnt,f,energy_ij,ientry,b);
+d910 2
+a911 1
+	    force_lj_cut_shift_nopbc(*i_pnt,*j_pnt,f,energy_ij,ientry);
+d916 2
+a917 1
+	    force_lj_nocut_minimg(*i_pnt,*j_pnt,f,energy_ij,ientry,b);
+d919 2
+a920 1
+	    force_lj_nocut_nopbc(*i_pnt,*j_pnt,f,energy_ij,ientry);
+d925 2
+a926 1
+	    force_exp6_nocut_minimg(*i_pnt,*j_pnt,f,energy_ij,ientry,b);
+d928 2
+a929 1
+	    force_exp6_nocut_nopbc(*i_pnt,*j_pnt,f,energy_ij,ientry);
+d934 2
+a935 1
+	    force_square_exp6_nocut_minimg(*i_pnt,*j_pnt,f,energy_ij,ientry,b);
+d937 2
+a938 1
+	    force_square_exp6_nocut_nopbc(*i_pnt,*j_pnt,f,energy_ij,ientry);
+a947 1
+	energy_piece[0]+=energy_ij;
+d949 9
+d961 1
+d968 7
+d1238 2
+a1239 1
+  ff_param_tmp.params[5] = 
+a1240 1
+  ff_param_tmp.params[6] = constants.esfactor/dielectric;
+d1281 3
+a1283 1
+  ff_param_tmp.params[5] = 
+a1284 2
+  ff_param_tmp.params[6] = constants.esfactor/dielectric;
+  ff_param_tmp.params[7] = g_ewald;
+@
+
+
+2.20
+log
+@Various
+@
+text
+@d812 1
+a817 1
+
+d820 1
+d849 2
+a850 2
+	i_pnt->increment_f(f);
+	j_pnt->decrement_f(f);
+d852 1
+a856 1
+
+a918 1
+
+d927 146
+d1238 1
+@
+
+
+2.19
+log
+@Updated documentation
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.18
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d46 1
+d364 3
+a366 2
+void Force_Twobody::SetupInteractions(const Box* b, Comm* comm)
+{
+d370 1
+a371 1
+  double dielectric;
+d451 7
+a457 1
+	lj_cut_ewald_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d464 7
+a470 1
+	lj_cut_shift_ewald_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d551 2
+a552 1
+	  lj_cut_ewald_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d559 3
+a561 1
+	  lj_cut_shift_ewald_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d668 3
+a670 1
+	      lj_cut_ewald_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d680 3
+a682 1
+	      lj_cut_shift_ewald_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+d790 1
+a790 1
+  double qi,qj,g_tmp,energy_coul_ij;
+d837 1
+a837 1
+                             ientry,qi,qj,g_tmp);
+a839 1
+	  g_tmp = 0.512823;
+d841 1
+a841 1
+                                   ientry,qi,qj,g_tmp);
+d1053 1
+d1056 1
+a1056 1
+  ff_param_tmp.np = 6;
+d1065 1
+d1074 1
+d1077 1
+a1077 1
+  ff_param_tmp.np = 7;
+d1088 1
+@
+
+
+2.17
+log
+@Added Ewald sum example
+@
+text
+@d86 1
+a86 1
+  stringstream buf_in(arg_string);
+d94 1
+a94 1
+	       "Read error in input stringstream");
+d101 1
+a101 1
+	       "Read error in input stringstream");
+d146 1
+a146 1
+    stringstream buf_in(buf);
+@
+
+
+2.16
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@d40 1
+d54 1
+d56 2
+a57 5
+Force_Twobody::Force_Twobody(const string& neighbor_style,
+			     const int& neighbor_freq,
+			     const double& neighbor_rskin) {
+  bool Lasymm;
+
+a58 17
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Lasymm = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+			    Lasymm,neighbor_freq,neighbor_rskin);
+  } else if (neighbor_style == "bin") {
+    Lasymm = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+			    Lasymm,neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_Twobody::Force_Twobody:\n"
+	       "Invalid neighbor style");
+  }
+
+d65 2
+d69 1
+a69 4
+void Force_Twobody::ReadInteractions(
+                    const string& filename, 
+		    const string& label_in, Comm* comm)
+{
+d73 1
+d86 2
+d90 6
+a95 1
+  label = label_in;
+d97 9
+d247 68
+d318 1
+a318 1
+   }
+d369 1
+a379 1
+  rcutmax = 0.0;
+d430 28
+d518 28
+d623 40
+d686 6
+a691 16
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_Twobody::SetupInteractions:\n"
+	       "Can not use nocut types with neighboring");
+  }
+
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_Twobody::SetupInteractions:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_Twobody::SetupInteractions:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+d734 12
+d755 2
+a756 2
+                    ParticleList* p, 
+		    const Box* b, const int type_index[], Comm* comm) {
+d769 1
+d774 3
+d786 1
+d795 1
+d806 17
+d831 3
+d899 6
+d989 80
+a1068 1
+  
+@
+
+
+2.15
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@a183 13
+#ifdef DEBUG_TWOBODY
+      if (node == 0) {
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id1 = " << id1 << endl;
+	glog.logfile << "id2 = " << id2 << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "eps = " << eps << endl;
+	glog.logfile << "sigma = " << sigma << endl;
+	glog.logfile << "rcut = " << rcut << endl;
+	glog.logfile << "itype = " << itype << endl;
+	glog.logfile << "jtype = " << jtype << endl;
+      }
+#endif
+a200 13
+#ifdef DEBUG_TWOBODY
+      if (node == 0) {
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id1 = " << id1 << endl;
+	glog.logfile << "id2 = " << id2 << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "eps = " << eps << endl;
+	glog.logfile << "sigma = " << sigma << endl;
+	glog.logfile << "rcut = " << rcut << endl;
+	glog.logfile << "itype = " << itype << endl;
+	glog.logfile << "jtype = " << jtype << endl;
+      }
+#endif
+a215 12
+#ifdef DEBUG_TWOBODY
+      if (node == 0) {
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id1 = " << id1 << endl;
+	glog.logfile << "id2 = " << id2 << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "eps = " << eps << endl;
+	glog.logfile << "sigma = " << sigma << endl;
+	glog.logfile << "itype = " << itype << endl;
+	glog.logfile << "jtype = " << jtype << endl;
+      }
+#endif
+a231 11
+#ifdef DEBUG_TWOBODY
+      if (node == 0) {
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id1 = " << id1 << endl;
+	glog.logfile << "id2 = " << id2 << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "eps = " << eps << endl;
+	glog.logfile << "rmin = " << rmin << endl;
+	glog.logfile << "alpha = " << alpha << endl;
+      }
+#endif
+a247 11
+#ifdef DEBUG_TWOBODY
+      if (node == 0) {
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id1 = " << id1 << endl;
+	glog.logfile << "id2 = " << id2 << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "eps = " << eps << endl;
+	glog.logfile << "rmin = " << rmin << endl;
+	glog.logfile << "alpha = " << alpha << endl;
+      }
+#endif
+a294 24
+#ifdef DEBUG_TWOBODY
+  if (node == 0) {
+    glog.logfile << endl;
+    for (itype=0;itype<ntypes;itype++) {
+      for (jtype=0;jtype<ntypes;jtype++) {
+	glog.logfile << input_param_index[itype][jtype];
+	if (input_param_index[itype][jtype] == -1) {
+	  glog.logfile << " ----------------------------------";
+	} else {
+	  glog.logfile << "\t" << input_param_list[input_param_index[itype][jtype]].type 
+		  << "\t" << input_param_list[input_param_index[itype][jtype]].np; 
+	  for (int iparam=0;
+	       iparam<input_param_list[input_param_index[itype][jtype]].np;
+	       iparam++) {
+	    glog.logfile << "\t" << input_param_list[input_param_index[itype][jtype]].
+	      params[iparam];
+	  }
+	}
+	glog.logfile << "\t\t";
+      }
+      glog.logfile << endl;
+    }
+  }
+#endif
+@
+
+
+2.15.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a135 1
+#ifdef USE_NODEFILES
+a136 1
+#endif
+d139 1
+a139 1
+#ifdef USE_NODEFILES
+a140 1
+#endif
+@
+
+
+2.15.2.2
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a729 2
+        i_pnt->increment_phi(energy_ij/2.0);
+        j_pnt->increment_phi(energy_ij/2.0);
+@
+
+
+2.15.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a39 1
+#include "constants.h"
+a44 1
+#include "force_ewald.h"
+a52 1
+extern Constants constants;
+d54 5
+a58 2
+Force_Twobody::Force_Twobody(const string arg_string_in) {
+  arg_string = arg_string_in;
+d60 17
+a82 5
+  rcutmax = 0.0;
+  Lcoul = false;
+  input_param_index = NULL;
+  param_index = NULL;
+  rcutneighsq_table = NULL;
+d85 4
+a88 27
+Force_Twobody::~Force_Twobody() {
+  if (input_param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []input_param_index[itype];
+    }
+    delete []input_param_index;
+  }
+  if (param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []param_index[itype];
+    }
+    delete []param_index;
+  }
+// Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+  // Free the memory allocated to param_list
+  for (int i = 0;i<param_list.size();i++) {
+    delete[] param_list[i].params;
+  }
+}
+
+void Force_Twobody::ReadInteractions(Comm* comm) {
+a91 1
+  string filename;
+a103 2
+  std::istringstream buf_in(arg_string);
+
+d106 1
+a106 13
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_Twobody::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_Twobody::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+a107 2
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+d151 1
+a151 1
+    std::istringstream buf_in(buf);
+d187 13
+d217 13
+d245 12
+d273 11
+d300 9
+a308 6
+    }
+    else if (forcefieldname == "lj_cut_coul") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+d310 1
+a310 60
+
+      nparams = 3;
+      ff_param_tmp.type = lj_cut_coul;
+      ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.params[2] = rcut;
+      input_param_list.push_back(ff_param_tmp);
+    }
+    else if (forcefieldname == "lj_cut_shift_coul") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = lj_cut_shift_coul;
+      ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.params[2] = rcut;
+      input_param_list.push_back(ff_param_tmp);
+    }
+    else if (forcefieldname == "lj_cut_ewald") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = lj_cut_ewald;
+      ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.params[2] = rcut;
+      input_param_list.push_back(ff_param_tmp);
+    }
+    else if (forcefieldname == "lj_cut_shift_ewald") {
+      buf_in >> eps >> sigma >> rcut;
+      if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	glog.error("Force_Twobody::ReadInteractions\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+
+      nparams = 3;
+      ff_param_tmp.type = lj_cut_shift_ewald;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = eps;
+      ff_param_tmp.params[1] = sigma;
+      ff_param_tmp.params[2] = rcut;
+      input_param_list.push_back(ff_param_tmp);
+d315 1
+a315 1
+    }
+d358 24
+d384 2
+a385 3
+void Force_Twobody::SetupInteractions(const Box* b, 
+				      const Force_Ewald* ff_ewald,
+                                      Comm* comm) {
+a388 1
+  double dielectric,g_ewald;
+d400 1
+a450 40
+      case lj_cut_coul :
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+	dielectric = b->get_dielectric();
+	lj_cut_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+	break;
+      case lj_cut_shift_coul :
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+	dielectric = b->get_dielectric();
+	lj_cut_shift_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+	break;
+      case lj_cut_ewald :
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+	dielectric = b->get_dielectric();
+	if (ff_ewald == NULL) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type lj_cut_ewald");
+	}
+	g_ewald = ff_ewald->get_g_ewald();
+	lj_cut_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,
+            ff_param_tmp);
+	break;
+      case lj_cut_shift_ewald :
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	rcut = input_param_list[ii].params[2];
+	dielectric = b->get_dielectric();
+	if (ff_ewald == NULL) {
+	  glog.error("Force_Twobody::SetupInteractions:\n"
+		     "Ewald sum needed for twobody type lj_cut_ewald_shift");
+	}
+	g_ewald = ff_ewald->get_g_ewald();
+	lj_cut_shift_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,
+            ff_param_tmp);
+	break;
+a510 31
+	case lj_cut_coul :
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+	  dielectric = b->get_dielectric();
+	  lj_cut_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+	  break;
+	case lj_cut_shift_coul :
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+	  dielectric = b->get_dielectric();
+	  lj_cut_shift_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+	  break;
+	case lj_cut_ewald :
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+	  dielectric = b->get_dielectric();
+	  g_ewald = ff_ewald->get_g_ewald();
+	  lj_cut_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,ff_param_tmp);
+	  break;
+	case lj_cut_shift_ewald :
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  rcut = input_param_list[ii].params[2];
+	  dielectric = b->get_dielectric();
+	  g_ewald = ff_ewald->get_g_ewald();
+	  lj_cut_shift_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,
+             ff_param_tmp);
+	  break;
+a587 44
+	    case lj_cut_coul :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      dielectric = b->get_dielectric();
+	      lj_cut_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+	      break;
+	    case lj_cut_shift_coul :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      dielectric = b->get_dielectric();
+	      lj_cut_shift_coul_setup(eps,sigma,rcut,dielectric,ff_param_tmp);
+	      break;
+	    case lj_cut_ewald :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      dielectric = b->get_dielectric();
+	      g_ewald = ff_ewald->get_g_ewald();
+	      lj_cut_ewald_setup(eps,sigma,rcut,dielectric,g_ewald,
+                 ff_param_tmp);
+	      break;
+	    case lj_cut_shift_ewald :
+	      eps = sqrt(input_param_list[ii].params[0]*
+			 input_param_list[jj].params[0]);
+	      sigma = 0.5*(input_param_list[ii].params[1]+
+			   input_param_list[jj].params[1]);
+	      rcut = 0.5*(input_param_list[ii].params[2]+
+			  input_param_list[jj].params[2]);
+	      dielectric = b->get_dielectric();
+	      g_ewald = ff_ewald->get_g_ewald();
+	      lj_cut_shift_ewald_setup(eps,sigma,rcut,dielectric,
+                 g_ewald,ff_param_tmp);
+	      break;
+d611 8
+a618 6
+  if (Lcoul) {
+    npieces = 2;
+    energy_piece.resize(npieces);
+    label_piece.resize(npieces);
+    label_piece[0] = "Dispersion";
+    label_piece[1] = "Coulombic";
+d621 6
+a626 3
+  // Free the memory allocated to input_param_list
+  for (int i = 0;i<input_param_list.size();i++) {
+    delete[] input_param_list[i].params;
+a627 1
+  input_param_list.clear();
+d637 1
+a668 12
+      case lj_cut_coul :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+	break;
+      case lj_cut_shift_coul :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+	break;
+      case lj_cut_ewald :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+	break;
+      case lj_cut_shift_ewald :
+	rcutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+	break;
+d678 2
+a679 2
+                    const bool& Lenergy, const bool& Lvirial, ParticleList* p, 
+		    const Box* b, Comm* comm) {
+a682 1
+  double virial_ij[nvirial];
+a691 1
+  double qi,qj,energy_coul_ij;
+d695 1
+a695 12
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+    if (Lcoul) {
+      energy_piece[1] = 0.0;
+    }
+  }
+
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+a704 1
+      qi = i_pnt->get_charge();
+a708 1
+
+d713 1
+a713 1
+	qj = j_pnt->get_charge();
+a715 1
+
+d718 1
+a718 2
+	  force_lj_cut(xi,xj,f,Lenergy,Lvirial,
+		       energy_ij,virial_ij,ientry);
+d721 1
+a721 22
+	  force_lj_cut_shift(xi,xj,f,Lenergy,Lvirial,
+			     energy_ij,virial_ij,ientry);
+	  break;
+	case lj_cut_coul :
+	  force_lj_cut_coul(xi,xj,f,Lenergy,Lvirial,
+			    energy_ij,energy_coul_ij,virial_ij,
+                            ientry,qi,qj);
+	  break;
+	case lj_cut_shift_coul :
+	  force_lj_cut_shift_coul(xi,xj,f,Lenergy,Lvirial,
+				  energy_ij,energy_coul_ij,virial_ij,
+                                  ientry,qi,qj);
+	  break;
+	case lj_cut_ewald :
+	  force_lj_cut_ewald(xi,xj,f,Lenergy,Lvirial,
+			     energy_ij,energy_coul_ij,virial_ij,
+                             ientry,qi,qj);
+	  break;
+	case lj_cut_shift_ewald :
+	  force_lj_cut_shift_ewald(xi,xj,f,Lenergy,Lvirial,
+				   energy_ij,energy_coul_ij,virial_ij,
+                                   ientry,qi,qj);
+d730 4
+a734 16
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	  if (Lcoul) {
+	    energy_piece[1]+=energy_coul_ij;
+	  }
+	}
+
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+      }
+d752 1
+a752 2
+	    force_lj_cut_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				energy_ij,virial_ij,ientry,b);
+d754 1
+a754 2
+	    force_lj_cut_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+			       energy_ij,virial_ij,ientry);
+d759 1
+a759 2
+	    force_lj_cut_shift_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				      energy_ij,virial_ij,ientry,b);
+d761 1
+a761 2
+	    force_lj_cut_shift_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				     energy_ij,virial_ij,ientry);
+d766 1
+a766 2
+	    force_lj_nocut_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				  energy_ij,virial_ij,ientry,b);
+d768 1
+a768 2
+	    force_lj_nocut_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				 energy_ij,virial_ij,ientry);
+d773 1
+a773 2
+	    force_exp6_nocut_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				    energy_ij,virial_ij,ientry,b);
+d775 1
+a775 2
+	    force_exp6_nocut_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+				   energy_ij,virial_ij,ientry);
+d780 1
+a780 2
+	    force_square_exp6_nocut_minimg(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+					   energy_ij,virial_ij,ientry,b);
+d782 1
+a782 2
+	    force_square_exp6_nocut_nopbc(*i_pnt,*j_pnt,f,Lenergy,Lvirial,
+					  energy_ij,virial_ij,ientry);
+d787 1
+a787 1
+		     "Invalid forcefield type for no neighboring");
+d792 1
+a793 83
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	}
+
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+      }
+    }
+  }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+}
+
+void Force_Twobody::ApplyForceLJCutFast(
+                    const bool& Lenergy, const bool& Lvirial, ParticleList* p, 
+		    const Box* b, Comm* comm) {
+
+  double f[3];
+  double energy_ij;
+  int j;
+  double *xi,*xj;
+  Particle *i_pnt,*j_pnt,*j_pnt0;
+  int nparticles;
+  int* neighptr;
+  vector<double> xarray;
+  vector<double> farray;
+  double delr_norm,delr2,delr_2,delr_6,virial;
+  double delr[3];
+
+  if (Lneighbor) {
+
+    nparticles = p->get_nparticles();
+    i_pnt = &(p->particles[0]);
+    j_pnt0 = &(p->particles[0]);
+    j_pnt = &(p->particles[0])+nparticles;
+    for (int i=0;i<nparticles;i++) {
+      neighptr = neighbor->first_ptr[i];
+      xi = i_pnt->x;
+      for (int ineigh=0;
+      	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+	//      for (int ineigh=0;
+	//	   ineigh<160;ineigh++) {
+	j = neighptr[ineigh];
+	//
+	// Adding or removing this line slows
+	// things down by 60% !!
+	//
+	j_pnt = j_pnt0+j;
+	delr2 = vec3_distsq(xi,j_pnt->x,delr);
+	//	if (delr2 <= param_list[0].params[4]) {
+         if (ineigh<70) {
+	  delr_2 = 1.0/delr2;
+	  delr_6 = delr_2*delr_2*delr_2;
+	  virial = (param_list[0].params[0]*delr_6
+		    - param_list[0].params[1])*delr_6;
+	  virial = virial*delr_2;
+	  f[0] = virial*delr[0];
+	  f[1] = virial*delr[1];
+	  f[2] = virial*delr[2];
+	  vec3_add(i_pnt->f,f,i_pnt->f);
+	  vec3_subtract(j_pnt->f,f,j_pnt->f);
+	  i_pnt->f[0] += f[0];
+	  i_pnt->f[1] += f[1];
+	  i_pnt->f[2] += f[2];
+	  j_pnt->f[0] -= f[0];
+	  j_pnt->f[1] -= f[1];
+	  j_pnt->f[2] -= f[2];
+	}
+a794 1
+      i_pnt++;
+a795 4
+
+  } else {
+    glog.error("Force_Twobody::ApplyForceLJCutFast:\n"
+	       "Must use neighbor list");
+a796 68
+}
+
+void Force_Twobody::ApplyForceLJCutSuperFast(
+                    const bool& Lenergy, const bool& Lvirial, ParticleList* p, 
+		    const Box* b, Comm* comm) {
+
+  double f[3];
+  double energy_ij;
+  int j,iarray;
+  double *xi,*xj,*xj0,*fi,*fj,*fj0;
+  Particle *i_pnt;
+  int nparticles,nghost_particles;
+  int* neighptr;
+  vector<double> xarray;
+  vector<double> farray;
+  double delr_norm,delr2,delr_2,delr_6,virial;
+  double delr[3];
+
+  if (Lneighbor) {
+
+    nparticles = p->get_nparticles();
+    nghost_particles = p->get_nghost_particles();
+
+    xarray.resize(3*(nparticles+nghost_particles));
+    farray.resize(3*(nparticles+nghost_particles));
+
+    iarray = 0;
+    i_pnt = &(p->particles[0]);
+    for (int i=0;i<nparticles+nghost_particles;i++) {
+      vec3_copy(i_pnt->x,&(xarray[iarray]));
+      vec3_copy(0.0,&(farray[iarray]));
+      iarray+=3;
+      i_pnt++;
+    }
+
+    xi = &xarray[0];
+    xj0 = &xarray[0];
+    fi = &farray[0];
+    fj0 = &farray[0];
+
+    for (int i=0;i<nparticles;i++) {
+      neighptr = neighbor->first_ptr[i];
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+ 	j = neighptr[ineigh];
+	xj = xj0+3*j;
+  	delr2 = vec3_distsq(xi,xj,delr);
+ 	if (delr2 <= param_list[0].params[4]) {
+	  delr_2 = 1.0/delr2;
+	  delr_6 = delr_2*delr_2*delr_2;
+	  virial = (param_list[0].params[0]*delr_6
+		    - param_list[0].params[1])*delr_6;
+	  virial = virial*delr_2;
+	  fj = fj0+3*j;
+	  f[0] = virial*delr[0];
+	  f[1] = virial*delr[1];
+	  f[2] = virial*delr[2];
+	  fi[0] += f[0];
+	  fi[1] += f[1];
+	  fi[2] += f[2];
+	  fj[0] -= f[0];
+	  fj[1] -= f[1];
+	  fj[2] -= f[2];
+	}
+      }
+      xi+=3;
+      fi+=3;
+    }
+a797 12
+    iarray = 0;
+    i_pnt = &(p->particles[0]);
+    for (int i=0;i<nparticles+nghost_particles;i++) {
+      vec3_copy(&(farray[iarray]),i_pnt->f);
+      iarray+=3;
+      i_pnt++;
+    }
+
+  } else {
+    glog.error("Force_Twobody::ApplyForceLJCutFast:\n"
+	       "Must use neighbor list");
+  }
+d882 1
+a882 85
+void Force_Twobody::lj_cut_coul_setup(const double& eps,
+				 const double& sigma, 
+				 const double& rcut, 
+				 const double& dielectric, 
+				 ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 6;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+  ff_param_tmp.params[4] = rcut*rcut;
+  ff_param_tmp.params[5] = constants.esfactor/dielectric;
+  rcutmax = max(rcut, rcutmax);
+  Lcoul = true;
+}  
+
+void Force_Twobody::lj_cut_shift_coul_setup(const double& eps,
+				       const double& sigma, 
+				       const double& rcut, 
+				       const double& dielectric, 
+				       ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 7;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+  ff_param_tmp.params[4] = rcut*rcut;
+  ff_param_tmp.params[5] = constants.esfactor/dielectric;
+  ff_param_tmp.params[6] = 
+    4.0*eps*(pow(sigma/rcut,12) - pow(sigma/rcut,6));
+  rcutmax = max(rcut, rcutmax);
+  Lcoul = true;
+}  
+
+void Force_Twobody::lj_cut_ewald_setup(const double& eps,
+				 const double& sigma, 
+				 const double& rcut, 
+				 const double& dielectric, 
+				 const double& g_ewald,
+				 ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 7;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+  ff_param_tmp.params[4] = rcut*rcut;
+  ff_param_tmp.params[5] = constants.esfactor/dielectric;
+  ff_param_tmp.params[6] = g_ewald;
+  rcutmax = max(rcut, rcutmax);
+  Lcoul = true;
+}  
+
+void Force_Twobody::lj_cut_shift_ewald_setup(const double& eps,
+				       const double& sigma, 
+				       const double& rcut, 
+       				       const double& dielectric, 
+                                       const double& g_ewald,
+				       ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 8;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+  ff_param_tmp.params[4] = rcut*rcut;
+  ff_param_tmp.params[5] = constants.esfactor/dielectric;
+  ff_param_tmp.params[6] = g_ewald;
+  ff_param_tmp.params[7] = 
+    4.0*eps*(pow(sigma/rcut,12) - pow(sigma/rcut,6));
+  rcutmax = max(rcut, rcutmax);
+  Lcoul = true;
+}  
+
+
+@
+
+
+2.14
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d138 1
+a138 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,comm->get_world());
+d142 1
+a142 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,comm->get_world());
+@
+
+
+2.13
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@a75 1
+  Lneighbor_cosp = false;
+d134 1
+a134 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,comm->get_world());
+d381 1
+a381 1
+void Force_Twobody::SetupInteractions(const Box& b, Comm* comm)
+d619 1
+a619 1
+    if (2.0*rcutmax >  b.get_lmin()) {
+d676 1
+a676 1
+		    const Box& b, const int type_index[]) {
+d690 1
+a690 1
+  perflag = b.get_perflag();
+a727 37
+      }
+
+    }
+
+  } else if (Lneighbor_cosp) {
+
+    for (int icosp=0;icosp<neighbor->cosp_list.size()-1;icosp++) {
+      i = neighbor->cosp_list[icosp].i;
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      i_pnt->get_x(xi);
+      image = neighbor->cosp_list[icosp].image;
+      vec3_add(neighbor->image_stencil[image],xi,xi);
+      for (int ineigh=neighbor->cosp_list[icosp].first;ineigh<neighbor->cosp_list[icosp+1].first;ineigh++) {
+	j = neighbor->neigh_list[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+
+	ientry = param_index[itype][jtype];
+	twobody_type = param_list[ientry].type;
+	switch(twobody_type) {
+	case lj_cut :
+	  force_lj_cut(xi,xj,f,energy_ij,ientry);
+	  break;
+	case lj_cut_shift :
+	  force_lj_cut_shift(xi,xj,f,energy_ij,ientry);
+	  break;
+	default:
+	  glog.error("Force_Twobody::ApplyForce:\n"
+		     "Invalid forcefield type for Lneighbor true");
+	}
+
+	i_pnt->increment_f(f);
+	j_pnt->decrement_f(f);
+	energy_piece[0]+=energy_ij;
+
+@
+
+
+2.12
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d619 7
+@
+
+
+2.11
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.10
+log
+@Pushed examples down into subdirectories.
+@
+text
+@d26 1
+a26 1
+Force_Twobody::Force_Twobody(const Neighbor::NeighborStyles& neighbor_style,
+d32 1
+a32 2
+  switch(neighbor_style) {
+  case Neighbor::neighbor_none:
+d34 1
+a34 2
+    break;
+  case Neighbor::neighbor_nsq:
+d37 1
+a37 1
+    neighbor = new Neighbor(neighbor_style,
+d39 1
+a39 2
+    break;
+  case Neighbor::neighbor_bin:
+d42 1
+a42 1
+    neighbor = new Neighbor(neighbor_style,
+d44 1
+a44 2
+    break;
+  default:
+d100 1
+a100 1
+	  glog.abort("Input::ReadInput:\n"
+@
+
+
+2.9
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@d875 6
+a880 6
+  ff_param_tmp.params[0] = eps*6.0/(alpha-3.0)*alpha/(rmin*rmin);
+  ff_param_tmp.params[1] = eps*alpha/(alpha-3.0)*pow(rmin,6)*6.0;
+  ff_param_tmp.params[2] = alpha;
+  ff_param_tmp.params[3] = alpha/(rmin*rmin);
+  ff_param_tmp.params[4] = eps*3.0/(alpha-3.0);
+  ff_param_tmp.params[5] = eps*alpha/(alpha-3.0)*pow(rmin,6);
+@
+
+
+2.8
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d85 1
+a86 1
+    str_tmp = glog.path_str + filename;
+d90 6
+a95 2
+      glog.abort("Force_Twobody::ReadInteractions:\n"
+		 "Failed to open " + filename,comm);
+d105 1
+a105 1
+		     "Read error in "+filename,comm);
+d149 1
+a149 1
+		   "Invalid parameter in " + filename);
+d179 1
+a179 1
+		   "Invalid parameter in " + filename);
+d209 1
+a209 1
+		   "Invalid parameter in " + filename);
+d236 1
+a236 1
+		   "Invalid parameter in " + filename);
+d263 1
+a263 1
+		   "Invalid parameter in " + filename);
+d293 1
+a293 1
+		   "Read error in " + filename);
+d304 5
+@
+
+
+2.7
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d98 4
+a101 12
+      if (!getline(infile,buf)) {
+	buf = "End of Input";
+      } else {
+	// Concatenate continuation lines, if requested.
+	if (buf[buf.size()-1] == '\\') {
+	  buf2 = buf;
+	  while (buf2[buf2.size()-1] == '\\') {
+	    buf.replace(buf.size()-1,1," ");
+	    // buf.replace(buf.size()-1,1,&char_tmp);
+	    getline(infile,buf2);
+	    buf+=buf2;
+	  }
+a118 4
+    } else if (input_string_match(buf,"")) {
+      continue;
+    } else if (input_string_match(buf,"#")) {
+      continue;
+d120 1
+d122 1
+a122 3
+    // Skip lines with only whitespace
+    buf_in >> ws;
+    if (buf_in.eof()) continue;
+@
+
+
+2.6
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d26 1
+a26 1
+Force_Twobody::Force_Twobody(const int& neighbor_style,
+d56 4
+a79 1
+  MPI_Comm world;
+a81 1
+  world = comm->get_world();
+d115 1
+a115 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,world);
+d119 1
+a119 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+d123 1
+a123 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+d603 1
+a603 1
+  int type;
+d655 1
+a655 1
+  int twobody_type;
+d666 1
+a666 1
+  energy = 0.0;
+d701 1
+a701 1
+	energy+=energy_ij;
+d737 1
+a737 1
+	energy+=energy_ij;
+d798 1
+a798 1
+	energy+=energy_ij;
+@
+
+
+2.5
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d53 3
+d58 3
+a60 1
+void Force_Twobody::ReadInteractions(const string& filename, Comm* comm)
+d73 2
+a76 2
+  string str_tmp;
+  ifstream infile;
+d81 2
+a93 1
+
+a133 1
+    
+a137 1
+
+d379 2
+d384 1
+a384 1
+    glog.logfile << endl << "i \tii \tid \tt \tn" << 
+d436 1
+a436 1
+	glog.logfile << i << "\t" << ii << "\t" << id_index[itype] << "\t" 
+a447 3
+  if (node == 0) {
+    glog.logfile << endl;
+  }
+a449 8
+  if (node == 0) {
+    glog.logfile << "i \tii \tjj \tid1 \tid2 \tt \tn" << 
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      endl;
+  }
+d498 1
+a498 2
+	  glog.logfile << i << "\t" << ii << "\t" << " " << "\t"
+		  << id_index[itype] << "\t" << id_index[jtype] << "\t"
+d574 1
+a574 2
+	      glog.logfile << i << "\t" << ii << "\t" << jj << "\t"
+		      << id_index[itype] << "\t" << id_index[jtype] << "\t"
+a584 3
+    if (node == 0) {
+      glog.logfile << endl;
+    }
+d647 1
+a647 1
+                    ParticleList* p, double& energy, 
+@
+
+
+2.4
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@d42 6
+d70 1
+d77 2
+a78 1
+    infile.open(filename.c_str()); 
+d82 1
+a82 1
+		 "Failed to open " + filename);
+d372 1
+a372 1
+  rcut_max = 0.0;
+d670 1
+d684 1
+d686 3
+a688 3
+      for (int ineigh=neighbor->first_list[i];
+	   ineigh<neighbor->first_list[i+1];ineigh++) {
+	j = neighbor->neigh_list[ineigh];
+d827 1
+a827 1
+  rcut_max = max(rcut, rcut_max);
+d845 1
+a845 1
+  rcut_max = max(rcut, rcut_max);
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d27 1
+a27 1
+			     const bool& Lasymm, const int& neighbor_freq,
+d29 2
+d37 1
+d675 4
+a678 3
+      for (int ineigh=neighbor->first_list_local[i];
+	   ineigh<neighbor->first_list_local[i+1];ineigh++) {
+	j = neighbor->neigh_list_local[ineigh];
+a679 25
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+
+	ientry = param_index[itype][jtype];
+	twobody_type = param_list[ientry].type;
+	switch(twobody_type) {
+	case lj_cut :
+	  force_lj_cut(xi,xj,f,energy_ij,ientry);
+	  break;
+	case lj_cut_shift :
+	  force_lj_cut_shift(xi,xj,f,energy_ij,ientry);
+	  break;
+	default:
+	  glog.error("Force_Twobody::ApplyForce:\n"
+		     "Invalid forcefield type for Lneighbor true");
+	}
+	i_pnt->increment_f(f);
+	j_pnt->decrement_f(f);
+	energy+=energy_ij;
+      }
+
+      for (int ineigh=neighbor->first_list_ghost[i];
+	   ineigh<neighbor->first_list_ghost[i+1];ineigh++) {
+	j = neighbor->neigh_list_ghost[ineigh];
+	j_pnt = p->get_ghost_particle(j);
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d350 1
+a350 1
+  int node;
+d353 1
+d591 5
+d600 1
+a600 1
+  ff_type type;
+d606 2
+a607 2
+  // Allocate ntypes x ntypes array cutneighsq_table
+  cutneighsq_table = new double*[ntypes];
+d609 1
+a609 1
+    cutneighsq_table[itype] = new double[ntypes];
+d612 1
+a612 1
+  // Assign values to cutneighsq_table[][] using force field parameters
+d620 1
+a620 1
+	cutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+d623 1
+a623 1
+	cutneighsq_table[itype][jtype] = pow(sqrt(param_list[i].params[4])+rskin,2);
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@a8 1
+extern ofstream logfile;
+d23 2
+a24 1
+
+d40 2
+a41 2
+    logfile << "Error: Invalid neighbor style" << endl;;
+    exit(0);
+d70 2
+a71 2
+      logfile << "Failed to open " << filename << endl;
+      exit(0);
+d140 2
+a141 4
+	if (node == 0) {
+	  logfile << "Invalid parameter in " << filename << endl;
+	}
+	exit(0);
+d155 9
+a163 9
+	logfile << "-------------------------------------------" << endl;
+	logfile << "id1 = " << id1 << endl;
+	logfile << "id2 = " << id2 << endl;
+	logfile << "forcefieldname = " << forcefieldname << endl;
+	logfile << "eps = " << eps << endl;
+	logfile << "sigma = " << sigma << endl;
+	logfile << "rcut = " << rcut << endl;
+	logfile << "itype = " << itype << endl;
+	logfile << "jtype = " << jtype << endl;
+d170 2
+a171 4
+	if (node == 0) {
+	  logfile << "Invalid parameter in " << filename << endl;
+	}
+	exit(0);
+d185 9
+a193 9
+	logfile << "-------------------------------------------" << endl;
+	logfile << "id1 = " << id1 << endl;
+	logfile << "id2 = " << id2 << endl;
+	logfile << "forcefieldname = " << forcefieldname << endl;
+	logfile << "eps = " << eps << endl;
+	logfile << "sigma = " << sigma << endl;
+	logfile << "rcut = " << rcut << endl;
+	logfile << "itype = " << itype << endl;
+	logfile << "jtype = " << jtype << endl;
+d200 2
+a201 4
+	if (node == 0) {
+	  logfile << "Invalid parameter in " << filename << endl;
+	}
+	exit(0);
+d213 8
+a220 8
+	logfile << "-------------------------------------------" << endl;
+	logfile << "id1 = " << id1 << endl;
+	logfile << "id2 = " << id2 << endl;
+	logfile << "forcefieldname = " << forcefieldname << endl;
+	logfile << "eps = " << eps << endl;
+	logfile << "sigma = " << sigma << endl;
+	logfile << "itype = " << itype << endl;
+	logfile << "jtype = " << jtype << endl;
+d227 2
+a228 4
+	if (node == 0) {
+	  logfile << "Invalid parameter in " << filename << endl;
+	}
+	exit(0);
+d241 7
+a247 7
+	logfile << "-------------------------------------------" << endl;
+	logfile << "id1 = " << id1 << endl;
+	logfile << "id2 = " << id2 << endl;
+	logfile << "forcefieldname = " << forcefieldname << endl;
+	logfile << "eps = " << eps << endl;
+	logfile << "rmin = " << rmin << endl;
+	logfile << "alpha = " << alpha << endl;
+d254 2
+a255 4
+	if (node == 0) {
+	  logfile << "Invalid parameter in " << filename << endl;
+	}
+	exit(0);
+d268 7
+a274 7
+	logfile << "-------------------------------------------" << endl;
+	logfile << "id1 = " << id1 << endl;
+	logfile << "id2 = " << id2 << endl;
+	logfile << "forcefieldname = " << forcefieldname << endl;
+	logfile << "eps = " << eps << endl;
+	logfile << "rmin = " << rmin << endl;
+	logfile << "alpha = " << alpha << endl;
+d279 3
+a281 5
+      if (node == 0) {
+	logfile << "Invalid forcefield name" << endl;;
+      }
+      exit(0);
+    }
+d284 2
+a285 4
+      if (node == 0) {
+	logfile << "Read error in " << filename << endl;
+      }
+      exit(0);
+d321 1
+a321 1
+    logfile << endl;
+d324 1
+a324 1
+	logfile << input_param_index[itype][jtype];
+d326 1
+a326 1
+	  logfile << " ----------------------------------";
+d328 1
+a328 1
+	  logfile << "\t" << input_param_list[input_param_index[itype][jtype]].type 
+d333 1
+a333 1
+	    logfile << "\t" << input_param_list[input_param_index[itype][jtype]].
+d337 1
+a337 1
+	logfile << "\t\t";
+d339 1
+a339 1
+      logfile << endl;
+d366 1
+a366 1
+    logfile << endl << "i \tii \tid \tt \tn" << 
+d410 2
+a411 4
+	if (node == 0) {
+	  logfile << "Error: invalid twobody forcefield type" << endl;
+	}
+	exit(0);
+d418 1
+a418 1
+	logfile << i << "\t" << ii << "\t" << id_index[itype] << "\t" 
+d421 1
+a421 1
+	  logfile << setw(13) << param_list[i].params[iparam];
+d423 1
+a423 1
+	logfile << endl;
+d426 2
+a427 4
+      if (node == 0) {
+	logfile << "Error: Twobody type has no pure entry" << endl;
+      }
+      exit(0);
+d431 1
+a431 1
+    logfile << endl;
+d436 1
+a436 1
+    logfile << "i \tii \tjj \tid1 \tid2 \tt \tn" << 
+d481 2
+a482 4
+	  if (node == 0) {
+	    logfile << "Error: invalid twobody forcefield type" << endl;
+	  }
+	  exit(0);
+d491 1
+a491 1
+	  logfile << i << "\t" << ii << "\t" << " " << "\t"
+d495 1
+a495 1
+	    logfile << setw(13) << param_list[i].params[iparam];
+d497 1
+a497 1
+	  logfile << endl;
+d505 2
+a506 4
+	  if (node == 0) {
+	    logfile << "Error: missing pure entry for this cross pair" << endl;
+	  }
+	  exit(0);
+d509 2
+a510 8
+	    if (node == 0) {
+	      logfile << "Error: pure components of cross pair "
+		"have different forcefield types " << 
+		ii << " " << jj << " " <<
+		input_param_list[ii].type << " " << 
+		input_param_list[jj].type << endl;
+	    }
+	    exit(0);
+d559 2
+a560 4
+	      if (node == 0) {
+		logfile << "Error: invalid twobody forcefield type" << endl;
+	      }
+	      exit(0);
+d568 1
+a568 1
+	      logfile << i << "\t" << ii << "\t" << jj << "\t"
+d572 1
+a572 1
+		logfile << setw(13) << param_list[i].params[iparam];
+d574 1
+a574 1
+	      logfile << endl;
+d581 1
+a581 1
+      logfile << endl;
+d586 2
+a587 4
+    if (node == 0) {
+      logfile << "Error: Can not use nocut types with neighboring" << endl;
+    }
+    exit(0);
+d620 2
+a621 4
+	if (node == 0) {
+	  logfile << "Error:Force_Twobody::SetupCutNeighSq: "
+	    "No cut off defined for this ff type" << endl;
+	}
+d624 2
+a625 4
+	if (node == 0) {
+	  logfile << "Error:Force_Twobody::SetupCutNeighSq: "
+	    "No cut off defined for this ff type" << endl;
+	}
+d628 2
+a629 4
+	if (node == 0) {
+	  logfile << "Error:Force_Twobody::SetupCutNeighSq: "
+	    "No cut off defined for this ff type" << endl;
+	}
+d632 2
+a633 4
+	if (node == 0) {
+	  logfile << "Error: invalid twobody forcefield type" << endl;
+	}
+	exit(0);
+d640 2
+a641 2
+			       ParticleList* p, 
+			       double& energy, const Box& b, const int type_index[]) {
+d683 2
+a684 3
+	  logfile << 
+	      "Error: invalid twobody forcefield type for Lneighbor true" << endl;
+	  exit(0);
+a685 1
+
+d708 2
+a709 2
+	  logfile << "Error: invalid twobody forcefield type for Lneighbor true" << endl;
+	  exit(0);
+d744 2
+a745 2
+	  logfile << "Error: invalid twobody forcefield type for Lneighbor true" << endl;
+	  exit(0);
+d805 2
+a806 6
+	  logfile << twobody_type << " " 
+		  << lj_nocut << " " 
+		  << exp6_nocut << " " 
+		  << square_exp6_nocut << endl;
+	  logfile << "Error: invalid twobody forcefield type" << endl;
+	  exit(0);
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d9 2
+d15 1
+d23 1
+d27 2
+a28 2
+       const bool& Lasymm, const int& neighbor_freq,
+       const double& neighbor_rskin) {
+d37 1
+a37 1
+				Lasymm,neighbor_freq,neighbor_rskin);
+d40 1
+a40 1
+    cout << "Error: Invalid neighbor style" << endl;;
+d43 1
+d46 1
+a46 1
+void Force_Twobody::ReadInteractions(const string& filename)
+d48 1
+a48 1
+  string buf;
+d55 1
+d59 3
+d63 5
+a67 1
+  ifstream infile(filename.c_str()); 
+d69 4
+a72 3
+  if (!infile) {
+    cout << "Failed to open " << filename << endl;
+    exit(0);
+d74 1
+d77 26
+a102 1
+  while (std::getline(infile,buf)) {
+d104 9
+a112 2
+    // Skip empty or comment lines
+    if (buf.empty() || buf[0]=='#') continue;
+d117 1
+a117 1
+
+d120 1
+a120 1
+
+d140 3
+a142 1
+	cout << "Invalid parameter in " << filename << endl;
+d156 11
+a166 9
+      cout << "-------------------------------------------" << endl;
+      cout << "id1 = " << id1 << endl;
+      cout << "id2 = " << id2 << endl;
+      cout << "forcefieldname = " << forcefieldname << endl;
+      cout << "eps = " << eps << endl;
+      cout << "sigma = " << sigma << endl;
+      cout << "rcut = " << rcut << endl;
+      cout << "itype = " << itype << endl;
+      cout << "jtype = " << jtype << endl;
+d172 3
+a174 1
+	cout << "Invalid parameter in " << filename << endl;
+d188 11
+a198 9
+      cout << "-------------------------------------------" << endl;
+      cout << "id1 = " << id1 << endl;
+      cout << "id2 = " << id2 << endl;
+      cout << "forcefieldname = " << forcefieldname << endl;
+      cout << "eps = " << eps << endl;
+      cout << "sigma = " << sigma << endl;
+      cout << "rcut = " << rcut << endl;
+      cout << "itype = " << itype << endl;
+      cout << "jtype = " << jtype << endl;
+d204 3
+a206 1
+	cout << "Invalid parameter in " << filename << endl;
+d218 10
+a227 8
+      cout << "-------------------------------------------" << endl;
+      cout << "id1 = " << id1 << endl;
+      cout << "id2 = " << id2 << endl;
+      cout << "forcefieldname = " << forcefieldname << endl;
+      cout << "eps = " << eps << endl;
+      cout << "sigma = " << sigma << endl;
+      cout << "itype = " << itype << endl;
+      cout << "jtype = " << jtype << endl;
+d233 3
+a235 1
+	cout << "Invalid parameter in " << filename << endl;
+d248 9
+a256 7
+      cout << "-------------------------------------------" << endl;
+      cout << "id1 = " << id1 << endl;
+      cout << "id2 = " << id2 << endl;
+      cout << "forcefieldname = " << forcefieldname << endl;
+      cout << "eps = " << eps << endl;
+      cout << "rmin = " << rmin << endl;
+      cout << "alpha = " << alpha << endl;
+d262 3
+a264 1
+	cout << "Invalid parameter in " << filename << endl;
+d277 9
+a285 7
+      cout << "-------------------------------------------" << endl;
+      cout << "id1 = " << id1 << endl;
+      cout << "id2 = " << id2 << endl;
+      cout << "forcefieldname = " << forcefieldname << endl;
+      cout << "eps = " << eps << endl;
+      cout << "rmin = " << rmin << endl;
+      cout << "alpha = " << alpha << endl;
+d289 3
+a291 1
+      cerr << "Invalid forcefield name" << endl;;
+d296 3
+a298 1
+      cout << "Read error in " << filename << endl;
+d308 2
+a309 1
+  }
+d327 1
+a327 1
+    }
+d331 1
+a331 1
+    }
+d334 16
+a349 14
+  cout << endl;
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      cout << input_param_index[itype][jtype];
+      if (input_param_index[itype][jtype] == -1) {
+	cout << " ----------------------------------";
+      } else {
+	cout << "\t" << input_param_list[input_param_index[itype][jtype]].type 
+	     << "\t" << input_param_list[input_param_index[itype][jtype]].np; 
+	for (int iparam=0;
+	     iparam<input_param_list[input_param_index[itype][jtype]].np;
+	     iparam++) {
+	  cout << "\t" << input_param_list[input_param_index[itype][jtype]].
+	    params[iparam];
+d351 1
+d353 1
+a353 1
+      cout << "\t\t";
+a354 1
+    cout << endl;
+d359 1
+a359 1
+void Force_Twobody::SetupInteractions(const Box& b)
+d364 3
+d379 9
+a387 6
+  cout << endl << "i \tii \tid \tt \tn" << 
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    endl;
+d424 3
+a426 1
+	cout << "Error: invalid twobody forcefield type" << endl;
+d433 7
+a439 4
+      cout << i << "\t" << ii << "\t" << id_index[itype] << "\t" 
+	   << param_list[i].type << "\t" << param_list[i].np; 
+      for (iparam=0;iparam<param_list[i].np;iparam++) {
+	cout << setw(13) << param_list[i].params[iparam];
+a440 1
+      cout << endl;
+d442 3
+a444 1
+      cout << "Error: Twobody type has no pure entry" << endl;
+d448 3
+a450 1
+  cout << endl;
+d453 8
+a460 6
+  cout << "i \tii \tjj \tid1 \tid2 \tt \tn" << 
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    endl;
+d499 3
+a501 1
+	  cout << "Error: invalid twobody forcefield type" << endl;
+d510 8
+a517 5
+	cout << i << "\t" << ii << "\t" << " " << "\t"
+	     << id_index[itype] << "\t" << id_index[jtype] << "\t"
+	     << param_list[i].type << "\t" << param_list[i].np; 
+	for (iparam=0;iparam<param_list[i].np;iparam++) {
+	  cout << setw(13) << param_list[i].params[iparam];
+a518 1
+	cout << endl;
+d520 1
+a520 1
+      // Obtain parameters from mixing rule
+d525 3
+a527 1
+	  cout << "Error: missing pure entry for this cross pair" << endl;
+d531 7
+a537 5
+	    cout << "Error: pure components of cross pair "
+	      "have different forcefield types " << 
+	      ii << " " << jj << " " <<
+	      input_param_list[ii].type << " " << 
+	      input_param_list[jj].type << endl;
+d572 1
+a572 1
+			   input_param_list[jj].params[1]);
+d581 1
+a581 1
+			   input_param_list[jj].params[1]);
+d587 3
+a589 1
+	      cout << "Error: invalid twobody forcefield type" << endl;
+d597 8
+a604 5
+	    cout << i << "\t" << ii << "\t" << jj << "\t"
+		 << id_index[itype] << "\t" << id_index[jtype] << "\t"
+		 << param_list[i].type << "\t" << param_list[i].np; 
+	    for (iparam=0;iparam<param_list[i].np;iparam++) {
+	      cout << setw(13) << param_list[i].params[iparam];
+a605 1
+	    cout << endl;
+d610 3
+a612 1
+    cout << endl;
+d616 3
+a618 1
+    cout << "Error: Can not use nocut types with neighboring" << endl;
+d624 1
+a624 2
+void Force_Twobody::SetupCutNeighSq(const double& rskin)
+{
+d627 4
+d647 1
+a647 1
+      break;
+d650 1
+a650 1
+      break;
+d652 4
+a655 2
+	cout << "Error:Force_Twobody::SetupCutNeighSq: "
+	  "No cut off defined for this ff type" << endl;
+d658 4
+a661 2
+	cout << "Error:Force_Twobody::SetupCutNeighSq: "
+	  "No cut off defined for this ff type" << endl;
+d664 4
+a667 2
+	cout << "Error:Force_Twobody::SetupCutNeighSq: "
+	  "No cut off defined for this ff type" << endl;
+d670 3
+a672 1
+	cout << "Error: invalid twobody forcefield type" << endl;
+d679 3
+a681 1
+void Force_Twobody::ApplyForce(ParticleList* p, double& energy, const Box& b, const int type_index[]) {
+d698 64
+a761 1
+  if (Lneighbor == true) {
+d786 1
+a786 1
+	  cout << "Error: invalid twobody forcefield type for Lneighbor true" << endl;
+d847 5
+a851 5
+	  cout << twobody_type << " " 
+	       << lj_nocut << " " 
+	       << exp6_nocut << " " 
+	       << square_exp6_nocut << endl;
+	  cout << "Error: invalid twobody forcefield type" << endl;
+d882 3
+a884 3
+				 const double& sigma, 
+				 const double& rcut, 
+				 ff_params& ff_param_tmp) 
+d900 2
+a901 2
+				 const double& sigma, 
+				 ff_params& ff_param_tmp) 
+d914 3
+a916 3
+				 const double& rmin, 
+				 const double& alpha, 
+				 ff_params& ff_param_tmp) 
+d931 3
+a933 3
+				 const double& rmin, 
+				 const double& alpha, 
+				 ff_params& ff_param_tmp) 
+d947 1
+@
+
+
+1.9
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@a0 2
+using namespace std;
+
+d7 3
+a9 1
+#include <math.h>
+d18 2
+d22 4
+a25 5
+Force_Twobody::Force_Twobody(const int& neighbor_style_in, 
+			     const double& rskin_in){
+  bool Lasymm = false;
+  neighbor_style = neighbor_style_in;
+  rskin = rskin_in;
+d30 1
+a30 2
+  default:
+    neighbor = new Neighbor(Lasymm);
+d32 2
+d35 3
+a38 1
+  classname = twobody;
+a515 4
+  if (Lneighbor) {
+    neighbor->SetupImageStencil(*this);
+    SetupCutNeighSq();
+  }
+d518 1
+a518 1
+void Force_Twobody::SetupCutNeighSq()
+d562 1
+a562 1
+void Force_Twobody::ApplyForce(vector<Particle>& particles, double& energy, const bool& perflag, const Box& b, const int type_index[]) {
+d570 6
+d583 3
+a585 2
+      itype = type_index[particles[i].get_type()];
+      particles[i].get_x(xi);
+d590 3
+a592 2
+	jtype = type_index[particles[j].get_type()];
+	particles[j].get_x(xj);
+d608 2
+a609 2
+	particles[i].increment_f(f);
+	particles[j].decrement_f(f);
+d618 7
+a624 4
+    for (i=0;i<particles.size()-1;i++) {
+      itype = type_index[particles[i].get_type()];
+      for (j=i+1;j<particles.size();j++) {
+	jtype = type_index[particles[j].get_type()];
+d631 1
+a631 1
+	    force_lj_cut_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+d633 1
+a633 1
+	    force_lj_cut_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+d638 1
+a638 1
+	    force_lj_cut_shift_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+d640 1
+a640 1
+	    force_lj_cut_shift_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+d645 1
+a645 1
+	    force_lj_nocut_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+d647 1
+a647 1
+	    force_lj_nocut_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+d652 1
+a652 1
+	    force_exp6_nocut_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+d654 1
+a654 1
+	    force_exp6_nocut_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+d659 1
+a659 1
+	    force_square_exp6_nocut_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+d661 1
+a661 1
+	    force_square_exp6_nocut_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+d673 2
+a674 2
+	particles[i].increment_f(f);
+	particles[j].decrement_f(f);
+@
+
+
+1.8
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d20 2
+a21 1
+Force_Twobody::Force_Twobody(){
+d23 12
+a34 1
+  neighbor = new Neighbor(Lasymm);
+d37 1
+a37 1
+void Force_Twobody::ReadInteractions()
+d50 1
+a50 1
+  ifstream infile("twobody.in"); 
+d53 1
+a53 1
+    cout << "Failed to open twobody.in" << endl;
+d89 1
+a89 1
+	cout << "Invalid parameter in twobody.in" << endl;
+d117 1
+a117 1
+	cout << "Invalid parameter in twobody.in" << endl;
+d145 1
+a145 1
+	cout << "Invalid parameter in twobody.in" << endl;
+d170 1
+a170 1
+	cout << "Invalid parameter in twobody.in" << endl;
+d195 1
+a195 1
+	cout << "Invalid parameter in twobody.in" << endl;
+d223 1
+a223 1
+      cout << "Read error in twobody.in" << endl;
+d506 6
+a511 1
+  Lneighbor = !Lnocut;
+d573 1
+a573 1
+  if (Lneighbor) {
+d665 1
+@
+
+
+1.7
+log
+@Added configuration output routine to Box.
+Added shifted origin to minimg routines.
+Cleaned up minimg routines to consistently
+Deal with following issues:
+	orthorhombic versus triclinic
+	inner-loop Minimig_Dist functions only perform single box shift,
+		as it is more efficient than general shift.
+	For this reason, standard Minimg_Pos function also only
+		performs single box shift, but also checks that
+		aparticles have not strayed too far.
+	Initial config may require more than single box shift, and
+		so for this we use Minimg_Full_pos.
+Treatment of equality conditions:
+	Positions on )0,1[ are mapped onto [0,1).
+	Positions on [0,1) are left alone.
+	Distances on )-1,1( should not occur
+	Distances on )-0.5,0.5( are mapped (-0.5,0.5).
+	Distances on [-0.5,0.5] are left alone.
+@
+text
+@d269 1
+a269 1
+void Force_Twobody::SetupInteractions()
+d553 2
+@
+
+
+1.6
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@d40 1
+a40 1
+  if (infile.fail()) {
+d48 1
+d51 4
+@
+
+
+1.5
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d28 1
+a28 1
+  int id1,id2;
+d40 4
+d575 1
+a575 1
+	
+@
+
+
+1.4
+log
+@Got rid of gratuituous "friend" declaration for class Neighobr in class Box.
+@
+text
+@a11 1
+#include "particle_types.h"
+d13 1
+d16 1
+d19 4
+a22 4
+Force_Twobody& Force_Twobody::get()
+{
+  static Force_Twobody theforcetwobody;
+  return theforcetwobody;
+d25 1
+a25 1
+void Force_Twobody::ReadTwobodyInteractions()
+d44 1
+a44 1
+    if (buf.empty()) continue;
+d260 1
+a260 1
+void Force_Twobody::SetupTwobodyInteractions()
+d487 1
+a487 1
+    neighbor.SetupImageStencil();
+d494 1
+a494 1
+  double rsq,rcut;
+d497 15
+a511 8
+  cout << "nentries = " << nentries << endl;
+  for (int i=0;i<nentries;i++) {
+    type = param_list[i].type;
+    switch(type) {
+    case lj_cut :
+      rcut = sqrt(param_list[i].params[4]);
+      rsq = pow(rcut+rskin,2);
+      rcutneighsq.push_back(rsq);
+d513 2
+a514 3
+    case lj_cut_shift :
+      rsq = pow(sqrt(param_list[i].params[4])+rskin,2);
+      rcutneighsq.push_back(rsq);
+d516 16
+a531 15
+    case lj_nocut :
+      cout << "Error:Force_Twobody::SetupCutNeighSq: "
+	"No cut off defined for this ff type" << endl;
+      break;
+    case exp6_nocut :
+      cout << "Error:Force_Twobody::SetupCutNeighSq: "
+	"No cut off defined for this ff type" << endl;
+      break;
+    case square_exp6_nocut :
+      cout << "Error:Force_Twobody::SetupCutNeighSq: "
+	"No cut off defined for this ff type" << endl;
+      break;
+    default:
+      cout << "Error: invalid twobody forcefield type" << endl;
+      exit(0);
+d536 102
+a637 9
+bool Force_Twobody::find_id(const int& id, int& itype) const
+{
+  bool match;
+  match = false;
+  for (itype=0;(itype < ntypes) 
+	 && !match ; itype++) {
+    if (id == id_index[itype]) {
+      match = true;
+      break;
+d640 1
+a640 1
+  return match;
+a724 108
+void Force_Twobody::ApplyForce(vector<Particle>& particles, double& energy, const bool& perflag, const Box& b) {
+
+  double f[3];
+  double energy_ij;
+  int itype,jtype,ientry;
+  Force_Twobody::ff_type twobody_type;
+  int i,j,image;
+  double xi[3],xj[3];
+
+  Particle_Types& t = Particle_Types::get();
+
+  if (Lneighbor) {
+
+    for (int icosp=0;icosp<neighbor.cosp_list.size()-1;icosp++) {
+      i = neighbor.cosp_list[icosp].i;
+      itype = t.get_twobody_type(particles[i].get_type());
+      particles[i].get_x(xi);
+      image = neighbor.cosp_list[icosp].image;
+      vec3_add(neighbor.image_stencil[image],xi,xi);
+      for (int ineigh=neighbor.cosp_list[icosp].first;ineigh<neighbor.cosp_list[icosp+1].first;ineigh++) {
+	j = neighbor.neigh_list[ineigh];
+	jtype = t.get_twobody_type(particles[j].get_type());
+	particles[j].get_x(xj);
+
+	ientry = get_entry(itype,jtype);
+	twobody_type = get_type(ientry);
+	switch(twobody_type) {
+	case Force_Twobody::lj_cut :
+	  force_lj_cut(xi,xj,f,energy_ij,ientry);
+	  break;
+	case Force_Twobody::lj_cut_shift :
+	  force_lj_cut_shift(xi,xj,f,energy_ij,ientry);
+	  break;
+	default:
+	  cout << "Error: invalid twobody forcefield type for Lneighbor true" << endl;
+	  exit(0);
+	}
+	
+	particles[i].increment_f(f);
+	particles[j].decrement_f(f);
+	energy+=energy_ij;
+
+      }
+
+    }
+
+  } else {
+
+    for (i=0;i<particles.size()-1;i++) {
+      itype = t.get_twobody_type(particles[i].get_type());
+      for (j=i+1;j<particles.size();j++) {
+	jtype = t.get_twobody_type(particles[j].get_type());
+
+	ientry = get_entry(itype,jtype);
+	twobody_type = get_type(ientry);
+	switch(twobody_type) {
+	case Force_Twobody::lj_cut :
+	  if (perflag) {
+	    force_lj_cut_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+	  } else {
+	    force_lj_cut_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+	  }
+	  break;
+	case Force_Twobody::lj_cut_shift :
+	  if (perflag) {
+	    force_lj_cut_shift_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+	  } else {
+	    force_lj_cut_shift_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+	  }
+	  break;
+	case Force_Twobody::lj_nocut :
+	  if (perflag) {
+	    force_lj_nocut_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+	  } else {
+	    force_lj_nocut_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+	  }
+	  break;
+	case Force_Twobody::exp6_nocut :
+	  if (perflag) {
+	    force_exp6_nocut_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+	  } else {
+	    force_exp6_nocut_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+	  }
+	  break;
+	case Force_Twobody::square_exp6_nocut :
+	  if (perflag) {
+	    force_square_exp6_nocut_minimg(particles[i],particles[j],f,energy_ij,ientry,b);
+	  } else {
+	    force_square_exp6_nocut_nopbc(particles[i],particles[j],f,energy_ij,ientry);
+	  }
+	  break;
+	default:
+	  cout << twobody_type << " " 
+	       << Force_Twobody::lj_nocut << " " 
+	       << Force_Twobody::exp6_nocut << " " 
+	       << Force_Twobody::square_exp6_nocut << endl;
+	  cout << "Error: invalid twobody forcefield type" << endl;
+	  exit(0);
+	}
+	
+	particles[i].increment_f(f);
+	particles[j].decrement_f(f);
+	energy+=energy_ij;
+      }
+    }
+  }
+
+}
+@
+
+
+1.3
+log
+@
+
+Added neighbor list object.
+@
+text
+@a525 4
+  cout << "Entries in rcutneighsq: " << endl;
+  for (int i=0;i<nentries;i++) {
+    cout << rcutneighsq[i] << endl;
+  }
+@
+
+
+1.2
+log
+@
+Added ReadParticleTypes, and improved organization of input,
+including error checking.
+@
+text
+@d10 1
+a11 1
+#include "box.h"
+d13 1
+d15 2
+d29 2
+a30 2
+  double eps,sigma,rmin,alpha;
+  int nparams, maxparam;
+a38 1
+  maxparam = 0;
+d64 57
+a120 1
+    if (forcefieldname == "lj_nocut") {
+d122 4
+a126 1
+      maxparam = max(maxparam,nparams);
+d147 4
+a151 1
+      maxparam = max(maxparam,nparams);
+d172 4
+a176 1
+      maxparam = max(maxparam,nparams);
+d197 1
+d261 2
+a262 2
+  int nentries,i,itype,jtype,ii,jj,iparam;
+  double eps,sigma,rmin,alpha;
+d271 3
+d275 1
+d288 12
+a300 1
+	ff_param_tmp.np = 4;
+d303 1
+a303 6
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[ff_param_tmp.np];
+	ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+	ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+	ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+	ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+a305 1
+	ff_param_tmp.np = 6;
+d309 1
+a309 8
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[ff_param_tmp.np];
+	ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin;
+	ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+	ff_param_tmp.params[2] = alpha;
+	ff_param_tmp.params[3] = alpha/rmin;
+	ff_param_tmp.params[4] = eps*6.0/(alpha-6.0);
+	ff_param_tmp.params[5] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+a311 1
+	ff_param_tmp.np = 6;
+d315 1
+a315 8
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[ff_param_tmp.np];
+	ff_param_tmp.params[0] = eps*6.0/(alpha-3.0)*alpha/(rmin*rmin);
+	ff_param_tmp.params[1] = eps*alpha/(alpha-3.0)*pow(rmin,6)*6.0;
+	ff_param_tmp.params[2] = alpha;
+	ff_param_tmp.params[3] = alpha/(rmin*rmin);
+	ff_param_tmp.params[4] = eps*3.0/(alpha-3.0);
+	ff_param_tmp.params[5] = eps*alpha/(alpha-3.0)*pow(rmin,6);
+d332 1
+a332 1
+      cout << "Error: Twobody type has no pure entry";
+d353 12
+a365 1
+	  ff_param_tmp.np = 4;
+d368 1
+a368 6
+	    // Need to delete this at some point
+	  ff_param_tmp.params = new double[ff_param_tmp.np];
+	  ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+	  ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+	  ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+	  ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+a370 1
+	  ff_param_tmp.np = 6;
+d374 1
+a374 8
+	  // Need to delete this at some point
+	  ff_param_tmp.params = new double[ff_param_tmp.np];
+	  ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin;
+	  ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+	  ff_param_tmp.params[2] = alpha;
+	  ff_param_tmp.params[3] = alpha/rmin;
+	  ff_param_tmp.params[4] = eps*6.0/(alpha-6.0);
+	  ff_param_tmp.params[5] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+a376 1
+	  ff_param_tmp.np = 6;
+d380 1
+a380 8
+	  // Need to delete this at some point
+	  ff_param_tmp.params = new double[ff_param_tmp.np];
+	  ff_param_tmp.params[0] = eps*6.0/(alpha-3.0)*alpha/(rmin*rmin);
+	  ff_param_tmp.params[1] = eps*alpha/(alpha-3.0)*pow(rmin,6)*6.0;
+	  ff_param_tmp.params[2] = alpha;
+	  ff_param_tmp.params[3] = alpha/(rmin*rmin);
+	  ff_param_tmp.params[4] = eps*3.0/(alpha-3.0);
+	  ff_param_tmp.params[5] = eps*alpha/(alpha-3.0)*pow(rmin,6);
+d386 1
+d408 1
+a408 1
+	  if (param_list[ii].type!=param_list[jj].type) {
+d411 3
+a413 2
+	      param_list[ii].type << " " << 
+	      param_list[jj].type << endl;
+d417 20
+a436 1
+	    switch(param_list[ii].type) {
+a437 1
+	      ff_param_tmp.np = 4;
+d442 1
+a442 6
+	      // Need to delete this at some point
+	      ff_param_tmp.params = new double[ff_param_tmp.np];
+	      ff_param_tmp.params[0] = 48.0*eps*pow(sigma,12);
+	      ff_param_tmp.params[1] = 24.0*eps*pow(sigma,6);
+	      ff_param_tmp.params[2] = 4.0*eps*pow(sigma,12);
+	      ff_param_tmp.params[3] = 4.0*eps*pow(sigma,6);
+a444 1
+	      ff_param_tmp.np = 6;
+d451 1
+a451 7
+	      ff_param_tmp.params = new double[ff_param_tmp.np];
+	      ff_param_tmp.params[0] = eps*6.0/(alpha-6.0)*alpha/rmin;
+	      ff_param_tmp.params[1] = eps*alpha/(alpha-6.0)*pow(rmin,6)*6.0;
+	      ff_param_tmp.params[2] = alpha;
+	      ff_param_tmp.params[3] = alpha/rmin;
+	      ff_param_tmp.params[4] = eps*6.0/(alpha-6.0);
+	      ff_param_tmp.params[5] = eps*alpha/(alpha-6.0)*pow(rmin,6);
+a453 1
+	      ff_param_tmp.np = 6;
+d460 1
+a460 7
+	      ff_param_tmp.params = new double[ff_param_tmp.np];
+	      ff_param_tmp.params[0] = eps*6.0/(alpha-3.0)*alpha/(rmin*rmin);
+	      ff_param_tmp.params[1] = eps*alpha/(alpha-3.0)*pow(rmin,6)*6.0;
+	      ff_param_tmp.params[2] = alpha;
+	      ff_param_tmp.params[3] = alpha/(rmin*rmin);
+	      ff_param_tmp.params[4] = eps*3.0/(alpha-3.0);
+	      ff_param_tmp.params[5] = eps*alpha/(alpha-3.0)*pow(rmin,6);
+d484 46
+d544 191
+@
+
+
+1.1
+log
+@Starting source distribution for Grasp.
+Basic molecular dynamics code with twobody interactions
+@
+text
+@d23 1
+a23 2
+  static const int sz = 1000; // Line width
+  char buf[sz];
+d39 3
+a41 1
+  while (infile.getline(buf,sz)){
+d44 1
+a44 1
+    if (buf_in >> id1 >> id2 ) {
+d46 1
+a46 1
+      match = find_id(id1,itype);
+d48 5
+a52 5
+      if (!match) {
+	ntypes++;
+	itype = ntypes-1;
+	id_index.push_back(id1);
+      }
+d54 6
+a59 6
+      match = find_id(id2,jtype);
+      if (!match) {
+	ntypes++;
+	jtype = ntypes-1;
+	id_index.push_back(id2);
+      }
+d61 12
+a72 12
+      buf_in >> forcefieldname;
+      if (forcefieldname == "lj_nocut") {
+    	buf_in >> eps >> sigma;
+	nparams = 2;
+	maxparam = max(maxparam,nparams);
+	ff_param_tmp.type = lj_nocut;
+	ff_param_tmp.np = nparams;
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = eps;
+	ff_param_tmp.params[1] = sigma;
+	input_param_list.push_back(ff_param_tmp);
+d74 8
+a81 8
+	cout << "-------------------------------------------" << endl;
+	cout << "id1 = " << id1 << endl;
+	cout << "id2 = " << id2 << endl;
+	cout << "forcefieldname = " << forcefieldname << endl;
+	cout << "eps = " << eps << endl;
+	cout << "sigma = " << sigma << endl;
+	cout << "itype = " << itype << endl;
+	cout << "jtype = " << jtype << endl;
+d83 13
+a95 13
+      }
+      else if (forcefieldname == "exp6_nocut") {
+	buf_in >> eps >> rmin >> alpha;
+	nparams = 3;
+	maxparam = max(maxparam,nparams);
+	ff_param_tmp.type = exp6_nocut;
+	ff_param_tmp.np = nparams;
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = eps;
+	ff_param_tmp.params[1] = rmin;
+	ff_param_tmp.params[2] = alpha;
+	input_param_list.push_back(ff_param_tmp);
+d97 7
+a103 7
+	cout << "-------------------------------------------" << endl;
+	cout << "id1 = " << id1 << endl;
+	cout << "id2 = " << id2 << endl;
+	cout << "forcefieldname = " << forcefieldname << endl;
+	cout << "eps = " << eps << endl;
+	cout << "rmin = " << rmin << endl;
+	cout << "alpha = " << alpha << endl;
+d105 13
+a117 13
+      }
+      else if (forcefieldname == "square_exp6_nocut") {
+	buf_in >> eps >> rmin >> alpha;
+	nparams = 3;
+	maxparam = max(maxparam,nparams);
+	ff_param_tmp.type = square_exp6_nocut;
+	ff_param_tmp.np = nparams;
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = eps;
+	ff_param_tmp.params[1] = rmin;
+	ff_param_tmp.params[2] = alpha;
+	input_param_list.push_back(ff_param_tmp);
+d119 7
+a125 7
+	cout << "-------------------------------------------" << endl;
+	cout << "id1 = " << id1 << endl;
+	cout << "id2 = " << id2 << endl;
+	cout << "forcefieldname = " << forcefieldname << endl;
+	cout << "eps = " << eps << endl;
+	cout << "rmin = " << rmin << endl;
+	cout << "alpha = " << alpha << endl;
+d127 16
+a142 10
+      }
+      else {
+	cerr << "Invalid forcefield name" << endl;;
+      }
+      // Save the pair and their address for later compilation
+      i_tmp = new int[2];
+      i_tmp[0] = itype;
+      i_tmp[1] = jtype;
+      ff_pairs.push_back(i_tmp);
+     }
+d357 3
+a359 1
+	      "have different forcefield types" << endl;
+@
+

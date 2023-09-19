@@ -1,0 +1,47 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Moved examples into subdirectories.
+@
+text
+@# 4-particle fcc configuration, atom 1 perturbed.
+       1          A  11  0.1    0.10000000  0.10000000  0.10000000
+       2          A  12  0.2    1.00000000  1.00000000  0.00000000
+       3          A  13  0.3    1.00000000  0.00000000  1.00000000
+       4          A  14  0.4    0.00000000  1.00000000  1.00000000
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@@
+

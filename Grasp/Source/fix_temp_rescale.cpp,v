@@ -1,0 +1,602 @@
+head	4.6;
+access;
+symbols
+	ReverseComm_branch:4.5.0.4
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.7.0.2
+	cjkimme_version_merge_from_trunk_1:2.3.2.2
+	cjkimme_version:2.3.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.6
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.10.11.01.40.34;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.03.20.00.15.37;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.3.2.1;
+next	2.2;
+
+2.2
+date	2003.11.03.23.52.04;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.10.31.20.21.17;	author athomps;	state Exp;
+branches;
+next	;
+
+2.3.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.3.2.2;
+
+2.3.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.6
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <cmath>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "constants.h"
+#include "fix.h"
+#include "fix_temp_rescale.h"
+#include "input.h"
+#include "particlelist.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+Fix_TempRescale::Fix_TempRescale() {
+  fix_style = temp_rescale;
+  Lvolume = false;
+}
+
+Fix_TempRescale::~Fix_TempRescale() {
+}
+
+void Fix_TempRescale::Setup(string& fix_string,
+			    const Box* b, 
+			    const ParticleTypeList* t, Comm* comm) {
+
+  int node;
+  bool match;
+
+  node = comm->get_node();
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Fix_TempRescale::Setup()" << endl;
+  }
+
+
+  std::istringstream buf_in(fix_string);
+
+  buf_in >> particle_color >> temp_target >> ramp_rate >> temp_freq >> 
+    temp_window >> temp_factor >> fix_label;
+
+  if (buf_in.fail()) {
+    glog.error("Fix_TempRescale::Setup():\n"
+	       "Read error in input string");
+  }
+  
+  if (temp_target < 0.0) {
+    glog.error("Fix_TempRescale::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  if (temp_freq <= 0) {
+    glog.error("Fix_TempRescale::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  if (temp_window < 0.0) {
+    glog.error("Fix_TempRescale::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  if (temp_factor < 0.0 || temp_factor > 1.0) {
+    glog.error("Fix_TempRescale::input_temperature_control:\n"
+	       "Invalid input parameter");
+  }
+
+  temp_skip = 1;
+  ramp_rate *= temp_freq;
+
+}
+
+void Fix_TempRescale::Final(ParticleList* p, Box* b, 
+			   Comm* comm) {
+  double temp_tmp;
+
+  if (temp_skip++ % temp_freq == 0) {
+    temp_tmp = p->ComputeTemperatureColor(particle_color,comm);
+    temp_target += ramp_rate;
+    if (fabs(temp_tmp - temp_target) > temp_window) {
+      //Rescale particle velocities
+      p->RescaleTemperatureColor(particle_color,temp_tmp - 
+			    temp_factor*(temp_tmp-temp_target),temp_tmp);
+    }
+  }
+}
+
+void Fix_TempRescale::Start(ParticleList* p, Box* b, 
+			   Comm* comm) {
+}
+
+void Fix_TempRescale::Output(ParticleList* p, const Box* b, 
+			   Comm* comm) {
+  double temp_tmp;
+  temp_tmp = p->ComputeTemperatureColor(particle_color,comm);
+  glog.get_logfile().setf(ios::left,ios::adjustfield);
+  glog.get_logfile() << "Fix " << setw(10) << fix_label.c_str() << 
+    " Temperature = " << temp_tmp << endl;
+}
+
+@
+
+
+4.5
+log
+@Added multiple replica feature.
+@
+text
+@d68 1
+d123 1
+a123 1
+void Fix_TempRescale::Final(ParticleList* p, const Box* b, 
+d138 1
+a138 1
+void Fix_TempRescale::Start(ParticleList* p, const Box* b, 
+@
+
+
+4.4
+log
+@Added some new barostats and thermostats.
+@
+text
+@d112 1
+a112 1
+  if (temp_factor <= 0.0 || temp_factor > 1.0) {
+d145 2
+a146 2
+  glog.logfile.setf(ios::left,ios::adjustfield);
+  glog.logfile << "Fix " << setw(10) << fix_label.c_str() << 
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d89 1
+a89 1
+  buf_in >> particle_color >> temp_target >> temp_freq >> 
+d91 1
+d96 21
+d118 2
+d128 1
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d65 5
+a69 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Fix_TempRescale::Setup()" << endl;
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d65 1
+a65 1
+
+d67 1
+@
+
+
+2.7
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.6
+log
+@Updated header
+@
+text
+@d53 3
+@
+
+
+2.5
+log
+@Various
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.4
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.3
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d64 1
+a64 1
+  stringstream buf_in(fix_string);
+@
+
+
+2.3.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@d61 1
+a61 1
+#ifdef USE_NODEFILES
+a62 1
+#endif
+@
+
+
+2.3.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a52 3
+Fix_TempRescale::~Fix_TempRescale() {
+}
+
+d65 1
+a65 1
+  std::istringstream buf_in(fix_string);
+@
+
+
+2.2
+log
+@Pushed examples down into subdirectories.
+@
+text
+@d1 28
+@
+
+
+2.1
+log
+@Added Fix class, for doing slective thermostatting
+and other things.
+@
+text
+@a15 1
+#include "particletypelist.h"
+a29 1
+  string id;
+d38 1
+a38 1
+  buf_in >> id >> temp_target >> temp_freq >> 
+a43 6
+  match = t->find_id(id,particle_type);
+  if (!match) {
+    glog.abort("Fix_TempRescale::Setup:\n"
+	       "Missing definition for id " + id);
+  }
+
+d52 1
+a52 1
+    temp_tmp = p->ComputeTemperatureType(particle_type,comm);
+d55 1
+a55 1
+      p->RescaleTemperatureType(particle_type,temp_tmp - 
+d68 1
+a68 1
+  temp_tmp = p->ComputeTemperatureType(particle_type,comm);
+@
+

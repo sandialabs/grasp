@@ -1,0 +1,3675 @@
+head	4.30;
+access;
+symbols
+	PPPM_Crozier2:4.2.0.2
+	PPPM_Crozier:4.2
+	Root-of-PPPM_Crozier:4.2
+	Monaco:4.1.0.2
+	PreMonaco:4.1
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.5
+	REAX-2:3.5
+	P_MonacoDoc:3.5.0.6
+	InitialGraspDoc:3.5
+	P_Monaco:3.5.0.4
+	InitialGrasp:3.5
+	REAXFF:3.5.0.2
+	cjkimme_version_merge_from_trunk_1:2.7.2.1
+	cjkimme_version:2.7.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.30
+date	2008.06.04.15.08.22;	author athomps;	state Exp;
+branches;
+next	4.29;
+
+4.29
+date	2007.11.15.21.32.01;	author athomps;	state Exp;
+branches;
+next	4.28;
+
+4.28
+date	2007.10.15.20.52.09;	author athomps;	state Exp;
+branches;
+next	4.27;
+
+4.27
+date	2007.09.13.22.55.41;	author athomps;	state Exp;
+branches;
+next	4.26;
+
+4.26
+date	2007.09.09.21.37.49;	author athomps;	state Exp;
+branches;
+next	4.25;
+
+4.25
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.24;
+
+4.24
+date	2007.05.29.15.08.15;	author athomps;	state Exp;
+branches;
+next	4.23;
+
+4.23
+date	2007.05.24.05.10.51;	author athomps;	state Exp;
+branches;
+next	4.22;
+
+4.22
+date	2007.05.15.19.30.48;	author athomps;	state Exp;
+branches;
+next	4.21;
+
+4.21
+date	2007.04.02.19.45.12;	author athomps;	state Exp;
+branches;
+next	4.20;
+
+4.20
+date	2007.03.16.06.18.30;	author athomps;	state Exp;
+branches;
+next	4.19;
+
+4.19
+date	2007.03.15.22.01.15;	author athomps;	state Exp;
+branches;
+next	4.18;
+
+4.18
+date	2007.03.12.04.01.27;	author athomps;	state Exp;
+branches;
+next	4.17;
+
+4.17
+date	2007.02.15.05.35.25;	author athomps;	state Exp;
+branches;
+next	4.16;
+
+4.16
+date	2007.02.15.04.43.34;	author athomps;	state Exp;
+branches;
+next	4.15;
+
+4.15
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.01.16.21.56.40;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2006.12.12.18.03.39;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2006.09.07.19.49.36;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2006.08.26.02.06.31;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.07.03.20.19.31;	author foiles;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.01.25.21.42.12;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.01.19.00.04.09;	author saubry;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.10.28.19.10.56;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.09.02.23.03.05;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.08.05.17.12.32;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.06.08.21.19.05;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.05.02.22.44.55;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.6;
+
+3.6
+date	2005.03.24.21.55.04;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2004.11.24.23.39.28;	author athomps;	state Exp;
+branches
+	3.5.6.1;
+next	3.4;
+
+3.4
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2004.11.01.18.29.27;	author cjkimme;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.10.22.22.30.51;	author cjkimme;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.19.21.01.35;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.08.30.17.25.19;	author athomps;	state Exp;
+branches
+	2.7.2.1;
+next	2.6;
+
+2.6
+date	2004.08.25.21.26.24;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.07.29.21.52.39;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.07.21.18.33.17;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.07.19.17.05.33;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.05.20.22.11.18;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2004.03.02.17.49.42;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.11.03.22.07.54;	author athomps;	state Exp;
+branches;
+next	;
+
+3.5.6.1
+date	2005.01.14.18.07.30;	author saubry;	state Exp;
+branches;
+next	;
+
+2.7.2.1
+date	2004.09.13.23.05.46;	author cjkimme;	state Exp;
+branches;
+next	2.7.2.2;
+
+2.7.2.2
+date	2004.10.20.23.33.50;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.30
+log
+@Updated miscellaneous items.
+@
+text
+@#-----------------------------------------------------------------------
+#
+#   G R A S P
+#   ____________
+#   \           \
+#    \ General   \
+#     \ Reactive  \
+#      \ Atomistic \
+#       \ Simulation\
+#        \ Program   \
+#         \___________\
+#
+#    Timestamp: April 1, 2005
+#    Version: 4.0
+#
+#    Primary Author: Aidan P. Thompson
+#
+#    e-mail: athomps@@sandia.gov
+#   
+#    Copyright (2005) Sandia National Laboratories
+#
+#    Sandia National Laboratories is a multiprogram laboratory 
+#    operated by Sandia Corporation, a Lockheed Martin company,
+#    for the United States Department of Energy under contract
+#    No. DE-AC04-94AL-85000.
+#
+#    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+#    Corporation, the U.S. Government retains certain rights in 
+#    this software.
+#
+#    This software is distributed under the terms of the GNU Public 
+#    License (GPL). For a copy of the GPL see the file 
+#    Grasp/Documentation/LICENSE or visit the GNU website at 
+#    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+#    entitles you to use the software, modify it and redistribute it. 
+#    The main thing you can not do is apply any other licensing 
+#    terms to the software. Also, if any part of this sofware is added 
+#    to other software, then that software must also be released under 
+#    the GPL.
+#
+#    This software comes with no warranty of any kind. 
+#
+#------------------------------------------------------------------------ 
+#///:EOH~
+INTRODUCTION
+------------
+
+GRASP (General Reactive Atomistic Simulation Package) is
+primarily intended as a molecular dynamics package
+for complex force fields.  The code is designed to 
+provide good performance for large systems, either in
+parallel or serial execution mode. 
+
+Currently, the list of capabilities includes:
+    -Twobody interactions (e.g. Lennard-Jones)
+    -Threebody interactions (e.g. Stillinger-Weber)
+    -Long-range electrostatic interactions (Ewald summation)
+    -External interactions (e.g. 9-3 Wall)
+    -Embedded atom method
+    -Tersoff potential
+    -Triclinic periodic boundaries
+    -Velocity-verlet time integration
+    -Steepest descent energy relaxation
+    -Conjugate gradient energy minimization (not completely parallelized yet?)
+    -Energy and normal stress minimization for a system with a single interface
+    -Neighbor lists with binning
+    -Parallel execution triclinic spatial decomposition
+    -NVE,NVT,NPH and NPT ensembles
+    -Special constraints (e.g. thermostat some particles)
+    -Particle-mesh Ewald summation (soon)
+
+Notable absences:
+    -Bonded interactions (not planned)
+
+The code requires a minimum of three input files
+which have default names inp.dat, types.in and config.in.
+The default names may be overridden by specifying a
+different input file name as the first command line argument
+to grasp. For instance:
+
+   grasp other_inp
+
+will read the file "other_inp.dat" (the .dat is assume by default)
+rather than the file "inp.dat".  Other files may be specified by the user.  
+All file input follows the same set of conventions. Each file
+is treated as a set of commands, one per line, which
+are read one by one.  The commands can occur in any order.
+Input terminates when the end-of-file is reached.
+if multiple worlds are used, the 'world input file' command
+forces each world to read in a second world-specific input file.
+The file is named inp.dat.xxxx, where xxxx is a four digit representation
+of the world e.g. inp.dat.0000, inp.dat.0001, etc.
+  
+Each command consists of a set of tokens separated by whitespace.
+(a token is a word or number).  
+
+Commands are parsed as follows:
+    -A line is read and reduced to a set of blank-separated tokens. 
+    -If the reduced line is empty, it is ignored.
+    -If the reduced line begins with '#' it is ignored.
+    -If the reduced line ends with '\', then the
+	next line is read, reduced and appended to it.
+    -Note that # at the start of a line overrides \
+	at the end, and \ at the end of a line overrides #
+	at the start of the next line.
+    -Input stops when end of file is encountered.
+
+The primary source of input is the file inp.dat.
+This is read in its entirety before any attempt
+to set up the simulation is made. It functions as
+a set of commands followed by arguments.
+The current list of commands are descibed in the section
+entitled INPUT COMMANDS.
+
+After inp.dat has been successfully read, the code reads
+the list of particles types from the file types.in.
+Each type specification starts on a new line and consists of
+an arbitrary user-specified particle type id word 
+followed by a particle class keyword, followed by a list of 
+class-specific arguments. Currently the only class is 'atom', 
+and it's only argument is its atomic mass e.g.
+
+   CH3  atom   15.0   
+
+After the atom types have been set up, all the force fields
+declared in the input script are loaded. Each force field is
+read in from a different user-specified file. The format
+of these files for the different classes of force field are
+described in the sections entitled FORCE FIELDS.. 
+
+Finally, the list of particle positions is read in from the
+file config.in, one line per particle. The tokens are
+as follows:
+    -Unique tag (int)
+    -particle type id (word)
+    -Color tag (int)
+    -Charge (float)
+    -x coordinate (float)
+    -y coordinate (float)
+    -z coordinate (float)	
+
+For example:
+
+    1   A  11  0.1    0.10000000  0.00000000  0.00000000
+
+If the command 'init velocities read' is also used, then 
+the particle velocities are read in as three additional 
+values are on each line:
+    -x velocity component (float)
+    -y velocity component (float)
+    -z velocity component (float)
+
+For example:
+
+    1   A  11  0.1    0.10000000  0.00000000  0.00000000 1.0 0.0 0.0
+
+As an alternate to reading from config.in, the particle positions
+and velocities can be read in from the restart file restart.in,
+if the commmand 'init config restart' is used.`
+
+The primary output file is grasp.out, which provides initial
+and final summaries of the calculation. In addition, if the
+'thermo' command is used, then information about the current state
+of the system will be written periodically. The name of the output files,
+including grasp.out, can be modified using the command 'dumpfile root'. 
+ 
+INPUT COMMANDS
+--------------
+
+Below is an alphabetical list of input commands.  Each command consists
+of one or more words separated by white space, followed by numeric or
+text arguments separated by whitespace.
+The arguments for each command are listed below the command,
+with data type and default value, in parentheses.
+If no default arguments are given, the command defaults to inactive.
+A non-default usage example is also provided.
+
+For some commands, leading arguments can change the number
+and meaning of trailing arguments. For these commands, the
+different forms of the trailing arguments are described as
+separate sub-lists.  The heading for each sub-list is the
+list of leading-argument values to which it corresponds.
+
+barrier timing
+
+    No arguments.
+
+    This command turns on the use of global synchronization
+    in the force evaluation functions.  This makes timing
+    information more transparent, but can degrade overall
+    performance
+
+    barrier timing
+
+box dimensions
+    - x coordinate of first lattice vector (float 1.0)
+    - y coordinate of first lattice vector (float 0.0)
+    - z coordinate of first lattice vector (float 0.0)
+    - x coordinate of second lattice vector (float 0.0)
+    - y coordinate of second lattice vector (float 1.0)
+    - z coordinate of second lattice vector (float 0.0)
+    - x coordinate of third lattice vector (float 0.0)
+    - y coordinate of third lattice vector (float 0.0)
+    - z coordinate of third lattice vector (float 1.0)
+
+    This command specifies the dimensions of the
+    periodic simulation box. If periodic boundaries are turned off
+    using the 'box periodicity' command, then reflective boundaries
+    are imposed at r=origin and r=origin+dimension. Currently, this 
+    last mode only works for orthogonal box dimensions.
+
+    box dimensions 		0.0	11.798	11.798   \
+				11.798  0.0  	11.798   \
+				11.798	11.798	0.0
+
+box origin
+    - x coordinate of unit cell origin (float 0.0)
+    - y coordinate of unit cell origin (float 0.0)
+    - z coordinate of unit cell origin (float 0.0)
+
+    This command specifies the location of the origin
+    of the periodic simulation box. If periodic boundaries are turned off
+    using the 'box periodicity' command, then reflective boundaries
+    are imposed at r=origin and r=origin+dimension. Currently, this 
+    last mode only works for orthogonal box dimensions.
+
+    box origin 		5.899 5.899 5.899
+
+box periodicity
+    -Enforce periodic boundary condition in x direction (0/1 1) 
+    -Enforce periodic boundary condition in y direction (0/1 1) 
+    -Enforce periodic boundary condition in z direction (0/1 1) 
+
+    Specify whether periodic boundary conditions are enforced in each of the three
+    directions. If not, then reflective boundary conditions are applied at the
+    box boundaries specified by 'box dimensions' and 'box origin' commands.
+    Periodicity can only be turned off when box dimensions are orthogonal.
+
+    box periodicity 0 1 1
+
+cohesive energy 
+    - The equilibrium energy per atom (float)
+
+    This command stores the equilibrium energy per atom. Some quantities
+    accessing the energy of atom will subtract add this value to
+    measure the energy in excess of the equilibrium value.
+
+    cohesive energy     -418.4 # stillinger-weber silicon
+
+conjugate gradient
+    - Maximum number of CG iterations (int)
+    - Maximum number of line search iterations (int)
+    - Line search tolerance (float, energy units)
+    - Force tolerance (float, force units)
+    
+    Minimize the system energy with a conjugate gradient minimizer. 
+    The force tolerance specifies the maximum absolute value any single 
+    component of the force on an atom may have before the routine is
+    considered converged. The line search tolerance is an energy tolerance
+    for a 1D minimization which can have the specified number of line
+    search iterations. The types of particles to be minimized need to
+    be specified with the "minimized particles" command.
+
+
+    conjugate gradient   1000 100 0.000001 0.001
+
+density profile
+    - Number of timesteps between density profile samples (int)
+    - Number of bins to be used
+    - Direction of binning coordinate (1, 2 or 3)
+
+    This command is used to generate a one-dimensional density profile 
+    for all the particles in the simulation.
+    The binning coordinate lies along the reciprocal lattice 
+    vector specified by the third argument. For rectangular
+    boxes x=1, y=2 and z=3.
+    The profile is written to the file density_profile.out
+    at the end of the simulation. Units are [particles/A^3].
+
+    density profile		10 		120
+
+dump alpha
+    - Number of timesteps between energy ratio dumps (int)
+    - Particle ID (char)
+
+    This command computes the energy of all atoms with a given
+    particle ID and divides it by the total system energy. It is
+    intended to be used with the cohesive energy command so that
+    all energy values are measured relative to the equilibrium
+    energy for an atom. 
+
+dump cfg
+    - Number of timesteps between dumps in cfg format
+
+    Frames from this file are in a format readable by AtomEye.
+    If the command 'dump velocities cfg' is also used, then the 
+    particle velocities are appended to each line. Otherwise, 
+    '0 0 0' is appended to each line to make AtomEye happy.
+    In addition, if the command 'dump energies cfg' is also used, 
+    then the particle potential energy is appended to each line. 
+
+    dump cfg	  		1000
+
+dump displacements
+    - Number of timesteps between particle displacement dumps (int)
+
+    dump displacements          1000
+
+dump energies
+    - dump energy style (none/config/cfg none)
+    If the value is 'config' or 'cfg', then the potential energy of 
+    each particle is appended to the corresponding lines in the 
+    config.out or cfg.out file, respectively. The assignment of potential
+    energy terms to particles is done using the following general principle.
+    Terms that have involve a central atom (EAM embedding energy, angle terms,
+    Hydrogen bonds) are applied to the central atom. Terms that are 
+    symmetric in a pair of atoms e.g. two body interactions,
+    torsions (central pair) are split equally between the two atoms.
+
+    dump energies		config
+    dump energies		cfg
+
+dump extended cfg
+    - Number of timesteps between extended system information dumps (int)
+
+    Dumps extended configuration information which may be read by recent
+    versions of the free software AtomEye. In addition to the coordinates
+    and velocities, the output file will have the displacements, reference
+    positions, and energy of each particle. 
+
+dump forces
+    - Number of timesteps between particle force dumps (int)
+
+    dump forces			1000
+
+dump format style
+    - style specifier for dump file formatting (scientific/fixed fixed) 
+
+    This command specifies which format style will be used for the
+    various output files. It does not affect the log file. The default
+    style is fixed, which has lots of whitespace, only uses scientific
+    notation for very large or small numbers and reports 10 decimal 
+    places. It is rather wasteful. The other style is scientific, which
+    has minimal whitespace, always uses scientific notation and 
+    reports only 6 decimal places. It can save quite a bit of diskspace
+    relative to the fixed style.
+
+    dump format style scientific
+
+dump particles
+    - Number of timesteps between particle position dumps (int)
+
+    Particle positions are dumped to the file config.out. The format
+    is the same as config.in. The order in which atoms are
+    written out will not generally be the same as that of config.in.
+    If the command 'dump velocities config' is also used, then the 
+    particle positions are appended to each line.
+    If the command 'dump energies config' is also used, then the 
+    particle potential energy is appended to each line.
+
+    dump particles 		        1000
+
+dump reaxbonds 
+     - Number of timesteps between bond-order dumps (int 0) 
+
+     This command will write ReaxFF bond orders and connection table
+     based on coarse bond order cutoff (default 0.3), i.e. bonds
+     with an order less than cutoff will be skipped. One line is printed
+     out for each atom, consisting of the following 2*nbonds+7 fields: 
+     tag, type, nbonds, nbonds neighbors tags, molecule id (not calculated), 
+     nbonds bond orders, total bond order, number of lone pairs, atom charge. 
+
+     dump reaxbonds 		100
+
+dump reaxallbonds 
+     - Number of timesteps between allbond-order dumps (int 0) 
+     This command will write ReaxFF bond orders and connection table
+     without skipping, i.e. bonds with small orders will be also included. 
+     One line is printed
+     out for each atom, consisting of the following 2*nbonds+7 fields: 
+     tag, type, nbonds, nbonds neighbors tags, molecule id (not calculated), 
+     nbonds bond orders, total bond order, number of lone pairs, atom charge. 
+
+     dump reaxallbonds 		100
+
+dump ref config
+    - Number of timesteps between particle reference configuration dumps (int)
+
+    Dumps the initial atomic positions read in with the read atoms command,
+    except it updates the reference position if atoms are translated because
+    of periodic boundary conditions. This information along with the output
+    of the "dump displacements" command yields the same information as
+    dump particles, but it provides easier access to the atomic displacements.
+
+dump restart
+    - Number of timesteps between restart dumps (int)
+
+    Particle objects are dumped to the file restart.out. This file
+    is in binary format and is designed to be read only using
+    the command 'init config restart'. 
+
+    dump restart 		        1000
+
+dump shift
+
+     This command causes the three integer periodic shifts
+     for each particle to be written to the file config.out. 
+     The shifts are listed immediately after the 
+     position for each particle. Adding these displacements to the particle
+     coordinates gives the true position of the particle.
+     If no 'dump particles' command is given, then this has 
+     command has no effect. The shifts can be read back in using
+     the 'read shift' command.
+
+     dump shift
+
+dump stress
+    - Number of timesteps between particle stress dumps (int 0)
+
+    dump stress		1000
+
+    Values are written to the file stress.out. 
+    The six components of the stress tensor
+    attributed to each atom are given, multiplied by the system volume.
+    Contributions from both kinetic energy and potential are accounted for, 
+    so that the sum of the stresses on all particles is exactly equal to the 
+    corresponding component of the virial tensor PV. Currently this 
+    feature is only available for the ReaxFF force field.
+
+dump velocities
+    - Number of timesteps between particle velocity 
+      dumps (int or 'config' or 'cfg')
+
+    dump velocities		1000
+    dump velocities		config
+    dump velocities		cfg
+
+    If the value is 'config' or 'cfg', then the velocities are appended
+    to the corresponding lines in the config.out or cfg.out file,
+    respectively.
+
+dumpfile root 
+    - root to prepend to all output files (string)
+
+    This command can be used to store output in a different directory
+    or to change the file root of all output files.
+    
+    The command
+
+    dumpfile root               subdir1/grasprun.4
+
+    will write output files in the subdirectory "subdir1" of the current
+    working directory, and all output files will be of the form
+    "graspprun.4" + suffix.
+
+fix deformation
+    - Number of timesteps between deformations (int)
+    - 3x3 deformation matrix (9*float)
+
+    Apply a deformation to the period box dimensions. The periodic box
+    and the atoms are affinely deformed by pre-multiplying the periodic
+    box lattice vectors by the deformation matrix. The atoms positions
+    are also rescaled accordingly. 
+
+    It is important to consider how this fix interacts with the 
+    neighboring scheme. Sufficiently large deformations 
+    will result in interactions not included in the neighbor list
+    generated prior to the deformation. Also, use of this fix will
+    cause the processor domain boundaries to be recomputed everytime
+    that the neighbor list is generated, regardless of whether the volume 
+    has changed since the last time the neighbor list was generated.
+    Finally, if two lattice vectors too alligned, one of them will be
+    'remapped', triggering a full reallocation of particles amongst the
+    processors. For these reasons, it is a good idea to use the same number
+    of timesteps in the 'fix deformation' and 'neighbor' commands, although
+    GRASP does not require this. For infrequent deformations, the number of
+    timesteps in the 'fix deformation' command should be a multiple of that
+    in the 'neighbor' command.
+
+    fix deformation  200    0.0 0.1 0.0 \
+			    0.0 0.0 0.0 \
+			    0.0 0.0 0.0
+
+   This command will add 10% of the y-component to each x-component. This
+   will occur for each of the three lattice vectors and for all atoms.
+ 
+fix none
+    No arguments.
+    Creates a fix that does nothing.
+
+fix temp_rescale
+    - Color of particles to which constraint applies (int)
+    - Initial target temperature (float)
+    - Temperature ramp rate (float)
+    - Number of timesteps between temperature checks (int)
+    - Minimum absolute temperature deviation 
+        for which rescaling performed (float)
+    - Coefficient defining strength of rescaling (float)
+    - Label for this constraint used in output (text)
+
+    Selectively aaply thermostat to particles of specified color.
+    Starting at the initial value, the target temperature is 
+    steadily increased or decreased, according to the ramp
+    rate, in units of temperature/timestep.
+
+    The rescaling coefficient must lie between 0 and 1. Zero effectively
+    turns off thermostatting, while 1 rescales the velocities exactly to the
+    target temperature every time (no damping).
+
+    fix temp_rescale 6    0.05 0.0 10 0.005 1.0 Cold
+
+
+fix temp_rescale_slab
+    - Coordinate used to identify particles (0/1/2)
+    - Lower limit of particle coordinates
+    - Upper limit of particle coordinates
+    - Initial target temperature (float)
+    - Temperature ramp rate (float)
+    - Number of timesteps between temperature checks (int)
+    - Minimum absolute temperature deviation 
+        for which rescaling performed (float)
+    - Coefficient defining strength of rescaling (float)
+    - Label for this constraint used in output (text)
+
+    Selectively apply thermostat to particles lying in a
+    slab-shaped volume. The volume is defined by upper
+    and lower limits of the specified position coordinate.
+
+    Starting at the initial value, the target temperature is 
+    steadily increased or decreased, according to the ramp
+    rate, in units of temperature/timestep.
+
+    The rescaling coefficient must lie between 0 and 1. Zero effectively
+    turns off thermostatting, while 1 rescales the velocities exactly to the
+    target temperature every time (no damping).
+
+    fix temp_rescale_slab 2 11.5 13.5    0.05 0.0 10 0.005 1.0 Cold
+
+fixed particles
+    - style (type or color)
+    - number of fixed types or colors (int)
+    - list of fixed types or colors (text)
+
+    Specify which particles are held fixed.
+    
+    fixed particles       type 2 A B
+    fixed particles       color 3 4 7 9
+
+forcefield eam
+    - Number of potential files to read (0 = setfl, > 0 = funcfl)
+    - Label for this force field used in output (text)
+    - Filename(s) for EAM functions (text)
+
+    Defines a new force field of type Embedded Atom Method (EAM). 
+    The EAM functions can be given in setfl format:
+
+    forcefield eam   0 EAM nialhjea 
+
+    or the funcfl format. 
+
+    forcefield eam   2 EAM nismf cusmf
+
+forcefield ewald
+    - Precision specification (float)
+    - Short-range cut off (float)
+
+    Defines a new force field which computes long range electrostatic 
+    interactions.
+
+    forcefield ewald        1.0e-5   6.0
+
+forcefield external
+    - File name for external force field interactions (text)
+    - Label for this force field used in output (text)
+
+    Defines a new force field of type external
+
+    forcefield external 	external.in LJ-93-Wall
+
+forcefield tersoff
+    - File name for tersoff interactions (text)
+    - Label for this force field used in output (text)
+
+    Defines a new force field of type tersoff
+
+    forcefield tersoff tersoff.in Silicon-Tersoff	
+
+forcefield threebody
+    - File name for threebody interactions (text)
+    - Label for this force field used in output (text)
+
+    Defines a new force field of type threebody
+
+    forcefield threebody threebody.in Stillinger-Weber
+
+forcefield twobody
+    - File name for twobody interactions (text)
+    - Label for this force field used in output (text)
+
+    Defines a new force field of type twobody
+
+    forcefield twobody 	twobody.in Lennard-Jones
+
+forcefield veldependent
+    - File name for the velocity dependent drag force 
+    - Label for this force field used in output (text)
+
+    Defines a new force field of typeveldependent
+
+    forcefield veldependent     elec_drag.in Elec_stopping
+
+grain boundary minimizer A B 1000 100 0.000001 0.0001 100.0 virial
+
+     Molecular statics for a system with a grain boundary at z = 0
+     parallel to the x-y plane
+
+     'A' and 'B' are the types of the upper and lower groups of atoms
+     that move rigidly. The next four input values are as for the
+     conjugate gradient command. The next value is the length of the
+     syste in the z-direction. DO NOT use a box size that is this 
+     size. The box size should be reasonably larger than this
+     dimension. The keyword 'virial' turns on interlayer expansion
+     for the free particles (which should be set with the minimized
+     particles command). The keyword 'no_virial' will suppress this
+     degree of freedom, which is difficult to minimize against.
+
+init config
+    - Initial configuration style (read/density/restart read)
+ 
+    read:
+        No arguments.
+        Specifies that initial configuration will be read in
+        from the file config.in
+
+    density:
+        - coordinate in which density is measuredgiven (0/1/2)
+        - number of density points (int)
+
+        init config density 1 120
+
+    reax:
+        No arguments.
+	Specifies that the initial configuration will be read in
+	from the reax input geometry. Only available if the ReaxFF
+	force field is being used.
+
+    restart:
+        No arguments.
+        Specifies that initial configuration will be read in
+        from the binary file restart.in. If you use this,
+        make sure you specify box dimensions consistent
+        with atom positions.
+
+init velocities
+    - Initial velocity style (read/restart)
+
+    read:
+        No arguments.
+        Specifies that initial velocities will be read in
+        from the file config.in. This will not work if
+        a 'init config' command is also used with an argument
+        other than read. This commands allows the user to restart a
+        simulation using a frame from a config.out file generated
+	using the commands 'dump particles ...' together with  
+	'dump velocities cfg' 
+
+    restart:
+        No arguments.
+        Specifies that initial velocities will be read in
+        from the file restart.in. This will not work unless
+        the 'init config restart' command is also used 
+        and it is the default behavior in this case, which
+        makes this command option somewhat redundant.
+
+initialize temperature
+    - Desired temperature (float 0.0)
+    - Random number generator seed (int 0)
+
+    This command results in every particle having random velocity
+    components selected from a Gaussian distrubution with zero mean
+    and standard deviation unity.  After the fact all the velocities
+    are shifted by a constant vector so that the total momentum 
+    is zero and then scaled by a constant factor so that the 
+    target temperature is matched exactly.  
+
+    initialize temperature 	2.0		256
+
+midpoint
+    - Specify whether midpoint method used (0/1 1)
+
+    This command turns on and off the midpoint method for partitioning
+    interactions among processors. The midpoint rule reduces the
+    range of the import region and so requires fewer ghost particles.
+    The energies and forces should not be affected by this command.
+    Currently only the Charge Equilibration and ReaxFF force fields 
+    can take advantage of the method, and so this command has no 
+    effect on other force fields.
+
+    midpoint		1
+
+minimize steepest_descent
+    - Allow relaxation in x direction (0/1 1)
+    - Allow relaxation in y direction (0/1 1)
+    - Allow relaxation in z direction (0/1 1)
+    - Maximum displacement allowed in any direction
+
+    This commands turns on steepest descent minimization.
+    On each timestep, each atom is displaced by vector delx,
+    where delx = F x delt^2/2/mass. The displacement in each of 
+    the three coordinate directions is capped at the value
+    provided for the maximum displacement. The neighbor list
+    is then updated, the forces and energies are computed, and the
+    timestep size (delt) is adjusted. The neighboring frequency specified
+    in the neighbor command is ignored. The number of timesteps and 
+    the initial timestep size are based on the values from nsteps and 
+    timestep commands. The timestep is subsequently adjusted to discourage 
+    energy increases and displacements greater than the maximum 
+    displacement, while also trying to keep the timestep size as large 
+    as possible. The timestep is not allowed to be less than the initial 
+    value. Particles specified by the fixed particles command are not 
+    moved. In addition to monitoring energies and forces reported in 
+    grasp.out and force.out, detailed progress of the minimization is 
+    reported in the optional nodefile files (see command use_nodefiles). 
+    At each timestep, the potential energy, timestep size and the sum of 
+    squares of all relaxing force components is reported. 
+
+    minimize steepest_descent 0  1  1  0.01
+
+minimized particles
+    - type (currently must be the string "type")
+    - number of minimized types (int)
+    - list of minimized types (number of minimized types strings)
+
+    Specify which types of particles are free to move in a conjugate
+    gradient energy minimization. Other particles are considered 
+    fixed or presumed to be handled by another user-specified motion.
+    
+    minimized particles       type 2 A B
+
+neighbor
+    - Neighboring style (none/bin/nsq none)
+
+      none:
+        Sets the neighboring style to none
+
+      bin/nsq:
+        - Number of timesteps between reneighboring (int)
+        - Skin distance (float)
+
+        Sets the neighboring style to bin/nsq.
+
+        neighbor   bin   10  1.0
+
+nsteps
+    - Number of timesteps or minimization steps (int 0)
+
+    nsteps 1000000
+
+nstep_prev 
+     - Initial step count (int 0) 
+     This command will cause the initial step count to be added
+     to all step counts in the output. This is useful to carry over
+     the step coount from a previous simulation     
+
+     nstep_prev 		10000
+
+nworlds
+    - Number of worlds to be setup (int 1)
+
+    A world is an independent replica that may interact with other worlds,
+    depending on whether other world-related commands are used. If there is
+    more than one world, then each world outputs its data to files with the
+    .xxxx world number appended. The number of worlds must evenly divide
+    into the number of processes, so that each world is allocated the
+    same umber of processes.
+
+    nworlds 10
+
+output stress tensor
+
+    This command causes the six stress tensor components 
+    sxx, syy, szz, sxy, sxz, syz, to be printed
+    out with the thermodynamic information. The stress tensor 
+    is related to the scalar pressure by:
+
+    P = (sxx+syy+szz)/3
+
+    output stress tensor
+
+output sum momentum
+
+    This command causes the three components of
+    the total linear momentum to be printed
+    out with the thermodynamic information. The units
+    of momentum are g/mol*velocity units. 
+
+    output sum momentum
+
+pressure control
+    - Pressure control style (none/nose-hoover none)
+
+    none:
+        No arguments.
+        Sets the pressure control style to none.
+
+    nose-hoover:
+        - Target pressure (float)
+        - Characteristic time of barostat in time units (float)
+
+        pressure control  nose-hoover  0.1  1.0 
+
+	This is basically the same as Hoover's method.
+	Unlike the Nose-Hoover thermostat, the effective period 
+        of volume fluctuations will differ from the characteristic 
+	time parameter by some constant, which seems to depend on the 
+        system. This can not be used with non-periodic boxes.
+
+    nose-hoover-full:
+        - Target pressure (float)
+        - Characteristic time of barostat in time units (float)
+
+        pressure control  nose-hoover-full  0.1  1.0 
+
+	Same as nose-hoover, but with
+	fully flexible fluctuations in the box dimensions.
+	Unlike the Nose-Hoover thermostat, the effective period 
+        of volume fluctuations will differ from the characteristic 
+	time parameter by some constant, which seems to depend on the 
+        system. This can not be used with non-periodic boxes. If the
+	box becomes too tilted, GRASP will remap the atoms into an
+	equivalent box that is less tilted. Despite this, the box
+	can still shrink a lot in one direction, which may cause 
+	a variety of problems, inclusing atoms moving more than half
+	the box dimension before the next reneighboring, which will
+	cause an error.
+
+    nose-hoover-partial:
+        - Target axial pressure in x direction  (float or NULL)
+        - Target axial pressure in y direction  (float or NULL)
+        - Target axial pressure in z direction  (float or NULL)
+        - Characteristic time of barostat in time units (float)
+
+        pressure control  nose-hoover  NULL NULL 0.1  1.0 
+
+	Same as nose-hoover, except that a separate extended
+	variable is used for each of the three axial directions.
+	A value of NULL for the target pressure means that no
+        volume changes are allowed in that direction. This can not
+        be used with non-periodic or triclinic boxes. In addition,
+	the target pressure should be isotropic i.e. the same in all
+	directions.
+
+pressure damping
+
+    - pressure damping constant (float 0.0)
+
+    This command specifies the value of the pressure damping
+    constant, which damps the coupling to the barostat.
+    This is used to suppress excessive oscillations in the
+    volume and pressure that may occur when the Nose-Hoover
+    pressure control is used. The units are reciprocal time.
+    Good choices are some small fraction of 1/tau, where tau is
+    the Nose-Hoover characteristic time. Values less than zero 
+    or greater than 1/timestep are unphysical. 
+
+    pressure damping 0.01
+
+processor grid
+
+    - number of processors in the first lattice vector direction (int)
+    - number of processors in the second lattice vector direction (int)
+    - number of processors in the third lattice vector direction (int)
+
+    This command specifies the dimensions of the
+    processor grid used to spatially decompose the particles.
+    The product of all three dimensions must equal the total number
+    of processes
+
+    processor grid		     8  1  1
+
+read atoms
+
+    -filename containing the initial reference configuration (string)
+
+    This command reads in a reference configuration from the given
+    file. The file has exactly the same format as the file config.in:
+
+    index ID color charge X Y Z
+
+    read atoms              config.X0
+
+read box
+
+     This command causes the box dimensions and box origin to be read 
+     from the restart file. This only applies for the input modes
+     'init config restart', and will result in unpredictable 
+     behavior if the restart file was not created with the 
+     'write box' command.
+
+     read box
+
+read displacements
+
+    -filename displacements relative to the reference configuration (string)
+
+    This command reads in displacements from a file with four numbers
+    per line, excepting any initial comments:
+
+    index x y z
+
+    Currently, grasp will complain if the indices in the displacement file
+    are not in the same order as the indices in the file specified by the
+    read atoms commands.
+
+    read displacements      config.u0
+	
+read extvar
+
+     This command causes all the thermostat/barostat extended variables
+     and the extended energy to be read from the restart file. 
+     This only applies for the input modes
+     'init config restart', and will result in unpredictable 
+     behavior if the restart file was not created with the 
+     'write extvar' command.
+
+     read extvar
+
+read shift
+
+     This command causes the three integer periodic shifts
+     for each particle to be written to the file config.out. 
+     The shifts are listed immediately after the 
+     position for each particle. Adding these displacements to the particle
+     coordinates gives the true position of the particle.
+     If no 'dump particles' command is given, then this has 
+     command has no effect. The shifts can be read back in using
+     the 'read shift' command.
+
+     This command causes the three integer periodic shifts
+     to be read for each particle. This only applies for the input mode
+     'init config read'. The shift indexes are listed immediately 
+     after the position for each atom. Adding these displacements 
+     to the particle coordinates gives the true position of the 
+     particle. Normally, the config.in file will have be created using 
+     the 'dump shift' command. For input mode 'init config restart' 
+     the periodic shifts are always read.
+
+     read shift
+
+read timestep
+
+     This command causes the timestep to be read from the restart
+     file. This only applies for the input modes
+     'init config restart', and will result in unpredictable 
+     behavior if the restart file was not created with the 
+     'write timestep' command
+
+     read timestep
+
+read velocities
+
+    -filename containing initial velocities (string)
+
+    This command reads in velocities from a file with four numbers
+    per line, excepting any initial comments:
+
+    index x y z
+
+    Currently, grasp will complain if the indices in the velocity file
+    are not in the same order as the indices in the file specified by the
+    read atoms commands. The velocity units are the same as those used
+    internally by the code i.e. not the same as config.out.
+
+    read velocities         config.v0
+
+reax hbcut
+    -The value of hbcut used for ReaxFF (float 6.0)
+
+    This command allows the user to change the value of the cut-off
+    distance used by ReaxFF for detecting hydrogen bonds. Changing 
+    the default will change the calculated vales of forces and energy.
+    The ghost region around each processor must be at least as thick 
+    as hbcut + rskin, so increasing this hbcut may require more
+    communication. 
+
+    reax hbcut		10.0
+ 
+reax ihb
+    -Specifies whether to unprune possible hydrogen bonds (0/1 0)
+
+    This command controls whether bonds in the ghost region that may
+    contribute to hydrogen bonds are unpruned. The current force algorithm
+    gives correct results, wih or without unpruning.
+
+    reax ihb		1
+ 
+reax iprune
+    -Specifies the level at which ghost bonds are pruned (int 4)
+
+    This command controls how aggressively ghost bonds are
+    pruned to improve performance. The level value is the largest
+    bond color that is not pruned. Color 1 are bonds between two 
+    local atoms. Color 2 bonds share an atom with color 1 bonds.
+    Color 3 bonds share an atom with color 2 bonds, and so on. 
+    Values of 4 or greater should give
+    correct results that are independent of the number of processors.
+    A value of 0 suppresses all pruning and can be used for debugging.
+    Values of 1,2,3 will generally give incorrect results.
+
+    reax iprune		4
+ 
+scale displacements
+    - displacement scale factor (float)
+
+    This command multiplies all displacements by the scale factor. It is
+    useful when the shape of the displacments (e.g. a Gaussian wavepacket)
+    is used for many simulations with a different scale applied (e.g. an
+    amplitude). By default, this command also scales the velocities. This
+    behavior may be removed or modified by specifying an additional velocity
+    factor with the "velocity factor" command.
+
+    scale displacements 2.0
+
+temperature control
+    - Temperature control style (none/nose-hoover/rescale none)
+
+    none:
+        No arguments.
+        Sets the temperature control style to none.
+
+    nose-hoover:
+        - Target temperature (float)
+        - Characteristic time of thermostat in time units (float)
+
+	The velocity-verlet implementation of this thermostat
+	uses the form derived by Tuckerman, Berne and Martyna,
+	J.C.P. v. 97, p. 1990 (1992)
+
+        temperature control  nose-hoover  300.0  0.02 
+
+    nose-hoover_ramp:
+        - Initial target temperature (float)
+        - Final target temperature (float)
+        - Characteristic time of thermostat in time units (float)
+
+	This is identical to nose-hoover, except that the target temperature
+	is steadily increased or decreased towards the final target 
+	temperature.  The ramp rate is determined by the number of timesteps
+	specified in the nsteps command.
+
+        temperature control  nose-hoover_ramp 300.0 100.0 0.02 
+
+    rescale:
+        - Target temperature (float)
+        - Number of timesteps between temperature checks (int)
+        - Minimum absolute temperature deviation 
+             for which rescaling performed (float)
+        - Coefficient defining strength of rescaling (float)
+
+        The rescaling coefficient must lie between 0 and 1. 
+        Zero effectively turns off thermostatting, while 1 
+        rescales the velocities exactly to the
+        target temperature every time (no damping).
+
+        temperature control     rescale 2.0 100 0.05 1.0
+
+    rescale_ramp:
+        - Initial target temperature (float)
+        - Final target temperature (float)
+        - Number of timesteps between temperature checks (int)
+        - Minimum absolute temperature deviation 
+             for which rescaling performed (float)
+        - Coefficient defining strength of rescaling (float)
+
+	This is identical to rescale, except that the target temperature
+	is steadily increased or decreased towards the final target 
+	temperature.  The ramp rate is determined by the number of timesteps
+	specified in the nsteps command.
+
+        temperature control     rescale_ramp 2.0 1.0 100 0.05 1.0
+
+temperature damping
+
+    - temperature damping constant (float 0.0)
+
+    This command specifies the value of the temperature damping
+    constant, which damps the coupling to the thermostat.
+    This is used to suppress excessive oscillations in the
+    kinetic energy that may occur when the Nose-Hoover
+    temperature control is used. The units are reciprocal time.
+    Good choices are some small fraction of 1/tau, where tau is
+    the Nose-Hoover characteristic time. Values less than zero 
+    or greater than 1/timestep are unphysical. 
+
+    temperature damping 0.01
+
+thermo
+    - Number of timesteps between output of thermodynamic
+      properties to grasp.out (int)
+
+    This command turns on output of thermodynamic properties.
+    The thermodynamic properties consist of a list of potential
+    energies, kinetic energy, temperature and energies associated
+    with constraints.  Where possible a conserved Hamiltonian is also
+    reported.
+
+    thermo 100
+
+timestep
+    - Length of time step used in integration/minimization (float 1.0)
+
+    timestep 1.5
+ 
+units
+    - Keyword describing units style (real/reduced/metal/kcal real)
+
+    units real
+
+use_nodefiles
+    - binary flag (0 or 1)
+
+    This command overrides the preprocessor directive USE_NODEFILES.
+    A value of 1 enables debugging output to a unique file for 
+    each processor. A value of 0 suppresses this output. 
+    A small amount of output 
+    may or may not be generated by the code before and during input file 
+    reading, depending on the value of USE_NODEFILES when comm.cpp
+    was compiled.
+
+    use_nodefiles 0
+
+velocity add
+    - x-component of constant velocity vector (float 0.0)
+    - y-component of constant velocity vector (float 0.0)
+    - z-component of constant velocity vector (float 0.0)
+    - color of particles to which velocity will be added
+ 
+    This command adds a constant velocity vector to the initial velocities of 
+    all the particles of the specified color. If the color argument is ommitted
+    then the velocity is added to all particles. 
+    The units of velocity are the same as those in config.out. This command can be used
+    to make a group particles move in a particular direction.
+
+    velocity add 0.0 0.0 10.0 1
+
+velocity factor
+    - scale factor (float)
+
+    This command multiplies all input initial velocities (read in with the
+    "read velocities" command by the input scale factor. It is useful
+    if multiple runs require the same initial velocity only up to a 
+    multiplicative factor.
+
+    velocity factor 0.5
+
+virial style
+    - virial style (none/all_particle/free_particles/particle_sum particle_sum)
+
+    This command sets the method used to compute the potential
+    energy contribution to the virial, which is used to compute pressure.
+    
+    none:
+    The potential energy virial will be set to zero.
+
+    all_particles:
+    The potential energy virial will be computed using the individual
+    force field contributions. All particles will be used
+
+    free_particles:
+    The potential energy virial will be computed using the individual
+    force field contributions. Only free particles will be used,
+    as specified in minimized particles command.
+
+    particle_sum:
+    The potential energy virial will be computed using the total
+    force on the particles.
+    
+    virial style all_particles
+
+world input file
+    
+    No arguments.
+
+    This command forces world-specific input files (inp.dat.xxxx) to be read 
+    in for each world.  This is done after the main input file is read,
+    and can be used to override commands in the main input file.
+
+    world input file
+
+world seed
+
+    No arguments.
+
+    This command forces all random number seeds to add a world-specific 
+    integer value, so that each world is different. The main effect is to
+    give particles different initial velocities.
+
+    world seed
+
+write box
+
+     This command causes the box dimensions and box origin
+     to be written to the restart file. These can 
+     subsequently be read back in from the restart file using the 
+     'read box' command. If the command 'dump restart' is not used 
+     then this command has no effect. 
+
+     write box
+
+write extvar
+
+     This command causes all the thermostat/barostat extended variables and
+     the extended energy to be written to the restart file. These can 
+     subsequently be read back in from the restart file using the 
+     'read extvar' command. If the command 'dump restart' is not used 
+     then this command has no effect. 
+
+     write extvar
+
+write timestep
+
+     This command causes the timestep to be written to the restart
+     file. The timestep can subsequently be read back in from
+     the restart file using the 'read timestep' command. If 
+     the command 'dump restart' is not used then this command
+     has no effect. 
+
+     write timestep
+
+FORCE FIELDS
+--------------
+
+A force field in GRASP is an object which is used to apply
+a force to some, none, or all of the particles in the system.
+The force is applied to particles additively, and is calculated
+using the positions and other attributes of the particles in
+the system.
+
+GRASP currently supports the following classes of force field:
+
+      twobody:		 Lennard-Jones, etc.
+      threebody:	 Stillinger-Weber
+      external:		 Lennard-Jones 9-6 Walls
+      eam:		 EAM
+      tersoff:		 Tersoff		 
+      ewald:		 Ewald Sum
+      reax:		 ReaxFF
+      chargeequil:	 EEM, etc.
+      veldependent:     elec_drag, elec_drag_smooth, elec_drag_drift, elec_drag_smooth_drift
+
+Users are free to specify zero, one or more than one 
+instances of each force field class. If neighboring is 
+turned on, each force field instance maintains its own 
+neighbor list. Within each class there are multiple 
+functional forms.  A given force field
+may employ different functional forms for different 
+combinations of particle types, with some restrictions. 
+
+The different classes are decribed in detail below.
+
+Twobody Force Field Class:
+
+In this class forces are computed as pairwise interactions
+between particles. These interactions are calculated for 
+all pairs of particles whose types are entered in the force field
+input file. 
+
+The force field input file consists of a series of one line entries,
+which follow the standard parsing rules described in the introduction.
+The first two tokens are particle type ids.  These are
+followed by a force field key word describing the functional
+form of the interaction to be used for this pair of particle
+types. Twobody key words are decribed below.  Each key word
+is followed by the list of arguments, a description of the functional
+form and an example.
+
+lj_cut
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    lj_cut is the truncated Lennard-Jones interaction.
+
+    u(r) = 4 epsilon ( (sigma/r)^12 - (sigma/r)^6 ),  r <= rcut
+         = 0, r > rcut
+
+    A   A   lj_cut  1.0 1.0  3.0
+
+lj_cut_shift
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    lj_cut_shift is the truncated Lennard-Jones interaction,
+    shifted up so that it is zero at the cut off distance.
+
+    u(r) = 4 epsilon ( (sigma/r)^12 - (sigma/r)^6 ) 
+             - 4 epsilon ( (sigma/rcut)^12 - (sigma/rcut)^6 ) ,  r <= rcut
+         = 0, r > rcut
+
+    A   A   lj_cut_shift  1.0 1.0  3.0
+
+lj_nocut    
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+
+    lj_nocut is the untruncated Lennard-Jones interaction.
+
+    u(r) = 4 epsilon ( (sigma/r)^12 - (sigma/r)^6 )
+
+    This form of the Lennard-Jones interaction has infinite range,
+    which is not a problem for non-periodic systems. If periodic
+    boundaries are used, then only the nearest image interaction
+    is used for each pair of particles.
+
+    A   A   lj_nocut  1.0 1.0
+
+lj_coul_cut
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    lj_coul_cut is the truncated Lennard-Jones interaction with
+    a truncated Coulombic interaction 
+
+    u(r) = u_lj(r) + q_i*q_j/(4 Pi eps_0 eps_r r),  r <= rcut
+         = 0, r > rcut
+
+	 where eps_0 is the dielectric permitivity of free space
+               eps_r is the relative permittivity of the medium,
+	       which currently is a constant equal to unity.  
+               q_i,q_j are the charges on the particles 
+	       Pi is 3.14...
+	       u_lj(r) is the interaction described by lj_cut
+
+    A   A   lj_coul_cut  1.0 1.0  3.0
+
+lj_coul_cut_shift
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    This is a combination of lj_cut_shift and lj_coul_cut.
+
+    A   A   lj_coul_cut_shift  1.0 1.0  3.0
+
+lj_coul_nocut    
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+
+    This is a combination of lj_nocut and lj_coul_cut.
+
+    A   A   lj_nocut  1.0 1.0
+
+lj_ewald_cut
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    lj_coul_cut is the truncated Lennard-Jones interaction with
+    the real-space part of the Ewald sum for electrostatic interactions. 
+    This must be used in conjuction with the command 'force ewald', which
+    turns on the calculation of the reciprocal space part of the Ewald
+    sum. The two together give the total interaction for the electrostatic
+    interaction (i.e. that represented by e.g. lj_coul_cut for r < rcut).
+
+    u(r) = u_lj(r) + ewald_short_range(q_i,q_j,r),  r <= rcut
+         = 0, r > rcut
+
+    A   A   lj_ewald_cut  1.0 1.0  3.0
+
+lj_ewald_cut_shift
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    This is a combination of lj_cut_shift and lj_ewald_cut.
+
+    A   A   lj_ewald_cut_shift  1.0 1.0  3.0
+
+lj_ewald_nocut    
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+
+    This is a combination of lj_nocut and lj_ewald_cut.
+
+    A   A   lj_ewald_nocut  1.0 1.0
+
+exp6_cut    
+    - A (positive float)
+    - B (positive float)
+    - C (positive float)
+    - rcut, cut-off distance (positive float)
+
+    exp6_cut is the most commmonly used parametrization of
+    the exponential-six potential, truncated at rcut.
+
+    u(r) = A Exp[- B r] - C/r^6 ,  r <= rcut
+         = 0, r > rcut
+
+    For a detailed description of how the shape of the potential 
+    depends on A, B, and C, see the description of exp6_eps_cut.
+    The example given below approximates lj_cut with epsilon = 1 
+    and sigma = 1. 
+
+    A   A   exp6_cut  2179344.9 13.363481 3.333333333 3.0
+
+exp6_cut_shift    
+    - A (positive float)
+    - B (positive float)
+    - C (positive float)
+    - rcut, cut-off distance (positive float)
+
+    exp6_cut_shift is the same as exp6_cut, but the
+    potential is shifted up so that it is zero at the
+    cut-off:
+
+    u(r) = A Exp[- B r] - C/r^6 - (A Exp[- B rcut] - C/rcut^6) ,  r <= rcut
+         = 0, r > rcut
+
+    A   A   exp6_cut_shift  2179344.9 13.363481 3.333333333 3.0
+
+exp6_nocut    
+    - epsilon, minimum energy well-depth (non-negative float)
+    - rmin, minimum energy separation (positive float)
+    - alpha, dimensionless stiffness parameter (positive float)
+
+    exp6_nocut is the untruncated version of exp6_cut.
+
+    u(r) = A Exp[- B r] - C/r^6 ,  r <= rcut
+
+    A   A   exp6_nocut  2179344.9 13.363481 3.333333333
+
+exp6_eps_cut    
+    - epsilon, minimum energy well-depth (non-negative float)
+    - rmin, minimum energy separation (positive float)
+    - alpha, dimensionless stiffness parameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    exp6_eps_cut is the same as exp6_cut, but the function
+    is expressed in terms of parameters representing energy,
+    diameter and stiffness.
+
+    u(r) = epsilon / (alpha-6) ( 6 Exp[alpha(1-r/rmin)] - alpha (rmin/r)^6 ),  r <= rcut
+         = 0, r > rcut
+
+    The parameters of the exp6 and exp6_eps force fields are related
+    as follows:
+
+    A = 6*epsilon/(alpha-6) Exp[alpha]
+    B = alpha/rmin
+    C = eps alpha/(alpha-6) rmin^6
+
+    Unfortunately, the inverse transformation is transcendental:
+
+    epsilon = (alpha-6) C B^6/alpha^7
+    rmin = alpha/B
+    alpha = -7 ProductLog[-1,(-1/7)(6 C B^6 / A)^(1/7)]
+
+    where w = ProductLog[-1,x] is the w < -1 solution of x == w Exp[w],
+    assuming that -1/E < x < 0 i.e. C B^6 / A < 125.162... Beyond
+    this point, the potential has no minumum. It just diverges monotically
+    to negative infinity as r goes to zero.
+
+    The example given below approximates lj_cut
+    with epsilon = 1 and sigma = 1.
+
+    A   A   exp6_eps_cut  1.0 1.1224620483094 15.0 3.0
+
+exp6_eps_cut_shift    
+    - epsilon, minimum energy well-depth (non-negative float)
+    - rmin, minimum energy separation (positive float)
+    - alpha, dimensionless stiffness parameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    exp6_eps_cut_shift is the same as exp6_cut, but the
+    potential is shifted up so that it is zero at the
+    cut-off
+
+    u(r) = epsilon / (alpha-6) ( 6 Exp[alpha(1-r/rmin)] - alpha (rmin/r)^6 )
+	 - epsilon / (alpha-6) ( 6 Exp[alpha(1-rcut/rmin)] - alpha (rmin/rcut)^6 ),  r <= rcut
+         = 0, r > rcut
+
+    A   A   exp6_eps_cut_shift  1.0 1.1224620483094 15.0 3.0
+
+exp6_eps_nocut    
+    - epsilon, minimum energy well-depth (non-negative float)
+    - rmin, minimum energy separation (positive float)
+    - alpha, dimensionless stiffness parameter (positive float)
+
+    exp6_eps_cut is the untruncated version of exp6_eps_cut.
+
+    u(r) = epsilon / (alpha-6) ( 6 Exp[alpha(1-r/rmin)] - alpha (rmin/r)^6 )
+
+    A   A   exp6_eps_nocut  1.0 1.1224620483094 15.0
+
+The following variants of exp6 are related in an obvious
+way to the corresponding lj variants.
+
+exp6_coul_cut
+exp6_coul_cut_shift
+exp6_coul_nocut
+
+exp6_ewald_cut
+exp6_ewald_cut_shift
+exp6_ewald_nocut
+
+exp6_eps_coul_cut
+exp6_eps_coul_cut_shift
+exp6_eps_coul_nocut
+
+exp6_eps_ewald_cut
+exp6_eps_ewald_cut_shift
+exp6_eps_ewald_nocut
+
+If an interaction is specified between two particles of
+types A and B, then the input file should usually also specify an interaction
+between two particles of type A and between two particles of type B. 
+However, since there may be cases where this is not done, GRASP merely 
+generates a warning message (see example testb_mix).
+In the reverse case, GRASP attempts to use a mixing
+rule, unless an explicit A-B interaction is provided. If no mixing rule
+is available, an error is generated. If no cross interaction between A and B is
+desired, then either an explicit interaction can be specified with 
+magnitude zero, or the pure A and B interactions can be specified 
+in separate force field files. Either way, there is a small but 
+non-negligible loss in performance.
+
+Threebody Force Field Class:
+
+In this class forces are computed as pairwise and triple interactions
+between particles. These interactions are calculated for 
+all pairs and triples of particles whose types are entered 
+in the force field input file. 
+
+The force field input file consists of a series of one line entries,
+which follow the standard parsing rules described in the introduction.
+The first three tokens are three particle type ids.  These are
+followed by a force field key word describing the functional
+form of the interaction to be used for this triple of particle
+types. The only threebody key word is sw_cut and its argument list
+is described below.
+
+sw_cut
+    - epsilon, Stillinger-Weber energy (non-negative float)
+    - sigma, Stillinger-Weber diameter (positive float)
+    - a, reduced cut-off distance (positive float)
+    - lambda, reduced threebody energy (non-negative float)
+    - gamma, dimensionless stiffness coefficient (non-negative float)
+    - costheta, cosine of threebody angle ([-1,1])
+    - A, reduced twobody energy (non-negative float)
+    - B, twobody repulsive coefficient (non-negative float)
+    - p, twobody repulsive exponent (non-negative float) 
+    - q, twobody attractive exponent (non-negative float) 
+
+    sw_cut is the truncated Stillinger-Weber interaction. The notation
+    used is from Stillinger and Weber, Phys. Rev. B, v. 31, p. 5262 (1985).
+
+    u(r) = A epsilon ( B (sigma/r)^p - (sigma/r)^q ) 
+                   Exp[sigma/(r-a sigma)],              r <= a sigma
+           = 0,                                         r > a sigma
+
+    u(rij,rik,theta_jik) = lambda epsilon Exp[gamma sigma/(rij-a sigma)
+                                            + gamma sigma/(rik-a sigma)]
+                                       (Cos[theta_jik] - costheta)^2
+
+    A   A   A   sw_cut   209.2  2.0951  1.80 21.0 1.20 -0.333333333333 \
+                     7.049556277 0.6022245584 4.0 0.0
+
+    The twobody coefficients are only read in when j and k are the same.
+    The twobody and threebody terms are applied to all unique pairs
+    and triplets of particles.  The first id in the list is the central
+    particle and is unique. The second and third id's are the end
+    particles and are interchangeable. No mixing rules are provided,
+    so if a particle type appears in any entry, all distinct triplets 
+    involving that type should be entered. If they are not, an error
+    message is generated. See example testf_mix.
+
+Tersoff Force Field Class:
+
+In this class forces are computed due to a simple pair interaction
+and bond pair interaction that is modified by a function which depends
+on the sum of all triplet interactions. These interactions are calculated for 
+all pairs and triples of particles whose types are entered 
+in the force field input file. 
+
+The force field input file consists of a series of one line entries,
+which follow the standard parsing rules described in the introduction.
+The first three tokens are three particle type ids.  These are
+followed by a force field key word describing the functional
+form of the interaction to be used for this triple of particle
+types. The choices for the keyword are:
+
+tersoff_cut
+    - lambda3, Tersoff reciprocal length (non-negative float)
+    - c, Tersoff coefficient in angle term (positive float)
+    - d, Tersoff coefficient in angle term (positive float)
+    - h, Tersoff equilibrium cosine ([-1,1])
+    - n, Tersoff exponent in bond order term (positive float)
+    - beta, Tersoff coefficient in bond order term (non-negative float)
+    - lambda2, Tersoff reciprocal length (non-negative float)
+    - B, Tersoff attractive energy (non-negative float)
+    - R, distance for Tersoff switching function (positive float)
+    - D, width for Tersoff switching function (positive float < R)
+    - lambda1, Tersoff repulsive reciprocal length (non-negative float)
+    - A, Tersoff repulsive energy (non-negative float)
+
+    tersoff_cut is the truncated Tersoff interaction. 
+    This notation is based on that of J. Tersoff,
+    Phys. Rev. B, v. 37, p. 6991, (1988). The implementation
+    is based on a code by Stephen Foiles.
+
+    Si  Si   Si   tersoff_cut   1.3258 4.8381 2.0417 0.0000 22.956 \
+	     0.33675  1.3258  95.373  3.0  0.2  3.2394  3264.7
+
+    The two repulsive coefficients are only read in when j and k are the same.
+    The Tersoff forces are applied to all unique pairs and triplets of 
+    particles specified in the Tersoff file. (So particle types that do
+    not require Tersoff force field should be ommitted from this file).
+    The first id in the list is the central particle. The second id is
+    the bond partner and the third id is the 'other' particle.
+    No mixing rules are provided, so if a particle type appears in any 
+    entry, all triplets involving that type must be entered. 
+    An exception to this rule occurs if the ijk interaction is entered, 
+    but not ikj, then it is assumed that ijk = ikj. Note that many 
+    Tersoff parametrizations for mixtures use ijk interactions based
+    on the identity of i and k alone. This breaks the jk symmetry. 
+
+tersoff_zbl
+    Same as tersoff_cut, except ijj entries have three more parameters:
+    - z 
+    - r1
+    - r2
+
+    This style uses the ZBL form for short range repulsion. 
+    
+tersoff_moliere
+    Same as tersoff_cut, except ijj entries have three more parameters:
+    - z 
+    - r1 
+    - r2 
+
+    This style uses the Moliere form for short range repulsion. 
+
+tersoff_morse
+    This is similar to tersoff_cut, but the input parameters are 
+    defined differently:
+
+     - 2 mu, Tersoff reciprocal length (non-negative float)  
+     - c, Tersoff coefficient in angle term (positive float) 
+     - d, Tersoff coefficient in angle term (positive float)  
+     - h, Tersoff equilibrium cosine ([-1,1])  
+     - gamma, bond order weight (non-negative float)  
+     - bigs, Morse stiffness parameter (float > 1)  
+     - beta, Tersoff reciprocal length (non-negative float)   
+     - d0, Morse binding energy (non-negative float)  
+     - r0, Morse equilibrium bond length (positive float)  
+     - ds, width for Tersoff switching function (positive float < rs)  
+     - rs, distance for Tersoff switching function (positive float)
+
+     This version is used for the GaAs potential of Albe et al.
+     Phys. Rev. B, v. 66, p.035205/1-14 (2002).
+     It defines the attractive and repulsive interactions
+     according to the Morse function. It also uses a linear function
+     in the threebody exponential and gives a different weight (gamma)
+     to each threebody term in the bond order function. The original
+     Tersoff parameters beta and n are set to unity. 
+     All of the parameters are required, even if j and k are not equal.
+     
+
+External Force Field Class:
+
+In this class forces are computed as pairwise interactions
+between particles and external fields. These interactions are calculated for 
+all pairs of particles whose types are entered in the force field
+input file. 
+
+The force field input file consists of a series of one line entries,
+which follow the standard parsing rules described in the introduction.
+The first two tokens are the field id and the particle type id.  These are
+followed by a force field key word describing the functional
+form of the interaction to be used for this field-particle pair. 
+The external key words are decribed below.  
+
+lj93_cut
+    If the particle type is "self", then the entry is solely
+    a description of the external field and the arguments are:
+    - Position of the wall (float)
+    - Orientation of the wall (1/2/3)
+    otherwise, the entry is a field-particle interaction 
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    lj93_cut is the truncated energy of a Lennard-Jones particle sitting
+    a distance r above the first plane of a semi-infinite cubic
+    array of particles.
+
+    u(r) = epsilon ( (2/15) (sigma/r)^9 - (sigma/r)^3 ),  r <= rcut
+         = 0, r > rcut
+
+    Wall1 self lj93_cut   50.0  2
+    Wall1 A    lj93_cut   0.2  0.3  0.6
+
+lj93_cut_shift
+    If the particle type is "self", then the entry is solely
+    a description of the external field and the arguments are:
+    - Position of the wall (float)
+    - Orientation of the wall (1/2/3)
+    otherwise, the entry is a field-particle interaction 
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+    - rcut, cut-off distance (positive float)
+
+    lj93_cut_shift is the cut-and-shifted energy of a Lennard-Jones 
+    particle sitting a distance r above the first plane of a 
+    semi-infinite cubic array of particles.
+
+    u(r) = epsilon ( (2/15) (sigma/r)^9 - (sigma/r)^3 ),  r <= rcut
+         = 0, r > rcut
+
+    Wall1 self lj93_cut   50.0  2
+    Wall1 A    lj93_cut   0.2  0.3  0.6
+
+Each external field that appears in the file must have a self entry.
+Each particle type that appears in the file must have an entry for
+each external field.
+
+EAM Force Field Class:
+
+This force field closely follows the setfl form used in LAMMPS.
+Regardless of the units style used, the energy units in the input
+file are assumed to be eV.
+
+Ewald Force Field Class:
+
+Creating this force field turns on the calculation of long-range
+electrostatic interactions Ewald's method. The input parameters
+precision and realspace_cutoff are used to compute the 
+reciprocal screening length acording to the following formula:
+
+  g_ewald = (1.35 - 0.15*log(precision))/realspace_cutoff;
+
+Note, realspace_cutoff is not used for any other purpose. The actual
+real space cut off used for short-range electrostatic interactions 
+is determined by the cut off specified in the corresponding twobody
+force field.
+
+ChargeEquil Force Field Class:
+
+This force field actually does not compute forces. Instead it modifies the
+charge on the particles to minimize a potential energy function. Currently,
+the only style is reax, which is based on the EEM method. See example
+testreax for more information.
+
+   forcefield chargeequil REAX 1.0e-6
+
+The above invocation uses parameters read in from the ReaxFF 
+force field input. The second argument is a tolerance specification. 
+
+   forcefield chargeequil chargeequil.in 1.0e-6
+
+The above invocation reads in parameters from the file chargeequil.in
+The second argument is a tolerance specification. 
+
+Reax Force Field Class:
+
+This force field is still under development. See example testreax 
+for an example. Some things to note: 
+
+     - The ReaxFF implementation is based on ReaxFF version 2.0:
+
+         100 format ('ReaxFF version 2.0')
+	 110 format(a20,'Thu Nov  2 17:31:42 PST 2006')
+
+     - By agreement with Adri van Duin, ReaxFF is only provided to 
+       *authorized* users. Please contact Adri at duin@@wag.caltech.edu 
+       if you wish to become authorized.
+
+     - This force field requires compilation with the flag -DUSE_REAX
+       which can be achieved with the following make command:
+
+       make _REAX=true
+
+     - The only ReaxFF file that must be provided is fort.4. This contains
+       the ReaxFF force field parameters. GRASP looks up ReaxFF parameters
+       by assuming that the types appeaing in types.in are in the same order
+       as those appearing in fort.4. This means that your types.in file should
+       always look like:
+
+       # This is a ReaxFF types.in file
+	      C    atom  12.0000
+	      H    atom   1.0080
+	      O    atom  15.9990
+	      N    atom  14.0000
+	      S    atom  32.0650
+	      Si   atom  28.0855
+	      X    atom  99.0000
+
+     - The ReaxFF control file is no longer read. The MD parameters are now handled
+       by GRASP. If you need to modify a force field parameter such as cutof2,
+       you need to modify its default value in reax_inout.F
+ 
+     - The initial configuration *may* be read in from the reax file fort.3
+       using the input command:
+
+       init config reax
+
+       but other sources may be used as well, e.g.
+
+       init config read
+
+     - The units style should be set to kcal/mol
+
+       units kcal
+
+     - The ReaxFF method of charge equilibration is achieved 
+       using the ChargeEquil forcefield with the file specifier 
+       set to the dummy value of REAX:
+
+       forcefield chargeequil  REAX 1.0e-6
+
+       or you can specify the charge equilibration parameters in 
+       a separate file:
+
+       forcefield chargeequil chargeequil.in 1.0e-6
+
+     - The box dimensions OVERRIDE those in fort.3 (no error checking)
+
+     - The neighboring style can be either nsq or bin.
+             
+     - The ReaxFF calculates bond orders and particle connection table
+       which can be written into file using the commands 'dump reaxbonds'
+       and 'dump reaxallbonds'
+
+     - For more information on the force field see the official ReaxFF manual,
+       located at www.wag.caltech.edu/home/duin/reax_um.pdf. 
+
+Veldependent Force Field Class:
+
+This forcefied creates a drag on particles.  The initial intent was to allow 
+a mechanism for the crude simulation of electronic stopping in radiation 
+cascade simulations.  The added force is a drag term that depends on the 
+velocity of the atom and a specified drag coefficient.  The input file contains 
+one line for each atom type which contains		
+
+    -  Tag for the atom type
+    -  keyword (see below)
+    -  minimum velocity
+    -  drag coefficient
+
+The force is only applied to atoms whose velocity is above the minimum velocity
+
+The four keywords are 
+   -  elec_drag:  The drag force is proportional to the velocity of the atom,  A 
+                         compensating force is added to all atoms so that the net force is
+                         zero and the system will not drift.
+   -  elec_drag_smooth:  Like elec_drag except that the drag force magniture is 
+                         proportional to the difference between the velocity and the minimum 
+                         velocity.
+   -  elec_drag_drift:  Like elec_drag except that there is no compensating force added
+                         to the remaining atoms.  This is faster but leads to overall drift of the system.
+   -  elec_drag_smooth_drift:  A combination of elec_drag_smooth and elec_drag_drift. 
+
+
+UNITS
+-----
+
+A Grasp simulation uses  two sets of units, external and internal. 
+External units are used for all input and output. Internal units
+are used to perform computations efficiently, and quantities in internal
+units are not normally read in or printed out.
+
+The command 'units' is used to control the units style.
+
+If the reduced units style is used, then units can be whatever
+the user wants them to be, and internal and external units are the same.
+
+If real units are used, the following units are assumed:
+
+	       External	     Internal
+               --------      --------
+   Distance    Angstrom	     Angstrom
+   Time	       fs	     100 fs
+   Energy      kJ/mol	     kJ/mol
+   Mass	       g/mol	     g/mol
+   Velocity    A/fs	     A/100fs
+   Force       kJ/mol/A	     kJ/mol/A
+   Temperature K	     K
+   Pressure    MPa*          kJ/mol/A^3
+
+*1 atm = 0.101325 MPa.  The definition of atm used in LAMMPS
+seem to be a little smaller than this: 
+1 LAMMPS atm = 0.101293 MPa.
+
+If metal units are used, the following units are assumed:
+
+	       External	     Internal
+               --------      --------
+   Distance    Angstrom	     Angstrom
+   Time	       ps	     0.010180864 ps
+   Energy      eV	     eV
+   Mass	       g/mol	     g/mol
+   Velocity    A/ps	     A/(0.010180864 ps)
+   Force       eV/A	     eV/A
+   Temperature K	     K
+   Pressure    MPa           eV/A^3
+
+If kcal units are used, the following units are assumed:
+
+	       External	     Internal
+               --------      --------
+   Distance    Angstrom	     Angstrom
+   Time	       fs	     48.888213 fs
+   Energy      kcal/mol	     kcal/mol
+   Mass	       g/mol	     g/mol
+   Velocity    A/fs	     A/48.888213 fs
+   Force       kcal/mol/A    kcal/mol/A
+   Temperature K	     K
+   Pressure    MPa           kcal/mol/A^3
+
+Where does 100 fs come from?
+
+We want to be able to calculate dv = k_F F dt/m 
+with k_F in kJ/mol/A, m in g/mol and distance in A.
+k_F is the force constant defined to be unity in
+SI units. We want k_G also to be unity in our units, i.e.,
+
+ k_F = 1 [m/s]/[J/m s/kg] = 1 [A/tau]/[kJ/mol/A tau/(g/mol)]
+
+or, 
+
+    tau/[s] = (A/m) Sqrt( g/kg / kJ/J ) = 10^-13
+
+So tau = 10^-13 s = 100 fs.
+
+We can obtain the same result by requiring that the
+constant in the expression for kinetic energy also
+be unity. KE = 1/2 k_KE m v^2, where the value of 
+k_KE is unity in SI units.
+
+ k_KE = 1 [J]/[kg (m/s)^2] = 1 [kJ/mol]/[g/mol (A/tau)^2]
+
+or,
+
+ tau/[s] = (A/m) Sqrt( g/kg / kJ/J ) = 10^-13
+
+For kcal units, we get:
+
+   internal time units = 100.0 fs/sqrt[4.184 kJ/kcal] = 48.888213 fs
+
+The internal time unit of 0.010180864 ps used for metal units
+arises from the same type of requirements, but now the internal
+units of energy is eV instead of kJ/mol.
+
+The following mathemetical and physical constants and unit conversions 
+are used:
+
+General:				
+    pi	3.141592653589793238462643383279502884197169399
+    Avogadro's Constant				6.02214199e23 [1/mol]
+    Electronic charge, e			1.602176462e-19 [C]
+    Dielectric permittivity of vacuum		8.854187817e-12 [Jm/C^2]
+Real Units:
+    Boltzmann's constant, boltz_real		8.314472e-3 [kJ/mol/K]
+    Reciprocal permeance, esfactor_real		1389.3544 [kJ/mol / (e^2/A)]
+    [kJ/mol]/[eV]				1/(100.0*1.0365e-4)
+Metal Units:
+    [kJ/mol]/[eV]				96.4853415
+Kcal Units:
+    All quantities are the same as for Real Units, but scaled
+    by a factor of 4.184 kJ/kcal.
+Reduced Units:
+    All physical constants are set to unity.
+
+
+	 
+
+
+
+@
+
+
+4.29
+log
+@Added 'output sum momentum' command
+@
+text
+@d278 1
+a278 1
+    at the end of the simulation. Units are A^3.
+d892 10
+d917 11
+a949 10
+read box
+
+     This command causes the box dimensions and box origin to be read 
+     from the restart file. This only applies for the input modes
+     'init config restart', and will result in unpredictable 
+     behavior if the restart file was not created with the 
+     'write box' command.
+
+     read box
+
+d1136 5
+a1140 2
+
+    This command adds a constant velocity vector to all the initial particle velocities. 
+d1142 1
+a1142 1
+    to make all the particles move in a particular direction.
+d1144 1
+a1144 1
+    velocity add 0.0 0.0 10.0
+d1210 10
+@
+
+
+4.28
+log
+@Improved stability of steepest descent minimizer
+@
+text
+@d783 1
+a783 1
+    out with the thermodynamic informnation. The stress tensor 
+d790 9
+@
+
+
+4.27
+log
+@Fixed problem with "velocity add" command not working with "init config restart" and also without velocity initialization
+@
+text
+@d708 18
+a725 3
+    The number of steps and initial timestep are based on the
+    values from nstep and timestep. The timestep is subsequently 
+    adjusted to prevent large displacments and energy increases.
+@
+
+
+4.26
+log
+@Fixed problem with hbonds in ReaxFF implementation. Now matches pre-midpoint results
+@
+text
+@d1104 1
+a1104 3
+    to make all the particles move in a particular direction. If there is no velocity
+    initialization (via 'initialize temperature ' or 'init velocities' command),
+    then this command has no effect and all the velocities are zero.
+@
+
+
+4.25
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d313 7
+a319 1
+    config.out or cfg.out file, respectively.
+d946 4
+a949 1
+    the default may cause errors in results.
+d954 1
+a954 1
+    -Specifies whether to unprune possible hydrogen bonds (0/1 1)
+d956 3
+a958 3
+    This command controls whether possible hydrogen bonds in
+    the ghost region are unpruned. Changing the default may
+    cause errors in results.
+d966 5
+a970 1
+    pruned to improve performance. The values of 4 or greater should give
+@
+
+
+4.24
+log
+@Enabled neighboring style bin with ReaxFF
+@
+text
+@d682 13
+d935 29
+@
+
+
+4.23
+log
+@Added command dump format style
+@
+text
+@d1665 1
+a1665 1
+Reax Force Field Class
+d1667 1
+a1667 1
+This force field is still under developement. See example testreax 
+d1684 1
+a1684 1
+     - The only ReaxFF files that must be provided is fort.4. This contains
+d1729 1
+a1729 4
+     - The neighboring frequency and skin distance MUST MATCH the
+       values set in the ReaxFF input files (error-checked).
+
+     - The neighboring style must be nsq.
+d1738 1
+a1738 1
+ Veldependent Force Field Class:
+@
+
+
+4.22
+log
+@Added nose-hoover-full version of pressure control to allow fully flexible fluctuations in box dimensions
+@
+text
+@d330 14
+d786 7
+a792 1
+        system. This can not be used with non-periodic boxes.
+@
+
+
+4.21
+log
+@Updated doc for fix deformation
+@
+text
+@d761 13
+d1029 3
+a1031 2
+    to make all the particles move in a particular direction. 
+    
+@
+
+
+4.20
+log
+@Added commands to carry box dimensions in restart file and to output stress tensor
+@
+text
+@d445 15
+@
+
+
+4.19
+log
+@Fixed some FORTRAN lapses and changed dump timestep to write timestep
+@
+text
+@a72 1
+    -Charge equilibration (soon)
+d159 7
+a165 1
+if the commmand 'init config restart' is used.
+d434 1
+a434 1
+    "grapsprun.4" + suffix.
+d716 11
+d842 3
+a844 3
+     'init config restart', and will result in an I/O error if the
+     restart file was not created with the 'write timestep'
+     command
+d852 3
+a854 3
+     'init config restart', and will result in an I/O error if the
+     restart file was not created with the 'write timestep'
+     command
+d961 1
+a961 1
+      properties (int)
+@
+
+
+4.18
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@a416 10
+dump timestep
+
+     This command causes the timestep to be written to the restart
+     file. The timestep can subsequently be read back in from
+     the restart file using the 'read timestep' command. If 
+     the command 'dump restart' is not used then this command
+     has no effect. 
+
+     dump timestep
+
+d822 10
+d836 2
+a837 2
+     'init config restart', and will result in an I/O if the
+     restart file was not created with the 'dump timestep'
+d1044 20
+@
+
+
+4.17
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d441 16
+d988 1
+a988 1
+    velocity add 10.0
+@
+
+
+4.16
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d455 1
+d466 27
+@
+
+
+4.15
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d202 4
+a205 1
+    periodic simulation box.
+d217 4
+a220 1
+    of the periodic simulation box.
+d224 12
+d615 3
+a617 3
+    - Allow relaxation in x direction (0/1)
+    - Allow relaxation in x direction (0/1)
+    - Allow relaxation in x direction (0/1)
+d802 1
+a802 1
+    This command reads in displacements from a file with four numbers
+d809 2
+a810 1
+    read atoms commands.
+d934 12
+@
+
+
+4.14
+log
+@Added nstep_update command.
+@
+text
+@d294 8
+d361 13
+d399 7
+a405 2
+dump extended cfg
+    - Number of timesteps between extended system information dumps (int)
+d407 1
+a407 4
+    Dumps extended configuration information which may be read by recent
+    versions of the free software AtomEye. In addition to the coordinates
+    and velocities, the output file will have the displacements, reference
+    positions, and energy of each particle. 
+d748 32
+@
+
+
+4.13
+log
+@More aftershocks from the ReaxFF upgrade
+@
+text
+@d616 8
+d879 1
+a879 1
+    all_particle:
+d892 1
+a892 1
+    virial styel all_particles
+@
+
+
+4.12
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@d1447 5
+d1461 19
+@
+
+
+4.11
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d276 2
+d286 8
+d307 2
+d312 23
+d1487 4
+@
+
+
+4.10
+log
+@Implemented ri*Fi pressure calc
+@
+text
+@d318 13
+d828 1
+a828 1
+    - virial style (none/all_particle/free_particles/particle_sum)
+@
+
+
+4.9
+log
+@Added pressure and temperature damping commands
+@
+text
+@d549 1
+a549 1
+neighbor none
+d814 24
+@
+
+
+4.8
+log
+@added documentation of the veldependent forcefield class
+@
+text
+@d147 1
+a147 1
+If the command 'init velocity read' is also used, then 
+d529 1
+d532 3
+d536 1
+a536 1
+    minimize steepest_descent 0  1  1
+d605 1
+a605 1
+        pressure control  nose-hoover  0.1  1.0 
+d615 15
+d754 15
+@
+
+
+4.7
+log
+@Added multiple replica feature (nworlds, world seed, world input file)
+@
+text
+@d441 8
+d819 1
+d1384 27
+a1410 1
+ 
+@
+
+
+4.6
+log
+@Update documentaion on main branch.
+It includes new EAM input reading format.
+@
+text
+@d80 2
+a81 1
+to grasp. For instance
+d83 1
+d89 6
+a94 1
+Input terminates when the end-of-file is reached.  
+d179 11
+d556 12
+d610 3
+a612 1
+    processor grid used to spatially deocompose the particles
+d749 13
+d772 13
+a784 2
+use_nodefiles
+    - binary flag (0 or 1)
+d786 3
+a788 7
+    This command overrides the preprocessor directive USE_NODEFILES.
+    A value of 1 enables debugging output to a unique file for 
+    each processor. A value of 0 suppresses this output. 
+    A small amount of output 
+    may or may not be generated by the code before and during input file 
+    reading, depending on the value of USE_NODEFILES when comm.cpp
+    was compiled.
+d790 1
+a790 1
+    use_nodefiles 0
+@
+
+
+4.5
+log
+@Added GaAs version of Tersoff
+@
+text
+@d369 1
+a369 1
+    - Filename for EAM functions (text)
+d371 1
+d373 2
+a374 2
+    Defines a new force field of type Embedded Atom Method (EAM). The EAM functions
+    must be given in setfl format. funcfl format is not currently supported.
+d376 5
+a380 1
+    forcefield eam     nialhjea EAM
+@
+
+
+4.4
+log
+@Added ramp variants for thermostats
+@
+text
+@d340 2
+a341 1
+    - Target temperature (float)
+d348 4
+d356 1
+a356 1
+    fix temp_rescale 6    0.05 10 0.005 1.0 Cold
+d546 1
+d552 1
+a552 1
+    nose-hoover-anisotropic:
+d564 3
+a566 1
+        be used with non-periodic or triclinic boxes.
+d1096 1
+a1096 2
+types. The only threebody key word is tersoff_cut and its argument list
+is described below.
+d1124 50
+a1173 5
+    The first id in the list is the central
+    particle and is unique. The second and third id's are the end
+    particles and are interchangeable. No mixing rules are provided,
+    so if a particle type appears in any entry, all distinct triplets 
+    involving that type must be entered.
+d1284 1
+a1284 1
+     - The initial configuration must be read in from the reax file fort.3
+d1289 4
+d1298 2
+a1299 3
+       using the ChargeEquil
+
+       forcefield with the file specifier set to the dummy value of REAX:
+d1301 1
+a1301 1
+       forcefield chargeequil  REAX ChargeEquil
+d1306 1
+a1306 1
+       forcefield chargeequil chargeequil.in ChargeEquil
+d1322 9
+a1330 3
+If reduced units are used, then they can be whatever
+the user wants them to be, and internal and external
+units are the same.
+d1362 13
+d1401 4
+d1417 1
+a1417 1
+Real:
+d1421 1
+a1421 2
+    Time unit					100.0 fs
+Metal:
+d1423 2
+a1424 3
+    Time unit					0.010180864 ps
+kcal:
+    All quantities are the same as for Real unit, but scaled
+d1426 6
+a1431 2
+    e.g. time unit  = 100.0 fs/sqrt[4.184 kJ/kcal] = 48.888213 fs
+ 
+@
+
+
+4.3
+log
+@Updated manual.txt to reflect recent changes.
+@
+text
+@d623 1
+d641 12
+d667 15
+@
+
+
+4.2
+log
+@Added a feature to turn on and off nodefiles.
+@
+text
+@d256 1
+a256 1
+    particle positions are appended to each line. Otherwise, 
+d353 10
+d367 2
+a368 1
+    Defines a new force field of type Embedded Atom Method (EAM)
+d1180 1
+a1180 1
+   forcefield chargeequil REAX ChargeEquil
+d1182 2
+a1183 2
+The above invocation  uses parameters read in from the ReaxFF 
+force field input.
+d1185 1
+a1185 1
+   forcefield chargeequil chargeequil.in ChargeEquil
+d1188 1
+@
+
+
+4.1
+log
+@Recovered from corruption that occurred on April 12, 2005.
+@
+text
+@d675 13
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d434 1
+a434 1
+	from the reax input geometry. Only available if the Reax
+d1158 2
+a1159 1
+The above invocation  uses parameters read in from the reax force field input.
+d1167 6
+a1172 2
+This force field is still under developement. See example testreax for an example.
+Some things to note: 
+d1188 3
+a1190 1
+     - The ReaxFF method of charge equilibration is achieved using the ChargeEquil
+d1195 2
+a1196 1
+       or you can specify the charge equilibration parameters in a separate file:
+d1294 5
+@
+
+
+3.6
+log
+@Added some notes on mixing rules.
+@
+text
+@d1 44
+d431 6
+d549 11
+d661 1
+a661 1
+    - Keyword describing units style (real/reduced/metal real)
+d684 11
+a694 2
+GRASP currently supports six classes of force field
+(twobody, threebody, external, eam, tersoff, and ewald).  
+d1131 1
+a1131 1
+This force field closely followes the setfl form used in LAMMPS.
+d1148 54
+@
+
+
+3.5
+log
+@Added a ForceTwobody exp6 example (BKS SiO2) to the
+test suite.
+@
+text
+@d624 1
+a624 1
+(twobody, threebody, external, eam, terosff, and ewald).  
+d891 11
+a901 5
+types A and B, then the input file must also specify an interaction
+between two particles of type A and between two particles of type B.
+In the reverse case, GRASP attempts uses a mixing
+rule, unless an explicit A-B interaction is provided.
+
+d950 2
+a951 1
+    involving that type must be enetered.
+a1000 49
+Threebody Force Field Class:
+
+In this class forces are computed as pairwise and triple interactions
+between particles. These interactions are calculated for 
+all pairs and triples of particles whose types are entered 
+in the force field input file. 
+
+The force field input file consists of a series of one line entries,
+which follow the standard parsing rules described in the introduction.
+The first three tokens are three particle type ids.  These are
+followed by a force field key word describing the functional
+form of the interaction to be used for this triple of particle
+types. The only threebody key word is sw_cut and its argument list
+is described below.
+
+sw_cut
+    - epsilon, Stillinger-Weber energy (non-negative float)
+    - sigma, Stillinger-Weber diameter (positive float)
+    - a, reduced cut-off distance (positive float)
+    - lambda, reduced threebody energy (non-negative float)
+    - gamma, dimensionless stiffness coefficient (non-negative float)
+    - costheta, cosine of threebody angle ([-1,1])
+    - A, reduced twobody energy (non-negative float)
+    - B, twobody repulsive coefficient (non-negative float)
+    - p, twobody repulsive exponent (non-negative float) 
+    - q, twobody attractive exponent (non-negative float) 
+
+    sw_cut is the truncated Stillinger-Weber interaction. The notation
+    used is from Stillinger and Weber, Phys. Rev. B, v. 31, p. 5262 (1985).
+
+    u(r) = A epsilon ( B (sigma/r)^p - (sigma/r)^q ) 
+                   Exp[sigma/(r-a sigma)],              r <= a sigma
+           = 0,                                         r > a sigma
+
+    u(rij,rik,theta_jik) = lambda epsilon Exp[gamma sigma/(rij-a sigma)
+                                            + gamma sigma/(rik-a sigma)]
+                                       (Cos[theta_jik] - costheta)^2
+
+    A   A   A   sw_cut   209.2  2.0951  1.80 21.0 1.20 -0.333333333333 \
+                     7.049556277 0.6022245584 4.0 0.0
+
+    The twobody coefficients are only read in when j and k are the same.
+    The twobody and threebody terms are applied to all unique pairs
+    and triplets of particles.  The first id in the list is the central
+    particle and is unique. The second and third id's are the end
+    particles and are interchangeable. No mixing rules are provided,
+    so if a particle type appears in any entry, all distinct triplets 
+    involving that type must be enetered.
+
+@
+
+
+3.5.6.1
+log
+@Add P_monaco's lines in documentation.
+Sylvie Aubry, Jan. 14 2005.
+@
+text
+@a466 4
+p_monaco  (saubry 01-14-05)
+    - Monte Carlo code.
+    No input parameter 
+
+@
+
+
+3.4
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d168 2
+a169 2
+    - Line search tolerance (float)
+    - Force tolerance (float)
+d623 7
+a629 6
+GRASP currently supports five classes of force field
+(twobody, threebody, external, eam, terosff, and ewald).  Users are free to 
+specify zero, one or more than one instances of each force
+field class. If neighboring is turned on, each force field
+instance maintains its own neighbor list. Within each class
+there are multiple functional forms.  A given force field
+d661 1
+a661 1
+    A   A   lj_cut  1.0 1.0  8.685
+d675 1
+a675 1
+    A   A   lj_cut_shift  1.0 1.0  8.685
+d681 1
+a681 1
+    lj_cut is the truncated Lennard-Jones interaction.
+d703 3
+a705 2
+	 where eps_0 is the dielectric permitivity of space
+               eps_r is the relative permittivity of the medium
+d710 1
+a710 1
+    A   A   lj_coul_cut  1.0 1.0  8.685
+d719 1
+a719 1
+    A   A   lj_coul_cut_shift  1.0 1.0  8.685
+d739 1
+a739 1
+    interaction (i.e. that represented by e.g. lj_coul_cut)
+d744 1
+a744 1
+    A   A   lj_ewald_cut  1.0 1.0  8.685
+d753 1
+a753 1
+    A   A   lj_ewald_cut_shift  1.0 1.0  8.685
+d775 6
+a780 1
+    A   A   exp6_cut  1.0 1.1224620483094 14.0 3.0
+d790 1
+a790 1
+    cut-off
+d795 1
+a795 1
+    A   A   exp6_cut_shift  1.0 1.1224620483094 14.0 3.0
+d802 1
+a802 1
+    exp6_cut is the untruncated version of exp6_cut.
+d806 1
+a806 1
+    A   A   exp6_nocut  1.0 1.1224620483094 14.0
+d821 22
+a842 1
+    A   A   exp6_cut  1.0 1.1224620483094 14.0 3.0
+d858 1
+a858 1
+    A   A   exp6_cut_shift  1.0 1.1224620483094 14.0 3.0
+d869 1
+a869 1
+    A   A   exp6_nocut  1.0 1.1224620483094 14.0
+d871 2
+a872 2
+The following variants of exp6 are derived in related in an obvious
+way to the corresponding lj variants
+@
+
+
+3.3
+log
+@Updating manual. Is this the main branch?
+@
+text
+@d691 99
+d795 1
+a795 1
+    exp6_cut is the truncated exponential-six interaction.
+d797 1
+a797 1
+    u(r) = epsilon / (alpha-6) ( 6 Exp[alpha(1-r/rmin)] - alpha (rmin/r)^6 )
+d801 1
+a801 1
+square_exp6_nocut    
+d805 1
+d807 3
+a809 2
+    square_exp6_cut is the truncated square-exponential-six interaction.
+    It has the advantage that no square root is needed.
+d811 2
+a812 2
+    u(r) = epsilon / (alpha-6) ( 6 Exp[(1/2) alpha(1-(r/rmin)^2)] 
+                                 - alpha (rmin/r)^6 )
+d814 1
+a814 1
+    A   A   square_exp6_nocut  1.0 1.1224620483094 16.0
+d816 4
+a819 3
+lj_cut_shift_coul
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+d822 3
+a824 8
+    lj_cut_shift_coul is the truncated Lennard-Jones interaction,
+    shifted up so that it is zero at the cut off distance,
+    An additional Coulombic term is added for charge particles
+
+    u(r) = 4 epsilon ( (sigma/r)^12 - (sigma/r)^6 )  
+             + q_i*q_j/(dielectric*r)
+             - 4 epsilon ( (sigma/rcut)^12 - (sigma/rcut)^6 )
+             - q_i*q_j/(dielectric*rcut) ,  r <= rcut
+d826 2
+d830 1
+a830 2
+	 where dielectric is the dielectric permittivity and q_i and
+         q_j are the point charges on the particles.
+d832 4
+a835 1
+    A   A   lj_cut_shift_ewald  1.0 1.0  8.685
+d837 1
+d839 1
+a839 4
+lj_cut_shift_ewald
+    - epsilon, Lennard-Jones energy (non-negative float)
+    - sigma, Lennard-Jones diameter (positive float)
+    - rcut, cut-off distance (positive float)
+d841 1
+a841 14
+    lj_cut_shift_ewald is the truncated Lennard-Jones interaction,
+    shifted up so that it is zero at the cut off distance,
+    An additional screened Coulombic term is added for charge particles
+
+    u(r) = 4 epsilon ( (sigma/r)^12 - (sigma/r)^6 )  
+             + q_i*q_j*erfc[g_ewald*r]/(dielectric*r)
+             - 4 epsilon ( (sigma/rcut)^12 - (sigma/rcut)^6 )
+             - q_i*q_j*erfc[g_ewald*r]/(dielectric*rcut) ,  r <= rcut
+
+         = 0, r > rcut
+
+	 where dielectric is the dielectric permittivity and q_i and
+         q_j are the point charges on the particles. g_ewald is a
+         reciprocal screening length, which is set internally 
+d843 2
+a844 1
+    A   A   lj_cut_shift_ewald  1.0 1.0  8.685
+d846 15
+d865 2
+a866 2
+In the reverse case, GRASP attempts uses Lorentz-Berthelot mixing
+rules. 
+@
+
+
+3.2
+log
+@Updating documentation for changes from cjkimme_version merge.
+@
+text
+@d37 4
+a40 4
+   grasp other_inp.dat
+will read the file "other_inp.dat" rather than the file "inp.dat".
+Other files may be specified by the user.  All file
+input follows the same set of conventions. Each file
+d358 15
+d404 1
+a404 1
+	using the commands 'dump config ...' together with  
+@
+
+
+3.1
+log
+@Added ability to read velocities from the config.in file
+and write velocities to the config.out and cfg.out files.
+@
+text
+@d20 2
+d33 6
+a38 2
+which have fixed names inp.dat, types.in and config.in
+(or restart.in if using restart commmand).
+d156 26
+d195 11
+a205 1
+    density profile		10 		120 		1
+d217 5
+d238 9
+d268 22
+d422 11
+d484 52
+d589 9
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d31 3
+a33 2
+which have fixed names inp.dat, types.in and config.in.
+Other files may be specified by thre user.  All file
+d38 1
+a38 2
+Each command consists of
+a set of tokens separated by whitespace.
+d55 1
+a55 1
+set of commands followed by arguments.
+d61 1
+a61 2
+Each type specification starts
+on a new line and consists of
+d63 3
+a65 4
+followed by a particle class
+keyword, followed by a list of class-specific arguments.
+Currently the only class is 'atom', and it's only argument
+is its atomic mass e.g.
+d90 15
+d169 3
+d183 1
+a183 1
+    Atoms positions are dumped to the file config.out. The format
+d186 2
+d189 1
+a189 1
+    dump atoms 		        1000
+d194 1
+a194 1
+    Atoms positions are dumped to the file restart.out. This file
+d201 2
+a202 1
+    - Number of timesteps between particle velocity dumps (int)
+d205 6
+d301 21
+@
+
+
+2.7
+log
+@Added sentence to manual.txt on order of particles in output.
+@
+text
+@@
+
+
+2.7.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+2.7.2.2
+log
+@Updating manual.
+@
+text
+@a19 2
+    -Conjugate gradient energy minimization (not completely parallelized yet?)
+    -Energy and normal stress minimization for a system with a single interface
+d32 1
+a32 6
+The fixed name input dat may be overridden by specifying a
+different input file name as the first command line argument
+to grasp. For instance
+   grasp other_inp.dat
+will read the file "other_inp.dat" rather than the file "inp.dat".
+Other files may be specified by the user.  All file
+a136 26
+cohesive energy 
+    - The equilibrium energy per atom (float)
+
+    This command stores the equilibrium energy per atom. Some quantities
+    accessing the energy of atom will subtract add this value to
+    measure the energy in excess of the equilibrium value.
+
+    cohesive energy     -418.4 # stillinger-weber silicon
+
+conjugate gradient
+    - Maximum number of CG iterations (int)
+    - Maximum number of line search iterations (int)
+    - Line search tolerance (float)
+    - Force tolerance (float)
+    
+    Minimize the system energy with a conjugate gradient minimizer. 
+    The force tolerance specifies the maximum absolute value any single 
+    component of the force on an atom may have before the routine is
+    considered converged. The line search tolerance is an energy tolerance
+    for a 1D minimization which can have the specified number of line
+    search iterations. The types of particles to be minimized need to
+    be specified with the "minimized particles" command.
+
+
+    conjugate gradient   1000 100 0.000001 0.001
+
+d150 1
+a150 11
+    density profile		10 		120
+
+dump alpha
+    - Number of timesteps between energy ratio dumps (int)
+    - Particle ID (char)
+
+    This command computes the energy of all atoms with a given
+    particle ID and divides it by the total system energy. It is
+    intended to be used with the cohesive energy command so that
+    all energy values are measured relative to the equilibrium
+    energy for an atom. 
+a158 5
+dump displacements
+    - Number of timesteps between particle displacement dumps (int)
+
+    dump displacements          1000
+
+d171 1
+a171 10
+    dump particles 		        1000
+
+dump ref config
+    - Number of timesteps between particle reference configuration dumps (int)
+
+    Dumps the initial atomic positions read in with the read atoms command,
+    except it updates the reference position if atoms are translated because
+    of periodic boundary conditions. This information along with the output
+    of the "dump displacements" command yields the same information as
+    dump particles, but it provides easier access to the atomic displacements.
+a186 22
+dump extended cfg
+    - Number of timesteps between extended system information dumps (int)
+
+    Dumps extended configuration information which may be read by recent
+    versions of the free software AtomEye. In addition to the coordinates
+    and velocities, the output file will have the displacements, reference
+    positions, and energy of each particle. 
+
+dumpfile root 
+    - root to prepend to all output files (string)
+
+    This command can be used to store output in a different directory
+    or to change the file root of all output files.
+    
+    The command
+
+    dumpfile root               subdir1/grasprun.4
+
+    will write output files in the subdirectory "subdir1" of the current
+    working directory, and all output files will be of the form
+    "grapsprun.4" + suffix.
+
+a297 11
+minimized particles
+    - type (currently must be the string "type")
+    - number of minimized types (int)
+    - list of minimized types (number of minimized types strings)
+
+    Specify which types of particles are free to move in a conjugate
+    gradient energy minimization. Other particles are considered 
+    fixed or presumed to be handled by another user-specified motion.
+    
+    minimized particles       type 2 A B
+
+a348 52
+read atoms
+
+    -filename containing the initial reference configuration (string)
+
+    This command reads in a reference configuration from the given
+    file. The file has exactly the same format as the file config.in:
+
+    index ID color charge X Y Z
+
+    read atoms              config.X0
+
+read displacements
+
+    -filename displacements relative to the reference configuration (string)
+
+    This command reads in displacements from a file with four numbers
+    per line, excepting any initial comments:
+
+    index x y z
+
+    Currently, grasp will complain if the indices in the displacement file
+    are not in the same order as the indices in the file specified by the
+    read atoms commands.
+
+    read displacements      config.u0
+	
+read velocities
+
+    -filename containing initial velocities (string)
+
+    This command reads in displacements from a file with four numbers
+    per line, excepting any initial comments:
+
+    index x y z
+
+    Currently, grasp will complain if the indices in the velocity file
+    are not in the same order as the indices in the file specified by the
+    read atoms commands.
+
+    read velocities         config.v0
+
+scale displacements
+    - displacement scale factor (float)
+
+    This command multiplies all displacements by the scale factor. It is
+    useful when the shape of the displacments (e.g. a Gaussian wavepacket)
+    is used for many simulations with a different scale applied (e.g. an
+    amplitude). By default, this command also scales the velocities. This
+    behavior may be removed or modified by specifying an additional velocity
+    factor with the "velocity factor" command.
+
+    scale displacements 2.0
+a401 9
+velocity factor
+    - scale factor (float)
+
+    This command multiplies all input initial velocities (read in with the
+    "read velocities" command by the input scale factor. It is useful
+    if multiple runs require the same initial velocity only up to a 
+    multiplicative factor.
+
+    velocity factor 0.5
+@
+
+
+2.6
+log
+@Fixed typo in description of metal units (ps, not fs).
+@
+text
+@d168 2
+a169 1
+    is the same as config.in 
+@
+
+
+2.5
+log
+@Fixed bug in metal pressure
+@
+text
+@d808 1
+a808 1
+   Time	       fs	     0.010180864 ps
+@
+
+
+2.4
+log
+@Finished barostat for now
+@
+text
+@d814 1
+a814 1
+   Pressure    bar           eV/A^3
+@
+
+
+2.3
+log
+@Added the Tersoff force field class
+@
+text
+@d316 1
+a316 1
+pressuure control
+d332 15
+a346 1
+        system.
+@
+
+
+2.2
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d16 1
+d22 1
+a22 1
+    -NVE or NVT ensembles
+d24 1
+a26 1
+    -Particle-mesh Ewald summation (soon)
+a27 1
+    -Constant pressure simulations.
+d83 4
+a86 4
+    -Charge (real)
+    -x coordinate (real)
+    -y coordinate (real)
+    -z coordinate (real)	
+d110 9
+a118 9
+    - x coordinate of first lattice vector (real 1.0)
+    - y coordinate of first lattice vector (real 0.0)
+    - z coordinate of first lattice vector (real 0.0)
+    - x coordinate of second lattice vector (real 0.0)
+    - y coordinate of second lattice vector (real 1.0)
+    - z coordinate of second lattice vector (real 0.0)
+    - x coordinate of third lattice vector (real 0.0)
+    - y coordinate of third lattice vector (real 0.0)
+    - z coordinate of third lattice vector (real 1.0)
+d128 3
+a130 3
+    - x coordinate of unit cell origin (real 0.0)
+    - y coordinate of unit cell origin (real 0.0)
+    - z coordinate of unit cell origin (real 0.0)
+a151 8
+dump particles
+    - Number of timesteps between particle position dumps (int)
+
+    Atoms positions are dumped to the file config.out. The format
+    is the same as config.in 
+
+    dump atoms 		        1000
+
+d164 17
+d230 8
+d255 1
+a255 1
+    - Initial configuration tyle (read/density read)
+d268 7
+d316 18
+d342 2
+a343 3
+        - Target temperature (real)
+        - Characteristic frequency of thermostat in 
+             reciprocal time units (real)
+d398 1
+a398 1
+(twobody, threebody, external, eam and ewald).  Users are free to 
+d425 3
+a427 3
+    - epsilon, Lennard-Jones energy (non-negative real)
+    - sigma, Lennard-Jones diameter (positive real)
+    - rcut, cut-off distance (positive real)
+d437 3
+a439 3
+    - epsilon, Lennard-Jones energy (non-negative real)
+    - sigma, Lennard-Jones diameter (positive real)
+    - rcut, cut-off distance (positive real)
+d451 2
+a452 2
+    - epsilon, Lennard-Jones energy (non-negative real)
+    - sigma, Lennard-Jones diameter (positive real)
+d466 3
+a468 3
+    - epsilon, minimum energy well-depth (non-negative real)
+    - rmin, minimum energy separation (positive real)
+    - alpha, dimensionless stiffness parameter (positive real)
+d477 3
+a479 3
+    - epsilon, minimum energy well-depth (non-negative real)
+    - rmin, minimum energy separation (positive real)
+    - alpha, dimensionless stiffness parameter (positive real)
+d490 3
+a492 3
+    - epsilon, Lennard-Jones energy (non-negative real)
+    - sigma, Lennard-Jones diameter (positive real)
+    - rcut, cut-off distance (positive real)
+d512 3
+a514 3
+    - epsilon, Lennard-Jones energy (non-negative real)
+    - sigma, Lennard-Jones diameter (positive real)
+    - rcut, cut-off distance (positive real)
+d557 102
+a658 5
+    - epsilon, Stillinger-Weber energy (non-negative real)
+    - sigma, Stillinger-Weber diameter (positive real)
+    - a, reduced cut-off distance (positive real)
+    - lambda, reduced threebody energy (non-negative real)
+    - gamma, dimensionless stiffness coefficient (non-negative real)
+d660 4
+a663 4
+    - A, reduced twobody energy (non-negative real)
+    - B, twobody repulsive coefficient (non-negative real)
+    - p, twobody repulsive exponent (non-negative real) 
+    - q, twobody attractive exponent (non-negative real) 
+d704 1
+a704 1
+    - Position of the wall (real)
+d707 3
+a709 3
+    - epsilon, Lennard-Jones energy (non-negative real)
+    - sigma, Lennard-Jones diameter (positive real)
+    - rcut, cut-off distance (positive real)
+d724 1
+a724 1
+    - Position of the wall (real)
+d727 3
+a729 3
+    - epsilon, Lennard-Jones energy (non-negative real)
+    - sigma, Lennard-Jones diameter (positive real)
+    - rcut, cut-off distance (positive real)
+@
+
+
+2.1
+log
+@Updated documentation
+@
+text
+@d645 5
+d662 1
+d666 8
+a673 3
+We want to be able to calculate dv = F dt/m without conversion factors,
+with F in kJ/mol/A and m in g/mol. We would like distance in A.
+Let tau be the measure of time. Then, the units in the equation are:
+d675 1
+a675 3
+    A/tau = (kJ/mol/A) tau/(g/mol)
+or,
+    1/tau^2 = 10^3 kg(m/s)^2/(10^-10 m)^2/(10^-3 kg) = 10^26/s^2
+d679 4
+a682 2
+Note, by using the same time and distance units for v,dt and F,
+we ensure that mv^2 has same units of energy as F. 
+d684 1
+a684 1
+(g/mol).(A/100 fs)^2 = (10^-3 kg/mol).(10^-10 m)^2/(10^-13 s)^2 
+d686 3
+a688 1
+	       = 10^3 kg/mol m^2/s^2 = 1 kJ/mol
+d694 18
+a711 8
+The following physical constants are used:
+				
+    Boltzmann's constant (real)		8.314472e-3 kJ/mol/K
+    Boltzmann's constant (metal)		8.617e-5 eV/K
+    eV/(kJ/mol)				1/(100.0*1.0365e-4)
+    Dielectric permittivity of vacuum   8.854187817e-12 Jm/C^2
+    Avogadro's Constant                 6.02214199e23 1/mol
+    Electronic charge                   1.602176462e-19 C
+@
+
+
+2.0
+log
+@the manual
+@
+text
+@d13 1
+d15 1
+d25 1
+a25 1
+    -Long-range electrostatic interactions (soon)
+a26 1
+    -Embedded atom methods (soon)
+a91 3
+
+
+
+d99 1
+a99 1
+with data type and default value in parentheses.
+d196 17
+d237 13
+d326 1
+a326 1
+      properties.
+d328 1
+d342 1
+a342 1
+    - Keyword describing units style (real/reduced real)
+d351 1
+a351 1
+a force to some, none or all of the particles in the system.
+d356 2
+a357 2
+GRASP currently supports three classes of force field
+(twobody, threebody and external).  Users are free to 
+d365 1
+a365 1
+The three classes are decribed in detail below.
+d376 1
+a376 1
+The first two tokens are two particle type ids.  Thse are
+d379 1
+a379 1
+types. The twobody key words are decribed below.  Each key word
+d400 2
+a401 1
+    lj_cut is the truncated Lennard-Jones interaction.
+d448 45
+d607 20
+d646 12
+d677 4
+d684 5
+a688 1
+    Boltzmann's constant (reduced)	1.0
+@
+

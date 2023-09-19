@@ -1,0 +1,457 @@
+head	4.7;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.1.0.6
+	Root-of-Monaco_Aidan:4.1
+	PPPM_Crozier2:4.1.0.4
+	PPPM_Crozier:4.1
+	Root-of-PPPM_Crozier:4.1
+	Monaco:4.1.0.2
+	PreMonaco:4.1
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:3.2.2.8
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.7
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2007.05.31.00.50.12;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.03.20.20.56.03;	author athomps;	state Exp;
+branches
+	4.4.4.1;
+next	4.3;
+
+4.3
+date	2005.10.11.01.40.34;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.07.29.00.13.55;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.01.21.22.24.30;	author athomps;	state Exp;
+branches;
+next	3.2.2.4;
+
+3.2.2.4
+date	2005.01.23.19.04.55;	author athomps;	state Exp;
+branches;
+next	3.2.2.5;
+
+3.2.2.5
+date	2005.01.29.01.44.20;	author athomps;	state Exp;
+branches;
+next	3.2.2.6;
+
+3.2.2.6
+date	2005.02.07.22.43.46;	author athomps;	state Exp;
+branches;
+next	3.2.2.7;
+
+3.2.2.7
+date	2005.02.09.07.14.57;	author athomps;	state Exp;
+branches;
+next	3.2.2.8;
+
+3.2.2.8
+date	2005.03.30.23.32.07;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.4.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	4.4.4.2;
+
+4.4.4.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.7
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+extern "C" void FORTRAN(readc,READC)();
+extern "C" void FORTRAN(init,INIT)();
+extern "C" void FORTRAN(ffinpt,FFINPT)();
+extern "C" void FORTRAN(tap7th,TAP7TH)();
+extern "C" void FORTRAN(taper,TAPER)(double*,double*);
+extern "C" void FORTRAN(readgeo,READGEO)();
+extern "C" void FORTRAN(srtatom,SRTATOM)();
+extern "C" void FORTRAN(vlist,VLIST) ();
+extern "C" void FORTRAN(srtbon1,SRTBON1)(int*,int*,double*);
+extern "C" void FORTRAN(molec,MOLEC)();
+extern "C" void FORTRAN(encalc,ENCALC)();
+extern "C" void FORTRAN(getswb,GETSWB)(double*);
+extern "C" void FORTRAN(getswa,GETSWA)(double*);
+extern "C" void FORTRAN(getvrange,GET_VRANGE)(double*);
+extern "C" void FORTRAN(getnvlist,GET_NVLIST)(int*);
+extern "C" void FORTRAN(getvlbora,GETVLBORA)(double*);
+extern "C" void FORTRAN(cgsolve,CGSOLVE)(int*,double*,int*,double*,double*,int*);
+extern "C" void FORTRAN(getnval,GETNVAL)(int*);
+extern "C" void FORTRAN(getntor,GETNTOR)(int*);
+extern "C" void FORTRAN(getnhb,GETNHB)(int*);
+extern "C" void FORTRAN(getnbonall,GETNBONALL)(int*);
+extern "C" void FORTRAN(getnneighmax,GETNNEIGHMAX)(int*);
+extern "C" void FORTRAN(getnat,GETNAT)(int*);
+extern "C" void FORTRAN(getnattot,GETNATTOT)(int*);
+extern "C" void FORTRAN(getnsort,GETNSORT)(int*);
+extern "C" void FORTRAN(getmbond,GETMBOND)(int*);
+extern "C" void FORTRAN(getnso,GETNSO)(int*);
+extern "C" void FORTRAN(setngeofor,SETNGEOFOR)(int*);
+extern "C" void FORTRAN(mdsav,MDSAV)(int*);
+extern "C" void FORTRAN(getnsbmax,GETNSBMAX)(int*);
+extern "C" void FORTRAN(getnsbma2,GETNSBMA2)(int*);
+extern "C" void FORTRAN(getcutof3,GETCUTOF3)(double*);
+
+
+
+@
+
+
+4.6
+log
+@Cleaned up the midpoint method some more
+@
+text
+@d54 1
+a54 1
+extern "C" void FORTRAN(srtbon1,SRTBON1)();
+@
+
+
+4.5
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@a53 1
+extern "C" void FORTRAN(distan,DISTAN)();
+@
+
+
+4.4
+log
+@Added better diagnostics for ReaxFF memory footprint.
+Output to nodefiles for successful runs (grep reax_def).
+Output to standard output for unsuccessful runs.
+@
+text
+@d76 3
+@
+
+
+4.4.4.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@a74 1
+extern "C" void FORTRAN(setatomvirial,SETATOMVIRIAL)();
+@
+
+
+4.4.4.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d75 1
+@
+
+
+4.3
+log
+@Added some new barostats and thermostats.
+@
+text
+@d66 2
+@
+
+
+4.2
+log
+@Miscellaneous fixes
+@
+text
+@d73 1
+@
+
+
+4.1
+log
+@Fixed glitch in header.
+@
+text
+@d72 1
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d45 1
+@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@d1 28
+a28 1
+extern "C" void FORTRAN(version,VERSION)();
+d33 1
+a38 4
+//
+// This function was found to be unnecessary
+// Replaced it with call to molec()
+//extern "C" void FORTRAN(intcor,INTCOR)();
+a39 1
+extern "C" void FORTRAN(charges,CHARGES)();
+d42 1
+d46 12
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@a10 1
+extern "C" void FORTRAN(taper,TAPER)(double*,double*);
+a21 1
+extern "C" void FORTRAN(chargrasp,CHARGRASP)(int*, double*, double*);
+@
+
+
+3.2.2.3
+log
+@Implemented a parallel CG scheme. Does not exploit sparsity and
+so is still quite slow.
+@
+text
+@d23 1
+a23 3
+//extern "C" void FORTRAN(chargrasp,CHARGRASP)(int*, double*, double*);
+extern "C" void FORTRAN(cgsolve,CGSOLVE)(int*,double*,int*,double*,double*,int*);
+
+@
+
+
+3.2.2.4
+log
+@Added and removed some nodefile diagnostics.
+@
+text
+@a24 2
+extern "C" void FORTRAN(getnval,GETNVAL)(int*);
+extern "C" void FORTRAN(getntor,GETNTOR)(int*);
+@
+
+
+3.2.2.5
+log
+@Cleaned up charge eequilibration, removed some FORTRAN allocations
+@
+text
+@d12 4
+d17 1
+d23 1
+@
+
+
+3.2.2.6
+log
+@Removed version() from distribution
+@
+text
+@d1 1
+@
+
+
+3.2.2.7
+log
+@Added some error checking and some memory efficiency.
+@
+text
+@a19 7
+extern "C" void FORTRAN(getnneighmax,GETNNEIGHMAX)(int*);
+extern "C" void FORTRAN(getnat,GETNAT)(int*);
+extern "C" void FORTRAN(getnattot,GETNATTOT)(int*);
+extern "C" void FORTRAN(getnsort,GETNSORT)(int*);
+extern "C" void FORTRAN(getmbond,GETMBOND)(int*);
+
+
+@
+
+
+3.2.2.8
+log
+@Separated charge equilibration input from REAX
+@
+text
+@a4 1
+extern "C" void FORTRAN(taper,TAPER)(double*,double*);
+d10 1
+a13 1
+extern "C" void FORTRAN(getswa,GETSWA)(double*);
+a24 1
+extern "C" void FORTRAN(getnso,GETNSO)(int*);
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

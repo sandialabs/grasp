@@ -1,0 +1,1709 @@
+head	4.9;
+access;
+symbols
+	ReverseComm_branch:4.5.0.4
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.9.0.4
+	cjkimme_version_merge_from_trunk_1:2.9.2.1
+	cjkimme_version:2.9.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.9
+date	2007.11.15.21.31.40;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.5.4.1;
+next	4.4;
+
+4.4
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.1.6.1;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches
+	2.9.2.1;
+next	2.8;
+
+2.8
+date	2004.08.02.18.00.47;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.07.30.20.18.47;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.03.02.17.49.47;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	;
+
+2.9.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.1.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.1.6.2;
+
+3.1.6.2
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.1.6.3;
+
+3.1.6.3
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.16.22.23.41;	author pscrozi;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.4.2.3;
+
+4.4.2.3
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.5.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.9
+log
+@Added 'output sum momentum' command
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+// This implementation of Ewald is based on the Ewald class written
+// by Steve Plimpton (LAMMPS 2003).
+// 
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_ewald.h"
+#include "force_ewald_inline.h"
+#include "constants.h"
+#include "box.h"
+#include "box_inline.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "particletypelist.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+Force_Ewald::Force_Ewald(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = ewald;
+  Lneighbor = false;
+  timeforce = 0.0;
+  nforce = 0;
+  label = "Long-Range";
+  npieces = 1;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "n/a";
+  rcutmax = 0.0;
+  ntypes = 0;
+  nparticles = 0;
+  kmax = 0;
+  maxlocal = 0;
+  kcount = 0;
+}
+
+Force_Ewald::~Force_Ewald() {
+  deallocate_karrays();
+  deallocate_narrays();
+}  
+
+void Force_Ewald::ReadInteractions(Comm* comm) {
+  int node;
+
+  node = comm->get_node();
+
+  std::istringstream buf_in(arg_string);
+  buf_in >> precision;
+  buf_in >> realspace_cutoff;
+  glog.get_logfile() << "Ewald arg_string is " << arg_string << endl;
+  glog.get_logfile() << "Ewald precision is " << precision << endl;
+  glog.get_logfile() << "Ewald cutoff is " << realspace_cutoff << endl;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Ewald::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  // setup K-space resolution
+
+  g_ewald = (1.35 - 0.15*log(precision))/realspace_cutoff;
+  gsqmx = -4.0*g_ewald*g_ewald*log(precision);
+  if (node == 0) {
+    glog.get_logfile() << "  G vector = " << g_ewald << endl;
+  }
+
+}
+
+void Force_Ewald::SetupInteractions(const Box* b, const double&, Comm* comm) {
+  prefactor = constants.esfactor/b->get_dielectric();
+}
+
+void Force_Ewald::SetupKSpace(const ParticleList* p, const Box* b, 
+                  Comm* comm) {
+
+  // volume-dependent factors
+
+  int node;
+
+  node = comm->get_node();
+
+  if (!b->get_Lorthorhombic()) {
+    glog.warning("Force_Ewald::SetupInteractions:\n"
+	       "Ewald sum only implemented "
+	       "for orthorhombic box");
+  }
+
+  b->get_lw(uc_wh,uc_wk,uc_wl);
+  volume = b->get_volume();
+
+  unitk[0] = 2.0*constants.pi/uc_wh;
+  unitk[1] = 2.0*constants.pi/uc_wk;
+  unitk[2] = 2.0*constants.pi/uc_wl;
+
+  // determine kmax
+  // function of current box size, precision, G_ewald (short-range cutoff)
+
+  int nkxmx = static_cast<int> ((g_ewald*uc_wh/constants.pi) * 
+				sqrt(-log(precision)));
+  int nkymx = static_cast<int> ((g_ewald*uc_wk/constants.pi) * 
+				sqrt(-log(precision)));
+  int nkzmx = static_cast<int> ((g_ewald*uc_wl/constants.pi) * 
+				sqrt(-log(precision)));
+
+  int kmax_old = kmax;
+  kmax = max(nkxmx,nkymx);
+  kmax = max(kmax,nkzmx);
+  kmax3d = 4*kmax*kmax*kmax + 6*kmax*kmax + 3*kmax;
+
+  // if size has grown, reallocate k-dependent and nlocal-dependent arrays
+
+  if (kmax > kmax_old) {
+
+    deallocate_karrays();
+    allocate_karrays();
+    deallocate_narrays();
+    allocate_narrays();
+
+  }
+
+  // Ewald coefficients
+
+  int kcount_old = kcount;
+  Coeffs();
+
+  // if array sizes changed, print out new sizes
+
+  if (kmax != kmax_old || kcount != kcount_old) {
+    if (node == 0) {
+      glog.get_logfile() << "Actual 1d max vectors = " << kcount << " " << 
+	kmax << " " << kmax3d  << endl;
+    }
+  }
+}
+
+void Force_Ewald::allocate_karrays() {
+  kxvecs.resize(kmax3d);
+  kyvecs.resize(kmax3d);
+  kzvecs.resize(kmax3d);
+  ug.resize(kmax3d);
+  eg.resize(kmax3d);
+  vg.resize(kmax3d);
+  for (int k = 0; k < kmax3d; k++) {
+    eg[k] = new double[3];
+    vg[k] = new double[nvirial];
+  }
+  sfacrl.resize(kmax3d);
+  sfacim.resize(kmax3d);
+  sfacrl_all.resize(kmax3d);
+  sfacim_all.resize(kmax3d);
+}
+
+void Force_Ewald::deallocate_karrays() {
+  kxvecs.clear();
+  kyvecs.clear();
+  kzvecs.clear();
+  for (int k = 0; k < eg.size(); k++) {
+    delete[] eg[k];
+    delete[] vg[k];
+  }
+  ug.clear();
+  eg.clear();
+  vg.clear();
+  sfacrl.clear();
+  sfacim.clear();
+  sfacrl_all.clear();
+  sfacim_all.clear();
+}
+
+void Force_Ewald::allocate_narrays() {
+  ek.resize(nparticles);
+  for (int i = 0; i < nparticles; i++) {
+    ek[i] = new double[3];
+  }
+  cs.resize(2*kmax+1);
+  sn.resize(2*kmax+1);
+  for (int k = 0; k < 2*kmax+1; k++) {
+    cs[k] = new double*[3];
+    sn[k] = new double*[3];
+    for (int idim = 0; idim < 3; idim++) {
+      cs[k][idim] = new double[nparticles];
+      sn[k][idim] = new double[nparticles];
+    }
+  }
+  maxlocal = nparticles;
+}
+
+void Force_Ewald::deallocate_narrays() {
+  for (int i = 0; i < ek.size(); i++) {
+    delete[] ek[i];
+  }
+  ek.clear();
+
+  for (int k = 0; k < cs.size(); k++) {
+    for (int idim = 0; idim < 3; idim++) {
+      delete[] cs[k][idim];
+      delete[] sn[k][idim];
+    }
+    delete[] cs[k];
+    delete[] sn[k];
+  }
+  cs.clear();
+  sn.clear();
+  maxlocal = 0;
+}
+
+void Force_Ewald::Coeffs()
+{
+  int k,l,m;
+  double sqk,vterm;
+
+  double unitkx = unitk[0];
+  double unitky = unitk[1];
+  double unitkz = unitk[2];
+  double g_ewald_sq_inv = 1.0 / (g_ewald*g_ewald);
+  double preu = 4.0*constants.pi/volume;
+
+  kcount = 0;
+
+  // (k,0,0), (0,l,0), (0,0,m)
+
+  for (m = 1; m <= kmax; m++) {
+    sqk = (m*unitkx) * (m*unitkx);
+    if (sqk <= gsqmx) {
+      kxvecs[kcount] = m;
+      kyvecs[kcount] = 0;
+      kzvecs[kcount] = 0;
+      ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+      eg[kcount][0] = 2.0*unitkx*m*ug[kcount];
+      eg[kcount][1] = 0.0;
+      eg[kcount][2] = 0.0;
+      vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+      vg[kcount][0] = 1.0 + vterm*(unitkx*m)*(unitkx*m);
+      vg[kcount][1] = 1.0;
+      vg[kcount][2] = 1.0;
+      vg[kcount][3] = 0.0;
+      vg[kcount][4] = 0.0;
+      vg[kcount][5] = 0.0;
+      kcount++;
+    }
+    sqk = (m*unitky) * (m*unitky);
+    if (sqk <= gsqmx) {
+      kxvecs[kcount] = 0;
+      kyvecs[kcount] = m;
+      kzvecs[kcount] = 0;
+      ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+      eg[kcount][0] = 0.0;
+      eg[kcount][1] = 2.0*unitky*m*ug[kcount];
+      eg[kcount][2] = 0.0;
+      vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+      vg[kcount][0] = 1.0;
+      vg[kcount][1] = 1.0 + vterm*(unitky*m)*(unitky*m);
+      vg[kcount][2] = 1.0;
+      vg[kcount][3] = 0.0;
+      vg[kcount][4] = 0.0;
+      vg[kcount][5] = 0.0;
+      kcount++;
+    }
+    sqk = (m*unitkz) * (m*unitkz);
+    if (sqk <= gsqmx) {
+      kxvecs[kcount] = 0;
+      kyvecs[kcount] = 0;
+      kzvecs[kcount] = m;
+      ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+      eg[kcount][0] = 0.0;
+      eg[kcount][1] = 0.0;
+      eg[kcount][2] = 2.0*unitkz*m*ug[kcount];
+      vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+      vg[kcount][0] = 1.0;
+      vg[kcount][1] = 1.0;
+      vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+      vg[kcount][3] = 0.0;
+      vg[kcount][4] = 0.0;
+      vg[kcount][5] = 0.0;
+      kcount++;
+    }
+  }
+
+  // 1 = (k,l,0), 2 = (k,-l,0)
+
+  for (k = 1; k <= kmax; k++) {
+    for (l = 1; l <= kmax; l++) {
+      sqk = (unitkx*k) * (unitkx*k) + (unitky*l) * (unitky*l);
+      if (sqk <= gsqmx) {
+	kxvecs[kcount] = k;
+	kyvecs[kcount] = l;
+	kzvecs[kcount] = 0;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	eg[kcount][1] = 2.0*unitky*l*ug[kcount];
+	eg[kcount][2] = 0.0;
+	vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+	vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	vg[kcount][2] = 1.0;
+	vg[kcount][3] = vterm*unitkx*k*unitky*l;
+	vg[kcount][4] = 0.0;
+	vg[kcount][5] = 0.0;
+	kcount++;
+
+	kxvecs[kcount] = k;
+	kyvecs[kcount] = -l;
+	kzvecs[kcount] = 0;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	eg[kcount][1] = -2.0*unitky*l*ug[kcount];
+	eg[kcount][2] = 0.0;
+	vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	vg[kcount][2] = 1.0;
+	vg[kcount][3] = -vterm*unitkx*k*unitky*l;
+	vg[kcount][4] = 0.0;
+	vg[kcount][5] = 0.0;
+	kcount++;;
+      }
+    }
+  }
+
+  // 1 = (0,l,m), 2 = (0,l,-m)
+
+  for (l = 1; l <= kmax; l++) {
+    for (m = 1; m <= kmax; m++) {
+      sqk = (unitky*l) * (unitky*l) + (unitkz*m) * (unitkz*m);
+      if (sqk <= gsqmx) {
+	kxvecs[kcount] = 0;
+	kyvecs[kcount] = l;
+	kzvecs[kcount] = m;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] =  0.0;
+	eg[kcount][1] =  2.0*unitky*l*ug[kcount];
+	eg[kcount][2] =  2.0*unitkz*m*ug[kcount];
+	vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+	vg[kcount][0] = 1.0;
+	vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	vg[kcount][3] = 0.0;
+	vg[kcount][4] = 0.0;
+	vg[kcount][5] = vterm*unitky*l*unitkz*m;
+	kcount++;
+
+	kxvecs[kcount] = 0;
+	kyvecs[kcount] = l;
+	kzvecs[kcount] = -m;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] =  0.0;
+	eg[kcount][1] =  2.0*unitky*l*ug[kcount];
+	eg[kcount][2] = -2.0*unitkz*m*ug[kcount];
+	vg[kcount][0] = 1.0;
+	vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	vg[kcount][3] = 0.0;
+	vg[kcount][4] = 0.0;
+	vg[kcount][5] = -vterm*unitky*l*unitkz*m;
+	kcount++;
+      }
+    }
+  }
+
+  // 1 = (k,0,m), 2 = (k,0,-m)
+
+  for (k = 1; k <= kmax; k++) {
+    for (m = 1; m <= kmax; m++) {
+      sqk = (unitkx*k) * (unitkx*k) + (unitkz*m) * (unitkz*m);
+      if (sqk <= gsqmx) {
+	kxvecs[kcount] = k;
+	kyvecs[kcount] = 0;
+	kzvecs[kcount] = m;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] =  2.0*unitkx*k*ug[kcount];
+	eg[kcount][1] =  0.0;
+	eg[kcount][2] =  2.0*unitkz*m*ug[kcount];
+	vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+	vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	vg[kcount][1] = 1.0;
+	vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	vg[kcount][3] = 0.0;
+	vg[kcount][4] = vterm*unitkx*k*unitkz*m;
+	vg[kcount][5] = 0.0;
+	kcount++;
+
+	kxvecs[kcount] = k;
+	kyvecs[kcount] = 0;
+	kzvecs[kcount] = -m;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] =  2.0*unitkx*k*ug[kcount];
+	eg[kcount][1] =  0.0;
+	eg[kcount][2] = -2.0*unitkz*m*ug[kcount];
+	vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	vg[kcount][1] = 1.0;
+	vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	vg[kcount][3] = 0.0;
+	vg[kcount][4] = -vterm*unitkx*k*unitkz*m;
+	vg[kcount][5] = 0.0;
+	kcount++;
+      }
+    }
+  }
+
+  // 1 = (k,l,m), 2 = (k,-l,m), 3 = (k,l,-m), 4 = (k,-l,-m)
+
+  for (k = 1; k <= kmax; k++) {
+    for (l = 1; l <= kmax; l++) {
+      for (m = 1; m <= kmax; m++) {
+	sqk = (unitkx*k) * (unitkx*k) + (unitky*l) * (unitky*l) + 
+	  (unitkz*m) * (unitkz*m);
+	if (sqk <= gsqmx) {
+	  kxvecs[kcount] = k;
+	  kyvecs[kcount] = l;
+	  kzvecs[kcount] = m;
+	  ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	  eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	  eg[kcount][1] = 2.0*unitky*l*ug[kcount];
+	  eg[kcount][2] = 2.0*unitkz*m*ug[kcount];
+	  vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+	  vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	  vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	  vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	  vg[kcount][3] = vterm*unitkx*k*unitky*l;
+	  vg[kcount][4] = vterm*unitkx*k*unitkz*m;
+	  vg[kcount][5] = vterm*unitky*l*unitkz*m;
+	  kcount++;
+
+	  kxvecs[kcount] = k;
+	  kyvecs[kcount] = -l;
+	  kzvecs[kcount] = m;
+	  ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	  eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	  eg[kcount][1] = -2.0*unitky*l*ug[kcount];
+	  eg[kcount][2] = 2.0*unitkz*m*ug[kcount];
+	  vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	  vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	  vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	  vg[kcount][3] = -vterm*unitkx*k*unitky*l;
+	  vg[kcount][4] = vterm*unitkx*k*unitkz*m;
+	  vg[kcount][5] = -vterm*unitky*l*unitkz*m;
+	  kcount++;
+
+	  kxvecs[kcount] = k;
+	  kyvecs[kcount] = l;
+	  kzvecs[kcount] = -m;
+	  ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	  eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	  eg[kcount][1] = 2.0*unitky*l*ug[kcount];
+	  eg[kcount][2] = -2.0*unitkz*m*ug[kcount];
+	  vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	  vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	  vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	  vg[kcount][3] = vterm*unitkx*k*unitky*l;
+	  vg[kcount][4] = -vterm*unitkx*k*unitkz*m;
+	  vg[kcount][5] = -vterm*unitky*l*unitkz*m;
+	  kcount++;
+
+	  kxvecs[kcount] = k;
+	  kyvecs[kcount] = -l;
+	  kzvecs[kcount] = -m;
+	  ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	  eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	  eg[kcount][1] = -2.0*unitky*l*ug[kcount];
+	  eg[kcount][2] = -2.0*unitkz*m*ug[kcount];
+	  vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	  vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	  vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	  vg[kcount][3] = -vterm*unitkx*k*unitky*l;
+	  vg[kcount][4] = -vterm*unitkx*k*unitkz*m;
+	  vg[kcount][5] = vterm*unitky*l*unitkz*m;
+	  kcount++;;
+	}
+      }
+    }
+  }
+}
+
+void Force_Ewald::ApplyForce(
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+		    const Box* b, Comm* comm) {
+  nparticles = p->get_nparticles();
+  SetupKSpace(p, b, comm);
+  Compute(Lenergy,Lvirial,p,comm);
+}
+
+void Force_Ewald::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+				double& rcutcomm,
+       const Box* b, Comm* comm){
+
+    Lneighbor = false;
+    rcutneighmax = 0.0;
+    rcutcomm = 0.0;
+}
+
+
+void Force_Ewald::Compute(const bool& Lenergy, const bool& Lvirial, 
+		  ParticleList* p, Comm* comm) {
+  MPI_Comm world;
+  double ftmp[3];
+  Particle* i_pnt;
+  double qi,qsum,qsqsum,tmp[2],tmp_all[2];
+
+  world = comm->get_world();
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+  }
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  // extend size of nlocal-dependent arrays if necessary
+
+  if (nparticles > maxlocal) {
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile()  << "Performing array extension" << endl;
+    }
+
+    deallocate_narrays();
+    allocate_narrays();
+  }
+  // partial structure factors on each processor
+  // total structure factor by summing over procs
+
+  Eik_dot_r(p);
+  MPI_Allreduce(&sfacrl[0],&sfacrl_all[0],kcount,MPI_DOUBLE,MPI_SUM,world);
+  MPI_Allreduce(&sfacim[0],&sfacim_all[0],kcount,MPI_DOUBLE,MPI_SUM,world);
+
+  // K-space portion of electric field
+  // double loop over K-vectors and local atoms
+
+  int kx,ky,kz;
+  double cypz,sypz,exprl,expim,partial;
+
+  for (int i = 0; i < nparticles; i++) {
+    ek[i][0] = 0.0;
+    ek[i][1] = 0.0;
+    ek[i][2] = 0.0;
+  }
+
+  for (int k = 0; k < kcount; k++) {
+    kx = kxvecs[k]+kmax;
+    ky = kyvecs[k]+kmax;
+    kz = kzvecs[k]+kmax;
+
+    for (int i = 0; i < nparticles; i++) {
+      cypz = cs[ky][1][i]*cs[kz][2][i] - sn[ky][1][i]*sn[kz][2][i];
+      sypz = sn[ky][1][i]*cs[kz][2][i] + cs[ky][1][i]*sn[kz][2][i];
+      exprl = cs[kx][0][i]*cypz - sn[kx][0][i]*sypz;
+      expim = sn[kx][0][i]*cypz + cs[kx][0][i]*sypz;
+      partial = expim*sfacrl_all[k] - exprl*sfacim_all[k];
+      ek[i][0] += partial*eg[k][0];
+      ek[i][1] += partial*eg[k][1];
+      ek[i][2] += partial*eg[k][2];
+    }
+  }
+
+  // convert E-field to force
+
+  for (int i = 0; i < nparticles; i++) {
+    i_pnt = p->get_particle(i);
+    vec3_scale(prefactor*i_pnt->get_charge(),ek[i],ftmp);
+    i_pnt->increment_f(ftmp);
+  }
+
+  // energy if requested
+
+  if (Lenergy) {
+    for (int k = 0; k < kcount; k++) {
+      energy_piece[0] += ug[k] * (sfacrl_all[k]*sfacrl_all[k] + 
+				  sfacim_all[k]*sfacim_all[k]);
+    }
+
+    tmp[0] = 0.0;
+    tmp[1] = 0.0;
+    for (int i = 0; i < nparticles; i++) {
+      qi = p->get_particle(i)->get_charge();
+      tmp[0] += qi;
+      tmp[1] += qi*qi;
+    }
+    MPI_Allreduce(&tmp[0],&tmp_all[0],2,MPI_DOUBLE,MPI_SUM,world);
+    qsum = tmp_all[0];
+    qsqsum = tmp_all[1];
+    energy_piece[0] -= g_ewald*qsqsum/1.772453851 + 
+      0.5*constants.pi*qsum*qsum / (g_ewald*g_ewald*volume);
+    energy_piece[0] *= prefactor;
+
+  }
+
+  // virial if requested
+
+  if (Lvirial) {
+    double uk;
+    for (int k = 0; k < kcount; k++) {
+      uk = ug[k] * (sfacrl_all[k]*sfacrl_all[k] + sfacim_all[k]*sfacim_all[k]);
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial[ivirial] += uk*vg[k][ivirial];
+      }
+    }
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] *= prefactor;
+    }
+  }
+}
+
+void Force_Ewald::Eik_dot_r(ParticleList* p)
+{
+  int i,k,l,m,n,ic;
+  double cstr1,sstr1,cstr2,sstr2,cstr3,sstr3,cstr4,sstr4;
+  double sqk,clpm,slpm;
+  double xi[3],qi;
+  Particle* i_pnt;
+  int kminus,kzero,kplus,kk,ll,mm;
+
+  n = 0;
+
+  // (k,0,0), (0,l,0), (0,0,m)
+
+  kzero = kmax;
+  for (ic = 0; ic < 3; ic++) {
+    sqk = unitk[ic]*unitk[ic];
+    if (sqk <= gsqmx) {
+      cstr1 = 0.0;
+      sstr1 = 0.0;
+      for (i = 0; i < nparticles; i++) {
+	i_pnt = p->get_particle(i);
+	i_pnt->get_x(xi);
+	qi = i_pnt->get_charge();
+	cs[kzero][ic][i] = 1.0;
+	sn[kzero][ic][i] = 0.0;
+	cs[kzero+1][ic][i] = cos(unitk[ic]*xi[ic]);
+	sn[kzero+1][ic][i] = sin(unitk[ic]*xi[ic]);
+	cs[kzero-1][ic][i] = cs[kzero+1][ic][i];
+	sn[kzero-1][ic][i] = -sn[kzero+1][ic][i];
+	cstr1 += qi*cs[kzero+1][ic][i];
+	sstr1 += qi*sn[kzero+1][ic][i];
+      }
+      sfacrl[n] = cstr1;
+      sfacim[n++] = sstr1;
+    }
+  }
+
+  for (m = 2; m <= kmax; m++) {
+    kminus = kzero-m;
+    kplus = kzero+m;
+    for (ic = 0; ic < 3; ic++) {
+      sqk = m*unitk[ic] * m*unitk[ic];
+      if (sqk <= gsqmx) {
+	cstr1 = 0.0;
+	sstr1 = 0.0;
+	for (i = 0; i < nparticles; i++) {
+	  qi = p->get_particle(i)->get_charge();
+	  cs[kplus][ic][i] = cs[kplus-1][ic][i]*cs[kzero+1][ic][i] - 
+	    sn[kplus-1][ic][i]*sn[kzero+1][ic][i];
+	  sn[kplus][ic][i] = sn[kplus-1][ic][i]*cs[kzero+1][ic][i] + 
+	    cs[kplus-1][ic][i]*sn[kzero+1][ic][i];
+	  cs[kminus][ic][i] = cs[kplus][ic][i];
+	  sn[kminus][ic][i] = -sn[kplus][ic][i];
+	  cstr1 += qi*cs[kplus][ic][i];
+	  sstr1 += qi*sn[kplus][ic][i];
+	}
+	sfacrl[n] = cstr1;
+	sfacim[n++] = sstr1;
+      }
+    }
+  }
+
+  // 1 = (k,l,0), 2 = (k,-l,0)
+
+  for (k = 1; k <= kmax; k++) {
+    kk = k+kzero;
+    for (l = 1; l <= kmax; l++) {
+      ll = l+kzero;
+      sqk = (k*unitk[0] * k*unitk[0]) + (l*unitk[1] * l*unitk[1]);
+      if (sqk <= gsqmx) {
+	cstr1 = 0.0;
+	sstr1 = 0.0;
+	cstr2 = 0.0;
+	sstr2 = 0.0;
+	for (i = 0; i < nparticles; i++) {
+	  qi = p->get_particle(i)->get_charge();
+	  cstr1 += qi*(cs[kk][0][i]*cs[ll][1][i] - sn[kk][0][i]*sn[ll][1][i]);
+	  sstr1 += qi*(sn[kk][0][i]*cs[ll][1][i] + cs[kk][0][i]*sn[ll][1][i]);
+	  cstr2 += qi*(cs[kk][0][i]*cs[ll][1][i] + sn[kk][0][i]*sn[ll][1][i]);
+	  sstr2 += qi*(sn[kk][0][i]*cs[ll][1][i] - cs[kk][0][i]*sn[ll][1][i]);
+	}
+	sfacrl[n] = cstr1;
+	sfacim[n++] = sstr1;
+	sfacrl[n] = cstr2;
+	sfacim[n++] = sstr2;
+      }
+    }
+  }
+
+  // 1 = (0,l,m), 2 = (0,l,-m)
+
+  for (l = 1; l <= kmax; l++) {
+    ll = l+kzero;
+    for (m = 1; m <= kmax; m++) {
+      mm = m+kzero;
+      sqk = (l*unitk[1] * l*unitk[1]) + (m*unitk[2] * m*unitk[2]);
+      if (sqk <= gsqmx) {
+	cstr1 = 0.0;
+	sstr1 = 0.0;
+	cstr2 = 0.0;
+	sstr2 = 0.0;
+	for (i = 0; i < nparticles; i++) {
+	  qi = p->get_particle(i)->get_charge();
+	  cstr1 += qi*(cs[ll][1][i]*cs[mm][2][i] - sn[ll][1][i]*sn[mm][2][i]);
+	  sstr1 += qi*(sn[ll][1][i]*cs[mm][2][i] + cs[ll][1][i]*sn[mm][2][i]);
+	  cstr2 += qi*(cs[ll][1][i]*cs[mm][2][i] + sn[ll][1][i]*sn[mm][2][i]);
+	  sstr2 += qi*(sn[ll][1][i]*cs[mm][2][i] - cs[ll][1][i]*sn[mm][2][i]);
+	}
+	sfacrl[n] = cstr1;
+	sfacim[n++] = sstr1;
+	sfacrl[n] = cstr2;
+	sfacim[n++] = sstr2;
+      }
+    }
+  }
+
+  // 1 = (k,0,m), 2 = (k,0,-m)
+
+  for (k = 1; k <= kmax; k++) {
+    kk = k+kzero;
+    for (m = 1; m <= kmax; m++) {
+      mm = m+kzero;
+      sqk = (k*unitk[0] * k*unitk[0]) + (m*unitk[2] * m*unitk[2]);
+      if (sqk <= gsqmx) {
+	cstr1 = 0.0;
+	sstr1 = 0.0;
+	cstr2 = 0.0;
+	sstr2 = 0.0;
+	for (i = 0; i < nparticles; i++) {
+	  qi = p->get_particle(i)->get_charge();
+	  cstr1 += qi*(cs[kk][0][i]*cs[mm][2][i] - sn[kk][0][i]*sn[mm][2][i]);
+	  sstr1 += qi*(sn[kk][0][i]*cs[mm][2][i] + cs[kk][0][i]*sn[mm][2][i]);
+	  cstr2 += qi*(cs[kk][0][i]*cs[mm][2][i] + sn[kk][0][i]*sn[mm][2][i]);
+	  sstr2 += qi*(sn[kk][0][i]*cs[mm][2][i] - cs[kk][0][i]*sn[mm][2][i]);
+	}
+	sfacrl[n] = cstr1;
+	sfacim[n++] = sstr1;
+	sfacrl[n] = cstr2;
+	sfacim[n++] = sstr2;
+      }
+    }
+  }
+
+  // 1 = (k,l,m), 2 = (k,-l,m), 3 = (k,l,-m), 4 = (k,-l,-m)
+
+  for (k = 1; k <= kmax; k++) {
+    kk = k+kzero;
+    for (l = 1; l <= kmax; l++) {
+      ll = l+kzero;
+      for (m = 1; m <= kmax; m++) {
+	mm = m+kzero;
+	sqk = (k*unitk[0] * k*unitk[0]) + (l*unitk[1] * l*unitk[1]) +
+	  (m*unitk[2] * m*unitk[2]);
+	if (sqk <= gsqmx) {
+	  cstr1 = 0.0;
+	  sstr1 = 0.0;
+	  cstr2 = 0.0;
+	  sstr2 = 0.0;
+	  cstr3 = 0.0;
+	  sstr3 = 0.0;
+	  cstr4 = 0.0;
+	  sstr4 = 0.0;
+	  for (i = 0; i < nparticles; i++) {
+	    qi = p->get_particle(i)->get_charge();
+	    clpm = cs[ll][1][i]*cs[mm][2][i] - sn[ll][1][i]*sn[mm][2][i];
+	    slpm = sn[ll][1][i]*cs[mm][2][i] + cs[ll][1][i]*sn[mm][2][i];
+	    cstr1 += qi*(cs[kk][0][i]*clpm - sn[kk][0][i]*slpm);
+	    sstr1 += qi*(sn[kk][0][i]*clpm + cs[kk][0][i]*slpm);
+	    
+	    clpm = cs[ll][1][i]*cs[mm][2][i] + sn[ll][1][i]*sn[mm][2][i];
+	    slpm = -sn[ll][1][i]*cs[mm][2][i] + cs[ll][1][i]*sn[mm][2][i];
+	    cstr2 += qi*(cs[kk][0][i]*clpm - sn[kk][0][i]*slpm);
+	    sstr2 += qi*(sn[kk][0][i]*clpm + cs[kk][0][i]*slpm);
+	    
+	    clpm = cs[ll][1][i]*cs[mm][2][i] + sn[ll][1][i]*sn[mm][2][i];
+	    slpm = sn[ll][1][i]*cs[mm][2][i] - cs[ll][1][i]*sn[mm][2][i];
+	    cstr3 += qi*(cs[kk][0][i]*clpm - sn[kk][0][i]*slpm);
+	    sstr3 += qi*(sn[kk][0][i]*clpm + cs[kk][0][i]*slpm);
+	    
+	    clpm = cs[ll][1][i]*cs[mm][2][i] - sn[ll][1][i]*sn[mm][2][i];
+	    slpm = -sn[ll][1][i]*cs[mm][2][i] - cs[ll][1][i]*sn[mm][2][i];
+	    cstr4 += qi*(cs[kk][0][i]*clpm - sn[kk][0][i]*slpm);
+	    sstr4 += qi*(sn[kk][0][i]*clpm + cs[kk][0][i]*slpm);
+	  }
+	  sfacrl[n] = cstr1;
+	  sfacim[n++] = sstr1;
+	  sfacrl[n] = cstr2;
+	  sfacim[n++] = sstr2;
+	  sfacrl[n] = cstr3;
+	  sfacim[n++] = sstr3;
+	  sfacrl[n] = cstr4;
+	  sfacim[n++] = sstr4;
+	}
+      }
+    }
+  }
+}
+
+void Force_Ewald::SetupTypes(const ParticleTypeList*) {}
+
+double Force_Ewald::get_g_ewald() const {
+  return g_ewald;
+}
+@
+
+
+4.8
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@d143 1
+a143 1
+    glog.error("Force_Ewald::SetupInteractions:\n"
+@
+
+
+4.7
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d129 1
+a129 3
+void Force_Ewald::SetupInteractions(const Box* b, 
+                                      const double& g_ewald, 
+				      Comm* comm) {
+a542 8
+void Force_Ewald::Neighboring(
+	         ParticleList* p, 
+	         int* type_index,
+	         const Box* b, Comm* comm) {
+  glog.error("Force_Ewald::Neighboring:\n"
+		   "No neighboring required for Ewald sum");
+}
+
+@
+
+
+4.6
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d556 1
+d561 1
+@
+
+
+4.5
+log
+@Added multiple replica feature.
+@
+text
+@d536 4
+a539 3
+		  const bool& Lenergy, const bool& Lvirial, 
+                  ParticleList* p,
+                  const Box* b, Comm* comm) {
+@
+
+
+4.5.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d536 3
+a538 4
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+		    const Box* b, Comm* comm) {
+@
+
+
+4.4
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d110 3
+a112 3
+  glog.logfile << "Ewald arg_string is " << arg_string << endl;
+  glog.logfile << "Ewald precision is " << precision << endl;
+  glog.logfile << "Ewald cutoff is " << realspace_cutoff << endl;
+d114 1
+a114 1
+    glog.logfile << endl;
+d124 1
+a124 1
+    glog.logfile << "  G vector = " << g_ewald << endl;
+d192 1
+a192 1
+      glog.logfile << "Actual 1d max vectors = " << kcount << " " << 
+@
+
+
+4.4.2.1
+log
+@latest additions to the PPPM FF
+@
+text
+@d135 1
+a135 1
+void Force_Ewald::SetupKSpace(const Box* b, 
+d540 1
+a540 1
+  SetupKSpace(b, comm);
+@
+
+
+4.4.2.2
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d129 1
+a129 2
+void Force_Ewald::SetupInteractions(const ParticleList* p, 
+				      const Box* b, 
+@
+
+
+4.4.2.3
+log
+@Latest PPPM version
+@
+text
+@d103 3
+a117 1
+}
+a118 6
+void Force_Ewald::SetupInteractions(ParticleList* p, 
+				      const Box* b, 
+                                      double& g_ewald, 
+				      Comm* comm) {
+  prefactor = constants.esfactor/b->get_dielectric();
+  
+d120 1
+a120 3
+  
+  int node; 
+  node = comm->get_node();
+d126 8
+d136 1
+a136 1
+void Force_Ewald::SetupKSpace(const Box* b, double& g_ewald,
+d187 1
+a187 1
+  Coeffs(g_ewald);
+d270 1
+a270 1
+void Force_Ewald::Coeffs(double& g_ewald)
+d539 1
+a539 1
+                  const Box* b, double& g_ewald, Comm* comm) {
+d541 2
+a542 2
+  SetupKSpace(b, g_ewald, comm);
+  Compute(Lenergy,Lvirial,p,g_ewald,comm);
+d564 1
+a564 1
+		  ParticleList* p, double& g_ewald, Comm* comm) {
+d876 3
+a878 3
+//double Force_Ewald::get_g_ewald() const {
+//  return g_ewald;
+//}
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d130 2
+a131 1
+                  const Force_Ewald* ff_ewald, Comm* comm) {
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a876 9
+
+// added saubry (01-24-05)
+void Force_Ewald::EnergyChange(int* atom, vector <double> boost,
+				 const bool& Lenergy,
+				 ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Twobody::EnergyChange:\n"
+	     "Not implemented yet");
+}
+
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d879 1
+a879 1
+void Force_Ewald::EnergyChange(int* atom, double boost[3],
+@
+
+
+4.3.2.1.2.2
+log
+@Added EAM energy change calculation
+@
+text
+@a86 1
+  energy_save.resize(npieces);
+@
+
+
+4.3.2.1.2.3
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d879 8
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+a542 8
+// added saubry (01-24-05)
+void Force_Ewald::EnergyChange(int* atom, vector <double> boost,
+		  const bool& Lenergy,
+                  ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Ewald::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d527 8
+@
+
+
+3.2
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.1
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.1.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a526 9
+
+// added saubry (01-24-05)
+void Force_Ewald::EnergyChange(int* atom, vector <double> boost,
+		  const bool& Lenergy, const bool& Lvirial, 
+                  ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Ewald::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+@
+
+
+3.1.6.2
+log
+@Update changes.
+@
+text
+@d530 1
+a530 1
+		  const bool& Lenergy,
+@
+
+
+3.1.6.3
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d527 1
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d566 5
+a570 1
+    comm->get_nodefile()  << "Performing array extension" << endl;
+@
+
+
+2.9
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.9.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@@
+
+
+2.8
+log
+@Fixed problem with virial in class Force_External
+@
+text
+@d80 5
+d201 1
+a201 1
+  for (int k = 0; k < kxvecs.size(); k++) {
+d540 1
+@
+
+
+2.7
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@a77 1
+  virial.resize(nvirial);
+@
+
+
+2.6
+log
+@Updated header
+@
+text
+@d560 1
+d611 1
+a611 1
+    for (int k = 0; k < kcount; k++)
+d614 2
+a622 1
+
+a625 1
+    
+d629 1
+d655 1
+a655 1
+  int kminus,kzero,kplus;
+a660 1
+  kminus = kmax-1;
+a661 1
+  kplus = kmax+1;
+d673 6
+a678 6
+	cs[kplus][ic][i] = cos(unitk[ic]*xi[ic]);
+	sn[kplus][ic][i] = sin(unitk[ic]*xi[ic]);
+	cs[kminus][ic][i] = cs[kplus][ic][i];
+	sn[kminus][ic][i] = -sn[kplus][ic][i];
+	cstr1 += qi*cs[kplus][ic][i];
+	sstr1 += qi*sn[kplus][ic][i];
+d686 2
+a687 2
+    kminus = kmax-m;
+    kplus = kmax+m;
+d695 4
+a698 4
+	  cs[kplus][ic][i] = cs[kplus-1][ic][i]*cs[1][ic][i] - 
+	    sn[kplus-1][ic][i]*sn[1][ic][i];
+	  sn[kplus][ic][i] = sn[kplus-1][ic][i]*cs[1][ic][i] + 
+	    cs[kplus-1][ic][i]*sn[1][ic][i];
+d713 1
+d715 1
+d724 4
+a727 4
+	  cstr1 += qi*(cs[k][0][i]*cs[l][1][i] - sn[k][0][i]*sn[l][1][i]);
+	  sstr1 += qi*(sn[k][0][i]*cs[l][1][i] + cs[k][0][i]*sn[l][1][i]);
+	  cstr2 += qi*(cs[k][0][i]*cs[l][1][i] + sn[k][0][i]*sn[l][1][i]);
+	  sstr2 += qi*(sn[k][0][i]*cs[l][1][i] - cs[k][0][i]*sn[l][1][i]);
+d740 1
+d742 1
+d751 4
+a754 4
+	  cstr1 += qi*(cs[l][1][i]*cs[m][2][i] - sn[l][1][i]*sn[m][2][i]);
+	  sstr1 += qi*(sn[l][1][i]*cs[m][2][i] + cs[l][1][i]*sn[m][2][i]);
+	  cstr2 += qi*(cs[l][1][i]*cs[m][2][i] + sn[l][1][i]*sn[m][2][i]);
+	  sstr2 += qi*(sn[l][1][i]*cs[m][2][i] - cs[l][1][i]*sn[m][2][i]);
+d767 1
+d769 1
+d778 4
+a781 4
+	  cstr1 += qi*(cs[k][0][i]*cs[m][2][i] - sn[k][0][i]*sn[m][2][i]);
+	  sstr1 += qi*(sn[k][0][i]*cs[m][2][i] + cs[k][0][i]*sn[m][2][i]);
+	  cstr2 += qi*(cs[k][0][i]*cs[m][2][i] + sn[k][0][i]*sn[m][2][i]);
+	  sstr2 += qi*(sn[k][0][i]*cs[m][2][i] - cs[k][0][i]*sn[m][2][i]);
+d794 1
+d796 1
+d798 1
+d812 4
+a815 4
+	    clpm = cs[l][1][i]*cs[m][2][i] - sn[l][1][i]*sn[m][2][i];
+	    slpm = sn[l][1][i]*cs[m][2][i] + cs[l][1][i]*sn[m][2][i];
+	    cstr1 += qi*(cs[k][0][i]*clpm - sn[k][0][i]*slpm);
+	    sstr1 += qi*(sn[k][0][i]*clpm + cs[k][0][i]*slpm);
+d817 4
+a820 4
+	    clpm = cs[l][1][i]*cs[m][2][i] + sn[l][1][i]*sn[m][2][i];
+	    slpm = -sn[l][1][i]*cs[m][2][i] + cs[l][1][i]*sn[m][2][i];
+	    cstr2 += qi*(cs[k][0][i]*clpm - sn[k][0][i]*slpm);
+	    sstr2 += qi*(sn[k][0][i]*clpm + cs[k][0][i]*slpm);
+d822 4
+a825 4
+	    clpm = cs[l][1][i]*cs[m][2][i] + sn[l][1][i]*sn[m][2][i];
+	    slpm = sn[l][1][i]*cs[m][2][i] - cs[l][1][i]*sn[m][2][i];
+	    cstr3 += qi*(cs[k][0][i]*clpm - sn[k][0][i]*slpm);
+	    sstr3 += qi*(sn[k][0][i]*clpm + cs[k][0][i]*slpm);
+d827 4
+a830 4
+	    clpm = cs[l][1][i]*cs[m][2][i] - sn[l][1][i]*sn[m][2][i];
+	    slpm = -sn[l][1][i]*cs[m][2][i] - cs[l][1][i]*sn[m][2][i];
+	    cstr4 += qi*(cs[k][0][i]*clpm - sn[k][0][i]*slpm);
+	    sstr4 += qi*(sn[k][0][i]*clpm + cs[k][0][i]*slpm);
+@
+
+
+2.5
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.4
+log
+@Various
+@
+text
+@d78 1
+d185 1
+a185 1
+    vg[k] = new double[6];
+d548 8
+a555 1
+  energy_piece[0] = 0.0;
+d632 12
+a643 9
+//   if (vflag) {
+//     double uk;
+//     for (k = 0; k < kcount; k++) {
+//       uk = ug[k] * (sfacrl_all[k]*sfacrl_all[k] + sfacim_all[k]*sfacim_all[k]);
+//       for (n = 0; n < 6; n++) virial[n] += uk*vg[k][n];
+//     }
+//     for (n = 0; n < 6; n++) virial[n] *= coul_units;
+//   }
+// }
+@
+
+
+2.3
+log
+@Updated documentation
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.2
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d81 4
+a95 6
+}
+
+void Force_Ewald::SetupInteractions(const Box* b, Comm* comm) {
+  int node;
+
+  node = comm->get_node();
+d105 4
+d828 3
+@
+
+
+2.1
+log
+@Added Ewald sum example
+@
+text
+@d81 1
+a81 1
+  stringstream buf_in(arg_string);
+d90 1
+a90 1
+	       "Read error in input stringstream");
+@
+

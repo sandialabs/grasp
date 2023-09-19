@@ -1,0 +1,59 @@
+head	1.2;
+access;
+symbols
+	PreMonaco:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2004.07.13.21.21.22;	author athomps;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2004.05.20.22.11.36;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Added NPT ensemble
+@
+text
+@# Timestep 0
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+       3     -0.003303983677       -0.2283792413       -0.2058423674
+       4        0.3008422018        0.2884691903       -0.1944454651
+       1       0.04562517955       0.02989523632        0.6388820927
+       2       -0.3431633977      -0.08998518525       -0.2385942602
+# 
+# Timestep 10000
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+       1        0.4913927902        0.1317210047        0.3420240581
+       2       -0.2745919958      -0.06255573467       0.08823655730
+       3       0.01758357555       -0.3882750132       -0.1115177572
+       4       -0.2343843699        0.3191097432       -0.3187428583
+# 
+@
+
+
+1.1
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@@
+

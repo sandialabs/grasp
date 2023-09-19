@@ -1,0 +1,3129 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.6.9.0.2
+	Root-of-Monaco_Aidan:1.1.6.9
+	Monaco:1.1.0.6
+	PreMonaco:1.1
+	PMONACO:1.1.0.4
+	P_MonacoSource:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2005.04.07.00.04.52;	author saubry;	state dead;
+branches
+	1.1.2.1
+	1.1.4.1
+	1.1.6.1;
+next	;
+
+1.1.2.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.04.08.00.04.39;	author saubry;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.04.12.16.31.04;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.4.1
+date	2005.04.12.22.58.05;	author saubry;	state Exp;
+branches;
+next	;
+
+1.1.6.1
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches;
+next	1.1.6.2;
+
+1.1.6.2
+date	2005.05.04.21.45.57;	author saubry;	state Exp;
+branches;
+next	1.1.6.3;
+
+1.1.6.3
+date	2005.05.10.23.31.54;	author saubry;	state Exp;
+branches;
+next	1.1.6.4;
+
+1.1.6.4
+date	2005.05.12.00.14.42;	author saubry;	state Exp;
+branches;
+next	1.1.6.5;
+
+1.1.6.5
+date	2005.05.18.20.53.08;	author saubry;	state Exp;
+branches;
+next	1.1.6.6;
+
+1.1.6.6
+date	2005.05.23.18.33.40;	author saubry;	state Exp;
+branches;
+next	1.1.6.7;
+
+1.1.6.7
+date	2005.05.23.18.41.50;	author saubry;	state Exp;
+branches;
+next	1.1.6.8;
+
+1.1.6.8
+date	2005.05.23.19.58.48;	author saubry;	state Exp;
+branches;
+next	1.1.6.9;
+
+1.1.6.9
+date	2005.06.06.17.30.01;	author saubry;	state Exp;
+branches
+	1.1.6.9.2.1;
+next	;
+
+1.1.6.9.2.1
+date	2005.06.15.20.29.11;	author athomps;	state Exp;
+branches;
+next	1.1.6.9.2.2;
+
+1.1.6.9.2.2
+date	2005.06.15.23.26.07;	author athomps;	state Exp;
+branches;
+next	1.1.6.9.2.3;
+
+1.1.6.9.2.3
+date	2005.07.05.22.39.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.4;
+
+1.1.6.9.2.4
+date	2005.07.08.23.16.36;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.5;
+
+1.1.6.9.2.5
+date	2005.07.19.22.56.35;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.6;
+
+1.1.6.9.2.6
+date	2005.07.20.23.18.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.7;
+
+1.1.6.9.2.7
+date	2005.07.28.23.17.30;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.8;
+
+1.1.6.9.2.8
+date	2005.08.04.18.28.14;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.9;
+
+1.1.6.9.2.9
+date	2005.08.09.22.50.06;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.10;
+
+1.1.6.9.2.10
+date	2005.08.09.23.26.38;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.11;
+
+1.1.6.9.2.11
+date	2005.08.12.23.55.22;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.12;
+
+1.1.6.9.2.12
+date	2005.09.12.21.02.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.13;
+
+1.1.6.9.2.13
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.14;
+
+1.1.6.9.2.14
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.15;
+
+1.1.6.9.2.15
+date	2005.11.01.21.17.20;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.16;
+
+1.1.6.9.2.16
+date	2005.11.17.20.43.30;	author athomps;	state Exp;
+branches;
+next	1.1.6.9.2.17;
+
+1.1.6.9.2.17
+date	2005.11.28.23.08.47;	author saubry;	state Exp;
+branches;
+next	1.1.6.9.2.18;
+
+1.1.6.9.2.18
+date	2005.12.09.18.35.27;	author athomps;	state Exp;
+branches;
+next	1.1.6.9.2.19;
+
+1.1.6.9.2.19
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	1.1.6.9.2.20;
+
+1.1.6.9.2.20
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	1.1.6.9.2.21;
+
+1.1.6.9.2.21
+date	2006.02.03.19.07.28;	author athomps;	state Exp;
+branches;
+next	1.1.6.9.2.22;
+
+1.1.6.9.2.22
+date	2006.02.06.19.15.25;	author athomps;	state Exp;
+branches;
+next	1.1.6.9.2.23;
+
+1.1.6.9.2.23
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file octantlist.cpp was initially added on branch P_MonacoSource.
+@
+text
+@@
+
+
+1.1.6.1
+log
+@Added new files to Monaco branch.
+@
+text
+@a0 220
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+#include <cmath>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "particle.h"
+#include "vec3.h"
+#include "binlist.h"
+#include "bin.h"
+#include "forcefield.h"
+#include "box.h"
+#include "box_inline.h"
+#include "fixed_object.h"
+#include "particlelist.h"
+#include "forcefieldlist.h"
+#include "machine.h"
+#include "comm.h"
+#include "log.h"
+#include "octant.h"
+#include "octantlist.h"
+extern Log glog;
+
+
+void OctantList::Setup(BinList* bl,const Box* b,Comm* comm,ForceFieldList* ffl)
+{  
+
+  // which proc
+  int node;
+  node = comm->get_node();
+
+  // how many procs per dim
+  int procgrid[3];
+  comm->get_procgrid(procgrid);
+
+  // proc location
+  int loc[3];
+  comm->get_myloc(loc);
+
+  cout << "\n\n\n\nNode (" << node << ")\n";
+  cout << loc[0] << "\t" << loc[1] << "\t" << loc[2] << endl;
+
+  double w[3];
+  b->get_lw(w);
+  double rcut = ffl->get_rcutneighmaxall();
+  double rcutneigh[3];
+  rcutneigh[0] = rcut/w[0];
+  rcutneigh[1] = rcut/w[1];
+  rcutneigh[2] = rcut/w[2];
+
+
+  // Local region in fractional coordinates
+  localbounds[0] = static_cast<double>(loc[0])/static_cast<double>(procgrid[0])-small;
+  localbounds[1] = static_cast<double>(loc[0]+1)/static_cast<double>(procgrid[0])+small;
+  localbounds[2] = static_cast<double>(loc[1])/static_cast<double>(procgrid[1])- small;
+  localbounds[3] = static_cast<double>(loc[1]+1)/static_cast<double>(procgrid[1])+small;
+  localbounds[4] = static_cast<double>(loc[2])/static_cast<double>(procgrid[2])-small;
+  localbounds[5] = static_cast<double>(loc[2]+1)/static_cast<double>(procgrid[2])+small;
+
+  // Set up region for octants
+  Octant oct;
+  double localreg[3];
+  double reg[6],regc[6];
+  for (int i = 0; i < 2; i++)
+    for (int j = 0; j < 2; j++)
+      for (int k = 0; k < 2; k++)
+	{
+	  int n = 4*i + 2*j + k;
+	  reg[0] = i*0.5;
+	  reg[2] = j*0.5;
+	  reg[4] = k*0.5;
+	  reg[1] = reg[0] + 0.5;
+	  reg[3] = reg[2] + 0.5;
+	  reg[5] = reg[4] + 0.5;
+
+	  cout << "n=" << n << "\t reg[0]=" << reg[0] << "\t reg[1]=" 
+	               << reg[1] << "\t reg[2]=" << reg[2] << endl;
+
+	  InvLocalBounds(reg,regc);
+	  
+	  oct.set_octregion(regc);
+	  octants.push_back(oct);
+	}    
+
+  // Set up binlist for octants
+  vector <Bin*> checkbins;
+
+  if (node==0) cout << "Set up octant's bins list" << endl;
+  for (int n = 0; n < 8; n++)  
+    {
+      cout << "octant = " << n << "\n";
+
+      double fcb[6];
+      octants[n].get_octregion(fcb);
+
+      cout << "  My region\n";
+      cout << "  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      	   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+
+      octants[n].my_binlist = bl->SelectRegionBins(fcb,b);
+      checkbins = octants[n].get_my_binlist();
+
+      vector<Bin *>::iterator pbin;
+      cout << "  My bins \n";
+      for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+      	cout << "  " << (*pbin)->get_id() << "\t";    
+      cout << endl<<endl;
+      cout << "  Their bounds:\n";
+      for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+	{
+	  double fcb[6];
+	  (*pbin)->get_binregion(fcb);
+	  	  cout << "  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+	  	       << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+	}
+      cout << endl<<endl;
+    }  
+
+  // Set up ghostbinlist for octants
+  if (node==0) cout << "Set up octant's ghost bins list" << endl;
+  for (int n = 0; n < 8; n++)  
+    {
+      cout << "octant = " << n << "\n";  
+      double fcb[6];
+      octants[n].get_octregion(fcb);
+      cout << "  My ghost region\n";
+      cout << "  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      	   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+
+      octants[n].my_ghostbinlist = bl->SelectGhostRegionBins(fcb,b);
+      checkbins = octants[n].get_my_ghostbinlist();
+
+      vector<Bin *>::iterator pbin;
+      cout << "  My ghost bins \n";
+      for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+      	cout << "  " << (*pbin)->get_id() << "\t";    
+      cout << endl<<endl;
+      for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+	{
+	  double fcb[6];
+	  (*pbin)->get_binregion(fcb);
+	  cout << "  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+	       << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+	}
+      cout << endl<<endl;
+    }
+}
+
+
+void OctantList::LocalBounds(double r[6],double rc[6])
+{
+  rc[0] = (r[0]  - localbounds[0])/(localbounds[1]-localbounds[0]);
+  rc[1] = (r[1]  - localbounds[0])/(localbounds[1]-localbounds[0]);
+  
+  rc[2] = (r[2]  - localbounds[2])/(localbounds[3]-localbounds[2]);
+  rc[3] = (r[3]  - localbounds[2])/(localbounds[3]-localbounds[2]);
+  
+  rc[4] = (r[4]  - localbounds[4])/(localbounds[5]-localbounds[4]);
+  rc[5] = (r[5]  - localbounds[4])/(localbounds[5]-localbounds[4]);
+}
+
+void OctantList::InvLocalBounds(double r[6],double rc[6])
+{
+  rc[0] = localbounds[0] + r[0]*(localbounds[1]-localbounds[0]);
+  rc[1] = localbounds[0] + r[1]*(localbounds[1]-localbounds[0]);
+  
+  rc[2] = localbounds[2] + r[2]*(localbounds[3]-localbounds[2]);
+  rc[3] = localbounds[2] + r[3]*(localbounds[3]-localbounds[2]);
+  
+  rc[4] = localbounds[4] + r[4]*(localbounds[5]-localbounds[4]);
+  rc[5] = localbounds[4] + r[5]*(localbounds[5]-localbounds[4]);
+}
+
+@
+
+
+1.1.6.2
+log
+@Region for octant's ghost bins implemented
+@
+text
+@d133 3
+a135 1
+  /*if (node==0) cout << "Set up octant's bins list" << endl;
+a137 1
+      vector <Bin*> checkbins;
+a141 2
+      octants[n].my_binlist = bl->SelectRegionBins(fcb,b);
+      checkbins = octants[n].get_my_binlist();
+d147 3
+d151 1
+a151 1
+      cout << "  My bins (" << checkbins.size() << ")" << endl;
+a164 1
+  */
+a169 1
+      vector <Bin*> checkbins;
+d173 4
+a179 4
+      cout << "  My ghost region (" << checkbins.size() << ")" << endl;
+      cout << "  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      	   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+
+@
+
+
+1.1.6.3
+log
+@Alex's algorithm implemented. Need more checks in parallel
+@
+text
+@d86 4
+d98 1
+d100 6
+a105 14
+  // Contain ghost region
+  locals[0] = static_cast<double>(loc[0])/static_cast<double>(procgrid[0]);
+  locals[1] = static_cast<double>(loc[0]+1)/static_cast<double>(procgrid[0]);
+  locals[2] = static_cast<double>(loc[1])/static_cast<double>(procgrid[1]);
+  locals[3] = static_cast<double>(loc[1]+1)/static_cast<double>(procgrid[1]);
+  locals[4] = static_cast<double>(loc[2])/static_cast<double>(procgrid[2]);
+  locals[5] = static_cast<double>(loc[2]+1)/static_cast<double>(procgrid[2]);
+  
+  // bins - local numbering
+  //cout << "Local bounds " << node << " - locals\n";
+  //cout << locals[0] << "\t" << locals[1] << "\t";
+  //cout << locals[2] << "\t" << locals[3] << "\t";
+  //cout << locals[4] << "\t" << locals[5] << endl << endl;
+
+d122 6
+a127 1
+	  InvLocals(reg,regc);
+a129 3
+
+	  cout << "  " << regc[0] << "\t" << regc[1] << "\t" << regc[2] << "\t"
+	  	   << regc[3] << "\t" << regc[4] << "\t" << regc[5] << endl;
+d137 1
+a137 1
+      cout << "octant (" << n << ") \t";
+d144 3
+a146 2
+      cout << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      	   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+d153 1
+a153 1
+
+d155 6
+a160 6
+      	{
+      	  double fcb[6];
+      	  (*pbin)->get_binregion(fcb);
+	  cout << "(" << (*pbin)->get_id() << ")  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+	       << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+	       }
+d170 1
+a170 1
+      cout << "octant  (" << n << ") \t";  
+a172 3
+      cout << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      	   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+
+d175 5
+a179 1
+      
+d181 1
+a181 1
+      cout << "  My ghost bins (" << checkbins.size() << ")" << endl;
+d183 1
+a183 1
+      cout << "  " << (*pbin)->get_id() << "\t";    
+a184 1
+      
+d186 7
+a192 7
+      	{
+      	  double fcb[6];
+      	  (*pbin)->get_binregion(fcb);
+      	  cout << "(" << (*pbin)->get_id() << ")  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      	       << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+	       }
+      cout << endl<<endl;      
+a193 1
+  
+d197 1
+a197 1
+void OctantList::Locals(double r[6],double rc[6])
+d199 2
+a200 2
+  rc[0] = (r[0]  - locals[0])/(locals[1]-locals[0]);
+  rc[1] = (r[1]  - locals[0])/(locals[1]-locals[0]);
+d202 2
+a203 2
+  rc[2] = (r[2]  - locals[2])/(locals[3]-locals[2]);
+  rc[3] = (r[3]  - locals[2])/(locals[3]-locals[2]);
+d205 2
+a206 2
+  rc[4] = (r[4]  - locals[4])/(locals[5]-locals[4]);
+  rc[5] = (r[5]  - locals[4])/(locals[5]-locals[4]);
+d209 1
+a209 1
+void OctantList::InvLocals(double r[6],double rc[6])
+d211 2
+a212 2
+  rc[0] = locals[0] + r[0]*(locals[1]-locals[0]);
+  rc[1] = locals[0] + r[1]*(locals[1]-locals[0]);
+d214 2
+a215 2
+  rc[2] = locals[2] + r[2]*(locals[3]-locals[2]);
+  rc[3] = locals[2] + r[3]*(locals[3]-locals[2]);
+d217 2
+a218 2
+  rc[4] = locals[4] + r[4]*(locals[5]-locals[4]);
+  rc[5] = locals[4] + r[5]*(locals[5]-locals[4]);
+@
+
+
+1.1.6.4
+log
+@Correct a few bugs
+@
+text
+@d129 2
+a130 2
+	  //cout << "  " << regc[0] << "\t" << regc[1] << "\t" << regc[2] << "\t"
+	  //	   << regc[3] << "\t" << regc[4] << "\t" << regc[5] << endl;
+d166 1
+a166 1
+  /*if (node==0) cout << "Set up octant's ghost bins list" << endl;
+d194 1
+a194 1
+  */
+@
+
+
+1.1.6.5
+log
+@Memory bug found.
+@
+text
+@d134 1
+a134 1
+  if (node==0) cout << "Set up octant's bins list" << endl;
+d163 1
+a163 1
+  
+d166 1
+a166 1
+  if (node==0) cout << "Set up octant's ghost bins list" << endl;
+d194 1
+a194 1
+  
+@
+
+
+1.1.6.6
+log
+@Correct a few bugs
+@
+text
+@d170 1
+a170 1
+      cout << "ghost octant  (" << n << ") \t";  
+@
+
+
+1.1.6.7
+log
+@Correct a few bugs
+@
+text
+@d138 1
+a138 1
+      glog.logfile << "octant (" << n << ") \t";
+d145 1
+a145 1
+      glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+d149 1
+a149 1
+      glog.logfile << "  My bins (" << checkbins.size() << ")" << endl;
+d151 2
+a152 2
+      	glog.logfile << "  " << (*pbin)->get_id() << "\t";    
+      glog.logfile << endl<<endl;
+d158 1
+a158 1
+	  glog.logfile << "(" << (*pbin)->get_id() << ")  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+d161 1
+a161 1
+      glog.logfile << endl<<endl;
+d166 1
+d170 1
+a170 1
+      glog.logfile << "ghost octant  (" << n << ") \t";  
+d173 1
+a173 1
+      glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+d180 1
+a180 1
+      glog.logfile << "  My ghost bins (" << checkbins.size() << ")" << endl;
+d182 2
+a183 2
+      glog.logfile << "  " << (*pbin)->get_id() << "\t";    
+      glog.logfile << endl<<endl;
+d189 1
+a189 1
+      	  glog.logfile << "(" << (*pbin)->get_id() << ")  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+d192 1
+a192 1
+      glog.logfile << endl<<endl;      
+@
+
+
+1.1.6.8
+log
+@Output to node file
+@
+text
+@d138 1
+a138 2
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile()  << "octant (" << n << ") \t";
+d145 2
+a146 3
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+			     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+d158 4
+a161 6
+	  if (comm->get_Lnodefile()) 
+	    comm->get_nodefile() << "(" << (*pbin)->get_id() << ")  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+				 << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+	}
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile() << endl<<endl;
+d169 1
+a169 2
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile() << "ghost octant  (" << n << ") \t";  
+d172 2
+a173 3
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+			     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+d179 1
+a179 2
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile() << "  My ghost bins (" << checkbins.size() << ")" << endl;
+d181 2
+a182 4
+	if (comm->get_Lnodefile()) 
+	  comm->get_nodefile()  << "  " << (*pbin)->get_id() << "\t";    
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile() << endl<<endl;
+d188 1
+a188 2
+	  if (comm->get_Lnodefile()) 
+	    comm->get_nodefile() << "(" << (*pbin)->get_id() << ")  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+d191 1
+a191 2
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile() << endl<<endl;      
+@
+
+
+1.1.6.9
+log
+@Routine ReturnBins2 works ok. Correct a bug
+@
+text
+@d151 4
+a154 7
+      if (comm->get_Lnodefile()) 
+	{
+	  comm->get_nodefile() << "  My bins (" << checkbins.size() << ")" << endl;
+	  for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+	    comm->get_nodefile()  << "  " << (*pbin)->get_id() << "\t";    
+	  comm->get_nodefile() << endl<<endl;
+	}
+@
+
+
+1.1.6.9.2.1
+log
+@Added class Comm_Octant
+@
+text
+@a66 1
+#include "comm_octant.h"
+a71 2
+// APT Comment: this function is too long. A lot of this stuff should be
+// pushed down into the Octant class
+a125 1
+	  oct.set_oct_id(i,j,k);
+d127 2
+a128 2
+	  oct.Setup(comm);
+      	  octants.push_back(oct);
+a210 7
+void OctantList::Cycle(Box* b,BinList* bl, ForceFieldList* ffl, Comm* comm) {
+  for (int n = 0; n < 8; n++) {
+    octants[n].comm_octant->communicate(b,bl,comm);
+    octants[n].comm_octant->reverse_communicate(b,bl,comm);
+  }
+}
+
+@
+
+
+1.1.6.9.2.2
+log
+@Finished fist pass of testing on Comm_Octant class
+@
+text
+@a216 8
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Before ioct = " << n << endl; 
+      for (int i=0;i<6;i++) {
+	comm->get_nodefile() << "ibin = " << i << "np = " << 
+	  bl->bins[i].particles.size() << endl;
+      }
+    }
+    
+a218 8
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "After ioct = " << n << endl; 
+      for (int i=0;i<6;i++) {
+	comm->get_nodefile() << "ibin = " << i << "np = " << 
+	  bl->bins[i].particles.size() << endl;
+      }
+    }
+@
+
+
+1.1.6.9.2.3
+log
+@Correct a few bugs
+@
+text
+@d1 1
+a1 1
+//
+d77 2
+d81 2
+d85 2
+d89 7
+d98 1
+a98 1
+  // Does not contain ghost region
+d106 7
+d133 3
+a135 1
+	} 
+d142 2
+a143 2
+      //if (comm->get_Lnodefile()) 
+      //	comm->get_nodefile()  << "octant (" << n << ") \t";
+d147 1
+a147 1
+      octants[n].my_binlist = bl->SelectRegionBins(fcb,b,comm);
+d150 3
+a152 3
+      //if (comm->get_Lnodefile()) 
+      //	comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      //			     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+d155 18
+a172 18
+      //if (comm->get_Lnodefile()) 
+      //	{
+      //  comm->get_nodefile() << "  My bins (" << checkbins.size() << ")" << endl;
+      //  for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+      //    comm->get_nodefile()  << "  " << (*pbin)->get_id() << "\t";    
+      //  comm->get_nodefile() << endl<<endl;
+      //}
+
+      //for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+      //{
+      //  double fcb[6];
+      //  (*pbin)->get_binregion(fcb);
+      //  if (comm->get_Lnodefile()) 
+      //    comm->get_nodefile() << "(" << (*pbin)->get_id() << ")  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      //			 << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+      //}
+      //if (comm->get_Lnodefile()) 
+      //	comm->get_nodefile() << endl<<endl;
+d181 1
+a181 1
+	comm->get_nodefile() << "ghost octant  (" << n << ") \n";  
+d185 2
+a186 3
+	comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" 
+			              << fcb[2] << "\t" << fcb[3] << "\t" 
+                                      << fcb[4] << "\t" << fcb[5] << "]" << endl;
+d188 1
+a188 1
+      octants[n].my_ghostbinlist = bl->SelectGhostRegionBins(fcb,b,comm);
+d207 1
+a207 1
+	}
+@
+
+
+1.1.6.9.2.4
+log
+@Implement correctly bin and ghost bin lists
+@
+text
+@d73 2
+d77 4
+d84 9
+a92 8
+  int procgrid[3];
+  comm->get_procgrid(procgrid);
+
+  int octloc[6];
+  int px = bl->get_pbinx();
+  int py = bl->get_pbiny();
+  int pz = bl->get_pbinz();
+
+d95 3
+a97 1
+  for (int k = 0; k < 2; k++)
+d99 1
+a99 1
+      for (int i = 0; i < 2; i++)
+d101 8
+a108 24
+	  int m = 4*k + 2*j + i;
+	  
+	  octloc[0] = 1 + i*px/procgrid[0];
+	  octloc[1] = (1+i)*px/procgrid[0];
+	  octloc[2] = 1 + j*py/procgrid[1];
+	  octloc[3] = (1+j)*py/procgrid[1];
+	  octloc[4] = 1 + k*pz/procgrid[2];
+	  octloc[5] = (1+k)*pz/procgrid[2];
+	 
+	  if (comm->get_Lnodefile()) 
+	    comm->get_nodefile()  << "- octant - (" << m << ")  [" 
+				  << octloc[0] << "\t" << octloc[1] << "\t" 
+				  << octloc[2] << "\t" << octloc[3] << "\t" 
+				  << octloc[4] << "\t" << octloc[5] <<  "]" << endl;
+	  
+
+	  double fcb[6];
+	  fcb[0] = (octloc[0]-1+loc[0]*px)/(1.*px*procgrid[0]);
+	  fcb[1] = (octloc[1]  +loc[0]*px)/(1.*px*procgrid[0]);
+	  fcb[2] = (octloc[2]-1+loc[1]*py)/(1.*py*procgrid[1]);
+	  fcb[3] = (octloc[3]  +loc[1]*py)/(1.*py*procgrid[1]);
+	  fcb[4] = (octloc[4]-1+loc[2]*pz)/(1.*pz*procgrid[2]);
+	  fcb[5] = (octloc[5]  +loc[2]*pz)/(1.*pz*procgrid[2]);
+		     
+d110 1
+a110 3
+	  oct.set_octloc(octloc);
+	  oct.set_octregion(fcb);
+
+a112 1
+
+d115 2
+a116 1
+  // Set up bin list for octants
+d119 4
+d126 25
+d154 1
+a154 1
+  // Set up ghost bin list for octants
+d157 3
+d162 5
+d168 1
+a168 20
+
+      //int ol[6];
+      //octants[n].get_octloc(ol);
+      //octants[n].my_ghostbinlist = bl->SelectGhostRegionBins(ol,b,comm);
+
+    }
+
+  // Check bin lists
+  int ol[6];
+  double fcb[6];
+  vector <Bin*> checkbins;
+  vector<Bin *>::iterator pbin;
+  int node;
+  node = comm->get_node();
+  
+  //for (int n = 0; n < 8; n++) 
+  int n = 1;
+    {
+      if (comm->get_Lnodefile()) 
+      	comm->get_nodefile()  << "octant (" << n << ")  ";
+d170 1
+a170 4
+      // check bin list
+      checkbins = octants[n].get_my_binlist();
+
+      octants[n].get_octregion(fcb);
+d172 1
+a172 3
+      	comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      			     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+      
+d174 2
+a175 6
+	{
+	  (*pbin)->get_binregion(fcb);
+	  if (comm->get_Lnodefile()) 
+	    comm->get_nodefile() << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+				 << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+	}
+d177 1
+a177 6
+      	comm->get_nodefile() << endl;
+
+      // check ghost bin list
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile() << "ghost octant  (" << n << ")  ";  
+      checkbins = octants[n].get_my_ghostbinlist();
+a178 9
+      octants[n].get_octregion(fcb);
+      if (comm->get_Lnodefile()) 
+      	comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      			     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+      octants[n].get_octloc(ol);
+      if (comm->get_Lnodefile()) 
+      	comm->get_nodefile() << "  [" << ol[0] << "\t" << ol[1] << "\t" << ol[2] << "\t"
+      			     << ol[3] << "\t" << ol[4] << "\t" << ol[5] << "]" << endl;
+
+d181 1
+d184 2
+a185 2
+	    comm->get_nodefile() << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+				 << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+a186 2
+
+
+d188 3
+a190 2
+	comm->get_nodefile() << endl<<endl; 
+    }     
+d216 25
+@
+
+
+1.1.6.9.2.5
+log
+@Correct
+@
+text
+@d94 6
+a99 6
+	  octloc[0] = 1 + i*px/(2*procgrid[0]);
+	  octloc[1] = (1+i)*px/(2*procgrid[0]);
+	  octloc[2] = 1 + j*py/(2*procgrid[1]);
+	  octloc[3] = (1+j)*py/(2*procgrid[1]);
+	  octloc[4] = 1 + k*pz/(2*procgrid[2]);
+	  octloc[5] = (1+k)*pz/(2*procgrid[2]);
+a115 8
+	  if (comm->get_Lnodefile()) 
+	    comm->get_nodefile()  << "                          [" 
+				  << fcb[0] << "\t" << fcb[1] << "\t" 
+				  << fcb[2] << "\t" << fcb[3] << "\t" 
+				  << fcb[4] << "\t" << fcb[5] <<  "]" << endl << endl;
+	  
+
+
+@
+
+
+1.1.6.9.2.6
+log
+@Implementation of 2 routines:
+1./ Return ghost bins of an octant on the proc. of that octant.
+2./ Return bins of a given translated region.
+@
+text
+@a79 1
+  nprocs = procgrid[0]*procgrid[1]*procgrid[2];
+d94 14
+a107 7
+	  octloc[0] = 1 + i*px/2;
+	  octloc[1] = (1+i)*px/2;
+	  octloc[2] = 1 + j*py/2;
+	  octloc[3] = (1+j)*py/2;
+	  octloc[4] = 1 + k*pz/2;
+	  octloc[5] = (1+k)*pz/2;
+	   
+d115 9
+a123 1
+		     	   
+d133 1
+a133 1
+  // Set up bins list for octants
+d142 1
+a142 1
+  // Set up ghost bins list for octants
+a154 15
+  // Set up bins in same proc as octant
+  for (int n = 0; n < 8; n++)  
+    {
+      vector <Bin*> procbins;
+      vector<Bin *>::iterator pbin;  
+      
+      procbins = octants[n].get_my_ghostbinlist();
+
+      for (pbin = procbins.begin();pbin!=procbins.end();pbin++)
+	{
+	  int ip = (*pbin)->get_ghostbin(); 
+	  if (ip == 0) octants[n].my_procbinlist.push_back(*pbin);
+	}
+    }  
+
+d163 2
+a164 2
+  // check bin lists
+  for (int n = 0; n < 8; n++) 
+d167 1
+a167 1
+      	comm->get_nodefile()  << "\noctant (" << n << ")  ";
+d169 1
+a169 3
+      if (nprocs == 1) 
+	glog.logfile << "\noctant  (" << n << ")  ";  
+
+a176 4
+      if (nprocs == 1) 
+      	glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+	     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+
+a182 4
+
+	  if (nprocs == 1) 
+	    glog.logfile << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+		 << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+d185 1
+a185 1
+	comm->get_nodefile() << endl << endl; 
+d187 1
+a187 7
+      if (nprocs == 1) 
+	glog.logfile << endl << endl; 
+    }
+  
+  // check ghost bin list
+  for (int n = 0; n < 8; n++) 
+    {
+a189 4
+
+      if (nprocs == 1) 
+	glog.logfile << "ghost octant  (" << n << ")  ";  
+
+a192 45
+
+      if (nprocs == 1)       
+	glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+	     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+      
+      if (comm->get_Lnodefile()) 
+      	comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      			     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+
+      octants[n].get_octloc(ol);
+      if (comm->get_Lnodefile()) 
+      	comm->get_nodefile() << "  [" << ol[0] << "\t" << ol[1] << "\t" << ol[2] << "\t"
+      			     << ol[3] << "\t" << ol[4] << "\t" << ol[5] << "]" << endl;
+      
+      for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+      	{
+      	  (*pbin)->get_binregion(fcb);
+      	  if (comm->get_Lnodefile()) 
+      	    comm->get_nodefile() << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      				 << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+
+	  if (nprocs == 1)  
+	    glog.logfile << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+		 << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+      	}
+
+      if (comm->get_Lnodefile()) 
+      comm->get_nodefile() << endl<<endl;  
+
+      if (nprocs == 1) 
+	glog.logfile << endl << endl; 
+    }
+
+      // check proc bin list
+  for (int n = 0; n < 8; n++) 
+    {
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile() << "proc. octant  (" << n << ")  ";  
+
+      if (nprocs == 1) 
+	glog.logfile << "proc. octant  (" << n << ")  ";  
+
+      checkbins = octants[n].get_my_procbinlist();
+      
+      octants[n].get_octregion(fcb);
+a195 5
+
+      if (nprocs == 1) 
+      	glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+	     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+
+d207 2
+a208 4
+	  
+	  if (nprocs == 1)
+	    glog.logfile << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+		 << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+a209 1
+	}
+a211 3
+
+      if (nprocs == 1) 
+	glog.logfile << endl << endl; 
+@
+
+
+1.1.6.9.2.7
+log
+@Implemented tools for bins lists:
+  - intersection
+  - union
+  - copy constructor
+
+Created a new class:  BinTools.
+Tested these tools.
+
+Seems to work ok in serial and parallel.
+@
+text
+@a56 1
+#include "bintools.h"
+d73 1
+a73 2
+void OctantList::Setup(BinList* bl,BinTools* bt,const Box* b,Comm* comm,
+		       ForceFieldList* ffl)
+d154 1
+a154 52
+    } 
+
+
+  // Verification of intersection and union tools
+  /*double fcb[6];
+  vector <Bin*> checkbins1,checkbins2,checkbins3;
+  vector<Bin *>::iterator pbin;
+
+  checkbins1 = octants[0].get_my_ghostbinlist();      
+  checkbins2 = octants[1].get_my_ghostbinlist(); 
+ 
+  if (nprocs == 1)
+    {
+      glog.logfile << "Bins of set 1 ( "<< checkbins1.size() << ")\n";
+      bt->PrintIds(checkbins1);
+      glog.logfile << "Bins of set 2 ( "<< checkbins2.size() << ")\n";
+      bt->PrintIds(checkbins2);
+    }
+  else if (comm->get_Lnodefile()) 
+    {
+      comm->get_nodefile() << "Bins of set 1 ( "<< checkbins1.size() << ")\n";
+      bt->PrintIds(checkbins1,comm);
+      comm->get_nodefile() << "Bins of set 2 ( "<< checkbins2.size() << ")\n";
+      bt->PrintIds(checkbins2,comm);
+    }
+
+  checkbins3 = bt->Union(checkbins1,checkbins2);
+
+  if (nprocs == 1)
+    {
+      glog.logfile << "Union 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3);
+    }
+  else if (comm->get_Lnodefile()) 
+    {
+      comm->get_nodefile() << "Union 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3,comm);
+    }
+
+  checkbins3 = bt->Intersection(checkbins1,checkbins2);
+
+  if (nprocs == 1)
+    {
+      glog.logfile << "Intersection 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3);
+    }
+  else if (comm->get_Lnodefile()) 
+    {
+      comm->get_nodefile() << "Intersection 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3,comm);
+    }
+  */
+d156 1
+a156 8
+  // Verification of different bins arrays
+  //CheckBins(comm,bt);
+
+}
+
+// Check bin lists
+void OctantList::CheckBins(Comm *comm,BinTools* bt)
+{
+d167 8
+d176 7
+a182 1
+      checkbins = octants[n].get_my_binlist();
+d184 1
+a184 1
+      if (nprocs == 1)
+d186 8
+a193 13
+	  glog.logfile << "\noctant  (" << n << ")  ";  
+	  glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+		       << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	  bt->PrintIds(checkbins);
+	  bt->PrintRegion(checkbins);
+	}
+      else if (comm->get_Lnodefile()) 
+	{
+	  comm->get_nodefile()  << "\noctant (" << n << ")  ";
+	  comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+			       << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	  bt->PrintIds(checkbins,comm);
+	  bt->PrintRegion(checkbins,comm);
+d195 5
+d205 8
+a212 1
+      checkbins = octants[n].get_my_ghostbinlist();      
+d214 9
+d224 3
+d228 17
+a244 20
+      if (nprocs == 1)
+	{
+	glog.logfile << "ghost octant  (" << n << ")  ";  
+	glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+		     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	glog.logfile << "  [" << ol[0] << "\t" << ol[1] << "\t" << ol[2] << "\t"
+		     << ol[3] << "\t" << ol[4] << "\t" << ol[5] << "]" << endl;
+	bt->PrintIds(checkbins);
+	bt->PrintRegion(checkbins);
+	}
+      else if (comm->get_Lnodefile())
+	{
+	  comm->get_nodefile() << "ghost octant  (" << n << ")  ";  
+	  comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+			       << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	  comm->get_nodefile() << "  [" << ol[0] << "\t" << ol[1] << "\t" << ol[2] << "\t"
+			       << ol[3] << "\t" << ol[4] << "\t" << ol[5] << "]" << endl;
+	  bt->PrintIds(checkbins,comm);
+	  bt->PrintRegion(checkbins,comm);
+	}
+d246 2
+a247 2
+  
+  // check proc bin list
+d250 6
+d257 1
+d259 8
+d268 2
+a269 7
+      
+      if (nprocs == 1)
+	{
+	  glog.logfile << "proc. octant  (" << n << ")  ";  
+	  glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+		       << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	  glog.logfile << "  [" << ol[0] << "\t" << ol[1] << "\t" << ol[2] << "\t"
+d271 12
+a282 2
+	  bt->PrintIds(checkbins);
+	  bt->PrintRegion(checkbins);
+d284 6
+a289 11
+      else if (comm->get_Lnodefile()) 
+	{
+	  comm->get_nodefile() << "proc. octant  (" << n << ")  ";  
+	  comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      			     << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	  comm->get_nodefile() << "  [" << ol[0] << "\t" << ol[1] << "\t" << ol[2] << "\t"
+			       << ol[3] << "\t" << ol[4] << "\t" << ol[5] << "]" << endl;
+	  bt->PrintIds(checkbins,comm);
+	  bt->PrintRegion(checkbins,comm);
+	}
+    }  
+d292 1
+@
+
+
+1.1.6.9.2.8
+log
+@Implement Alex's algorithm to send specific octant bin lists.
+No communication implemented yet.
+@
+text
+@d143 1
+a143 1
+  // Set up bins intersecting own ghost bins and ghostbins of proc.
+d154 1
+a154 1
+	  if (ip == 1) octants[n].my_procbinlist.push_back(*pbin);
+d159 2
+a160 4
+
+
+  /*
+  double fcb[6];
+d194 13
+d210 1
+a210 6
+  //CheckBins(comm,bt,bl,1);
+
+
+  SendOctantBins(bl,bt,b,comm);
+
+}
+a211 35
+void OctantList::SendOctantBins(BinList *bl,BinTools *bt,
+			    const Box* b,Comm *comm)
+{
+  vector <Bin*> ProcBins,GhostBinsDir,AuxBins;
+  vector <Bin*> SendBins[3],BinsDir[6];
+  vector <Bin *>::iterator pbin;
+
+  // Pre-calculate BinsDir
+  for (int dir = 0; dir < 6; dir++) 
+    BinsDir[dir] = bl->GenerateGhostBinsDir(dir,bt,b,comm);
+ 
+  for (int n = 0; n < 8; n++) 
+    {
+      int id[3];
+      octants[n].get_oct_id(id);
+      ProcBins = octants[n].get_my_procbinlist();
+
+      for (int dir = 2; dir >= 0; dir--)
+	{
+	  // ghost bins in this direction to be translated
+	  int dir2 = 0;
+	  if (id[dir] == 0)  // dir2 = 0,2,4 if id = 0 and dir2 = 1,3,5 if id = 1
+	    dir2 = 2*dir;
+	  else
+	    dir2 = 2*dir+1;
+	  GhostBinsDir = bt->Intersection(ProcBins,BinsDir[dir2]);
+
+	  // Define SendBins and GhostBinsDir for next direction
+	  AuxBins = bt->Subtract(ProcBins,GhostBinsDir);
+	  double region[6];
+	  bl->GetRegion(GhostBinsDir,region);
+	  SendBins[dir] = bl->TranslatedBins(region,dir,b,comm);
+	  ProcBins = bt->Union(AuxBins,SendBins[dir]);
+	} 
+    }
+d215 1
+a215 1
+void OctantList::CheckBins(Comm *comm, BinTools* bt,BinList* bl,int which)
+d224 2
+a225 1
+  if (which == 0)
+d227 4
+a230 2
+      // check bin lists
+      for (int n = 0; n < 8; n++) 
+d232 13
+a244 19
+	  octants[n].get_octregion(fcb);
+	  checkbins = octants[n].get_my_binlist();
+	  
+	  if (nprocs == 1)
+	    {
+	      glog.logfile << "\noctant  (" << n << ")  ";  
+	      glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+			   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	      bt->PrintIds(checkbins);
+	      bt->PrintRegion(checkbins);
+	    }
+	  else if (comm->get_Lnodefile()) 
+	    {
+	      comm->get_nodefile()  << "\noctant (" << n << ")  ";
+	      comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+				   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	      bt->PrintIds(checkbins,comm);
+	      bt->PrintRegion(checkbins,comm);
+	    }
+d247 3
+a249 1
+  else if (which == 1)
+d251 5
+a255 2
+      // check ghost bin list
+      for (int n = 0; n < 8; n++) 
+d257 7
+a263 27
+	  checkbins = octants[n].get_my_ghostbinlist();      
+	  octants[n].get_octregion(fcb);
+	  octants[n].get_octloc(ol);
+	  
+	  double binsize[3];
+	  binsize[0] = bl->get_binsizex();
+	  binsize[1] = bl->get_binsizey();
+	  binsize[2] = bl->get_binsizez();
+	  
+	  if (nprocs == 1)
+	    {
+	      glog.logfile << "ghost octant  (" << n << ")  ";  
+	      glog.logfile << "  [" << fcb[0] - binsize[0] << "\t" << fcb[1] + binsize[0]<< "\t" 
+			   << fcb[2] - binsize[1] << "\t" << fcb[3] + binsize[1]<< "\t" 
+			   << fcb[4] - binsize[2] << "\t" << fcb[5] + binsize[2]<< "]" << endl;
+	      bt->PrintIds(checkbins);
+	      bt->PrintRegion(checkbins);
+	    }
+	  else if (comm->get_Lnodefile())
+	    {
+	      comm->get_nodefile() << "ghost octant  (" << n << ")  ";  
+	      comm->get_nodefile() << "  [" << fcb[0] - binsize[0] << "\t" << fcb[1] + binsize[0]<< "\t" 
+				   << fcb[2] - binsize[1] << "\t" << fcb[3] + binsize[1]<< "\t" 
+				   << fcb[4] - binsize[2] << "\t" << fcb[5] + binsize[2]<< "]" << endl;
+	      bt->PrintIds(checkbins,comm);
+	      bt->PrintRegion(checkbins,comm);
+	    }
+d265 1
+a265 5
+    }
+  else
+    {
+      // check proc bin list
+      for (int n = 0; n < 8; n++) 
+d267 8
+a274 25
+	  checkbins = octants[n].get_my_procbinlist();
+	  octants[n].get_octregion(fcb);
+	  octants[n].get_octloc(ol);
+	  
+	  if (nprocs == 1)
+	    {
+	      glog.logfile << "proc. octant  (" << n << ")  ";  
+	      glog.logfile << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+			   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	      glog.logfile << "  [" << ol[0] << "\t" << ol[1] << "\t" << ol[2] << "\t"
+			   << ol[3] << "\t" << ol[4] << "\t" << ol[5] << "]" << endl;
+	      bt->PrintIds(checkbins);
+	      bt->PrintRegion(checkbins);
+	    }
+	  else if (comm->get_Lnodefile()) 
+	    {
+	      comm->get_nodefile() << "proc. octant  (" << n << ")  ";  
+	      comm->get_nodefile() << "  [" << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+				   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << "]" << endl;
+	      comm->get_nodefile() << "  [" << ol[0] << "\t" << ol[1] << "\t" << ol[2] << "\t"
+				   << ol[3] << "\t" << ol[4] << "\t" << ol[5] << "]" << endl;
+	      bt->PrintIds(checkbins,comm);
+	      bt->PrintRegion(checkbins,comm);
+	    }
+	}  
+d276 2
+a277 4
+}
+
+void OctantList::Cycle(Box* b,BinList* bl, ForceFieldList* ffl, Comm* comm) 
+{
+d280 5
+a284 1
+      if (comm->get_Lnodefile()) 
+d286 7
+a292 6
+	  comm->get_nodefile() << "Before ioct = " << n << endl; 
+	  for (int i=0;i<6;i++) 
+	    {
+	      comm->get_nodefile() << "ibin = " << i << "np = " << 
+		bl->bins[i].particles.size() << endl;
+	    }
+d294 1
+a294 5
+    
+      octants[n].comm_octant->communicate(b,bl,comm);
+      octants[n].comm_octant->reverse_communicate(b,bl,comm);
+      
+      if (comm->get_Lnodefile()) 
+d296 7
+a302 6
+	  comm->get_nodefile() << "After ioct = " << n << endl; 
+	  for (int i=0;i<6;i++) 
+	    {
+	      comm->get_nodefile() << "ibin = " << i << "np = " << 
+		bl->bins[i].particles.size() << endl;
+	    }
+d304 1
+a304 1
+    }
+d307 8
+a314 17
+
+
+  // Verification of intersection, subtract and union tools
+  /*
+  double fcb[6];
+  vector <Bin*> checkbins1,checkbins2,checkbins3;
+  vector<Bin *>::iterator pbin;
+
+  checkbins1 = octants[0].get_my_ghostbinlist();      
+  checkbins2 = octants[1].get_my_ghostbinlist(); 
+ 
+  if (nprocs == 1)
+    {
+      glog.logfile << "Bins of set 1 ( "<< checkbins1.size() << ")\n";
+      bt->PrintIds(checkbins1);
+      glog.logfile << "Bins of set 2 ( "<< checkbins2.size() << ")\n";
+      bt->PrintIds(checkbins2);
+d316 3
+a318 9
+  else if (comm->get_Lnodefile()) 
+    {
+      comm->get_nodefile() << "Bins of set 1 ( "<< checkbins1.size() << ")\n";
+      bt->PrintIds(checkbins1,comm);
+      comm->get_nodefile() << "Bins of set 2 ( "<< checkbins2.size() << ")\n";
+      bt->PrintIds(checkbins2,comm);
+    }
+
+  checkbins3 = bt->Union(checkbins1,checkbins2);
+d320 6
+a325 4
+  if (nprocs == 1)
+    {
+      glog.logfile << "Union 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3);
+d327 2
+a328 35
+  else if (comm->get_Lnodefile()) 
+    {
+      comm->get_nodefile() << "Union 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3,comm);
+    }
+
+  checkbins3 = bt->Intersection(checkbins1,checkbins2);
+
+  if (nprocs == 1)
+    {
+      glog.logfile << "Intersection 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3);
+    }
+  else if (comm->get_Lnodefile()) 
+    {
+      comm->get_nodefile() << "Intersection 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3,comm);
+    }
+
+  checkbins3 = bt->Subtract(checkbins1,checkbins2);
+
+  if (nprocs == 1)
+    {
+      glog.logfile << "Subtract 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3);
+    }
+  else if (comm->get_Lnodefile()) 
+    {
+      comm->get_nodefile() << "Subtract 3 ( "<< checkbins3.size() << ")\n";
+      bt->PrintIds(checkbins3,comm);
+    }
+*/
+
+  // Verification of different bins arrays
+  //CheckBins(comm,bt);
+@
+
+
+1.1.6.9.2.9
+log
+@Link communication scheme with send bins.
+@
+text
+@d116 3
+a118 1
+	  octants.push_back(oct);
+d126 1
+a126 1
+      octants[n].my_binlist = bl->SelectRegionBins(fcb,b,comm);      
+d129 1
+d136 5
+d143 1
+a143 1
+  // Set up intersection of ghostbins of octant and ghostbins of proc.
+a157 18
+  // Set up send_binlist for octants
+  // Attention! all octant lists have to be already declared to call routine below! 
+  vector <Bin*> BinsDir[6];
+  for (int dir = 0; dir < 6; dir++) 
+    BinsDir[dir] = bl->GenerateGhostBinsDir(dir,bt,b,comm);
+  int send[3], recv[3];
+  for (int n = 0; n < 8; n++) 
+    { 
+      OctantSendBinsList(n,octants[n].my_sendbinlist,BinsDir,bt,bl,b,comm);
+      // Temporary: define bins to be received later....
+      OctantSendBinsList(n,octants[n].my_recvbinlist,BinsDir,bt,bl,b,comm);
+      for (int j = 0; j < 3; j++) 
+	{
+	  send[j] = (octants[n].my_sendbinlist)[j].size();
+	  recv[j] = (octants[n].my_recvbinlist)[j].size();
+	}
+      octants[n].Setup(comm,send,recv);
+    }
+a158 1
+}
+a159 7
+void OctantList::OctantSendBinsList(int n,vector <Bin*> SendBins[3],
+				    vector <Bin*> BinsDir[6], BinTools *bt,
+				    BinList *bl,const Box* b,Comm *comm)
+{
+  // Calculate bins to be sent for each octant
+  vector <Bin*> ProcBins,GhostBinsDir,AuxBins;
+  vector <Bin *>::iterator pbin;
+d161 4
+a164 22
+  int id[3];
+  octants[n].get_oct_id(id);
+  ProcBins = octants[n].get_my_procbinlist();
+
+  for (int dir = 2; dir >= 0; dir--)
+    {
+      // ghost bins in this direction to be translated
+      int dir2 = 0;
+      if (id[dir] == 0)  // dir2 = 0,2,4 if id = 0 and dir2 = 1,3,5 if id = 1
+	dir2 = 2*dir;
+      else
+	dir2 = 2*dir+1;
+      GhostBinsDir = bt->Intersection(ProcBins,BinsDir[dir2]);
+
+      // Define SendBins and GhostBinsDir for next direction
+      AuxBins = bt->Subtract(ProcBins,GhostBinsDir);
+      double region[6];
+      bl->GetRegion(GhostBinsDir,region);
+      SendBins[dir] = bl->TranslatedBins(region,dir,b,comm);
+      ProcBins = bt->Union(AuxBins,SendBins[dir]);
+    }
+}
+d166 4
+a169 4
+
+void OctantList::Cycle(Box* b,OctantList* ol, ForceFieldList* ffl, Comm* comm)
+{
+  for (int n = 0; n < 8; n++)
+d171 4
+a174 4
+      octants[n].comm_octant->communicate(ol,comm,b,octants[n].my_sendbinlist,
+					  octants[n].my_recvbinlist);
+      octants[n].comm_octant->reverse_communicate(ol,comm,b,octants[n].my_sendbinlist,
+					  octants[n].my_recvbinlist);
+d176 1
+a176 9
+}
+
+int OctantList::pack_comm_size(const int& num, const vector<int>& list, 
+			       vector <Bin *> bins) 
+{
+  int ibin,nsend;
+
+  nsend = 0;
+  for (int isend=0;isend<num;isend++) 
+d178 4
+a181 2
+      ibin = list[isend];
+      nsend+=1+size_comm*bins[ibin]->particles.size();
+a182 3
+  
+  return nsend;
+}
+d184 1
+d186 1
+a186 9
+void OctantList::pack_comm(const int& num, const vector<int>& list , double* buf, 
+			   const int pbc[], const Box* b, vector <Bin *> bins) 
+{
+  int ibin,nsend,ntmp;
+  double rshift[3],lva[3],lvb[3],lvc[3];
+
+  // First compute shift due to periodic boundary, if any
+
+  if (pbc[0]) 
+d188 2
+a189 31
+      b->get_lv(lva,lvb,lvc);
+      rshift[0] = 0.0;
+      rshift[1] = 0.0;
+      rshift[2] = 0.0;
+      
+      if (pbc[1]==-1) 
+	{
+	  vec3_subtract(rshift,lva,rshift);
+	}
+      else if (pbc[1]==1) 
+	{
+	  vec3_add(rshift,lva,rshift);
+	}
+      
+      if (pbc[2]==-1) 
+	{
+	  vec3_subtract(rshift,lvb,rshift);
+	} 
+      else if (pbc[2]==1) 
+	{
+	  vec3_add(rshift,lvb,rshift);
+	}
+      
+      if (pbc[3]==-1) 
+	{
+	  vec3_subtract(rshift,lvc,rshift);
+	} 
+      else if (pbc[3]==1) 
+	{
+	  vec3_add(rshift,lvc,rshift);
+	}
+d191 1
+a191 3
+
+  nsend = 0;
+  for (int isend=0;isend<num;isend++) 
+d193 2
+a194 25
+      ibin = list[isend];
+      buf[nsend] = static_cast<double>(bins[ibin]->particles.size());
+      nsend++;
+      ntmp = nsend;
+      // May need to call a ParticleList pack function here instead,
+      // in which case pbc shifts will best be performed inside it
+      for (vector<Particle>::iterator part_i = bins[ibin]->particles.begin();
+	   part_i != bins[ibin]->particles.end();part_i++) 
+	{
+	  part_i->get_x(&buf[nsend]);
+	  nsend+=size_comm;
+	}
+
+    if (pbc[0]) 
+      {
+	// Move back the pointer and apply shift
+	nsend=ntmp;
+	for (vector<Particle>::iterator part_i=bins[ibin]->particles.begin();
+	     part_i!=bins[ibin]->particles.end();part_i++) 
+	  {
+	    part_i->get_x(&buf[nsend]);
+	    vec3_add(&buf[nsend],rshift,&buf[nsend]);
+	    nsend+=size_comm;
+	  }
+      }
+d196 1
+a196 2
+  
+}
+d198 2
+a200 23
+void OctantList::unpack_comm(const int& num, const vector<int>& list , 
+			     const double* buf, vector <Bin *> bins) 
+{
+  int ibin,nrecv;
+
+  nrecv = 0;
+  for (int irecv=0;irecv<num;irecv++) 
+    {
+      ibin = list[irecv];
+      // This creates space for the new particles.
+      // It does not guarantee that old particles are erased, 
+      // so beware of residual data from previous passes.
+      bins[ibin]->particles.resize(static_cast<int>(buf[nrecv]));
+      nrecv++;
+      // May need to call a ParticleList unpack function here instead
+      for (vector<Particle>::iterator part_i = bins[ibin]->particles.begin();
+	   part_i != bins[ibin]->particles.end();part_i++) 
+	{
+	  part_i->set_x(&buf[nrecv]);
+	  nrecv+=size_comm;
+	}
+    }
+}
+d202 1
+a203 14
+int OctantList::pack_reverse_size(const int& num, const vector<int>& list, 
+				  vector <Bin *> bins) 
+{
+  
+  int ibin,nsend;
+  
+  nsend = 0;
+  for (int isend=0;isend<num;isend++) 
+    {
+      ibin = list[isend];
+      nsend+=1+size_reverse*bins[ibin]->particles.size();
+    }
+  
+  return nsend;
+d206 2
+a207 4
+
+
+void OctantList::pack_reverse(const int& num, const vector<int>& list , double* buf, 
+		       const int pbc[], const Box* b,vector <Bin *> bins) 
+d209 3
+a211 2
+  int ibin,nsend,ntmp;
+  double rshift[3],lva[3],lvb[3],lvc[3];
+d213 5
+a217 3
+  // First compute shift due to periodic boundary, if any
+
+  if (pbc[0]) 
+d219 20
+a238 17
+      b->get_lv(lva,lvb,lvc);
+      rshift[0] = 0.0;
+      rshift[1] = 0.0;
+      rshift[2] = 0.0;
+      
+      if (pbc[1]==1) 
+	{
+	  vec3_subtract(rshift,lva,rshift);
+	} 
+      else if (pbc[1]==-1) 
+	{
+	  vec3_add(rshift,lva,rshift);
+	}
+      
+      if (pbc[2]==1) 
+	{
+	  vec3_subtract(rshift,lvb,rshift);
+a239 13
+      else if (pbc[2]==-1) 
+	{
+	  vec3_add(rshift,lvb,rshift);
+	}
+      
+      if (pbc[3]==1) 
+	{
+	  vec3_subtract(rshift,lvc,rshift);
+	} 
+      else if (pbc[3]==-1) 
+	{
+	  vec3_add(rshift,lvc,rshift);
+	}
+a240 31
+
+  nsend = 0;
+  for (int isend=0;isend<num;isend++) 
+    {
+      ibin = list[isend];
+      buf[nsend] = static_cast<double>(bins[ibin]->particles.size());
+      nsend++;
+      ntmp = nsend;
+      // May need to call a ParticleList pack function here instead,
+      // in which case pbc shifts will best be performed inside it
+      for (vector<Particle>::iterator part_i = bins[ibin]->particles.begin();
+	   part_i != bins[ibin]->particles.end();part_i++) 
+	{
+	  part_i->get_x(&buf[nsend]);
+	  nsend+=size_reverse;
+	}
+      
+      if (pbc[0]) 
+	{
+	  // Move back the pointer and apply shift
+	  nsend=ntmp;
+	  for (vector<Particle>::iterator part_i=bins[ibin]->particles.begin();
+	       part_i!=bins[ibin]->particles.end();part_i++) 
+	    {
+	      part_i->get_x(&buf[nsend]);
+	      vec3_add(&buf[nsend],rshift,&buf[nsend]);
+	      nsend+=size_reverse;
+	    }
+	}
+    }
+  
+a242 26
+void OctantList::unpack_reverse(const int& num, const vector<int>& list , 
+				const double* buf, vector <Bin *> bins) 
+{
+  
+  int ibin,nrecv;
+  
+  nrecv = 0;
+  for (int irecv=0;irecv<num;irecv++) 
+    {
+      ibin = list[irecv];
+      // This creates space for the new particles.
+      // It does not guarantee that old particles are erased, 
+      // so beware of residual data from previous passes.
+      bins[ibin]->particles.resize(static_cast<int>(buf[nrecv]));
+      nrecv++;
+      // May need to call a ParticleList unpack function here instead
+      for (vector<Particle>::iterator part_i = bins[ibin]->particles.begin();
+	   part_i != bins[ibin]->particles.end();part_i++) 
+	{
+	  part_i->set_x(&buf[nrecv]);
+	  nrecv+=size_reverse;
+	}
+    }
+}
+
+
+d346 31
+d442 1
+a442 3
+  //CheckBins(comm,bt,bl,1);
+
+
+@
+
+
+1.1.6.9.2.10
+log
+@Implement receiving bins.
+@
+text
+@d158 3
+a160 1
+      OctantBinsLists(n,octants[n].my_sendbinlist,octants[n].my_recvbinlist,BinsDir,bt,bl,b,comm);
+d171 3
+a173 3
+void OctantList::OctantBinsLists(int n,vector <Bin*> SendBins[3],vector <Bin*> RecvBins[3],
+				 vector <Bin*> BinsDir[6], BinTools *bt, BinList *bl,
+				 const Box* b,Comm *comm)
+d191 1
+a191 1
+      RecvBins[dir] = bt->Intersection(ProcBins,BinsDir[dir2]);
+d193 2
+a194 2
+      // Define SendBins and RecvBins and update for next dir
+      AuxBins = bt->Subtract(ProcBins,RecvBins[dir]);
+d196 1
+a196 1
+      bl->GetRegion(RecvBins[dir],region);
+@
+
+
+1.1.6.9.2.11
+log
+@Problem with pbc_flags.
+Update recent modifications.
+@
+text
+@a149 2
+  //CheckBins(comm,bt,bl,1);
+
+d152 11
+a162 37
+
+  if (nprocs > 1)
+    {
+      vector <Bin*> BinsDir[6];
+      for (int dir = 0; dir < 6; dir++) 
+	BinsDir[dir] = bl->GenerateGhostBinsDir(dir,bt,b,comm);
+      
+      int send[3], recv[3];
+      int id[3];
+      for (int n = 0; n < 8; n++) 
+	{ 
+	  // initialize pbc_flags 
+	  octants[n].comm_octant = new Comm_Octant();
+	  octants[n].get_oct_id(id);
+	  int nswap = octants[n].comm_octant->Setup_flags(comm,id); 
+	  
+	  	  vector <int *> flags;
+	  flags.resize(nswap);
+	  for (int iswap=0;iswap<nswap;iswap++) 
+	    flags[iswap] = new int[4];
+	  octants[n].comm_octant->get_pbc_flags(flags);
+	  
+	  //cout << "nswap=" << nswap << endl;
+	  //cout << "flags=" << flags[0][0] << endl;
+	  for (int iswap=0;iswap<nswap;iswap++) 
+	    for (int i=0;i<4;i++) 
+	      cout << flags[iswap][i] << "\t";
+	  cout << endl;
+	  
+	  OctantBinsLists(n,octants[n].my_sendbinlist,octants[n].my_recvbinlist,
+			  BinsDir,bt,bl,b,comm,flags);
+	  for (int j = 0; j < 3; j++) 
+	    {
+	      send[j] = (octants[n].my_sendbinlist)[j].size();
+	      recv[j] = (octants[n].my_recvbinlist)[j].size();
+	    }
+	  octants[n].Setup(comm,send,recv);
+d164 1
+a164 1
+	  
+d171 1
+a171 1
+				 const Box* b,Comm *comm,vector <int *> flags)
+d174 1
+a174 1
+  vector <Bin*> ProcBins,AuxBins;
+d193 3
+a195 1
+      //SendBins[dir] = bl->TranslateBins(RecvBins[dir],dir,b,comm,flags);
+a197 1
+ 
+d476 1
+a476 1
+	      comm->get_nodefile() << "\noctant (" << n << ")  ";
+@
+
+
+1.1.6.9.2.12
+log
+@Correct boundary flags.
+Implement send/receive bins.
+@
+text
+@d77 3
+d91 1
+a91 1
+  for (int i = 0; i < 2; i++)
+d93 1
+a93 1
+      for (int k = 0; k < 2; k++)
+a104 2
+	  int loc[3];
+	  comm->get_myloc(loc);
+d111 1
+a111 1
+		    
+d155 5
+a159 9
+  vector <Bin*> BinsDir[6];
+  for (int dir = 0; dir < 6; dir++) 
+    BinsDir[dir] = bl->GenerateGhostBinsDir(dir,bt,b,comm);
+  
+  int send[3], recv[3];
+  for (int n = 0; n < 8; n++) 
+    { 
+      // initialize pbc_flags 
+      octants[n].comm_octant = new Comm_Octant();
+d161 1
+d163 28
+a190 14
+      octants[n].get_oct_id(id);
+      int nswap = octants[n].comm_octant->Setup_flags(comm,id); 
+      vector <int *> flags;
+      flags.resize(nswap);
+      for (int iswap=0;iswap<nswap;iswap++) 
+	flags[iswap] = new int[4];
+      octants[n].comm_octant->get_pbc_flags(flags);
+      
+      OctantBinsLists(n,octants[n].my_sendbinlist,octants[n].my_recvbinlist,
+		      BinsDir,bt,bl,b,comm,flags);
+      for (int j = 0; j < 3; j++) 
+	{
+	  send[j] = (octants[n].my_sendbinlist)[j].size();
+	  recv[j] = (octants[n].my_recvbinlist)[j].size();
+d192 1
+a192 1
+      octants[n].Setup(comm,send,recv);
+d194 1
+a194 1
+  
+d197 1
+a197 1
+void OctantList::OctantBinsLists(const int& n,vector <Bin*> SendBins[3],vector <Bin*> RecvBins[3],
+a208 3
+  int loc[3];
+  comm->get_myloc(loc);
+
+d221 1
+a221 1
+      SendBins[dir] = bl->TranslateBins(RecvBins[dir],dir,b,comm,flags);
+a645 2
+
+
+@
+
+
+1.1.6.9.2.13
+log
+@Correct several bugs
+@
+text
+@a81 1
+  int trans[3];
+a111 9
+
+	  if (i==0) trans[0] = 1;
+	  if (i==1) trans[0] =-1;
+	  if (j==0) trans[1] = 1;
+	  if (j==1) trans[1] =-1;
+	  if (k==0) trans[2] = 1;
+	  if (k==1) trans[2] =-1;
+	  oct.set_translate(trans);
+
+a112 1
+
+d121 3
+a123 5
+      //double fcb[6];
+      //octants[n].get_octregion(fcb);
+      
+      octants[n].get_octloc(octloc);
+      octants[n].my_binlist = bl->SelectRegionBins(octloc,b,comm);      
+d126 8
+a134 3
+  vector <Bin *>::iterator pbin;  
+  vector <Bin *> octghostbins;
+
+d137 4
+a140 3
+      octghostbins.resize(0);
+      octants[n].get_octloc(octloc);
+      octghostbins = bl->SelectGhostRegionBins(octloc,b,comm);
+d142 1
+a142 1
+      for (pbin = octghostbins.begin();pbin!=octghostbins.end();pbin++)
+d144 2
+a145 2
+	  int ip = (*pbin)->get_ghostbin();
+          if (ip == 1) octants[n].my_procbinlist.push_back(*pbin);	  
+d151 1
+a151 1
+  // Set up send/recv bin lists for octants
+d158 1
+a158 1
+  int id[3],send[3],recv[3];  
+d161 1
+a161 2
+      OctantBinsLists(n,BinsDir,bt,bl,b,comm);
+      octants[n].get_oct_id(id);      
+d163 18
+a180 2
+      octants[n].comm_octant->Setup(comm,id,octants[n].my_sendbinlist,
+				    octants[n].my_recvbinlist);
+d182 1
+d185 3
+a187 2
+void OctantList::OctantBinsLists(const int& n,vector <Bin*> BinsDir[6], BinTools *bt,
+				 BinList *bl,const Box* b,Comm *comm)
+a192 3
+  int myloc[3];
+  comm->get_myloc(myloc);
+
+d197 2
+a198 2
+  int trans[3];
+  octants[n].get_translate(trans);
+d205 1
+a205 1
+        dir2 = 2*dir;
+d207 7
+a213 7
+        dir2 = 2*dir+1;
+      octants[n].my_recvbinlist[dir] = bt->Intersection(ProcBins,BinsDir[dir2]);
+      octants[n].my_sendbinlist[dir] = bl->TranslateBins(trans,octants[n].my_recvbinlist[dir],dir,b,comm);
+      
+      
+      AuxBins = bt->Subtract(ProcBins,octants[n].my_recvbinlist[dir]);
+      ProcBins = bt->Union(AuxBins,octants[n].my_sendbinlist[dir]);
+d215 1
+d219 1
+a219 1
+void OctantList::Cycle(const Box* b,OctantList* ol, ForceFieldList* ffl, Comm* comm)
+d223 4
+a226 6
+      octants[n].comm_octant->communicate(ol,comm,b,
+					  ol->octants[n].my_sendbinlist,
+					  ol->octants[n].my_recvbinlist);
+      octants[n].comm_octant->reverse_communicate(ol,comm,b,
+						  ol->octants[n].my_sendbinlist,
+						  ol->octants[n].my_recvbinlist);
+d230 1
+a230 1
+int OctantList::pack_comm_size(Comm* comm,const int& num, const vector<int>& list, 
+a235 1
+
+d288 1
+a288 2
+  
+  vector<Particle>::iterator part_i;
+d298 1
+a298 1
+      for (part_i = bins[ibin]->particles.begin();
+d305 12
+a316 14
+      if (pbc[0]) 
+	{
+	  // Move back the pointer and apply shift
+	  nsend=ntmp;
+	  for (part_i=bins[ibin]->particles.begin();
+	       part_i!=bins[ibin]->particles.end();part_i++) 
+	    {
+	      part_i->get_x(&buf[nsend]);
+	      vec3_add(&buf[nsend],rshift,&buf[nsend]);
+	      nsend+=size_comm;
+	    }
+	}
+     
+      
+d318 1
+d326 1
+a326 1
+  vector<Particle>::iterator pi;
+a333 1
+
+a334 1
+
+d337 2
+a338 1
+      for (pi = bins[ibin]->particles.begin();pi != bins[ibin]->particles.end();pi++) 
+d340 1
+a340 1
+	  pi->set_x(&buf[nrecv]);
+d417 2
+a418 2
+      for (vector<Particle>::iterator pi = bins[ibin]->particles.begin();
+	   pi != bins[ibin]->particles.end();pi++) 
+d420 1
+a420 1
+	  pi->get_x(&buf[nsend]);
+d428 2
+a429 2
+	  for (vector<Particle>::iterator pi=bins[ibin]->particles.begin();
+	       pi!=bins[ibin]->particles.end();pi++) 
+d431 1
+a431 1
+	      pi->get_x(&buf[nsend]);
+d456 2
+a457 2
+      for (vector<Particle>::iterator pi = bins[ibin]->particles.begin();
+	   pi != bins[ibin]->particles.end();pi++) 
+d459 1
+a459 1
+	  pi->set_x(&buf[nrecv]);
+d502 34
+a535 1
+  
+a638 1
+
+@
+
+
+1.1.6.9.2.14
+log
+@Correct a few things.
+@
+text
+@d74 2
+a75 1
+void OctantList::Setup(BinList* bl,BinTools* bt,const Box* b,Comm* comm)
+d113 9
+d123 1
+d134 1
+a134 2
+      //octants[n].my_binlist = bl->SelectRegionBins(fcb,b,comm);  
+
+d156 2
+d165 1
+a165 1
+  int id[3];
+d188 1
+d190 2
+a191 1
+  ProcBins = octants[n].get_my_procbinlist();
+a200 1
+
+d202 2
+a203 2
+      octants[n].my_sendbinlist[dir] = 
+	bl->TranslateBins(id[dir],dir,b,octants[n].my_recvbinlist[dir],comm);
+d211 1
+a211 2
+void OctantList::Cycle(OctantList *ol,BinList *bl, BinTools* bt,
+		       const Box* b,Comm* comm)
+d215 100
+a314 2
+      octants[n].comm_octant->communicate(comm,b,bl,bt);
+      octants[n].comm_octant->reverse_communicate(comm,b,bl,bt);
+d317 288
+@
+
+
+1.1.6.9.2.15
+log
+@Add a pointer to particle instead of an array of particle.
+
+Bug in particles coordinates.
+@
+text
+@d121 4
+a134 1
+      octants[n].my_procbinlist.resize(0);
+a161 1
+  exit(0);
+a176 4
+  if (comm->get_Lnodefile()) 
+    comm->get_nodefile()<< "octant: " << n << "\t (" << id[0] << "\t" 
+			<< id[1] << "\t" << id[2] << ")" << endl;
+
+a180 3
+      if (comm->get_Lnodefile()) 
+	comm->get_nodefile()<< "dir=" << dir << endl;
+
+d191 1
+d203 2
+a204 6
+      octants[n].comm_octant->communicate(comm,b,bl,bt,
+					  octants[n].my_sendbinlist,
+					  octants[n].my_recvbinlist);
+      octants[n].comm_octant->reverse_communicate(comm,b,bl,bt,
+						  octants[n].my_sendbinlist,
+						  octants[n].my_recvbinlist);
+@
+
+
+1.1.6.9.2.16
+log
+@Latest additions to Monte Carlo branch
+@
+text
+@d159 1
+a159 1
+  //exit(0);
+@
+
+
+1.1.6.9.2.17
+log
+@Correct a few bugs.
+Segmentation fault when domain is not squared.
+@
+text
+@d148 2
+a149 2
+      BinsDir[dir] = bl->GenerateGhostBinsDir(dir,bt,b,comm);
+
+d159 1
+d175 4
+d183 3
+@
+
+
+1.1.6.9.2.18
+log
+@Tweaked Monaco branch
+@
+text
+@d74 2
+a75 1
+void OctantList::Setup(BinList* bl,BinTools* bt,const Box* b,Comm* comm) {  
+d90 3
+a92 2
+      for (int k = 0; k < 2; k++) {
+	int m = 4*k + 2*j + i;
+d94 6
+a99 6
+	octloc[0] = 1 + i*px/2;
+	octloc[1] = (1+i)*px/2;
+	octloc[2] = 1 + j*py/2;
+	octloc[3] = (1+j)*py/2;
+	octloc[4] = 1 + k*pz/2;
+	octloc[5] = (1+k)*pz/2;
+d101 9
+a109 9
+	double fcb[6];
+	int loc[3];
+	comm->get_myloc(loc);
+	fcb[0] = (octloc[0]-1+loc[0]*px)/(1.*px*procgrid[0]);
+	fcb[1] = (octloc[1]  +loc[0]*px)/(1.*px*procgrid[0]);
+	fcb[2] = (octloc[2]-1+loc[1]*py)/(1.*py*procgrid[1]);
+	fcb[3] = (octloc[3]  +loc[1]*py)/(1.*py*procgrid[1]);
+	fcb[4] = (octloc[4]-1+loc[2]*pz)/(1.*pz*procgrid[2]);
+	fcb[5] = (octloc[5]  +loc[2]*pz)/(1.*pz*procgrid[2]);
+d111 3
+a113 3
+	oct.set_oct_id(i,j,k);
+	oct.set_octloc(octloc);
+	oct.set_octregion(fcb);
+d115 2
+a116 2
+	octants.push_back(oct);
+      } 
+d119 5
+a123 4
+  for (int n = 0; n < 8; n++) {
+    octants[n].get_octloc(octloc);
+    octants[n].my_binlist = bl->SelectRegionBins(octloc,b,comm);      
+  }  
+d129 13
+a141 11
+  for (int n = 0; n < 8; n++) {
+    octants[n].my_procbinlist.resize(0);
+    octghostbins.resize(0);
+    octants[n].get_octloc(octloc);
+    octghostbins = bl->SelectGhostRegionBins(octloc,b,comm);
+    
+    for (pbin = octghostbins.begin();pbin!=octghostbins.end();pbin++) {
+      int ip = (*pbin)->get_ghostbin();
+      if (ip == 1) octants[n].my_procbinlist.push_back(*pbin);	  
+    }
+  } 
+d151 8
+a158 7
+  for (int n = 0; n < 8; n++) { 
+    OctantBinsLists(n,BinsDir,bt,bl,b,comm);
+    octants[n].get_oct_id(id);      
+    octants[n].comm_octant = new Comm_Octant();
+    octants[n].comm_octant->Setup(comm,id,octants[n].my_sendbinlist,
+				  octants[n].my_recvbinlist);
+  }
+d162 2
+a163 1
+				 BinList *bl,const Box* b,Comm *comm) {
+d176 15
+a190 14
+  for (int dir = 2; dir >= 0; dir--) {
+    // ghost bins in this direction to be translated
+    int dir2 = 0;
+    if (id[dir] == 0)  // dir2 = 0,2,4 if id = 0 and dir2 = 1,3,5 if id = 1
+      dir2 = 2*dir;
+    else
+      dir2 = 2*dir+1;
+    
+    octants[n].my_recvbinlist[dir] = bt->Intersection(ProcBins,BinsDir[dir2]);
+    octants[n].my_sendbinlist[dir] = 
+      bl->TranslateBins(id[dir],dir,b,octants[n].my_recvbinlist[dir],comm);
+    AuxBins = bt->Subtract(ProcBins,octants[n].my_recvbinlist[dir]);
+    ProcBins = bt->Union(AuxBins,octants[n].my_sendbinlist[dir]);
+  }
+d195 11
+a205 9
+		       const Box* b,Comm* comm) {
+  for (int n = 0; n < 8; n++) {
+    octants[n].comm_octant->communicate(comm,b,bl,bt,
+					octants[n].my_sendbinlist,
+					octants[n].my_recvbinlist);
+    octants[n].comm_octant->reverse_communicate(comm,b,bl,bt,
+						octants[n].my_sendbinlist,
+						octants[n].my_recvbinlist);
+  }
+@
+
+
+1.1.6.9.2.19
+log
+@Bin Communication fixed
+@
+text
+@d142 2
+a143 6
+  for (int dir = 0; dir < 6; dir++) { 
+    BinsDir[dir] = bl->GenerateGhostBinsDir(dir,bt,b,comm);
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile()<< "Number  of BinsDir" << BinsDir[dir].size() << endl;
+    }
+  }
+a181 6
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile()<< "Number  of ProcBins" << ProcBins.size() << endl;
+      comm->get_nodefile()<< "Number  of BinsDir" << BinsDir[dir2].size() << endl;
+      comm->get_nodefile()<< "Number of  SendBins" << octants[n].my_sendbinlist[dir].size() << endl;
+      comm->get_nodefile()<< "Number of  RecvBins" << octants[n].my_recvbinlist[dir].size() << endl;
+    }
+d186 1
+a186 1
+void OctantList::Cycle(ParticleList* p, OctantList* ol,BinList* bl, BinTools* bt,
+d189 1
+a189 1
+    octants[n].comm_octant->communicate(p,comm,b,bl,bt,
+d192 1
+a192 1
+    octants[n].comm_octant->reverse_communicate(p,comm,b,bl,bt,
+@
+
+
+1.1.6.9.2.20
+log
+@Added EAM energy change calculation
+@
+text
+@d127 1
+a127 1
+    octants[n].my_ghostbinlist.resize(0);
+d134 1
+a134 1
+      if (ip == 1) octants[n].my_ghostbinlist.push_back(*pbin);	  
+d171 1
+a171 9
+  // Initial ProcBins to be all the ghost bins adjacent to the octant.
+  // This set consists of three orthogonal slabs meeting at a corner.
+ // 
+  // The size of this set is conserved in subsequent transformations
+  // It is (ioct+2)*(joct+2)*(koct+2) - (ioct+1)*(joct+1)*(koct+1)
+  // where (ioct,joct,koct) is the bin-dimension of the octant.
+  //
+
+  ProcBins = octants[n].get_my_ghostbinlist();
+d180 1
+a180 5
+
+    // recvbinlist is the intersection of ProcBins with 
+    // the slab of ghost bins in receive direction
+    // It's size is (ioct+2)*(joct+2) where (icot,joct)
+    // is the projected bin-dimension of the octant 
+a181 3
+    // sendbinlist is the translation of recvbinlist
+    // It's size is (ioct+2)*(joct+2) where (ioct,joct)
+    // is the projected bin-dimension of the octant 
+a183 1
+    // AuxBins is ProcBins less recvbinlist
+a184 1
+    // new ProcBins is AuxBins plus sendbinlist
+d195 1
+d197 1
+a197 1
+		       const Box* b,ForceFieldList* ff,Comm* comm) {
+d199 1
+a199 2
+//   for (int n = 0; n < 1; n++) {
+    octants[n].comm_octant->communicate(p,comm,b,bl,
+d202 1
+a202 2
+    octants[n].Cycle(p,comm,b,bl,ff);
+    octants[n].comm_octant->reverse_communicate(p,comm,b,bl,
+@
+
+
+1.1.6.9.2.21
+log
+@Added Metropolis acceptance criterion
+@
+text
+@d144 3
+d203 6
+@
+
+
+1.1.6.9.2.22
+log
+@Added in bin reallocation in montecarlo.cpp
+@
+text
+@a213 5
+//     // Reallocate Particles to Processors
+//     p->ResetPosition(b,false);
+//     comm->exchange(b,p);
+//     // Reallocate Particles to Bins
+//     bl->BinParticles(p,p->get_particles(),b,comm);
+@
+
+
+1.1.6.9.2.23
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@a204 2
+  double t0,t1;
+
+d206 1
+a206 3
+  double t1 = MPI_Wtime();
+    MPI_Barrier(comm->get_world());
+    t0 = MPI_Wtime();
+a209 4
+    t1 = MPI_Wtime();
+    glog.timecomm += t1-t0;
+    MPI_Barrier(comm->get_world());
+
+a210 3
+
+    MPI_Barrier(comm->get_world());
+    t0 = MPI_Wtime();
+d214 5
+a218 3
+    t1 = MPI_Wtime();
+    glog.timerevcomm += t1-t0;
+    MPI_Barrier(comm->get_world());
+@
+
+
+1.1.4.1
+log
+@*** empty log message ***
+@
+text
+@a0 157
+#include <cmath>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "particle.h"
+#include "vec3.h"
+#include "binlist.h"
+#include "bin.h"
+#include "forcefield.h"
+#include "box.h"
+#include "box_inline.h"
+#include "fixed_object.h"
+#include "particlelist.h"
+#include "forcefieldlist.h"
+#include "machine.h"
+#include "comm.h"
+#include "log.h"
+#include "octant.h"
+#include "octantlist.h"
+extern Log glog;
+
+
+void OctantList::Setup(BinList* bl,const Box* b,Comm* comm,ForceFieldList* ffl)
+{  
+
+  // which proc
+  int node;
+  node = comm->get_node();
+
+  // how many procs per dim
+  int procgrid[3];
+  comm->get_procgrid(procgrid);
+
+  // proc location
+  int loc[3];
+  comm->get_myloc(loc);
+
+
+  cout << "\n\n\n\nNode (" << node << ")\n";
+  cout << loc[0] << "\t" << loc[1] << "\t" << loc[2] << endl;
+
+
+  double w[3];
+  b->get_lw(w);
+  double rcut = ffl->get_rcutneighmaxall();
+  double rcutneigh[3];
+  rcutneigh[0] = rcut/w[0];
+  rcutneigh[1] = rcut/w[1];
+  rcutneigh[2] = rcut/w[2];
+
+
+  // Local region in fractional coordinates
+  localbounds[0] = static_cast<double>(loc[0])/static_cast<double>(procgrid[0])
+    - rcutneigh[0] - small;
+  localbounds[1] = static_cast<double>(loc[0]+1)/static_cast<double>(procgrid[0])
+    + rcutneigh[0] + small;
+  localbounds[2] = static_cast<double>(loc[1])/static_cast<double>(procgrid[1])
+    - rcutneigh[1] - small;
+  localbounds[3] = static_cast<double>(loc[1]+1)/static_cast<double>(procgrid[1])
+    + rcutneigh[1] + small;
+  localbounds[4] = static_cast<double>(loc[2])/static_cast<double>(procgrid[2])
+    - rcutneigh[2] - small;
+  localbounds[5] = static_cast<double>(loc[2]+1)/static_cast<double>(procgrid[2])
+    + rcutneigh[2] + small;
+
+  //cout << "localbounds\n";
+  //cout << localbounds[0] << "\t" << localbounds[1] << "\t";
+  //cout << localbounds[2] << "\t" << localbounds[3] << "\t";
+  //cout << localbounds[4] << "\t" << localbounds[5] << endl << endl;
+
+  double dist[3];
+  dist[0] = (localbounds[1]-localbounds[0])*0.5;
+  dist[1] = (localbounds[3]-localbounds[2])*0.5;
+  dist[2] = (localbounds[5]-localbounds[4])*0.5;
+
+
+  // Set up region for octants
+  Octant oct;
+  double localreg[3];
+  double reg[6],regc[6];
+  for (int i = 0; i < 2; i++)
+    for (int j = 0; j < 2; j++)
+      for (int k = 0; k < 2; k++)
+	{
+	  int n = 4*i + 2*j + k;
+	  reg[0] = i*0.5;
+	  reg[2] = j*0.5;
+	  reg[4] = k*0.5;
+	  reg[1] = reg[0] + 0.5;
+	  reg[3] = reg[2] + 0.5;
+	  reg[5] = reg[4] + 0.5;
+
+	  cout << "n=" << n << "\t reg[0]=" << reg[0] << "\t reg[1]=" 
+	               << reg[1] << "\t reg[2]=" << reg[2] << endl;
+
+	  InvLocalBounds(reg,regc);
+	  
+	  oct.set_octregion(regc);
+	  octants.push_back(oct);
+	}    
+
+  // Set up binlist for octants
+  vector <Bin*> checkbins;
+  for (int n = 0; n < 8; n++)  
+    {
+      cout << "octant = " << n << "\n";
+
+      double fcb[6];
+      octants[n].get_octregion(fcb);
+
+      cout << "  My region\n";
+      cout << "  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      	   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+
+      octants[n].my_binlist = bl->SelectRegionBins(fcb,b,comm);
+      checkbins = octants[n].get_my_binlist();
+
+      vector<Bin *>::iterator pbin;
+      cout << "  My bins \n";
+      for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+	cout << "  " << (*pbin)->get_id() << "\t";    
+      cout << endl<<endl;;
+    }  
+
+
+}
+
+
+void OctantList::LocalBounds(double r[6],double rc[6])
+{
+  rc[0] = (r[0]  - localbounds[0])/(localbounds[1]-localbounds[0]);
+  rc[1] = (r[1]  - localbounds[0])/(localbounds[1]-localbounds[0]);
+  
+  rc[2] = (r[2]  - localbounds[2])/(localbounds[3]-localbounds[2]);
+  rc[3] = (r[3]  - localbounds[2])/(localbounds[3]-localbounds[2]);
+  
+  rc[4] = (r[4]  - localbounds[4])/(localbounds[5]-localbounds[4]);
+  rc[5] = (r[5]  - localbounds[4])/(localbounds[5]-localbounds[4]);
+}
+
+void OctantList::InvLocalBounds(double r[6],double rc[6])
+{
+  rc[0] = localbounds[0] + r[0]*(localbounds[1]-localbounds[0]);
+  rc[1] = localbounds[0] + r[1]*(localbounds[1]-localbounds[0]);
+  
+  rc[2] = localbounds[2] + r[2]*(localbounds[3]-localbounds[2]);
+  rc[3] = localbounds[2] + r[3]*(localbounds[3]-localbounds[2]);
+  
+  rc[4] = localbounds[4] + r[4]*(localbounds[5]-localbounds[4]);
+  rc[5] = localbounds[4] + r[5]*(localbounds[5]-localbounds[4]);
+}
+
+@
+
+
+1.1.2.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a0 103
+#include <cmath>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "particle.h"
+#include "vec3.h"
+#include "binlist.h"
+#include "bin.h"
+#include "forcefield.h"
+#include "box.h"
+#include "box_inline.h"
+#include "fixed_object.h"
+#include "particlelist.h"
+#include "forcefieldlist.h"
+#include "machine.h"
+#include "comm.h"
+#include "log.h"
+#include "octant.h"
+#include "octantlist.h"
+
+OctantList::OctantList()
+{
+	clear();
+}
+
+void OctantList::clear()
+{
+  octants.clear();
+
+}
+
+void OctantList::Setup(const BinList*,const Box* b,Comm* comm,ForceFieldList* ffl)
+{  
+  // which proc
+  int node;
+  node = comm->get_node();
+
+  // total number of procs
+  //if (node==0) cout << comm ->get_nprocs() << endl;
+  //cout << "-- node (" << node << ") --\n" ;
+
+  // how many procs per dim
+  int procgrid[3];
+  comm->get_procgrid(procgrid);
+
+  // proc location
+  int loc[3];
+  comm->get_myloc(loc);
+  //cout << loc[0] << "\t" << loc[1] << "\t" << loc[2] << endl;
+
+
+  double localreg[3];
+  for (int i = 0; i < 2; i++)
+    for (int j = 0; j < 2; j++)
+      for (int k = 0; k < 2; k++)
+	{
+	  int n = 4*i + 2*j + k;
+	  localreg[0] = i*0.5;
+	  localreg[1] = j*0.5;
+	  localreg[2] = k*0.5;
+
+	  //cout << "(" << n << "):" << localreg[0] << "\t" << localreg[1] << "\t" 
+	  //     << localreg[2] << endl;
+	}    
+
+
+  double rcut = ffl->get_rcutneighmaxall();
+
+  double w[3];
+  b->get_lw(w);
+  double realw[3];
+  realw[0] = w[0] + 2.0*rcut;
+  realw[1] = w[1] + 2.0*rcut;
+  realw[2] = w[2] + 2.0*rcut;
+
+  double origin[3];
+  b->get_o(origin);
+
+  double units[3];
+  units[0] = realw[0]/static_cast<double>(procgrid[0]);
+  units[1] = realw[1]/static_cast<double>(procgrid[1]);
+  units[2] = realw[2]/static_cast<double>(procgrid[2]);
+
+  
+  for (int i = 0; i < procgrid[0]; i++)
+    for (int j = 0; j < procgrid[1]; j++)
+      for (int k = 0; k < procgrid[2]; k++) 
+	{
+	  double x = -origin[0]+units[0]*i;
+	  double xp = x + units[0];
+	  
+	  double y = -origin[1]+units[1]*j;
+	  double yp = y + units[1];
+	  
+	  double z = -origin[2]+units[2]*k;
+	  double zp = z + units[2];
+	}
+}
+@
+
+
+1.1.2.2
+log
+@Modify binlist to create bins array locally (to each proc).
+Begin implementing octantlist.
+
+saubry (04-07-05).
+@
+text
+@a24 1
+extern Log glog;
+d26 4
+d31 7
+a37 1
+void OctantList::Setup(BinList* bl,const Box* b,Comm* comm,ForceFieldList* ffl)
+a38 1
+
+d43 4
+d54 1
+a56 40
+  cout << "\n\n\n\nNode (" << node << ")\n";
+  cout << loc[0] << "\t" << loc[1] << "\t" << loc[2] << endl;
+
+
+  double w[3];
+  b->get_lw(w);
+  double rcut = ffl->get_rcutneighmaxall();
+  double rcutneigh[3];
+  rcutneigh[0] = rcut/w[0];
+  rcutneigh[1] = rcut/w[1];
+  rcutneigh[2] = rcut/w[2];
+
+
+  // Ghost region in fractional coordinates
+  ghostbounds[0] = static_cast<double>(loc[0])/static_cast<double>(procgrid[0])
+    - rcutneigh[0] - small;
+  ghostbounds[1] = static_cast<double>(loc[0]+1)/static_cast<double>(procgrid[0])
+    + rcutneigh[0] + small;
+  ghostbounds[2] = static_cast<double>(loc[1])/static_cast<double>(procgrid[1])
+    - rcutneigh[1] - small;
+  ghostbounds[3] = static_cast<double>(loc[1]+1)/static_cast<double>(procgrid[1])
+    + rcutneigh[1] + small;
+  ghostbounds[4] = static_cast<double>(loc[2])/static_cast<double>(procgrid[2])
+    - rcutneigh[2] - small;
+  ghostbounds[5] = static_cast<double>(loc[2]+1)/static_cast<double>(procgrid[2])
+    + rcutneigh[2] + small;
+
+  //cout << "ghostbounds\n";
+  //cout << ghostbounds[0] << "\t" << ghostbounds[1] << "\t";
+  //cout << ghostbounds[2] << "\t" << ghostbounds[3] << "\t";
+  //cout << ghostbounds[4] << "\t" << ghostbounds[5] << endl << endl;
+
+  double dist[3];
+  dist[0] = (ghostbounds[1]-ghostbounds[0])*0.5;
+  dist[1] = (ghostbounds[3]-ghostbounds[2])*0.5;
+  dist[2] = (ghostbounds[5]-ghostbounds[4])*0.5;
+
+
+  // Set up region for octants
+  Octant oct;
+a57 1
+  double reg[6],regc[6];
+d63 3
+a65 6
+	  reg[0] = i*0.5;
+	  reg[2] = j*0.5;
+	  reg[4] = k*0.5;
+	  reg[1] = reg[0] + 0.5;
+	  reg[3] = reg[2] + 0.5;
+	  reg[5] = reg[4] + 0.5;
+d67 2
+a68 7
+	  cout << "n=" << n << "\t reg[0]=" << reg[0] << "\t reg[1]=" 
+	               << reg[1] << "\t reg[2]=" << reg[2] << endl;
+
+	  InvGhostBounds(reg,regc);
+	  
+	  oct.set_octregion(regc);
+	  octants.push_back(oct);
+a70 22
+  // Set up binlist for octants
+  vector <Bin*> checkbins;
+  for (int n = 0; n < 8; n++)  
+    {
+      cout << "octant = " << n << "\n";
+
+      double fcb[6];
+      octants[n].get_octregion(fcb);
+
+      cout << "  My region\n";
+      cout << "  " << fcb[0] << "\t" << fcb[1] << "\t" << fcb[2] << "\t"
+      	   << fcb[3] << "\t" << fcb[4] << "\t" << fcb[5] << endl;
+
+      octants[n].my_binlist = bl->SelectRegionBins(fcb,b);
+      checkbins = octants[n].get_my_binlist();
+
+      vector<Bin *>::iterator pbin;
+      cout << "  My bins \n";
+      for (pbin = checkbins.begin();pbin!=checkbins.end();pbin++)
+	cout << "  " << (*pbin)->get_id() << "\t";    
+      cout << endl<<endl;;
+    }  
+d72 1
+d74 14
+a87 1
+}
+a88 5
+
+void OctantList::GhostBounds(double r[6],double rc[6])
+{
+  rc[0] = (r[0]  - ghostbounds[0])/(ghostbounds[1]-ghostbounds[0]);
+  rc[1] = (r[1]  - ghostbounds[0])/(ghostbounds[1]-ghostbounds[0]);
+d90 13
+a102 17
+  rc[2] = (r[2]  - ghostbounds[2])/(ghostbounds[3]-ghostbounds[2]);
+  rc[3] = (r[3]  - ghostbounds[2])/(ghostbounds[3]-ghostbounds[2]);
+  
+  rc[4] = (r[4]  - ghostbounds[4])/(ghostbounds[5]-ghostbounds[4]);
+  rc[5] = (r[5]  - ghostbounds[4])/(ghostbounds[5]-ghostbounds[4]);
+}
+
+void OctantList::InvGhostBounds(double r[6],double rc[6])
+{
+  rc[0] = ghostbounds[0] + r[0]*(ghostbounds[1]-ghostbounds[0]);
+  rc[1] = ghostbounds[0] + r[1]*(ghostbounds[1]-ghostbounds[0]);
+  
+  rc[2] = ghostbounds[2] + r[2]*(ghostbounds[3]-ghostbounds[2]);
+  rc[3] = ghostbounds[2] + r[3]*(ghostbounds[3]-ghostbounds[2]);
+  
+  rc[4] = ghostbounds[4] + r[4]*(ghostbounds[5]-ghostbounds[4]);
+  rc[5] = ghostbounds[4] + r[5]*(ghostbounds[5]-ghostbounds[4]);
+a103 1
+
+@
+
+
+1.1.2.3
+log
+@Correct binparticles routine.
+Add map index.
+
+saubry 04-12-05
+@
+text
+@d57 2
+a58 2
+  // Local region in fractional coordinates
+  localbounds[0] = static_cast<double>(loc[0])/static_cast<double>(procgrid[0])
+d60 1
+a60 1
+  localbounds[1] = static_cast<double>(loc[0]+1)/static_cast<double>(procgrid[0])
+d62 1
+a62 1
+  localbounds[2] = static_cast<double>(loc[1])/static_cast<double>(procgrid[1])
+d64 1
+a64 1
+  localbounds[3] = static_cast<double>(loc[1]+1)/static_cast<double>(procgrid[1])
+d66 1
+a66 1
+  localbounds[4] = static_cast<double>(loc[2])/static_cast<double>(procgrid[2])
+d68 1
+a68 1
+  localbounds[5] = static_cast<double>(loc[2]+1)/static_cast<double>(procgrid[2])
+d71 4
+a74 4
+  //cout << "localbounds\n";
+  //cout << localbounds[0] << "\t" << localbounds[1] << "\t";
+  //cout << localbounds[2] << "\t" << localbounds[3] << "\t";
+  //cout << localbounds[4] << "\t" << localbounds[5] << endl << endl;
+d77 3
+a79 3
+  dist[0] = (localbounds[1]-localbounds[0])*0.5;
+  dist[1] = (localbounds[3]-localbounds[2])*0.5;
+  dist[2] = (localbounds[5]-localbounds[4])*0.5;
+d101 1
+a101 1
+	  InvLocalBounds(reg,regc);
+d120 1
+a120 1
+      octants[n].my_binlist = bl->SelectRegionBins(fcb,b,comm);
+d134 1
+a134 1
+void OctantList::LocalBounds(double r[6],double rc[6])
+d136 2
+a137 2
+  rc[0] = (r[0]  - localbounds[0])/(localbounds[1]-localbounds[0]);
+  rc[1] = (r[1]  - localbounds[0])/(localbounds[1]-localbounds[0]);
+d139 2
+a140 2
+  rc[2] = (r[2]  - localbounds[2])/(localbounds[3]-localbounds[2]);
+  rc[3] = (r[3]  - localbounds[2])/(localbounds[3]-localbounds[2]);
+d142 2
+a143 2
+  rc[4] = (r[4]  - localbounds[4])/(localbounds[5]-localbounds[4]);
+  rc[5] = (r[5]  - localbounds[4])/(localbounds[5]-localbounds[4]);
+d146 1
+a146 1
+void OctantList::InvLocalBounds(double r[6],double rc[6])
+d148 2
+a149 2
+  rc[0] = localbounds[0] + r[0]*(localbounds[1]-localbounds[0]);
+  rc[1] = localbounds[0] + r[1]*(localbounds[1]-localbounds[0]);
+d151 2
+a152 2
+  rc[2] = localbounds[2] + r[2]*(localbounds[3]-localbounds[2]);
+  rc[3] = localbounds[2] + r[3]*(localbounds[3]-localbounds[2]);
+d154 2
+a155 2
+  rc[4] = localbounds[4] + r[4]*(localbounds[5]-localbounds[4]);
+  rc[5] = localbounds[4] + r[5]*(localbounds[5]-localbounds[4]);
+@
+
+

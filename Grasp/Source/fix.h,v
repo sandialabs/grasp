@@ -1,0 +1,413 @@
+head	4.5;
+access;
+symbols
+	ReverseComm_branch:4.3.0.10
+	ADTools_branch:4.3.0.8
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoSource:3.0.0.6
+	GraspSource:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.6.0.2
+	cjkimme_version_merge_from_trunk_1:2.3.2.1
+	cjkimme_version:2.3.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.5
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.03.20.00.15.37;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.3.2.1;
+next	2.2;
+
+2.2
+date	2003.11.03.23.52.04;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.10.31.20.21.17;	author athomps;	state Exp;
+branches;
+next	;
+
+2.3.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.5
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FIX__H
+#define FIX__H
+
+// Base class
+// Constraint applied to particles
+class Fix {
+ public:
+  // enum class for fix styles
+  enum FixStyles {none,temp_rescale,temp_rescale_slab,temp_nose_hoover,deformation};  
+ protected:
+  // Style of fix
+  FixStyles fix_style;  
+  // Color of particle this fix applies to
+  // This needs to be generalized to particle group
+  int particle_color;
+  string fix_label;
+  bool Lvolume;
+ public:
+  Fix() {};
+  virtual ~Fix() {};
+  // Apply the fix at the end of the timestep
+  // Eventually need more locations
+  virtual void Final(ParticleList*, Box*, Comm*)=0;
+  virtual void Start(ParticleList*, Box*, Comm*)=0;
+  virtual void Setup(string&, const Box*, 
+		     const ParticleTypeList*, Comm*)=0;
+  virtual void Output(ParticleList*, const Box*, Comm*)=0;
+  bool get_Lvolume() const {return Lvolume;};
+};
+
+#endif
+
+
+@
+
+
+4.4
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d54 1
+a54 1
+  enum FixStyles {none,temp_rescale,temp_rescale_slab,temp_nose_hoover};  
+d62 1
+d68 2
+a69 2
+  virtual void Final(ParticleList*, const Box*, Comm*)=0;
+  virtual void Start(ParticleList*, const Box*, Comm*)=0;
+d73 1
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d54 1
+a54 1
+  enum FixStyles {none,temp_rescale,temp_nose_hoover};  
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.1
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+2.6
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.5
+log
+@Updated header
+@
+text
+@d46 2
+@
+
+
+2.4
+log
+@Various
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.3
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.3.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a45 2
+  Fix() {};
+  virtual ~Fix() {};
+@
+
+
+2.2
+log
+@Pushed examples down into subdirectories.
+@
+text
+@d1 28
+@
+
+
+2.1
+log
+@Added Fix class, for doing slective thermostatting
+and other things.
+@
+text
+@d13 1
+a13 1
+  // Type of particle this fix applies to
+d15 1
+a15 1
+  int particle_type;
+@
+

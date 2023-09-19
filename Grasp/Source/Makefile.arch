@@ -1,0 +1,728 @@
+#-----------------------------------------------------------------------
+#
+#   G R A S P
+#   ____________
+#   \           \
+#    \ General   \
+#     \ Reactive  \
+#      \ Atomistic \
+#       \ Simulation\
+#        \ Program   \
+#         \___________\
+#
+#    Timestamp: April 1, 2005
+#    Version: 4.0
+#
+#    Primary Author: Aidan P. Thompson
+#
+#    e-mail: athomps@sandia.gov
+#   
+#    Copyright (2005) Sandia National Laboratories
+#
+#    Sandia National Laboratories is a multiprogram laboratory 
+#    operated by Sandia Corporation, a Lockheed Martin company,
+#    for the United States Department of Energy under contract
+#    No. DE-AC04-94AL-85000.
+#
+#    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+#    Corporation, the U.S. Government retains certain rights in 
+#    this software.
+#
+#    This software is distributed under the terms of the GNU Public 
+#    License (GPL). For a copy of the GPL see the file 
+#    Grasp/Documentation/LICENSE or visit the GNU website at 
+#    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+#    entitles you to use the software, modify it and redistribute it. 
+#    The main thing you can not do is apply any other licensing 
+#    terms to the software. Also, if any part of this sofware is added 
+#    to other software, then that software must also be released under 
+#    the GPL.
+#
+#    This software comes with no warranty of any kind. 
+#
+#----------------------------------------------------------------------- 
+#///:EOH~
+# This section stores all the platform-specific settings.
+# Feel free to add you own favorites.
+  # Options for Aidan's Linux box using lammpi
+  # The lammpi compilers are in /usr/bin
+  ifeq (sale811,$(_ARCH))
+    MPI_PATH = /usr
+    USRLIB = -lblas 
+    USRLIB_REAX = -lg2c 
+#    PREPROC_FLAGS = -DGNU_2_96 -DUSE_NODEFILES
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DGNU_2_96 
+    C = $(MPI_PATH)/mpicc
+    CPP = $(MPI_PATH)/bin/mpic++
+    F77 = $(MPI_PATH)/bin/mpif77
+    INCLUDE_FLAG = 
+    USRLIB_FLAG = 
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = $(MPI_PATH)/bin/mpirun 
+    MULTINODEFLAG = -np 2
+    SINGLENODEFLAG = -np 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for Aidan's Linux box using mpich
+  ifeq (sale811_mpich,$(_ARCH))
+    MPI_PATH = /home/local/mpich/mpich-1.2.5
+    USRLIB = -lmpich  -lblas 
+    USRLIB_REAX = -lg2c 
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DGNU_2_96
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include
+    USRLIB_FLAG = -L$(MPI_PATH)/lib
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = $(MPI_PATH)/bin/mpirun 
+    MULTINODEFLAG = -np 2
+    SINGLENODEFLAG = -np 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for Aidan's Linux box with debug options
+  ifeq (sale811_debug,$(_ARCH))
+    MPI_PATH = /home/local/mpich/mpich-1.2.5
+    USRLIB = -lmpich -lg2c -lblas 
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DGNU_2_96 
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include
+    USRLIB_FLAG = -L$(MPI_PATH)/lib
+    CFLAGS = -g -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -g -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -g $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -g $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = mpirun 
+#    RUNGRASP = mpirun -dbg=totalview 
+#    RUNGRASP = mpirun -dbg=gdb 
+    MULTINODEFLAG = -np 2
+    SINGLENODEFLAG = -np 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for serial execution on Aidan's Linux box
+  ifeq (sale811_serial,$(_ARCH))
+    MPI_PATH = $(SRCDIR)/STUBS
+    USRLIB = -lmpi -lg2c -lblas 
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DGNU_2_96 
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH)
+    USRLIB_FLAG = -L$(MPI_PATH)
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = 
+    MULTINODEFLAG = 
+    SINGLENODEFLAG = 
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for serial debug execution on Aidan's Linux box
+  ifeq (sale811_serial_debug,$(_ARCH))
+    MPI_PATH = $(SRCDIR)/STUBS
+    USRLIB = -lmpi -lg2c -lblas 
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DGNU_2_96 -DUSE_NODEFILES
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH)
+    USRLIB_FLAG = -L$(MPI_PATH)
+    CFLAGS = -g -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -g -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -g $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -g $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = valgrind --leak-check=yes --show-reachable=yes
+#    RUNGRASP = 
+    MULTINODEFLAG = 
+    SINGLENODEFLAG = 
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for profiling execution on Aidan's Linux box
+  ifeq (sale811_profile,$(_ARCH))
+    MPI_PATH = /home/local/mpich/mpich-1.2.5
+    USRLIB = -lmpich -lg2c -lblas 
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DGNU_2_96 
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include
+    USRLIB_FLAG = -L$(MPI_PATH)/lib
+    CFLAGS = -pg -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -pg -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -pg -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -pg -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = mpirun
+    MULTINODEFLAG = -np 2
+    SINGLENODEFLAG = -np 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe; \
+	gprof $(SRCDIR)/$(OBJDIR)/grasp.exe
+    RUNDIR = .
+  endif
+
+   # cjkimme's linux settings
+   ifeq (sonata,$(_ARCH))
+    MPI_PATH = /home/cjkimme/bin/mpi
+    USRLIB = 
+    USRLIB_REAX = -lg2c
+    C = $(MPI_PATH)/bin/mpicc
+    CPP = $(MPI_PATH)/bin/mpiCC
+    F77 = $(MPI_PATH)/bin/mpif77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include
+    USRLIB_FLAG = -L$(MPI_PATH)/lib
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = /home/cjkimme/bin/mpi/bin/mpirun 
+    MULTINODEFLAG = -np 2
+    SINGLENODEFLAG = -np 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+    RUNDIR = /home/cjkimme/Code/Grasp/Running
+  endif
+
+  # Options for Cygwin with mpich
+  ifeq (cygwin,$(_ARCH))
+    MPI_PATH = /cygdrive/c/Program\ Files/MPICH/SDK.gcc
+    USRLIB = -lmpich
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG)
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include
+    USRLIB_FLAG = -L$(MPI_PATH)/lib
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = mpirun 
+# -localonly forces mpirun to use shared-memory device,
+# which greatly improves communication performance on a single
+# machine.
+    MULTINODEFLAG = -localonly 2
+    SINGLENODEFLAG = -localonly 1
+# This form is needed to avoid upsetting NT
+    GRASPEXE = ../../$(notdir $(SRCDIR))/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for debugging Cygwin with mpich
+  ifeq (cygwin_debug,$(_ARCH))
+    MPI_PATH = /cygdrive/c/Program\ Files/MPICH/SDK.gcc
+    USRLIB = -lmpich
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG)
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include
+    USRLIB_FLAG = -L$(MPI_PATH)/lib
+    CFLAGS = -g -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -g -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -g $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -g $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = mpirun 
+# -localonly forces mpirun to use shared-memory device,
+# which greatly improves communication performance on a single
+# machine.
+    MULTINODEFLAG = -localonly 2
+    SINGLENODEFLAG = -localonly 1
+# This form is needed to avoid upsetting NT
+    GRASPEXE = ../../$(notdir $(SRCDIR))/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for serial execution under Cygwin
+  ifeq (cygwin_serial,$(_ARCH))
+    MPI_PATH = $(SRCDIR)/STUBS
+    USRLIB = -lmpi
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG)
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH)
+    USRLIB_FLAG = -L$(MPI_PATH)
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = 
+    MULTINODEFLAG =
+    SINGLENODEFLAG =
+# This form is needed to avoid upsetting NT
+    GRASPEXE = ../../$(notdir $(SRCDIR))/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for Cplant (ross)
+  ifeq (cplant,$(_ARCH))
+    MPI_PATH = /usr/local/cplant/ross/current
+    USRLIB = -lmpi -lcpml  
+    USRLIB_REAX = -lcxml -lUfor -lfor -lFutil
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -D__USE_STD_IOSTREAM 
+    C = $(MPI_PATH)/bin/cc
+    CPP = $(MPI_PATH)/bin/c++
+    F77 = $(MPI_PATH)/bin/f77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include
+    USRLIB_FLAG = -L$(MPI_PATH)/lib
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = /enfs/tmp/athomps/ross/Grasp_REAXFF/Testing
+    RUNGRASP = /cplant/bin/yod
+    MULTINODEFLAG = -sz 2
+    SINGLENODEFLAG = -sz 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+    SLEEP = sleep 30
+  endif
+
+  # Options for Cplant with debug options
+  ifeq (cplant_debug,$(_ARCH))
+    MPI_PATH = /usr/local/cplant/ross/current
+    USRLIB = -lmpi -lcpml  
+    USRLIB_REAX = -lcxml -lUfor -lfor -lFutil
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -D__USE_STD_IOSTREAM 
+    C = $(MPI_PATH)/bin/cc
+    CPP = $(MPI_PATH)/bin/c++
+    F77 = $(MPI_PATH)/bin/f77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include
+    USRLIB_FLAG = -L$(MPI_PATH)/lib
+    CFLAGS = -g -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -g -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -g $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -g $(USRLIB_FLAG)
+    TESTDIR = /enfs/tmp/athomps/ross/Grasp_REAXFF/Testing
+#    RUNGRASP = /cplant/bin/yod -bt
+    RUNGRASP = totalview /cplant/bin/yod -a
+    MULTINODEFLAG = -sz 2
+    SINGLENODEFLAG = -sz 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+    SLEEP = sleep 30
+  endif
+
+  # Options for Cplant (west)
+  ifeq (cplant_west,$(_ARCH))
+    MPI_PATH = /usr/local/cplant/west/current
+    USRLIB = -lmpi -lcpml  
+    USRLIB_REAX = -lcxml -lUfor -lfor -lFutil
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -D__USE_STD_IOSTREAM 
+    C = $(MPI_PATH)/bin/cc
+    CPP = $(MPI_PATH)/bin/c++
+    F77 = $(MPI_PATH)/bin/f77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include
+    USRLIB_FLAG = -L$(MPI_PATH)/lib
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = /enfs/tmp/athomps/Grasp/Testing
+    RUNGRASP = /cplant/bin/yod
+    MULTINODEFLAG = -sz 2
+    SINGLENODEFLAG = -sz 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+    SLEEP = sleep 30
+  endif
+
+  # Options for ICC liberty
+  ifeq (liberty,$(_ARCH))
+    MPI_PATH = /apps/mpich-intel-8.1
+    USRLIB =
+    USRLIB_REAX = 
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DUSE_NODEFILES
+    USRLIB_FLAG = -L/apps/intel/intel_fc_80/lib -lifcore -lifport \
+                  -L/apps/intel/mkl/lib/32 -lmkl_ia32 -lguide
+#	USRLIB = -lmkl_ia32 -lguide -lifcore
+#	USRLIB_FLAG = -L/apps/intel/mkl/lib/32 -L/apps/intel/intel_fc_80/lib
+    C = $(MPI_PATH)/bin/mpicc
+    CPP = $(MPI_PATH)/bin/mpiCC
+    F77 = $(MPI_PATH)/bin/mpif77
+    INCLUDE_FLAG = -I/apps/intel/mkl/include
+    CFLAGS = -O3 -tpp7 -xW -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O3 -tpp7 -xW -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O3 -tpp7 -xW $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O3 -tpp7 -xW $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+# PBS_O_WORKDIR needs to be reset to pwd.
+    RUNGRASP = setenv PBS_O_WORKDIR `pwd`;mpiexec
+    MULTINODEFLAG = -n 1
+    SINGLENODEFLAG = -n 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+# This setting is needed because mpiexec reverts pwd to $(SRCDIR)
+# The problem was fixed by resetting PBS_O_WORKDIR.
+#    RUNDIR = $(SRCDIR)
+  endif
+
+  # Options for debugging ICC liberty
+  ifeq (liberty_debug,$(_ARCH))
+    MPI_PATH =
+    USRLIB =
+    USRLIB_REAX = 
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) 
+    C = mpicc
+    CPP = mpiCC
+    F77 = mpif77
+    INCLUDE_FLAG =
+    USRLIB_FLAG = 
+    CFLAGS = -g -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -g -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -g $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -g $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = setenv PBS_O_WORKDIR `pwd`;mpiexec -tv 
+    MULTINODEFLAG = -n 2
+    SINGLENODEFLAG = -n 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+# This setting is needed because mpiexec reverts pwd to $(SRCDIR)
+#    RUNDIR = $(SRCDIR)
+  endif
+
+  # Options for NWCC spirit
+  ifeq (spirit,$(_ARCH))
+    MPI_PATH =
+    USRLIB =
+    USRLIB_REAX = -lsvml -lifport -lifcore -lm
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DUSE_NODEFILES
+    C = mpicc
+    CPP = mpiCC
+    F77 = mpif77
+    INCLUDE_FLAG =
+    USRLIB_FLAG = -L/apps/intel/fce_80/lib
+    CFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+# PBS_O_WORKDIR needs to be reset to pwd.
+    RUNGRASP = setenv PBS_O_WORKDIR `pwd`;mpiexec
+    MULTINODEFLAG = -n 2
+    SINGLENODEFLAG = -n 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+# This setting is needed because mpiexec reverts pwd to $(SRCDIR)
+# The problem was fixed by resetting PBS_O_WORKDIR.
+#    RUNDIR = $(SRCDIR)
+  endif
+
+  # Options for regular Linux box
+  ifeq (linux,$(_ARCH))
+    MPI_PATH = 
+    USRLIB = 
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG)  
+    C = mpicc
+    CPP = mpiCC
+    F77 = mpif77
+    INCLUDE_FLAG = 
+    USRLIB_FLAG = 
+    CFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = mpirun 
+    MULTINODEFLAG = -np 2
+    SINGLENODEFLAG = -np 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for Mike Heroux's software.sandia.gov
+  # Note, this uses /usr/bin/g++, which is GNU 2.96,
+  # because that is what the LAM/MPI library was compiled with.
+  # May need to switch to GNU 3.3 later. 
+  ifeq (software,$(_ARCH))
+    MPI_PATH =
+    USRLIB = -lmpi -llam -lutil
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DGNU_2_96 
+    C = /usr/bin/gcc
+    CPP = /usr/bin/g++
+    F77 = g77
+    INCLUDE_FLAG =
+    USRLIB_FLAG =
+    CFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = lamboot; mpirun
+    MULTINODEFLAG = -np 2
+    SINGLENODEFLAG = -np 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for serial execution on Apple OS X
+  ifeq (osx_serial,$(_ARCH))
+    MPI_PATH = $(SRCDIR)/STUBS
+    USRLIB = -lmpi -Wl,-framework -Wl,vecLib -lm
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DUSE_NODEFILES
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH) -I/System/Library/Frameworks/vecLib.Framework/Headers
+    USRLIB_FLAG = -L$(MPI_PATH) -L/sw/lib
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MMD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = 
+    MULTINODEFLAG = 
+    SINGLENODEFLAG = 
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for serial execution on Apple OS X
+  ifeq (osx_serial_debug,$(_ARCH))
+    MPI_PATH = $(SRCDIR)/STUBS
+    USRLIB = -lmpi -Wl,-framework -Wl,vecLib -lm
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG)  -DUSE_NODEFILES
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH) -I/System/Library/Frameworks/vecLib.Framework/Headers
+    USRLIB_FLAG = -L$(MPI_PATH) -L/sw/lib
+    CFLAGS = -g -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -g -MMD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -g $(PREPROC_FLAGS) $(INCLUDE_FLAG) -fbounds-check
+    OFLAG = -g $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = 
+    MULTINODEFLAG = 
+    SINGLENODEFLAG = 
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for execution on Apple OS X using LAM/MPI
+  ifeq (osx,$(_ARCH))
+    MPI_PATH = 
+#    USRLIB = -Wl,-framework -Wl,vecLib -lm
+    USRLIB = -Wl,-framework -Wl,vecLib
+    USRLIB_REAX = -lg2c
+#    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DNO_STDERR -DNO_FULLPATH -DNO_LOGFILE -DUSE_NODEFILES 
+#    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DNO_STDERR -DNO_LOGFILE -DNO_FULLPATH
+#    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DUSE_BLAS -DUSE_NODEFILES
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DUSE_BLAS -UUSE_NODEFILES
+    C = mpicc
+    CPP = mpic++
+    F77 = mpif77
+    INCLUDE_FLAG = -I/System/Library/Frameworks/vecLib.Framework/Headers
+    USRLIB_FLAG = -L/sw/lib
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MMD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = lamboot;mpirun
+    MULTINODEFLAG = -np 2
+    SINGLENODEFLAG = -np 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for profiled serial execution on Apple OS X using LAM/MPI
+  ifeq (osx_profile,$(_ARCH))
+    MPI_PATH = $(SRCDIR)/STUBS
+    USRLIB = -lmpi -Wl,-framework -Wl,vecLib -lm
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) 
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH) -I/System/Library/Frameworks/vecLib.Framework/Headers
+    USRLIB_FLAG = -L$(MPI_PATH) -L/sw/lib
+    CFLAGS = -O2 -pg -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -pg -MMD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -O2 -pg $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 -pg $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = 
+    MULTINODEFLAG = 
+    SINGLENODEFLAG = 
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe; \
+	gprof $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+
+  # Options for serial execution on Cray X1
+  ifeq (x1_serial,$(_ARCH))
+    MPI_PATH = $(SRCDIR)/STUBS
+    USRLIB = -lmpi
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG)  
+    C = cc
+    CPP = CC
+    F77 = f77
+    INCLUDE_FLAG = -I$(MPI_PATH)
+    USRLIB_FLAG = -L$(MPI_PATH)
+    CFLAGS = -h list=m -h new_for_init -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -h list=m -h new_for_init -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -h list=m -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = setenv PBS_O_WORKDIR `pwd`; aprun -n 1
+    MULTINODEFLAG = 
+    SINGLENODEFLAG = 
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+    POSTLINK = pat_build grasp.exe grasp_tmp.exe; mv -f grasp_tmp.exe grasp.exe
+  endif
+
+# Options for Blue Gene BGL IBM compilers
+  ifeq (bgl,$(_ARCH))
+    MPI_PATH =
+    USRLIB = -lmpich.rts -lmsglayer.rts -lrts.rts -ldevices.rts -lmassv
+    USRLIB_REAX = -lxlf90 -lxlopt -lxlomp_ser -lxl -lxlfmath -lm \
+              
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -D_IBM
+#    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DNO_STDERR -DNO_FULLPATH -DNO_LOGFILE -DUSE_NODEFILES
+    C = /opt/ibmcmp/vacpp/7.0/bin/blrts_xlc
+    CPP = /opt/ibmcmp/vacpp/7.0/bin/blrts_xlC
+    F77 = /opt/ibmcmp/xlf/9.1/bin/blrts_xlf
+    INCLUDE_FLAG = -I/bgl/BlueLight/ppcfloor/bglsys/include -I..
+    USRLIB_FLAG = -L/bgl/BlueLight/ppcfloor/bglsys/lib \
+                  -L/opt/ibmcmp/xlf/9.1/blrts_lib \
+                  -L/opt/ibmcmp/vacpp/7.0/blrts_lib \
+                  -L/bgl/local/lib
+    CFLAGS = $(PREPROC_FLAGS) $(INCLUDE_FLAG) -qmakedep \
+		-O3 -qhot -qarch=440 -qtune=440
+    CPPFLAGS = $(PREPROC_FLAGS) $(INCLUDE_FLAG) -qmakedep \
+                -O3 -qhot -qarch=440 -qtune=440 
+    FFLAGS = $(INCLUDE_FLAG) -WF,-D_IBM -WF,-qlanglvl=stdc89 \
+                -O3 -qhot -qarch=440 -qtune=440 -d 
+    OFLAG = $(USRLIB_FLAG) \
+                -O3 -qhot -qarch=440 -qtune=440
+    TESTDIR = $(SRCDIR)/../Testing
+# PBS_O_WORKDIR needs to be reset to pwd.
+    RUNGRASP = setenv PBS_O_WORKDIR `pwd`;mpiexec
+    MULTINODEFLAG = -n 2
+    SINGLENODEFLAG = -n 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+# This setting is needed because mpiexec reverts pwd to $(SRCDIR)
+# The problem was fixed by resetting PBS_O_WORKDIR.
+#    RUNDIR = $(SRCDIR)
+  endif
+
+  # Options for Blue Gene BGL Standard IBM Compile Script
+  ifeq (bgl_ibmscript,$(_ARCH))
+    MPI_PATH =
+    USRLIB =
+    USRLIB_REAX = 
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DNO_STDERR -DNO_FULLPATH -DNO_LOGFILE
+    C = mpxlc
+    CPP = mpxlC
+    INCLUDE_FLAG =
+    USRLIB_FLAG =
+    CFLAGS = $(PREPROC_FLAGS) $(INCLUDE_FLAG) -qmakedep
+    CPPFLAGS = $(PREPROC_FLAGS) $(INCLUDE_FLAG) -qmakedep
+    OFLAG = $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+# PBS_O_WORKDIR needs to be reset to pwd.
+    RUNGRASP = setenv PBS_O_WORKDIR `pwd`;mpiexec
+    MULTINODEFLAG = -n 2
+    SINGLENODEFLAG = -n 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+# This setting is needed because mpiexec reverts pwd to $(SRCDIR)
+# The problem was fixed by resetting PBS_O_WORKDIR.
+#    RUNDIR = $(SRCDIR)
+  endif
+
+  # Options for Blue Gene BGL Standard GNU Compile Script
+  ifeq (bgl_gnuscript,$(_ARCH))
+    MPI_PATH =
+    USRLIB =
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DNO_STDERR -DNO_FULLPATH -DNO_LOGFILE
+    C = mpgcc
+    CPP = mpg++
+    INCLUDE_FLAG =
+    USRLIB_FLAG =
+    CFLAGS = -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+# PBS_O_WORKDIR needs to be reset to pwd.
+    RUNGRASP = setenv PBS_O_WORKDIR `pwd`;mpiexec
+    MULTINODEFLAG = -n 2
+    SINGLENODEFLAG = -n 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+# This setting is needed because mpiexec reverts pwd to $(SRCDIR)
+# The problem was fixed by resetting PBS_O_WORKDIR.
+#    RUNDIR = $(SRCDIR)
+  endif
+
+# Options for parallel code compiled on CMDF (MSC/Caltech)
+# M.J. Buehler, mbuehler@wag.caltech.edu
+#
+  ifeq (cmdf,$(_ARCH))
+    MPI_PATH =  
+    USRLIB = -lg2c  
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS = $(REAX_PREPROC_FLAG) -DUSE_NODEFILES
+    C = mpicc
+    CPP = mpiCC
+    F77 = mpif77
+    INCLUDE_FLAG =
+    USRLIB_FLAG =
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG) 
+    FFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG) 
+    CPPFLAGS = -O2 -MD $(PREPROC_FLAGS) $(INCLUDE_FLAG) 
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP =
+    MULTINODEFLAG =
+    SINGLENODEFLAG =
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+# Options for Flash using LA-MPI
+# The compiler/gcc-3.2.2 and mpi/mpi-1.5.11 modules must be loaded.
+# The user may find it necessary to copy the LAPACK and BLAS libraries
+# to a subdirectory of $HOME (or to any other drive that is mounted 
+# on the slave nodes). As of 6-6-05, the slave nodes have the G2C library, 
+# but do not have LAPACK or BLAS.
+  ifeq (Flash,$(_ARCH))
+    MPI_PATH = /usr/lampi-1.5.11/gm
+    USRLIB = -lmpi -llapack -lblas
+    USRLIB_REAX = -lg2c
+    PREPROC_FLAGS =
+    C = gcc
+    CPP = g++
+    F77 = g77
+    INCLUDE_FLAG = -I$(MPI_PATH)/include \
+       	-I/usr/lib/gcc-lib/i386-redhat-linux/3.2.2/include/
+    USRLIB_FLAG = -L$(MPI_PATH)/lib \
+	-L/usr/lib/gcc-lib/i386-redhat-linux/3.2.2 -L/usr/lib -L/$HOME/lib
+    CFLAGS = -O2 -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    CPPFLAGS = -O2 -MD -DUSE_REAX $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    FFLAGS = -v -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+    OFLAG = -O2 $(USRLIB_FLAG)
+    TESTDIR = $(SRCDIR)/../Testing
+    RUNGRASP = mpirun
+    MULTINODEFLAG = -np 1
+    SINGLENODEFLAG = -np 1
+    GRASPEXE = $(SRCDIR)/$(OBJDIR)/grasp.exe
+  endif
+

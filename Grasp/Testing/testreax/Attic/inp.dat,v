@@ -1,0 +1,101 @@
+head	1.2;
+access;
+symbols
+	PreMonaco:1.2
+	BeforeREAXMerge:1.1
+	P_MonacoTesting:1.1.0.6
+	InitialGraspTesting:1.1
+	P_Monaco:1.1.0.4
+	InitialGrasp:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2005.04.02.00.06.54;	author athomps;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.12.17.15.57.22;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2004.12.22.22.59.07;	author athomps;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Trying to clean up testreax.
+@
+text
+@# twobody 4-particle input data
+# forcefield twobody 	twobody.in   Lennard-Jones
+forcefield reax         ReaxFF
+init config reax
+timestep 		1.0
+nsteps 			1
+# 
+# Currently, these dimensions must match the Reaxx
+# geo or fort.3 file.
+#
+box dimensions 		13.0	0.0	0.0	\
+			0.0	13.0	0.0	\
+			0.0	0.0	13.0
+#box origin 		0.0 		0.0 		0.0
+box origin 		39.0 		39.0 		39.0
+initialize temperature 	0.0 		256
+neighbor		bin 		25 		2.5
+thermo 			1
+dump particles 		10
+dump velocities 	10
+dump forces 		10
+dump restart            10
+
+
+
+
+@
+
+
+1.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added testreax example to REAXFF branch
+@
+text
+@d15 1
+a15 1
+box origin 		37.0 		37.0 		37.0
+@
+
+
+1.1.2.2
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@@
+
+

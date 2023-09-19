@@ -1,0 +1,509 @@
+head	2.5;
+access;
+symbols
+	PreMonaco:2.5
+	cjkimme_version:2.3.0.2;
+locks; strict;
+comment	@# @;
+
+
+2.5
+date	2004.02.12.00.13.00;	author athomps;	state dead;
+branches;
+next	2.4;
+
+2.4
+date	2004.02.06.20.19.12;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	2.3.2.1;
+next	2.2;
+
+2.2
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.12.01.21.04.48;	author athomps;	state Exp;
+branches;
+next	;
+
+2.3.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.5
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@#-----------------------------------------------------------------------
+#
+#   G R A S P
+#   ____________
+#   \           \
+#    \ General   \
+#     \ Reactive  \
+#      \ Atomistic \
+#       \ Simulation\
+#        \ Program   \
+#         \___________\
+#
+#    Timestamp: 8 January 2004
+#
+#    Author: Aidan P. Thompson
+#
+#    e-mail: athomps@@sandia.gov
+#   
+#    Copyright (2004) Sandia National Laboratories
+#   
+#    Sandia is a multiprogram laboratory operated by 
+#    Sandia Corporation, a Lockheed Martin company,
+#    for the United States Department of Energy under contract
+#    No. DE-AC04-94AL-85000.
+#
+#------------------------------------------------------------------------ 
+#///:EOH~
+
+SHELL = /bin/tcsh
+#
+# Makefile for Grasp code.
+#
+# To tar the distribution, type
+#
+#	tar -zcvf grasp_dist.tar.gz Makefile Depend.pl *.cpp *.h
+#
+SRC = force_eam.cpp constants.cpp controller.cpp input.cpp stepper.cpp box.cpp particletypelist.cpp particlelist.cpp forcefieldlist.cpp output.cpp input_string.cpp particle.cpp forcefield.cpp force_twobody.cpp force_threebody.cpp force_external.cpp fixed_object.cpp profile.cpp neighbor.cpp comm.cpp log.cpp minimizer.cpp fix_temp_rescale.cpp fix_none.cpp fixlist.cpp
+OBJ = $(SRC:.cpp=.o)
+SRC_MAIN = grasp_run.cpp
+OBJ_MAIN =  $(SRC_MAIN:.cpp=.o)
+
+#
+#	GNU Version
+#
+MPI_PATH = /cygdrive/c/Program\ Files/MPICH/SDK.gcc
+GRASPDIR = ~/codes/Grasp
+TESTDIR = $(GRASPDIR)/Testing
+SRCDIR = $(GRASPDIR)/Source
+
+
+USRLIB = -lmpich
+PREPROC_FLAGS = -UDEBUG_ALLOCATION -UDEBUG_TWOBODY -UDEBUG_THREEBODY
+C = gcc
+CPP = g++
+
+INCLUDE_PATH = $(MPI_PATH)/include
+INCLUDE_FLAG = -I$(INCLUDE_PATH)
+
+USRLIB_PATH = $(MPI_PATH)/lib
+USRLIB_FLAG = -L$(USRLIB_PATH)
+
+CFLAGS = -Xcpluscomm $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+
+#CPPFLAGS = -pg -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+#CPPFLAGS = -g $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+CPPFLAGS = -O2 $(PREPROC_FLAGS) $(INCLUDE_FLAG)
+
+#OFLAG = -pg -O2 
+#OFLAG = -g $(USRLIB_FLAG)
+OFLAG = -O2 $(USRLIB_FLAG)
+.SUFFIXES : .o .cpp .c
+# inference rule to get .o targets from .cpp prerequisites
+.cpp.o :
+	$(CPP) $(CPPFLAGS) -c $<
+# inference rule to get .o targets from .c prerequisites
+.c.o :
+	$(C) $(CFLAGS) -c $<
+
+# The target 'all' is updated if no other one is specified,
+# because it is first.
+# It links all executables.
+all: grasp.exe
+
+# Target rules for executables specify prerequisite objects
+# and linking command.
+
+grasp.exe: $(OBJ_MAIN) $(OBJ)
+	$(CPP) $(OFLAG) $(OBJ_MAIN) $(OBJ) $(USRLIB) -o grasp.exe  
+
+lib: $(OBJ)
+	ar -r libgrasp.a $(OBJ)
+
+# The targets 'test[all,a,b,c,..]' links all executables and runs them.
+CLEAN_TEST = 	echo '*** Cleaning test space ***'; \
+	if -e inp.dat rm inp.dat; \
+	if -e types.in rm types.in; \
+	if -e config.in rm config.in; \
+	if -e twobody.in rm twobody.in; \
+	if -e threebody.in rm threebody.in; \
+	if -e out.dat rm out.dat; \
+	if -e grasp.out rm grasp.out; \
+	if -e config.out rm config.out; \
+	if -e vel.out rm vel.out; \
+	if -e force.out rm force.out; \
+	if -e density_profile.out rm density_profile.out;  \
+	if -e nodefile_0000.out rm nodefile_0000.out; \
+	if -e nodefile_0001.out rm nodefile_0001.out; 
+testa: all
+	@@echo '*** Performing testa ***'; 
+	@@echo '*** Starting 4 atom run ***';
+	@@cd $(TESTDIR)/testa; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_4.in config.in; \
+	cp inp_4.dat inp.dat; \
+#	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -localonly -np 1 ../../Source/grasp.exe >& out.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -localroot -np 1 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_4.dat; \
+	cat out.dat; \
+	mv out.dat out_4.dat; \
+	mv config.out config_4.out; \
+	mv vel.out vel_4.out;
+	@@echo '*** Finishing 4 atom run ***'; 
+testb: all 
+	@@echo '*** Performing testb ***'; 
+	@@echo '*** Starting 1372 atom run ***';
+	@@cd $(TESTDIR)/testb; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_1372.in config.in; \
+	cp inp_1372.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_1372.dat; \
+	cat out.dat; \
+	mv out.dat out_1372.dat; \
+	mv config.out config_1372.out; \
+	mv vel.out vel_1372.out;
+	@@echo '*** Finishing 1372 atom run ***';
+testc: all 
+	@@echo '*** Performing testc ***'; 
+	@@echo '*** Starting 1372 atom minimg run ***';
+	@@cd $(TESTDIR)/testc; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp twobody_lj_cut_minimg.in twobody.in; \
+	cp config_1372.in config.in; \
+	cp inp_1372_minimg.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 1 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_1372_minimg.dat; \
+	cat out.dat; \
+	mv out.dat out_1372_minimg.dat; \
+	mv config.out config_1372_minimg.out; \
+	mv vel.out vel_1372_minimg.out;
+	@@echo '*** Finishing 1372 atom minimg run ***';
+testd: all 
+	@@echo '*** Performing testd ***'; 
+	@@echo '*** Starting 250 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(TESTDIR)/testd; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_250tet.in config.in; \
+	cp inp_250tet_threebody.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_250tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_250tet_sw_cut.dat; \
+	mv config.out config_250tet_sw_cut.out; \
+	mv vel.out vel_250tet_sw_cut.out;
+	@@echo '*** Finishing 250 atom tetrahedral Stillinger-Weber run ***';
+teste: all 
+	@@echo '*** Performing teste ***'; 
+	@@echo '*** Starting 54 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(TESTDIR)/teste; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_54tet_delta.in config.in; \
+	cp inp_54tet_threebody.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_54tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_54tet_sw_cut.dat; \
+	mv config.out config_54tet_sw_cut.out; \
+	mv vel.out vel_54tet_sw_cut.out;
+	@@echo '*** Finishing 54 atom tetrahedral Stillinger-Weber run ***';
+testf: all 
+	@@echo '*** Performing testf ***'; 
+	@@echo '*** Starting 128 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(TESTDIR)/testf; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_128tet_delta.in config.in; \
+	cp inp_128tet_threebody.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_128tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_128tet_sw_cut.dat; \
+	mv config.out config_128tet_sw_cut.out; \
+	mv vel.out vel_128tet_sw_cut.out;
+	@@echo '*** Finishing 128 atom tetrahedral Stillinger-Weber run ***';
+testg: all 
+	@@echo '*** Performing testg ***'; 
+	@@echo '*** Starting 4 atom lj93 wall run ***';
+	@@cd $(TESTDIR)/testg; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp external_lj93.in external.in; \
+	cp config_lj93.in config.in; \
+	cp inp_lj93.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_lj93.dat; \
+	cat out.dat; \
+	mv out.dat out_lj93.dat; \
+	mv config.out config_lj93.out; \
+	mv vel.out vel_lj93.out;
+	@@echo '*** Finishing 4 atom lj93 wall run ***';
+testh: all 
+	@@echo '*** Performing testh ***'; 
+	@@echo '*** Starting dft run ***';
+	@@cd $(TESTDIR)/testh; \
+	$(CLEAN_TEST); \
+	cp types_dft.in types.in; \
+	cp twobody_dft.in twobody.in; \
+	cp external_dft.in external.in; \
+	cp config_dft.in config.in; \
+	cp inp_dft.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_dft.dat; \
+	cat out.dat; \
+	mv out.dat out_dft.dat; \
+	mv config.out config_dft.out; \
+	mv vel.out vel_dft.out; \
+	mv density_profile.out density_dft.out;
+	@@echo '*** Finishing dft run ***';
+testi: all 
+	@@echo '*** Performing testi ***'; 
+	@@echo '*** Starting multinode relaxation run ***';
+	@@cd $(TESTDIR)/testi; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_relax.in config.in; \
+	cp inp_relax.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_relax.dat; \
+	cat out.dat; \
+	mv out.dat out_relax.dat; \
+	mv config.out config_relax.out; \
+	mv force.out force_relax.out;
+	@@echo '*** Finishing multinode relaxation run ***';
+testj: all 
+	@@echo '*** Performing testj ***'; 
+	@@echo '*** Starting 2 atom tetrahedral Stillinger-Weber run ***';
+	@@cd $(TESTDIR)/testj; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp threebody_sw_cut.in threebody.in; \
+	cp config_2tet.in config.in; \
+	cp inp_2tet_threebody.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_2tet_sw_cut.dat; \
+	cat out.dat; \
+	mv out.dat out_2tet_sw_cut.dat; \
+	mv config.out config_2tet_sw_cut.out; \
+	mv vel.out vel_2tet_sw_cut.out;
+	@@echo '*** Finishing 2 atom tetrahedral Stillinger-Weber run ***';
+testk: all 
+	@@echo '*** Performing testk ***'; 
+	@@echo '*** Starting fix run ***';
+	@@cd $(TESTDIR)/testk; \
+	$(CLEAN_TEST); \
+	cp types_fix.in types.in; \
+	cp twobody_fix.in twobody.in; \
+	cp config_fix.in config.in; \
+	cp inp_fix.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_fix.dat; \
+	cat out.dat; \
+	mv out.dat out_fix.dat; 
+	@@echo '*** Finishing fix run ***';
+testl: all
+	@@echo '*** Performing testl ***'; 
+	@@echo '*** Starting EAM run ***';
+	@@cd $(TESTDIR)/testl; \
+	$(CLEAN_TEST); \
+	cp types_nialhjea.in types.in; \
+	cp config_nialhjea.in config.in; \
+	cp inp_nialhjea.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_nialhjea.dat; \
+	cat out.dat; \
+	mv out.dat out_nialhjea.dat; \
+	mv config.out config_nialhjea.out; \
+	mv vel.out vel_nialhjea.out; \
+	mv force.out force_nialhjea.out;
+	@@echo '*** Finishing EAM run ***';
+testm: all
+	@@echo '*** Performing testm ***'; 
+	@@echo '*** Starting 4 atom NVT run ***';
+	@@cd $(TESTDIR)/testm; \
+	$(CLEAN_TEST); \
+	cp types_3.in types.in; \
+	cp twobody_lj_cut.in twobody.in; \
+	cp config_4.in config.in; \
+	cp inp_4.dat inp.dat; \
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+	cat grasp.out; \
+	mv grasp.out grasp_4.dat; \
+	cat out.dat; \
+	mv out.dat out_4.dat; \
+	mv config.out config_4.out; \
+	mv vel.out vel_4.out;
+	@@echo '*** Finishing 4 atom NVT run ***'; 
+testall: testa testb testc testd teste testf testg testh testi testj testk \
+	 testl testm
+
+# The target 'bugs' queries any bugs
+bugs: 
+	@@echo No compiler bugs in this directory!
+
+# The target 'clean' cleans out all objects and executables
+# 
+clean:
+	rm Makefile.depend
+	rm *.o
+	rm grasp.exe
+
+clean_test:
+	@@cd $(TESTDIR)/testa; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/testb; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/testc; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/testd; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/teste; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/testf; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/testg; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/testh; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/testi; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/testj; $(CLEAN_TEST);
+	@@cd $(TESTDIR)/testk; $(CLEAN_TEST);
+tar_source:
+	mkdir Grasp_tmp; \
+	cd Grasp_tmp; \
+	cvs checkout Grasp/Source; \
+	tar -zcvf Grasp_Source.tgz Grasp/Source/*; \
+	mv Grasp_Source.tgz .. ; \
+	cd .. ; \
+	\rm -r Grasp_tmp;
+tar_full:
+	mkdir Grasp_tmp; \
+	cd Grasp_tmp; \
+	cvs checkout Grasp; \
+	\rm -r Grasp/CVS; \
+	\rm -r Grasp/Documentation/CVS; \
+	\rm -r Grasp/Source/CVS; \
+	\rm -r Grasp/Testing/CVS; \
+	tar -zcvf Grasp.tgz Grasp/README Grasp/Source \
+	Grasp/Documentation/manual.txt Grasp/Testing; \
+	mv Grasp.tgz .. ; \
+	cd .. ; \
+	\rm -r Grasp_tmp;
+
+# Target rules for objects specify only prerequisites. The
+# inference rules are used to update objects. 
+# Note that inference rule creates object with same root
+# as first prerequisite file.
+#
+#This is all taken care of by perl script Depend.pl
+
+include Makefile.depend
+
+Makefile.depend:
+	Depend.pl $(SRC);cat Makefile.depend
+
+# Use this target if you just want to build Makefile.depend
+depend:
+	Depend.pl $(SRC);cat Makefile.depend
+
+
+
+@
+
+
+2.4
+log
+@fixed error in force_threebody.cpp
+@
+text
+@@
+
+
+2.3
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@d330 2
+a331 1
+testall: testa testb testc testd teste testf testg testh testi testj testk
+@
+
+
+2.3.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@@
+
+
+2.2
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d37 1
+a37 1
+SRC = constants.cpp controller.cpp input.cpp stepper.cpp box.cpp particletypelist.cpp particlelist.cpp forcefieldlist.cpp output.cpp input_string.cpp particle.cpp forcefield.cpp force_twobody.cpp force_threebody.cpp force_external.cpp fixed_object.cpp profile.cpp neighbor.cpp comm.cpp log.cpp minimizer.cpp fix_temp_rescale.cpp fix_none.cpp fixlist.cpp
+d117 2
+a118 1
+	/cygdrive/c/Program\ Files/MPICH/mpd/bin/mpirun -np 2 ../../Source/grasp.exe >& out.dat; \
+d296 34
+@
+
+
+2.1
+log
+@Added a variant of Makefile for Cygwin/NT environment, called Makefile.cygwin
+@
+text
+@d1 28
+@
+

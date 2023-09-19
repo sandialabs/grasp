@@ -1,0 +1,34 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2006.12.08.21.05.28;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Added a triclinic TATB example
+@
+text
+@# Specification of particle id's.
+#
+# Currently, these must be entered in the same order as
+# they appear in the ReaxFF ffield file
+#
+C    atom  12.0000
+H    atom   1.0080
+O    atom  15.9990
+N    atom  14.0000
+
+
+@

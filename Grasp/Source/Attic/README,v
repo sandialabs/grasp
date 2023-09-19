@@ -1,0 +1,83 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.11.04.00.27.09;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.11.04.00.24.35;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Added a README file
+@
+text
+@The GRASP source code and examples in this distribution
+can be compiled and run using the make command.
+This distribution contains two make files. 
+
+Makefile is the generic version, intended for Linux 
+workstations, Linux clusters and the like.  The 
+following variables are system specific:
+
+	MPI_PATH - The root directory for the MPI installation
+	GRASPDIR - The directory containing the directory Source
+
+Once these are set, you should be able to compile the
+binary grasp.exe by moving to the direcotry Source and typing
+
+	make all
+
+To run a test example, type 
+
+	make testa
+
+The results of the example will be written to Grasp/Testing/testa.
+
+
+Makefile.cplant is customized for use on Cplant.   The 
+following variables are user specific:
+
+	GRASPDIR - The directory containing the directory Source
+	ENFSDIR - The directory Testing on the enfs filesystem
+
+Once these are set, you should be able to compile the
+binary grasp.exe by moving to the directory Source and typing
+
+	make all
+
+To run a test example, first copy the directory Testing to
+the enfs filesystem, and make sure ENFSDIR in Makefile.cplant
+matches the new location.  Then go to the directory Source
+and type 
+
+	make testa
+
+The results of the example will be written to $(ENFSDIR)/testa.
+
+
+
+@
+
+
+2.1
+log
+@Created README file and update Makefile.cplant
+@
+text
+@@
+

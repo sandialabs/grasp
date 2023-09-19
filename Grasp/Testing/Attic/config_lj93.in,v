@@ -1,0 +1,68 @@
+head	2.1;
+access;
+symbols
+	PreMonaco:2.1;
+locks; strict;
+comment	@# @;
+
+
+2.1
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.03.20.28.04;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.1
+log
+@Moved examples into subdirectories.
+@
+text
+@# 4-particle fcc configuration, atom 1 perturbed.
+       1          A  11  0.1    0.10000000  0.00000000  0.00000000
+       2          B  12  0.2    1.00000000  1.00000000  0.00000000
+       3          A  13  0.3    1.00000000  0.00000000  1.00000000
+       4          B  14  0.4    0.00000000  1.00000000  1.00000000
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.1
+log
+@Implemented a new forcefield type: Class Force_External
+This is designed primarily for external force fields with
+simple geometric forms, such as the Lennard-Jones 9-3 wall,
+although it might also be used for a set of fixed atoms.
+
+Currently, the only types implemented are lj93_cut and lj93_cut_shift.
+These work for both arbitrary cut-off neighbor list and also
+within the minimum image convention (although this is not used
+by external force field with only truncated interactions.
+
+Periodic boundary conditions are applied in all directions.
+
+Initialization and output of velocities have also been added.
+@
+text
+@@
+

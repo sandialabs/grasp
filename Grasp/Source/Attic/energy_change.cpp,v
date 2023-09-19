@@ -1,0 +1,229 @@
+head	1.1;
+access;
+symbols
+	PreMonaco:1.1
+	P_MonacoSource:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2005.01.14.17.37.07;	author saubry;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.01.14.17.37.07;	author saubry;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file energy_change.cpp was initially added on branch P_MonacoSource.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Implementation of brute force energy change for Monte Carlo.
+Includes P_Monaco class which does nothing for now except calling energy change.
+Sylvie Aubry, Jan. 14 2005
+@
+text
+@a0 186
+
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+// Added saubry (01-13-05)
+// real energy change function not brute force.
+// To do later
+
+double MonteCarlo::Energy_Change(int atom,boost,ParticleList* q)
+{
+
+  ParticleList* p; // local to this routine.
+  energy = 0;
+  p = q;
+  p[atom]->x = q[atom]->x + boost; 
+
+  // Initialization
+  if (Lenergy) 
+    {
+      energy_piece[0] = 0.0;
+      energy_piece[1] = 0.0;
+    }
+
+  if (Lvirial) 
+    {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) 
+	{
+	  virial[ivirial] = 0.0;
+	}
+    }
+
+  // extend size of nlocal-dependent arrays if necessary,
+  // and initialize to zero;
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  ZeroArrays(nparticles+nghost_particles);
+
+
+// First, remove energy for atom which will be moved
+
+
+  // calculate rho
+  if (Lneighbor)  // neighbor list
+    {
+      for (int i=0;i<nparticles;i++) 
+	{
+	  i_pnt = p->get_particle(i);
+	  itype = type_index[i_pnt->get_type()]+1;
+	  i_pnt->get_x(xi);
+	  neighptr = neighbor->first_ptr[i];
+	  
+	  for (int ineigh=0;
+	       ineigh<neighbor->nneigh_list[i];ineigh++) 
+	    {
+	      j = neighptr[ineigh];
+	      j_pnt = p->get_particle(j);
+	      jtype = type_index[j_pnt->get_type()]+1;
+	      j_pnt->get_x(xj);
+	      
+	      rho_standard(xi,xj,rhoi,rhoj,itype,jtype);
+	      
+	      rho[i]+=rhoi;
+	      rho[j]+=rhoj;
+	    }
+	}
+    }
+  
+  comm->reverse_comm_double(rho);
+  
+  
+  // calculate f(rho)
+  for (int i=0;i<nparticles;i++) 
+    {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()]+1;
+      rhoi = rho[i];
+      
+      fp_standard(rhoi,fpi,Lenergy,energy_i,itype);
+      fp[i]+=fpi;
+      if (Lenergy) 
+	{
+	  energy_piece[0]+=energy_i;
+	}
+    }
+
+  comm->comm_double(fp);
+      
+  
+  // pair potential
+    if (Lneighbor) 
+	{
+	  
+	  for (int i=0;i<nparticles;i++) 
+	    {
+	      i_pnt = p->get_particle(i);
+	      itype = type_index[i_pnt->get_type()]+1;
+	      i_pnt->get_x(xi);
+	      neighptr = neighbor->first_ptr[i];
+	      fpi = fp[i];
+	      for (int ineigh=0;
+		   ineigh<neighbor->nneigh_list[i];ineigh++) 
+		{
+		  j = neighptr[ineigh];
+		  j_pnt = p->get_particle(j);
+		  jtype = type_index[j_pnt->get_type()]+1;
+		  j_pnt->get_x(xj);
+		  fpj = fp[j];
+		  
+		  force_standard(xi,xj,fpi,fpj,f,Lenergy,Lvirial,
+				 energy_ij,virial_ij,itype,jtype);
+		  i_pnt->increment_f(f);
+		  j_pnt->decrement_f(f);
+		  if (Lenergy) {
+		    energy_piece[1]+=energy_ij;
+		  }
+		  if (Lvirial) 
+		    {
+		      for (int ivirial=0;ivirial<nvirial;ivirial++) 
+			{
+			  virial[ivirial] += virial_ij[ivirial];
+			}
+		    }
+		}
+	      
+	    }
+	  
+	} 
+
+    if (Lenergy) 
+      {
+	vector<double> energy_piece_all(npieces);
+	MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		      MPI_SUM,comm->get_world());
+	energy_piece.swap(energy_piece_all);
+      }
+    
+    if (Lvirial) 
+      {
+	vector<double> virial_all(nvirial);
+	MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		      MPI_SUM,comm->get_world());
+	virial.swap(virial_all);
+      }
+
+
+  if (node == 0) 
+    for (int ipiece=0;ipiece<npieces;ipiece++) 
+      *energy += e_ff[ipiece];
+
+    
+
+
+// Second, add energy for atom moved
+
+
+
+
+}
+@
+

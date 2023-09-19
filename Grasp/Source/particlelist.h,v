@@ -1,0 +1,1726 @@
+head	4.18;
+access;
+symbols
+	ReverseComm_branch:4.5.0.4
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2.2.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.1
+	CRAY:2.22.0.2
+	cjkimme_version_merge_from_trunk_1:2.14.2.4
+	cjkimme_version:2.14.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.18
+date	2008.03.08.00.25.44;	author athomps;	state Exp;
+branches;
+next	4.17;
+
+4.17
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.16;
+
+4.16
+date	2007.11.15.21.31.40;	author athomps;	state Exp;
+branches;
+next	4.15;
+
+4.15
+date	2007.10.15.20.52.10;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.05.15.19.30.48;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2007.03.31.01.06.13;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.03.16.06.18.30;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.03.15.22.01.01;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.02.02.21.14.47;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.10.11.01.40.34;	author athomps;	state Exp;
+branches
+	4.5.4.1;
+next	4.4;
+
+4.4
+date	2005.07.29.22.05.23;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches
+	3.2.2.1
+	3.2.6.1;
+next	3.1;
+
+3.1
+date	2004.10.19.21.01.03;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.22;
+
+2.22
+date	2004.08.27.20.05.36;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.07.21.17.46.50;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.05.20.22.11.34;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.03.20.00.15.39;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.02.13.18.04.42;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.14.2.1;
+next	2.13;
+
+2.13
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2003.11.03.23.52.04;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2003.10.31.20.20.44;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.23.23.33.34;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.23.16.01.59;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+2.14.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.2;
+
+2.14.2.2
+date	2004.05.14.16.12.58;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.3;
+
+2.14.2.3
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.4;
+
+2.14.2.4
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.5;
+
+2.14.2.5
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.2.6.2;
+
+3.2.6.2
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2005.11.01.21.17.20;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.4;
+
+4.3.2.1.2.4
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.5;
+
+4.3.2.1.2.5
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	;
+
+4.5.4.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.18
+log
+@Added color assignment for velocity add command
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef PARTICLE_LIST_H
+#define PARTICLE_LIST_H
+
+#include <map>
+#include <valarray>
+
+class ParticleList
+{
+  // Performance debugging only
+  friend class Force_Twobody;
+ public:
+  // enum class for initialization styles
+  enum InitConfigStyles {init_config_read,init_config_density,
+			 init_config_restart,init_config_reax};
+  enum InitVelocityStyles {init_velocity_temperature,init_velocity_read,
+			   init_velocity_restart,init_velocity_none};
+  enum ConstrainedParticleStyles{none,by_type,by_id,by_region,by_color};
+ private:
+  //list of all particles (including ghosts)
+  vector<Particle> particles;
+  //number of local particles, ghost particles, total particles (in box). 
+  int nparticles,nghost_particles,nparticles_tot;
+  double mass_tot;
+  InitConfigStyles init_config_style;
+  InitVelocityStyles init_velocity_style;
+  ConstrainedParticleStyles fixed_particle_style, minimized_particle_style;
+  map<int,string> fixedType, minimizedType;
+  vector <int> fixedColor;
+  int nfixed, nminimized;
+  bool Lwithinbox,Ltemperatureuptodate;
+  // This is a global list containing index for local and ghost particles
+  vector<int> localptr;
+  // This is a global list containing the user tag
+  vector<int> usertag;
+  // As the person who wrote stl_alloc.h said,
+  // "Really we should use static const int x = N
+  // instead of enum { x = N }, but few compilers accept the former."
+  enum {size_comm = 3, size_reverse = 10, size_border = 6, size_exchange = 20};
+  enum {nvirial = 6};
+  double e_kinetic,temperature,e_cohesive;
+  int ndof;
+  double temp_init;
+  int temp_iseed;
+  int init_config_iaxis,init_config_nbins;
+  vector<double> kv;
+  bool Lkvuptodate;
+  string initial_velocity_file, initial_atom_file, initial_disp_file;
+  double disp_amp, vel_amp;
+  bool scale_disps, initial_atom_file_has_energies;
+  bool Lreadshift;
+  bool Lwritetimestep,Lwritebox;
+  bool Lreadtimestep,Lreadbox;
+  double vel_init_add[3];
+  int vel_init_add_color;
+
+ public:
+  ParticleList();
+  ~ParticleList();
+  void ResetGhosts();
+  void Setup(Box*, ParticleTypeList*, Output*, Stepper*, 
+	     ForceFieldList*, Comm*) ;
+  // Add using copy constructor
+  void AddParticle(const Particle&);
+  // Add using type, tag, color, position, ref position, mass, ishift, [, charge, phi] constructor 
+  void AddParticle(const int&, const int&, 
+		   const int&, const double[],
+		   const double[], const double&, const int[], const double& = 0.0, const double& = 0.0);
+  // Add using type, tag, color, position, mass, charge, 
+  // velocity constructor 
+  void AddParticle(const int&, const int&, 
+		   const int&, const double[],  
+		   const double[], const double&, const double&, 
+		   const double[], const int[], const double& = 0., const bool& = false, const bool& = false);
+  // Add using type, position, charge.
+  void AddGhostParticle(const int&, const int&, const double[], const double&);
+  void RemoveParticle(const int&);
+  void RemoveGhostParticle(const int&);
+  void ReadConfig(const Box*, const ParticleTypeList*, Comm*);
+  void ReadDensity(const Box*, const ParticleTypeList*, Comm*);
+  void ReadReax(const Box*, const ParticleTypeList*, Comm*);
+  int get_nparticles() const;
+  int get_nghost_particles() const;
+  int get_nparticles_tot() const;
+  int get_nminimized() const;
+  int get_nfixed() const;
+  void AddCapacity(const int&);
+  void StepVelocity(const double&);
+  void ScaleVelocity(const double&);
+  void ScaleVelocity(const Box*, const double[]);
+  void ScaleVelocity(const Box*, const double[3][3]);
+  void StepPosition(const double&);
+  void StepPositionForce(const double&,const bool*, bool&, double&, const double=0.0);
+  void ResetPosition(const Box*, const bool&);
+  void TranslateByType(const int& type, const valarray<double>& dR); 
+  void ConjugateGradientUpdate(const double R[]);
+  void SumForceByType(const int& type, valarray<double>& force, Comm* comm);
+  void ScalePosition(const Box*, const double[]);
+  void ScaledDeform(const Box*, const double[3][3]);
+  void ScaleMinimized(const Box*, const double[]);
+  void ComputeTemperature(Comm*);
+  // This returns temperature for a single particle type
+  double ComputeTemperatureColor(const int&, Comm*);
+  void RescaleTemperatureColor(const int&, const double&, const double&);
+  double ComputeTemperatureSlab(const int&, const double&, const double&, Comm*);
+  void RescaleTemperatureSlab(const int&, const double&, const double&, const double&, const double&);
+  void ComputeKineticVirial(Comm* comm);
+  double ComputeAlphaType(const int&, Comm*);
+  void ComputeNDoFreedom(Comm*);
+  void SetupVelocity(Comm*);
+  void ZeroMomentum(Comm*);
+  void SumMomentum(Comm*, double[3]);
+  void RescaleTemperature(const double&, const double&);
+  void ZeroForce();
+  void SaveGradient(valarray<double>&);
+  void SaveMinimized(valarray<double>&);
+  void MoveMinimized(valarray<double>&);
+  void SavePositionCharge(valarray<double>&);
+  void RestorePositionCharge(valarray<double>&);
+  void ComputeFreq(Comm*);
+  double get_kinetic_energy() const;
+  double get_kinetic_virial() const;
+  void get_kinetic_virial(vector <double>&) const;
+  double get_temperature() const;
+  double get_cohesive_energy() const;
+  int get_ndof() const;
+  const Particle* get_particles() const;
+  Particle* get_particle(const int&);
+  // Pack up list of positions into buf, 
+  // applying pbc shifts if indicated 
+  void pack_comm(const int& num, const vector<int>& list, 
+		 double* buf, const int pbc[], const Box* b) const;
+  // Extract list of positions from buf and assign to consecutive
+  // ghost particles starting with ifirst
+  void unpack_comm(const int& num, const int& ifirst, const double* buf); 
+  // Pack up consecutive list ghost particle forces into buf, 
+  // starting with ifirst
+  void pack_reverse(const int& num, const int& ifirst, double* buf) const; 
+  // Extract list of forces from buf and add to particles
+  void unpack_reverse(const int& num, const vector<int>& list, 
+		      const double* buf);
+  // Add all necessary info for exchange particle i to buf,
+  // and return number of elements of buf used
+  int pack_exchange(const int& i, double* buf) const;
+  // Unpack all necessary info for exchanged particle from buf,
+  // and return number of elements of buf used.
+  int unpack_exchange(const double* buf); 
+  // Return number of elements of buf used for exchange particle,
+  // but do not unpack.
+  int skip_exchange(const double* buf) const;
+  // Add all necessary info for particle i to buf,
+  // and return number of elements of buf used,
+  // applying pbc shifts if indicated 
+  int pack_border(const int& i, double* buf, const int pbc[],
+		  const Box* b) const; 
+  // Unpack all necessary info for particle from buf into
+  // particle array, and return number of elements of buf used.
+  int unpack_border(const double* buf); 
+  int get_size_comm() const;
+  int get_size_reverse() const;
+  int get_size_border() const;
+  // Clear the localptr array
+  void localptr_clear();
+  // Setup the localptr array
+  void localptr_set();
+  // Input commands
+  void input_initialize_temperature(const string&);
+  void input_init_config(const string&);
+  void input_init_velocity(const string&);
+  void input_read_atoms(const string&);
+  void input_read_velocities(const string&);
+  void input_read_displacements(const string&);
+  void input_read_ref_config(const string&);
+  void input_scale_displacements(const string&);
+  void input_velocity_factor(const string&);
+  void input_velocity_add(const string& buf);
+  void input_cohesive_energy(const string&);
+  void input_fixed_particles(const string&);
+  void input_minimized_particles(const string&);
+  void ZeroRhoEam();
+  void ZeroFpEam();
+  // Pack up list of embedding functions into buf, 
+  void pack_embed(const int& num, const vector<int>& list, 
+		 double* buf) const;
+  // Extract list of embeddding functions from buf and 
+  // assign to consecutive ghost particles starting with ifirst
+  void unpack_embed(const int& num, const int& ifirst, const double* buf); 
+  // Pack up consecutive list ghost particle densities into buf, 
+  // starting with ifirst
+  void pack_reverse_rho(const int& num, const int& ifirst, double* buf) const; 
+  // Extract list of densities from buf and add to particles
+  void unpack_reverse_rho(const int& num, const vector<int>& list, 
+		      const double* buf);
+  int get_usertag(const int&);
+  int get_localptr(const int&);
+  void ReadRestart(Box*, const ParticleTypeList*, Output*, Stepper*, 
+		   ForceFieldList*, Comm*);
+  void OutputRestart(const Box*, int, Stepper*, Comm*);
+  void input_read_shift(const string& buf);
+  void input_read_timestep(const string& buf);
+  void input_write_timestep(const string& buf);
+  void input_read_box(const string& buf);
+  void input_write_box(const string& buf);
+  void ApplyBoundaryConditions(const Box*);
+  void Remap(const Box*, Comm*);
+};
+#endif
+@
+
+
+4.17
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@d99 1
+@
+
+
+4.16
+log
+@Added 'output sum momentum' command
+@
+text
+@d104 2
+a105 1
+  void Setup(Box*, ParticleTypeList*, Output*, Comm*) ;
+d239 3
+a241 2
+  void ReadRestart(Box*, const ParticleTypeList*, Output*, Comm*);
+  void OutputRestart(const Box*, int, Comm*);
+@
+
+
+4.15
+log
+@Improved stability of steepest descent minimizer
+@
+text
+@d154 1
+@
+
+
+4.14
+log
+@Added nose-hoover-full version of pressure control to allow fully flexible fluctuations in box dimensions
+@
+text
+@d135 1
+a135 1
+  void StepPositionForce(const double&,const bool*, bool&, const double=0.0);
+d159 2
+@
+
+
+4.13
+log
+@Modifed fix deformation to correctly remap vectors
+@
+text
+@d133 1
+@
+
+
+4.12
+log
+@Added commands to carry box dimensions in restart file and to output stress tensor
+@
+text
+@d242 1
+@
+
+
+4.11
+log
+@Fixed some FORTRAN lapses and changed dump timestep to write timestep
+@
+text
+@d96 2
+a97 2
+  bool Lwritetimestep;
+  bool Lreadtimestep;
+d234 2
+a235 2
+  void ReadRestart(const Box*, const ParticleTypeList*, Output*, Comm*);
+  void OutputRestart(int, Comm*);
+d239 2
+@
+
+
+4.10
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@d96 1
+a96 1
+  bool Ldumptimestep;
+d238 1
+a238 1
+  void input_dump_timestep(const string& buf);
+@
+
+
+4.9
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d140 1
+@
+
+
+4.8
+log
+@Fixed up some more things related to image shift values
+@
+text
+@d98 2
+d144 3
+a152 1
+  void RescaleTemperatureColor(const int&, const double&, const double&);
+d213 1
+d238 1
+@
+
+
+4.7
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d83 1
+a83 1
+  enum {size_comm = 3, size_reverse = 10, size_border = 6};
+@
+
+
+4.6
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d95 3
+d102 1
+a102 1
+  void Setup(Box*, ParticleTypeList*, Comm*) ;
+d105 1
+a105 1
+  // Add using type, tag, color, position, ref position, mass [, charge, phi] constructor 
+d108 1
+a108 1
+		   const double[], const double&, const double& = 0.0, const double& = 0.0);
+d114 1
+a114 1
+		   const double[], const double& = 0., const bool& = false, const bool& = false);
+d228 5
+a232 2
+  void ReadRestart(const Box*, const ParticleTypeList*, Comm*);
+  void OutputRestart(Comm*);
+@
+
+
+4.5
+log
+@Added some new barostats and thermostats.
+@
+text
+@d83 1
+a83 1
+  enum {size_comm = 3, size_reverse = 4, size_border = 6};
+@
+
+
+4.5.4.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@d83 1
+a83 1
+  enum {size_comm = 3, size_reverse = 10, size_border = 6};
+@
+
+
+4.4
+log
+@Added a 'fixed particles color' command.
+@
+text
+@d127 1
+a127 1
+  void ScaleVelocity(const double[]);
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d62 1
+a62 1
+  enum ConstrainedParticleStyles{none,by_type,by_id,by_region};
+d73 1
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a114 1
+  void ModifyParticle(int *, vector <double>);
+@
+
+
+4.3.2.1.2.1
+log
+@Correct several bugs
+@
+text
+@d63 1
+a63 3
+ 
+
+  public: // TEMPORARY (saubry 09-30-05)
+a65 2
+
+ private:
+d115 1
+a115 1
+  void ModifyParticle(int *, double *);
+@
+
+
+4.3.2.1.2.2
+log
+@Correct a few things.
+@
+text
+@d65 1
+a65 2
+  //public: // TEMPORARY (saubry 09-30-05)
+ private:
+a99 2
+  // copy constructor (added saubry 10-12-05)
+  ParticleList(const ParticleList&);
+a114 1
+  void ModifyParticle(int *, double *);
+d119 1
+a230 1
+
+@
+
+
+4.3.2.1.2.3
+log
+@Add a pointer to particle instead of an array of particle.
+
+Bug in particles coordinates.
+@
+text
+@d64 2
+@
+
+
+4.3.2.1.2.4
+log
+@Bin Communication fixed
+@
+text
+@d118 1
+a118 1
+  int AddGhostParticle(const int&, const int&, const double[], const double&);
+a163 1
+  const Particle* get_particle_readonly(const int&) const;
+d228 2
+a229 2
+  int get_usertag(const int&) const;
+  int get_localptr(const int&) const;
+@
+
+
+4.3.2.1.2.5
+log
+@Added EAM energy change calculation
+@
+text
+@a96 2
+  int size_comm_mc,size_reverse_mc;
+  bool Lrho_eam;
+d109 1
+a109 2
+		   const double[], const double&, const double& = 0.0, 
+		   const double& = 0.0, const double& = 0.0);
+d115 1
+a115 2
+		   const double[], const double& = 0.0, const double& = 0.0, 
+		   const bool& = false, const bool& = false);
+d118 1
+a118 2
+  int AddGhostParticle(const int&, const int&, const double[], const double&, 
+		       const double& = 0.0);
+a194 15
+  // Pack up list of particle data needed by Monte Carlo, 
+  // applying pbc shifts if indicated 
+  void pack_comm_mc(const int& num, const vector<int>& list, 
+		 double* buf, const int pbc[], const Box* b) const;
+  // Extract data for one particle needed by Monte Carlo.
+  // It returns index of newly created ghost particle
+  int unpack_comm_mc(const double* buf); 
+  // Pack up particle list of ghost particle data needed by Monte Carlo
+  void pack_reverse_mc(const int&, const vector<int>&, double*) const;
+  // Extract list of particle data needed by Monte Carlo.
+  // applying pbc shifts if indicated 
+  void unpack_reverse_mc(const int&, const vector<int>&, 
+		      double*, const int[], const Box*); 
+  int get_size_comm_mc() const;
+  int get_size_reverse_mc() const;
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d59 1
+a59 1
+			 init_config_restart};
+a111 4
+
+  // added saubry (01-13-05)
+  void ModifyParticle(int *, vector <double>);
+
+d117 1
+a194 1
+  int nint(const double& r) const;
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d43 1
+a43 1
+			 init_config_restart,init_config_reax};
+d96 4
+a104 1
+  void ReadReax(const Box*, const ParticleTypeList*, Comm*);
+d182 1
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d43 1
+a43 1
+			 init_config_restart};
+d101 1
+a178 1
+  int nint(const double& r) const;
+@
+
+
+3.2.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a95 6
+
+
+// added saubry (01-13-05)
+  void ModifyParticle(int *, vector <double>);
+
+
+@
+
+
+3.2.6.2
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d97 2
+a98 1
+  // added saubry (01-13-05)
+d101 1
+@
+
+
+3.2.2.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@d43 1
+a43 1
+			 init_config_restart,init_config_reax};
+a100 1
+  void ReadReax(const Box*, const ParticleTypeList*, Comm*);
+@
+
+
+3.2.2.2
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@d179 1
+@
+
+
+3.1
+log
+@Added ability to read velocities from the config.in file
+and write velocities to the config.out and cfg.out files.
+@
+text
+@d33 3
+d46 1
+d55 3
+d66 1
+a66 1
+  enum {size_comm = 3, size_reverse = 3, size_border = 6};
+d68 1
+a68 1
+  double e_kinetic,temperature;
+d75 3
+d85 1
+a85 1
+  // Add using type, tag, color, position, mass [,charge] constructor 
+d87 2
+a88 2
+		   const int&, 
+		   const double[], const double&, const double& = 0.0);
+d92 1
+a92 1
+		   const int&, 
+d94 1
+a94 1
+		   const double[]);
+d104 2
+d113 3
+d117 1
+d122 1
+d129 4
+d137 1
+d183 23
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d41 2
+a42 1
+  enum InitVelocityStyles {init_velocity_normal,init_velocity_none};
+d107 1
+a107 1
+  void SetupVelocities(Comm*);
+d160 1
+@
+
+
+2.22
+log
+@Eliminated troublesome use of inline static const initializations
+to define compile-time integer constants. Replaced with enumeration constants.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.21
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d54 5
+a58 1
+  const static int size_comm = 3, size_reverse = 3, size_border = 6;
+a63 1
+  static const int nvirial=6;
+@
+
+
+2.20
+log
+@Updated header
+@
+text
+@d94 1
+a94 1
+  void StepPositionForce(const double&,const bool*, bool, const double=0.0);
+@
+
+
+2.19
+log
+@Added anisotropic style to pressure control,
+and included in Tersoff example testp.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.18
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d60 3
+d92 1
+d100 1
+d109 1
+@
+
+
+2.17
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d92 1
+d103 1
+@
+
+
+2.16
+log
+@Various
+@
+text
+@d34 2
+a56 2
+  vector<double> fp_eam;
+  vector<double> rho_eam;
+a146 14
+  void ZeroRhoEam();
+  void ZeroFpEam();
+  // Pack up list of embedding functions into buf, 
+  void pack_embed(const int& num, const vector<int>& list, 
+		 double* buf) const;
+  // Extract list of embeddding functions from buf and 
+  // assign to consecutive ghost particles starting with ifirst
+  void unpack_embed(const int& num, const int& ifirst, const double* buf); 
+  // Pack up consecutive list ghost particle densities into buf, 
+  // starting with ifirst
+  void pack_reverse_rho(const int& num, const int& ifirst, double* buf) const; 
+  // Extract list of densities from buf and add to particles
+  void unpack_reverse_rho(const int& num, const vector<int>& list, 
+		      const double* buf);
+@
+
+
+2.15
+log
+@Removed frequency junk from ParticleList and added cplant_debug
+and cplant_west _ARCH options
+@
+text
+@d36 3
+a38 1
+  enum InitConfigStyles {init_config_read,init_config_density};
+d46 1
+d163 2
+@
+
+
+2.14
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@a51 1
+  vector<double> fsave;
+a97 2
+  void SaveForce();
+  void ComputeFreq(Comm*);
+@
+
+
+2.14.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a57 1
+  string initial_velocity_file, initial_atom_file;
+a146 2
+  void input_read_atoms(const string&);
+  void input_read_velocities(const string&);
+@
+
+
+2.14.2.2
+log
+@Keeping track of displacements for each particle.
+@
+text
+@d58 1
+a58 3
+  string initial_velocity_file, initial_atom_file, initial_disp_file;
+  double disp_amp;
+  bool scale_disps;
+d66 1
+a66 1
+  // Add using type, tag, color, position, ref position, mass [,charge] constructor 
+d68 1
+a68 1
+		   const int&, const double[],
+d73 1
+a73 1
+		   const int&, const double[],  
+a149 2
+  void input_read_displacements(const string&);
+  void input_scale_displacements(const string&);
+@
+
+
+2.14.2.3
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a31 3
+#include <map>
+#include <valarray>
+
+a36 1
+  enum ConstrainedParticleStyles {none,by_type,by_id,by_region};
+a43 3
+  ConstrainedParticleStyles fixed_particle_style, minimized_particle_style;
+  map<int,string> fixedType, minimizedType;
+  int nfixed, nminimized;
+d49 2
+a50 2
+  const static int size_comm = 3, size_reverse = 4, size_border = 6;
+  double e_kinetic,temperature,e_cohesive;
+d59 2
+a60 2
+  double disp_amp, vel_amp;
+  bool scale_disps, initial_atom_file_has_energies;
+d68 1
+a68 1
+  // Add using type, tag, color, position, ref position, mass [, charge, phi] constructor 
+d71 1
+a71 1
+		   const double[], const double&, const double& = 0.0, const double& = 0.0);
+d77 1
+a77 1
+		   const double[], const double& = 0., const bool& = false, const bool& = false);
+a86 2
+  int get_nminimized() const;
+  int get_nfixed() const;
+a92 3
+  void TranslateByType(const int& type, const valarray<double>& dR); 
+  void ConjugateGradientUpdate(const double R[]);
+  void SumForceByType(const int& type, valarray<double>& force, Comm* comm);
+a95 1
+  double ComputeAlphaType(const int&, Comm*);
+a102 3
+  void SaveGradient(valarray<double>&);
+  void SaveMinimized(valarray<double>&);
+  void MoveMinimized(valarray<double>&);
+a105 1
+  double get_cohesive_energy() const;
+a152 1
+  void input_read_ref_config(const string&);
+a153 4
+  void input_velocity_factor(const string&);
+  void input_cohesive_energy(const string&);
+  void input_fixed_particles(const string&);
+  void input_minimized_particles(const string&);
+@
+
+
+2.14.2.4
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a36 2
+  // Performance debugging only
+  friend class Force_Twobody;
+d39 2
+a40 4
+  enum InitConfigStyles {init_config_read,init_config_density,
+			 init_config_restart};
+  enum InitVelocityStyles {init_velocity_normal,init_velocity_none};
+  enum ConstrainedParticleStyles{none,by_type,by_id,by_region};
+a50 1
+  InitVelocityStyles init_velocity_style;
+d56 1
+a56 5
+  // As the person who wrote stl_alloc.h said,
+  // "Really we should use static const int x = N
+  // instead of enum { x = N }, but few compilers accept the former."
+  enum {size_comm = 3, size_reverse = 3, size_border = 6};
+  enum {nvirial = 6};
+d59 3
+a67 2
+  vector<double> kv;
+  bool Lkvuptodate;
+a98 1
+  void ScaleVelocity(const double[]);
+d100 1
+a100 1
+  void StepPositionForce(const double&,const bool*, bool&, const double=0.0);
+a104 1
+  void ScalePosition(const Box*, const double[]);
+a108 1
+  void ComputeKineticVirial(Comm* comm);
+d115 1
+a120 2
+  double get_kinetic_virial() const;
+  void get_kinetic_virial(vector <double>&) const;
+a191 2
+  void ReadRestart(const Box*, const ParticleTypeList*, Comm*);
+  void OutputRestart(Comm*);
+@
+
+
+2.14.2.5
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d64 1
+a64 1
+  enum {size_comm = 3, size_reverse = 4, size_border = 6};
+a114 1
+  void ScaleMinimized(const Box*, const double[]);
+@
+
+
+2.13
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d45 1
+d47 2
+a48 4
+  // I believe this is correct
+  // Comm requires the x,y,z  coords
+  // Reverse requires the x,y,x forces
+  // Border requires x,y,z coords, type, tag, and charge (may add more later).
+d53 2
+d147 16
+@
+
+
+2.12
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.11
+log
+@Pushed examples down into subdirectories.
+@
+text
+@d7 2
+d15 1
+d25 4
+d33 1
+a33 1
+  void Setup(const Input*, Box*, ParticleTypeList*, Comm*) ;
+d51 1
+d59 1
+a59 1
+  void StepPositionForce(const double&,const bool*);
+d65 1
+a65 1
+  void SetupVelocities(const double&, const int&, Comm*);
+d69 3
+a71 1
+  void ZeroForces();
+d115 3
+@
+
+
+2.10
+log
+@Removed Thermo class
+@
+text
+@d55 1
+a55 1
+  double ComputeTemperatureType(const int&, Comm*);
+d60 1
+a60 1
+  void RescaleTemperatureType(const int&, const double&, const double&);
+@
+
+
+2.9
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@d26 1
+a26 1
+  void Setup(const Input*, Box*, ParticleTypeList*, Thermo*, Comm*) ;
+d54 2
+d60 1
+@
+
+
+2.8
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d13 1
+a13 1
+  bool Lwithinbox,Ltemperatureuptodate;;
+@
+
+
+2.7
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d21 1
+d49 1
+d54 1
+d61 1
+@
+
+
+2.6
+log
+@Fixed up the output log immensely.  Fixed some bugs in the
+rescale thermostat.
+@
+text
+@a12 1
+  double boltz;
+@
+
+
+2.5
+log
+@Redoing temperature functions. Not finished yet.
+@
+text
+@d12 1
+d14 1
+a14 1
+  bool Lwithin;
+d52 1
+a52 1
+  double ComputeTemperature(Comm*);
+@
+
+
+2.4
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d20 1
+d51 3
+a53 3
+  void ComputeTemperature(double&, double&) ;
+  void SetupVelocities(const double&, const int&);
+  void ZeroMomentum();
+d56 2
+@
+
+
+2.3
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@d10 2
+a11 2
+  //number of local particles, number of ghost particles
+  int nparticles,nghost_particles;
+d44 1
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d8 3
+a10 1
+  vector<Particle> particles,ghost_particles;
+d40 1
+a54 1
+  const Particle* get_ghost_particles() const;
+a55 1
+  Particle* get_ghost_particle(const int&);
+a59 3
+  // Ditto for ghost particles
+  void pack_comm_ghost(const int& num, const int* list, 
+		 double* buf, const int pbc[], const Box* b) const;
+a68 3
+  // Ditto for ghost particles
+  void unpack_reverse_ghost(const int& num, const int* list, 
+		      const double* buf);
+a82 3
+  // Ditto for ghost particles
+  int pack_border_ghost(const int& i, double* buf, const int pbc[],
+		  const Box* b) const; 
+d84 1
+a84 2
+  // ghost particle array,
+  // and return number of elements of buf used.
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d44 1
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d8 2
+a9 2
+  vector<Particle> particles;
+  int nparticles;
+d12 6
+d21 2
+a22 1
+  void Setup(const Input*, Box*, ParticleTypeList*, Thermo*) ;
+d25 1
+a25 1
+  // Add using type, tag, id, color, position [and charge] constructor 
+d27 10
+a36 2
+		   const string&, const int&, 
+		   const double[], const double& = 0.0);
+d38 1
+a38 1
+  void ReadConfig();
+d40 1
+a43 1
+  void SetupTypesParticle(const ParticleTypeList*);
+d50 2
+a51 1
+  const vector<Particle>& get_particles();
+d53 49
+@
+

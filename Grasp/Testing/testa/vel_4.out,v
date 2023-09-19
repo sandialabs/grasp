@@ -1,0 +1,328 @@
+head	4.4;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.1
+	P_MonacoTesting:3.1.0.6
+	InitialGraspTesting:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	cjkimme_version_merge_from_trunk_1:1.4.2.1
+	cjkimme_version:1.4.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.4
+date	2007.09.05.22.51.09;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.03.24.21.11.35;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2004.04.28.21.59.53;	author athomps;	state Exp;
+branches
+	1.4.2.1;
+next	1.3;
+
+1.3
+date	2004.01.28.20.36.51;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.01.15.20.13.23;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.11.03.23.33.51;	author athomps;	state Exp;
+branches;
+next	;
+
+1.4.2.1
+date	2004.09.13.23.05.46;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Reran most test problems using Apple laptop with 2.33 GHz Intel core 2 Duo
+@
+text
+@# Timestep 0
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+         3         0.000000000         0.000000000         0.000000000
+         4         0.000000000         0.000000000         0.000000000
+         1         0.000000000         0.000000000         0.000000000
+         2         0.000000000         0.000000000         0.000000000
+# 
+# Timestep 10
+# 
+# Number of particles 4
+# 
+# Particle velocities 
+         3         -8.736629900e-05         5.374173329e-20         1.092875790e-20
+         4         3.841297226e-05         -2.348815586e-20         -1.804112415e-20
+         1         0.0001363196257         -2.272487754e-21         1.163999452e-20
+         2         -8.736629900e-05         6.591949209e-22         -6.453171331e-21
+# 
+@
+
+
+4.3
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d16 4
+a19 4
+         3         -8.736629900e-05         7.039507866e-20         1.099814684e-20
+         4         3.841297226e-05         -3.236994006e-20         -1.797173521e-20
+         1         0.0001363196257         -1.032160468e-20         1.580333087e-20
+         2         -8.736629900e-05         -3.781697178e-21         -4.232725281e-21
+@
+
+
+4.2
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d6 4
+a9 4
+       1        -0.000000000        -0.000000000        -0.000000000
+       2        -0.000000000         0.000000000        -0.000000000
+       3         0.000000000         0.000000000         0.000000000
+       4        -0.000000000         0.000000000        -0.000000000
+d16 4
+a19 4
+       1     0.0001363196257    -6.713379852e-21     2.602085214e-22
+       2    -8.736629900e-05     2.879640970e-21    -1.866562460e-20
+       3    -8.736629900e-05     6.040307143e-20     6.487865800e-21
+       4     3.841297226e-05    -1.460637167e-20    -1.582067810e-20
+@
+
+
+4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d6 2
+a9 2
+       1        -0.000000000        -0.000000000        -0.000000000
+       2        -0.000000000         0.000000000        -0.000000000
+d16 4
+a19 4
+       3    -8.736629900e-05     7.039507866e-20     1.099814684e-20
+       4     3.841297226e-05    -3.236994006e-20    -1.797173521e-20
+       1     0.0001363196257    -1.032160468e-20     1.580333087e-20
+       2    -8.736629900e-05    -3.781697178e-21    -4.232725281e-21
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d6 4
+a9 4
+       3        -0.000000000        -0.000000000        -0.000000000
+       4         0.000000000         0.000000000        -0.000000000
+       1         0.000000000         0.000000000         0.000000000
+       2        -0.000000000        -0.000000000        -0.000000000
+@
+
+
+3.2
+log
+@Added a bunch of test case for mixing force fields
+@
+text
+@d6 2
+a9 2
+       3        -0.000000000        -0.000000000        -0.000000000
+       4         0.000000000         0.000000000        -0.000000000
+d16 4
+a19 4
+       1     0.0001363196257    -1.316655118e-20    -2.758210327e-21
+       2    -8.736629900e-05    -1.242062009e-20     2.119832088e-20
+       3    -8.736629900e-05     6.062858549e-20     3.382710778e-21
+       4     3.841297226e-05    -7.945033520e-21    -3.337607968e-20
+@
+
+
+3.1
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d6 2
+a9 2
+       1         0.000000000         0.000000000         0.000000000
+       2        -0.000000000        -0.000000000        -0.000000000
+d16 4
+a19 4
+       3    -8.822427930e-05     1.504699143e-19     4.911349105e-19
+       4     3.833140099e-05     9.995476669e-20     3.140890326e-19
+       1     0.0001381171576     4.496403250e-20     7.473188735e-20
+       2    -8.822427930e-05    -9.367506770e-22    -4.511668816e-19
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d16 4
+a19 4
+       3    -8.822427930e-05     1.481800793e-19     4.960615252e-19
+       4     3.833140099e-05     9.693634784e-20     3.075664723e-19
+       1     0.0001381171576     4.510281038e-20     7.945033520e-20
+       2    -8.822427930e-05    -1.368696823e-20    -4.368033713e-19
+@
+
+
+1.4
+log
+@See previous checkin of source for info.
+@
+text
+@@
+
+
+1.4.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.3
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d16 4
+a19 4
+       3    -8.822427930e-05     1.238592562e-20    -8.770761895e-19
+       4     3.833140099e-05     1.160876950e-19     3.141584215e-19
+       1     0.0001381171576     3.962108419e-20    -9.714451465e-21
+       2    -8.822427930e-05     1.800122551e-19     2.527145160e-19
+@
+
+
+1.2
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@d6 2
+a7 2
+       3         0.000000000         0.000000000         0.000000000
+       4        -0.000000000        -0.000000000        -0.000000000
+d18 2
+a19 2
+       1     0.0001381171576     3.962108419e-20    -5.273559367e-21
+       2    -8.822427930e-05     1.800122551e-19     2.638167462e-19
+@
+
+
+1.1
+log
+@Pushed the examples down into directories.
+@
+text
+@d16 4
+a19 4
+       3    -8.822461271e-05     5.516420654e-21    -1.473821065e-19
+       4     3.832254332e-05     2.099535823e-19     6.234249228e-19
+       1     0.0001381266821     1.283695372e-19     5.029310302e-19
+       2    -8.822461271e-05     2.173261571e-19     5.048045315e-19
+@
+

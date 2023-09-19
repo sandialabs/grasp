@@ -1,0 +1,1152 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.14.0.2
+	cjkimme_version_merge_from_trunk_1:2.9.2.2
+	cjkimme_version:2.9.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.03.20.00.15.39;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.03.01.20.37.32;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.02.06.20.19.12;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.02.02.18.25.17;	author athomps;	state Exp;
+branches
+	2.9.2.1;
+next	2.8;
+
+2.8
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.23.16.01.59;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	;
+
+2.9.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.9.2.2;
+
+2.9.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <cmath>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "box.h"
+#include "profile.h"
+#include "particle.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+
+Profile::Profile() {
+}
+
+Profile::~Profile() {
+}
+
+int Profile::get_nbins() const {
+  return nbins;
+};
+
+int Profile::get_ncount() const {
+  return ncount;
+};
+
+int Profile::get_nsample() const {
+  return nsample;
+};
+
+void Profile::SetupBins(const string& input_string,
+			const Box* b, Comm* comm) {
+  // Set up a set of nbins_in planar bins normal to reciprocal vector
+  // denoted by iaxis=1,2 or 3. The bins cover the simulation box, 
+  // so for iaxis=1 the bin spacing is xbin = uc_wh/nbins.
+
+  double lva[3],lvb[3],lvc[3],origin[3];
+  double wh,wk,wl;
+  int node;
+  ofstream outfile;
+  string filename;
+  string str_tmp;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering Profile::SetupBins()" << endl;
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Profile::SetupBins()" << endl;
+  }
+  glog.get_logfile() << "density profile";
+
+  std::istringstream buf_in(input_string);
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Profile::SetupBins:\n"
+	       "Read error in input file");
+  }
+
+  buf_in >> nbins;
+  buf_in >> iaxis;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Profile::SetupBins:\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << nbins << " " << iaxis << endl;
+
+  if (nbins <= 0 || 
+      (iaxis <= 0 || iaxis > 3) ) {
+    glog.error("Profile::SetupBins:\n"
+	       "Invalid input parameter");
+  }
+
+  b->get_lv(lva,lvb,lvc);
+  b->get_o(origin);
+  b->get_lw(wh,wk,wl);
+  binvol = b->get_volume()/nbins;
+  // Compute the bin spacing
+  switch(iaxis) {
+  case 1:
+    if (b->get_Lorthorhombic()){
+      xlen = lva[0];
+      xbin = xlen/(double)nbins;
+      x0 = origin[0];
+    } else {
+      xlen = wh;
+      xbin = xlen/(double)nbins;
+      x0 = origin[0];
+    }
+    break;
+  case 2:
+    if (b->get_Lorthorhombic()){
+      xlen = lvb[1];
+      xbin = xlen/(double)nbins;
+      x0 = origin[1];
+    } else {
+      xlen = wk;
+      xbin = xlen/(double)nbins;
+      x0 = origin[1];
+    }
+    break;
+  case 3:
+    if (b->get_Lorthorhombic()){
+      xlen = lvc[2];
+      xbin = xlen/(double)nbins;
+      x0 = origin[2];
+    } else {
+      xlen = wl;
+      xbin = xlen/(double)nbins;
+      x0 = origin[2];
+    }
+    break;
+  default:
+    glog.error("Profile::SetupBins:\n"
+	       "Invalid iaxis value");
+  }
+
+  // Initialize the bins to zero;
+  bin_list.resize(nbins,0);
+  // Initialize counters
+  ncount = 0;
+  nsample = 0;
+  // Compute constants of binning
+  xbininv = 1.0/xbin;
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    openflag = std::ios::trunc;
+    filename = "density_profile.out";
+    filename = glog.path_str + filename;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputParticles:\n"
+		 "Failed to open "+filename);
+    }
+
+    outfile << "# iaxis " << iaxis << endl;
+    outfile << "# nbins " << nbins << endl;
+    outfile << "# xbin " << xbin << endl;
+    outfile << "# x0 " << x0 << endl;
+    outfile.close(); 
+  }
+}
+
+void Profile::SampleDensity(const int& nparticles,
+			    const Particle* particles, 
+			    const bool& Lorthorhombic, Comm* comm)
+{
+  // Scaled positions should fall in range [0.0,nbins).
+  // So ibin should fall in range [0,nbins-1].
+  //
+  // This currently only works for orthorhombic box
+  // Should probably define a single member function of class Box
+  // to calculate fractional coordinate along direction normal
+  // to binning planes, which would cover all the conditions. 
+  int ibin;
+  double xscale,rvec[3],xvalue;
+
+  nsample++;
+  switch(iaxis) {
+  case 1:
+    if (Lorthorhombic){
+      for (int iparticle=0;iparticle<nparticles;iparticle++) {
+	particles[iparticle].get_x(rvec);
+	xscale = (rvec[0]-x0)*xbininv;
+	if (xscale<0.0||xscale>=nbins) {
+	  glog.abort("Profile::SampleDensity:\n"
+		     "Invalid xscale value",comm);
+	}
+	ibin = (int)xscale;
+	xvalue = 1.0;
+	bin_list[ibin]+=xvalue;
+	ncount++;
+      }
+    } else {
+      glog.error("Profile::SampleDensity:\n"
+	"Binning not yet implemented "
+		 "for triclinic box");
+    }
+    break;
+  default:
+    glog.error("Profile::SampleDensity:\n"
+	       "Invalid xscale value");
+  }
+}
+
+void Profile::OutputProfile(Comm* comm)
+{
+  int ibin;
+  int node,nprocs;
+  int ncount_tot;
+  double x_out,bin_out,density_fac;
+  MPI_Comm world;
+  vector<double>  bin_list_tot;
+  ofstream outfile;
+  string filename;
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputProfile" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  if (node == 0) {
+    bin_list_tot.resize(nbins);
+  }
+
+  MPI_Reduce(&ncount,&ncount_tot,1,MPI_INT,
+		MPI_SUM,0,world);
+  MPI_Reduce(&bin_list[0],&bin_list_tot[0],nbins,MPI_DOUBLE,
+		MPI_SUM,0,world);
+
+  if (node == 0) {
+
+    std::ios::openmode openflag;
+    openflag = std::ios::app;
+    filename = "density_profile.out";
+    filename = glog.path_str + filename;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputParticles:\n"
+		 "Failed to open "+filename);
+    }
+
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(8);
+    outfile << "# " << endl;
+    outfile << "# ncount " << ncount_tot << endl;
+    outfile << "# nsample " << nsample << endl;
+    outfile << "# " << endl;
+    outfile << "# Density Profile " << endl;
+
+    density_fac = 1.0/(nsample*binvol);
+    for (ibin=0;ibin<nbins;ibin++) {
+      x_out = x0+(ibin+0.5)*xbin;
+      bin_out = bin_list_tot[ibin]*density_fac;
+      outfile  << x_out << " " << bin_out << endl;
+    }
+    outfile.close(); 
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputProfile" << endl;
+  }
+}
+  
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d98 2
+a99 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Profile::SetupBins()" << endl;
+d104 1
+a104 1
+  glog.logfile << "density profile";
+d109 1
+a109 1
+    glog.logfile << endl;
+d118 1
+a118 1
+    glog.logfile << endl;
+d123 1
+a123 1
+  glog.logfile << " " << nbins << " " << iaxis << endl;
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d85 3
+a87 4
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Profile::SetupBins()" << endl;
+#endif
+
+d238 3
+a240 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::OutputProfile" << endl;
+#endif
+d283 3
+a285 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputProfile" << endl;
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d85 1
+a85 1
+
+d87 1
+d239 1
+a239 1
+
+d241 1
+d284 1
+d286 1
+@
+
+
+2.14
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.13
+log
+@Updated header
+@
+text
+@d47 1
+a47 2
+Profile::Profile()
+{
+d50 4
+a53 2
+int Profile::get_nbins() const
+{
+d57 1
+a57 2
+int Profile::get_ncount() const
+{
+d61 1
+a61 2
+int Profile::get_nsample() const
+{
+a64 4
+Profile::~Profile()
+{
+}
+
+d66 1
+a66 1
+			const Box* b, Comm* comm)
+d70 1
+a70 1
+{
+@
+
+
+2.12
+log
+@Various
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.11
+log
+@Fixed the stringstream name clash some more
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.10
+log
+@fixed error in force_threebody.cpp
+@
+text
+@d94 1
+a94 1
+  stringstream buf_in(input_string);
+@
+
+
+2.9
+log
+@Added MPI_Reduce to STUBS and profile.cpp
+@
+text
+@d254 1
+a254 1
+	     MPI_SUM,0,world);
+d256 1
+a256 1
+       MPI_SUM,0,world);
+@
+
+
+2.9.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@d89 1
+a89 1
+#ifdef USE_NODEFILES
+a90 1
+#endif
+d242 1
+a242 1
+#ifdef USE_NODEFILES
+a243 1
+#endif
+a285 1
+#ifdef USE_NODEFILES
+a286 1
+#endif
+@
+
+
+2.9.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d47 2
+a48 1
+Profile::Profile() {
+d51 2
+a52 4
+Profile::~Profile() {
+}
+
+int Profile::get_nbins() const {
+d56 2
+a57 1
+int Profile::get_ncount() const {
+d61 2
+a62 1
+int Profile::get_nsample() const {
+d66 4
+d71 1
+a71 1
+			const Box* b, Comm* comm) {
+d75 1
+a75 1
+
+d95 1
+a95 1
+  std::istringstream buf_in(input_string);
+d256 1
+a256 1
+		MPI_SUM,0,world);
+d258 1
+a258 1
+		MPI_SUM,0,world);
+@
+
+
+2.8
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@d253 4
+a256 4
+  MPI_Allreduce(&ncount,&ncount_tot,1,MPI_INT,
+	     MPI_SUM,world);
+  MPI_Allreduce(&bin_list[0],&bin_list_tot[0],nbins,MPI_DOUBLE,
+       MPI_SUM,world);
+@
+
+
+2.7
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d253 4
+a256 4
+  MPI_Reduce(&ncount,&ncount_tot,1,MPI_INT,
+	     MPI_SUM,0,world);
+  MPI_Reduce(&bin_list[0],&bin_list_tot[0],nbins,MPI_DOUBLE,
+       MPI_SUM,0,world);
+@
+
+
+2.6
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d253 1
+a253 1
+  MPI_Reduce(&ncount,&ncount_tot,1,MPI_INTEGER,
+@
+
+
+2.5
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.4
+log
+@Redoing temperature functions. Not finished yet.
+@
+text
+@d7 1
+a20 1
+  nbins = 0;
+d42 2
+a43 2
+void Profile::SetupBins(const int& nbins_in, const int& iaxis_in, 
+              const Box* b, Comm* comm)
+d53 1
+d57 15
+a71 4
+  // Clear out previous entries, if necessary
+  if (nbins > 0) {
+    nbins = 0;
+    bin_list.clear();
+d74 16
+a89 2
+  iaxis = iaxis_in;
+  nbins = nbins_in;
+d208 1
+a208 1
+  int ncount_tot,nsample_tot;
+a226 2
+  MPI_Reduce(&nsample,&nsample_tot,1,MPI_INTEGER,
+	     MPI_SUM,0,world);
+d246 1
+a246 1
+    outfile << "# nsample " << nsample_tot << endl;
+d250 1
+a250 1
+    density_fac = 1.0/(nsample_tot*binvol);
+@
+
+
+2.3
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@a117 6
+    glog.logfile << "iaxis = " << iaxis << endl;
+    glog.logfile << "nbins = " << nbins << endl;
+    glog.logfile << "xbin = " << xbin << endl;
+  }
+
+  if (node == 0) {
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d52 1
+d126 3
+a128 1
+    ofstream outfile("density_profile.out",openflag); 
+d130 2
+a131 2
+      glog.error("Profile::SetupBins:\n"
+		 "Failed to density_profile.out");
+d165 1
+a165 1
+		     "Invalid xscale value");
+d193 1
+d216 3
+a218 1
+    outfile.open("density_profile.out",openflag); 
+d220 2
+a221 2
+      glog.error("Profile::SampleDensity:\n"
+		 "Failed to open density_profile.out");
+d223 1
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d5 1
+d8 1
+d13 4
+a16 1
+extern ofstream logfile;
+d33 5
+d42 2
+a43 1
+void Profile::SetupBins(const int& nbins_in, const int& iaxis_in, const Box* b)
+d50 4
+d67 1
+d104 2
+a105 2
+    logfile << "Error: invalid iaxis value " << iaxis << endl;
+    exit(0);
+d110 1
+a110 1
+  // Initialize count
+d112 1
+d116 14
+a129 3
+  logfile << "iaxis = " << iaxis << endl;
+  logfile << "nbins = " << nbins << endl;
+  logfile << "xbin = " << xbin << endl;
+d131 6
+d139 3
+a141 2
+void Profile::AddValue(const double rvec[], const double& xvalue,
+		       const bool& Lorthorhombic)
+d151 1
+a151 1
+  double xscale;
+d153 1
+d157 11
+a167 34
+      xscale = (rvec[0]-x0)*xbininv;
+      if (xscale<0.0||xscale>=nbins) {
+	logfile << "Error: Invalid xscale value " << xscale << endl; 
+	exit(0);
+      }
+      ibin = (int)xscale;
+      bin_list[ibin]+=xvalue;
+    } else {
+      logfile << "Error: binning not yet implemented "
+	"for triclinic box" << endl;
+      exit(0);
+    }
+    break;
+  case 2:
+    if (Lorthorhombic){
+      xscale = (rvec[1]-x0)*xbininv;
+      if (xscale<0.0||xscale>=nbins) {
+	logfile << "Error: Invalid xscale value " << xscale << endl; 
+	exit(0);
+      }
+      ibin = (int)xscale;
+      bin_list[ibin]+=xvalue;
+    } else {
+      logfile << "Error: binning not yet implemented "
+	"for triclinic box" << endl;
+      exit(0);
+    }
+    break;
+  case 3:
+    if (Lorthorhombic){
+      xscale = (rvec[2]-x0)*xbininv;
+      if (xscale<0.0||xscale>=nbins) {
+	logfile << "Error: Invalid xscale value " << xscale << endl; 
+	exit(0);
+a168 2
+      ibin = (int)xscale;
+      bin_list[ibin]+=xvalue;
+d170 3
+a172 3
+      logfile << "Error: binning not yet implemented "
+	"for triclinic box" << endl;
+      exit(0);
+d176 2
+a177 2
+    logfile << "Error: invalid iaxis value " << iaxis << endl;
+    exit(0);
+a178 1
+  ncount++;
+d181 1
+a181 1
+void Profile::GetProfile(const int& ibin, double& x_out, double& bin_out)
+d183 16
+a198 3
+  if (ibin<0||ibin>=nbins) {
+    logfile << "Error:Invalid bin index " << ibin <<endl; 
+    exit(0);
+d201 33
+a233 2
+  x_out = x0+(ibin+0.5)*xbin;
+  bin_out = bin_list[ibin];
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d5 1
+d11 1
+d88 1
+a88 1
+    cout << "Error: invalid iaxis value " << iaxis << endl;
+d99 3
+a101 3
+  cout << "iaxis = " << iaxis << endl;
+  cout << "nbins = " << nbins << endl;
+  cout << "xbin = " << xbin << endl;
+d123 1
+a123 1
+	cout << "Error: Invalid xscale value " << xscale << endl; 
+d129 1
+a129 1
+      cout << "Error: binning not yet implemented "
+d138 1
+a138 1
+	cout << "Error: Invalid xscale value " << xscale << endl; 
+d144 1
+a144 1
+      cout << "Error: binning not yet implemented "
+d153 1
+a153 1
+	cout << "Error: Invalid xscale value " << xscale << endl; 
+d159 1
+a159 1
+      cout << "Error: binning not yet implemented "
+d165 1
+a165 1
+    cout << "Error: invalid iaxis value " << iaxis << endl;
+d174 1
+a174 1
+    cout << "Error:Invalid bin index " << ibin <<endl; 
+@
+
+
+1.1
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d1 1
+a1 1
+#include <math.h>
+d5 2
+d30 1
+a30 1
+void Profile::SetupBins(const int& nbins_in, const int& iaxis_in)
+d47 3
+a49 5
+  Box& b = Box::get();
+
+  b.get_lv(lva,lvb,lvc);
+  b.get_o(origin);
+  b.get_lw(wh,wk,wl);
+d53 1
+a53 1
+    if (b.get_Lorthorhombic()){
+d64 1
+a64 1
+    if (b.get_Lorthorhombic()){
+d75 1
+a75 1
+    if (b.get_Lorthorhombic()){
+@
+

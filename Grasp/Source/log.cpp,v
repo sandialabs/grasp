@@ -1,0 +1,1116 @@
+head	4.6;
+access;
+symbols
+	ReverseComm_branch:4.6.0.4
+	ADTools_branch:4.6.0.2
+	Monaco_Aidan:4.5.0.6
+	Root-of-Monaco_Aidan:4.5
+	PPPM_Crozier2:4.5.0.4
+	PPPM_Crozier:4.5
+	Root-of-PPPM_Crozier:4.5
+	Monaco:4.5.0.2
+	PreMonaco:4.5
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.5
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.12.0.2
+	cjkimme_version_merge_from_trunk_1:2.5.2.3
+	cjkimme_version:2.5.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.6
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.05.02.23.55.16;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.02.23.50.31;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.6;
+
+3.6
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.02.23.19.56.59;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.02.12.21.58.18;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.2.6.1;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.08.02.21.10.26;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.07.29.21.52.56;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.07.22.20.52.32;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.02.12.23.57.39;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.5.2.1;
+next	2.4;
+
+2.4
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	;
+
+2.5.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.5.2.2;
+
+2.5.2.2
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.5.2.3;
+
+2.5.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.2.6.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.6
+log
+@Added multiple replica feature.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <unistd.h>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <vector>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "comm.h"
+#include "log.h"
+Log::Log(const string& str_tmp) {
+  logfile_str_base = str_tmp;
+  timeforce = 0.0;
+  timeneigh = 0.0;
+  timecomm = 0.0;
+  timeexchange = 0.0;
+  timerevcomm = 0.0;
+  timebarrier = 0.0;
+  timetotal = 0.0;
+  Ltimebarrier = false;
+}
+
+void Log::open_logfile_universe() {
+  int node,nprocs;
+  string enfs_prefix="enfs:",no_prefix="",prefix;
+
+  universe = MPI_COMM_WORLD;
+  world = universe;
+
+  MPI_Comm_rank(universe,&node);
+  MPI_Comm_size(universe,&nprocs);
+
+  if (node == 0) {
+    if (logfile_universe.is_open()) {
+      logfile_universe.close();
+    }
+  }
+
+  // No world_suffix yet.
+  world_suffix = "";
+#ifdef NO_FULLPATH
+  path_str = "";
+#else
+  char buf[PATH_MAX];
+  if (!getcwd( buf, sizeof( buf ) ) ) {
+#ifndef NO_STDERR
+    cerr << "Log::Log\n" <<
+      "Failed to get path from getcwd\n" <<
+      "PATH_MAX = " << PATH_MAX << " getcwd = " <<
+      getcwd( buf, sizeof( buf ) ) << endl;
+#endif
+    abort("Log::Log\n"
+          "Failed to get path from getcwd");
+  }
+  path_str = buf;
+
+  /* 
+   * Select the prefix to use based on cwd, either "enfs:" or "" 
+   */
+  prefix = strstr(path_str.c_str(), "enfs") ? enfs_prefix : no_prefix;
+  /*
+   * Build the full path to the file, rank is appended to
+   * create a unique filename for each process
+   */
+  path_str = prefix + path_str + "/";
+#endif
+
+  null_str = prefix + "/dev/null" ;
+
+#ifdef NO_LOGFILE
+  logfile_str = null_str;
+#else
+  logfile_str = path_str + logfile_str_base + world_suffix;
+#endif
+
+  if (node != 0) {
+    logfile_universe.open(null_str.c_str()); 
+  } else {
+    logfile_universe.open(logfile_str.c_str()); 
+    if (!logfile_universe) {
+      abort("Failed to open " + logfile_str);
+    }
+  }
+  // Redirect logfile stream buffer to that of logfile_universe
+  logfile = &logfile_universe;
+  get_logfile() << setprecision(10);
+  get_logfile().setf(ios::showpoint);
+  get_logfile().setf(ios::fixed,ios::floatfield);
+  //    get_logfile().setf(ios::boolalpha);
+  get_logfile() << logfile_str << endl;
+  get_logfile() << "Clock tick = " << MPI_Wtick() << " Seconds" << endl;
+  
+  get_logfile() << "path_str is " << path_str << endl;
+#ifndef NO_FULLPATH
+  get_logfile() << "PATH_MAX is " << PATH_MAX << endl;
+#endif
+}
+
+void Log::open_logfile_world(const string& str_tmp,const MPI_Comm& world_in) {
+  int node,nprocs;
+  string enfs_prefix="enfs:",no_prefix="",prefix;
+
+  world = world_in;
+
+  MPI_Comm_rank(world,&node);
+  MPI_Comm_size(world,&nprocs);
+
+  if (node == 0) {
+    if (logfile_world.is_open()) {
+      logfile_world.close();
+    }
+  }
+
+  world_suffix = str_tmp;
+
+#ifdef NO_LOGFILE
+  logfile_str = null_str;
+#else
+  logfile_str = path_str + logfile_str_base + world_suffix;
+#endif
+
+  if (node != 0) {
+    logfile_world.open(null_str.c_str()); 
+  } else {
+    logfile_world.open(logfile_str.c_str()); 
+    if (!logfile_world) {
+      abort("Failed to open " + logfile_str);
+    }
+  }
+  // Redirect logfile stream buffer to that of logfile_world
+  logfile = &logfile_world;
+  get_logfile() << setprecision(10);
+  get_logfile().setf(ios::showpoint);
+  get_logfile().setf(ios::fixed,ios::floatfield);
+  //    get_logfile().setf(ios::boolalpha);
+  get_logfile() << logfile_str << endl;
+  get_logfile() << "Clock tick = " << MPI_Wtick() << " Seconds" << endl;
+  
+  get_logfile() << "path_str is " << path_str << endl;
+#ifndef NO_FULLPATH
+  get_logfile() << "PATH_MAX is " << PATH_MAX << endl;
+#endif
+
+}
+
+void Log::close_logfile_universe() {
+  int node;
+  MPI_Comm_rank(universe,&node);
+  if (node == 0) {
+    logfile_universe.close(); 
+  }
+}
+
+void Log::close_logfile_world() {
+  int node;
+  MPI_Comm_rank(world,&node);
+  if (node == 0) {
+    logfile_world.close(); 
+  }
+}
+
+void Log::prepend_path(char* pathname) {
+  logfile_str_base = string(pathname) + "/" + logfile_str_base;
+}
+
+void Log::error(const string& error_string) {
+  int node;
+  MPI_Comm_rank(world,&node);
+  if (node == 0) {
+    get_logfile() << 
+      "****************************************************" << 
+      endl << "Error: " << error_string << endl << 
+      "****************************************************" << endl;
+#ifndef NO_STDERR
+    cerr << 
+      "****************************************************" << 
+      endl << "Error: " << error_string << endl << 
+      "****************************************************" << endl;
+#endif
+  }
+  close_logfile_universe();
+  MPI_Finalize();
+  exit(0);
+}
+
+void Log::abort(const string& error_string) {
+  int node;
+  MPI_Comm_rank(world,&node);
+#ifndef NO_STDERR
+  cerr << 
+    "****************************************************" << 
+    endl << "Error: Aborted on node " << node << " : " <<
+    error_string << endl << 
+    "****************************************************" << endl;
+#endif
+  MPI_Abort(world,1);
+}
+
+void Log::abort(const string& error_string, Comm* comm) {
+  int node;
+  MPI_Comm_rank(world,&node);
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << 
+    "****************************************************" << 
+    endl << "Error: Aborted on node " << node << " : " <<
+    error_string << endl << 
+    "****************************************************" << endl;
+  }
+
+#ifndef NO_STDERR
+  cerr << 
+    "****************************************************" << 
+    endl << "Error: Aborted on node " << node << " : " <<
+    error_string << endl << 
+    "****************************************************" << endl;
+#endif
+  MPI_Abort(world,1);
+}
+
+void Log::warning(const string& warning_string) {
+  int node;
+  MPI_Comm_rank(world,&node);
+  if (node == 0) {
+    logfile_universe << 
+      "****************************************************" << 
+      endl << "Warning: " << warning_string << endl << 
+      "****************************************************" << endl;
+#ifndef NO_STDERR
+    cerr << 
+      "****************************************************" << 
+      endl << "Warning: " << warning_string << endl << 
+      "****************************************************" << endl;
+#endif
+  }
+}
+
+void Log::input_timebarrier(const string& buf) {
+  Ltimebarrier = true;
+  get_logfile() << endl;
+}
+
+ofstream& Log::get_logfile() {
+  return *logfile;
+}
+@
+
+
+4.5
+log
+@Fixed glitch in header.
+@
+text
+@d69 1
+a69 1
+void Log::open_logfile() {
+d73 2
+d76 2
+a77 2
+  MPI_Comm_rank(MPI_COMM_WORLD,&node);
+  MPI_Comm_size(MPI_COMM_WORLD,&nprocs);
+d79 8
+d111 1
+a111 1
+  path_str = prefix + path_str + "/" ;
+d119 1
+a119 1
+  logfile_str = path_str + logfile_str_base;
+d122 5
+a126 3
+  if (node == 0) {
+    logfile.open(logfile_str.c_str()); 
+    if (!logfile) {
+d128 14
+a141 6
+    } else {
+#ifndef NO_STDERR
+      cerr << 
+	"*********************************" << endl << 
+	"Started Grasp run with " << nprocs << " processes " << endl << 
+	"*********************************" << endl; 
+d143 14
+d158 3
+a160 6
+    logfile << setprecision(10);
+    logfile.setf(ios::showpoint);
+    logfile.setf(ios::fixed,ios::floatfield);
+    //    logfile.setf(ios::boolalpha);
+    logfile << logfile_str << endl;
+    logfile << "Clock tick = " << MPI_Wtick() << " Seconds" << endl;
+d162 24
+a185 1
+    logfile << "path_str is " << path_str << endl;
+d187 1
+a187 1
+    logfile << "PATH_MAX is " << PATH_MAX << endl;
+d189 8
+d200 1
+a200 1
+void Log::close_logfile() {
+d202 1
+a202 1
+  MPI_Comm_rank(MPI_COMM_WORLD,&node);
+d204 1
+a204 1
+    logfile.close(); 
+d214 1
+a214 1
+  MPI_Comm_rank(MPI_COMM_WORLD,&node);
+d216 1
+a216 1
+    logfile << 
+d227 1
+a227 1
+  close_logfile();
+d234 1
+a234 1
+  MPI_Comm_rank(MPI_COMM_WORLD,&node);
+d242 1
+a242 1
+  MPI_Abort(MPI_COMM_WORLD,1);
+d247 1
+a247 1
+  MPI_Comm_rank(MPI_COMM_WORLD,&node);
+d264 1
+a264 1
+  MPI_Abort(MPI_COMM_WORLD,1);
+d269 1
+a269 1
+  MPI_Comm_rank(MPI_COMM_WORLD,&node);
+d271 1
+a271 1
+    logfile << 
+d286 5
+a290 1
+  logfile << endl;
+@
+
+
+4.4
+log
+@What a log messsage!
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.3
+log
+@What a log messsage!
+@
+text
+@d3 1
+a3 1
+//   G G R A S P
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d3 1
+a3 1
+//   G R A S P
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d66 1
+d222 4
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+a49 1
+  Ltimebarrier = false;
+a204 4
+void Log::input_timebarrier(const string& buf) {
+  Ltimebarrier = true;
+  logfile << endl;
+}
+@
+
+
+3.6
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.5
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.4
+log
+@Added input_procgrid function.
+@
+text
+@d50 1
+d206 4
+@
+
+
+3.3
+log
+@Added a bunch of preprocessor flags to turn
+on and off various kinds of I/O
+@
+text
+@d55 1
+a55 1
+  char buf[PATH_MAX];
+d63 1
+d115 1
+d117 1
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d57 6
+d64 8
+a71 2
+    cerr << "Failed to get cwd in Log::Log" << endl;
+    exit(0);
+a74 3
+  MPI_Comm_rank(MPI_COMM_WORLD,&node);
+  MPI_Comm_size(MPI_COMM_WORLD,&nprocs);
+
+d84 2
+d87 4
+d92 2
+d99 1
+d104 1
+d114 1
+d138 1
+d143 1
+d153 1
+d159 1
+d175 1
+d181 1
+d193 1
+d198 1
+@
+
+
+3.2.6.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d55 1
+d57 5
+a65 16
+#ifdef NO_FULLPATH
+  path_str = "";
+#else
+  char buf[PATH_MAX];
+  if (!getcwd( buf, sizeof( buf ) ) ) {
+#ifndef NO_STDERR
+    cerr << "Log::Log\n" <<
+      "Failed to get path from getcwd\n" <<
+      "PATH_MAX = " << PATH_MAX << " getcwd = " <<
+      getcwd( buf, sizeof( buf ) ) << endl;
+#endif
+    abort("Log::Log\n"
+          "Failed to get path from getcwd");
+  }
+  path_str = buf;
+
+a74 2
+#endif
+
+a75 4
+
+#ifdef NO_LOGFILE
+  logfile_str = null_str;
+#else
+a76 2
+#endif
+
+a81 1
+#ifndef NO_STDERR
+a85 1
+#endif
+a94 3
+#ifndef NO_FULLPATH
+    logfile << "PATH_MAX is " << PATH_MAX << endl;
+#endif
+a117 1
+#ifndef NO_STDERR
+a121 1
+#endif
+a130 1
+#ifndef NO_STDERR
+a135 1
+#endif
+a150 1
+#ifndef NO_STDERR
+a155 1
+#endif
+a166 1
+#ifndef NO_STDERR
+a170 1
+#endif
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d142 3
+a144 2
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << 
+d149 2
+a150 1
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d93 2
+d106 3
+d142 1
+d148 1
+@
+
+
+2.12
+log
+@Finalized addition of RUNDIR variable to fix problem on liberty
+and added in the Barrier timing category to avoid spurious
+attributions of waiting times to Other.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.11
+log
+@Added extra output to cerr
+@
+text
+@d47 1
+@
+
+
+2.10
+log
+@Updated header
+@
+text
+@d111 4
+d153 4
+@
+
+
+2.9
+log
+@Added status messages and timing info to controller.cpp
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.8
+log
+@Various
+@
+text
+@d51 1
+a51 1
+  int node;
+d62 1
+d79 5
+@
+
+
+2.7
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.6
+log
+@Fixed up a problem with nodefile output.
+@
+text
+@d42 6
+d72 1
+a72 1
+  null_str = prefix + "/dev/null/" ;
+a85 6
+  timeforce = 0.0;
+  timeneigh = 0.0;
+  timecomm = 0.0;
+  timeexchange = 0.0;
+  timerevcomm = 0.0;
+  timetotal = 0.0;
+@
+
+
+2.5
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d66 1
+@
+
+
+2.5.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a77 2
+
+    logfile << "path_str is " << path_str << endl;
+a123 1
+#ifdef USE_NODEFILES
+a128 1
+#endif
+@
+
+
+2.5.2.2
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a96 3
+void Log::prepend_path(char* pathname) {
+  logfile_str_base = string(pathname) + "/" + logfile_str_base;
+}
+@
+
+
+2.5.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a41 7
+  timeforce = 0.0;
+  timeneigh = 0.0;
+  timecomm = 0.0;
+  timeexchange = 0.0;
+  timerevcomm = 0.0;
+  timebarrier = 0.0;
+  timetotal = 0.0;
+d45 1
+a45 1
+  int node,nprocs;
+a55 1
+  MPI_Comm_size(MPI_COMM_WORLD,&nprocs);
+a65 1
+  null_str = prefix + "/dev/null" ;
+a70 5
+    } else {
+      cerr << 
+	"*********************************" << endl << 
+	"Started Grasp run with " << nprocs << " processes " << endl << 
+	"*********************************" << endl; 
+d81 6
+a108 4
+    cerr << 
+      "****************************************************" << 
+      endl << "Error: " << error_string << endl << 
+      "****************************************************" << endl;
+a148 4
+      "****************************************************" << 
+      endl << "Warning: " << warning_string << endl << 
+      "****************************************************" << endl;
+    cerr << 
+@
+
+
+2.4
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.3
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d13 1
+a13 1
+  logfile_str = str_tmp;
+a20 2
+  MPI_Comm_rank(MPI_COMM_WORLD,&node);
+
+d22 2
+a23 2
+    cerr << "Failed to get cwd in process " << node << endl;
+    MPI_Abort(MPI_COMM_WORLD, 1);
+d27 2
+d32 1
+a32 1
+  prefix = strstr(buf, "enfs") ? enfs_prefix : no_prefix;
+d38 1
+a38 1
+  logfile_str = path_str + logfile_str;
+d109 1
+a109 1
+void Log::warning(const string& error_string) {
+d115 1
+a115 1
+      endl << "Warning: " << error_string << endl << 
+@
+
+
+2.2
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d45 3
+d49 1
+d51 6
+@
+
+
+2.1
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d1 1
+d6 5
+a11 3
+#include "mpi.h"
+using namespace std;
+
+d18 3
+d22 17
+d45 1
+d75 16
+@
+

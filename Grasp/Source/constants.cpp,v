@@ -1,0 +1,551 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.4.0.4
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0.2.1
+	P_MonacoSource:3.0.0.6
+	GraspSource:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.10.0.2
+	cjkimme_version_merge_from_trunk_1:2.6.2.1
+	cjkimme_version:2.6.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches
+	3.0.2.1;
+next	2.10;
+
+2.10
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.03.20.00.15.37;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.6.2.1;
+next	2.5;
+
+2.5
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.12.01.21.04.48;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.10.04.02.46.52;	author athomps;	state Exp;
+branches;
+next	;
+
+2.6.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.0.2.1
+date	2005.01.04.00.23.00;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+#include  "mpi.h"
+#include "grasp.h"
+#include "constants.h"
+#include "constants_values.h"
+#include "log.h"
+extern Log glog;
+
+Constants::Constants() {
+  units_style = units_real;
+}
+
+void Constants::ApplyUnitsStyle(const string& str_tmp) {
+
+  if (!str_tmp.empty()) {
+    if (str_tmp == "real") {
+      units_style = units_real;
+    } else if (str_tmp == "reduced") {
+      units_style = units_reduced;
+    } else if (str_tmp == "metal") {
+      units_style = units_metal;
+    } else if (str_tmp == "kcal") {
+      units_style = units_kcal;
+    } else {
+      glog.error("Constants::ApplyUnitsStyle: Invalid units_style");
+    }
+  }
+
+  switch(units_style) {
+  case (units_real):
+    tfactor = tfactor_real;
+    boltz = boltz_real;
+    evfactor = evfactor_real;
+    esfactor = esfactor_real;
+    pfactor = pfactor_real;
+    break;
+  case (units_reduced):
+    tfactor = tfactor_reduced;
+    boltz = boltz_reduced;
+    evfactor = evfactor_reduced;
+    esfactor = esfactor_reduced;
+    pfactor = pfactor_reduced;
+    break;
+  case (units_metal):
+    tfactor = tfactor_metal;
+    boltz = boltz_metal;
+    evfactor = evfactor_metal;
+    esfactor = esfactor_metal;
+    pfactor = pfactor_metal;
+    break;
+  case (units_kcal):
+    tfactor = tfactor_kcal;
+    boltz = boltz_kcal;
+    evfactor = evfactor_kcal;
+    esfactor = esfactor_kcal;
+    pfactor = pfactor_kcal;
+    break;
+  }
+}
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d50 1
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d69 2
+d98 7
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+a52 2
+    } else if (str_tmp == "kcal") {
+      units_style = units_kcal;
+a79 7
+  case (units_kcal):
+    tfactor = tfactor_kcal;
+    boltz = boltz_kcal;
+    evfactor = evfactor_kcal;
+    esfactor = esfactor_kcal;
+    pfactor = pfactor_kcal;
+    break;
+@
+
+
+3.1
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d53 2
+d82 7
+@
+
+
+3.0.2.1
+log
+@Added energies to Reax code, added kcal unit style and added
+the example testrdx to Makefile.testing
+@
+text
+@a52 2
+    } else if (str_tmp == "kcal") {
+      units_style = units_kcal;
+a79 7
+  case (units_kcal):
+    tfactor = tfactor_kcal;
+    boltz = boltz_kcal;
+    evfactor = evfactor_kcal;
+    esfactor = esfactor_kcal;
+    pfactor = pfactor_kcal;
+    break;
+@
+
+
+2.10
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.9
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.8
+log
+@Various
+@
+text
+@d63 1
+d70 1
+d77 1
+@
+
+
+2.7
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.6
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d62 1
+d68 1
+d74 1
+@
+
+
+2.6.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a61 2
+    esfactor = esfactor_real;
+    pfactor = pfactor_real;
+a66 2
+    esfactor = esfactor_reduced;
+    pfactor = pfactor_reduced;
+a71 2
+    esfactor = esfactor_metal;
+    pfactor = pfactor_metal;
+@
+
+
+2.5
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d50 2
+d61 1
+d66 6
+@
+
+
+2.4
+log
+@Added a variant of Makefile for Cygwin/NT environment, called Makefile.cygwin
+@
+text
+@d1 28
+@
+
+
+2.3
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d4 1
+@
+
+
+2.2
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d10 4
+d16 8
+a23 6
+  if (str_tmp == "real") {
+    units_style = units_real;
+  } else if (str_tmp == "reduced") {
+    units_style = units_reduced;
+  } else {
+    glog.error("Constants::ApplyUnitsStyle: Invalid units_style");
+@
+
+
+2.1
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d6 1
+@
+

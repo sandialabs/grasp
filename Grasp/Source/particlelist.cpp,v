@@ -1,0 +1,7995 @@
+head	4.28;
+access;
+symbols
+	ReverseComm_branch:4.8.0.4
+	ADTools_branch:4.8.0.2
+	Monaco_Aidan:4.4.2.2.0.2
+	Root-of-Monaco_Aidan:4.4.2.2
+	PPPM_Crozier2:4.4.0.4
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.4.0.2
+	PreMonaco:4.4
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.4
+	REAX-2:3.4.2.9
+	P_MonacoSource:3.4.0.6
+	GraspSource:3.4
+	P_Monaco:3.4.0.4
+	InitialGrasp:3.4
+	REAXFF:3.4.0.2
+	premerge_cjkimme_version:3.1
+	CRAY:2.26.0.2
+	cjkimme_version_merge_from_trunk_1:2.16.2.4
+	cjkimme_version:2.16.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.28
+date	2008.11.06.05.31.16;	author athomps;	state Exp;
+branches;
+next	4.27;
+
+4.27
+date	2008.11.04.00.24.50;	author athomps;	state Exp;
+branches;
+next	4.26;
+
+4.26
+date	2008.03.08.00.25.44;	author athomps;	state Exp;
+branches;
+next	4.25;
+
+4.25
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.24;
+
+4.24
+date	2007.11.15.21.31.40;	author athomps;	state Exp;
+branches;
+next	4.23;
+
+4.23
+date	2007.10.15.20.52.10;	author athomps;	state Exp;
+branches;
+next	4.22;
+
+4.22
+date	2007.09.13.22.54.49;	author athomps;	state Exp;
+branches;
+next	4.21;
+
+4.21
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.20;
+
+4.20
+date	2007.05.15.19.30.48;	author athomps;	state Exp;
+branches;
+next	4.19;
+
+4.19
+date	2007.03.31.01.06.13;	author athomps;	state Exp;
+branches;
+next	4.18;
+
+4.18
+date	2007.03.19.03.29.18;	author athomps;	state Exp;
+branches;
+next	4.17;
+
+4.17
+date	2007.03.16.06.18.30;	author athomps;	state Exp;
+branches;
+next	4.16;
+
+4.16
+date	2007.03.15.22.01.01;	author athomps;	state Exp;
+branches;
+next	4.15;
+
+4.15
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2007.02.02.21.14.47;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.01.30.19.37.39;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.01.30.18.46.16;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.8.4.1;
+next	4.7;
+
+4.7
+date	2005.10.11.01.40.34;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2005.07.29.22.05.23;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.07.29.00.13.55;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.05.03.19.53.01;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.4.2.1
+	3.4.6.1;
+next	3.3;
+
+3.3
+date	2004.11.22.17.20.08;	author cjkimme;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.19.21.01.03;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.26;
+
+2.26
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.25;
+
+2.25
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.24;
+
+2.24
+date	2004.07.22.17.32.23;	author athomps;	state Exp;
+branches;
+next	2.23;
+
+2.23
+date	2004.07.21.17.46.50;	author athomps;	state Exp;
+branches;
+next	2.22;
+
+2.22
+date	2004.07.13.21.21.16;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.05.20.22.11.34;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.03.20.00.15.39;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.02.13.18.04.42;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.16.2.1;
+next	2.15;
+
+2.15
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2003.11.03.23.52.04;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2003.10.31.20.20.43;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.09.23.23.33.34;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.09.23.16.01.59;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+4.8.4.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.10.20.37.16;	author saubry;	state Exp;
+branches
+	4.4.2.2.2.1;
+next	;
+
+4.4.2.2.2.1
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	4.4.2.2.2.2;
+
+4.4.2.2.2.2
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.4.2.2.2.3;
+
+4.4.2.2.2.3
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	4.4.2.2.2.4;
+
+4.4.2.2.2.4
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.4.2.2.2.5;
+
+4.4.2.2.2.5
+date	2006.02.06.19.15.25;	author athomps;	state Exp;
+branches;
+next	;
+
+3.4.2.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	3.4.2.2;
+
+3.4.2.2
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	3.4.2.3;
+
+3.4.2.3
+date	2005.01.03.00.20.43;	author athomps;	state Exp;
+branches;
+next	3.4.2.4;
+
+3.4.2.4
+date	2005.01.04.00.23.00;	author athomps;	state Exp;
+branches;
+next	3.4.2.5;
+
+3.4.2.5
+date	2005.01.11.22.49.40;	author athomps;	state Exp;
+branches;
+next	3.4.2.6;
+
+3.4.2.6
+date	2005.01.23.19.04.55;	author athomps;	state Exp;
+branches;
+next	3.4.2.7;
+
+3.4.2.7
+date	2005.01.29.01.44.20;	author athomps;	state Exp;
+branches;
+next	3.4.2.8;
+
+3.4.2.8
+date	2005.01.29.02.15.37;	author athomps;	state Exp;
+branches;
+next	3.4.2.9;
+
+3.4.2.9
+date	2005.01.31.04.22.50;	author athomps;	state Exp;
+branches;
+next	;
+
+3.4.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.4.6.2;
+
+3.4.6.2
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+2.16.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.16.2.2;
+
+2.16.2.2
+date	2004.05.14.16.12.58;	author cjkimme;	state Exp;
+branches;
+next	2.16.2.3;
+
+2.16.2.3
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.16.2.4;
+
+2.16.2.4
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	2.16.2.5;
+
+2.16.2.5
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.28
+log
+@Added a few tweaks to charge equilibration
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <fstream>
+#include <vector>
+#include <cmath>
+using namespace std;
+#include "mpi.h"
+#include "vec3.h"
+#include "grasp.h"
+#include "input_string.h"
+#include "particle.h"
+#include "particletypelist.h"
+#include "particlelist.h"
+#include "random.h"
+#include "mersennetwister.h"
+#include "constants.h"
+#include "box.h"
+#include "box_inline.h"
+#include "comm.h"
+#include "log.h"
+#include "machine.h"
+#include "output.h"
+#include "stepper.h"
+
+#ifdef USE_REAX
+#include "reax_fortran.h"
+#include "reax_params.h"
+#include "reax_cbkc.h"
+#include "reax_cbkqa.h"
+#include "reax_small.h"
+#include "reax_functions.h"
+#endif
+
+extern Log glog;
+extern Constants constants;
+
+ParticleList::ParticleList():
+  initial_atom_file("config.in"),
+  initial_atom_file_has_energies(false),
+  scale_disps(false)
+{
+  nparticles = 0;
+  nghost_particles = 0;
+  nparticles_tot = 0;
+  mass_tot = 0.0;
+  Lwithinbox = false;
+  Ltemperatureuptodate = false;
+  Lkvuptodate = false;
+  e_kinetic = 0.0;
+  temperature = 0.0;
+  temp_init = 0.0;
+  temp_iseed = 0;
+  init_config_style = init_config_read;
+  fixed_particle_style = none;
+  minimized_particle_style = none;
+  nfixed = 0;
+  nminimized = 0;
+  vel_amp = 1.0;
+  e_cohesive = 0.0;
+  init_velocity_style = init_velocity_none;
+  kv.resize(nvirial);
+  Lreadshift = false;
+  Lwritetimestep = false;
+  Lreadtimestep = false;
+  Lwritebox = false;
+  Lreadbox = false;
+  vel_init_add[0] = 0.0;
+  vel_init_add[1] = 0.0;
+  vel_init_add[2] = 0.0;
+  vel_init_add_color = -1;
+
+#ifdef USE_REAX
+    int ngeofor_tmp = -1;
+    FORTRAN(setngeofor,SETNGEOFOR)(&ngeofor_tmp);
+#endif
+}
+
+ParticleList::~ParticleList() {
+}
+
+void ParticleList::ResetGhosts() {
+  nghost_particles = 0;
+  particles.resize(nparticles);
+}
+
+void ParticleList::Setup(Box* b, ParticleTypeList* t, Output* outp,
+			 Stepper* stepper, ForceFieldList* ff, Comm* comm) {
+  double temp_tmp,ke_tmp;
+  int node;
+  string str_tmp;
+
+  node = comm->get_node();
+
+  vec3_scale(constants.tfactor,vel_init_add,vel_init_add);
+
+  switch(init_config_style) {
+  case init_config_read:
+    ReadConfig(b,t,comm);
+    break;
+  case init_config_density:
+    ReadDensity(b,t,comm);
+    break;
+  case init_config_restart:
+    if (init_velocity_style != init_velocity_restart) {
+      if (init_velocity_style == init_velocity_none) {
+	init_velocity_style = init_velocity_restart;
+      }
+    }
+
+    ReadRestart(b,t,outp,stepper,ff,comm);
+    break;
+#ifdef USE_REAX
+  case init_config_reax:
+    ReadReax(b,t,comm);
+    break;
+#endif
+  default:
+    glog.error("ParticleList::Setup: Invalid init_config_style");
+  }
+
+  if (!initial_velocity_file.length())
+    SetupVelocity(comm);
+
+  int total_fixed;
+  map<int,int> fixed_types;
+  map<int,string>::iterator p;
+  int i_id;
+  switch(fixed_particle_style) {
+  case by_type:
+    for (int i = 0; i < fixedType.size(); i++) {
+      p = fixedType.find(i);
+      if (!(t->find_id((*p).second,i_id)))
+	glog.error("ParticleList::Setup"
+		   "Cannot find ID "+(*p).second);
+      else {
+	fixed_types[i_id] = i_id;
+	if (node == 0)
+	  glog.get_logfile() << "Will fix particles of type " << fixedType[i] << "\n";
+      }
+    }
+    for (int i = 0; i < nparticles; i++) 
+      if (fixed_types.find(particles[i].get_type()) != fixed_types.end()) {
+	particles[i].set_fixed();
+	nfixed++;
+      }
+
+    MPI_Allreduce(&nfixed,&total_fixed,1,MPI_INT,MPI_SUM,comm->get_world());
+    if (node == 0)
+      glog.get_logfile() << "Fixing " << total_fixed << " particles\n"; 
+    break;
+  case by_color:
+    for (int ii = 0; ii < fixedColor.size(); ii++) {
+      i_id = fixedColor[ii];
+      for (int i = 0; i < nparticles; i++) 
+	if (particles[i].get_color() == i_id) {
+	particles[i].set_fixed();
+	nfixed++;
+      }
+    }
+
+    MPI_Allreduce(&nfixed,&total_fixed,1,MPI_INT,MPI_SUM,comm->get_world());
+    if (node == 0)
+      glog.get_logfile() << "Fixing " << total_fixed << " particles\n"; 
+    break;
+  case none:
+    break;
+  default:
+    glog.error("ParticleList::Setup: Invalid fixed_particle_style");
+  }     
+
+  if (minimized_particle_style == by_type) {
+    map<int,int> minimized_types;
+    for (int i = 0; i < minimizedType.size(); i++) {
+      p = minimizedType.find(i);
+      if (!(t->find_id((*p).second, i_id)))
+	glog.error("ParticleList::Setup"
+		   "Cannot find ID "+(*p).second);
+      else {
+	minimized_types[i_id] = i_id;
+        if (node == 0)
+	  glog.get_logfile() << "Will minimize particles of type " << minimizedType[i]  <<" " << minimized_types[i_id] << "\n";
+      }
+    }
+     
+    for (int i = 0; i < nparticles; i++) 
+      if (minimized_types.find(particles[i].get_type()) != minimized_types.end()) {
+	particles[i].set_minimized();
+	nminimized++;
+      }
+  }
+
+  // This is needed to set up const pressure runs.
+  ComputeTemperature(comm);
+}  
+
+void ParticleList::AddParticle(const Particle& p) {
+  particles.push_back(p);
+  nparticles++;
+}
+
+void ParticleList::AddParticle(const int& type_in, const int& tag_in, 
+			       const int& color_in, 
+			       const double x_in[], const double X_in[], 
+			       const double& mass_in,
+			       const int ishift_in[], const double& charge_in, 
+			       const double& phi_in)
+{
+  Particle p(type_in, tag_in, color_in, x_in, X_in, mass_in, ishift_in, 
+	     charge_in, phi_in);
+  particles.push_back(p);
+  nparticles++;
+}
+
+void ParticleList::AddParticle(const int& type_in, const int& tag_in, 
+		      const int& color_in, 
+		      const double x_in[], const double X_in[], 
+		      const double& mass_in,
+		      const double& charge_in, const double v_in[], 
+			       const int ishift_in[], const double& phi_in, 
+		      const bool& fix_in, 
+		      const bool& minimize_in)
+{
+  Particle p(type_in, tag_in, color_in, x_in, X_in,  
+	     mass_in, charge_in, v_in, ishift_in, phi_in, fix_in, minimize_in);
+  particles.push_back(p);
+  nparticles++;
+}
+
+void ParticleList::AddGhostParticle(
+                   const int& type_in,const int& tag_in,
+		   const double x_in[], const double& charge_in) {
+  Particle p(type_in, tag_in, x_in, x_in, charge_in);
+  particles.push_back(p);
+  nghost_particles++;
+}
+
+void ParticleList::RemoveParticle(const int& i) {
+  vector<Particle>::iterator ipnt;
+  ipnt = particles.begin()+i;
+  particles.erase(ipnt);
+  nparticles--;
+}
+
+void ParticleList::RemoveGhostParticle(const int& i) {
+  vector<Particle>::iterator ipnt;
+  ipnt = particles.begin()+i;
+  particles.erase(ipnt);
+  nghost_particles--;
+}
+
+void ParticleList::ReadConfig(
+		   const Box* b, 
+		   const ParticleTypeList* t, Comm* comm) {
+  string str_buf,str_tmp;
+  string filename;
+  vector<double> buf;
+  int iatom,iperatom,j,nbuf,nbufmax;
+  double x[3],v[3],u[3],X[3],mass,charge;
+  int itag,icolor,itype;
+  string id, v_str_tmp, disp_str_tmp;
+  bool match;
+  int isize;
+  ifstream infile, velocityfile, dispfile;
+  int node;
+  bool Lown;
+  int itmp, iVelTag, dispTag;
+  bool read_velocities, read_disps;
+  int ishift[3];
+  int jj0;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering ParticleList::ReadConfig()" << endl;
+  }
+
+  if (initial_velocity_file.length()) {
+    read_velocities = true;
+  } else {
+    read_velocities = false;
+  }
+  if (initial_disp_file.length()) {
+    read_disps = true;
+    if (node == 0)
+      glog.get_logfile() << "Will attempt to read displacements from " << initial_disp_file << endl;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Will attempt to read displacements from " << initial_disp_file << endl;
+    }
+  } else {
+    read_disps = false;
+    if (node == 0)
+      glog.get_logfile() << "Will not read an initial displacement file " << endl;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Will not read an initial velocity file " << endl;
+    }
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ParticleList::ReadConfig()" << endl;
+  }
+
+  //filename = glog.path_str + initial_atom_file;
+  filename = initial_atom_file;
+  if (read_velocities)
+    //v_str_tmp = glog.path_str + initial_velocity_file;
+    v_str_tmp = initial_velocity_file;
+  if (read_disps)
+    disp_str_tmp = initial_disp_file;
+
+  if (node == 0) {
+    infile.open(filename.c_str()); 
+
+    if (!infile) {
+      infile.close();
+      infile.open(filename.c_str()); 
+      if (!infile) {
+	glog.abort("ParticleList::ReadConfig:\n"
+	"Failed to open "+filename,comm);
+      }
+    }
+
+    if (read_velocities)
+    {
+	 velocityfile.open(v_str_tmp.c_str()); 
+
+	 if (!velocityfile) 
+	 {
+	   velocityfile.close();
+	   velocityfile.open(v_str_tmp.c_str()); 
+	   if (!velocityfile) {
+	     glog.abort("ParticleList::ReadConfig:\n"
+			"Failed to open "+v_str_tmp,comm);
+	   }
+	 }
+	 else
+	 {
+	     if (node == 0)
+	       glog.get_logfile() << "Opened "<< v_str_tmp << " for velocities " << endl;
+	     if (comm->get_Lnodefile()) {
+	       comm->get_nodefile() << "Opened " << v_str_tmp << " for velocities "<< endl;
+	     }
+	 }
+     }
+
+    if (read_disps)
+    {
+	 dispfile.open(disp_str_tmp.c_str()); 
+
+	 if (!dispfile) 
+	 {
+	   dispfile.close();
+	   dispfile.open(v_str_tmp.c_str()); 
+	   if (!dispfile) {
+	     glog.abort("ParticleList::ReadConfig:\n"
+			"Failed to open "+disp_str_tmp,comm);
+	   }
+	 }
+	 else
+	 {
+	     if (node == 0)
+	       glog.get_logfile() << "Opened "<< disp_str_tmp << " for displacements " << endl;
+	     if (comm->get_Lnodefile()) {
+	       comm->get_nodefile() << "Opened " << disp_str_tmp << " for displacements "<< endl;
+	     }
+	 }
+     }
+  }
+
+  mass_tot = 0;
+  nparticles_tot = 0;
+
+  iperatom = 7;
+  if (Lreadshift)
+    iperatom += 3;
+  if (init_velocity_style == init_velocity_read || read_velocities) {
+    iperatom += 3;
+  }
+  if (read_disps)
+    iperatom += 3;
+  nbufmax = 1000;
+  buf.resize(nbufmax*iperatom);
+
+  do {
+    if (node==0) {
+      iatom = 0;
+      j = 0;
+      while (iatom<nbufmax) {
+
+	// Userfriendly input form
+	// Slows down the single-process read rate a little
+	// but not usually a problem, since communication is bottleneck.
+	if(input_string_get(infile,str_buf)) {
+	  if(str_buf == "End of Input") {
+	    break;
+	  } else {
+	    glog.abort("ParticleList::ReadConfig:\n"
+		       "Read error in "+filename,comm);
+	  }
+	}
+
+	std::istringstream buf_in(str_buf);
+
+	jj0 = j;
+	buf_in >> buf[j++];
+	buf_in >> str_tmp;
+	j++;
+	buf_in >> buf[j++];
+	buf_in >> buf[j++];
+	buf_in >> buf[j++];
+	buf_in >> buf[j++];
+	buf_in >> buf[j++];
+
+	if (buf_in.fail()) {
+	  glog.abort("ParticleList::ReadConfig:\n"
+		     "Read error in "+filename,comm);
+	}
+
+	if (Lreadshift) {
+	  buf_in >> buf[j++];
+	  buf_in >> buf[j++];
+	  buf_in >> buf[j++];
+
+	  if (buf_in.fail()) {
+	    glog.abort("ParticleList::ReadConfig:\n"
+		       "Read error in "+filename+
+		       "\n Possibly missing periodic shift indexes",comm);
+	  }
+	}
+
+	if (init_velocity_style == init_velocity_read) {
+	  buf_in >> buf[j++];
+	  buf_in >> buf[j++];
+	  buf_in >> buf[j++];
+
+	  if (buf_in.fail()) {
+	    glog.abort("ParticleList::ReadConfig:\n"
+		       "Read error in "+filename+
+		       "\n Possibly missing velocity entries",comm);
+	  }
+	}
+
+	if (read_velocities)
+	{
+	    if(input_string_get(velocityfile,str_buf)) 
+	    {
+	      if(str_buf == "End of Input") 
+	      {
+		break;
+	      } 
+	      else 
+	      {
+		glog.abort("ParticleList::ReadConfig:\n"
+		       "Read error in "+v_str_tmp,comm);
+	      }
+	    }
+
+	    buf_in.clear();
+	    buf_in.str(str_buf);
+
+	    buf_in  >> iVelTag;
+	    buf_in >> buf[j++];
+	    buf_in >> buf[j++];
+	    buf_in >> buf[j++];
+	    
+	    if (buf_in.fail())
+	      glog.abort("ParticleLst::ReadConfig:\n"
+			 "Read error in "+v_str_tmp,comm);
+
+	    if (iVelTag != buf[jj0])
+	      glog.abort("ParticleList::ReadConfig:\n"
+			 "Position and Velocity files not synced\n");
+	    
+	    if (scale_disps) {
+	      buf[j-3] *= disp_amp;
+	      buf[j-2] *= disp_amp;
+	      buf[j-1] *= disp_amp;
+	    }
+
+	    buf[j-3] *= vel_amp;
+	    buf[j-2] *= vel_amp;
+	    buf[j-1] *= vel_amp;
+	}
+
+	if (read_disps) {
+	  if(input_string_get(dispfile,str_buf)) {
+	    if(str_buf == "End of Input") {
+	      break;
+	    } else {
+	      glog.abort("ParticleList::ReadConfig:\n"
+			 "Read error in "+filename,comm);
+	    }
+	  }
+
+	  buf_in.clear();
+	  buf_in.str(str_buf);
+
+	  buf_in >> dispTag >> u[0] >> u[1] >> u[2];
+
+	  if (buf_in.fail()) {
+	    glog.abort("ParticleList::ReadConfig:\n"
+		       "Read error in "+filename,comm);
+	  }
+
+	  if (dispTag != buf[jj0])
+	    glog.abort("ParticleList::ReadConfig\n"
+                       "Displacement tags fail check\n");
+
+	  if (scale_disps) {
+	    u[0] *= disp_amp;
+	    u[1] *= disp_amp;
+	    u[2] *= disp_amp;
+	  }
+
+	  // store reference configuration
+	  buf[j++] = buf[jj0+4];
+	  buf[j++] = buf[jj0+5];
+	  buf[j++] = buf[jj0+6];
+
+	  // update positions
+	  buf[jj0+4] += u[0];
+	  buf[jj0+5] += u[1];
+	  buf[jj0+6] += u[2];
+	}
+
+//	No-frills input form
+//      Does not handle '#' or '\' special commands,
+//      buts its about three times faster on 1 node. 
+// 	infile >> buf[j] >> str_tmp >> buf[j+2] >> buf[j+3] >> 
+// 	  buf[j+4] >> buf[j+5] >> buf[j+6];
+// 	if (!infile) {
+// 	  if (infile.eof()) {
+// 	    break;
+// 	  } else {
+// 	    glog.abort("ParticleList::ReadConfig:\n"
+// 		       "Read error in " + filename,comm);
+// 	  }
+// 	}
+
+	match = t->find_id(str_tmp,itype);
+	if (!match) {
+	  glog.abort("ParticleList::ReadConfig:\n"
+		     "Missing definition for id " + str_tmp);
+	}
+
+	buf[jj0+1] = itype;
+
+	iatom++;
+      }
+      nbuf = iatom;
+    }
+
+    MPI_Bcast(&nbuf,1,MPI_INT,0,comm->get_world());
+
+    MPI_Bcast(&buf[0],nbuf*iperatom,MPI_DOUBLE,0,comm->get_world());
+
+    j = 0;
+    for (iatom=0;iatom<nbuf;iatom++) {
+      nparticles_tot++;
+      itag = nparticles_tot-1;
+      usertag.push_back(nint(buf[j++]));
+      itype = nint(buf[j++]);
+      icolor = nint(buf[j++]);
+      charge = buf[j++];
+      x[0] = buf[j++];
+      x[1] = buf[j++];
+      x[2] = buf[j++];
+      if (Lreadshift) {
+	ishift[0] = nint(buf[j++]);
+	ishift[1] = nint(buf[j++]);
+	ishift[2] = nint(buf[j++]);
+      } else {
+	ishift[0] = 0;
+	ishift[1] = 0;
+	ishift[2] = 0;
+      }
+      if (read_velocities) {
+	v[0] = buf[j++];
+	v[1] = buf[j++];
+	v[2] = buf[j++];
+	if (icolor == vel_init_add_color || vel_init_add_color == -1) {
+	  v[0] += vel_init_add[0];
+	  v[1] += vel_init_add[1];
+	  v[2] += vel_init_add[2];
+	}
+      } else if (init_velocity_style == init_velocity_read) {
+	v[0] = buf[j++]*constants.tfactor;;
+	v[1] = buf[j++]*constants.tfactor;
+	v[2] = buf[j++]*constants.tfactor;
+	if (icolor == vel_init_add_color || vel_init_add_color == -1) {
+	  v[0] += vel_init_add[0];
+	  v[1] += vel_init_add[1];
+	  v[2] += vel_init_add[2];
+	}
+      }
+      if (read_disps) {
+	X[0] = buf[j++];
+	X[1] = buf[j++];
+	X[2] = buf[j++];
+      } else {
+	X[0] = x[0];
+	X[1] = x[1];
+	X[2] = x[2];
+      }
+
+      mass = t->get_type_mass(itype);
+      mass_tot+=mass;
+
+      b->Minimg_Pos_Full(x, X, ishift);
+      Lown = comm->sub_check(b,x);
+      if (Lown) {
+	if (init_velocity_style == init_velocity_read || read_velocities) {
+	  AddParticle(itype,itag,icolor,x,X,mass,charge,v,ishift);
+	} else {
+	  AddParticle(itype,itag,icolor,x,X,mass,ishift,charge);
+	}
+      }
+
+    }
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Read " << nbuf << " particles" << endl;
+    }
+
+  } while (nbuf!=0);
+
+  localptr.resize(nparticles_tot);
+  localptr_clear();
+  localptr_set();
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+  }
+  if (node == 0) {
+    glog.get_logfile() << "Total particles read = " << nparticles_tot << endl;
+  }
+
+  if (nparticles_tot == 0) {
+    glog.error("ParticleList::ReadConfig:\n"
+	       "Zero particles read from "+filename);
+  }
+    
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,comm->get_world());
+  if (itmp != nparticles_tot) {
+    glog.error("ParticleList::ReadConfig:\n"
+	       "Invalid particle count");
+  }
+
+  Lwithinbox = true;
+
+}
+
+int ParticleList::get_nparticles() const {
+  return nparticles;
+}
+
+int ParticleList::get_nghost_particles() const {
+  return nghost_particles;
+}
+
+int ParticleList::get_nparticles_tot() const {
+  return nparticles_tot;
+}
+
+int ParticleList::get_nfixed() const {
+  return nfixed;
+}
+
+int ParticleList::get_nminimized() const {
+  return nminimized;
+}
+
+void ParticleList::AddCapacity(const int& i) {
+  particles.reserve(i);
+}    
+
+void ParticleList::StepVelocity(const double& timestep) {
+  if (fixed_particle_style == none)
+    for (int i=0;i<nparticles;i++) {
+      particles[i].step_v(timestep);
+    }
+  else
+    for (int i = 0; i < nparticles; i++)
+      if (!particles[i].get_fixed())
+	particles[i].step_v(timestep);
+
+  Ltemperatureuptodate = false;
+  Lkvuptodate = false;
+}
+
+void ParticleList::ScaleVelocity(const double& fac) {
+  for (int i=0;i<nparticles;i++) {
+    particles[i].scale_v(fac);
+  }
+  Ltemperatureuptodate = false;
+  Lkvuptodate = false;
+}
+
+void ParticleList::ScaleVelocity(const Box* b,const double fac[]) {
+  for (int i=0;i<nparticles;i++) {
+    particles[i].scale_v(b,fac);
+  }
+  Ltemperatureuptodate = false;
+  Lkvuptodate = false;
+}
+
+void ParticleList::ScaleVelocity(const Box* b, const double deformation[3][3]) {
+  for (int i=0;i<nparticles;i++) {
+    particles[i].scale_v(b,deformation); 
+  }
+  Ltemperatureuptodate = false;
+  Lkvuptodate = false;
+}
+
+
+void ParticleList::StepPosition(const double& timestep) {
+  Lwithinbox = false;
+  if (fixed_particle_style == none)
+    for (int i=0;i<nparticles;i++) 
+      particles[i].step_x(timestep);
+  else
+    for (int i = 0; i < nparticles; i++)
+      if (!particles[i].get_fixed())
+	particles[i].step_x(timestep);
+}
+
+void ParticleList::StepPositionForce(
+                   const double& timestepsq, const bool* relax_coord,
+		   bool& Lmaxstep, double& fsq, const double maxstep) {
+  Lmaxstep = false;
+  Lwithinbox = false;
+  fsq = 0.0;
+  double fsqtmp;
+
+  if (fixed_particle_style == none) {
+    if (maxstep > 0.0) {
+      for (int i=0;i<nparticles;i++) {
+	particles[i].step_x_force(timestepsq,relax_coord,maxstep,Lmaxstep,fsqtmp);
+	fsq+=fsqtmp;
+      }
+    } else {
+      for (int i=0;i<nparticles;i++) {
+	particles[i].step_x_force(timestepsq,relax_coord);
+      }
+    }
+  } else {
+     if (maxstep > 0.0) {
+      for (int i=0;i<nparticles;i++) 
+	if (!particles[i].get_fixed()) {
+	  particles[i].step_x_force(timestepsq,relax_coord,maxstep,Lmaxstep,fsqtmp);
+	  fsq+=fsqtmp;
+	}
+    } else {
+      for (int i=0;i<nparticles;i++) 
+	if (!particles[i].get_fixed())
+	  particles[i].step_x_force(timestepsq,relax_coord);
+    }
+  }
+}
+
+void ParticleList::ResetPosition(const Box* b, const bool& Lfull) {
+  double xi[3];
+
+  if (Lwithinbox) return;
+
+  if (Lfull) {
+    for (int i=0;i<nparticles;i++)
+      {
+	particles[i].reset_full_x(b); 
+      }
+  } else {
+    for (int i=0;i<nparticles;i++)
+      {
+	particles[i].reset_x(b); 
+      }
+  }
+  Lwithinbox = true;
+
+}
+
+void ParticleList::ScalePosition(const Box* b, const double dilation[]) {
+  for (int i=0;i<nparticles;i++) {
+    particles[i].scale_x(b,dilation); 
+  }
+}
+
+void ParticleList::ScaledDeform(const Box* b, const double deformation[3][3]) {
+  for (int i=0;i<nparticles;i++) {
+    particles[i].scaled_deform(b,deformation); 
+  }
+}
+
+void ParticleList::ScaleMinimized(const Box* b, const double dilation[]) {
+  for (int i = 0; i < nparticles; i++) {
+    if (particles[i].get_minimized())
+      particles[i].scale_x(b,dilation);
+  }
+}
+
+void ParticleList::ComputeTemperature(Comm* comm) {
+  double sum_mvsq,tmp;
+
+  if (Ltemperatureuptodate) return;
+
+  sum_mvsq = 0.0;
+  for (int i=0;i<nparticles;i++) {
+    sum_mvsq+=particles[i].get_mvsq();
+  }
+  MPI_Allreduce(&sum_mvsq,&tmp,1,MPI_DOUBLE,MPI_SUM,comm->get_world());
+
+  temperature = tmp/(ndof*constants.boltz);
+  e_kinetic = 0.5*tmp;
+
+  Ltemperatureuptodate = true;
+}
+
+void ParticleList::ComputeNDoFreedom(Comm* comm) {
+
+  ndof = 3*(nparticles_tot-1);
+  //ndof = 3*(nparticles_tot-0);
+}
+
+void ParticleList::SetupVelocity(Comm* comm) {
+  double v_tmp[3];
+  double factor,temp_tmp,ke_tmp;
+  int iseed_tmp;
+  MTRand mtrand;
+  int iii;
+
+  ComputeNDoFreedom(comm);
+  switch(init_velocity_style) {
+  case init_velocity_temperature:
+  // Velocity are generated as follows:
+  // 1. Velocity are initially selected from a normalized Gaussian
+  //    distribution
+  // 2. Equipartition achieved by applying a weighting of 1/sqrt(mass)
+  // 3. Total momentum is set to zero by subtracting mass-weighted 
+  //    average velocity.
+  // 4. Temperature is set to the temp_init by rescaling.
+
+    // If Lworld_seed is set, then get_world_seed returns
+    // a world-specific seed;  otherwise it returns zero.
+    iseed_tmp = temp_iseed + comm->get_world_seed();
+
+    mtrand.seed(iseed_tmp);
+
+    for (int ii=0;ii<nparticles_tot;ii++) {
+      // gausslc uses Portable linear congruential PRNG.
+//       v_tmp[0] = gausslc(iseed_tmp);
+//       v_tmp[1] = gausslc(iseed_tmp);
+//       v_tmp[2] = gausslc(iseed_tmp);
+      // randNorm uses Mersenne Twister PRNG 
+      v_tmp[0] = mtrand.randNorm();
+      v_tmp[1] = mtrand.randNorm();
+      v_tmp[2] = mtrand.randNorm();
+      iii = localptr[ii];
+      if (iii != -1 && iii<nparticles) { 
+	factor = 1.0/sqrt(particles[iii].get_mass());
+	vec3_scale(factor,v_tmp,v_tmp);
+	particles[iii].set_v(v_tmp);
+      }
+    }
+    ZeroMomentum(comm);
+    ComputeTemperature(comm);
+    RescaleTemperature(temp_init,temperature);
+
+    for (int i=0;i<nparticles;i++) {
+      if (particles[i].get_color() == vel_init_add_color || vel_init_add_color == -1) {
+	particles[i].get_v(v_tmp);
+	vec3_add(v_tmp,vel_init_add,v_tmp);
+	particles[i].set_v(v_tmp);
+      }
+    }
+
+    Ltemperatureuptodate = false;
+    Lkvuptodate = false;
+    break;
+  case init_velocity_read:
+    if (init_config_style != init_config_read) {
+      glog.error("ParticleList::SetupVelocity:\n"
+		 "init_velocity_read requires init_config_read");
+    }
+    Ltemperatureuptodate = false;
+    Lkvuptodate = false;
+    break;
+  case init_velocity_restart:
+    if (init_config_style != init_config_restart) {
+      glog.error("ParticleList::SetupVelocity:\n"
+		 "init_velocity_restart requires init_config_restart");
+    }
+    Ltemperatureuptodate = false;
+    Lkvuptodate = false;
+    break;
+  case init_velocity_none:
+    for (int i=0;i<nparticles;i++) {
+      if (particles[i].get_color() == vel_init_add_color || vel_init_add_color == -1) {
+	particles[i].get_v(v_tmp);
+	vec3_add(v_tmp,vel_init_add,v_tmp);
+	particles[i].set_v(v_tmp);
+      }
+    }
+
+    break;
+  default:
+    glog.error("ParticleList::SetupVelocity:\n"
+	       "Invalid init_velocity_style");
+  }
+
+  // This is needed to set up const pressure runs.
+  ComputeTemperature(comm);
+}
+
+void ParticleList::SumMomentum(Comm* comm, double psum_tot[3]) {
+  double v_tmp[3],m_tmp;
+  double psum[3];
+
+  vec3_zero(psum);
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_v(v_tmp);
+    m_tmp = particles[i].get_mass();
+    vec3_scaleadd(m_tmp,v_tmp,psum,psum);
+  }
+
+  MPI_Allreduce(&psum[0],&psum_tot[0],3,MPI_DOUBLE,MPI_SUM,comm->get_world());
+  vec3_scale(1.0/mass_tot,psum_tot,psum_tot);
+
+}
+
+void ParticleList::ZeroMomentum(Comm* comm) {
+  double v_tmp[3],m_tmp;
+  double psum[3],psum_tot[3];
+
+  vec3_zero(psum);
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_v(v_tmp);
+    m_tmp = particles[i].get_mass();
+    vec3_scaleadd(m_tmp,v_tmp,psum,psum);
+  }
+
+  MPI_Allreduce(&psum[0],&psum_tot[0],3,MPI_DOUBLE,MPI_SUM,comm->get_world());
+  vec3_scale(1.0/mass_tot,psum_tot,psum_tot);
+
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_v(v_tmp);
+    vec3_subtract(v_tmp,psum_tot,v_tmp);
+    particles[i].set_v(v_tmp);
+  }
+
+  Ltemperatureuptodate = false;
+  Lkvuptodate = false;
+}
+
+void ParticleList::RescaleTemperature(
+          const double& temp_target, const double& temp_current) {
+  double v_tmp[3];
+  double factor;
+  factor = sqrt(temp_target/temp_current);
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_v(v_tmp); 
+    vec3_scale(factor,v_tmp,v_tmp);
+    particles[i].set_v(v_tmp);
+  }
+
+  Ltemperatureuptodate = false;
+  Lkvuptodate = false;
+}
+
+void ParticleList::ZeroForce() {
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    particles[i].set_f();
+    particles[i].set_phi(0.0);
+    particles[i].set_virial();
+  }
+}
+
+double ParticleList::get_kinetic_energy() const {
+  if (!Ltemperatureuptodate) {
+    glog.error("ParticleList::get_kinetic_energy():\n"
+	       "Temperature not up to date");
+  }
+  return e_kinetic;
+}
+
+void ParticleList::SaveGradient(valarray<double>& fsave) {
+  if (fsave.size() < 3*nminimized)
+    fsave.resize(3*nminimized);
+  double rtmp[3];
+  int j = 0;
+  for (int i=0;i<nparticles;i++) {
+    if (particles[i].get_minimized()) {
+      particles[i].get_f(rtmp);
+      fsave[j] = rtmp[0];
+      fsave[j+1] = rtmp[1];
+      fsave[j+2] = rtmp[2];
+      j += 3;
+    }
+  }
+}
+
+void ParticleList::SaveMinimized(valarray<double>& rsave) {
+  double rtmp[3];
+  if (rsave.size() < 3*nminimized) 
+    rsave.resize(3*nminimized);
+
+  int j = 0;
+  for (int i = 0; i < nparticles; i++) {
+    if (particles[i].get_minimized()) {
+      particles[i].get_x(rtmp);
+      rsave[j] = rtmp[0];
+      rsave[j+1] = rtmp[1];
+      rsave[j+2] = rtmp[2];
+      j += 3;
+    }
+  }
+}
+
+void ParticleList::MoveMinimized(valarray<double>& rnew) {
+  if (rnew.size() < 3*nminimized)
+    glog.error("ParticleList::MoveMinimized Bad size\n");
+  double rtmp[3];
+
+  Lwithinbox = false;
+
+  int j = 0;
+  for (int i = 0; i < nparticles; i++) 
+    if (particles[i].get_minimized()) {
+      rtmp[0] = rnew[j];
+      rtmp[1] = rnew[j+1];
+      rtmp[2] = rnew[j+2];
+      particles[i].set_x(rtmp);
+      j += 3;
+    } 
+}
+
+void ParticleList::SavePositionCharge(valarray<double>& rsave) {
+  double rtmp[3];
+  int ntmp = nparticles;
+
+  if (rsave.size() < 4*ntmp) {
+    rsave.resize(4*ntmp);
+  }
+
+  int j = 0;
+  for (int i = 0; i < ntmp; i++) {
+    particles[i].get_x(rtmp);
+    rsave[j] = rtmp[0];
+    rsave[j+1] = rtmp[1];
+    rsave[j+2] = rtmp[2];
+    rsave[j+3] = particles[i].get_charge();
+    j += 4;
+  }
+}
+
+void ParticleList::RestorePositionCharge(valarray<double>& rsave) {
+  double rtmp[3];
+  int ntmp = nparticles;
+
+  int j = 0;
+  for (int i = 0; i < ntmp; i++) {
+    particles[i].set_x(&rsave[j]);
+    particles[i].set_charge(rsave[j+3]);
+    j += 4;
+  }
+}
+
+double ParticleList::get_kinetic_virial() const {
+  if (!Ltemperatureuptodate) {
+    glog.error("ParticleList::get_kinetic_virial():\n"
+	       "Temperature not up to date");
+  }
+  return (2.0/3.0)*e_kinetic;
+}
+
+double ParticleList::get_temperature() const {
+  if (!Ltemperatureuptodate) {
+    glog.error("ParticleList::get_temperature():\n"
+	       "Temperature not up to date");
+  }
+  return temperature;
+}
+
+void ParticleList::get_kinetic_virial(vector <double>& kv_tmp) const {
+  if (!Lkvuptodate) {
+    glog.error("ParticleList::get_kinetic_virial():\n"
+	       "Kinetic virial not up to date");
+  }
+  kv_tmp.resize(nvirial);
+  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+    kv_tmp[ivirial] = kv[ivirial];
+  }
+}
+
+void ParticleList::ComputeKineticVirial(Comm* comm) {
+  vector <double> kv_tmp;
+  double tmp;
+
+  if (Lkvuptodate) {
+    return;
+  }
+
+  kv_tmp.resize(nvirial);
+
+  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+    kv[ivirial] = 0.0;
+  }
+
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_mvsq(kv_tmp);
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      kv[ivirial] += kv_tmp[ivirial];
+    }
+  }
+
+  MPI_Allreduce(&kv[0],&kv_tmp[0],nvirial,MPI_DOUBLE,
+		MPI_SUM,comm->get_world());
+  kv.swap(kv_tmp);
+
+  tmp = kv[0]+kv[1]+kv[2];
+  temperature = tmp/(ndof*constants.boltz);
+  e_kinetic = 0.5*tmp;
+  Ltemperatureuptodate = true;
+  Lkvuptodate = true;
+}
+
+double ParticleList::get_cohesive_energy() const {
+  return e_cohesive;
+}
+
+int ParticleList::get_ndof() const {
+  return ndof;
+}
+
+const Particle* ParticleList::get_particles() const {
+  return &particles[0];
+}
+
+void ParticleList::pack_comm(const int& num, const vector<int>& list,
+			     double* buf, const int pbc[], 
+			     const Box* b) const {
+  int ii,m;
+  double rshift[3],lva[3],lvb[3],lvc[3];
+
+  m = 0;
+  for (int i=0;i<num;i++) {
+    ii = list[i];
+    particles[ii].get_x(&buf[m]);
+    m+=3; 
+  }
+
+  if (pbc[0]) {
+    b->get_lv(lva,lvb,lvc);
+    rshift[0] = 0.0;
+    rshift[1] = 0.0;
+    rshift[2] = 0.0;
+
+    if (pbc[1]==-1) {
+      vec3_subtract(rshift,lva,rshift);
+    } else if (pbc[1]==1) {
+      vec3_add(rshift,lva,rshift);
+    }
+
+    if (pbc[2]==-1) {
+      vec3_subtract(rshift,lvb,rshift);
+    } else if (pbc[2]==1) {
+      vec3_add(rshift,lvb,rshift);
+    }
+
+    if (pbc[3]==-1) {
+      vec3_subtract(rshift,lvc,rshift);
+    } else if (pbc[3]==1) {
+      vec3_add(rshift,lvc,rshift);
+    }
+
+    m = 0;
+    for (int i=0;i<num;i++) {
+      vec3_add(&buf[m],rshift,&buf[m]);
+      m+=3;
+    }
+  }
+}
+
+void ParticleList::unpack_comm(const int& num, const int& ifirst,
+			     const double* buf) {
+  int ii,m;
+
+  ii = ifirst;
+  m = 0;
+  for (int i=0;i<num;i++) {
+    particles[ii].set_x(&buf[m]);
+    ii++;
+    m+=3;
+  }
+}
+
+void ParticleList::pack_reverse(const int& num, const int& ifirst,
+			     double* buf) const {
+  int ii,m;
+
+  ii = ifirst;
+  m = 0;
+  for (int i=0;i<num;i++) {
+    particles[ii].get_f(&buf[m]);
+    m += 3;
+    buf[m] = particles[ii].get_phi();
+    m++;
+    particles[ii].get_virial(&buf[m]);
+    m += 6;
+    ii++;
+  }
+}
+
+void ParticleList::unpack_reverse(const int& num, const vector<int>& list,
+			     const double* buf) {
+  int ii,m;
+
+  m = 0;
+  for (int i=0;i<num;i++) {
+    ii = list[i];
+    particles[ii].increment_f(&buf[m]);
+    m+=3;
+    particles[ii].increment_phi(buf[m]);
+    m++;
+    particles[ii].increment_virial(&buf[m]);
+    m+=6;
+  }
+}
+
+int ParticleList::pack_exchange(const int& ii, double* buf) const {
+  
+  int m;
+
+  m = 0;
+  particles[ii].get_x(&buf[m]);
+  m+=3;
+  particles[ii].get_X(&buf[m]);
+  m+=3;
+  particles[ii].get_v(&buf[m]);
+  m+=3;
+  buf[m] = particles[ii].get_charge();
+  m++;
+  buf[m] = static_cast<double>(particles[ii].get_type());
+  m++;
+  buf[m] = static_cast<double>(particles[ii].get_tag());
+  m++;
+  buf[m] = static_cast<double>(particles[ii].get_color());
+  m++;
+  buf[m] = particles[ii].get_mass();
+  m++;
+  particles[ii].get_shift(&buf[m]);
+  m+=3;
+  buf[m] = particles[ii].get_phi();
+  m++;
+  if (particles[ii].get_fixed())
+    buf[m] = 1.;
+  else
+    buf[m] = -1.;
+  m++;
+  if (particles[ii].get_minimized())
+    buf[m] = 1;
+  else
+    buf[m] = -1.;
+  m++;
+  
+  return m;
+}
+
+int ParticleList::unpack_exchange(const double* buf) {
+  int type_in,tag_in,color_in;
+  const double* x_in;
+  const double* v_in;
+  const double* X_in;
+  double charge_in,mass_in,phi_in;
+  bool fix_in, minimize_in;
+  int m;
+  int ishift_in[3];
+
+  m = 0;
+  x_in = &buf[m];
+  m+=3;
+  X_in = &buf[m];
+  m+=3;
+  v_in = &buf[m];
+  m+=3;
+  charge_in = buf[m];
+  m++;
+  type_in = nint(buf[m]);
+  m++;
+  tag_in = nint(buf[m]);
+  m++;
+  color_in = nint(buf[m]);
+  m++;
+  mass_in = buf[m];
+  m++;
+  ishift_in[0] = nint(buf[m]);
+  m++;
+  ishift_in[1] = nint(buf[m]);
+  m++;
+  ishift_in[2] = nint(buf[m]);
+  m++;
+  phi_in = buf[m];
+  m++;
+  fix_in = buf[m] > 0.;
+  m++;
+  minimize_in = buf[m] > 0.;
+  m++;
+
+  AddParticle(type_in, tag_in, color_in, x_in, X_in,
+	      mass_in, charge_in, v_in, ishift_in, phi_in, fix_in, minimize_in);
+
+  return m;
+}
+
+int ParticleList::skip_exchange(const double* buf) const {
+  return size_exchange;
+}
+
+int ParticleList::pack_border(const int& ii, 
+			     double* buf, const int pbc[], 
+			     const Box* b) const {
+  int m;
+  double rshift[3],lva[3],lvb[3],lvc[3];
+
+  m = 0;
+  particles[ii].get_x(&buf[m]);
+
+  if (pbc[0]) {
+    b->get_lv(lva,lvb,lvc);
+    rshift[0] = 0.0;
+    rshift[1] = 0.0;
+    rshift[2] = 0.0;
+
+    if (pbc[1]==-1) {
+      vec3_subtract(rshift,lva,rshift);
+    } else if (pbc[1]==1) {
+      vec3_add(rshift,lva,rshift);
+    }
+
+    if (pbc[2]==-1) {
+      vec3_subtract(rshift,lvb,rshift);
+    } else if (pbc[2]==1) {
+      vec3_add(rshift,lvb,rshift);
+    }
+
+    if (pbc[3]==-1) {
+      vec3_subtract(rshift,lvc,rshift);
+    } else if (pbc[3]==1) {
+      vec3_add(rshift,lvc,rshift);
+    }
+    vec3_add(&buf[m],rshift,&buf[m]);
+  }
+  m+=3;
+  buf[m] = particles[ii].get_charge();
+  m++;
+  buf[m] = static_cast<double>(particles[ii].get_type());
+  m++;
+  buf[m] = static_cast<double>(particles[ii].get_tag());
+  m++;
+ 
+  return m;
+}
+
+int ParticleList::unpack_border(const double* buf) {
+  int type_in,tag_in;
+  const double* x_in;
+  double charge_in;
+  int m;
+
+  m = 0;
+  x_in = &buf[m];
+  m+=3;
+  charge_in = buf[m];
+  m++;
+  type_in = nint(buf[m]);
+  m++;
+  tag_in = nint(buf[m]);
+  m++;
+  AddGhostParticle(type_in, tag_in, x_in, charge_in);
+
+  return m;
+}
+
+int ParticleList::get_size_comm() const {
+  return size_comm;
+}
+
+int ParticleList::get_size_reverse() const {
+  return size_reverse;
+}
+
+int ParticleList::get_size_border() const {
+  return size_border;
+}
+
+void ParticleList::localptr_clear() {
+  localptr.assign(nparticles_tot,-1);
+}
+
+void ParticleList::localptr_set() {
+  for (int i=nparticles+nghost_particles-1;i>=0;i--) {
+    localptr[particles[i].get_tag()] = i;
+  }
+}
+
+double ParticleList::ComputeTemperatureColor(const int& color, Comm* comm) {
+  double sum[2],tmp[2],temp_tmp;
+
+  sum[0] = 0.0;
+  sum[1] = 0.0;
+  for (int i=0;i<nparticles;i++) {
+    if (particles[i].get_color() == color) {
+      sum[0]++;
+      sum[1]+=particles[i].get_mvsq();
+    }
+  }
+  MPI_Allreduce(&sum[0],&tmp,2,MPI_DOUBLE,MPI_SUM,comm->get_world());
+
+  if (tmp[0] > 0.0) {
+    temp_tmp = tmp[1]/(3*tmp[0]*constants.boltz);
+  } else { 
+    temp_tmp = 0.0;
+  }
+
+  return temp_tmp;
+
+}
+
+void ParticleList::RescaleTemperatureColor(const int& color, 
+          const double& temp_target, const double& temp_current) {
+  double v_tmp[3];
+  double factor;
+  if (temp_current > 0.0) {
+    factor = sqrt(temp_target/temp_current);
+    for (int i=0;i<nparticles;i++) {
+      if (particles[i].get_color() == color) {
+	particles[i].get_v(v_tmp);
+	vec3_scale(factor,v_tmp,v_tmp);
+	particles[i].set_v(v_tmp);
+      }
+    }
+  } else {
+    glog.error("ParticleList::RescaleTemperatureColor:\n"
+	       "Can not rescale when temperature is zero");
+  }
+}
+
+double ParticleList::ComputeTemperatureSlab(const int& idir, 
+					    const double& rlo, const double& rhi, Comm* comm) {
+  double sum[2],tmp[2],temp_tmp,r[3];
+
+  sum[0] = 0.0;
+  sum[1] = 0.0;
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_x(r);
+    if ( r[idir] >= rlo && r[idir] < rhi ) {
+      sum[0]++;
+      sum[1]+=particles[i].get_mvsq();
+    }
+  }
+  MPI_Allreduce(&sum[0],&tmp,2,MPI_DOUBLE,MPI_SUM,comm->get_world());
+
+  if (tmp[0] > 0.0) {
+    temp_tmp = tmp[1]/(3*tmp[0]*constants.boltz);
+  } else { 
+    temp_tmp = 0.0;
+  }
+
+  return temp_tmp;
+
+}
+
+void ParticleList::RescaleTemperatureSlab(const int& idir, 
+					  const double& rlo, const double& rhi, 
+					  const double& temp_target, const double& temp_current) {
+  double v_tmp[3],r[3];
+  double factor;
+  if (temp_current > 0.0) {
+    factor = sqrt(temp_target/temp_current);
+    for (int i=0;i<nparticles;i++) {
+      particles[i].get_x(r);
+      if ( r[idir] >= rlo && r[idir] < rhi ) {
+	particles[i].get_v(v_tmp);
+	vec3_scale(factor,v_tmp,v_tmp);
+	particles[i].set_v(v_tmp);
+      }
+    }
+  } else {
+    glog.error("ParticleList::RescaleTemperatureColor:\n"
+	       "Can not rescale when temperature is zero");
+  }
+}
+
+double ParticleList::ComputeAlphaType(const int& type, Comm* comm) {
+  double sum[2],tmp[2],temp_tmp;
+
+  sum[0] = 0.0;
+  sum[1] = 0.0;
+  for (int i=0;i<nparticles;i++) {
+    temp_tmp = particles[i].get_phi()-e_cohesive + particles[i].get_mvsq()/2.;
+    sum[0] += temp_tmp;
+    if (particles[i].get_type() == type) 
+      sum[1] += temp_tmp;
+  }
+  MPI_Allreduce(&sum[0],&tmp,2,MPI_DOUBLE,MPI_SUM,comm->get_world());
+
+  return tmp[1]/tmp[0];
+
+}
+
+void ParticleList::TranslateByType(const int& type, const valarray<double>& dR) 
+{
+  double drhere[3];
+  drhere[0] = dR[0];
+  drhere[1] = dR[1];
+  drhere[2] = dR[2];
+  for (int i = 0; i < nparticles; i++) 
+    if (particles[i].get_type() == type) 
+      particles[i].increment_x(drhere);
+}
+
+void ParticleList::ConjugateGradientUpdate(const double R[]) 
+{
+  const double* r = R;
+
+  Lwithinbox = false;
+
+  for (int i = 0; i < nparticles; i++) 
+    if (particles[i].get_minimized()) {
+      particles[i].set_x(r);
+      r += 3;
+    }
+}
+
+void ParticleList::SumForceByType(const int& type, valarray<double>& f, Comm* comm) 
+{
+  double ftmp[3], pf[3], fhere[3]; 
+  fhere[0] = fhere[1] = fhere[2] = pf[0] = pf[1] = pf[2] = 0.;
+  for (int i = 0; i < nparticles; i++) 
+     if (particles[i].get_type() == type) {
+        particles[i].get_f(ftmp);
+	pf[0] += ftmp[0];
+	pf[1] += ftmp[1];
+	pf[2] += ftmp[2];
+     }
+  MPI_Allreduce(pf,fhere,3, MPI_DOUBLE,MPI_SUM,comm->get_world());
+  f[0] = fhere[0];
+  f[1] = fhere[1];
+  f[2] = fhere[2];
+}
+
+void ParticleList::ReadDensity( 
+		 const Box* b, const ParticleTypeList* t, Comm* comm) {
+  string str_buf,str_tmp;
+  vector<double> buf;
+  int iatom,iperatom,j,nbuf,nbufmax;
+  double x[3],mass,charge;
+  int itag,icolor,itype;
+  string id;
+  bool match;
+  int isize;
+  ifstream infile;
+  int node;
+  bool Lown;
+  int itmp;
+  vector<double*> bin_density;
+  vector<int> type_density;
+  int ntypes_density,nparticles_id;
+  double density_tot_id;
+  int iseed_tmp,ibin;
+  double lva[3],lvb[3],lvc[3],origin[3];
+  double wh,wk,wl;
+  bool Lorthorhombic;
+  double density_tmp,xtmp,rfrac[3];
+  int maxlines;
+  string filename;
+
+  maxlines = static_cast<int>(1e6);
+  buf.reserve(256);
+  
+  Lorthorhombic = b->get_Lorthorhombic();
+
+  iseed_tmp = 256;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering ParticleList::ReadDensity()" << endl;
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ParticleList::ReadDensity()" << endl;
+  }
+
+  filename = glog.path_str + "density.in";
+  if (node == 0) {
+    infile.open(filename.c_str()); 
+
+    if (!infile) {
+      infile.close();
+      infile.open(filename.c_str()); 
+      if (!infile) {
+	glog.abort("ParticleList::ReadDensity:\n"
+	"Failed to open "+filename,comm);
+      }
+    }
+  }
+
+  ntypes_density = 0;
+  while (ntypes_density*init_config_nbins<maxlines) {
+    if(input_string_get(infile,str_buf)) {
+      if(str_buf == "End of Input") {
+	break;
+      } else {
+	glog.abort("ParticleList::ReadDensity:\n"
+		   "Read error in "+filename,comm);
+      }
+    }
+
+    std::istringstream buf_in(str_buf);
+
+    buf_in >> str_tmp;
+
+    if (buf_in.fail()) {
+      glog.abort("ParticleList::ReadDensity:\n"
+		 "Read error in "+filename,comm);
+    }
+
+    match = t->find_id(str_tmp,itype);
+    if (!match) {
+      glog.abort("ParticleList::ReadDensity:\n"
+		 "Missing definition for id " + str_tmp);
+    }
+
+    buf.push_back(static_cast<double>(itype));
+    ntypes_density++;
+
+    for (ibin=0;ibin<init_config_nbins;ibin++) {
+      if(input_string_get(infile,str_buf)) {
+	if(str_buf == "End of Input") {
+	  glog.abort("ParticleList::ReadDensity:\n"
+		     "Premature End of Input in "+filename,comm);
+	} else {
+	  glog.abort("ParticleList::ReadDensity:\n"
+		     "Read error in "+filename,comm);
+	}
+      }
+
+      buf_in.clear();
+      buf_in.str(str_buf);
+
+      buf_in >> density_tmp;
+
+      if (buf_in.fail()) {
+	glog.abort("ParticleList::ReadDensity:\n"
+		   "Read error in "+filename,comm);
+      }
+
+      buf.push_back(density_tmp);
+    }
+  }
+
+  MPI_Bcast(&ntypes_density,1,MPI_INT,0,comm->get_world());
+
+  if (ntypes_density*init_config_nbins >= maxlines) {
+    glog.error("ParticleList::ReadDensity:\n"
+	       "Too many lines in "+filename);
+  }
+
+  MPI_Bcast(&buf[0],ntypes_density*(init_config_nbins+1),MPI_DOUBLE,0,comm->get_world());
+
+  j = 0;
+  for (int itype_density = 0;itype_density<ntypes_density;itype_density++) {
+    type_density.push_back(nint(buf[j]));
+    bin_density.push_back(&buf[j+1]);
+    j = j + init_config_nbins+1;
+  }
+
+  mass_tot = 0;
+  nparticles_tot = 0;
+
+  for (int itype_density = 0; 
+       itype_density<ntypes_density;itype_density++) {
+
+    icolor = 0;
+    charge = 0.0;
+    itype = type_density[itype_density];
+
+    for (ibin = 1; ibin < init_config_nbins; ibin++) {
+      bin_density[itype_density][ibin]+=bin_density[itype_density][ibin-1];
+    }
+
+    density_tot_id = bin_density[itype_density][init_config_nbins-1];
+    nparticles_id = nint(density_tot_id*b->get_volume()/init_config_nbins);
+
+    if (density_tot_id != 0) {
+      for (ibin = 0; ibin < init_config_nbins-1; ibin++) {
+	bin_density[itype_density][ibin]/=density_tot_id;
+      }
+      bin_density[itype_density][init_config_nbins-1] = 1.0;
+    } else {
+      glog.warning("ParticleList::ReadDensity:\n"
+		   "Zero density for particle type "+t->get_id(itype));
+    }
+
+    MTRand mtrand(iseed_tmp);
+    
+    for (int iparticle_id=0;iparticle_id<nparticles_id;iparticle_id++) {
+      // Portable linear congruential PRNG
+      //           xtmp = ranlc(iseed_tmp);
+      // Mersenne Twister PRNG
+      xtmp = mtrand.randExc();
+      ibin = 0;
+      //
+      // This logic ensures that leading empty bins are always skipped
+      // It overruns if xtmp = 1, so PRNG must be strictly on [0,1).
+      //
+      while (bin_density[itype_density][ibin] <= xtmp) {
+	ibin++;
+      }
+
+      switch(init_config_iaxis) {
+      case 1:
+	rfrac[0] = (ibin+mtrand.randExc())/init_config_nbins;
+	rfrac[1] = mtrand.randExc();
+	rfrac[2] = mtrand.randExc();
+	b->InverseFractional(rfrac,x);
+	break;
+      case 2:
+	rfrac[1] = (ibin+mtrand.randExc())/init_config_nbins;
+	rfrac[0] = mtrand.randExc();
+	rfrac[2] = mtrand.randExc();
+	b->InverseFractional(rfrac,x);
+	break;
+      case 3:
+	rfrac[2] = (ibin+mtrand.randExc())/init_config_nbins;
+	rfrac[0] = mtrand.randExc();
+	rfrac[1] = mtrand.randExc();
+	b->InverseFractional(rfrac,x);
+	break;
+      default:
+	glog.error("ParticleList::ReadDensity:\n"
+		   "Invalid init_config_iaxis value");
+      }
+	
+      nparticles_tot++;
+      itag = nparticles_tot;
+      usertag.push_back(itag);
+
+      mass = t->get_type_mass(itype);
+      mass_tot+=mass;
+
+      Lown = comm->sub_check(b,x);
+      if (Lown) {
+	AddParticle(itype,itag,icolor,x,x,mass,NULL,charge);
+      }
+    }
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+  }
+  if (node == 0) {
+    glog.get_logfile() << "Total particles generated = " << nparticles_tot << endl;
+  }
+
+  if (nparticles == 0) {
+    glog.error("ParticleList::ReadDensity:\n"
+	       "Zero particles generated from "+filename);
+  }
+    
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,comm->get_world());
+  if (itmp != nparticles_tot) {
+    glog.error("ParticleList::ReadDensity:\n"
+	       "Invalid particle count");
+  }
+
+  Lwithinbox = true;
+
+}
+
+void ParticleList::input_initialize_temperature(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> temp_init;
+  buf_in >> temp_iseed;
+  init_velocity_style = init_velocity_temperature;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_initialize_temperature:\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << temp_init << " " << temp_iseed << endl;
+
+  if (temp_init < 0 || temp_iseed <= 0) {
+      glog.error("ParticleList::input_initialize_temperature:\n"
+		 "Invalid input parameter");
+  }
+}
+
+void ParticleList::input_init_config(const string& buf)
+{
+  string str_tmp;
+
+  std::istringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_init_config:\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << str_tmp;
+
+  if (str_tmp == "read") {
+    init_config_style = init_config_read;
+    glog.get_logfile() << endl;
+#ifdef USE_REAX
+    int ngeofor_tmp = -1;
+    FORTRAN(setngeofor,SETNGEOFOR)(&ngeofor_tmp);
+#endif
+  } else if (str_tmp == "density") {
+    init_config_style = init_config_density;
+
+    buf_in >> init_config_iaxis;
+    buf_in >> init_config_nbins;
+
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("ParticleList::input_init_config:\n"
+		 "Read error in input file");
+    }
+    glog.get_logfile() << " " << init_config_iaxis << " " << 
+                     init_config_nbins  << endl;
+
+    if (init_config_iaxis <= 0 || init_config_iaxis > 3 ||
+        init_config_nbins <= 0) {
+      glog.error("ParticleList::input_init_config:\n"
+		 "Invalid input parameter");
+    }
+
+  } else if (str_tmp == "restart") {
+    init_config_style = init_config_restart;
+    glog.get_logfile() << endl;
+#ifdef USE_REAX
+  } else if (str_tmp == "reax") {
+    init_config_style = init_config_reax;
+    glog.get_logfile() << endl;
+    int ngeofor_tmp = 1;
+    FORTRAN(setngeofor,SETNGEOFOR)(&ngeofor_tmp);
+#endif
+  } else {
+    glog.error("\nParticleList::input_init_config:\n"
+	       "Invalid init_config_style");
+  }
+}
+
+void ParticleList::input_init_velocity(const string& buf)
+{
+  string str_tmp;
+
+  std::istringstream buf_in(buf);
+
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_init_velocity:\n"
+	       "Read error in input file");
+  }
+
+  glog.get_logfile() << " " << str_tmp;
+
+  if (str_tmp == "read") {
+    init_velocity_style = init_velocity_read;
+    glog.get_logfile() << endl;
+  } else if (str_tmp == "restart") {
+    init_velocity_style = init_velocity_restart;
+    glog.get_logfile() << endl;
+  } else {
+    glog.error("\nParticleList::input_init_velocity:\n"
+	       "Invalid init_velocity_style");
+  }
+}
+
+void ParticleList::input_read_atoms(const string& buf)
+{
+  string str_tmp;
+  std::stringstream buf_in(buf);
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_read_atoms:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << str_tmp << endl;
+
+  initial_atom_file = str_tmp;
+  initial_atom_file_has_energies = false;
+}
+
+void ParticleList::input_read_velocities(const string& buf)
+{
+  string str_tmp;
+  std::stringstream buf_in(buf);
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_read_velocities:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << str_tmp << endl;
+
+  initial_velocity_file = str_tmp;
+}
+
+void ParticleList::input_read_displacements(const string& buf)
+{
+  string str_tmp;
+  std::stringstream buf_in(buf);
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_read_displacements:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << str_tmp << endl;
+
+  initial_disp_file = str_tmp;
+}
+
+int ParticleList::get_usertag(const int& itag) {
+  return usertag[itag];
+}
+
+int ParticleList::get_localptr(const int& itag) {
+  return localptr[itag];
+}
+
+
+void ParticleList::ReadRestart(
+		   Box* b, 
+		   const ParticleTypeList* t, Output* outp, Stepper* stepper, 
+		   ForceFieldList* ff, Comm* comm) {
+  string str_buf,str_tmp;
+  string filename;
+  vector<Particle> buf;
+  int iatom,iperatom,j,nbuf,nbufmax;
+  double x[3],v[3],mass,charge;
+  int itag,icolor,itype;
+  string id;
+  bool match;
+  int isize;
+  ifstream infile;
+  int node;
+  bool Lown;
+  int itmp;
+  int timestep;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering ParticleList::ReadRestart()" << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ParticleList::ReadRestart()" << endl;
+  }
+
+  filename = glog.path_str + "restart.in";
+  if (node == 0) {
+    std::ios::openmode openflag;
+    openflag = std::ios::binary;
+    infile.open(filename.c_str()); 
+
+    if (!infile) {
+      infile.close();
+      infile.open(filename.c_str()); 
+      if (!infile) {
+	glog.abort("ParticleList::ReadRestart:\n"
+		   "Failed to open "+filename,comm);
+      }
+    }
+  }
+
+  mass_tot = 0;
+  nparticles_tot = 0;
+
+  iperatom = 10;
+  nbufmax = 1000;
+  buf.resize(nbufmax);
+
+  bool Ldone = false;
+
+  // Pick out timestep from head of file
+  if (Lreadtimestep) {
+    if (node == 0 ) {
+      if (infile.read((char*)(&timestep),sizeof(int))) {
+      } else {
+	glog.abort("ParticleList::ReadRestart:\n"
+		   "Read error in " + filename,comm);
+      }
+    }
+    MPI_Bcast(&timestep,1,MPI_INT,0,comm->get_world());
+    outp->set_nstep_prev(timestep);
+  }
+
+  // Pick out box dimensions from head of file
+  if (Lreadbox) {
+    double buftmp[12];
+    if (node == 0 ) {
+      if (infile.read((char*)buftmp,12*sizeof(double))) {
+      } else {
+	glog.abort("ParticleList::ReadRestart:\n"
+		   "Read error in " + filename,comm);
+      }
+    }
+    MPI_Bcast(buftmp,12,MPI_DOUBLE,0,comm->get_world());
+    b->SetupBox(buftmp);
+    comm->Setup(b,ff);
+  }
+
+  // Pick out thermostat/barostat extended variables from head of file
+  if (stepper->get_Lreadextvar()) {
+    int numextvar = stepper->get_numextvar();
+    double* extvarbuf = stepper->get_extvar();
+    if (node == 0 ) {
+      if (infile.read((char*)extvarbuf,numextvar*sizeof(double))) {
+      } else {
+	glog.abort("ParticleList::ReadRestart:\n"
+		   "Read error in " + filename,comm);
+      }
+    }
+    MPI_Bcast(extvarbuf,numextvar,MPI_DOUBLE,0,comm->get_world());
+  }
+
+  do {
+    if (node==0) {
+      iatom = 0;
+      j = 0;
+      while (iatom<nbufmax) {
+
+	if (infile.read((char*)(&buf[iatom]),sizeof(Particle))) {
+	  iatom++;
+	} else if (infile.eof()) {
+	  // Add one more to catch tail info, if any
+	  iatom++;
+	  // Change sign to indicate end of file
+	  iatom = -iatom;
+	  break;
+	} else {
+	  glog.abort("ParticleList::ReadRestart:\n"
+		     "Read error in " + filename,comm);
+	}
+      }
+      nbuf = iatom;
+    }
+
+    MPI_Bcast(&nbuf,1,MPI_INT,0,comm->get_world());
+
+    // Check for end of file
+    if (nbuf < 0) {
+      nbuf = -nbuf;
+      Ldone = true;
+    }
+
+    MPI_Bcast(&buf[0],nbuf*sizeof(Particle),MPI_CHAR,0,comm->get_world());
+
+    // If this is the end of file, then drop count by one.
+    if (Ldone) nbuf--;
+
+    for (iatom=0;iatom<nbuf;iatom++) {
+      nparticles_tot++;
+
+      // Save usertag in separate list
+      itag = buf[iatom].get_tag();
+      usertag.push_back(itag);
+      // Then assign unique internal tag 
+      itag = nparticles_tot-1;
+      buf[iatom].set_tag(itag);
+      mass_tot+=buf[iatom].get_mass();
+
+      // Check if I own this particle
+      buf[iatom].get_x(x);
+      b->Minimg_Pos_Full(x, NULL, NULL);
+      buf[iatom].set_x(x);
+      Lown = comm->sub_check(b,x);
+      if (Lown) {
+	AddParticle(buf[iatom]);
+      }
+
+    }
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Read " << nbuf << " particles" << endl;
+    }
+
+  } while (!Ldone);
+
+  // Add an initial velocity to all atoms, defaulted to zero
+  double v_tmp[3];
+
+  for (int i=0;i<nparticles;i++) {
+    if (particles[i].get_color() == vel_init_add_color || vel_init_add_color == -1) {
+      particles[i].get_v(v_tmp);
+      vec3_add(v_tmp,vel_init_add,v_tmp);
+      particles[i].set_v(v_tmp);
+    }
+  }
+
+  localptr.resize(nparticles_tot);
+  localptr_clear();
+  localptr_set();
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+  }
+  if (node == 0) {
+    glog.get_logfile() << "Total particles read = " << nparticles_tot << endl;
+  }
+
+  if (nparticles_tot == 0) {
+    glog.error("ParticleList::ReadRestart:\n"
+	       "Zero particles read from "+filename);
+  }
+    
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,comm->get_world());
+  if (itmp != nparticles_tot) {
+    glog.error("ParticleList::ReadRestart:\n"
+	       "Invalid particle count");
+  }
+
+  Lwithinbox = true;
+
+}
+
+void ParticleList::input_read_ref_config(const string& buf)
+{
+  string str_tmp;
+  std::stringstream buf_in(buf);
+  buf_in >> str_tmp;
+ 
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_read_ref_config:\n"
+               "Read error in input file");
+  }
+  glog.get_logfile() << " " << str_tmp << endl;
+ 
+  initial_atom_file = str_tmp;
+  initial_atom_file_has_energies = true;
+
+}
+
+void ParticleList::input_scale_displacements(const string& buf)
+{
+  double d_tmp;
+  std::stringstream buf_in(buf);
+  buf_in >> d_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_scale_displacements:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << d_tmp << endl;
+
+  disp_amp = d_tmp;
+  scale_disps = true;
+}
+
+void ParticleList::input_velocity_factor(const string& buf)
+{
+  double d_tmp;
+  std::stringstream buf_in(buf);
+  buf_in >> d_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_velocity_factor:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << d_tmp << endl;
+
+  vel_amp = d_tmp;
+}
+
+void ParticleList::input_velocity_add(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> vel_init_add[0] >> vel_init_add[1]  >> vel_init_add[2];
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_velocity_add:\n"
+	       "Read error in input file");
+  }
+
+  buf_in >> vel_init_add_color;
+
+  if (buf_in.fail()) {
+    if (buf_in.eof()) {
+      vel_init_add_color = -1;
+      glog.get_logfile() << " " << vel_init_add[0] << " " << vel_init_add[1] << " " << vel_init_add[2] << endl;
+    } else {
+      glog.get_logfile() << endl;
+      glog.error("ParticleList::input_velocity_add:\n"
+	       "Read error in input file");
+    }
+  } else {
+    glog.get_logfile() << " " << vel_init_add[0] << " " << vel_init_add[1] << " " << vel_init_add[2] 
+		       << vel_init_add_color << endl;
+  }
+
+}
+
+
+void ParticleList::OutputRestart(const Box* b, int timestep, Stepper* stepper, Comm* comm) {
+    // Note: particles are not reset within periodic box,
+    // as this would upset neighbor lists
+  int nbuf,most;
+  void* buf_tmp;
+  vector<Particle> buf;
+  int node,nprocs,nbuf_tmp,itmp,nparticles_tmp,itag;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  double x[3],v[3];
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered ParticleList::OutputRestart" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    openflag = std::ios::trunc|std::ios::binary;
+    filename = "restart.out";
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("ParticleList::OutputRestart:\n"
+		 "Failed to open "+filename);
+    }
+  }
+
+  if (Lwritetimestep) {
+    if (node == 0 ) {
+      // write the timestep to file
+      outfile.write((char*)&timestep,sizeof(timestep));
+    }
+  }
+
+  if (Lwritebox) {
+    if (node == 0 ) {
+      // write the box dimensions and origin to file
+      double r1tmp[3],r2tmp[3],r3tmp[3];
+      b->get_lv(r1tmp,r2tmp,r3tmp);
+      outfile.write((char*)r1tmp,3*sizeof(double));
+      outfile.write((char*)r2tmp,3*sizeof(double));
+      outfile.write((char*)r3tmp,3*sizeof(double));
+      b->get_o(r1tmp);
+      outfile.write((char*)r1tmp,3*sizeof(double));
+    }
+  }
+
+  // Write out thermostat/barostat extended variables to head of file
+  if (stepper->get_Lwriteextvar()) {
+    stepper->update_extvar();
+    int numextvar = stepper->get_numextvar();
+    double* extvarbuf = stepper->get_extvar();
+    if (node == 0 ) {
+      outfile.write((char*)extvarbuf,numextvar*sizeof(double));
+    }
+  }
+
+  // allocate a temporary buffer for the restart info
+  // big enough for largest number of atoms on any one proc
+
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+  if (node == 0) {
+    nbuf = most*sizeof(Particle);
+    buf.resize(most);
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	buf = particles;
+	nbuf_tmp = nparticles*sizeof(Particle);
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_CHAR,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_CHAR,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_CHAR,&nbuf_tmp);
+      }
+      // Restore user tags to particles
+      nparticles_tmp = nbuf_tmp/sizeof(Particle);
+      for (int iparticle=0;iparticle<nparticles_tmp;iparticle++) {
+	itag = buf[iparticle].get_tag();
+	buf[iparticle].set_tag(usertag[itag]);
+      }
+      // Push out the particle to file
+      outfile.write((char*)&buf[0],nbuf_tmp);
+    }  
+  } else {
+    nbuf = nparticles*sizeof(Particle);
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&particles[0],nbuf,MPI_CHAR,0,0,world);
+  }
+
+  if (node == 0 ) {
+    outfile.close(); 
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited ParticleList::OutputRestart" << endl;
+  }
+
+}
+
+void ParticleList::input_cohesive_energy(const string& buf)
+{
+  double d_tmp;
+  std::stringstream buf_in(buf);
+  buf_in >> d_tmp;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_cohesive_energy:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << d_tmp << endl;
+
+  e_cohesive = d_tmp;
+}
+
+void ParticleList::input_fixed_particles(const string& buf)
+{
+  string style;
+  std::stringstream buf_in(buf);
+  buf_in >> style;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_fixed_particles:\n"
+	       "Cannot get fix style from input file");
+  }
+  glog.get_logfile() << " " << style;
+
+  if (style == "type") {
+    int count;
+    fixed_particle_style = by_type;
+    buf_in >> count;
+ 
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("ParticleList::input_fixed_particles:\n"
+		 "Cannot get fixed type count from input file");
+    }
+
+    glog.get_logfile() << " " << count;
+    string strtmp;
+    for (int i = 0; i < count; i++) {
+      buf_in >> strtmp;
+      if (buf_in.fail()) {
+	glog.get_logfile() << endl;
+	glog.error("ParticleList::input_fixed_particles:\n"
+		   "Cannot get fixed type i \n");
+      }
+      fixedType[i] = strtmp;
+      glog.get_logfile() << " " << strtmp;
+    }
+    glog.get_logfile() << endl;
+  } else if (style == "color") {
+    int count;
+    fixed_particle_style = by_color;
+    buf_in >> count;
+ 
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("ParticleList::input_fixed_particles:\n"
+		 "Cannot get fixed color count from input file");
+    }
+
+    glog.get_logfile() << " " << count;
+    fixedColor.resize(count);
+    int itmp;
+    for (int i = 0; i < count; i++) {
+      buf_in >> itmp;
+      if (buf_in.fail()) {
+	glog.get_logfile() << endl;
+	glog.error("ParticleList::input_fixed_particles:\n"
+		   "Cannot get fixed color i \n");
+      }
+      fixedColor[i] = itmp;
+      glog.get_logfile() << " " << itmp;
+    }
+    glog.get_logfile() << endl;
+  } else if (style == "region") {
+    fixed_particle_style = by_region;
+    glog.error("ParticleList::input_fixed_particles:\n"
+	       "Fix by region not implemented yet");
+  } else if (style == "id") {
+    fixed_particle_style = by_id;
+    
+    glog.error("ParticleList::input_fixed_particles:\n"
+	       "Fix by id not implemented yet");
+  }
+    
+}
+
+void ParticleList::input_minimized_particles(const string& buf)
+{
+  string style;
+  std::stringstream buf_in(buf);
+  buf_in >> style;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("ParticleList::input_fixed_particles:\n"
+	       "Cannot get fix style from input file");
+  }
+  glog.get_logfile() << " " << style;
+
+  if (style == "type") {
+    minimized_particle_style = by_type;
+    int count;
+    buf_in >> count;
+ 
+    if (buf_in.fail()) {
+      glog.get_logfile() << endl;
+      glog.error("ParticleList::input_minimized_particles:\n"
+		 "Cannot get minimized type count from input file");
+    }
+
+    glog.get_logfile() << " " << count;
+
+    string strtmp;
+    for (int i = 0; i < count; i++) {
+      buf_in >> strtmp;
+      if (buf_in.fail()) {
+	glog.get_logfile() << endl;
+	glog.error("ParticleList::input_minimized_particles:\n"
+		   "Cannot get minimized type i \n");
+      }
+      minimizedType[i] = strtmp;
+      glog.get_logfile() << " " << strtmp;
+    }
+    glog.get_logfile() << endl;
+  } else if (style  == "region") {
+    minimized_particle_style = by_region;
+
+    glog.error("ParticleList::input_minimized_particles:\n"
+	       "Minimize by region not implemented yet");
+  } else if (style == "id") {
+    minimized_particle_style = by_id;
+    
+    glog.error("ParticleList::input_minimized_particles:\n"
+	       "Minimize by id not implemented yet");
+  }
+    
+}
+
+void ParticleList::input_read_shift(const string& buf) {
+  Lreadshift = true;
+  glog.get_logfile() << endl;
+}
+
+void ParticleList::input_read_timestep(const string& buf) {
+  Lreadtimestep = true;
+  glog.get_logfile() << endl;
+}
+
+void ParticleList::input_write_timestep(const string& buf) {
+  Lwritetimestep = true;
+  glog.get_logfile() << endl;
+}
+
+void ParticleList::input_read_box(const string& buf) {
+  Lreadbox = true;
+  glog.get_logfile() << endl;
+}
+
+void ParticleList::input_write_box(const string& buf) {
+  Lwritebox = true;
+  glog.get_logfile() << endl;
+}
+
+#ifdef USE_REAX
+void ParticleList::ReadReax(
+		   const Box* b, 
+		   const ParticleTypeList* t, Comm* comm) {
+  vector<double> buf;
+  string str_tmp;
+  int iatom,iperatom,j,nbuf,nbufmax,itmp;
+  double x[3],v[3],u[3],X[3],mass,charge;
+  int itag,icolor,itype;
+  string id, v_str_tmp, disp_str_tmp;
+  bool match;
+  int isize;
+  int node;
+  bool Lown;
+  int jj,jx,jy,jz;
+  int ishift[3];
+  int jj0;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering ParticleList::ReadReax()" << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ParticleList::ReadReax()" << endl;
+    comm->get_nodefile() << "na = " << FORTRAN(rsmall,RSMALL).na << endl;  }
+
+  mass_tot = 0;
+  nparticles_tot = 0;
+
+  iperatom = 7;
+
+  nbufmax = 1000;
+  buf.resize(nbufmax*iperatom);
+
+  if (node==0) {
+    jj = 0;
+    jx = 0;
+    jy = ReaxParams::nattot;
+    jz = 2*ReaxParams::nattot;
+  }
+
+  do {
+    if (node==0) {
+      iatom = 0;
+      j = 0;
+      while (iatom<nbufmax) {
+	if(jj == FORTRAN(rsmall,RSMALL).na) {
+	  break;
+	}
+
+	jj0 = j;
+	buf[j++] = jj+1;
+	// This is trial and error solution on Linux
+	// Needs to be generalized, possibly using
+	// file I/O, or a FORTRAN function call.
+	str_tmp = "";
+	if (FORTRAN(cbkqa,CBKQA).qa[2*jj] != ' ') {
+	  str_tmp += FORTRAN(cbkqa,CBKQA).qa[2*jj];
+	}
+	if (FORTRAN(cbkqa,CBKQA).qa[2*jj+1] != ' ') {
+	  str_tmp += FORTRAN(cbkqa,CBKQA).qa[2*jj+1];
+	}
+	j++;
+// 	if (comm->get_Lnodefile()) {
+// 	  comm->get_nodefile() << "Particle Type = " << str_tmp << endl;
+// 	}
+	buf[j++] = 0;
+	buf[j++] = FORTRAN(cbkc,CBKC).chgglobal[jj];
+	buf[j++] = FORTRAN(cbkc,CBKC).cglobal[jj+jx];
+	buf[j++] = FORTRAN(cbkc,CBKC).cglobal[jj+jy];
+	buf[j++] = FORTRAN(cbkc,CBKC).cglobal[jj+jz];
+ 	jj++;
+
+	match = t->find_id(str_tmp,itype);
+	if (!match) {
+	  glog.abort("ParticleList::ReadReax:\n"
+		     "Missing definition for id " + str_tmp);
+	}
+
+	buf[jj0+1] = itype;
+
+	iatom++;
+      }
+      nbuf = iatom;
+    }
+
+    MPI_Bcast(&nbuf,1,MPI_INT,0,comm->get_world());
+
+    MPI_Bcast(&buf[0],nbuf*iperatom,MPI_DOUBLE,0,comm->get_world());
+
+    j = 0;
+    for (iatom=0;iatom<nbuf;iatom++) {
+      nparticles_tot++;
+      itag = nparticles_tot-1;
+      usertag.push_back(nint(buf[j++]));
+      itype = nint(buf[j++]);
+      icolor = nint(buf[j++]);
+      charge = buf[j++];
+      x[0] = buf[j++];
+      x[1] = buf[j++];
+      x[2] = buf[j++];
+      ishift[0] = 0;
+      ishift[1] = 0;
+      ishift[2] = 0;
+      mass = t->get_type_mass(itype);
+      mass_tot+=mass;
+
+      b->Minimg_Pos_Full(x, NULL, ishift);
+      Lown = comm->sub_check(b,x);
+      if (Lown) {
+	AddParticle(itype,itag,icolor,x,X,mass,ishift,charge);
+      }
+    }
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Read " << nbuf << " particles" << endl;
+    }
+
+  } while (nbuf!=0);
+
+  localptr.resize(nparticles_tot);
+  localptr_clear();
+  localptr_set();
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+  }
+  if (node == 0) {
+    glog.get_logfile() << "Total particles read = " << nparticles_tot << endl;
+  }
+
+  if (nparticles_tot == 0) {
+    glog.error("ParticleList::ReadReax:\n"
+	       "Zero particles read from reax");
+  }
+    
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,comm->get_world());
+  if (itmp != nparticles_tot) {
+    glog.error("ParticleList::ReadReax:\n"
+	       "Invalid particle count");
+  }
+
+  Lwithinbox = true;
+
+}
+#endif
+
+void ParticleList::ApplyBoundaryConditions(const Box* b) {
+  for (int i=0;i<nparticles;i++) {
+    particles[i].apply_boundary_conditions(b);
+  }
+}
+
+/* Remap:
+   move atoms to correct proc boxes
+   broadcast atoms that have left my box, receive ones entering my box
+   this routine called when spatial decomposition has been remapped.
+   atoms exchanged with all processors
+*/
+
+
+void ParticleList::Remap(const Box* b, Comm* comm) {
+
+
+  int i,m,nsend;
+  double rvec[3],rfrac[3];
+  int itmp;
+  int nprocs,me;
+  MPI_Comm world;
+  vector<double> buf;
+  int nbuf,most;
+  bool Lown;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ParticleList::Remap()" << endl;
+  }
+
+  nprocs = comm->get_nprocs();
+  me = comm->get_node();
+  world = comm->get_world();
+
+  /* initialize atom data */
+
+  ResetGhosts();
+
+  /* clear global->local map since atoms move & new ghosts are created */
+
+  localptr_clear();
+
+  // Put all particles in central box
+
+  ResetPosition(b,true);
+
+  // allocate a temporary buffer for the particle info
+  // big enough for largest number of atoms on any one proc
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+  nbuf = most*size_exchange;
+  buf.resize(nbuf);
+    
+  /* loop over processors */
+
+  for (int inode = 0; inode < nprocs; inode++) {
+
+    if (me == inode) {
+    /* fill buffer with atoms leaving my box
+       when atom is deleted, fill it in with last atom */
+
+      i = nsend = 0;
+
+      while (i < nparticles) {
+	particles[i].get_x(rvec);
+	if (comm->get_Lnodefile()) {
+	}
+	Lown = comm->sub_check(b,rvec);
+	if (!Lown) {
+	  nsend += pack_exchange(i,&buf[nsend]);
+	  RemoveParticle(i);
+	} else i++;
+      }
+    }
+
+    MPI_Bcast(&nsend,1,MPI_INT,inode,world);
+    MPI_Bcast(&buf[0],nsend,MPI_DOUBLE,inode,world);
+
+          
+    /* check incoming atoms to see if they are in my box
+       if they are, add to my list */
+  
+    if (me != inode) {
+      m = 0;
+      while (m < nsend) {
+	Lown = comm->sub_check(b,&buf[m]);
+	if (Lown) {
+	  m += unpack_exchange(&buf[m]);
+	}
+	else m += skip_exchange(&buf[m]);
+      }
+    }
+  }
+
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,world);
+  if (itmp != nparticles_tot) {
+    glog.error("ParticleList::Remap:\n"
+	       "Invalid particle count");
+  }
+
+  /* reset global->local map for own particles*/
+
+  localptr_set();
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exiting ParticleList::Remap()" << endl;
+  }
+}
+
+@
+
+
+4.27
+log
+@Tweaked the charge equilibration output a little.
+@
+text
+@d2612 1
+a2612 1
+	buf[j++] = 0.0;
+@
+
+
+4.26
+log
+@Added color assignment for velocity add command
+@
+text
+@d2266 1
+@
+
+
+4.25
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@d117 2
+d141 2
+d624 8
+a631 3
+	v[0] = buf[j++]+vel_init_add[0]*constants.tfactor;
+	v[1] = buf[j++]+vel_init_add[1]*constants.tfactor;
+	v[2] = buf[j++]+vel_init_add[2]*constants.tfactor;
+d633 8
+a640 3
+	v[0] = (buf[j++]+vel_init_add[0])*constants.tfactor;
+	v[1] = (buf[j++]+vel_init_add[1])*constants.tfactor;
+	v[2] = (buf[j++]+vel_init_add[2])*constants.tfactor;
+a910 1
+    vec3_scale(constants.tfactor,vel_init_add,vel_init_add);
+d912 5
+a916 3
+      particles[i].get_v(v_tmp);
+      vec3_add(v_tmp,vel_init_add,v_tmp);
+      particles[i].set_v(v_tmp);
+a938 1
+    vec3_scale(constants.tfactor,vel_init_add,vel_init_add);
+d940 5
+a944 3
+      particles[i].get_v(v_tmp);
+      vec3_add(v_tmp,vel_init_add,v_tmp);
+      particles[i].set_v(v_tmp);
+a2151 1
+  vec3_scale(constants.tfactor,vel_init_add,vel_init_add);
+d2153 5
+a2157 3
+    particles[i].get_v(v_tmp);
+    vec3_add(v_tmp,vel_init_add,v_tmp);
+    particles[i].set_v(v_tmp);
+d2248 15
+a2262 1
+  glog.get_logfile() << " " << vel_init_add[0] << " " << vel_init_add[1] << " " << vel_init_add[2] << endl;
+@
+
+
+4.24
+log
+@Added 'output sum momentum' command
+@
+text
+@d70 1
+d132 1
+a132 1
+		    Comm* comm) {
+d153 1
+a153 1
+    ReadRestart(b,t,outp,comm);
+d1975 2
+a1976 1
+		   const ParticleTypeList* t, Output* outp, Comm* comm) {
+d2041 1
+a2041 1
+  // Pick out timestep from head of file
+d2053 15
+d2235 1
+a2235 1
+void ParticleList::OutputRestart(const Box* b, int timestep, Comm* comm) {
+d2289 10
+d2767 1
+@
+
+
+4.23
+log
+@Improved stability of steepest descent minimizer
+@
+text
+@d940 16
+@
+
+
+4.22
+log
+@Fixed problem with 'velocity add' command not working with 'init config restart' and also without velocity initialization
+@
+text
+@d758 1
+a758 1
+		   bool& Lmaxstep, const double maxstep) {
+d761 3
+d767 2
+a768 1
+	particles[i].step_x_force(timestepsq,relax_coord,maxstep,Lmaxstep);
+d778 4
+a781 2
+	if (!particles[i].get_fixed())
+	  particles[i].step_x_force(timestepsq,relax_coord,maxstep,Lmaxstep);
+d1046 31
+@
+
+
+4.21
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@a321 5
+    if (node == 0)
+      glog.get_logfile() << "Will attempt to read velocities from " << initial_velocity_file << endl;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Will attempt to read velocities from " << initial_velocity_file << endl;
+    }
+a323 5
+    if (node == 0)
+      glog.get_logfile() << "Will not read an initial velocity file " << endl;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Will not read an initial velocity file " << endl;
+    }
+a476 4
+	  buf[j-3] += vel_init_add[0];
+	  buf[j-2] += vel_init_add[1];
+	  buf[j-1] += vel_init_add[2];
+
+a523 5
+
+	    buf[j-3] += vel_init_add[0];
+	    buf[j-2] += vel_init_add[1];
+	    buf[j-1] += vel_init_add[2];
+
+d619 3
+a621 3
+	v[0] = buf[j++];
+	v[1] = buf[j++];
+	v[2] = buf[j++];
+d623 3
+a625 3
+	v[0] = buf[j++]*constants.tfactor;
+	v[1] = buf[j++]*constants.tfactor;
+	v[2] = buf[j++]*constants.tfactor;
+d917 7
+d2063 10
+@
+
+
+4.20
+log
+@Added nose-hoover-full version of pressure control to allow fully flexible fluctuations in box dimensions
+@
+text
+@d194 2
+a195 2
+    for (int i = 0; i < fixedColor.size(); i++) {
+      i_id = fixedColor[i];
+a213 1
+    int i_id;
+d216 1
+a216 1
+      map<int,string>::iterator p = minimizedType.find(i);
+d513 2
+a514 1
+	    std::stringstream buf_in(str_buf);
+d555 2
+a556 1
+	  std::stringstream buf_in(str_buf);
+a868 1
+  int i;
+d870 1
+d898 3
+a900 3
+      i = localptr[ii];
+      if (i != -1 && i<nparticles) { 
+	factor = 1.0/sqrt(particles[i].get_mass());
+d902 1
+a902 1
+	particles[i].set_v(v_tmp);
+a908 1
+    double v_tmp[3];
+d1633 2
+a1634 1
+      std::istringstream buf_in(str_buf);
+@
+
+
+4.19
+log
+@Modifed fix deformation to correctly remap vectors
+@
+text
+@d754 9
+@
+
+
+4.18
+log
+@Fixed bug with read box, reax timestep commands
+@
+text
+@d2575 104
+@
+
+
+4.17
+log
+@Added commands to carry box dimensions in restart file and to output stress tensor
+@
+text
+@d1977 6
+a1982 4
+    if (infile.read((char*)(&timestep),sizeof(int))) {
+    } else {
+      glog.abort("ParticleList::ReadRestart:\n"
+		 "Read error in " + filename,comm);
+d1991 6
+a1996 4
+    if (infile.read((char*)buftmp,12*sizeof(double))) {
+    } else {
+      glog.abort("ParticleList::ReadRestart:\n"
+		 "Read error in " + filename,comm);
+@
+
+
+4.16
+log
+@Fixed some FORTRAN lapses and changed dump timestep to write timestep
+@
+text
+@d111 2
+d1922 1
+a1922 1
+		   const Box* b, 
+d1975 23
+a2060 6
+  // Pick out timestep from tail
+  if (Lreadtimestep) {
+    timestep = *(int*)&buf[nbuf];
+    outp->set_nstep_prev(timestep);
+  }
+ 
+d2153 1
+a2153 1
+void ParticleList::OutputRestart(int timestep, Comm* comm) {
+d2187 20
+d2216 1
+a2241 7
+  if (Lwritetimestep) {
+    if (node == 0 ) {
+      // write the timestep to file
+      outfile.write((char*)&timestep,sizeof(timestep));
+    }
+  }
+
+d2408 10
+@
+
+
+4.15
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@d109 1
+a109 1
+  Ldumptimestep = false;
+d2202 1
+a2202 1
+  if (Ldumptimestep) {
+d2370 2
+a2371 2
+void ParticleList::input_dump_timestep(const string& buf) {
+  Ldumptimestep = true;
+@
+
+
+4.14
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d817 6
+@
+
+
+4.13
+log
+@Fixed up some more things related to image shift values
+@
+text
+@d111 3
+d486 4
+d528 1
+a530 1
+	      buf[j] *= disp_amp;
+d533 1
+d536 4
+a539 1
+	    buf[j] *= vel_amp;
+d891 8
+d1396 65
+a1518 19
+void ParticleList::RescaleTemperatureColor(const int& color, 
+          const double& temp_target, const double& temp_current) {
+  double v_tmp[3];
+  double factor;
+  if (temp_current > 0.0) {
+    factor = sqrt(temp_target/temp_current);
+    for (int i=0;i<nparticles;i++) {
+      if (particles[i].get_color() == color) {
+	particles[i].get_v(v_tmp);
+	vec3_scale(factor,v_tmp,v_tmp);
+	particles[i].set_v(v_tmp);
+      }
+    }
+  } else {
+    glog.error("ParticleList::RescaleTemperatureColor:\n"
+	       "Can not rescale when temperature is zero");
+  }
+}
+
+d2113 15
+d2516 6
+@
+
+
+4.12
+log
+@Fixed another bug in new I/O Particle scheme
+@
+text
+@d607 3
+a609 6
+      usertag.push_back(nint(buf[j]));
+      j++;
+      itype = nint(buf[j]);
+      j++;
+      icolor = nint(buf[j]);
+      j++;
+d615 3
+a617 6
+	ishift[0] = nint(buf[j]);
+	j++;
+	ishift[1] = nint(buf[j]);
+	j++;
+	ishift[2] = nint(buf[j]);
+	j++;
+d1264 1
+a1264 8
+  
+  int m;
+
+  //m = 11;
+  //m = 15;  // Adding reference position and energy to this
+  m = 20;  //Adding bools for fix and minimize
+  
+  return m;
+d2386 3
+a2388 6
+      usertag.push_back(nint(buf[j]));
+      j++;
+      itype = nint(buf[j]);
+      j++;
+      icolor = nint(buf[j]);
+      j++;
+@
+
+
+4.11
+log
+@Fixed bugs in new I/O Particle scheme
+@
+text
+@d1275 1
+a1275 1
+  m = 17;  //Adding bools for fix and minimize
+@
+
+
+4.10
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d452 2
+a453 1
+	buf_in >> buf[j++] >> str_tmp;
+d455 5
+a459 2
+	buf_in >> buf[j++] >> buf[j++] >>
+	  buf[j++] >> buf[j++] >> buf[j++];
+a465 1
+
+d467 3
+a469 1
+	  buf_in >> buf[j++] >> buf[j++] >> buf[j++];
+d479 3
+a481 1
+	  buf_in >> buf[j++] >> buf[j++] >> buf[j++];
+d507 4
+a510 1
+	    buf_in  >> iVelTag >> buf[j++] >> buf[j++] >> buf[j++];
+d2318 1
+d2355 2
+a2356 1
+	buf[j] = jj+1;
+d2367 1
+d2371 5
+a2375 6
+
+	buf[j+2] = 0;
+	buf[j+3] = 0.0;
+	buf[j+4] = FORTRAN(cbkc,CBKC).cglobal[jj+jx];
+	buf[j+5] = FORTRAN(cbkc,CBKC).cglobal[jj+jy];
+	buf[j+6] = FORTRAN(cbkc,CBKC).cglobal[jj+jz];
+d2384 1
+a2384 1
+	buf[j+1] = itype;
+a2385 1
+	j+=iperatom;
+@
+
+
+4.9
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d69 1
+d108 3
+d125 1
+a125 1
+void ParticleList::Setup(Box* b, ParticleTypeList* t,
+d147 1
+a147 1
+    ReadRestart(b,t,comm);
+d243 2
+a244 1
+			       const double& charge_in, const double& phi_in)
+d246 2
+a247 1
+  Particle p(type_in, tag_in, color_in, x_in, X_in, mass_in, charge_in, phi_in);
+d257 1
+a257 1
+		      const double& phi_in, 
+d262 1
+a262 1
+	     mass_in, charge_in, v_in, phi_in, fix_in, minimize_in);
+d306 2
+d350 2
+a351 2
+  //str_tmp = glog.path_str + initial_atom_file;
+  str_tmp = initial_atom_file;
+d359 1
+a359 1
+    infile.open(str_tmp.c_str()); 
+d421 2
+d451 5
+a455 2
+	buf_in >> buf[j] >> str_tmp >> buf[j+2] >> buf[j+3] >>
+	  buf[j+4] >> buf[j+5] >> buf[j+6];
+d458 9
+a466 1
+	  if (init_velocity_style == init_velocity_read) {
+d469 1
+a469 4
+		       "\n Possibly missing velocity entries",comm);
+	  } else {
+	    glog.abort("ParticleList::ReadConfig:\n"
+		       "Read error in "+filename,comm);
+a472 1
+
+d474 1
+a474 1
+	  buf_in >> buf[j+7] >> buf[j+8] >> buf[j+9];
+d500 1
+a500 1
+	    buf_in  >> iVelTag >> buf[j+7] >> buf[j+8] >> buf[j+9];
+d506 1
+a506 1
+	    if (iVelTag != buf[j])
+d511 3
+a513 3
+	      buf[j+7] *= disp_amp;
+	      buf[j+8] *= disp_amp;
+	      buf[j+9] *= disp_amp;
+d516 3
+a518 3
+	    buf[j+7] *= vel_amp;
+	    buf[j+8] *= vel_amp;
+	    buf[j+9] *= vel_amp;
+d528 1
+a528 1
+			 "Read error in "+str_tmp,comm);
+d538 1
+a538 1
+		       "Read error in "+str_tmp,comm);
+d541 1
+a541 1
+	  if (dispTag != buf[j])
+d552 3
+a554 3
+	  buf[j+iperatom-3] = buf[j+4];
+	  buf[j+iperatom-2] = buf[j+5];
+	  buf[j+iperatom-1] = buf[j+6];
+d557 3
+a559 3
+	  buf[j+4] += u[0];
+	  buf[j+5] += u[1];
+	  buf[j+6] += u[2];
+d582 1
+a582 1
+	buf[j+1] = itype;
+a583 1
+	j+=iperatom;
+d597 6
+a602 3
+      usertag.push_back(nint(buf[j++]));
+      itype = nint(buf[j++]);
+      icolor = nint(buf[j++]);
+d607 12
+d641 1
+a641 1
+      b->Minimg_Pos_Full(x, X);
+d645 1
+a645 1
+	  AddParticle(itype,itag,icolor,x,X,mass,charge,v);
+d647 1
+a647 1
+	  AddParticle(itype,itag,icolor,x,X,mass,charge);
+d1195 2
+d1221 1
+d1240 6
+d1254 1
+a1254 1
+	      mass_in, charge_in, v_in, phi_in, fix_in, minimize_in);
+d1659 1
+a1659 1
+	AddParticle(itype,itag,icolor,x,x,mass,charge);
+d1853 1
+a1853 1
+		   const ParticleTypeList* t, Comm* comm) {
+d1867 1
+d1903 2
+d1914 4
+d1929 6
+d1937 3
+d1953 1
+a1953 1
+      b->Minimg_Pos_Full(x, NULL);
+d1966 1
+a1966 1
+  } while (nbuf!=0);
+d1968 6
+d2051 1
+a2051 1
+void ParticleList::OutputRestart(Comm* comm) {
+d2119 7
+d2277 15
+d2307 1
+d2388 6
+a2393 3
+      usertag.push_back(nint(buf[j++]));
+      itype = nint(buf[j++]);
+      icolor = nint(buf[j++]);
+d2398 3
+a2400 1
+
+d2404 1
+a2404 1
+      b->Minimg_Pos_Full(x, NULL);
+d2407 1
+a2407 1
+	AddParticle(itype,itag,icolor,x,X,mass,charge);
+@
+
+
+4.8
+log
+@Added multiple replica feature.
+@
+text
+@d251 2
+a252 1
+		      const double& phi_in, const bool& fix_in, 
+d918 1
+d1121 2
+d1138 2
+@
+
+
+4.8.4.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@d251 1
+a251 2
+		      const double& phi_in, 
+		      const bool& fix_in, 
+a916 1
+    particles[i].set_virial();
+a1118 2
+    particles[ii].get_virial(&buf[m]);
+    m += 6;
+a1133 2
+    particles[ii].increment_virial(&buf[m]);
+    m+=6;
+@
+
+
+4.7
+log
+@Added some new barostats and thermostats.
+@
+text
+@d62 1
+d171 1
+a171 1
+	  glog.logfile << "Will fix particles of type " << fixedType[i] << "\n";
+d182 1
+a182 1
+      glog.logfile << "Fixing " << total_fixed << " particles\n"; 
+d196 1
+a196 1
+      glog.logfile << "Fixing " << total_fixed << " particles\n"; 
+d215 1
+a215 1
+	  glog.logfile << "Will minimize particles of type " << minimizedType[i]  <<" " << minimized_types[i_id] << "\n";
+d303 2
+a304 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering ParticleList::ReadConfig()" << endl;
+d310 1
+a310 1
+      glog.logfile << "Will attempt to read velocities from " << initial_velocity_file << endl;
+d317 1
+a317 1
+      glog.logfile << "Will not read an initial velocity file " << endl;
+d325 1
+a325 1
+      glog.logfile << "Will attempt to read displacements from " << initial_disp_file << endl;
+d332 1
+a332 1
+      glog.logfile << "Will not read an initial displacement file " << endl;
+d377 1
+a377 1
+	       glog.logfile << "Opened "<< v_str_tmp << " for velocities " << endl;
+d400 1
+a400 1
+	       glog.logfile << "Opened "<< disp_str_tmp << " for displacements " << endl;
+d633 1
+a633 1
+    glog.logfile << "Total particles read = " << nparticles_tot << endl;
+d805 1
+d817 6
+a822 1
+    iseed_tmp = temp_iseed;
+d825 8
+a832 3
+      v_tmp[0] = gausslc(iseed_tmp);
+      v_tmp[1] = gausslc(iseed_tmp);
+      v_tmp[2] = gausslc(iseed_tmp);
+d1429 1
+a1429 1
+  int iseed,ibin;
+d1442 1
+a1442 1
+  iseed = 256;
+d1447 2
+a1448 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering ParticleList::ReadDensity()" << endl;
+d1564 2
+d1567 4
+a1570 1
+      xtmp = ranlc(iseed);
+d1574 1
+a1574 1
+      // It overruns if xtmp = 1, but this does not happen with this RNG.
+d1582 3
+a1584 3
+	rfrac[0] = (ibin+ranlc(iseed))/init_config_nbins;
+	rfrac[1] = ranlc(iseed);
+	rfrac[2] = ranlc(iseed);
+d1588 3
+a1590 3
+	rfrac[1] = (ibin+ranlc(iseed))/init_config_nbins;
+	rfrac[0] = ranlc(iseed);
+	rfrac[2] = ranlc(iseed);
+d1594 3
+a1596 3
+	rfrac[2] = (ibin+ranlc(iseed))/init_config_nbins;
+	rfrac[0] = ranlc(iseed);
+	rfrac[1] = ranlc(iseed);
+d1621 1
+a1621 1
+    glog.logfile << "Total particles generated = " << nparticles_tot << endl;
+d1647 1
+a1647 1
+    glog.logfile << endl;
+d1652 1
+a1652 1
+  glog.logfile << " " << temp_init << " " << temp_iseed << endl;
+d1669 1
+a1669 1
+    glog.logfile << endl;
+d1674 1
+a1674 1
+  glog.logfile << " " << str_tmp;
+d1678 1
+a1678 1
+    glog.logfile << endl;
+d1690 1
+a1690 1
+      glog.logfile << endl;
+d1694 1
+a1694 1
+    glog.logfile << " " << init_config_iaxis << " " << 
+d1705 1
+a1705 1
+    glog.logfile << endl;
+d1709 1
+a1709 1
+    glog.logfile << endl;
+d1728 1
+a1728 1
+    glog.logfile << endl;
+d1733 1
+a1733 1
+  glog.logfile << " " << str_tmp;
+d1737 1
+a1737 1
+    glog.logfile << endl;
+d1740 1
+a1740 1
+    glog.logfile << endl;
+d1754 1
+a1754 1
+    glog.logfile << endl;
+d1758 1
+a1758 1
+  glog.logfile << " " << str_tmp << endl;
+d1771 1
+a1771 1
+    glog.logfile << endl;
+d1775 1
+a1775 1
+  glog.logfile << " " << str_tmp << endl;
+d1787 1
+a1787 1
+    glog.logfile << endl;
+d1791 1
+a1791 1
+  glog.logfile << " " << str_tmp << endl;
+d1825 2
+a1826 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering ParticleList::ReadRestart()" << endl;
+d1914 1
+a1914 1
+    glog.logfile << "Total particles read = " << nparticles_tot << endl;
+d1939 1
+a1939 1
+    glog.logfile << endl;
+d1943 1
+a1943 1
+  glog.logfile << " " << str_tmp << endl;
+d1957 1
+a1957 1
+    glog.logfile << endl;
+d1961 1
+a1961 1
+  glog.logfile << " " << d_tmp << endl;
+d1974 1
+a1974 1
+    glog.logfile << endl;
+d1978 1
+a1978 1
+  glog.logfile << " " << d_tmp << endl;
+d2009 1
+a2009 1
+    filename = glog.path_str + filename;
+d2066 1
+a2066 1
+    glog.logfile << endl;
+d2070 1
+a2070 1
+  glog.logfile << " " << d_tmp << endl;
+d2082 1
+a2082 1
+    glog.logfile << endl;
+d2086 1
+a2086 1
+  glog.logfile << " " << style;
+d2094 1
+a2094 1
+      glog.logfile << endl;
+d2099 1
+a2099 1
+    glog.logfile << " " << count;
+d2104 1
+a2104 1
+	glog.logfile << endl;
+d2109 1
+a2109 1
+      glog.logfile << " " << strtmp;
+d2111 1
+a2111 1
+    glog.logfile << endl;
+d2118 1
+a2118 1
+      glog.logfile << endl;
+d2123 1
+a2123 1
+    glog.logfile << " " << count;
+d2129 1
+a2129 1
+	glog.logfile << endl;
+d2134 1
+a2134 1
+      glog.logfile << " " << itmp;
+d2136 1
+a2136 1
+    glog.logfile << endl;
+d2157 1
+a2157 1
+    glog.logfile << endl;
+d2161 1
+a2161 1
+  glog.logfile << " " << style;
+d2169 1
+a2169 1
+      glog.logfile << endl;
+d2174 1
+a2174 1
+    glog.logfile << " " << count;
+d2180 1
+a2180 1
+	glog.logfile << endl;
+d2185 1
+a2185 1
+      glog.logfile << " " << strtmp;
+d2187 1
+a2187 1
+    glog.logfile << endl;
+d2221 2
+a2222 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering ParticleList::ReadReax()" << endl;
+d2327 1
+a2327 1
+    glog.logfile << "Total particles read = " << nparticles_tot << endl;
+@
+
+
+4.6
+log
+@Added a 'fixed particles color' command.
+@
+text
+@d696 1
+a696 1
+void ParticleList::ScaleVelocity(const double fac[]) {
+d698 1
+a698 1
+    particles[i].scale_v(fac);
+@
+
+
+4.5
+log
+@Miscellaneous fixes
+@
+text
+@d156 6
+a161 3
+  if (fixed_particle_style == by_type) {
+    int i_id;
+    map<int,int> fixed_types;
+d163 1
+a163 1
+      map<int,string>::iterator p = fixedType.find(i);
+a172 1
+     
+a178 1
+    int total_fixed = 0;
+d181 21
+a201 2
+	glog.logfile << "Fixing " << total_fixed << " particles\n"; 
+  }
+d1048 1
+a1048 1
+    m+=3;
+d2069 1
+a2069 1
+  glog.logfile << " " << style << endl;
+d2081 2
+d2095 25
+d2144 1
+a2144 1
+  glog.logfile << " " << style << endl;
+d2156 3
+@
+
+
+4.4
+log
+@Fixed Lwithinbox bug in CG minimizer
+@
+text
+@d106 4
+d1364 8
+a1371 6
+  factor = sqrt(temp_target/temp_current);
+  for (int i=0;i<nparticles;i++) {
+    if (particles[i].get_color() == color) {
+      particles[i].get_v(v_tmp);
+      vec3_scale(factor,v_tmp,v_tmp);
+      particles[i].set_v(v_tmp);
+d1373 3
+d1642 4
+d1672 3
+@
+
+
+4.4.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a2118 10
+void ParticleList::ModifyParticle(int *part, vector <double> val) {
+  double val2[3];
+  val2[0] = val[0];
+  val2[1] = val[1];
+  val2[2] = val[2];
+  if (*part>0 && *part<nparticles) particles[*part].increment_x(val2);
+}
+
+
+
+@
+
+
+4.4.2.2
+log
+@Correct divide by 0 pb in temperature definition
+@
+text
+@d763 1
+a763 6
+  // modified saubry 06-10-05
+  if (ndof !=0) 
+    temperature = tmp/(ndof*constants.boltz);
+  else
+    temperature = 0;
+
+d771 1
+a771 1
+  ndof = 3*(nparticles_tot-nfixed-1);
+a995 1
+
+a2271 3
+
+
+
+@
+
+
+4.4.2.2.2.1
+log
+@Correct several bugs
+@
+text
+@d2125 1
+a2125 1
+void ParticleList::ModifyParticle(int *part, double *val) {
+@
+
+
+4.4.2.2.2.2
+log
+@Correct a few things.
+@
+text
+@a115 8
+ParticleList::ParticleList(const ParticleList &p)
+{
+  particles.resize(p.particles.size());
+  for (int i = 0;i!=p.particles.size();i++)
+    particles[i] = p.particles[i]; 
+}
+
+
+d2126 5
+a2130 1
+  if (*part>0 && *part<nparticles) particles[*part].increment_x(val);
+d2134 1
+@
+
+
+4.4.2.2.2.3
+log
+@Bin Communication fixed
+@
+text
+@d243 8
+a257 11
+// This version returns the index of the ghost particle for use in
+// get_particle(const int& i);
+int ParticleList::AddGhostParticle(
+                   const int& type_in,const int& tag_in,
+		   const double x_in[], const double& charge_in) {
+  Particle p(type_in, tag_in, x_in, x_in, charge_in);
+  particles.push_back(p);
+  nghost_particles++;
+  return particles.size()-1;
+}
+
+d1757 1
+a1757 1
+int ParticleList::get_usertag(const int& itag) const {
+d1761 1
+a1761 1
+int ParticleList::get_localptr(const int& itag) const {
+d1763 1
+a1763 1
+} 
+@
+
+
+4.4.2.2.2.4
+log
+@Added EAM energy change calculation
+@
+text
+@a105 6
+  // These settings control which data is used for Monte Carlo communication.
+  // Currently the EAM density is communicated always
+  // Eventually these settings should be linked to the force field
+  Lrho_eam = true;
+  size_comm_mc = 7;
+  size_reverse_mc = 4;
+d222 1
+a222 2
+			       const double& charge_in, const double& phi_in, 
+			       const double& rho_in)
+d224 1
+a224 2
+  Particle p(type_in, tag_in, color_in, x_in, X_in, mass_in, 
+	     charge_in, phi_in, rho_in);
+d234 1
+a234 2
+		      const double& phi_in, const double& rho_in, 
+		      const bool& fix_in, 
+d238 1
+a238 1
+	     mass_in, charge_in, v_in, phi_in, rho_in, fix_in, minimize_in);
+d254 2
+a255 3
+		   const double x_in[], const double& charge_in,
+		   const double& rho_in) {
+  Particle p(type_in, tag_in, x_in, x_in, charge_in, rho_in);
+a1269 138
+void ParticleList::pack_comm_mc(const int& num, const vector<int>& list,
+			     double* buf, const int pbc[], 
+			     const Box* b) const {
+  int ii,m;
+  double rshift[3],lva[3],lvb[3],lvc[3];
+
+  m = 0;
+  for (int i=0;i<num;i++) {
+    ii = list[i];
+    particles[ii].get_x(&buf[m]);
+    m+=3;
+    buf[m] = particles[ii].get_charge();
+    m++;
+    buf[m] = particles[ii].get_type();
+    m++;
+    buf[m] = particles[ii].get_tag();
+    m++;
+    buf[m] = particles[ii].get_rho();
+    m++;
+  }
+
+  if (pbc[0]) {
+    b->get_lv(lva,lvb,lvc);
+    rshift[0] = 0.0;
+    rshift[1] = 0.0;
+    rshift[2] = 0.0;
+
+    if (pbc[1]==-1) {
+      vec3_subtract(rshift,lva,rshift);
+    } else if (pbc[1]==1) {
+      vec3_add(rshift,lva,rshift);
+    }
+
+    if (pbc[2]==-1) {
+      vec3_subtract(rshift,lvb,rshift);
+    } else if (pbc[2]==1) {
+      vec3_add(rshift,lvb,rshift);
+    }
+
+    if (pbc[3]==-1) {
+      vec3_subtract(rshift,lvc,rshift);
+    } else if (pbc[3]==1) {
+      vec3_add(rshift,lvc,rshift);
+    }
+
+    m = 0;
+    for (int i=0;i<num;i++) {
+      vec3_add(&buf[m],rshift,&buf[m]);
+      m+=size_comm_mc;
+    }
+  }
+}
+
+int ParticleList::unpack_comm_mc(const double* buf) {
+  int ii,m;
+
+  int type_in,tag_in;
+  double charge_in;
+  const double* x_in;
+  double rho_in;
+
+  m = 0;
+  x_in = &buf[m];
+  m+=3;
+  charge_in = buf[m];
+  m++;
+  type_in = nint(buf[m]);
+  m++;
+  tag_in = nint(buf[m]);
+  m++;
+  rho_in = buf[m];
+  m++;
+  // Create ghost particle and assign address to particle pointer list
+  ii = AddGhostParticle(type_in, tag_in, x_in, charge_in, rho_in);
+
+  return ii;
+}
+
+void ParticleList::pack_reverse_mc(const int& num, const vector<int>& list,
+			     double* buf) const {
+  int ii,m;
+
+  m = 0;
+  for (int i=0;i<num;i++) {
+    ii = list[i];
+    particles[ii].get_x(&buf[m]);
+    m+=3;
+    buf[m] = particles[ii].get_rho();
+    m++;
+  }
+}
+
+void ParticleList::unpack_reverse_mc(const int& num, const vector<int>& list,
+			     double* buf, const int pbc[], 
+			     const Box* b) {
+  double rshift[3],lva[3],lvb[3],lvc[3];
+  int ii,m;
+
+  if (pbc[0]==1) {
+    b->get_lv(lva,lvb,lvc);
+    rshift[0] = 0.0;
+    rshift[1] = 0.0;
+    rshift[2] = 0.0;
+
+    if (pbc[1]==-1) {
+      vec3_subtract(rshift,lva,rshift);
+    } else if (pbc[1]==1) {
+      vec3_add(rshift,lva,rshift);
+    }
+
+    if (pbc[2]==-1) {
+      vec3_subtract(rshift,lvb,rshift);
+    } else if (pbc[2]==1) {
+      vec3_add(rshift,lvb,rshift);
+    }
+
+    if (pbc[3]==-1) {
+      vec3_subtract(rshift,lvc,rshift);
+    } else if (pbc[3]==1) {
+      vec3_add(rshift,lvc,rshift);
+    }
+    m = 0;
+    for (int i=0;i<num;i++) {
+      vec3_subtract(&buf[m],rshift,&buf[m]);
+      m+=size_reverse_mc;
+    }
+  }
+
+  m = 0;
+  for (int i=0;i<num;i++) {
+    ii = list[i];
+    particles[ii].set_x(&buf[m]);
+    m+=3;
+    particles[ii].set_rho(buf[m]);
+    m++;
+  }
+}
+
+a1281 8
+int ParticleList::get_size_comm_mc() const {
+  return size_comm_mc;
+}
+
+int ParticleList::get_size_reverse_mc() const {
+  return size_reverse_mc;
+}
+
+@
+
+
+4.4.2.2.2.5
+log
+@Added in bin reallocation in montecarlo.cpp
+@
+text
+@d743 1
+a743 1
+  //  if (Lwithinbox) return;
+a1150 2
+  buf[m] = particles[ii].get_rho();
+  m++;
+a1170 1
+  double rho_in;
+a1192 2
+  rho_in = buf[m];
+  m++;
+d1199 1
+a1199 1
+	      mass_in, charge_in, v_in, phi_in, rho_in, fix_in, minimize_in);
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d930 2
+d1329 3
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d68 10
+d140 5
+a209 9
+// added saubry (01-13-05)
+void ParticleList::ModifyParticle(int *part, vector <double> val) {
+  double val2[3];
+  val2[0] = val[0];
+  val2[1] = val[1];
+  val2[2] = val[2];
+  if (*part>0 && *part<nparticles) particles[*part].add_x(val2);
+}
+
+a1272 14
+int ParticleList::nint(const double& r) const {
+  int i;
+
+  i = 0;
+
+  if (r>0.0) {
+    i = static_cast<int>(r+0.5);
+  } else if (r<0.0) {
+    i = static_cast<int>(r-0.5);
+  }
+
+  return i;
+}
+
+d1651 4
+d2114 143
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+a51 10
+
+#ifdef USE_REAX
+#include "reax_fortran.h"
+#include "reax_params.h"
+#include "reax_cbkc.h"
+#include "reax_cbkqa.h"
+#include "reax_small.h"
+#include "reax_functions.h"
+#endif
+
+a113 5
+#ifdef USE_REAX
+  case init_config_reax:
+    ReadReax(b,t,comm);
+    break;
+#endif
+d179 9
+d1251 14
+a1642 4
+#ifdef USE_REAX
+  } else if (str_tmp == "reax") {
+    init_config_style = init_config_reax;
+#endif
+a2101 143
+#ifdef USE_REAX
+void ParticleList::ReadReax(
+		   const Box* b, 
+		   const ParticleTypeList* t, Comm* comm) {
+  vector<double> buf;
+  string str_tmp;
+  int iatom,iperatom,j,nbuf,nbufmax,itmp;
+  double x[3],v[3],u[3],X[3],mass,charge;
+  int itag,icolor,itype;
+  string id, v_str_tmp, disp_str_tmp;
+  bool match;
+  int isize;
+  int node;
+  bool Lown;
+  int jj,jx,jy,jz;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering ParticleList::ReadReax()" << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ParticleList::ReadReax()" << endl;
+    comm->get_nodefile() << "na = " << FORTRAN(rsmall,RSMALL).na << endl;  }
+
+  mass_tot = 0;
+  nparticles_tot = 0;
+
+  iperatom = 7;
+
+  nbufmax = 1000;
+  buf.resize(nbufmax*iperatom);
+
+  if (node==0) {
+    jj = 0;
+    jx = 0;
+    jy = ReaxParams::nattot;
+    jz = 2*ReaxParams::nattot;
+  }
+
+  do {
+    if (node==0) {
+      iatom = 0;
+      j = 0;
+      while (iatom<nbufmax) {
+	if(jj == FORTRAN(rsmall,RSMALL).na) {
+	  break;
+	}
+
+	buf[j] = jj+1;
+	// This is trial and error solution on Linux
+	// Needs to be generalized, possibly using
+	// file I/O, or a FORTRAN function call.
+	str_tmp = "";
+	if (FORTRAN(cbkqa,CBKQA).qa[2*jj] != ' ') {
+	  str_tmp += FORTRAN(cbkqa,CBKQA).qa[2*jj];
+	}
+	if (FORTRAN(cbkqa,CBKQA).qa[2*jj+1] != ' ') {
+	  str_tmp += FORTRAN(cbkqa,CBKQA).qa[2*jj+1];
+	}
+// 	if (comm->get_Lnodefile()) {
+// 	  comm->get_nodefile() << "Particle Type = " << str_tmp << endl;
+// 	}
+
+	buf[j+2] = 0;
+	buf[j+3] = 0.0;
+	buf[j+4] = FORTRAN(cbkc,CBKC).cglobal[jj+jx];
+	buf[j+5] = FORTRAN(cbkc,CBKC).cglobal[jj+jy];
+	buf[j+6] = FORTRAN(cbkc,CBKC).cglobal[jj+jz];
+ 	jj++;
+
+	match = t->find_id(str_tmp,itype);
+	if (!match) {
+	  glog.abort("ParticleList::ReadReax:\n"
+		     "Missing definition for id " + str_tmp);
+	}
+
+	buf[j+1] = itype;
+
+	j+=iperatom;
+	iatom++;
+      }
+      nbuf = iatom;
+    }
+
+    MPI_Bcast(&nbuf,1,MPI_INT,0,comm->get_world());
+
+    MPI_Bcast(&buf[0],nbuf*iperatom,MPI_DOUBLE,0,comm->get_world());
+
+    j = 0;
+    for (iatom=0;iatom<nbuf;iatom++) {
+      nparticles_tot++;
+      itag = nparticles_tot-1;
+      usertag.push_back(nint(buf[j++]));
+      itype = nint(buf[j++]);
+      icolor = nint(buf[j++]);
+      charge = buf[j++];
+      x[0] = buf[j++];
+      x[1] = buf[j++];
+      x[2] = buf[j++];
+
+      mass = t->get_type_mass(itype);
+      mass_tot+=mass;
+
+      b->Minimg_Pos_Full(x, NULL);
+      Lown = comm->sub_check(b,x);
+      if (Lown) {
+	AddParticle(itype,itag,icolor,x,X,mass,charge);
+      }
+    }
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Read " << nbuf << " particles" << endl;
+    }
+
+  } while (nbuf!=0);
+
+  localptr.resize(nparticles_tot);
+  localptr_clear();
+  localptr_set();
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+  }
+  if (node == 0) {
+    glog.logfile << "Total particles read = " << nparticles_tot << endl;
+  }
+
+  if (nparticles_tot == 0) {
+    glog.error("ParticleList::ReadReax:\n"
+	       "Zero particles read from reax");
+  }
+    
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,comm->get_world());
+  if (itmp != nparticles_tot) {
+    glog.error("ParticleList::ReadReax:\n"
+	       "Invalid particle count");
+  }
+
+  Lwithinbox = true;
+
+}
+#endif
+@
+
+
+3.5
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.4
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d52 10
+d124 5
+a1256 14
+int ParticleList::nint(const double& r) const {
+  int i;
+
+  i = 0;
+
+  if (r>0.0) {
+    i = static_cast<int>(r+0.5);
+  } else if (r<0.0) {
+    i = static_cast<int>(r-0.5);
+  }
+
+  return i;
+}
+
+d1635 4
+d2098 143
+@
+
+
+3.4.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a178 10
+
+// added saubry (01-13-05)
+void ParticleList::ModifyParticle(int *part, vector <double> val) {
+  double val2[3];
+  val2[0] = val[0];
+  val2[1] = val[1];
+  val2[2] = val[2];
+  if (*part>0 && *part<nparticles) particles[*part].add_x(val2);
+}
+
+@
+
+
+3.4.6.2
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d179 1
+@
+
+
+3.4.2.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@a51 9
+
+#include "reax_fortran.h"
+#include "reax_params.h"
+#include "reax_cbkc.h"
+#include "reax_cbkqa.h"
+#include "reax_cbkch.h"
+#include "reax_small.h"
+#include "reax_functions.h"
+
+a113 3
+  case init_config_reax:
+    ReadReax(b,t,comm);
+    break;
+a1633 2
+  } else if (str_tmp == "reax") {
+    init_config_style = init_config_reax;
+a2092 143
+void ParticleList::ReadReax(
+		   const Box* b, 
+		   const ParticleTypeList* t, Comm* comm) {
+  vector<double> buf;
+  string str_tmp;
+  int iatom,iperatom,j,nbuf,nbufmax,itmp;
+  double x[3],v[3],u[3],X[3],mass,charge;
+  int itag,icolor,itype;
+  string id, v_str_tmp, disp_str_tmp;
+  bool match;
+  int isize;
+  int node;
+  bool Lown;
+  int jj,jx,jy,jz;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering ParticleList::ReadReax()" << endl;
+    glog.logfile << "na = " << FORTRAN(small,SMALL).na << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering ParticleList::ReadReax()" << endl;
+  }
+
+  mass_tot = 0;
+  nparticles_tot = 0;
+
+  iperatom = 7;
+
+  nbufmax = 1000;
+  buf.resize(nbufmax*iperatom);
+
+  if (node==0) {
+    jj = 0;
+    jx = 0;
+    jy = ReaxParams::nat;
+    jz = 2*ReaxParams::nat;
+  }
+
+  do {
+    if (node==0) {
+      iatom = 0;
+      j = 0;
+      while (iatom<nbufmax) {
+	if(jj == FORTRAN(small,SMALL).na) {
+	  break;
+	}
+
+	buf[j] = jj+1;
+	// This is trial and error solution on Linux
+	// Needs to be generalized, possibly using
+	// file I/O, or a FORTRAN function call.
+	str_tmp = "";
+	if (FORTRAN(cbkqa,CBKQA).qa[2*jj] != ' ') {
+	  str_tmp += FORTRAN(cbkqa,CBKQA).qa[2*jj];
+	}
+	if (FORTRAN(cbkqa,CBKQA).qa[2*jj+1] != ' ') {
+	  str_tmp += FORTRAN(cbkqa,CBKQA).qa[2*jj+1];
+	}
+	if (node == 0) {
+	  glog.logfile << "ParticleList::ReadReax()\n" <<
+	    "Particle Type = " << str_tmp << endl;
+	}
+
+	buf[j+2] = 0;
+	buf[j+3] = FORTRAN(cbkch,CBKCH).ch[jj];;
+	buf[j+4] = FORTRAN(cbkc,CBKC).c[jj+jx];
+	buf[j+5] = FORTRAN(cbkc,CBKC).c[jj+jy];
+	buf[j+6] = FORTRAN(cbkc,CBKC).c[jj+jz];
+ 	jj++;
+
+	match = t->find_id(str_tmp,itype);
+	if (!match) {
+	  glog.abort("ParticleList::ReadReax:\n"
+		     "Missing definition for id " + str_tmp);
+	}
+
+	buf[j+1] = itype;
+
+	j+=iperatom;
+	iatom++;
+      }
+      nbuf = iatom;
+    }
+
+    MPI_Bcast(&nbuf,1,MPI_INT,0,comm->get_world());
+
+    MPI_Bcast(&buf[0],nbuf*iperatom,MPI_DOUBLE,0,comm->get_world());
+
+    j = 0;
+    for (iatom=0;iatom<nbuf;iatom++) {
+      nparticles_tot++;
+      itag = nparticles_tot-1;
+      usertag.push_back(nint(buf[j++]));
+      itype = nint(buf[j++]);
+      icolor = nint(buf[j++]);
+      charge = buf[j++];
+      x[0] = buf[j++];
+      x[1] = buf[j++];
+      x[2] = buf[j++];
+
+      mass = t->get_type_mass(itype);
+      mass_tot+=mass;
+
+      b->Minimg_Pos_Full(x, X);
+      Lown = comm->sub_check(b,x);
+      if (Lown) {
+	AddParticle(itype,itag,icolor,x,X,mass,charge);
+      }
+    }
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Read " << nbuf << " particles" << endl;
+    }
+
+  } while (nbuf!=0);
+
+  localptr.resize(nparticles_tot);
+  localptr_clear();
+  localptr_set();
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+  }
+  if (node == 0) {
+    glog.logfile << "Total particles read = " << nparticles_tot << endl;
+  }
+
+  if (nparticles_tot == 0) {
+    glog.error("ParticleList::ReadReax:\n"
+	       "Zero particles read from reax");
+  }
+    
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,comm->get_world());
+  if (itmp != nparticles_tot) {
+    glog.error("ParticleList::ReadReax:\n"
+	       "Invalid particle count");
+  }
+
+  Lwithinbox = true;
+
+}
+@
+
+
+3.4.2.2
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@d1254 14
+@
+
+
+3.4.2.3
+log
+@Added cplant modifications
+@
+text
+@d2200 1
+a2200 1
+      b->Minimg_Pos_Full(x, NULL);
+@
+
+
+3.4.2.4
+log
+@Added energies to Reax code, added kcal unit style and added
+the example testrdx to Makefile.testing
+@
+text
+@d2113 1
+d2118 1
+a2118 1
+    comm->get_nodefile() << "na = " << FORTRAN(small,SMALL).na << endl;  }
+d2155 3
+a2157 2
+	if (comm->get_Lnodefile()) {
+	  comm->get_nodefile() << "Particle Type = " << str_tmp << endl;
+@
+
+
+3.4.2.5
+log
+@Modified use of nat to allow treatment of big parallel systems.
+@
+text
+@d2130 2
+a2131 2
+    jy = ReaxParams::nattot;
+    jz = 2*ReaxParams::nattot;
+@
+
+
+3.4.2.6
+log
+@Added and removed some nodefile diagnostics.
+@
+text
+@d2154 3
+a2156 3
+// 	if (comm->get_Lnodefile()) {
+// 	  comm->get_nodefile() << "Particle Type = " << str_tmp << endl;
+// 	}
+@
+
+
+3.4.2.7
+log
+@Cleaned up charge eequilibration, removed some FORTRAN allocations
+@
+text
+@d57 1
+d2159 1
+a2159 1
+	buf[j+3] = 0.0;
+@
+
+
+3.4.2.8
+log
+@Added various things to make Grasp/REAXFF run on Blue Gene
+@
+text
+@d2116 1
+a2116 1
+    comm->get_nodefile() << "na = " << FORTRAN(rsmall,RSMALL).na << endl;  }
+d2138 1
+a2138 1
+	if(jj == FORTRAN(rsmall,RSMALL).na) {
+@
+
+
+3.4.2.9
+log
+@Streamlined memory for global and local data
+@
+text
+@d2159 3
+a2161 3
+	buf[j+4] = FORTRAN(cbkc,CBKC).cglobal[jj+jx];
+	buf[j+5] = FORTRAN(cbkc,CBKC).cglobal[jj+jy];
+	buf[j+6] = FORTRAN(cbkc,CBKC).cglobal[jj+jz];
+@
+
+
+3.3
+log
+@Handling fixed particles correctly and reporting number of fixed particles
+correctly for multi-processor runs.
+@
+text
+@d255 3
+a257 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << "Will attempt to read velocities from " << initial_velocity_file << endl;
+#endif
+d262 3
+a264 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << "Will not read an initial velocity file " << endl;
+#endif
+d270 3
+a272 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << "Will attempt to read displacements from " << initial_disp_file << endl;
+#endif
+d277 7
+a283 7
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << "Will not read an initial velocity file " << endl;
+#endif
+  }
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering ParticleList::ReadConfig()" << endl;
+#endif
+d322 3
+a324 3
+#ifdef USE_NODEFILES
+	     comm->get_nodefile() << "Opened " << v_str_tmp << " for velocities "<< endl;
+#endif
+d345 3
+a347 3
+#ifdef USE_NODEFILES
+	     comm->get_nodefile() << "Opened " << disp_str_tmp << " for displacements "<< endl;
+#endif
+d564 3
+a566 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << "Read " << nbuf << " particles" << endl;
+#endif
+d573 3
+a575 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+#endif
+d1387 3
+a1389 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering ParticleList::ReadDensity()" << endl;
+#endif
+d1549 3
+a1551 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+#endif
+d1750 3
+a1752 1
+  comm->get_nodefile() << "Entering ParticleList::ReadRestart()" << endl;
+d1821 3
+a1823 1
+    comm->get_nodefile() << "Read " << nbuf << " particles" << endl;
+d1831 3
+a1833 1
+  comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+d1918 3
+a1920 1
+  comm->get_nodefile() << "Entered ParticleList::OutputRestart" << endl;
+d1975 3
+a1977 1
+  comm->get_nodefile() << "Exited ParticleList::OutputRestart" << endl;
+@
+
+
+3.2
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d140 6
+a145 1
+      } 
+d626 1
+a626 1
+      if (particles[i].get_fixed())
+d656 1
+a656 1
+      if (particles[i].get_fixed())
+d678 1
+a678 1
+	if (particles[i].get_fixed())
+d682 1
+a682 1
+	if (particles[i].get_fixed())
+@
+
+
+3.1
+log
+@Added ability to read velocities from the config.in file
+and write velocities to the config.out and cfg.out files.
+@
+text
+@d55 5
+a59 1
+ParticleList::ParticleList() {
+d72 6
+d118 49
+a166 1
+  SetupVelocity(comm);
+d176 5
+a180 3
+			       const double x_in[], const double& mass_in,
+			       const double& charge_in) {
+  Particle p(type_in, tag_in, color_in, x_in, mass_in, charge_in);
+d187 8
+a194 4
+		      const double x_in[], const double& mass_in,
+		      const double& charge_in, const double v_in[]) {
+  Particle p(type_in, tag_in, color_in, x_in,  
+	     mass_in, charge_in, v_in);
+d202 1
+a202 1
+  Particle p(type_in, tag_in, x_in, charge_in);
+d228 1
+a228 1
+  double x[3],mass,charge,v[3];
+d230 1
+a230 1
+  string id;
+d233 1
+a233 1
+  ifstream infile;
+d236 2
+a237 1
+  int itmp;
+d246 31
+d278 9
+a287 1
+  filename = glog.path_str + "config.in";
+d289 1
+a289 1
+    infile.open(filename.c_str()); 
+d299 46
+d351 1
+a351 1
+  if (init_velocity_style == init_velocity_read) {
+d354 2
+a355 1
+    
+d404 79
+d519 24
+a542 11
+      usertag.push_back(nint(buf[j]));
+      itype = nint(buf[j+1]);
+      icolor = nint(buf[j+2]);
+      charge = buf[j+3];
+      x[0] = buf[j+4];
+      x[1] = buf[j+5];
+      x[2] = buf[j+6];
+      if (init_velocity_style == init_velocity_read) {
+	v[0] = buf[j+7]*constants.tfactor;
+	v[1] = buf[j+8]*constants.tfactor;
+	v[2] = buf[j+9]*constants.tfactor;
+a543 2
+	
+      j+=iperatom;
+d548 1
+a548 1
+      b->Minimg_Pos_Full(x);
+d551 2
+a552 2
+	if (init_velocity_style == init_velocity_read) {
+	  AddParticle(itype,itag,icolor,x,mass,charge,v);
+d554 1
+a554 1
+	  AddParticle(itype,itag,icolor,x,mass,charge);
+d559 1
+a559 1
+
+d561 1
+d568 1
+a568 1
+
+d570 1
+d602 8
+d615 9
+a623 3
+  for (int i=0;i<nparticles;i++) {
+    particles[i].step_v(timestep);
+  }
+d646 7
+a652 3
+  for (int i=0;i<nparticles;i++) {
+    particles[i].step_x(timestep);
+  }
+d660 9
+a668 3
+  if (maxstep > 0.0) {
+    for (int i=0;i<nparticles;i++) {
+      particles[i].step_x_force(timestepsq,relax_coord,maxstep,Lmaxstep);
+d671 8
+a678 2
+    for (int i=0;i<nparticles;i++) {
+      particles[i].step_x_force(timestepsq,relax_coord);
+d709 7
+d797 1
+d832 1
+a832 1
+    particles[i].get_v(v_tmp);
+d844 1
+d856 49
+d964 4
+d1042 3
+a1045 1
+    m+=3;
+d1058 2
+d1070 2
+d1084 12
+d1104 3
+a1106 1
+  double charge_in,mass_in;
+d1112 2
+d1126 6
+d1133 2
+a1134 2
+  AddParticle(type_in, tag_in, color_in, x_in, 
+	      mass_in, charge_in, v_in);
+d1143 3
+a1145 1
+  m = 11;
+d1191 1
+a1191 1
+
+d1274 55
+d1382 1
+a1382 1
+
+d1384 1
+d1540 1
+a1540 1
+	AddParticle(itype,itag,icolor,x,mass,charge);
+d1544 1
+a1544 1
+
+d1546 1
+d1663 49
+d1758 1
+a1758 1
+	"Failed to open "+filename,comm);
+d1805 1
+a1805 1
+      b->Minimg_Pos_Full(x);
+d1842 51
+a1930 1
+
+d1963 113
+a2077 1
+  
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d96 6
+d108 1
+a108 12
+  switch(init_velocity_style) {
+  case init_velocity_normal:
+    ComputeNDoFreedom(comm);
+    SetupVelocities(comm);
+    break;
+  case init_velocity_none:
+    break;
+  default:
+    glog.error("ParticleList::Setup: Invalid init_velocity_style");
+  }
+  // This is needed to set up const pressure runs.
+  ComputeTemperature(comm);
+d119 1
+a119 2
+			       const double& charge_in)
+{
+d128 1
+a128 2
+		      const double& charge_in, const double v_in[])
+{
+d137 1
+a137 2
+		   const double x_in[], const double& charge_in)
+{
+d164 1
+a164 1
+  double x[3],mass,charge;
+d201 4
+d228 1
+a228 1
+	buf_in >> buf[j] >> str_tmp >> buf[j+2] >> buf[j+3] >> 
+d232 19
+a250 2
+	  glog.abort("ParticleList::ReadConfig:\n"
+		     "Read error in "+filename,comm);
+d296 6
+d310 5
+a314 1
+	AddParticle(itype,itag,icolor,x,mass,charge);
+d459 11
+a469 3
+void ParticleList::SetupVelocities(Comm* comm) {
+  // Velocities are generated as follows:
+  // 1. Velocities are initially selected from a normalized Gaussian
+d475 1
+a475 4
+  double v_tmp[3];
+  double factor,temp_tmp,ke_tmp;
+  int iseed_tmp;
+  int i;
+d477 14
+a490 1
+  iseed_tmp = temp_iseed;
+d492 15
+a506 9
+  for (int ii=0;ii<nparticles_tot;ii++) {
+    v_tmp[0] = gausslc(iseed_tmp);
+    v_tmp[1] = gausslc(iseed_tmp);
+    v_tmp[2] = gausslc(iseed_tmp);
+    i = localptr[ii];
+    if (i != -1 && i<nparticles) { 
+      factor = 1.0/sqrt(particles[i].get_mass());
+      vec3_scale(factor,v_tmp,v_tmp);
+      particles[i].set_v(v_tmp);
+d508 8
+d517 1
+a517 1
+  ZeroMomentum(comm);
+a518 4
+  RescaleTemperature(temp_init,temperature);
+
+  Ltemperatureuptodate = false;
+  Lkvuptodate = false;
+d1149 1
+a1149 1
+  init_velocity_style = init_velocity_normal;
+d1213 28
+d1357 1
+a1357 1
+    glog.error("ParticleList::ReadConfig:\n"
+d1363 1
+a1363 1
+    glog.error("ParticleList::ReadConfig:\n"
+d1398 1
+a1398 1
+      glog.error("Output::OutputRestart:\n"
+d1441 1
+a1441 1
+  comm->get_nodefile() << "Exited Output::OutputRestart" << endl;
+@
+
+
+2.26
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.25
+log
+@Updated header
+@
+text
+@d372 1
+a372 1
+		   bool Lmaxstep, const double maxstep) {
+@
+
+
+2.24
+log
+@fixed some issues found by compiler on liberty
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.23
+log
+@Added anisotropic style to pressure control,
+and included in Tersoff example testp.
+@
+text
+@d1313 1
+a1313 1
+    openflag = std::ios::trunc;
+a1320 1
+    outfile.setf(ios::binary);
+@
+
+
+2.22
+log
+@Added NPT ensemble
+@
+text
+@d61 1
+d68 1
+d344 1
+d352 9
+d466 1
+d490 1
+d505 1
+d538 43
+d1198 2
+a1200 1
+    infile.setf(ios::binary);
+@
+
+
+2.21
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d109 2
+@
+
+
+2.20
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d392 6
+d418 1
+d505 8
+d1304 1
+@
+
+
+2.19
+log
+@Various
+@
+text
+@a1085 54
+void ParticleList::ZeroRhoEam() {
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    particles[i].set_rho_eam();
+  }
+}
+
+void ParticleList::ZeroFpEam() {
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    particles[i].set_fp_eam();
+  }
+}
+
+void ParticleList::pack_embed(const int& num, const vector<int>& list,
+			     double* buf) const {
+  int ii;
+
+  for (int i=0;i<num;i++) {
+    ii = list[i];
+    buf[i] = particles[ii].get_fp_eam();
+  }
+}
+
+void ParticleList::unpack_embed(const int& num, const int& ifirst,
+			     const double* buf) {
+  int ii;
+
+  ii = ifirst;
+  for (int i=0;i<num;i++) {
+    particles[ii].set_fp_eam(buf[i]);
+    ii++;
+  }
+}
+
+void ParticleList::pack_reverse_rho(const int& num, const int& ifirst,
+			     double* buf) const {
+  int ii;
+
+  ii = ifirst;
+  for (int i=0;i<num;i++) {
+    buf[i] = particles[ii].get_rho_eam();
+    ii++;
+  }
+}
+
+void ParticleList::unpack_reverse_rho(const int& num, const vector<int>& list,
+			     const double* buf) {
+  int ii;
+
+  for (int i=0;i<num;i++) {
+    ii = list[i];
+    particles[ii].increment_rho_eam(buf[i]);
+  }
+}
+
+@
+
+
+2.18
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d66 1
+a87 2
+    ComputeNDoFreedom(comm);
+    SetupVelocities(comm);
+d91 10
+a100 1
+    //    SampleDensityProfile(b,comm);
+d104 2
+d107 1
+a107 1
+    glog.error("ParticleList::Setup: Invalid init_style");
+d164 1
+d186 1
+a186 1
+  str_tmp = glog.path_str + "config.in";
+d188 1
+a188 1
+    infile.open(str_tmp.c_str()); 
+d192 1
+a192 1
+      infile.open(str_tmp.c_str()); 
+d195 1
+a195 1
+	"Failed to open "+str_tmp,comm);
+d221 1
+a221 1
+		       "Read error in "+str_tmp,comm);
+d232 1
+a232 1
+		     "Read error in "+str_tmp,comm);
+d245 1
+a245 1
+// 		       "Read error in " + str_tmp,comm);
+d306 1
+a306 1
+	       "Zero particles read from "+str_tmp);
+d985 1
+d1022 1
+d1076 4
+d1081 1
+a1081 1
+    glog.error("ParticleList::input_init_config:\n"
+d1147 196
+@
+
+
+2.17
+log
+@Removed frequency junk from ParticleList and added cplant_debug
+and cplant_west _ARCH options
+@
+text
+@d214 1
+a214 1
+	stringstream buf_in(str_buf);
+d852 1
+a852 1
+    stringstream buf_in(str_buf);
+d881 1
+a881 1
+      stringstream buf_in(str_buf);
+d1007 1
+a1007 1
+  stringstream buf_in(buf);
+d1029 1
+a1029 1
+  stringstream buf_in(buf);
+@
+
+
+2.16
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@a478 25
+void ParticleList::SaveForce() {
+  int j;
+  fsave.resize(3*nparticles);
+  j = 0;
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_f(&fsave[j]);
+    j+=3;
+  }
+}
+
+void ParticleList::ComputeFreq(Comm* comm) {
+  double ftmp[3],gammasq;
+  int j;
+  
+  j = 0;
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_f(ftmp);
+    for (int idim=0;idim<3;idim++) {
+      gammasq = sqrt(fabs(log(fabs(fsave[j]/ftmp[idim]))));
+      j++;
+      comm->get_nodefile() << gammasq << endl;
+    }
+  }
+}
+
+@
+
+
+2.16.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@d54 1
+a54 3
+ParticleList::ParticleList():
+  initial_atom_file("config.in")
+{
+a86 2
+    if (node == 0)
+      glog.logfile << "here 1 " << endl;
+d88 1
+a88 6
+    if (node == 0)
+      glog.logfile << "here 2 " << endl;
+    if (!initial_velocity_file.length())
+      SetupVelocities(comm);
+    if (node == 0)
+      glog.logfile << "here 3 " << endl;
+a98 6
+
+  if (node == 0)
+    {
+    glog.logfile << "Exiting here " << endl;
+    glog.logfile.flush();
+    }
+d156 1
+a156 1
+  double x[3],v[3],mass,charge;
+d158 1
+a158 1
+  string id, v_str_tmp;
+d161 1
+a161 1
+  ifstream infile, velocityfile;
+d164 1
+a164 2
+  int itmp, iVelTag;
+  bool read_velocities;
+a172 16
+  if (initial_velocity_file.length()) {
+    read_velocities = true;
+    if (node == 0)
+      glog.logfile << "Will attempt to read velocities from " << initial_velocity_file << endl;
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << "Will attempt to read velocities from " << initial_velocity_file << endl;
+#endif
+  } else {
+    read_velocities = false;
+    if (node == 0)
+      glog.logfile << "Will not read an initial velocity file " << endl;
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << "Will not read an initial velocity file " << endl;
+#endif
+  }
+#ifdef USE_NODEFILES
+a173 1
+#endif
+d175 1
+a175 5
+  //str_tmp = glog.path_str + initial_atom_file;
+  str_tmp = initial_atom_file;
+  if (read_velocities)
+    //v_str_tmp = glog.path_str + initial_velocity_file;
+    v_str_tmp = initial_velocity_file;
+a186 23
+
+    if (read_velocities)
+    {
+	 velocityfile.open(v_str_tmp.c_str()); 
+
+	 if (!velocityfile) 
+	 {
+	   velocityfile.close();
+	   velocityfile.open(v_str_tmp.c_str()); 
+	   if (!velocityfile) {
+	     glog.abort("ParticleList::ReadConfig:\n"
+			"Failed to open "+v_str_tmp,comm);
+	   }
+	 }
+	 else
+	 {
+	     if (node == 0)
+	       glog.logfile << "Opened "<< v_str_tmp << " for velocities " << endl;
+#ifdef USE_NODEFILES
+	     comm->get_nodefile() << "Opened " << v_str_tmp << " for velocities "<< endl;
+#endif
+	 }
+     }
+d192 1
+a192 3
+  iperatom =  7;
+  if (read_velocities)
+	iperatom += 3;
+a223 29
+	if (read_velocities)
+	{
+	    if(input_string_get(velocityfile,str_buf)) 
+	    {
+	      if(str_buf == "End of Input") 
+	      {
+		break;
+	      } 
+	      else 
+	      {
+		glog.abort("ParticleList::ReadConfig:\n"
+		       "Read error in "+v_str_tmp,comm);
+	      }
+	    }
+
+	    stringstream buf_in(str_buf);
+
+	    buf_in  >> iVelTag >> buf[j+7] >> buf[j+8] >> buf[j+9];
+	    
+	    if (buf_in.fail())
+	      glog.abort("ParticleLst::ReadConfig:\n"
+			 "Read error in "+v_str_tmp,comm);
+
+	    if (iVelTag != buf[j])
+	      glog.abort("ParticleList::ReadConfig:\n"
+			 "Position and Velocity files not synced\n");
+	}
+
+
+d260 8
+a267 12
+      usertag.push_back(nint(buf[j++]));
+      itype = nint(buf[j++]);
+      icolor = nint(buf[j++]);
+      charge = buf[j++];
+      x[0] = buf[j++];
+      x[1] = buf[j++];
+      x[2] = buf[j++];
+      if (read_velocities) {
+	v[0] = buf[j++];
+	v[1] = buf[j++];
+	v[2] = buf[j++];
+      }
+d275 1
+a275 4
+	if (!read_velocities)
+	  AddParticle(itype,itag,icolor,x,mass,charge);
+	else
+	  AddParticle(itype,itag,icolor,x,mass,charge,v);
+d279 1
+a279 1
+#ifdef USE_NODEFILES
+a280 1
+#endif
+d287 1
+a287 1
+#ifdef USE_NODEFILES
+a288 1
+#endif
+a305 5
+  
+  if (node == 0)
+    glog.logfile << "Exiting here now " << endl;
+
+
+a498 1
+#ifdef USE_NODEFILES
+a499 1
+#endif
+d849 1
+a849 1
+#ifdef USE_NODEFILES
+a850 1
+#endif
+d1009 1
+a1009 1
+#ifdef USE_NODEFILES
+a1010 1
+#endif
+a1091 32
+}
+
+void ParticleList::input_read_atoms(const string& buf)
+{
+  string str_tmp;
+  stringstream buf_in(buf);
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ParticleList::input_read_velocities:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << str_tmp << endl;
+
+  initial_atom_file = str_tmp;
+}
+
+void ParticleList::input_read_velocities(const string& buf)
+{
+  string str_tmp;
+  stringstream buf_in(buf);
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ParticleList::input_read_velocities:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << str_tmp << endl;
+
+  initial_velocity_file = str_tmp;
+@
+
+
+2.16.2.2
+log
+@Keeping track of displacements for each particle.
+@
+text
+@d55 1
+a55 2
+  initial_atom_file("config.in"),
+  scale_disps(false)
+d89 2
+d92 2
+d96 2
+d123 1
+a123 1
+			       const double x_in[], const double X_in[], const double& mass_in,
+d126 1
+a126 1
+  Particle p(type_in, tag_in, color_in, x_in, X_in, mass_in, charge_in);
+d133 1
+a133 1
+		      const double x_in[], const double X_in[], const double& mass_in,
+d136 1
+a136 1
+  Particle p(type_in, tag_in, color_in, x_in, X_in,  
+d146 1
+a146 1
+  Particle p(type_in, tag_in, x_in, x_in, charge_in);
+d171 1
+a171 1
+  double x[3],v[3],u[3],X[3],mass,charge;
+d173 1
+a173 1
+  string id, v_str_tmp, disp_str_tmp;
+d176 1
+a176 1
+  ifstream infile, velocityfile, dispfile;
+d179 2
+a180 2
+  int itmp, iVelTag, dispTag;
+  bool read_velocities, read_disps;
+a203 15
+  if (initial_disp_file.length()) {
+    read_disps = true;
+    if (node == 0)
+      glog.logfile << "Will attempt to read displacements from " << initial_disp_file << endl;
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << "Will attempt to read displacements from " << initial_disp_file << endl;
+#endif
+  } else {
+    read_disps = false;
+    if (node == 0)
+      glog.logfile << "Will not read an initial displacement file " << endl;
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << "Will not read an initial velocity file " << endl;
+#endif
+  }
+a212 2
+  if (read_disps)
+    disp_str_tmp = initial_disp_file;
+a246 23
+
+    if (read_disps)
+    {
+	 dispfile.open(disp_str_tmp.c_str()); 
+
+	 if (!dispfile) 
+	 {
+	   dispfile.close();
+	   dispfile.open(v_str_tmp.c_str()); 
+	   if (!dispfile) {
+	     glog.abort("ParticleList::ReadConfig:\n"
+			"Failed to open "+disp_str_tmp,comm);
+	   }
+	 }
+	 else
+	 {
+	     if (node == 0)
+	       glog.logfile << "Opened "<< disp_str_tmp << " for displacements " << endl;
+#ifdef USE_NODEFILES
+	     comm->get_nodefile() << "Opened " << disp_str_tmp << " for displacements "<< endl;
+#endif
+	 }
+     }
+a254 2
+  if (read_disps)
+    iperatom += 3;
+a311 7
+	    
+	    if (scale_disps) {
+	      buf[j+7] *= disp_amp;
+	      buf[j+8] *= disp_amp;
+	      buf[j+9] *= disp_amp;
+	    }
+
+a313 39
+	if (read_disps) {
+	  if(input_string_get(dispfile,str_buf)) {
+	    if(str_buf == "End of Input") {
+	      break;
+	    } else {
+	      glog.abort("ParticleList::ReadConfig:\n"
+			 "Read error in "+str_tmp,comm);
+	    }
+	  }
+
+	  stringstream buf_in(str_buf);
+
+	  buf_in >> dispTag >> u[0] >> u[1] >> u[2];
+
+	  if (buf_in.fail()) {
+	    glog.abort("ParticleList::ReadConfig:\n"
+		       "Read error in "+str_tmp,comm);
+	  }
+
+	  if (dispTag != buf[j])
+	    glog.abort("ParticleList::ReadConfig\n"
+                       "Displacement tags fail check\n");
+
+	  if (scale_disps) {
+	    u[0] *= disp_amp;
+	    u[1] *= disp_amp;
+	    u[2] *= disp_amp;
+	  }
+
+	  // store reference configuration
+	  buf[j+iperatom-3] = buf[j+4];
+	  buf[j+iperatom-2] = buf[j+5];
+	  buf[j+iperatom-1] = buf[j+6];
+
+	  // update positions
+	  buf[j+4] += u[0];
+	  buf[j+5] += u[1];
+	  buf[j+6] += u[2];
+	}
+a362 9
+      if (read_disps) {
+	X[0] = buf[j++];
+	X[1] = buf[j++];
+	X[2] = buf[j++];
+      } else {
+	X[0] = x[0];
+	X[1] = x[1];
+	X[2] = x[2];
+      }
+d367 1
+a367 1
+      b->Minimg_Pos_Full(x, X);
+d371 1
+a371 1
+	  AddParticle(itype,itag,icolor,x,X,mass,charge);
+d373 1
+a373 1
+	  AddParticle(itype,itag,icolor,x,X,mass,charge,v);
+d406 5
+a724 2
+  particles[ii].get_X(&buf[m]);
+  m+=3;
+a744 1
+  const double* X_in;
+a750 2
+  X_in = &buf[m];
+  m+=3;
+d764 1
+a764 1
+  AddParticle(type_in, tag_in, color_in, x_in, X_in,
+d774 1
+a774 2
+  //m = 11;
+  m = 14;  // Adding reference position to this
+d1113 1
+a1113 1
+	AddParticle(itype,itag,icolor,x,x,mass,charge);
+a1232 33
+}
+
+void ParticleList::input_read_displacements(const string& buf)
+{
+  string str_tmp;
+  stringstream buf_in(buf);
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ParticleList::input_read_displacements:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << str_tmp << endl;
+
+  initial_disp_file = str_tmp;
+}
+
+void ParticleList::input_scale_displacements(const string& buf)
+{
+  double d_tmp;
+  stringstream buf_in(buf);
+  buf_in >> d_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ParticleList::input_scale_displacements:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << d_tmp << endl;
+
+  disp_amp = d_tmp;
+  scale_disps = true;
+@
+
+
+2.16.2.3
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a55 1
+  initial_atom_file_has_energies(false),
+a68 6
+  fixed_particle_style = none;
+  minimized_particle_style = none;
+  nfixed = 0;
+  nminimized = 0;
+  vel_amp = 1.0;
+  e_cohesive = 0.0;
+d104 2
+a105 44
+  if (fixed_particle_style == by_type) {
+    int i_id;
+    map<int,int> fixed_types;
+    for (int i = 0; i < fixedType.size(); i++) {
+      map<int,string>::iterator p = fixedType.find(i);
+      if (!(t->find_id((*p).second,i_id)))
+	glog.error("ParticleList::Setup"
+		   "Cannot find ID "+(*p).second);
+      else {
+	fixed_types[i_id] = i_id;
+	glog.logfile << "Will fix particles of type " << fixedType[i] << "\n";
+      }
+    }
+     
+    for (int i = 0; i < nparticles; i++) 
+      if (fixed_types.find(particles[i].get_type()) != fixed_types.end()) {
+	particles[i].set_fixed();
+	nfixed++;
+      } 
+  }
+
+  if (minimized_particle_style == by_type) {
+    int i_id;
+    map<int,int> minimized_types;
+    for (int i = 0; i < minimizedType.size(); i++) {
+      map<int,string>::iterator p = minimizedType.find(i);
+      if (!(t->find_id((*p).second, i_id)))
+	glog.error("ParticleList::Setup"
+		   "Cannot find ID "+(*p).second);
+      else {
+	minimized_types[i_id] = i_id;
+	glog.logfile << "Will minimize particles of type " << minimizedType[i]  <<" " << minimized_types[i_id] << "\n";
+      }
+    }
+     
+    for (int i = 0; i < nparticles; i++) 
+      if (minimized_types.find(particles[i].get_type()) != minimized_types.end()) {
+	particles[i].set_minimized();
+	nminimized++;
+      }
+  }
+  glog.logfile << "\n";
+
+  if (node == 0) {
+d108 1
+a108 1
+  }
+d119 1
+a119 1
+			       const double& charge_in, const double& phi_in)
+d121 1
+a121 1
+  Particle p(type_in, tag_in, color_in, x_in, X_in, mass_in, charge_in, phi_in);
+d129 1
+a129 1
+		      const double& charge_in, const double v_in[], const double& phi_in, const bool& fix_in, const bool& minimize_in)
+d132 1
+a132 1
+	     mass_in, charge_in, v_in, phi_in, fix_in, minimize_in);
+a355 4
+	    buf[j+7] *= vel_amp;
+	    buf[j+8] *= vel_amp;
+	    buf[j+9] *= vel_amp;
+
+a511 8
+int ParticleList::get_nfixed() const {
+  return nfixed;
+}
+
+int ParticleList::get_nminimized() const {
+  return nminimized;
+}
+
+d517 3
+a519 9
+  if (fixed_particle_style == none)
+    for (int i=0;i<nparticles;i++) {
+      particles[i].step_v(timestep);
+    }
+  else
+    for (int i = 0; i < nparticles; i++)
+      if (particles[i].get_fixed())
+	particles[i].step_v(timestep);
+
+d532 3
+a534 7
+  if (fixed_particle_style == none)
+    for (int i=0;i<nparticles;i++) 
+      particles[i].step_x(timestep);
+  else
+    for (int i = 0; i < nparticles; i++)
+      if (particles[i].get_fixed())
+	particles[i].step_x(timestep);
+d542 3
+a544 9
+  if (fixed_particle_style == none) {
+    if (maxstep > 0.0) {
+      for (int i=0;i<nparticles;i++) {
+	particles[i].step_x_force(timestepsq,relax_coord,maxstep,Lmaxstep);
+      }
+    } else {
+      for (int i=0;i<nparticles;i++) {
+	particles[i].step_x_force(timestepsq,relax_coord);
+      }
+d547 2
+a548 8
+     if (maxstep > 0.0) {
+      for (int i=0;i<nparticles;i++) 
+	if (particles[i].get_fixed())
+	  particles[i].step_x_force(timestepsq,relax_coord,maxstep,Lmaxstep);
+    } else {
+      for (int i=0;i<nparticles;i++) 
+	if (particles[i].get_fixed())
+	  particles[i].step_x_force(timestepsq,relax_coord);
+a667 1
+    particles[i].set_phi(0.0);
+d676 1
+a676 5
+    if (particles[i].get_minimized())
+      particles[i].get_f(&fsave[j]);
+    else {
+      fsave[j] = fsave[j+1] = fsave[j+2] = 0.;
+    }
+a680 49
+void ParticleList::SaveGradient(valarray<double>& fsave) {
+  if (fsave.size() < 3*nminimized)
+    fsave.resize(3*nminimized);
+  double rtmp[3];
+  int j = 0;
+  for (int i=0;i<nparticles;i++) {
+    if (particles[i].get_minimized()) {
+      particles[i].get_f(rtmp);
+      fsave[j] = rtmp[0];
+      fsave[j+1] = rtmp[1];
+      fsave[j+2] = rtmp[2];
+      j += 3;
+    }
+  }
+}
+
+void ParticleList::SaveMinimized(valarray<double>& rsave) {
+  double rtmp[3];
+  if (rsave.size() < 3*nminimized) 
+    rsave.resize(3*nminimized);
+
+  int j = 0;
+  for (int i = 0; i < nparticles; i++) {
+    if (particles[i].get_minimized()) {
+      particles[i].get_x(rtmp);
+      rsave[j] = rtmp[0];
+      rsave[j+1] = rtmp[1];
+      rsave[j+2] = rtmp[2];
+      j += 3;
+    }
+  }
+}
+
+void ParticleList::MoveMinimized(valarray<double>& rnew) {
+  if (rnew.size() < 3*nminimized)
+    glog.error("ParticleList::MoveMinimized Bad size\n");
+  double rtmp[3];
+
+  int j = 0;
+  for (int i = 0; i < nparticles; i++) 
+    if (particles[i].get_minimized()) {
+      rtmp[0] = rnew[j];
+      rtmp[1] = rnew[j+1];
+      rtmp[2] = rnew[j+2];
+      particles[i].set_x(rtmp);
+      j += 3;
+    }
+}
+
+a713 4
+double ParticleList::get_cohesive_energy() const {
+  return e_cohesive;
+}
+
+a787 3
+    m += 3;
+    buf[m] = particles[ii].get_phi();
+    m++;
+d789 1
+a801 2
+    particles[ii].increment_phi(buf[m]);
+    m++;
+a825 12
+  buf[m] = particles[ii].get_phi();
+  m++;
+  if (particles[ii].get_fixed())
+    buf[m] = 1.;
+  else
+    buf[m] = -1.;
+  m++;
+  if (particles[ii].get_minimized())
+    buf[m] = 1;
+  else
+    buf[m] = -1.;
+
+d835 1
+a835 2
+  double charge_in,mass_in,phi_in;
+  bool fix_in, minimize_in;
+a854 6
+  phi_in = buf[m];
+  m++;
+  fix_in = buf[m] > 0.;
+  m++;
+  minimize_in = buf[m] > 0.;
+  m++;
+d857 1
+a857 1
+	      mass_in, charge_in, v_in, phi_in, fix_in, minimize_in);
+d867 1
+a867 2
+  //m = 15;  // Adding reference position and energy to this
+  m = 17;  //Adding bools for fix and minimize
+d913 1
+a913 1
+ 
+a995 56
+double ParticleList::ComputeAlphaType(const int& type, Comm* comm) {
+  double sum[2],tmp[2],temp_tmp;
+
+  sum[0] = 0.0;
+  sum[1] = 0.0;
+  for (int i=0;i<nparticles;i++) {
+    temp_tmp = particles[i].get_phi()-e_cohesive + particles[i].get_mvsq()/2.;
+    sum[0] += temp_tmp;
+    if (particles[i].get_type() == type) 
+      sum[1] += temp_tmp;
+  }
+  MPI_Allreduce(&sum[0],&tmp,2,MPI_DOUBLE,MPI_SUM,comm->get_world());
+
+  return tmp[1]/tmp[0];
+
+}
+
+/* NB -- this should really be called TranslateMinimized */
+void ParticleList::TranslateByType(const int& type, const valarray<double>& dR) 
+{
+  double drhere[3];
+  drhere[0] = dR[0];
+  drhere[1] = dR[1];
+  drhere[2] = dR[2];
+  for (int i = 0; i < nparticles; i++) 
+    if (particles[i].get_type() == type) 
+      particles[i].increment_x(drhere);
+}
+
+void ParticleList::ConjugateGradientUpdate(const double R[]) 
+{
+  const double* r = R;
+  for (int i = 0; i < nparticles; i++) 
+    if (particles[i].get_minimized()) {
+      particles[i].set_x(r);
+      r += 3;
+    }
+}
+
+void ParticleList::SumForceByType(const int& type, valarray<double>& f, Comm* comm) 
+{
+  double ftmp[3], pf[3], fhere[3]; 
+  fhere[0] = fhere[1] = fhere[2] = pf[0] = pf[1] = pf[2] = 0.;
+  for (int i = 0; i < nparticles; i++) 
+     if (particles[i].get_type() == type) {
+        particles[i].get_f(ftmp);
+	pf[0] += ftmp[0];
+	pf[1] += ftmp[1];
+	pf[2] += ftmp[2];
+     }
+  MPI_Allreduce(pf,fhere,3, MPI_DOUBLE,MPI_SUM,comm->get_world());
+  f[0] = fhere[0];
+  f[1] = fhere[1];
+  f[2] = fhere[2];
+}
+
+a1309 1
+  initial_atom_file_has_energies = false;
+a1343 18
+void ParticleList::input_read_ref_config(const string& buf)
+{
+  string str_tmp;
+  stringstream buf_in(buf);
+  buf_in >> str_tmp;
+ 
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ParticleList::input_read_ref_config:\n"
+               "Read error in input file");
+  }
+  glog.logfile << " " << str_tmp << endl;
+ 
+  initial_atom_file = str_tmp;
+  initial_atom_file_has_energies = true;
+
+}
+
+a1358 130
+}
+
+void ParticleList::input_velocity_factor(const string& buf)
+{
+  double d_tmp;
+  stringstream buf_in(buf);
+  buf_in >> d_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ParticleList::input_velocity_factor:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << d_tmp << endl;
+
+  vel_amp = d_tmp;
+}
+
+void ParticleList::input_cohesive_energy(const string& buf)
+{
+  double d_tmp;
+  stringstream buf_in(buf);
+  buf_in >> d_tmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ParticleList::input_velocity_factor:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << d_tmp << endl;
+
+  e_cohesive = d_tmp;
+}
+
+void ParticleList::input_fixed_particles(const string& buf)
+{
+  string style;
+  stringstream buf_in(buf);
+  buf_in >> style;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ParticleList::input_fixed_particles:\n"
+	       "Cannot get fix style from input file");
+  }
+  glog.logfile << " " << style << endl;
+
+  if (style == "type") {
+    int count;
+    fixed_particle_style = by_type;
+    buf_in >> count;
+ 
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("ParticleList::input_fixed_particles:\n"
+		 "Cannot get fixed type count from input file");
+    }
+    string strtmp;
+    for (int i = 0; i < count; i++) {
+      buf_in >> strtmp;
+      if (buf_in.fail()) {
+	glog.logfile << endl;
+	glog.error("ParticleList::input_fixed_particles:\n"
+		   "Cannot get fixed type i \n");
+      }
+      fixedType[i] = strtmp;
+      glog.logfile << " " << strtmp;
+    }
+    glog.logfile << endl;
+  } else if (style == "region") {
+    fixed_particle_style = by_region;
+
+    glog.error("ParticleList::input_fixed_particles:\n"
+	       "Fix by region not implemented yet");
+  } else if (style == "id") {
+    fixed_particle_style = by_id;
+    
+    glog.error("ParticleList::input_fixed_particles:\n"
+	       "Fix by id not implemented yet");
+  }
+    
+}
+
+void ParticleList::input_minimized_particles(const string& buf)
+{
+  string style;
+  stringstream buf_in(buf);
+  buf_in >> style;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("ParticleList::input_fixed_particles:\n"
+	       "Cannot get fix style from input file");
+  }
+  glog.logfile << " " << style << endl;
+
+  if (style == "type") {
+    minimized_particle_style = by_type;
+    int count;
+    buf_in >> count;
+ 
+    if (buf_in.fail()) {
+      glog.logfile << endl;
+      glog.error("ParticleList::input_minimized_particles:\n"
+		 "Cannot get minimized type count from input file");
+    }
+    string strtmp;
+    for (int i = 0; i < count; i++) {
+      buf_in >> strtmp;
+      if (buf_in.fail()) {
+	glog.logfile << endl;
+	glog.error("ParticleList::input_minimized_particles:\n"
+		   "Cannot get minimized type i \n");
+      }
+      minimizedType[i] = strtmp;
+      glog.logfile << " " << strtmp;
+    }
+    glog.logfile << endl;
+  } else if (style  == "region") {
+    minimized_particle_style = by_region;
+
+    glog.error("ParticleList::input_minimized_particles:\n"
+	       "Minimize by region not implemented yet");
+  } else if (style == "id") {
+    minimized_particle_style = by_id;
+    
+    glog.error("ParticleList::input_minimized_particles:\n"
+	       "Minimize by id not implemented yet");
+  }
+    
+@
+
+
+2.16.2.4
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a64 1
+  Lkvuptodate = false;
+a75 2
+  init_velocity_style = init_velocity_none;
+  kv.resize(nvirial);
+d97 1
+d103 1
+a103 10
+    break;
+  case init_config_restart:
+    ReadRestart(b,t,comm);
+    break;
+  default:
+    glog.error("ParticleList::Setup: Invalid init_config_style");
+  }
+
+  switch(init_velocity_style) {
+  case init_velocity_normal:
+a106 2
+  case init_velocity_none:
+    break;
+d108 1
+a108 1
+    glog.error("ParticleList::Setup: Invalid init_velocity_style");
+a157 3
+
+  // This is needed to set up const pressure runs.
+  ComputeTemperature(comm);
+a212 1
+  string filename;
+d358 1
+a358 1
+		       "Read error in "+filename,comm);
+d362 1
+a362 1
+	std::istringstream buf_in(str_buf);
+d369 1
+a369 1
+		     "Read error in "+filename,comm);
+d387 1
+a387 1
+	    std::stringstream buf_in(str_buf);
+d421 1
+a421 1
+	  std::stringstream buf_in(str_buf);
+d461 1
+a461 1
+// 		       "Read error in " + filename,comm);
+d540 1
+a540 1
+	       "Zero particles read from "+filename);
+a587 1
+  Lkvuptodate = false;
+a594 9
+  Lkvuptodate = false;
+}
+
+void ParticleList::ScaleVelocity(const double fac[]) {
+  for (int i=0;i<nparticles;i++) {
+    particles[i].scale_v(fac);
+  }
+  Ltemperatureuptodate = false;
+  Lkvuptodate = false;
+d610 1
+a610 1
+		   bool& Lmaxstep, const double maxstep) {
+a655 6
+void ParticleList::ScalePosition(const Box* b, const double dilation[]) {
+  for (int i=0;i<nparticles;i++) {
+    particles[i].scale_x(b,dilation); 
+  }
+}
+
+a675 1
+  //ndof = 3*(nparticles_tot-0);
+a708 1
+  Lkvuptodate = false;
+a731 1
+  Lkvuptodate = false;
+a745 1
+  Lkvuptodate = false;
+d755 14
+d818 17
+a842 8
+double ParticleList::get_kinetic_virial() const {
+  if (!Ltemperatureuptodate) {
+    glog.error("ParticleList::get_kinetic_virial():\n"
+	       "Temperature not up to date");
+  }
+  return (2.0/3.0)*e_kinetic;
+}
+
+a854 43
+void ParticleList::get_kinetic_virial(vector <double>& kv_tmp) const {
+  if (!Lkvuptodate) {
+    glog.error("ParticleList::get_kinetic_virial():\n"
+	       "Kinetic virial not up to date");
+  }
+  kv_tmp.resize(nvirial);
+  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+    kv_tmp[ivirial] = kv[ivirial];
+  }
+}
+
+void ParticleList::ComputeKineticVirial(Comm* comm) {
+  vector <double> kv_tmp;
+  double tmp;
+
+  if (Lkvuptodate) {
+    return;
+  }
+
+  kv_tmp.resize(nvirial);
+
+  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+    kv[ivirial] = 0.0;
+  }
+
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_mvsq(kv_tmp);
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      kv[ivirial] += kv_tmp[ivirial];
+    }
+  }
+
+  MPI_Allreduce(&kv[0],&kv_tmp[0],nvirial,MPI_DOUBLE,
+		MPI_SUM,comm->get_world());
+  kv.swap(kv_tmp);
+
+  tmp = kv[0]+kv[1]+kv[2];
+  temperature = tmp/(ndof*constants.boltz);
+  e_kinetic = 0.5*tmp;
+  Ltemperatureuptodate = true;
+  Lkvuptodate = true;
+}
+
+d1178 1
+d1299 1
+a1299 1
+    std::istringstream buf_in(str_buf);
+d1328 1
+a1328 1
+      std::istringstream buf_in(str_buf);
+a1420 1
+      usertag.push_back(itag);
+d1455 1
+a1455 1
+  std::istringstream buf_in(buf);
+a1457 1
+  init_velocity_style = init_velocity_normal;
+d1477 1
+a1477 1
+  std::istringstream buf_in(buf);
+a1510 4
+
+  } else if (str_tmp == "restart") {
+    init_config_style = init_config_restart;
+    glog.logfile << endl;
+d1512 1
+a1512 1
+    glog.error("\nParticleList::input_init_config:\n"
+d1520 1
+a1520 1
+  std::stringstream buf_in(buf);
+d1525 1
+a1525 1
+    glog.error("ParticleList::input_read_atoms:\n"
+d1537 1
+a1537 1
+  std::stringstream buf_in(buf);
+d1553 1
+a1553 1
+  std::stringstream buf_in(buf);
+d1569 1
+a1569 1
+  std::stringstream buf_in(buf);
+d1587 1
+a1587 1
+  std::stringstream buf_in(buf);
+d1604 1
+a1604 1
+  std::stringstream buf_in(buf);
+d1620 1
+a1620 1
+  std::stringstream buf_in(buf);
+d1636 1
+a1636 1
+  std::stringstream buf_in(buf);
+d1685 1
+a1685 1
+  std::stringstream buf_in(buf);
+a1729 3
+int ParticleList::get_usertag(const int& itag) {
+  return usertag[itag];
+}
+d1731 4
+a1734 2
+int ParticleList::get_localptr(const int& itag) {
+  return localptr[itag];
+d1737 3
+a1739 22
+void ParticleList::ReadRestart(
+		   const Box* b, 
+		   const ParticleTypeList* t, Comm* comm) {
+  string str_buf,str_tmp;
+  string filename;
+  vector<Particle> buf;
+  int iatom,iperatom,j,nbuf,nbufmax;
+  double x[3],v[3],mass,charge;
+  int itag,icolor,itype;
+  string id;
+  bool match;
+  int isize;
+  ifstream infile;
+  int node;
+  bool Lown;
+  int itmp;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering ParticleList::ReadRestart()" << endl;
+d1741 1
+d1743 3
+a1745 1
+  comm->get_nodefile() << "Entering ParticleList::ReadRestart()" << endl;
+d1747 3
+a1749 14
+  filename = glog.path_str + "restart.in";
+  if (node == 0) {
+    std::ios::openmode openflag;
+    openflag = std::ios::binary;
+    infile.open(filename.c_str()); 
+
+    if (!infile) {
+      infile.close();
+      infile.open(filename.c_str()); 
+      if (!infile) {
+	glog.abort("ParticleList::ReadRestart:\n"
+	"Failed to open "+filename,comm);
+      }
+    }
+d1751 1
+d1753 3
+a1755 2
+  mass_tot = 0;
+  nparticles_tot = 0;
+d1757 4
+a1760 70
+  iperatom = 10;
+  nbufmax = 1000;
+  buf.resize(nbufmax);
+
+  do {
+    if (node==0) {
+      iatom = 0;
+      j = 0;
+      while (iatom<nbufmax) {
+
+	if (infile.read((char*)(&buf[iatom]),sizeof(Particle))) {
+	  iatom++;
+	} else if (infile.eof()) {
+	  break;
+	} else {
+	  glog.abort("ParticleList::ReadRestart:\n"
+		     "Read error in " + filename,comm);
+	}
+      }
+      nbuf = iatom;
+    }
+
+    MPI_Bcast(&nbuf,1,MPI_INT,0,comm->get_world());
+
+    MPI_Bcast(&buf[0],nbuf*sizeof(Particle),MPI_CHAR,0,comm->get_world());
+
+    for (iatom=0;iatom<nbuf;iatom++) {
+      nparticles_tot++;
+
+      // Save usertag in separate list
+      itag = buf[iatom].get_tag();
+      usertag.push_back(itag);
+      // Then assign unique internal tag 
+      itag = nparticles_tot-1;
+      buf[iatom].set_tag(itag);
+      mass_tot+=buf[iatom].get_mass();
+
+      // Check if I own this particle
+      buf[iatom].get_x(x);
+      b->Minimg_Pos_Full(x, NULL);
+      buf[iatom].set_x(x);
+      Lown = comm->sub_check(b,x);
+      if (Lown) {
+	AddParticle(buf[iatom]);
+      }
+
+    }
+
+    comm->get_nodefile() << "Read " << nbuf << " particles" << endl;
+
+  } while (nbuf!=0);
+
+  localptr.resize(nparticles_tot);
+  localptr_clear();
+  localptr_set();
+
+  comm->get_nodefile() << "Nparticles = " << nparticles << endl; 
+  if (node == 0) {
+    glog.logfile << "Total particles read = " << nparticles_tot << endl;
+  }
+
+  if (nparticles_tot == 0) {
+    glog.error("ParticleList::ReadConfig:\n"
+	       "Zero particles read from "+filename);
+  }
+    
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,comm->get_world());
+  if (itmp != nparticles_tot) {
+    glog.error("ParticleList::ReadConfig:\n"
+	       "Invalid particle count");
+a1761 3
+
+  Lwithinbox = true;
+
+d1764 3
+a1766 13
+void ParticleList::OutputRestart(Comm* comm) {
+    // Note: particles are not reset within periodic box,
+    // as this would upset neighbor lists
+  int nbuf,most;
+  void* buf_tmp;
+  vector<Particle> buf;
+  int node,nprocs,nbuf_tmp,itmp,nparticles_tmp,itag;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  double x[3],v[3];
+d1768 4
+a1771 16
+  comm->get_nodefile() << "Entered ParticleList::OutputRestart" << endl;
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    openflag = std::ios::trunc|std::ios::binary;
+    filename = "restart.out";
+    filename = glog.path_str + filename;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputRestart:\n"
+		 "Failed to open "+filename);
+    }
+d1773 1
+d1775 3
+a1777 6
+  // allocate a temporary buffer for the restart info
+  // big enough for largest number of atoms on any one proc
+
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+d1779 3
+a1781 26
+  if (node == 0) {
+    nbuf = most*sizeof(Particle);
+    buf.resize(most);
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	buf = particles;
+	nbuf_tmp = nparticles*sizeof(Particle);
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_CHAR,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_CHAR,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_CHAR,&nbuf_tmp);
+      }
+      // Restore user tags to particles
+      nparticles_tmp = nbuf_tmp/sizeof(Particle);
+      for (int iparticle=0;iparticle<nparticles_tmp;iparticle++) {
+	itag = buf[iparticle].get_tag();
+	buf[iparticle].set_tag(usertag[itag]);
+      }
+      // Push out the particle to file
+      outfile.write((char*)&buf[0],nbuf_tmp);
+    }  
+  } else {
+    nbuf = nparticles*sizeof(Particle);
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&particles[0],nbuf,MPI_CHAR,0,0,world);
+d1783 1
+d1785 2
+a1786 4
+  if (node == 0 ) {
+    outfile.close(); 
+  }
+  comm->get_nodefile() << "Exited Output::OutputRestart" << endl;
+d1789 3
+a1791 1
+  
+@
+
+
+2.16.2.5
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@a688 7
+void ParticleList::ScaleMinimized(const Box* b, const double dilation[]) {
+  for (int i = 0; i < nparticles; i++) {
+    if (particles[i].get_minimized())
+      particles[i].scale_x(b,dilation);
+  }
+}
+
+d838 1
+a838 4
+    } /*else {
+	particles[i].get_x(rtmp);
+	cout << i << " " << rtmp[0] << " " << rtmp[1] << " " << rtmp[3] << "\n";
+    }*/
+d1039 1
+a1039 1
+  m++;
+@
+
+
+2.15
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d252 1
+a252 1
+    MPI_Bcast(&nbuf,1,MPI_INTEGER,0,comm->get_world());
+d258 3
+a260 1
+      itag = nint(buf[j]);
+a270 1
+      nparticles_tot++;
+d277 1
+d284 4
+d293 1
+a293 1
+  if (nparticles == 0) {
+d369 1
+a369 1
+	particles[i].reset_full_x(*b); 
+d374 1
+a374 1
+	particles[i].reset_x(*b); 
+d400 1
+a400 1
+  ndof = 3*(nparticles_tot);
+d414 1
+d418 10
+a427 6
+  for (int i=0;i<nparticles;i++) {
+    factor = 1.0/sqrt(particles[i].get_mass());
+    v_tmp[0] = gausslc(iseed_tmp)*factor;
+    v_tmp[1] = gausslc(iseed_tmp)*factor;
+    v_tmp[2] = gausslc(iseed_tmp)*factor;
+    particles[i].set_v(v_tmp);
+d622 1
+a622 1
+  buf[m] = static_cast<int>(particles[ii].get_type());
+d624 1
+a624 1
+  buf[m] = static_cast<int>(particles[ii].get_tag());
+d626 1
+a626 1
+  buf[m] = static_cast<int>(particles[ii].get_color());
+d709 1
+a709 1
+  buf[m] = static_cast<int>(particles[ii].get_type());
+d711 1
+a711 1
+  buf[m] = static_cast<int>(particles[ii].get_tag());
+d750 1
+a750 1
+  localptr.clear();
+d754 3
+a756 1
+  //Not currently supported!!
+d919 1
+a919 1
+  MPI_Bcast(&ntypes_density,1,MPI_INTEGER,0,comm->get_world());
+d1092 62
+@
+
+
+2.14
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.13
+log
+@Pushed examples down into subdirectories.
+@
+text
+@a11 1
+#include "input.h"
+d19 1
+d35 3
+d48 1
+a48 1
+void ParticleList::Setup(const Input* inp, Box* b, ParticleTypeList* t,
+d52 1
+a55 4
+  ReadConfig(b,t,comm);
+  ComputeNDoFreedom(comm);
+  SetupVelocities(inp->temp_init, inp->temp_iseed, comm);
+  /*
+d57 4
+a60 1
+  case read_config:
+d62 5
+a66 4
+  case density_profile:
+    ReadConfig(b,t,comm);
+    ReadDensityProfile(b,t,comm);
+    SampleDensityProfile(b,comm);
+d69 1
+a69 2
+    SetupVelocities(inp->temp_init, inp->temp_iseed,comm);
+    glog.error("ParticleList::Setup: Invalid init_config_style");
+a70 1
+  */
+d312 3
+a314 1
+                   const double& timestepsq, const bool* relax_coord) {
+d316 8
+a323 2
+  for (int i=0;i<nparticles;i++) {
+    particles[i].step_x_force(timestepsq,relax_coord);
+d369 1
+a369 2
+void ParticleList::SetupVelocities(const double& temp_init, const int& iseed,
+				   Comm* comm) {
+d381 1
+a381 1
+  iseed_tmp = iseed;
+d434 1
+a434 1
+void ParticleList::ZeroForces() {
+d440 25
+d769 283
+@
+
+
+2.12
+log
+@Removed Thermo class
+@
+text
+@d698 1
+a698 1
+double ParticleList::ComputeTemperatureType(const int& type, Comm* comm) {
+d704 1
+a704 1
+    if (particles[i].get_type() == type) {
+d721 1
+a721 1
+void ParticleList::RescaleTemperatureType(const int& type, 
+d727 1
+a727 1
+    if (particles[i].get_type() == type) {
+@
+
+
+2.11
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@a13 1
+#include "thermo.h"
+d46 1
+a46 1
+		    Thermo* thermo, Comm* comm) {
+d697 38
+@
+
+
+2.10
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d146 1
+a147 2
+
+    str_tmp = glog.path_str + "config.in";
+d151 6
+a156 1
+      glog.abort("Failed to open config.in",comm);
+d258 5
+@
+
+
+2.9
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d54 1
+d124 3
+a126 1
+  string buf,buf2;
+a132 1
+  string str_tmp;
+d159 4
+d165 13
+a177 11
+      if(!getline(infile,buf)) {
+	buf = "End of Input";
+      } else {
+	// Concatenate continuation lines, if requested.
+	if (buf[buf.size()-1] == '\\') {
+	  buf2 = buf;
+	  while (buf2[buf2.size()-1] == '\\') {
+	    buf.replace(buf.size()-1,1," ");
+	    // buf.replace(buf.size()-1,1,&char_tmp);
+	    getline(infile,buf2);
+	    buf+=buf2;
+a179 3
+      }
+      isize = buf.size();
+    }
+d181 29
+a209 2
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,comm->get_world());
+    if (node != 0) buf.resize(isize);
+d211 1
+a211 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,comm->get_world());
+d213 4
+a216 6
+    if (input_string_match(buf,"End of Input")) {
+      break;
+    } else if (input_string_match(buf,"")) {
+      continue;
+    } else if (input_string_match(buf,"#")) {
+      continue;
+d219 1
+a219 4
+    stringstream buf_in(buf);
+    // Skip lines with only whitespace
+    buf_in >> ws;
+    if (buf_in.eof()) continue;
+d221 1
+a221 1
+    buf_in >> itag >> id >> icolor >> charge >> x[0] >> x[1] >> x[2];
+d223 20
+a242 2
+    if (buf_in.fail()) {
+      glog.error("ParticleList::ReadConfig: Read error in config.in");
+d245 1
+a245 5
+    match = t->find_id(id,itype);
+    if (!match) {
+      glog.error("ParticleList::ReadConfig:\n"
+		 "Missing definition for id " + id);
+    }
+d247 1
+a247 10
+    mass = t->get_type_mass(itype);
+    mass_tot+=mass;
+    nparticles_tot++;
+
+    b->Minimg_Pos_Full(x);
+    Lown = comm->sub_check(b,x);
+    if (Lown) {
+      AddParticle(itype,itag,icolor,x,mass,charge);
+    }
+  } while (!input_string_match(buf,"End of Input"));
+d287 7
+d340 1
+a340 1
+  temperature = tmp/(3.0*nparticles_tot*constants.boltz);
+d344 3
+d348 1
+a348 1
+  return;
+d437 4
+@
+
+
+2.8
+log
+@Fixed up the output log immensely.  Fixed some bugs in the
+rescale thermostat.
+@
+text
+@d25 1
+a52 11
+  switch(inp->units_style) {
+  case real_units:
+    boltz = boltz_real;
+    break;
+  case reduced_units:
+    boltz = boltz_reduced;
+    break;
+  default:
+    glog.error("ParticleList::Setup: Invalid units_style");
+  }
+
+a129 1
+  MPI_Comm world;
+a143 2
+  world = comm->get_world();
+
+d176 1
+a176 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,world);
+d179 1
+a179 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+d222 1
+a222 1
+  MPI_Allreduce(&nparticles,&itmp,1,MPI_INT,MPI_SUM,world);
+a290 1
+  MPI_Comm world;
+a294 2
+  world = comm->get_world();
+
+d299 1
+a299 1
+  MPI_Allreduce(&sum_mvsq,&tmp,1,MPI_DOUBLE,MPI_SUM,world);
+d301 1
+a301 1
+  temperature = tmp/(3.0*nparticles_tot*boltz);
+@
+
+
+2.7
+log
+@Redoing temperature functions. Not finished yet.
+@
+text
+@d30 3
+a32 1
+  Lwithin = false;
+a78 1
+  ComputeTemperature(comm);
+a156 2
+  Lwithin = true;
+
+d167 1
+a212 2
+    nparticles_tot++;
+
+d219 4
+a225 1
+      mass = t->get_type_mass(itype);
+d241 2
+d265 1
+d269 1
+a269 1
+  Lwithin = false;
+d277 1
+a277 1
+  Lwithin = false;
+d286 1
+a286 1
+  if (Lwithin) return;
+d299 1
+a299 1
+  Lwithin = true;
+d303 1
+a303 1
+double ParticleList::ComputeTemperature(Comm* comm) {
+d307 2
+d320 3
+a322 1
+  return temperature;
+d349 1
+d351 1
+a351 5
+//   comm->get_nodefile() << "PreRescale Temp = " << temperature << endl;
+   RescaleTemperature(temp_init,temperature);
+//   ComputeTemperature(comm);
+//   comm->get_nodefile() << "PostRescale Temp = " << temperature << endl;
+
+d356 1
+a356 1
+  double msum,psum[3];
+d358 1
+a358 4
+  msum = 0.0;
+  psum[0] = 0.0;
+  psum[1] = 0.0;
+  psum[2] = 0.0;
+a362 1
+    msum+=m_tmp;
+d365 2
+a366 1
+  vec3_scale(1.0/msum,psum,psum);
+d370 1
+a370 1
+    vec3_subtract(v_tmp,psum,v_tmp);
+d373 2
+d387 2
+d398 4
+d406 4
+@
+
+
+2.6
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d29 1
+d31 2
+d62 1
+a62 1
+  SetupVelocities(inp->temp_init, inp->temp_iseed);
+d73 1
+a73 1
+    SetupVelocities(inp->temp_init, inp->temp_iseed);
+d77 1
+a77 4
+
+  ComputeTemperature(temp_tmp,ke_tmp);
+  thermo->SetTemperature(temp_tmp);
+  thermo->SetKineticEnergy(ke_tmp);
+d143 1
+d233 7
+d299 5
+a303 2
+void ParticleList::ComputeTemperature(
+       double& temperature, double& kinetic_energy) {
+d305 1
+a305 1
+  kinetic_energy = 0.0;
+d307 1
+a307 1
+    kinetic_energy+=particles[i].get_mvsq();
+d309 6
+a314 2
+  temperature = kinetic_energy/(3.0*nparticles*boltz);
+  kinetic_energy = 0.5*kinetic_energy;
+d317 2
+a318 1
+void ParticleList::SetupVelocities(const double& temp_init, const int& iseed) {
+d339 8
+a346 3
+  ZeroMomentum();
+  ComputeTemperature(temp_tmp,ke_tmp);
+  RescaleTemperature(temp_init,temp_tmp);
+d349 2
+a350 2
+void ParticleList::ZeroMomentum() {
+  double v_tmp[3];
+d359 3
+a361 5
+    // I think this is wrong.  Need to multiply by mass.
+    psum[0]+=v_tmp[0];
+    psum[1]+=v_tmp[1];
+    psum[2]+=v_tmp[2];
+    msum+=particles[i].get_mass(); 
+d364 1
+a364 3
+  psum[0] = psum[0]/msum;
+  psum[1] = psum[1]/msum;
+  psum[2] = psum[2]/msum;
+d368 1
+a368 3
+    v_tmp[0] = v_tmp[0] - psum[0];
+    v_tmp[1] = v_tmp[1] - psum[1];
+    v_tmp[2] = v_tmp[2] - psum[2];
+d389 8
+@
+
+
+2.5
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@a45 2
+  if (node == 0) glog.logfile << "Entering ParticleList::Setup()" << endl;
+
+d146 5
+a150 1
+  if (node == 0) glog.logfile << "Entering ParticleList::ReadConfig()" << endl;
+d167 2
+d212 2
+d227 1
+d229 3
+d242 4
+a274 2
+
+  glog.logfile << "Resetting particles in box " << endl;
+@
+
+
+2.4
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@d3 1
+d23 1
+d142 1
+d144 1
+d157 2
+a158 1
+    infile.open("config.in"); 
+d161 1
+a161 1
+      glog.abort("Failed to open config.in");
+d215 2
+a216 1
+    if (comm->sub_check(b,x)) {
+d221 1
+a221 1
+
+d276 1
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@a33 1
+  ghost_particles.clear();
+d35 1
+d111 1
+a111 1
+  ghost_particles.push_back(p);
+d122 7
+d259 1
+a259 1
+    for (int i=0;i<particles.size();i++)
+d264 1
+a264 1
+    for (int i=0;i<particles.size();i++)
+d352 1
+a352 1
+  for (int i=0;i<nparticles;i++) {
+a354 3
+  for (int i=0;i<nghost_particles;i++) {
+    ghost_particles[i].set_f();
+  }
+a360 4
+const Particle* ParticleList::get_ghost_particles() const {
+  return &ghost_particles[0];
+}
+
+a405 45
+void ParticleList::pack_comm_ghost(const int& num, const int* list,
+			     double* buf, const int pbc[], 
+			     const Box* b) const {
+  int ii,m;
+  double rshift[3],lva[3],lvb[3],lvc[3];
+
+  m = 0;
+  for (int i=0;i<num;i++) {
+    ii = list[i];
+    ghost_particles[ii].get_x(&buf[m]);
+    m+=3;
+  }
+
+  if (pbc[0]) {
+    b->get_lv(lva,lvb,lvc);
+    rshift[0] = 0.0;
+    rshift[1] = 0.0;
+    rshift[2] = 0.0;
+
+    if (pbc[1]==-1) {
+      vec3_subtract(rshift,lva,rshift);
+    } else if (pbc[1]==1) {
+      vec3_add(rshift,lva,rshift);
+    }
+
+    if (pbc[2]==-1) {
+      vec3_subtract(rshift,lvb,rshift);
+    } else if (pbc[2]==1) {
+      vec3_add(rshift,lvb,rshift);
+    }
+
+    if (pbc[3]==-1) {
+      vec3_subtract(rshift,lvc,rshift);
+    } else if (pbc[3]==1) {
+      vec3_add(rshift,lvc,rshift);
+    }
+
+    m = 0;
+    for (int i=0;i<num;i++) {
+      vec3_add(&buf[m],rshift,&buf[m]);
+      m+=3;
+    }
+  }
+}
+
+d413 1
+a413 1
+    ghost_particles[ii].set_x(&buf[m]);
+d426 1
+a426 3
+    ghost_particles[ii].get_f(&buf[m]);
+    //    if (ghost_particles[ii].get_tag() == 1) glog.logfile << "pack_reverse " << 
+    //		    buf[m] << " " << buf[m+1] << " " << buf[m+2] << 
+a443 12
+void ParticleList::unpack_reverse_ghost(const int& num, const int* list,
+			     const double* buf) {
+  int ii,m;
+
+  m = 0;
+  for (int i=0;i<num;i++) {
+    ii = list[i];
+    ghost_particles[ii].increment_f(&buf[m]);
+    m+=3;
+  }
+}
+
+a544 45
+  m++;
+
+  return m;
+}
+
+int ParticleList::pack_border_ghost(const int& ii, 
+			     double* buf, const int pbc[], 
+			     const Box* b) const {
+  int m;
+  double rshift[3],lva[3],lvb[3],lvc[3];
+
+  m = 0;
+  ghost_particles[ii].get_x(&buf[m]);
+
+  if (pbc[0]) {
+    b->get_lv(lva,lvb,lvc);
+    rshift[0] = 0.0;
+    rshift[1] = 0.0;
+    rshift[2] = 0.0;
+
+    if (pbc[1]==-1) {
+      vec3_subtract(rshift,lva,rshift);
+    } else if (pbc[1]==1) {
+      vec3_add(rshift,lva,rshift);
+    }
+
+    if (pbc[2]==-1) {
+      vec3_subtract(rshift,lvb,rshift);
+    } else if (pbc[2]==1) {
+      vec3_add(rshift,lvb,rshift);
+    }
+
+    if (pbc[3]==-1) {
+      vec3_subtract(rshift,lvc,rshift);
+    } else if (pbc[3]==1) {
+      vec3_add(rshift,lvc,rshift);
+    }
+    vec3_add(&buf[m],rshift,&buf[m]);
+  }
+  m+=3;
+  buf[m] = ghost_particles[ii].get_charge();
+  m++;
+  buf[m] = static_cast<int>(ghost_particles[ii].get_type());
+  m++;
+  buf[m] = static_cast<int>(ghost_particles[ii].get_tag());
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d59 1
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@a7 1
+extern ofstream logfile;
+d21 2
+d44 1
+a44 1
+  if (node == 0) logfile << "Entering ParticleList::Setup()" << endl;
+d55 1
+a55 2
+    logfile << "Error: invalid units_style" << endl;
+    exit(0);    
+d59 15
+a73 1
+  SetupVelocities(inp->temp_init, inp->temp_iseed);
+d136 1
+a136 1
+  if (node == 0) logfile << "Entering ParticleList::ReadConfig()" << endl;
+d148 1
+a148 2
+      logfile << "Failed to open config.in" << endl;
+      exit(0);
+d192 1
+a192 4
+      if (node == 0) {
+	logfile << "Read error in config.in" << endl;
+      }
+      exit(0);
+d197 2
+a198 5
+      if (node == 0) {
+	logfile << "Error: ReadConfig:"
+	  "missing definition for id " << id << endl;
+      }
+	exit(0);
+d235 8
+d248 1
+a248 1
+  logfile << "Resetting particles in box " << endl;
+d471 1
+a471 1
+    //    if (ghost_particles[ii].get_tag() == 1) logfile << "pack_reverse " << 
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d8 2
+d13 1
+d20 2
+d25 1
+d32 5
+d38 1
+a38 1
+		    Thermo* thermo) {
+d40 5
+d54 1
+a54 1
+    cout << "Error: invalid units_style" << endl;
+d58 1
+a58 3
+  ReadConfig();
+  SetupTypesParticle(t);
+  ResetPosition(b,true);
+a65 3
+#ifdef DEBUG_ALLOCATION
+  cout << "AddParticle of type" << p.get_type() << endl;
+#endif
+a67 5
+#ifdef DEBUG_ALLOCATION
+  cout << "AddParticle Size is " << particles.size() << endl;
+  cout << "AddParticle Max_size is " << particles.max_size() << endl;
+  cout << "AddParticle Capacity is " << particles.capacity() << endl;
+#endif
+d71 13
+a83 2
+		      const string& id_in, const int& color_in, 
+		      const double x_in[], const double& charge_in)
+d85 2
+a86 8
+  Particle p(type_in, tag_in, id_in, color_in, x_in, charge_in);
+#ifdef DEBUG_ALLOCATION
+  cout << "AddParticle of type" << p.get_type() << endl;
+  double x_out[3];
+  p.get_x(x_out);
+  cout << "AddParticle of position " << x_out[0]  << endl;
+  cout << "AddParticle of charge " << p.get_charge() << endl;
+#endif
+d89 9
+a97 5
+#ifdef DEBUG_ALLOCATION
+  cout << "AddParticle Size is " << particles.size() << endl;
+  cout << "AddParticle Max_size is " << particles.max_size() << endl;
+  cout << "AddParticle Capacity is " << particles.capacity() << endl;
+#endif
+d107 6
+a112 4
+void ParticleList::ReadConfig() {
+  string buf;
+  double q,x[3];
+  int itag,icolor;
+d114 14
+d129 1
+a129 1
+  Lwithin = false;
+d131 1
+a131 1
+  ifstream infile("config.in"); 
+d133 4
+a136 3
+  if (!infile) {
+    cout << "Failed to open config.in" << endl;
+    exit(0);
+a137 2
+  
+  while (getline(infile,buf)){
+d139 32
+a170 2
+    // Skip empty or comment lines
+    if (buf.empty() || buf[0]=='#') continue;
+d176 1
+a176 1
+    buf_in >> itag >> id >> icolor >> q >> x[0] >> x[1] >> x[2];
+d179 3
+a181 1
+      cout << "Read error in config.in" << endl;
+d185 16
+a200 8
+#ifdef DEBUG_ALLOCATION
+    cout << "Before AddParticle Size is " << particles.size() << endl;
+    cout << "Before AddParticle Max_size is " << particles.max_size() << endl;
+    cout << "Before AddParticle Capacity is " << particles.capacity() << endl;
+#endif
+    //Adding particle with uninitialized type
+    AddParticle(-1,itag,id,icolor,x,q);
+  }
+d207 4
+a212 5
+#ifdef DEBUG_ALLOCATION
+  cout << "AddCapacity Size is " << particles.size() << endl;
+  cout << "AddCapacity Max_size is " << particles.max_size() << endl;
+  cout << "AddCapacity Capacity is " << particles.capacity() << endl;
+#endif
+a227 19
+void ParticleList::SetupTypesParticle(const ParticleTypeList* t) {
+  int iparticle,itype;
+  string id_tmp;
+  bool match;
+
+  for (iparticle=0;iparticle<nparticles;iparticle++) {
+    id_tmp = particles[iparticle].get_id();
+    match = t->find_id(id_tmp,itype);
+    if (!match) {
+      cout << "Error: SetupTypes_Particle:"
+	"missing definition for id " << id_tmp << endl;
+	exit(0);
+    }
+    particles[iparticle].set_type(itype);
+    particles[iparticle].set_mass(t->get_type_mass(itype));
+  }
+
+}
+
+d233 1
+a233 1
+  cout << "Resetting particles in box " << endl;
+d332 7
+d341 2
+a342 2
+const vector<Particle>& ParticleList::get_particles(){
+  return particles;
+d345 346
+@
+

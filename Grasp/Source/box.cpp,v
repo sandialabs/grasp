@@ -1,0 +1,4579 @@
+head	4.16;
+access;
+symbols
+	ReverseComm_branch:4.6.0.4
+	ADTools_branch:4.6.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.15.0.2
+	cjkimme_version_merge_from_trunk_1:2.10.2.3
+	cjkimme_version:2.10.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.16
+date	2008.05.22.17.23.38;	author athomps;	state Exp;
+branches;
+next	4.15;
+
+4.15
+date	2007.11.15.21.31.40;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.10.24.15.51.33;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2007.03.31.01.06.13;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.03.28.19.12.19;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.03.16.06.18.30;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.02.28.04.01.06;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.10.28.19.10.56;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.10.11.01.40.34;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.6.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.2.6.1;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.03.20.00.15.36;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.10.2.1;
+next	2.9;
+
+2.9
+date	2004.01.15.20.12.28;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.08.15.18.23.41;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.03.03.20.32.38;	author athomps;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.02.25.23.12.59;	author athomps;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.02.25.23.06.37;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.05.00.32.02;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.04.00.12.41;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.01.18.00.20.49;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.08.23.25.53;	author athomps;	state Exp;
+branches;
+next	;
+
+4.3.6.1
+date	2006.02.08.23.43.02;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.6.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+2.10.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.10.2.2;
+
+2.10.2.2
+date	2004.05.14.16.12.58;	author cjkimme;	state Exp;
+branches;
+next	2.10.2.3;
+
+2.10.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.16
+log
+@Fixed error in pressure control full for non-zero origin
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <cmath>
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "box.h"
+#include "vec3.h"
+#include "matrix3.h"
+#include "comm.h"
+#include "log.h" 
+extern Log glog; 
+using namespace std;
+
+Box::Box() {
+  uc_lva[0] = 1.0;
+  uc_lva[1] = 0.0;
+  uc_lva[2] = 0.0;
+  uc_lvb[0] = 0.0;
+  uc_lvb[1] = 1.0;
+  uc_lvb[2] = 0.0;
+  uc_lvc[0] = 0.0;
+  uc_lvc[1] = 0.0;
+  uc_lvc[2] = 1.0;
+  // eps used to perturb user-specified origin for internal calculations
+  // This prevents the occurrence of common pathologies
+  // associated with having the box origin at 0.
+  uc_origin_eps[0] = -1.11111111111111111111111111111111111111111111111e-13;
+  uc_origin_eps[1] = -1.11111111111111111111111111111111111111111111111e-13;
+  uc_origin_eps[2] = -1.11111111111111111111111111111111111111111111111e-13;
+  uc_origin[0] = uc_origin_eps[0];
+  uc_origin[1] = uc_origin_eps[1];
+  uc_origin[2] = uc_origin_eps[2];
+  dielectric = 1.0;
+  perflaga = true;
+  perflagb = true;
+  perflagc = true;
+  Lorthorhombic = true;
+  Lremap = false;
+}
+
+Box::~Box() {
+}
+
+void Box::Setup(Comm* comm) {
+  int node;
+  double vec_tiny[3];
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering Box::Setup()" << endl;
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Box::Setup()" << endl;
+  }
+
+  perflag = (perflaga||perflagb||perflagc);
+  perflagall = (perflaga && perflagb && perflagc);
+
+  SetupBox();
+
+}
+
+bool Box::get_Lorthorhombic() const {
+  return Lorthorhombic;
+}
+
+bool Box::get_Lremap() const {
+  return Lremap;
+}
+
+void Box::set_Lremap(bool Lremap_in) {
+  Lremap = Lremap_in;
+}
+
+bool Box::get_perflag() const {
+  return perflag;
+}
+
+bool Box::get_perflagall() const {
+  return perflagall;
+}
+
+bool Box::get_perflag(bool& ba, bool& bb, bool& bc) const {
+  ba = perflaga;
+  bb = perflagb;
+  bc = perflagc;
+  return perflag;
+}
+
+void Box::get_perflag(bool perflag_out[]) const {
+  perflag_out[0] = perflaga;
+  perflag_out[1] = perflagb;
+  perflag_out[2] = perflagc;
+}
+
+void Box::get_lv(double lva_out[], double lvb_out[], 
+                 double lvc_out[]) const {
+  vec3_copy(uc_lva, lva_out);
+  vec3_copy(uc_lvb, lvb_out);
+  vec3_copy(uc_lvc, lvc_out);
+}
+
+void Box::get_o(double origin_out[]) const {
+  vec3_copy(uc_origin,origin_out);
+}
+
+void Box::get_o_user(double origin_out[]) const {
+  vec3_copy(uc_origin,origin_out);
+  vec3_subtract(origin_out,uc_origin_eps,origin_out);
+}
+
+void Box::get_lw(double& wh_out, double& wk_out, 
+		 double& wl_out) const {
+  wh_out = uc_wh;
+  wk_out = uc_wk;
+  wl_out = uc_wl;
+}
+
+void Box::get_lw(double w_out[]) const {
+  w_out[0] = uc_wh;
+  w_out[1] = uc_wk;
+  w_out[2] = uc_wl;
+}
+
+void Box::get_la(double& ah_out, double& ak_out, 
+		 double& al_out) const {
+  ah_out = uc_ah;
+  ak_out = uc_ak;
+  al_out = uc_al;
+}
+
+double Box::get_volume() const {
+  return volume;
+}
+
+void Box::Minimg_Pos(double r[], double X[], int ishift_tot[]) const {
+  // Apply single image shifts to particles to put them
+  // back in central box. Used during MD simulation.
+  // Initial particle configurations may require multi-image
+  // shifts, which is provided by Minimg_Pos_Full.
+  //
+  // See box_inline.h for notes on minimg treament.
+  double tmp;
+  double fudge;
+  // ishift is a vector of periodic image displacements
+  // ishift is + for downshift, - for upshift.
+  // If ishift_tot is provided, then it is incremented
+  int ishift[3];
+
+  ishift[0] = 0;
+  ishift[1] = 0;
+  ishift[2] = 0;
+
+  // Special treatment of orthorhombic box
+  if (Lorthorhombic) {
+    tmp = r[0];
+    if (tmp < xboundlo) {
+      if (perflaga) {
+	ishift[0]--;
+	tmp = tmp + xprd;
+	X[0] += xprd;
+	if (tmp < xmid) {
+	  glog.abort("Box::Minimg_Pos:\n"
+		     "More than half box-length outside central box");
+	}
+      } else {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "Particle outside non-periodic box");
+      }
+    } 
+    // Note: This is not redundant. Forward shift can put
+    // particle on boundary, which needs to be reversed.
+    if (tmp >= xboundhi) {
+      if (perflaga) {
+	ishift[0]++;
+	tmp = tmp - xprd;
+	X[0] -= xprd;
+	if (tmp > xmid ) {
+	  glog.abort("Box::Minimg_Pos:\n"
+		     "More than half box-length outside central box");
+	} 
+      } else {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "Particle outside non-periodic box");
+      }
+
+    }
+    r[0] = tmp;
+      
+    tmp = r[1];
+    if (tmp < yboundlo) {
+      if (perflagb) {
+	ishift[1]--;
+	tmp = tmp + yprd;
+	X[1] += yprd;
+	if (tmp < ymid) {
+	  glog.abort("Box::Minimg_Pos:\n"
+		     "More than half box-length outside central box");
+	}
+      } else {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "Particle outside non-periodic box");
+      }
+    }
+
+    // Note: This is not redundant. Forward shift can put
+    // particle on boundary, which needs to be reversed.
+    if (tmp >= yboundhi) {
+      if (perflagb) {
+	ishift[1]++;
+	tmp = tmp - yprd;
+	X[1] -= yprd;
+	if (tmp > ymid ) {
+	  glog.abort("Box::Minimg_Pos:\n"
+		     "More than half box-length outside central box");
+	}
+      } else {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "Particle outside non-periodic box");
+      }
+    }
+    r[1] = tmp;
+
+    tmp = r[2];
+    if (tmp < zboundlo) {
+      if (perflagc) {
+	ishift[2]--;
+	tmp = tmp + zprd;
+	X[2] += zprd;
+	if (tmp < zmid) {
+	  glog.abort("Box::Minimg_Pos:\n"
+		     "More than half box-length outside central box");
+	}
+      } else {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "Particle outside non-periodic box");
+      }
+    }
+    // Note: This is not redundant. Forward shift can put
+    // particle on boundary, which needs to be reversed.
+    if (tmp >= zboundhi) {
+      if (perflagc) {
+	ishift[2]++;
+	tmp = tmp - zprd;
+	X[2] -= zprd;
+	if (tmp > zmid ) {
+	  glog.abort("Box::Minimg_Pos:\n"
+		     "More than half box-length outside central box");
+	}
+      } else {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "Particle outside non-periodic box");
+      }
+    }
+    r[2] = tmp;
+
+  } else {
+
+    vec3_subtract(r,uc_origin,r);
+    vec3_subtract(X,uc_origin,X);
+
+    tmp = vec3_dot(r,uc_rvh);
+    if (tmp >= 1.0) {
+      if (tmp > 1.5) {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "More than half box-length outside central box");
+      }
+      ishift[0]++;
+      vec3_subtract(r,uc_lva,r);
+      vec3_subtract(X,uc_lva,X);
+    } else if (tmp < 0.0) {
+      if (tmp < -0.5) {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "More than half box-length outside central box");
+      }
+      ishift[0]--;
+      vec3_add(r,uc_lva,r);
+      vec3_add(X,uc_lva,X);
+    }
+
+    tmp = vec3_dot(r,uc_rvk);
+    if (tmp >= 1.0) {
+      if (tmp > 1.5) {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "More than half box-length outside central box");
+      }
+      ishift[1]++;
+      vec3_subtract(r,uc_lvb,r);
+      vec3_subtract(X,uc_lvb,X);
+    } else if (tmp < 0.0) {
+      if (tmp < -0.5) {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "More than half box-length outside central box");
+      }
+      ishift[1]--;
+      vec3_add(r,uc_lvb,r);
+      vec3_add(X,uc_lvb,X);
+    }
+
+    tmp = vec3_dot(r,uc_rvl);
+    if (tmp >= 1.0) {
+      if (tmp > 1.5) {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "More than half box-length outside central box");
+      }
+      ishift[2]++;
+      vec3_subtract(r,uc_lvc,r);
+      vec3_subtract(X,uc_lvc,X);
+    } else if (tmp < 0.0) {
+      if (tmp < -0.5) {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "More than half box-length outside central box");
+      }
+      ishift[2]--;
+      vec3_add(r,uc_lvc,r);
+      vec3_add(X,uc_lvc,X);
+    }
+
+    vec3_add(uc_origin,r,r);
+    vec3_add(uc_origin,X,X);
+  }
+
+  if (ishift_tot) {
+    ishift_tot[0] += ishift[0];
+    ishift_tot[1] += ishift[1];
+    ishift_tot[2] += ishift[2];
+  }
+
+  return;
+}
+
+void Box::Scale_Pos(double r[], const double dilation[]) const {
+  double tmp;
+
+  // Special treatment of orthorhombic box
+  if (Lorthorhombic) {
+
+    for (int idim = 0;idim<3;idim++) {
+      r[idim] = dilation[idim]*(r[idim]-uc_origin[idim])+uc_origin[idim];
+    }
+
+  } else {
+
+    vec3_subtract(r,uc_origin,r);
+    tmp = vec3_dot(r,uc_rvh);
+    vec3_scaleadd((dilation[0]-1.0)*tmp,uc_lva,r,r);
+    tmp = vec3_dot(r,uc_rvk);
+    vec3_scaleadd((dilation[1]-1.0)*tmp,uc_lvb,r,r);
+    tmp = vec3_dot(r,uc_rvl);
+    vec3_scaleadd((dilation[2]-1.0)*tmp,uc_lvc,r,r);
+    vec3_add(uc_origin,r,r);
+  }
+
+  return;
+}
+
+void Box::Scaled_Deform(double r[], const double deformation[3][3]) const {
+  double tmp;
+
+  vec3_subtract(r,uc_origin,r);
+  matrix3_multiply_add(deformation,r,r,r);
+  vec3_add(uc_origin,r,r);
+}
+
+void Box::Scale_Vel(double v[], const double fac[]) const {
+  double tmp;
+
+  // Special treatment of orthorhombic box
+  if (Lorthorhombic) {
+    for (int idim = 0;idim<3;idim++) {
+      v[idim] = fac[idim]*v[idim];
+    }
+
+  } else {
+    tmp = vec3_dot(v,uc_rvh);
+    vec3_scaleadd((fac[0]-1.0)*tmp,uc_lva,v,v);
+    tmp = vec3_dot(v,uc_rvk);
+    vec3_scaleadd((fac[1]-1.0)*tmp,uc_lvb,v,v);
+    tmp = vec3_dot(v,uc_rvl);
+    vec3_scaleadd((fac[2]-1.0)*tmp,uc_lvc,v,v);
+  }
+
+  return;
+}
+
+void Box::Scale_Vel(double v[], const double deformation[3][3]) const {
+  matrix3_multiply_add(deformation,v,v,v);
+}
+
+// This function converts a tensor from xyz coordinates
+// to abc coordinates. It  only returns the diagonal elements.
+void Box::XYZ2ABC(const double x[][3], double y[]) const {
+    double tmp_x[3];
+  // Special treatment of orthorhombic box
+  if (Lorthorhombic) {
+    for (int idim = 0;idim<3;idim++) {
+      y[idim] = x[idim][idim];
+    }
+  } else {
+    vec3_scale(uc_rvh[0],x[0],tmp_x);
+    vec3_scaleadd(uc_rvh[1],x[1],tmp_x,tmp_x);
+    vec3_scaleadd(uc_rvh[2],x[2],tmp_x,tmp_x);
+    y[0] = vec3_dot(uc_lva,tmp_x);
+    vec3_scale(uc_rvk[0],x[0],tmp_x);
+    vec3_scaleadd(uc_rvk[1],x[1],tmp_x,tmp_x);
+    vec3_scaleadd(uc_rvk[2],x[2],tmp_x,tmp_x);
+    y[1] = vec3_dot(uc_lvb,tmp_x);
+    vec3_scale(uc_rvh[0],x[0],tmp_x);
+    vec3_scaleadd(uc_rvl[1],x[1],tmp_x,tmp_x);
+    vec3_scaleadd(uc_rvl[2],x[2],tmp_x,tmp_x);
+    y[2] = vec3_dot(uc_lvc,tmp_x);
+  }
+
+  return;
+}
+
+void Box::Minimg_Pos_Full(double r[], double *X, int ishift_tot[]) const {
+  // Apply multi-image shifts to put particles
+  // in central box. Used only for initial
+  // configuration setup, as it is slower than
+  // Minimg_Pos
+  //
+  // See box_inline.h for notes on minimg treament.
+  double tmp, shft;
+  // ishift is a vector of periodic image displacements
+  // ishift is + for downshift, - for upshift.
+  // If ishift_tot is provided, then it is incremented
+  int ishift[3];
+
+  ishift[0] = 0;
+  ishift[1] = 0;
+  ishift[2] = 0;
+
+  if (Lorthorhombic) {
+    // Special treatment of orthorhombic box
+    //
+    tmp = r[0];
+    if (tmp >= xboundhi) {
+      if (perflaga) {
+	ishift[0] = (int)floor((tmp-xboundhi)/xprd+1.0);
+	shft = xprd*ishift[0];
+	tmp -= shft;
+	if (X)
+	  *X -= shft;
+      } else {
+	glog.abort("Box::Minimg_Pos_Full:\n"
+		   "Particle outside non-periodic box");
+      }
+    } 
+    else if (tmp < xboundlo) {
+      if (perflaga) {
+	ishift[0] = (int)floor((tmp-xboundlo)/xprd);
+	shft = xprd*ishift[0];
+	tmp -= shft;
+	if (X)
+	  *X -= shft;
+	// If shifted particle on upper boundary, reverse shift
+	if (tmp == xboundhi) {
+	  ishift[0]++;
+	  tmp = tmp - xprd;
+	  if (X)
+	  *X -= xprd;
+	}
+      } else {
+	glog.abort("Box::Minimg_Pos_Full:\n"
+		   "Particle outside non-periodic box");
+      }
+    }
+    r[0] = tmp;
+
+    tmp = r[1];
+    if (tmp >= yboundhi) {
+      if (perflagb) {
+	ishift[1] = (int)floor((tmp-yboundhi)/yprd+1.0);
+	shft = yprd*ishift[1];
+	tmp -= shft;
+	if (X)
+	  X[1] -= shft;
+      } else {
+	glog.abort("Box::Minimg_Pos_Full:\n"
+		   "Particle outside non-periodic box");
+      }
+    }
+    else if (tmp < yboundlo) {
+      if (perflagb) {
+	ishift[1] = (int)floor((tmp-yboundlo)/yprd);
+	shft = yprd*ishift[1];
+	tmp -= shft;
+	if (X)
+	  X[1] -= shft;
+	// If shifted particle on upper boundary, reverse shift
+	if (tmp == yboundhi) {
+	  ishift[1]++;
+	  tmp = tmp - yprd;
+	  if (X)
+	    X[1] -= yprd;
+	}
+      } else {
+	glog.abort("Box::Minimg_Pos_Full:\n"
+		   "Particle outside non-periodic box");
+      }
+    }
+    r[1] = tmp;
+
+    tmp = r[2];
+    if (tmp >= zboundhi) {
+      if (perflagc) {
+	ishift[2] = (int)floor((tmp-zboundhi)/zprd+1.0);
+	shft = zprd*ishift[2];
+	tmp -= shft;
+	if (X)
+	  X[2] -= shft;
+      } else {
+	glog.abort("Box::Minimg_Pos_Full:\n"
+		   "Particle outside non-periodic box");
+      }
+    }
+    else if (tmp < zboundlo) {
+      if (perflagc) {
+	ishift[2] = (int)floor((tmp-zboundlo)/zprd);
+	shft = zprd*ishift[2];
+	tmp -= shft;
+	if (X)
+	  X[2] -= shft;
+	// If shifted particle on upper boundary, reverse shift
+	if (tmp == zboundhi) {
+	  ishift[2]++;
+	  tmp = tmp - zprd;
+	  if (X)
+	    X[2] -= zprd;
+	}
+      } else {
+	glog.abort("Box::Minimg_Pos_Full:\n"
+		   "Particle outside non-periodic box");
+      }
+    }
+    r[2] = tmp;
+
+  } else {
+    vec3_subtract(r,uc_origin,r);
+    if (X)
+      vec3_subtract(X,uc_origin,X);
+
+    tmp = vec3_dot(r,uc_rvh);
+
+    if (tmp >= 1.0) {
+      ishift[0] = (int)floor(tmp);
+      vec3_scaleadd(-ishift[0],uc_lva,r,r);
+      if (X)
+	vec3_scaleadd(-ishift[0],uc_lva,X,X);
+    } else if (tmp < 0.0) {
+      ishift[0] = (int)floor(tmp);
+      vec3_scaleadd(-ishift[0],uc_lva,r,r);
+      if (X)
+	vec3_scaleadd(-ishift[0],uc_lva,X,X);
+    }
+
+    tmp = vec3_dot(r,uc_rvk);
+    if (tmp >= 1.0) {
+      ishift[1] = (int)floor(tmp);
+      vec3_scaleadd(-ishift[1],uc_lvb,r,r);
+      if (X)
+	vec3_scaleadd(-ishift[1],uc_lvb,X,X);
+    } else if (tmp < 0.0) {
+      ishift[1] = (int)floor(tmp);
+      vec3_scaleadd(-ishift[1],uc_lvb,r,r);
+      if (X)
+	vec3_scaleadd(-ishift[1],uc_lvb,X,X);
+    }
+
+    tmp = vec3_dot(r,uc_rvl);
+    if (tmp >= 1.0) {
+      ishift[2] = (int)floor(tmp);
+      vec3_scaleadd(-ishift[2],uc_lvc,r,r);
+      if (X)
+	vec3_scaleadd(-ishift[2],uc_lvc,X,X);
+    } else if (tmp < 0.0) {
+      ishift[2] = (int)floor(tmp);
+      vec3_scaleadd(-ishift[2],uc_lvc,r,r);
+      if (X)
+	vec3_scaleadd(-ishift[2],uc_lvc,X,X);
+    }
+
+    vec3_add(uc_origin,r,r);
+    if (X)
+      vec3_add(uc_origin,X,X);
+
+  }
+
+  if (ishift_tot) {
+    ishift_tot[0] += ishift[0];
+    ishift_tot[1] += ishift[1];
+    ishift_tot[2] += ishift[2];
+  }
+
+  return;
+}
+
+void Box::SetupBox(const double inputdata[]) {
+  double rvol;
+
+  // If inputdata is set, then read box dimensions and origin from it.
+  // This is only used when reading from a restart file.
+  // If no argument is given, it defaults to NULL.
+  if (inputdata) {
+    uc_lva[0] = inputdata[0];
+    uc_lva[1] = inputdata[1];
+    uc_lva[2] = inputdata[2];
+    uc_lvb[0] = inputdata[3];
+    uc_lvb[1] = inputdata[4];
+    uc_lvb[2] = inputdata[5];
+    uc_lvc[0] = inputdata[6];
+    uc_lvc[1] = inputdata[7];
+    uc_lvc[2] = inputdata[8];
+    // Note that origin_eps should already be added on 
+    uc_origin[0] = inputdata[9];
+    uc_origin[1] = inputdata[10];
+    uc_origin[2] = inputdata[11];
+  }
+
+  if (   uc_lva[1]==0 && uc_lva[2]==0
+      && uc_lvb[0]==0 && uc_lvb[2]==0
+      && uc_lvc[0]==0 && uc_lvc[1]==0) {
+    Lorthorhombic = true;
+  } else {
+    Lorthorhombic = false;
+  }
+
+  if (!Lorthorhombic && !perflagall) {
+    glog.error("Box::SetupBox():\n"
+	       "Non-orthorhombic box must be fully periodic");
+  }
+
+  // This is special treatment, assuming orthorhombic box.
+  if (Lorthorhombic) {
+    xboundlo = uc_origin[0];
+    xboundhi = xboundlo + uc_lva[0];
+    xprd = uc_lva[0];
+    half_xprd = xprd/2.0;
+    xmid = xboundlo + half_xprd;
+
+    yboundlo = uc_origin[1];
+    yboundhi = yboundlo + uc_lvb[1];
+    yprd = uc_lvb[1];
+    half_yprd = yprd/2.0;
+    ymid = yboundlo + half_yprd;
+    
+    zboundlo = uc_origin[2];
+    zboundhi = zboundlo + uc_lvc[2];
+    zprd = uc_lvc[2];
+    half_zprd = zprd/2.0;
+    zmid = zboundlo + half_zprd;
+
+    uc_ah = yprd*zprd;
+    uc_ak = xprd*zprd;
+    uc_al = xprd*yprd;
+
+    volume = xprd*yprd*zprd;
+
+    uc_wh = xprd;
+    uc_wk = yprd;
+    uc_wl = zprd;
+
+    uc_rvh[0] = 1.0/xprd;
+    uc_rvh[1] = 0.0;
+    uc_rvh[2] = 0.0;
+    uc_rvk[0] = 0.0;
+    uc_rvk[1] = 1.0/yprd;
+    uc_rvk[2] = 0.0;
+    uc_rvl[0] = 0.0;
+    uc_rvl[1] = 0.0;
+    uc_rvl[2] = 1.0/zprd;
+
+    uc_rv[0] = uc_rvh;
+    uc_rv[1] = uc_rvk;
+    uc_rv[2] = uc_rvl;
+
+  } else {
+    vec3_cross(uc_lvb,uc_lvc,uc_rvh);
+    vec3_cross(uc_lvc,uc_lva,uc_rvk);
+    vec3_cross(uc_lva,uc_lvb,uc_rvl);
+    uc_ah = vec3_norm(uc_rvh);
+    uc_ak = vec3_norm(uc_rvk);
+    uc_al = vec3_norm(uc_rvl);
+    volume = vec3_dot(uc_rvh,uc_lva);
+    rvol = 1.0/volume;
+    vec3_scale(rvol,uc_rvh,uc_rvh);
+    vec3_scale(rvol,uc_rvk,uc_rvk);
+    vec3_scale(rvol,uc_rvl,uc_rvl);
+    uc_wh = volume/uc_ah;
+    uc_wk = volume/uc_ak;
+    uc_wl = volume/uc_al;
+    //    uc_wh = 1.0/vec3_norm(uc_rvh);
+    //    uc_wk = 1.0/vec3_norm(uc_rvk);
+    //    uc_wl = 1.0/vec3_norm(uc_rvl);
+    uc_rv[0] = uc_rvh;
+    uc_rv[1] = uc_rvk;
+    uc_rv[2] = uc_rvl;
+  }
+//   glog.get_logfile() << "volume = " << volume << endl;
+//   glog.get_logfile() << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+//   glog.get_logfile() << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+//   glog.get_logfile() << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+//   glog.get_logfile() << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+//   glog.get_logfile() << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+//   glog.get_logfile() << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+//   glog.get_logfile()  << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+}
+
+void Box::input_box_dimensions(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> uc_lva[0];
+  buf_in >> uc_lva[1];
+  buf_in >> uc_lva[2];
+  buf_in >> uc_lvb[0];
+  buf_in >> uc_lvb[1];
+  buf_in >> uc_lvb[2];
+  buf_in >> uc_lvc[0];
+  buf_in >> uc_lvc[1];
+  buf_in >> uc_lvc[2];
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Box::input_box_dimensions:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << "\t" << uc_lva[0] << "\t" << uc_lva[1] << "\t" << uc_lva[2] << " \\" << endl;
+  glog.get_logfile() << "\t\t\t" << uc_lvb[0] << "\t" << uc_lvb[1] << "\t" << uc_lvb[2] << " \\" << endl;
+  glog.get_logfile() << "\t\t\t" << uc_lvc[0] << "\t" << uc_lvc[1] << "\t" << uc_lvc[2]<< endl;
+}
+
+void Box::input_box_origin(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> uc_origin[0];
+  buf_in >> uc_origin[1];
+  buf_in >> uc_origin[2];
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Box::input_box_origin:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << "\t" << uc_origin[0] << "\t" << uc_origin[1] << 
+    "\t" << uc_origin[2] << endl;
+
+  uc_origin[0] += uc_origin_eps[0];
+  uc_origin[1] += uc_origin_eps[1];
+  uc_origin[2] += uc_origin_eps[2];
+}
+
+void Box::input_box_perflag(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> perflaga;
+  buf_in >> perflagb;
+  buf_in >> perflagc;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Box::input_perflag:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << "\t" << perflaga << "\t" << perflagb << 
+    "\t" << perflagc << endl;
+
+}
+
+//
+// Return minimum distance between periodic images
+// For non-orthorhombic box, only a lower bound is provided.
+// Could refine this by enumerating 13 nearest images.
+double Box::get_lmin() const {
+  double tmp;
+  tmp = uc_wh;
+  if (uc_wk < tmp) tmp = uc_wk;
+  if (uc_wl < tmp) tmp = uc_wl;
+  return tmp;
+}
+
+//
+// Return the relative dielectric permittivity of the "box medium'
+// Vacuum = 1
+//
+double Box::get_dielectric() const {
+  return dielectric;
+}
+
+void Box::BoxDilate(const double dilation[]) {
+  double rvol;
+
+  // This is special treatment, assuming orthorhombic box.
+  if (Lorthorhombic) {
+    uc_lva[0]*=dilation[0];
+    xboundlo = uc_origin[0];
+    xboundhi = xboundlo + uc_lva[0];
+    xprd = uc_lva[0];
+    half_xprd = xprd/2.0;
+    xmid = xboundlo + half_xprd;
+
+    uc_lvb[1]*=dilation[1];
+    yboundlo = uc_origin[1];
+    yboundhi = yboundlo + uc_lvb[1];
+    yprd = uc_lvb[1];
+    half_yprd = yprd/2.0;
+    ymid = yboundlo + half_yprd;
+    
+    uc_lvc[2]*=dilation[2];
+    zboundlo = uc_origin[2];
+    zboundhi = zboundlo + uc_lvc[2];
+    zprd = uc_lvc[2];
+    half_zprd = zprd/2.0;
+    zmid = zboundlo + half_zprd;
+
+    uc_ah = yprd*zprd;
+    uc_ak = xprd*zprd;
+    uc_al = xprd*yprd;
+
+    volume = xprd*yprd*zprd;
+
+    uc_wh = xprd;
+    uc_wk = yprd;
+    uc_wl = zprd;
+
+    uc_rvh[0] = 1.0/xprd;
+    uc_rvh[1] = 0.0;
+    uc_rvh[2] = 0.0;
+    uc_rvk[0] = 0.0;
+    uc_rvk[1] = 1.0/yprd;
+    uc_rvk[2] = 0.0;
+    uc_rvl[0] = 0.0;
+    uc_rvl[1] = 0.0;
+    uc_rvl[2] = 1.0/zprd;
+    uc_rv[0] = uc_rvh;
+    uc_rv[1] = uc_rvk;
+    uc_rv[2] = uc_rvl;
+
+  } else {
+    vec3_scale(dilation[0],uc_lva,uc_lva);
+    vec3_scale(dilation[1],uc_lvb,uc_lvb);
+    vec3_scale(dilation[2],uc_lvc,uc_lvc);
+    vec3_cross(uc_lvb,uc_lvc,uc_rvh);
+    vec3_cross(uc_lvc,uc_lva,uc_rvk);
+    vec3_cross(uc_lva,uc_lvb,uc_rvl);
+    uc_ah = vec3_norm(uc_rvh);
+    uc_ak = vec3_norm(uc_rvk);
+    uc_al = vec3_norm(uc_rvl);
+    volume = vec3_dot(uc_rvh,uc_lva);
+    rvol = 1.0/volume;
+    vec3_scale(rvol,uc_rvh,uc_rvh);
+    vec3_scale(rvol,uc_rvk,uc_rvk);
+    vec3_scale(rvol,uc_rvl,uc_rvl);
+    uc_wh = volume/uc_ah;
+    uc_wk = volume/uc_ak;
+    uc_wl = volume/uc_al;
+    uc_rv[0] = uc_rvh;
+    uc_rv[1] = uc_rvk;
+    uc_rv[2] = uc_rvl;
+  }
+}
+
+void Box::BoxDeform(const double deformation[3][3], Comm* comm, bool Lcheck_remap) {
+  double atmp, eps;
+  
+  matrix3_multiply_add(deformation,uc_lva,uc_lva,uc_lva);
+  matrix3_multiply_add(deformation,uc_lvb,uc_lvb,uc_lvb);
+  matrix3_multiply_add(deformation,uc_lvc,uc_lvc,uc_lvc);
+
+  if (Lcheck_remap) {
+  eps=1e-13;
+  Lremap = false;
+  if (abs(uc_lva[1])<eps && abs(uc_lva[2])<eps) {
+    if (abs(uc_lvb[0])>eps && abs(uc_lvb[2])<eps) {
+      atmp = floor(uc_lvb[0]/uc_lva[0]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvb[0] -= uc_lva[0] * atmp;
+      }
+      atmp = floor(uc_lvc[1]/uc_lvb[1]+0.5); 
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvc[1] -= uc_lvb[1] * atmp;
+	uc_lvc[0] -= uc_lvb[0] * atmp;
+      } 
+      atmp = floor(uc_lvc[0]/uc_lva[0]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvc[0] -= uc_lva[0] * atmp;
+      } 
+    } else if (abs(uc_lvc[0])>eps && abs(uc_lvc[1])<eps) {
+      atmp = floor(uc_lvc[0]/uc_lva[0]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvc[0] -= uc_lva[0] * atmp;
+      }
+      atmp = floor(uc_lvb[2]/uc_lvc[2]+0.5);  		
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvb[2] -= uc_lvc[2] * atmp;
+	uc_lvb[0] -= uc_lvc[0] * atmp;
+      } 
+      atmp = floor(uc_lvb[0]/uc_lva[0]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvb[0] -= uc_lva[0] * atmp;
+      }
+    }
+  } else if (abs(uc_lvb[0])<eps && abs(uc_lvb[2])<eps) {
+    if (abs(uc_lva[1])>eps && abs(uc_lva[2])<eps) {
+      atmp = floor(uc_lva[1]/uc_lvb[1]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lva[1] -= uc_lvb[1] * atmp;
+      }
+      atmp = floor(uc_lvc[0]/uc_lva[0]+0.5);  		
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvc[1] -= uc_lva[1] * atmp;
+	uc_lvc[0] -= uc_lva[0] * atmp;
+      } 
+      atmp = floor(uc_lvc[1]/uc_lvb[1]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvc[1] -= uc_lvb[1] * atmp;
+      } 
+    } else if (abs(uc_lvc[1])>eps && abs(uc_lvc[0])<eps) {
+      atmp = floor(uc_lvc[1]/uc_lvb[1]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvc[1] -= uc_lvb[1] * atmp;
+      }
+      atmp = floor(uc_lva[2]/uc_lvc[2]+0.5);  		
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lva[2] -= uc_lvc[2] * atmp;
+	uc_lva[1] -= uc_lvc[1] * atmp;
+      } 
+      atmp = floor(uc_lva[1]/uc_lvb[1]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lva[1] -= uc_lvb[1] * atmp;
+      }
+    }
+  } else if (abs(uc_lvc[0])<eps && abs(uc_lvc[1])<eps) {
+    if (abs(uc_lva[2])>eps && abs(uc_lva[1])<eps) {
+      atmp = floor(uc_lva[2]/uc_lvc[2]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lva[2] -= uc_lvc[2] * atmp;
+	cout << "In Box::BoxDeform(), a2c2 atmp = " << atmp << endl;
+      }
+      atmp = floor(uc_lvb[0]/uc_lva[0]+0.5);  		
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvb[2] -= uc_lva[2] * atmp;
+	uc_lvb[0] -= uc_lva[0] * atmp;
+	cout << "In Box::BoxDeform(), b02a02 atmp = " << atmp << endl;
+      } 
+      atmp = floor(uc_lvb[2]/uc_lvc[2]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvb[2] -= uc_lvc[2] * atmp;
+      } 
+    }
+    else if (abs(uc_lvb[2])>eps && abs(uc_lvb[0])<eps) {
+      atmp = floor(uc_lvb[2]/uc_lvc[2]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lvb[2] -= uc_lvc[2] * atmp;
+      }
+      atmp = floor(uc_lva[1]/uc_lvb[1]+0.5);  		
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lva[1] -= uc_lvb[1] * atmp;
+	uc_lva[2] -= uc_lvb[2] * atmp;
+      } 
+      atmp = floor(uc_lva[2]/uc_lvc[2]+0.5);
+      if (int(atmp) != 0) {
+	Lremap = true;
+	uc_lva[2] -= uc_lvc[2] * atmp;
+      }
+    }
+  } else {
+    glog.warning("Can not check remapping criterion: Non-canonical alignment!");
+  }
+  }
+
+  SetupBox();
+}
+
+void Box::ReflectPosVel(double r[], double v[]) const {
+  // Check if particle has crossed boundary, and if so, reflect 
+  // This version operates on all non-periodic boundaries
+
+  if (!perflaga) {
+    if (r[0] < xboundlo) {
+      r[0] = xboundlo + (xboundlo-r[0]);
+      v[0] = -v[0];
+    } else if (r[0] >= xboundhi) {
+      r[0] = xboundhi - (r[0]-xboundhi);
+      v[0] = -v[0];
+    }
+  }
+
+  if (!perflagb) {
+    if (r[1] < yboundlo) {
+      r[1] = yboundlo + (yboundlo-r[1]);
+      v[1] = -v[1];
+    } else if (r[1] >= yboundhi) {
+      r[1] = yboundhi - (r[1]-yboundhi);
+      v[1] = -v[1];
+    }
+  }
+
+  if (!perflagc) {
+    if (r[2] < zboundlo) {
+      r[2] = zboundlo + (zboundlo-r[2]);
+      v[2] = -v[2];
+    } else if (r[2] >= zboundhi) {
+      r[2] = zboundhi - (r[2]-zboundhi);
+      v[2] = -v[2];
+    }
+  }
+
+}
+@
+
+
+4.15
+log
+@Added 'output sum momentum' command
+@
+text
+@d438 4
+@
+
+
+4.14
+log
+@Improved deform functions in box.cpp
+@
+text
+@d910 1
+a910 1
+void Box::BoxDeform(const double deformation[3][3], Comm* comm) {
+d917 1
+d1032 2
+a1033 1
+    cout << "Wrong alignment!" << endl;
+@
+
+
+4.13
+log
+@Modifed fix deformation to correctly remap vectors
+@
+text
+@d412 3
+a414 20
+  // Special treatment of orthorhombic box
+  if (Lorthorhombic) {
+
+    vec3_subtract(r,uc_origin,r);
+    matrix3_multiply_add(deformation,r,r,r);
+    vec3_add(uc_origin,r,r);
+
+  } else {
+
+    vec3_subtract(r,uc_origin,r);
+    tmp = vec3_dot(r,uc_rvh);
+    matrix3_scale_multiply_add(tmp,deformation,uc_lva,r,r);
+    tmp = vec3_dot(r,uc_rvk);
+    matrix3_scale_multiply_add(tmp,deformation,uc_lvb,r,r);
+    tmp = vec3_dot(r,uc_rvl);
+    matrix3_scale_multiply_add(tmp,deformation,uc_lvc,r,r);
+    vec3_add(uc_origin,r,r);
+
+  }
+
+a903 3
+    //    uc_wh = 1.0/vec3_norm(uc_rvh);
+    //    uc_wk = 1.0/vec3_norm(uc_rvk);
+    //    uc_wl = 1.0/vec3_norm(uc_rvl);
+a907 8
+//   glog.get_logfile() << "volume = " << volume << endl;
+//   glog.get_logfile() << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+//   glog.get_logfile() << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+//   glog.get_logfile() << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+//   glog.get_logfile() << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+//   glog.get_logfile() << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+//   glog.get_logfile() << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+//   glog.get_logfile()  << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+d911 2
+a912 2
+  double atmp;
+
+d917 1
+d919 35
+a953 46
+  atmp = floor(uc_lvb[0]/uc_lva[0]/2 + 0.5);
+  if (int(atmp) != 0) {
+    Lremap = true;
+    uc_lvb[0] -= 2 * uc_lva[0] * atmp;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "In Box::BoxDeform(), b0a0 atmp = " << atmp << endl;
+    }
+  }
+  atmp = floor(uc_lvc[0]/uc_lva[0]/2 + 0.5);
+  if (int(atmp) != 0) {
+    Lremap = true;
+    uc_lvc[0] -= 2 * uc_lva[0] * atmp;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "In Box::BoxDeform(), c0a0 atmp = " << atmp << endl;
+    }
+  }
+  atmp = floor(uc_lva[1]/uc_lvb[1]/2 + 0.5); 
+  if (int(atmp) != 0) {
+    Lremap = true;
+    uc_lva[1] -= 2 * uc_lvb[1] * atmp;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "In Box::BoxDeform(), a1b1 atmp = " << atmp << endl;
+    }
+  }
+  atmp = floor(uc_lvc[1]/uc_lvb[1]/2 + 0.5);
+  if (int(atmp) != 0) {
+    Lremap = true;
+    uc_lvc[1] -= 2 * uc_lvb[1] * atmp;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "In Box::BoxDeform(), c1b1 atmp = " << atmp << endl;
+    }
+  }
+  atmp = floor(uc_lva[2]/uc_lvc[2]/2 + 0.5);
+  if (int(atmp) != 0) {
+    Lremap = true;
+    uc_lva[2] -= 2 * uc_lvc[2] * atmp;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "In Box::BoxDeform(), a2c2 atmp = " << atmp << endl;
+    }
+  }
+  atmp = floor(uc_lvb[2]/uc_lvc[2]/2 + 0.5);
+  if (int(atmp) != 0) {
+    Lremap = true;
+    uc_lvb[2] -= 2 * uc_lvc[2] * atmp;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "In Box::BoxDeform(), b2c2 atmp = " << atmp << endl;
+d955 77
+d1033 1
+@
+
+
+4.12
+log
+@Fixed worlds + reaxbond bug
+@
+text
+@d87 2
+d119 8
+d938 3
+a940 1
+void Box::BoxDeform(const double deformation[3][3]) {
+d944 50
+a993 6
+  uc_lvb[0] -= 2 * uc_lva[0] * floor(uc_lvb[0]/uc_lva[0]/2 + 0.5);
+  uc_lvc[0] -= 2 * uc_lva[0] * floor(uc_lvc[0]/uc_lva[0]/2 + 0.5);
+  uc_lva[1] -= 2 * uc_lvb[1] * floor(uc_lva[1]/uc_lvb[1]/2 + 0.5); 
+  uc_lvc[1] -= 2 * uc_lvb[1] * floor(uc_lvc[1]/uc_lvb[1]/2 + 0.5);
+  uc_lva[2] -= 2 * uc_lvc[2] * floor(uc_lva[2]/uc_lvc[2]/2 + 0.5);
+  uc_lvb[2] -= 2 * uc_lvc[2] * floor(uc_lvb[2]/uc_lvc[2]/2 + 0.5);
+@
+
+
+4.11
+log
+@Added commands to carry box dimensions in restart file and to output stress tensor
+@
+text
+@d932 7
+a938 1
+  SetupBox(); 
+@
+
+
+4.10
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@d654 1
+a654 1
+void Box::SetupBox() {
+d657 19
+@
+
+
+4.9
+log
+@Fixed bug in stepper.cpp
+@
+text
+@d58 1
+d379 1
+d399 25
+d909 7
+@
+
+
+4.8
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d637 6
+@
+
+
+4.7
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d83 3
+a104 4
+  
+  perflaga = true;
+  perflagb = true;
+  perflagc = true;
+d106 1
+d120 4
+d199 9
+a207 4
+      ishift[0]--;
+      tmp = tmp + xprd;
+      X[0] += xprd;
+      if (tmp < xmid) {
+d209 1
+a209 1
+		   "More than half box-length outside central box");
+d215 9
+a223 4
+      ishift[0]++;
+      tmp = tmp - xprd;
+      X[0] -= xprd;
+      if (tmp > xmid ) {
+d225 3
+a227 2
+		   "More than half box-length outside central box");
+      } 
+d233 9
+a241 4
+      ishift[1]--;
+      tmp = tmp + yprd;
+      X[1] += yprd;
+      if (tmp < ymid) {
+d243 1
+a243 1
+		   "More than half box-length outside central box");
+d246 1
+d250 9
+a258 4
+      ishift[1]++;
+      tmp = tmp - yprd;
+      X[1] -= yprd;
+      if (tmp > ymid ) {
+d260 1
+a260 1
+		   "More than half box-length outside central box");
+d267 9
+a275 4
+      ishift[2]--;
+      tmp = tmp + zprd;
+      X[2] += zprd;
+      if (tmp < zmid) {
+d277 1
+a277 1
+		   "More than half box-length outside central box");
+d283 9
+a291 4
+      ishift[2]++;
+      tmp = tmp - zprd;
+      X[2] -= zprd;
+      if (tmp > zmid ) {
+d293 1
+a293 1
+		   "More than half box-length outside central box");
+d467 10
+a476 5
+      ishift[0] = (int)floor((tmp-xboundhi)/xprd+1.0);
+      shft = xprd*ishift[0];
+      tmp -= shft;
+      if (X)
+        *X -= shft;
+d479 4
+a482 9
+      ishift[0] = (int)floor((tmp-xboundlo)/xprd);
+      shft = xprd*ishift[0];
+      tmp -= shft;
+      if (X)
+	*X -= shft;
+      // If shifted particle on upper boundary, reverse shift
+      if (tmp == xboundhi) {
+	ishift[0]++;
+        tmp = tmp - xprd;
+d484 6
+d491 4
+d501 11
+a511 6
+      ishift[1] = (int)floor((tmp-yboundhi)/yprd+1.0);
+      shft = yprd*ishift[1];
+      tmp -= shft;
+      if (X)
+	X[1] -= shft;
+    } 
+d513 4
+a516 9
+      ishift[1] = (int)floor((tmp-yboundlo)/yprd);
+      shft = yprd*ishift[1];
+      tmp -= shft;
+      if (X)
+	X[1] -= shft;
+      // If shifted particle on upper boundary, reverse shift
+      if (tmp == yboundhi) {
+	ishift[1]++;
+        tmp = tmp - yprd;
+d518 11
+a528 1
+	  X[1] -= yprd;
+d535 11
+a545 6
+      ishift[2] = (int)floor((tmp-zboundhi)/zprd+1.0);
+      shft = zprd*ishift[2];
+      tmp -= shft;
+      if (X)
+	X[2] -= shft;
+    } 
+d547 4
+a550 9
+      ishift[2] = (int)floor((tmp-zboundlo)/zprd);
+      shft = zprd*ishift[2];
+      tmp -= shft;
+      if (X)
+	 X[2] -= shft;
+      // If shifted particle on upper boundary, reverse shift
+      if (tmp == zboundhi) {
+	ishift[2]++;
+        tmp = tmp - zprd;
+d552 11
+a562 1
+	  X[2] -= zprd;
+d755 17
+d875 36
+@
+
+
+4.6
+log
+@Added multiple replica feature.
+@
+text
+@d173 1
+a173 1
+void Box::Minimg_Pos(double r[], double X[]) const {
+d182 8
+d195 1
+d206 1
+d218 1
+d229 1
+d241 1
+d252 1
+d273 1
+d281 1
+d292 1
+d300 1
+d311 1
+d319 1
+d328 6
+d409 1
+a409 1
+void Box::Minimg_Pos_Full(double r[], double *X) const {
+d417 8
+d431 2
+a432 1
+      shft = xprd*floor((tmp-xboundhi)/xprd+1.0);
+d438 2
+a439 1
+      shft = xprd*floor((tmp-xboundlo)/xprd);
+d445 1
+d455 2
+a456 1
+      shft = yprd*floor((tmp-yboundhi)/yprd+1.0);
+d462 2
+a463 1
+      shft = yprd*floor((tmp-yboundlo)/yprd);
+d469 1
+d479 2
+a480 1
+      shft =  zprd*floor((tmp-zboundhi)/zprd+1.0);
+d486 2
+a487 1
+      shft =  zprd*floor((tmp-zboundlo)/zprd);
+d493 1
+d509 2
+a510 1
+      vec3_scaleadd(-floor(tmp),uc_lva,r,r);
+d512 1
+a512 1
+	vec3_scaleadd(-floor(tmp),uc_lva,X,X);
+d514 2
+a515 1
+      vec3_scaleadd(-floor(tmp),uc_lva,r,r);
+d517 1
+a517 1
+	vec3_scaleadd(-floor(tmp),uc_lva,X,X);
+d522 2
+a523 1
+      vec3_scaleadd(-floor(tmp),uc_lvb,r,r);
+d525 1
+a525 1
+	vec3_scaleadd(-floor(tmp),uc_lvb,X,X);
+d527 2
+a528 1
+      vec3_scaleadd(-floor(tmp),uc_lvb,r,r);
+d530 1
+a530 1
+	vec3_scaleadd(-floor(tmp),uc_lvb,X,X);
+d535 2
+a536 1
+      vec3_scaleadd(-floor(tmp),uc_lvc,r,r);
+d538 1
+a538 1
+	vec3_scaleadd(-floor(tmp),uc_lvc,X,X);
+d540 2
+a541 1
+      vec3_scaleadd(-floor(tmp),uc_lvc,r,r);
+d543 1
+a543 1
+	vec3_scaleadd(-floor(tmp),uc_lvc,X,X);
+d552 6
+@
+
+
+4.5
+log
+@Added GaAs version of Tersoff
+@
+text
+@d95 2
+a96 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Box::Setup()" << endl;
+d582 8
+a589 8
+//   glog.logfile << "volume = " << volume << endl;
+//   glog.logfile << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+//   glog.logfile << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+//   glog.logfile << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+//   glog.logfile << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+//   glog.logfile << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+//   glog.logfile << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+//   glog.logfile  << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+d605 1
+a605 1
+    glog.logfile << endl;
+d609 3
+a611 3
+  glog.logfile << "\t" << uc_lva[0] << "\t" << uc_lva[1] << "\t" << uc_lva[2] << " \\" << endl;
+  glog.logfile << "\t\t\t" << uc_lvb[0] << "\t" << uc_lvb[1] << "\t" << uc_lvb[2] << " \\" << endl;
+  glog.logfile << "\t\t\t" << uc_lvc[0] << "\t" << uc_lvc[1] << "\t" << uc_lvc[2]<< endl;
+d622 1
+a622 1
+    glog.logfile << endl;
+d626 1
+a626 1
+  glog.logfile << "\t" << uc_origin[0] << "\t" << uc_origin[1] << 
+d728 8
+a735 8
+//   glog.logfile << "volume = " << volume << endl;
+//   glog.logfile << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+//   glog.logfile << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+//   glog.logfile << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+//   glog.logfile << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+//   glog.logfile << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+//   glog.logfile << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+//   glog.logfile  << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+@
+
+
+4.4
+log
+@Added some new barostats and thermostats.
+@
+text
+@d357 1
+a357 1
+// to abc coordinates. It  only returns the diagona elements.
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d102 1
+a102 1
+
+d323 1
+a323 1
+    tmp = dilation[0]*vec3_dot(r,uc_rvh);
+d325 1
+a325 1
+    tmp = dilation[1]*vec3_dot(r,uc_rvh);
+d327 1
+a327 1
+    tmp = dilation[2]*vec3_dot(r,uc_rvh);
+d330 48
+a377 1
+      
+@
+
+
+4.3.6.1
+log
+@Added bin-based energy calc
+@
+text
+@d90 1
+d181 1
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d562 3
+a564 3
+  glog.logfile << "\n" << uc_lva[0] << "\t" << uc_lva[1] << "\t" << uc_lva[2] << " \\" << endl;
+  glog.logfile << uc_lvb[0] << "\t" << uc_lvb[1] << "\t" << uc_lvb[2] << " \\" << endl;
+  glog.logfile << uc_lvc[0] << "\t" << uc_lvc[1] << "\t" << uc_lvc[2]<< endl << endl;
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d546 3
+a548 3
+  glog.logfile << "\t" << uc_lva[0] << "\t" << uc_lva[1] << "\t" << uc_lva[2] << " \\" << endl;
+  glog.logfile << "\t\t\t" << uc_lvb[0] << "\t" << uc_lvb[1] << "\t" << uc_lvb[2] << " \\" << endl;
+  glog.logfile << "\t\t\t" << uc_lvc[0] << "\t" << uc_lvc[1] << "\t" << uc_lvc[2]<< endl;
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.2.6.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d546 3
+a548 3
+  glog.logfile << "\n" << uc_lva[0] << "\t" << uc_lva[1] << "\t" << uc_lva[2] << " \\" << endl;
+  glog.logfile << uc_lvb[0] << "\t" << uc_lvb[1] << "\t" << uc_lvb[2] << " \\" << endl;
+  glog.logfile << uc_lvc[0] << "\t" << uc_lvc[1] << "\t" << uc_lvc[2]<< endl << endl;
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d82 3
+a84 3
+#ifdef _USE_NODEFILES_
+  comm->get_nodefile() << "Entering Box::Setup()" << endl;
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d82 1
+d84 1
+d157 1
+a157 1
+void Box::Minimg_Pos(double r[]) const {
+d172 1
+d182 1
+d193 1
+d203 1
+d214 1
+d224 1
+d235 1
+d244 1
+d251 1
+d261 1
+d268 1
+d278 1
+d285 1
+d289 1
+a289 1
+
+d320 1
+a320 1
+void Box::Minimg_Pos_Full(double r[]) const {
+d327 1
+a327 1
+  double tmp;
+d334 4
+a337 1
+      tmp = tmp - xprd*floor((tmp-xboundhi)/xprd+1.0);
+d340 4
+a343 1
+      tmp = tmp - xprd*floor((tmp-xboundlo)/xprd);
+d345 5
+a349 1
+      if (tmp == xboundhi) tmp = tmp - xprd;
+d355 4
+a358 1
+      tmp = tmp - yprd*floor((tmp-yboundhi)/yprd+1.0);
+d361 4
+a364 1
+      tmp = tmp - yprd*floor((tmp-yboundlo)/yprd);
+d366 5
+a370 1
+      if (tmp == yboundhi) tmp = tmp - yprd;
+d376 4
+a379 1
+      tmp = tmp - zprd*floor((tmp-zboundhi)/zprd+1.0);
+d382 4
+a385 1
+      tmp = tmp - zprd*floor((tmp-zboundlo)/zprd);
+d387 5
+a391 1
+      if (tmp == zboundhi) tmp = tmp - zprd;
+a395 1
+
+d397 2
+d401 1
+d404 2
+d408 2
+d413 1
+a413 1
+    if (tmp >= 1.0)
+d415 3
+a417 1
+    else if (tmp < 0.0)
+d419 3
+d424 1
+a424 1
+    if (tmp >= 1.0)
+d426 3
+a428 1
+    else if (tmp < 0.0)
+d430 3
+d435 2
+d582 1
+a635 1
+
+@
+
+
+2.15
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.14
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.13
+log
+@Various
+@
+text
+@d279 25
+d455 8
+a462 8
+  glog.logfile << "volume = " << volume << endl;
+  glog.logfile << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+  glog.logfile << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+  glog.logfile << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+  glog.logfile << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+  glog.logfile << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+  glog.logfile << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+  glog.logfile  << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+d526 84
+@
+
+
+2.12
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.11
+log
+@Added Ewald sum example
+@
+text
+@d442 1
+a442 1
+  stringstream buf_in(buf);
+d464 1
+a464 1
+  stringstream buf_in(buf);
+@
+
+
+2.10
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d65 1
+d492 7
+@
+
+
+2.10.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a79 1
+#ifdef _USE_NODEFILES_
+a80 1
+#endif
+@
+
+
+2.10.2.2
+log
+@Keeping track of displacements for each particle.
+@
+text
+@d155 1
+a155 1
+void Box::Minimg_Pos(double r[], double X[]) const {
+a169 1
+      X[0] += xprd;
+a178 1
+      X[0] -= xprd;
+a188 1
+      X[1] += yprd;
+a197 1
+      X[1] -= yprd;
+a207 1
+      X[2] += zprd;
+a216 1
+      X[2] -= zprd;
+a226 1
+    vec3_subtract(X,uc_origin,X);
+a234 1
+      vec3_subtract(X,uc_lva,X);
+a240 1
+      vec3_add(X,uc_lva,X);
+a249 1
+      vec3_subtract(X,uc_lvb,X);
+a255 1
+      vec3_add(X,uc_lvb,X);
+a264 1
+      vec3_subtract(X,uc_lvc,X);
+a270 1
+      vec3_add(X,uc_lvc,X);
+d274 1
+a274 1
+    vec3_add(uc_origin,X,X);
+d280 1
+a280 1
+void Box::Minimg_Pos_Full(double r[], double* X) const {
+d287 1
+a287 1
+  double tmp, shft;
+d294 1
+a294 4
+      shft = xprd*floor((tmp-xboundhi)/xprd+1.0);
+      tmp -= shft;
+      if (X)
+        *X -= shft;
+d297 1
+a297 4
+      shft = xprd*floor((tmp-xboundlo)/xprd);
+      tmp -= shft;
+      if (X)
+	*X -= shft;
+d299 1
+a299 5
+      if (tmp == xboundhi) {
+        tmp = tmp - xprd;
+	if (X)
+	  *X -= xprd;
+      }
+d305 1
+a305 4
+      shft = yprd*floor((tmp-yboundhi)/yprd+1.0);
+      tmp -= shft;
+      if (X)
+	X[1] -= shft;
+d308 1
+a308 4
+      shft = yprd*floor((tmp-yboundlo)/yprd);
+      tmp -= shft;
+      if (X)
+	X[1] -= shft;
+d310 1
+a310 5
+      if (tmp == yboundhi) {
+        tmp = tmp - yprd;
+	if (X)
+	  X[1] -= yprd;
+      }
+d316 1
+a316 4
+      shft =  zprd*floor((tmp-zboundhi)/zprd+1.0);
+      tmp -= shft;
+      if (X)
+	X[2] -= shft;
+d319 1
+a319 4
+      shft =  zprd*floor((tmp-zboundlo)/zprd);
+      tmp -= shft;
+      if (X)
+	 X[2] -= shft;
+d321 1
+a321 5
+      if (tmp == zboundhi) {
+        tmp = tmp - zprd;
+	if (X)
+	  X[2] -= zprd;
+      }
+d326 1
+a327 2
+    if (X)
+      vec3_subtract(X,uc_origin,X);
+a329 1
+
+a331 2
+      if (X)
+	vec3_scaleadd(-floor(tmp),uc_lva,X,X);
+a333 2
+      if (X)
+	vec3_scaleadd(-floor(tmp),uc_lva,X,X);
+d337 1
+a337 1
+    if (tmp >= 1.0) {
+d339 1
+a339 3
+      if (X)
+	vec3_scaleadd(-floor(tmp),uc_lvb,X,X);
+    } else if (tmp < 0.0) {
+a340 3
+      if (X)
+	vec3_scaleadd(-floor(tmp),uc_lvb,X,X);
+    }
+d343 1
+a343 1
+    if (tmp >= 1.0) {
+d345 1
+a345 3
+      if (X)
+	vec3_scaleadd(-floor(tmp),uc_lvc,X,X);
+    } else if (tmp < 0.0) {
+a346 3
+      if (X)
+	vec3_scaleadd(-floor(tmp),uc_lvc,X,X);
+    }
+a348 2
+    if (X)
+      vec3_add(uc_origin,X,X);
+@
+
+
+2.10.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a64 1
+  dielectric = 1.0;
+d293 1
+a293 26
+void Box::Scale_Pos(double r[], const double dilation[]) const {
+  double tmp;
+
+  // Special treatment of orthorhombic box
+  if (Lorthorhombic) {
+    for (int idim = 0;idim<3;idim++) {
+      r[idim] = dilation[idim]*(r[idim]-uc_origin[idim])+uc_origin[idim];
+    }
+
+  } else {
+
+    vec3_subtract(r,uc_origin,r);
+    tmp = dilation[0]*vec3_dot(r,uc_rvh);
+    vec3_scaleadd((dilation[0]-1.0)*tmp,uc_lva,r,r);
+    tmp = dilation[1]*vec3_dot(r,uc_rvh);
+    vec3_scaleadd((dilation[1]-1.0)*tmp,uc_lvb,r,r);
+    tmp = dilation[2]*vec3_dot(r,uc_rvh);
+    vec3_scaleadd((dilation[2]-1.0)*tmp,uc_lvc,r,r);
+    vec3_add(uc_origin,r,r);
+      
+  }
+
+  return;
+}
+
+void Box::Minimg_Pos_Full(double r[], double *X) const {
+d492 8
+a499 8
+//   glog.logfile << "volume = " << volume << endl;
+//   glog.logfile << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+//   glog.logfile << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+//   glog.logfile << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+//   glog.logfile << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+//   glog.logfile << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+//   glog.logfile << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+//   glog.logfile  << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+d504 1
+a504 1
+  std::istringstream buf_in(buf);
+d526 1
+a526 1
+  std::istringstream buf_in(buf);
+a554 53
+//
+// Return the relative dielectric permittivity of the "box medium'
+// Vacuum = 1
+//
+double Box::get_dielectric() const {
+  return dielectric;
+}
+
+void Box::BoxDilate(const double dilation[]) {
+  double rvol;
+
+  // This is special treatment, assuming orthorhombic box.
+  if (Lorthorhombic) {
+    uc_lva[0]*=dilation[0];
+    xboundlo = uc_origin[0];
+    xboundhi = xboundlo + uc_lva[0];
+    xprd = uc_lva[0];
+    half_xprd = xprd/2.0;
+    xmid = xboundlo + half_xprd;
+
+    uc_lvb[1]*=dilation[1];
+    yboundlo = uc_origin[1];
+    yboundhi = yboundlo + uc_lvb[1];
+    yprd = uc_lvb[1];
+    half_yprd = yprd/2.0;
+    ymid = yboundlo + half_yprd;
+    
+    uc_lvc[2]*=dilation[2];
+    zboundlo = uc_origin[2];
+    zboundhi = zboundlo + uc_lvc[2];
+    zprd = uc_lvc[2];
+    half_zprd = zprd/2.0;
+    zmid = zboundlo + half_zprd;
+
+    uc_ah = yprd*zprd;
+    uc_ak = xprd*zprd;
+    uc_al = xprd*yprd;
+
+    volume = xprd*yprd*zprd;
+
+    uc_wh = xprd;
+    uc_wk = yprd;
+    uc_wl = zprd;
+
+    uc_rvh[0] = 1.0/xprd;
+    uc_rvh[1] = 0.0;
+    uc_rvh[2] = 0.0;
+    uc_rvk[0] = 0.0;
+    uc_rvk[1] = 1.0/yprd;
+    uc_rvk[2] = 0.0;
+    uc_rvl[0] = 0.0;
+    uc_rvl[1] = 0.0;
+    uc_rvl[2] = 1.0/zprd;
+a555 38
+    uc_rv[0] = uc_rvh;
+    uc_rv[1] = uc_rvk;
+    uc_rv[2] = uc_rvl;
+
+  } else {
+    vec3_scale(dilation[0],uc_lva,uc_lva);
+    vec3_scale(dilation[1],uc_lvb,uc_lvb);
+    vec3_scale(dilation[2],uc_lvc,uc_lvc);
+    vec3_cross(uc_lvb,uc_lvc,uc_rvh);
+    vec3_cross(uc_lvc,uc_lva,uc_rvk);
+    vec3_cross(uc_lva,uc_lvb,uc_rvl);
+    uc_ah = vec3_norm(uc_rvh);
+    uc_ak = vec3_norm(uc_rvk);
+    uc_al = vec3_norm(uc_rvl);
+    volume = vec3_dot(uc_rvh,uc_lva);
+    rvol = 1.0/volume;
+    vec3_scale(rvol,uc_rvh,uc_rvh);
+    vec3_scale(rvol,uc_rvk,uc_rvk);
+    vec3_scale(rvol,uc_rvl,uc_rvl);
+    uc_wh = volume/uc_ah;
+    uc_wk = volume/uc_ak;
+    uc_wl = volume/uc_al;
+    //    uc_wh = 1.0/vec3_norm(uc_rvh);
+    //    uc_wk = 1.0/vec3_norm(uc_rvk);
+    //    uc_wl = 1.0/vec3_norm(uc_rvl);
+    uc_rv[0] = uc_rvh;
+    uc_rv[1] = uc_rvk;
+    uc_rv[2] = uc_rvl;
+  }
+//   glog.logfile << "volume = " << volume << endl;
+//   glog.logfile << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+//   glog.logfile << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+//   glog.logfile << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+//   glog.logfile << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+//   glog.logfile << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+//   glog.logfile << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+//   glog.logfile  << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+}
+@
+
+
+2.9
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@d56 9
+a64 3
+  uc_origin[0] = 0.0;
+  uc_origin[1] = 0.0;
+  uc_origin[2] = 0.0;
+d124 5
+d161 1
+d163 1
+a164 1
+    // Special treatment of orthorhombic box
+d166 9
+d180 8
+a187 5
+      }
+    } 
+    else if (tmp < xboundlo) {
+      tmp = tmp + xprd;
+      if (tmp < xmid) {
+d192 2
+a193 3
+    r[0] = tmp;
+
+    tmp = r[1];
+d200 7
+a206 4
+    } 
+    else if (tmp < yboundlo) {
+      tmp = tmp + yprd;
+      if (tmp < ymid) {
+d211 2
+a212 3
+    r[1] = tmp;
+
+    tmp = r[2];
+a218 7
+    } 
+    else if (tmp < zboundlo) {
+      tmp = tmp + zprd;
+      if (tmp < zmid) {
+	glog.abort("Box::Minimg_Pos:\n"
+		   "More than half box-length outside central box");
+      }
+a221 1
+
+a223 1
+
+d296 2
+d307 2
+d318 2
+d475 4
+@
+
+
+2.8
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d455 12
+@
+
+
+2.7
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.6
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@a10 1
+#include "input.h"
+d19 12
+d36 1
+a36 1
+void Box::Setup(const Input* inp, Comm* comm) {
+a48 5
+  vec3_copy(inp->lva,uc_lva);
+  vec3_copy(inp->lvb,uc_lvb);
+  vec3_copy(inp->lvc,uc_lvc);
+  vec3_copy(inp->origin,uc_origin);
+  
+d387 38
+@
+
+
+2.5
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d31 4
+a34 1
+  if (node == 0) glog.logfile << "Entering Box::Setup()" << endl;
+@
+
+
+2.4
+log
+@Added note on non-treatment of periodic images of external fields
+Added tiny displacement to origin in box.cpp to eliminate problems
+with floating point errors.
+@
+text
+@a39 3
+  uc_origin[0]+=-1e-10;
+  uc_origin[1]+=-1e-10;
+  uc_origin[2]+=-1e-10;
+a368 8
+    glog.logfile << "volume = " << volume << endl;
+    glog.logfile << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+    glog.logfile << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+    glog.logfile << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+    glog.logfile << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+    glog.logfile << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+    glog.logfile << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+    glog.logfile  << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+d370 8
+a379 9
+double Box::Fractional(const int& idim, const double r[]) const {
+
+  double rtmp[3];
+
+  vec3_subtract(r,uc_origin,rtmp);
+
+  return vec3_dot(rtmp,uc_rv[idim]);
+
+}
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d40 3
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@a38 10
+  // The origin (input default or user supplied) is
+  // perturbed slightly to eliminate problems with round
+  // off for atoms lying exactly on the domain boundaries
+  // This has no effect on the relative position of atoms
+  // to each other.
+
+  vec_tiny[0] = 1.0e-10;
+  vec_tiny[1] = 1.0e-10;
+  vec_tiny[2] = 1.0e-10;
+  vec3_add(uc_origin,vec_tiny,uc_origin);
+d120 1
+a120 1
+	glog.error("Box::Minimg_Pos:\n"
+d127 1
+a127 1
+	glog.error("Box::Minimg_Pos:\n"
+d137 1
+a137 1
+	glog.error("Box::Minimg_Pos:\n"
+d144 1
+a144 1
+	glog.error("Box::Minimg_Pos:\n"
+d154 1
+a154 1
+	glog.error("Box::Minimg_Pos:\n"
+d161 1
+a161 1
+	glog.error("Box::Minimg_Pos:\n"
+d176 1
+a176 1
+	glog.error("Box::Minimg_Pos:\n"
+d182 1
+a182 1
+	glog.error("Box::Minimg_Pos:\n"
+d191 1
+a191 1
+	glog.error("Box::Minimg_Pos:\n"
+d197 1
+a197 1
+	glog.error("Box::Minimg_Pos:\n"
+d206 1
+a206 1
+	glog.error("Box::Minimg_Pos:\n"
+d212 1
+a212 1
+	glog.error("Box::Minimg_Pos:\n"
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d15 2
+a16 2
+extern ofstream logfile;
+
+d31 1
+a31 1
+  if (node == 0) logfile << "Entering Box::Setup()" << endl;
+d44 1
+d49 1
+a49 1
+
+d111 4
+d130 2
+a131 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d137 2
+a138 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d147 2
+a148 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d154 2
+a155 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d164 2
+a165 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d171 2
+a172 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d186 2
+a187 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d192 2
+a193 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d201 2
+a202 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d207 2
+a208 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d216 2
+a217 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d222 2
+a223 2
+	logfile << "Error: More than half box-length outside central box" << endl;
+	exit(0);
+d379 8
+a386 8
+    logfile << "volume = " << volume << endl;
+    logfile << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+    logfile << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+    logfile << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+    logfile << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+    logfile << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+    logfile << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+    logfile << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d9 1
+d14 2
+d24 11
+a34 1
+void Box::Setup(const Input* inp) {
+d39 9
+d65 14
+d97 13
+d125 1
+a125 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d132 1
+a132 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d142 1
+a142 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d149 1
+a149 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d159 1
+a159 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d166 1
+a166 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d181 1
+a181 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d187 1
+a187 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d196 1
+a196 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d202 1
+a202 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d211 1
+a211 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d217 1
+a217 1
+	cout << "Error: More than half box-length outside central box" << endl;
+d329 4
+d335 18
+d357 3
+d365 17
+a381 11
+    uc_wh = 1.0/vec3_norm(uc_rvh);
+    uc_wk = 1.0/vec3_norm(uc_rvk);
+    uc_wl = 1.0/vec3_norm(uc_rvl);
+    cout << "volume = " << volume << endl;
+    cout << "widths = " << uc_wh << " " << uc_wk << " " << uc_wl << endl; 
+    cout << "lva = " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+    cout << "lvb = " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+    cout << "lvc = " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+    cout << "rvh = " << uc_rvh[0] << " " << uc_rvh[1] << " " << uc_rvh[2] << endl;
+    cout << "rvk = " << uc_rvk[0] << " " << uc_rvk[1] << " " << uc_rvk[2] << endl;
+    cout << "rvl = " << uc_rvl[0] << " " << uc_rvl[1] << " " << uc_rvl[2] << endl;
+d385 9
+@
+
+
+1.10
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d1 1
+a1 1
+#include <math.h>
+d8 3
+a10 6
+#include "particle.h"
+#include "forcefield.h"
+#include "force_twobody.h"
+#include "force_threebody.h"
+#include "force_external.h"
+#include "particle_types.h"
+a12 2
+#include "constants.h"
+#include "profile.h"
+d16 14
+a29 36
+Box& Box::get(const double a_in[],
+	      const double b_in[],
+	      const double c_in[],
+	      const double origin_in[],
+	      const bool& i1, const bool& i2, const bool& i3,
+	      const int& i4)
+
+{
+  static Box thebox(a_in,b_in,c_in,origin_in,i1,i2,i3,i4);
+  return thebox;
+}
+
+Box::Box(const double a_in[],
+	 const double b_in[],
+	 const double c_in[],
+	 const double origin_in[],
+	 const bool& i1, const bool& i2, const bool& i3,
+	 const int& i4)
+{
+  if (!(a_in && b_in && c_in && origin_in)) {
+    //This is needed to catch use of default arguments on first call to Box::get
+    cout << "Error in Box::Box: Invalid unit cell lattice vectors" << endl;
+    cout << "a, b, c, o addresses: "  <<
+      a_in << " " << b_in << " " << c_in << " " << origin_in << endl;
+    exit(0);
+  }
+  ptypes = new Particle_Types;
+  nparticles = 0;
+  vec3_copy(a_in,uc_lva);
+  vec3_copy(b_in,uc_lvb);
+  vec3_copy(c_in,uc_lvc);
+  vec3_copy(origin_in,uc_origin);
+
+  perflaga = i1;
+  perflagb = i2;
+  perflagc = i3;
+a31 2
+  units_style = i4;
+
+a33 96
+  pressa_target = 0.0;
+  pressb_target = 0.0;
+  pressc_target = 0.0;
+
+#ifdef DEBUG_ALLOCATION
+  cout << "Initial Size is " << particles.size() << endl;
+  cout << "Initial Max_size is " << particles.max_size() << endl;
+  cout << "Initial Capacity is " << particles.capacity() << endl;
+#endif
+}
+
+Box::~Box()
+{
+}
+
+void Box::AddParticle(const Particle& p)
+{
+#ifdef DEBUG_ALLOCATION
+  cout << "AddParticle of type" << p.get_type() << endl;
+#endif
+  particles.push_back(p);
+  nparticles++;
+#ifdef DEBUG_ALLOCATION
+  cout << "AddParticle Size is " << particles.size() << endl;
+  cout << "AddParticle Max_size is " << particles.max_size() << endl;
+  cout << "AddParticle Capacity is " << particles.capacity() << endl;
+#endif
+}
+
+void Box::AddParticle(const int& type_in, const int& tag_in, 
+		      const string& id_in, const int& color_in, 
+		      const double x_in[], const double& charge_in)
+{
+  Particle p(type_in, tag_in, id_in, color_in, x_in, charge_in);
+#ifdef DEBUG_ALLOCATION
+  cout << "AddParticle of type" << p.get_type() << endl;
+  double x_out[3];
+  p.get_x(x_out);
+  cout << "AddParticle of position " << x_out[0]  << endl;
+  cout << "AddParticle of charge " << p.get_charge() << endl;
+#endif
+  particles.push_back(p);
+  nparticles++;
+#ifdef DEBUG_ALLOCATION
+  cout << "AddParticle Size is " << particles.size() << endl;
+  cout << "AddParticle Max_size is " << particles.max_size() << endl;
+  cout << "AddParticle Capacity is " << particles.capacity() << endl;
+#endif
+}
+
+void Box::RemoveParticle(const int& i)
+{
+  vector<Particle>::iterator ipnt;
+  ipnt = particles.begin()+i;
+  particles.erase(ipnt);
+  nparticles--;
+}
+
+void Box::ReadConfig()
+{
+  string buf;
+  double q,x[3];
+  int itag,icolor;
+  string id;
+
+  ifstream infile("config.in"); 
+
+  if (!infile) {
+    cout << "Failed to open config.in" << endl;
+    exit(0);
+  }
+  
+  while (getline(infile,buf)){
+
+    // Skip empty or comment lines
+    if (buf.empty() || buf[0]=='#') continue;
+    stringstream buf_in(buf);
+    // Skip lines with only whitespace
+    buf_in >> ws;
+    if (buf_in.eof()) continue;
+
+    buf_in >> itag >> id >> icolor >> q >> x[0] >> x[1] >> x[2];
+
+    if (buf_in.fail()) {
+      cout << "Read error in config.in" << endl;
+      exit(0);
+    }
+
+#ifdef DEBUG_ALLOCATION
+    cout << "Before AddParticle Size is " << particles.size() << endl;
+    cout << "Before AddParticle Max_size is " << particles.max_size() << endl;
+    cout << "Before AddParticle Capacity is " << particles.capacity() << endl;
+#endif
+    //Adding particle with uninitialized type
+    AddParticle(-1,itag,id,icolor,x,q);
+  }
+d36 2
+a37 3
+int Box::get_nparticles() const
+{
+  return nparticles;
+d40 2
+a41 3
+bool Box::get_Lorthorhombic() const
+{
+  return Lorthorhombic;
+d43 2
+a44 3
+
+void Box::get_lv(double lva_out[], double lvb_out[], double lvc_out[]) const
+{
+d50 1
+a50 2
+void Box::get_o(double origin_out[]) const
+{
+d55 1
+a55 2
+		 double& wl_out) const
+{
+d61 1
+a61 282
+void Box::AddCapacity(const int& i)
+{
+  particles.reserve(i);
+#ifdef DEBUG_ALLOCATION
+  cout << "AddCapacity Size is " << particles.size() << endl;
+  cout << "AddCapacity Max_size is " << particles.max_size() << endl;
+  cout << "AddCapacity Capacity is " << particles.capacity() << endl;
+#endif
+}    
+
+void Box::StepVelocity(const double& timestep)
+{
+  for (int i=0;i<nparticles;i++) {
+    particles[i].step_v(timestep);
+  }
+}
+
+void Box::StepPosition(const double& timestep)
+{
+  for (int i=0;i<nparticles;i++) {
+    particles[i].step_x(timestep);
+  }
+}
+
+void Box::ComputeForce(const bool& Lthermo)
+{
+  int i;
+  float tforce;
+  clock_t t1,t2;
+  int* type_index;
+  double e_potential_tmp;
+  int ff_classname;
+
+  //Initialize forces and energy to zero
+  for (i=0;i<nparticles;i++) {
+    particles[i].set_f();
+  }
+
+  e_potential = 0.0;
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    Forcefield* ff = forcefield_list[iff];
+    type_index = ptypes->get_type_index(iff);
+    ff_classname = ff->get_classname();
+    if (Lthermo) {
+      t1 = clock();
+      ff->ApplyForce(particles,e_potential_tmp,perflag,*this,type_index);
+      e_potential+=e_potential_tmp;
+      t2 = clock();
+      tforce = (t2-t1)/float(CLOCKS_PER_SEC);
+      cout << endl;
+      cout << "Force evaluation for Forcefield object " << iff << endl;
+      cout << "Forcefield classname [enum Forcefield::ff_class_type] = " << 
+	ff_classname << endl;
+      switch (ff_classname) {
+      case Forcefield::twobody :
+	switch(units_style) {
+	case real_units:
+	  cout << "Twobody energy [kJ/mol] = " << e_potential_tmp << endl; 
+	  cout << "Twobody force time [s] = " << tforce << endl;
+	  cout << "Twobody force-pair time [s/pair] = " << 
+	    tforce/ff->get_npairs(nparticles) << endl;
+	  break;
+	case reduced_units:
+	  cout << "Twobody energy [epsilon] = " << e_potential_tmp << endl; 
+	  cout << "Twobody force time [s] = " << tforce << endl;
+	  cout << "Twobody force-pair time [s/pair] = " << 
+	    tforce/ff->get_npairs(nparticles) << endl;
+	  break;
+	default:
+	  cout << "Error: invalid units style" << endl;
+	  exit(0);
+	}
+	break;
+      case Forcefield::external :
+	switch(units_style) {
+	case real_units:
+	  cout << "External energy [kJ/mol] = " << e_potential_tmp << endl; 
+	  cout << "External force time [s] = " << tforce << endl;
+	  cout << "External force-pair time [s/pair] = " << 
+	    tforce/ff->get_npairs(nparticles) << endl;
+	  break;
+	case reduced_units:
+	  cout << "External energy [epsilon] = " << e_potential_tmp << endl; 
+	  cout << "External force time [s] = " << tforce << endl;
+	  cout << "External force-pair time [s/pair] = " << 
+	    tforce/ff->get_npairs(nparticles) << endl;
+	  break;
+	default:
+	  cout << "Error: invalid units style" << endl;
+	  exit(0);
+	}
+	break;
+      default:
+	// Default output
+	switch(units_style) {
+	case real_units:
+	  cout << "Forcefield energy [kJ/mol] = " << e_potential_tmp << endl; 
+	  cout << "Forcefield force time [s] = " << tforce << endl;
+	  break;
+	case reduced_units:
+	  cout << "Forcefield energy [epsilon] = " << e_potential_tmp << endl; 
+	  cout << "Forcefield force time [s] = " << tforce << endl;
+	  break;
+	default:
+	  cout << "Error: invalid units style" << endl;
+	  exit(0);
+	  break;
+	}
+	break;
+      }
+    } else {
+      ff->ApplyForce(particles,e_potential_tmp,perflag,*this,type_index);
+      e_potential+=e_potential_tmp;
+    }
+  }
+
+}
+
+void Box::OutputParticles(const int& timestep, const bool& Linit) 
+{
+  double x_tmp[3];
+  Particle* p_pnt;
+  std::ios::openmode openflag;
+
+  if (Linit) {
+    openflag = std::ios::trunc;
+  } else {
+    openflag = std::ios::app;
+  }
+
+  ofstream outfile("config.out",openflag); 
+
+  if (!outfile) {
+    cout << "Failed to open config.out" << endl;
+    exit(0);
+  }
+
+  outfile.setf(ios::showpoint);
+  outfile << setprecision(10);
+  outfile << "# Timestep " << timestep << endl;
+  outfile << "# " << endl;
+  outfile << "# Unit cell lattice vectors:" << endl;
+  outfile << "# " << uc_lva[0] << " " << uc_lva[1] << " " << uc_lva[2] << endl;
+  outfile << "# " << uc_lvb[0] << " " << uc_lvb[1] << " " << uc_lvb[2] << endl;
+  outfile << "# " << uc_lvc[0] << " " << uc_lvc[1] << " " << uc_lvc[2] << endl;
+  outfile << "# " << endl;
+  outfile << "# Unit cell origin:" << endl;
+  outfile << "# " << uc_origin[0] << " " 
+	          << uc_origin[1] << " " 
+	          << uc_origin[2] << endl;
+  outfile << "# " << endl;
+  outfile << "# Number of particles " << nparticles << endl;
+  outfile << "# " << endl;
+  outfile << "# Particle positions " << endl;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = &particles[iparticle];
+    p_pnt->get_x(x_tmp);
+    outfile << setw(8) << p_pnt->get_tag() 
+      // Need to add a blank to get reasonable spacing
+      // setw gets ignored if id is single character
+            << setw(8) << " " << p_pnt->get_id() 
+            << setw(8) << p_pnt->get_color() 
+            << setw(20) << p_pnt->get_charge() 
+	    << setw(20) << x_tmp[0] 
+            << setw(20) << x_tmp[1]
+            << setw(20) << x_tmp[2] << endl;
+  }
+  outfile << "# " << endl;
+}
+
+void Box::OutputVelocities(const int& timestep, const bool& Linit) 
+{
+  double v_tmp[3],vfac;
+  Particle* p_pnt;
+  std::ios::openmode openflag;
+  
+  if (Linit) {
+    openflag = std::ios::trunc;
+  } else {
+    openflag = std::ios::app;
+  }
+
+  ofstream outfile("vel.out",openflag); 
+
+  if (!outfile) {
+    cout << "Failed to open vel.out" << endl;
+    exit(0);
+  }
+
+  outfile.setf(ios::showpoint);
+  outfile << setprecision(10);
+  outfile << "# Timestep " << timestep << endl;
+  outfile << "# " << endl;
+  outfile << "# Particle velocities " << endl;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = &particles[iparticle];
+    p_pnt->get_v(v_tmp);
+    switch(units_style) {
+    case real_units:
+      vfac = 1.0/tfactor_real;
+      break;
+    case reduced_units:
+      vfac = 1.0/tfactor_reduced;
+      break;
+    default:
+      cout << "Error: invalid units style" << endl;
+      exit(0);
+    }
+    
+    vec3_scale(vfac,v_tmp,v_tmp);
+    outfile << setw(8) << p_pnt->get_tag() 
+	    << setw(20) << v_tmp[0] 
+            << setw(20) << v_tmp[1]
+            << setw(20) << v_tmp[2] << endl;
+  }
+  outfile << "# " << endl;
+}
+
+void Box::OutputThermo(const int& istep, const bool& Linit) 
+{
+  ComputeTemperature();
+  switch(units_style) {
+  case real_units:
+    cout << endl;
+    cout << setprecision(10) << "Temperature [K] = " << temp_current << endl;
+    cout << setprecision(10) << "Kinetic Energy [kJ/mol/particle] = " << 
+      e_kinetic/nparticles << endl;
+    cout << setprecision(10) << "Potential Energy [kJ/mol/particle] = " << 
+      e_potential/nparticles <<  endl;
+    cout << setprecision(10) << "Total Energy [kJ/mol/particle] = " << 
+      (e_potential+e_kinetic)/nparticles << endl;
+    cout << setprecision(6);
+    if (Linit) {
+      e_potential_init = e_potential;
+      e_kinetic_init = e_kinetic;
+    } else {
+      cout << "Change in Kinetic Energy [kJ/mol/particle] = " << 
+	(e_kinetic-e_kinetic_init)/nparticles << endl;
+      cout << "Change in Potential Energy [kJ/mol/particle] = " << 
+	(e_potential-e_potential_init)/nparticles << endl;
+      cout << "Change in Total Energy [kJ/mol/particle] = " << 
+	((e_potential-e_potential_init) + 
+	 (e_kinetic-e_kinetic_init))/nparticles << endl;
+      cout << "Error in Total Energy [%] = " << 
+	100.0*((e_potential-e_potential_init) + 
+	       (e_kinetic-e_kinetic_init))/e_kinetic << endl;
+    }
+    break;
+  case reduced_units:
+    cout << endl;
+    cout << setprecision(10) << "Temperature [epsilon] = " << temp_current << endl;
+    cout << setprecision(10) << "Kinetic Energy [epsilon] = " << 
+      e_kinetic/nparticles << endl;
+    cout << setprecision(10) << "Potential Energy [epsilon] = " << 
+      e_potential/nparticles <<  endl;
+    cout << setprecision(10) << "Total Energy [epsilon] = " << 
+      (e_potential+e_kinetic)/nparticles << endl;
+    cout << setprecision(6);
+    if (Linit) {
+      e_potential_init = e_potential;
+      e_kinetic_init = e_kinetic;
+    } else {
+      cout << "Change in Kinetic Energy [epsilon] = " << 
+	(e_kinetic-e_kinetic_init)/nparticles << endl;
+      cout << "Change in Potential Energy [epsilon] = " << 
+	(e_potential-e_potential_init)/nparticles << endl;
+      cout << "Change in Total Energy [epsilon] = " << 
+	((e_potential-e_potential_init) + 
+	 (e_kinetic-e_kinetic_init))/nparticles << endl;
+      cout << "Error in Total Energy [%] = " << 
+	100.0*((e_potential-e_potential_init) + 
+	       (e_kinetic-e_kinetic_init))/e_kinetic << endl;
+    }
+    break;
+  default:
+    cout << "Error: invalid units style" << endl;
+    exit(0);
+  }
+}
+
+void Box::Minimg_Pos(double r[]) const
+a67 1
+{
+d181 1
+a181 1
+void Box::Minimg_Pos_Full(double r[]) const
+a187 2
+
+{
+d250 1
+a250 169
+void Box::SetupTypes_Particle()
+{
+  int iparticle,itype;
+  string id_tmp;
+  bool match;
+
+  for (iparticle=0;iparticle<nparticles;iparticle++) {
+    id_tmp = particles[iparticle].get_id();
+    match = ptypes->find_id(id_tmp,itype);
+    if (!match) {
+      cout << "Error: SetupTypes_Particle:"
+	"missing definition for id " << id_tmp << endl;
+	exit(0);
+    }
+    particles[iparticle].set_type(itype);
+    particles[iparticle].set_mass(ptypes->get_type_mass(itype));
+  }
+
+}
+
+void Box::ResetPosition(const bool& Lfull)
+{
+  double xi[3];
+  if (Lfull) {
+    for (int i=0;i<particles.size();i++)
+      {
+	particles[i].reset_full_x(*this); 
+      }
+  } else {
+    for (int i=0;i<particles.size();i++)
+      {
+	particles[i].reset_x(*this); 
+      }
+  }
+}
+
+
+void Box::Neighboring()
+{
+  float t1,t2,tneigh;
+  int* type_index;
+  Forcefield* ff;
+  int ff_classname;
+
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    type_index = ptypes->get_type_index(iff);
+    ff = forcefield_list[iff];
+    ff_classname = ff->get_classname();
+    cout << endl;
+    cout << "Neighboring for Forcefield object " << iff << endl;
+    cout << "Forcefield classname [enum Forcefield::ff_class_type] = " << 
+      ff_classname << endl;    
+    switch(ff_classname) {
+    case Forcefield::twobody:
+      cout << "Lneighbor twobody = " << ff->get_Lneighbor() << endl;
+      if (ff->get_Lneighbor()) {
+	t1 = clock();
+	ff->SetupNeighborListNsq(particles,type_index);
+	t2 = clock();
+	tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+	cout << "Twobody Neighboring time is " << tneigh << endl;
+      }
+      break;
+    case Forcefield::external:
+      cout << "Lneighbor external = " << ff->get_Lneighbor() << endl;
+      if (ff->get_Lneighbor()) {
+	t1 = clock();
+	ff->SetupNeighborListNsqWall(particles,type_index);
+	t2 = clock();
+	tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+	cout << "External Neighboring time is " << tneigh << endl;
+      }
+      break;
+    default:
+      cout << "Lneighbor = " << ff->get_Lneighbor() << endl;
+      if (ff->get_Lneighbor()) {
+	t1 = clock();
+	ff->SetupNeighborListNsq(particles,type_index);
+	t2 = clock();
+	tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+	cout << "Forcefield Neighboring time is " << tneigh << endl;
+      }
+      break;
+    }
+  }
+}
+
+void Box::ForcefieldSetup(const int& neighbor_style, const double& rskin,
+      const vector<int> input_classname_list,
+      const vector<string> input_filename_list)
+{
+  Forcefield* ff;
+
+  for (int iff = 0;iff<input_classname_list.size();iff++) {
+    switch(input_classname_list[iff]) {
+    case Forcefield::twobody:
+      ff = dynamic_cast<Forcefield*>
+	(new Force_Twobody(neighbor_style,rskin));
+      forcefield_list.push_back(ff);
+      ff->ReadInteractions(input_filename_list[iff]);
+      ff->SetupInteractions(*this);
+      break;
+    case Forcefield::threebody:
+      ff = dynamic_cast<Forcefield*>
+	(new Force_Threebody(neighbor_style,rskin));
+      forcefield_list.push_back(ff);
+      ff->ReadInteractions(input_filename_list[iff]);
+      ff->SetupInteractions(*this);
+      break;
+    case Forcefield::external:
+      ff = dynamic_cast<Forcefield*>
+	(new Force_External(neighbor_style,rskin));
+      forcefield_list.push_back(ff);
+      ff->ReadInteractions(input_filename_list[iff]);
+      ff->SetupInteractions(*this);
+      break;
+    default:
+      cout << "Error: Invalid forcefield class name" << endl;;
+      exit(0);
+    }
+  }
+
+}
+
+void Box::Summary()
+{
+  int iff;
+  Forcefield* ff;
+  int ff_classname;
+
+  cout << "Number of particles in box = " << nparticles << endl;
+  cout << "Number of particle types = " << ptypes->get_ntypes() << endl;
+
+  for (int iff = 0;iff<forcefield_list.size();iff++) {
+    ff = forcefield_list[iff];
+    ff_classname = ff->get_classname();
+    switch(ff_classname) {
+    case Forcefield::twobody:
+      cout << "Number of twobody force types = " << ff->get_ntypes() << endl;
+      cout << "Number of twobody force pairs = " << 
+	ff->get_npairs(nparticles) << endl;
+      break;
+    case Forcefield::external:
+      cout << "Number of external force types = " << ff->get_ntypes() << endl;
+      cout << "Number of external force pairs = " << 
+	ff->get_npairs(nparticles) << endl;
+      break;
+    default:
+      cout << "Number of Forcefield particle types = " << 
+	ff->get_ntypes() << endl;
+      break;
+    }
+  }
+}
+
+
+void Box::ReadParticleTypes()
+{
+  ptypes->ReadParticleTypes();
+}
+
+void Box::SetupTypes_Force()
+{
+  ptypes->SetupTypes_Force(forcefield_list);
+}
+
+void Box::SetupBox()
+{
+d255 1
+a255 2
+      && uc_lvc[0]==0 && uc_lvc[1]==0) 
+  {
+a304 87
+void Box::SetupDensityProfile(const int& nbins, const int& iaxis)
+{
+  density_profile = new Profile;
+  density_profile->SetupBins(nbins,iaxis);
+}
+
+void Box::SampleDensityProfile()
+{
+  double x_tmp[3];
+  for (int i=0;i<nparticles;i++) {
+    particles[i].get_x(x_tmp);
+    Minimg_Pos(x_tmp);
+    density_profile->AddValue(x_tmp,1.0,Lorthorhombic);
+  }
+}
+ 
+void Box::OutputDensityProfile(const int& timestep, const bool& Linit)
+{
+  std::ios::openmode openflag;
+  double x_tmp,bin_tmp,density_fac,binvol,nsamples;
+  int nbins,ncount;
+
+  if (Linit) {
+    openflag = std::ios::trunc;
+  } else {
+    openflag = std::ios::app;
+  }
+
+  ofstream outfile("density.out",openflag); 
+
+  if (!outfile) {
+    cout << "Failed to open density.out" << endl;
+    exit(0);
+  }
+
+  outfile.setf(ios::showpoint);
+  outfile << setprecision(10);
+  switch (units_style) {
+  case real_units:
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# " << "Average density [particles/A^3]: "
+	    << nparticles/volume << endl;
+    outfile << "# " << endl;
+    outfile << "# Density Profile [particles/A^3]" << endl;
+    break;
+  case reduced_units:
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# " << "Average density [particles/sigma^3]: "
+	    << nparticles/volume << endl;
+    outfile << "# " << endl;
+    outfile << "# Density Profile [particles/A^3]" << endl;
+    break;
+  default:
+    cout << "Error: invalid units style" << endl;
+    exit(0);
+  }
+
+  nbins = density_profile->get_nbins();
+  ncount = density_profile->get_ncount();
+  if (ncount==0) {
+    density_fac = 0.0;
+  } else {
+    nsamples = (double)ncount/(double)nparticles;
+    binvol = volume/nbins;
+    density_fac = 1.0/(binvol*nsamples);
+  }
+
+  for (int ibin=0;ibin<nbins;ibin++) {
+    density_profile->GetProfile(ibin,x_tmp,bin_tmp);
+    outfile << setw(20) <<  x_tmp
+	    << setw(20) << bin_tmp*density_fac << endl;
+  }
+  outfile << "# " << endl;
+}
+
+void Box::TemperatureControlRescale(const double& temp_target,
+      const double& temp_window, const double& temp_factor)
+{
+  ComputeTemperature();
+  if (fabs(temp_current - temp_target) > temp_window) {
+    //Rescale particle velocities
+    RescaleTemperature(temp_current - 
+		       temp_factor*(temp_current-temp_target));
+  }
+}
+@
+
+
+1.9
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d17 1
+d26 2
+a27 2
+	      const bool& Ltwobody_in, const bool& Lthreebody_in,
+	      const bool& Lexternal_in)
+d29 1
+a29 2
+  static Box thebox(a_in,b_in,c_in,origin_in,i1,i2,i3,Ltwobody_in,
+		    Lthreebody_in,Lexternal_in);
+d38 1
+a38 2
+	 const bool& Ltwobody_in, const bool& Lthreebody_in,
+	 const bool& Lexternal_in)
+d59 2
+d63 3
+a65 9
+  ensemble = 0;
+  t_target = 0.0;
+  pa_target = 0.0;
+  pb_target = 0.0;
+  pc_target = 0.0;
+
+  Ltwobody = Ltwobody_in;
+  Lthreebody = Lthreebody_in;
+  Lexternal = Lexternal_in;
+d166 5
+d183 8
+d215 1
+a215 1
+void Box::ComputeForce()
+d217 1
+a217 1
+  int i,iff;
+d221 2
+d231 1
+a231 5
+
+  iff = -1;
+
+  if (Ltwobody) {
+    iff++;
+d234 72
+a305 8
+    t1 = clock();
+    ff->ApplyForce(particles,e_potential,perflag,*this,type_index);
+    t2 = clock();
+    tforce = (t2-t1)/float(CLOCKS_PER_SEC);
+    cout << "Twobody energy [kJ/mol] = " << e_potential << endl; 
+    cout << "Twobody force time [s] = " << tforce << endl;
+    cout << "Twobody force-pair time [s/pair] = " << 
+      tforce/ff->get_npairs(nparticles) << endl;
+d307 1
+a307 29
+  
+  if (Lthreebody) {
+    iff++;
+    Forcefield* ff = forcefield_list[iff];
+    type_index = ptypes->get_type_index(iff);
+    t1 = clock();
+    ff->ApplyForce(particles,e_potential,perflag,*this,type_index);
+    t2 = clock();
+    tforce = (t2-t1)/float(CLOCKS_PER_SEC);
+    cout << "Threebody energy [kJ/mol] = " << e_potential << endl; 
+    cout << "Threebody force time [s] = " << tforce << endl;
+    cout << "Threebody force-pair time [s/pair] = " << 
+      tforce/ff->get_npairs(nparticles) << endl;
+  }
+  
+  if (Lexternal) {
+    iff++;
+    Forcefield* ff = forcefield_list[iff];
+    type_index = ptypes->get_type_index(iff);
+    t1 = clock();
+    ff->ApplyForce(particles,e_potential,perflag,*this,type_index);
+    t2 = clock();
+    tforce = (t2-t1)/float(CLOCKS_PER_SEC);
+    cout << "External energy [kJ/mol] = " << e_potential << endl; 
+    cout << "External force time [s] = " << tforce << endl;
+    cout << "External force-pair time [s/pair] = " << 
+      tforce/ff->get_npairs(nparticles) << endl;
+  }
+  
+d364 1
+a364 1
+  double v_tmp[3];
+d367 1
+a367 1
+
+d389 13
+a401 1
+    vec3_scale(1.0/tfactor,v_tmp,v_tmp);
+d413 56
+a468 22
+  cout << setprecision(10) << "Temperature [K] = " << t_current << endl;
+  cout << setprecision(10) << "Kinetic Energy [kJ/mol/particle] = " << 
+    e_kinetic/nparticles << endl;
+  cout << setprecision(10) << "Potential Energy [kJ/mol/particle] = " << 
+    e_potential/nparticles <<  endl;
+  cout << setprecision(10) << "Total Energy [kJ/mol/particle] = " << 
+    (e_potential+e_kinetic)/nparticles << endl;
+  cout << setprecision(6);
+  if (Linit) {
+    e_potential_init = e_potential;
+    e_kinetic_init = e_kinetic;
+  } else {
+    cout << "Change in Kinetic Energy [kJ/mol/particle] = " << 
+      (e_kinetic-e_kinetic_init)/nparticles << endl;
+    cout << "Change in Potential Energy [kJ/mol/particle] = " << 
+      (e_potential-e_potential_init)/nparticles << endl;
+    cout << "Change in Total Energy [kJ/mol/particle] = " << 
+      ((e_potential-e_potential_init) + 
+       (e_kinetic-e_kinetic_init))/nparticles << endl;
+    cout << "Error in Total Energy [%] = " << 
+      100.0*((e_potential-e_potential_init) + 
+       (e_kinetic-e_kinetic_init))/e_kinetic << endl;
+d686 1
+d704 3
+a706 1
+  int iff;
+a707 1
+  iff = -1;
+d709 39
+a747 39
+  if (Ltwobody) {
+    iff++;
+    int* type_index = ptypes->get_type_index(iff);
+    Forcefield* ff = forcefield_list[iff];
+    cout << "Lneighbor twobody = " << ff->get_Lneighbor() << endl;
+    if (ff->get_Lneighbor()) {
+      t1 = clock();
+      ff->SetupNeighborListNsq(particles,type_index);
+      t2 = clock();
+      tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+      cout << "Twobody Neighboring time is " << tneigh << endl;
+    }
+  }
+
+  if (Lthreebody) {
+    iff++;
+    int* type_index = ptypes->get_type_index(iff);
+    Forcefield* ff = forcefield_list[iff];
+    cout << "Lneighbor threebody = " << ff->get_Lneighbor() << endl;
+    if (ff->get_Lneighbor()) {
+      t1 = clock();
+      ff->SetupNeighborListNsq(particles,type_index);
+      t2 = clock();
+      tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+      cout << "Threebody Neighboring time is " << tneigh << endl;
+    }
+  }
+
+  if (Lexternal) {
+    iff++;
+    int* type_index = ptypes->get_type_index(iff);
+    Forcefield* ff = forcefield_list[iff];
+    cout << "Lneighbor external = " << ff->get_Lneighbor() << endl;
+    if (ff->get_Lneighbor()) {
+      t1 = clock();
+      ff->SetupNeighborListNsqWall(particles,type_index);
+      t2 = clock();
+      tneigh = (t2-t1)/float(CLOCKS_PER_SEC);
+      cout << "External Neighboring time is " << tneigh << endl;
+d752 3
+a754 1
+void Box::ForcefieldSetup()
+d756 1
+a756 7
+  if (Ltwobody) {
+    Forcefield* ff = dynamic_cast<Forcefield*>(new Force_Twobody);
+    forcefield_list.push_back(ff);
+    ff->ReadInteractions();
+    //Setup forcefield parameters and neighbor list stencils.
+    ff->SetupInteractions(*this);
+  }
+d758 27
+a784 13
+  if (Lthreebody) {
+    Forcefield* ff = dynamic_cast<Forcefield*>(new Force_Threebody);
+    forcefield_list.push_back(ff);
+    ff->ReadInteractions();
+    ff->SetupInteractions(*this);
+  }
+
+  if (Lexternal) {
+    Forcefield* ff = dynamic_cast<Forcefield*>(new Force_External);
+    forcefield_list.push_back(ff);
+    ff->ReadInteractions();
+    //Setup forcefield parameters and neighbor list stencils.
+    ff->SetupInteractions(*this);
+d793 1
+a796 7
+  iff = -1;
+  if (Ltwobody) {
+    iff++;
+    ff = forcefield_list[iff];
+    cout << "Number of twobody force types = " << ff->get_ntypes() << endl;
+    cout << "Number of twobody force pairs = " << ff->get_npairs(nparticles) << endl;
+  }
+d798 1
+a798 2
+  if (Lthreebody) {
+    iff++;
+d800 17
+a816 9
+    cout << "Number of threebody force types = " << ff->get_ntypes() << endl;
+    cout << "Number of threebody force pairs = " << ff->get_npairs(nparticles) << endl;
+  }
+
+  if (Lexternal) {
+    iff++;
+    ff = forcefield_list[iff];
+    cout << "Number of external force types = " << ff->get_ntypes() << endl;
+    cout << "Number of external force pairs = " << ff->get_npairs(nparticles) << endl;
+a817 1
+
+d863 2
+d869 2
+a870 2
+    uc_vol = vec3_dot(uc_rvh,uc_lva);
+    rvol = 1.0/uc_vol;
+d874 5
+a878 5
+    uc_wa = 1.0/vec3_norm(uc_rvh);
+    uc_wb = 1.0/vec3_norm(uc_rvk);
+    uc_wc = 1.0/vec3_norm(uc_rvl);
+    cout << "volume = " << uc_vol << endl;
+    cout << "widths = " << uc_wa << " " << uc_wb << " " << uc_wc << endl; 
+d888 87
+@
+
+
+1.8
+log
+@Add some comments to minimg functions.
+@
+text
+@a7 1
+#include "constants.h"
+d12 1
+d16 1
+d25 2
+a26 1
+	      const bool& Ltwobody_in, const bool& Lthreebody_in)
+d28 2
+a29 1
+  static Box thebox(a_in,b_in,c_in,origin_in,i1,i2,i3,Ltwobody_in,Lthreebody_in);
+d38 2
+a39 1
+	 const bool& Ltwobody_in, const bool& Lthreebody_in)
+d70 1
+d232 4
+a235 2
+    cout << "Twobody force time is " << tforce << endl;
+    cout << "Twobody force-pair time is " << tforce/npairs << endl;
+d246 18
+a263 2
+    cout << "Threebody force time is " << tforce << endl;
+    cout << "Threebody force-pair time is " << tforce/npairs << endl;
+d320 36
+d647 13
+d669 1
+a669 1
+    ff->SetupInteractions();
+d676 9
+a684 1
+    ff->SetupInteractions();
+d686 1
+d701 1
+a701 6
+    if (ff->get_Lneighbor()) {
+      npairs = ff->get_nneighbors();
+    } else {
+      npairs = nparticles*(nparticles-1)/2;
+    }
+    cout << "Number of twobody force pairs = " << npairs << endl;
+d708 8
+a715 6
+    if (ff->get_Lneighbor()) {
+      npairs = ff->get_nneighbors();
+    } else {
+      npairs = nparticles*(nparticles-1)/2;
+    }
+    cout << "Number of threebody force pairs = " << npairs << endl;
+d717 1
+a783 12
+}
+
+void Box::ComputeTemperature()
+{
+  double sum_mvsq;
+
+  sum_mvsq = 0.0;
+  for (int i=0;i<nparticles;i++) {
+    sum_mvsq+=particles[i].get_mvsq();
+  }
+  e_kinetic = 0.5*sum_mvsq;
+  t_current = sum_mvsq/(3.0*nparticles*boltz);
+@
+
+
+1.7
+log
+@Added configuration output routine to Box.
+Added shifted origin to minimg routines.
+Cleaned up minimg routines to consistently
+Deal with following issues:
+	orthorhombic versus triclinic
+	inner-loop Minimig_Dist functions only perform single box shift,
+		as it is more efficient than general shift.
+	For this reason, standard Minimg_Pos function also only
+		performs single box shift, but also checks that
+		aparticles have not strayed too far.
+	Initial config may require more than single box shift, and
+		so for this we use Minimg_Full_pos.
+Treatment of equality conditions:
+	Positions on )0,1[ are mapped onto [0,1).
+	Positions on [0,1) are left alone.
+	Distances on )-1,1( should not occur
+	Distances on )-0.5,0.5( are mapped (-0.5,0.5).
+	Distances on [-0.5,0.5] are left alone.
+@
+text
+@d331 1
+a331 11
+  // We try to enforce the convention that
+  // particles on upper boundary are moved down.
+  // Particles on lower boundary are left alone.
+  // i.e. unit periodic box is on [0,1). 
+  //
+  // Note: xmid,ymid,zmid check ensures that particles 
+  // have not strayed more than half box-length outside 
+  // central box.
+  // Needed to avoid extra computation in inline functions
+  // Box::Minimg_Dist and Box::Minimg_Dist_Shift
+
+d452 1
+a452 5
+  // We try to enforce the convention that
+  // particles on upper boundary are moved down.
+  // Particles on lower boundary are left alone.
+  // i.e. unit periodic box is on [0,1). 
+  //
+@
+
+
+1.6
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@a126 1
+  Particle* p_pnt;
+d130 1
+a130 1
+  if (infile.fail()) {
+d136 2
+d140 4
+d245 52
+d326 16
+d346 1
+d348 1
+a348 1
+    if (tmp >= xprd) {
+d350 2
+a351 2
+      if (tmp >= xprd) {
+	cout << "Error: excessive displacement" << endl;
+d355 1
+a355 1
+    else if (tmp < 0.0) {
+d357 2
+a358 2
+      if (tmp < 0.0) {
+	cout << "Error: excessive displacement" << endl;
+d365 1
+a365 1
+    if (tmp >= yprd) {
+d367 2
+a368 2
+      if (tmp >= yprd) {
+	cout << "Error: excessive displacement" << endl;
+d372 1
+a372 1
+    else if (tmp < 0.0) {
+d374 2
+a375 2
+      if (tmp < 0.0) {
+	cout << "Error: excessive displacement" << endl;
+d382 1
+a382 1
+    if (tmp >= zprd) {
+d384 2
+a385 2
+      if (tmp >= zprd) {
+	cout << "Error: excessive displacement" << endl;
+d389 1
+a389 1
+    else if (tmp < 0.0) {
+d391 2
+a392 2
+      if (tmp < 0.0) {
+	cout << "Error: excessive displacement" << endl;
+d397 2
+d401 3
+d405 5
+a409 1
+    if (tmp >= 1.0)
+d411 5
+a415 1
+    else if (tmp < 0.0)
+d417 94
+d514 1
+a514 1
+      vec3_subtract(r,uc_lvb,r);
+d516 1
+a516 1
+      vec3_add(r,uc_lvb,r);
+d520 1
+a520 1
+      vec3_subtract(r,uc_lvc,r);
+d522 3
+a524 1
+      vec3_add(r,uc_lvc,r);
+d551 1
+a551 1
+void Box::ResetPosition()
+d553 11
+a563 5
+  
+  for (int i=0;i<particles.size();i++)
+    {
+      particles[i].reset_x(*this); 
+    }
+d610 1
+d682 1
+a682 1
+    xprd = xboundhi - xboundlo;
+d684 1
+d688 1
+a688 1
+    yprd = yboundhi - yboundlo;
+d690 1
+d694 1
+a694 1
+    zprd = zboundhi - zboundlo;
+d696 2
+@
+
+
+1.5
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d1 1
+a1 2
+using namespace std;
+
+d8 1
+d17 2
+d51 6
+a56 20
+  // This is special temporary treatment, assuming orthorhombic box.
+  xboundlo = uc_origin[0];
+  xboundhi = xboundlo + uc_lva[0];
+  xprd = xboundhi - xboundlo;
+  half_xprd = xprd/2.0;
+
+  yboundlo = uc_origin[1];
+  yboundhi = yboundlo + uc_lvb[1];
+  yprd = yboundhi - yboundlo;
+  half_yprd = yprd/2.0;
+
+  zboundlo = uc_origin[2];
+  zboundhi = zboundlo + uc_lvc[2];
+  zprd = zboundhi - zboundlo;
+  half_zprd = zprd/2.0;
+
+  perflagx = i1;
+  perflagy = i2;
+  perflagz = i3;
+  perflag = (perflagx||perflagy||perflagz);
+d60 3
+a62 3
+  px_target = 0.0;
+  py_target = 0.0;
+  pz_target = 0.0;
+d93 1
+a93 1
+		      const int& id_in, const int& color_in, 
+d125 2
+a126 1
+  int itag,id,icolor;
+d128 1
+d130 5
+a172 8
+void Box::get_prdbox(double& xprd_out, 
+		     double& yprd_out, double& zprd_out)
+{
+  xprd_out = xprd;
+  yprd_out = yprd;
+  zprd_out = zprd;
+}
+
+d209 1
+a209 1
+  energy = 0.0;
+d219 1
+a219 1
+    ff->ApplyForce(particles,energy,perflag,*this,type_index);
+d231 1
+a231 1
+    ff->ApplyForce(particles,energy,perflag,*this,type_index);
+d240 1
+a240 1
+void Box::OutputThermo() 
+d242 8
+a249 2
+  cout << setprecision(10) << "Energy = " << energy/nparticles << 
+    " kJ/mol/particle " << endl;
+d251 15
+d272 15
+a286 6
+  tmp = r[0];
+  if (tmp > xprd) {
+    tmp = tmp - xprd;
+    if (tmp > xprd) {
+      cout << "Error: excessive displacement" << endl;
+      exit(0);
+d288 16
+a303 6
+  } 
+  else if (tmp < 0.0) {
+    tmp = tmp + xprd;
+    if (tmp < 0.0) {
+      cout << "Error: excessive displacement" << endl;
+      exit(0);
+d305 1
+a305 2
+  }
+  r[0] = tmp;
+d307 14
+a320 6
+  tmp = r[1];
+  if (tmp > yprd) {
+    tmp = tmp - yprd;
+    if (tmp > yprd) {
+      cout << "Error: excessive displacement" << endl;
+      exit(0);
+d322 20
+a341 9
+  } 
+  else if (tmp < 0.0) {
+    tmp = tmp + yprd;
+    if (tmp < 0.0) {
+      cout << "Error: excessive displacement" << endl;
+      exit(0);
+    }
+  }
+  r[1] = tmp;
+a342 14
+  tmp = r[2];
+  if (tmp > zprd) {
+    tmp = tmp - zprd;
+    if (tmp > zprd) {
+      cout << "Error: excessive displacement" << endl;
+      exit(0);
+    }
+  } 
+  else if (tmp < 0.0) {
+    tmp = tmp + zprd;
+    if (tmp < 0.0) {
+      cout << "Error: excessive displacement" << endl;
+      exit(0);
+    }
+a343 1
+  r[2] = tmp;
+d350 2
+a351 1
+  int id_tmp,iparticle,itype;
+d475 64
+@
+
+
+1.4
+log
+@Got rid of gratuituous "friend" declaration for class Neighobr in class Box.
+@
+text
+@d10 3
+a13 2
+#include "neighbor.h"
+#include "force_twobody.h"
+d21 2
+a22 1
+	      const bool& i1, const bool& i2, const bool& i3)
+d24 1
+a24 1
+  static Box thebox(a_in,b_in,c_in,origin_in,i1,i2,i3);
+d32 2
+a33 1
+	 const bool& i1, const bool& i2, const bool& i3)
+d42 1
+a42 1
+  vector<Particle> particles;
+d76 3
+d142 1
+a142 1
+    if (buf.empty()) continue;
+d177 9
+d212 1
+a212 1
+  int i;
+d215 1
+a223 1
+  Force_Twobody& ftwobody = Force_Twobody::get();
+d225 25
+a249 6
+  t1 = clock();
+  ftwobody.ApplyForce(particles,energy,perflag,*this);
+  t2 = clock();
+  tforce = (t2-t1)/float(CLOCKS_PER_SEC);
+  cout << "Force time is " << tforce << endl;
+  cout << "Force-pair time is " << tforce/npairs << endl;
+a322 2
+  Particle_Types& t = Particle_Types::get();
+
+d325 1
+a325 1
+    match = t.find_id(id_tmp,itype);
+d332 1
+a332 1
+    particles[iparticle].set_mass(t.get_type_mass(itype));
+d347 1
+a347 1
+void Box::Neighboring(const bool& Ltwobody,const bool& Lthreebody)
+d349 5
+d355 10
+a364 4
+    Force_Twobody& ftwobody = Force_Twobody::get();
+    cout << "Lneighbor twobody = " << ftwobody.get_Lneighbor() << endl;
+    if (ftwobody.get_Lneighbor()) {
+      ftwobody.SetupNeighborListNsq(particles);
+d367 15
+d384 1
+a384 1
+void Box::ForcefieldSetup(const bool& Ltwobody,const bool& Lthreebody)
+d387 4
+a390 3
+    Force_Twobody& ftwobody = Force_Twobody::get();
+    ftwobody.ReadTwobodyInteractions();
+    ftwobody.SetupTwobodyInteractions();
+d392 1
+d394 4
+a397 3
+    cout << "Error in box_test" <<
+      ": threebody not implemented" << endl;
+    exit(0);
+d401 1
+a401 1
+void Box::Summary(const bool& Ltwobody,const bool& Lthreebody)
+d403 3
+a405 1
+  Particle_Types& t = Particle_Types::get();
+d407 2
+a408 1
+  cout << "Number of particle types = " << t.get_ntypes() << endl;
+d410 5
+a414 4
+    Force_Twobody& ftwobody = Force_Twobody::get();
+    cout << "Number of twobody force types = " << ftwobody.get_ntypes() << endl;
+    if (ftwobody.get_Lneighbor()) {
+      npairs = ftwobody.get_nneighbors();
+d420 23
+@
+
+
+1.3
+log
+@
+
+Added neighbor list object.
+@
+text
+@a111 15
+  /*
+  double tmp[3];
+  cout << setw(4) << particles[nparticles-1].get_type() << " "
+       << setw(4) << particles[nparticles-1].get_tag() << " "
+       << setw(4) << particles[nparticles-1].get_id() << " "
+       << setw(4) << particles[nparticles-1].get_color() << " ";
+  cout << setw(10) << particles[nparticles-1].get_charge() << " ";
+  particles[nparticles-1].get_x(tmp);
+  cout << setw(10) << tmp[0] << setw(10) << tmp[1] << setw(10) << tmp[2];
+  particles[nparticles-1].get_v(tmp);
+  cout << setw(10) << tmp[0] << setw(10) << tmp[1] << setw(10) << tmp[2];
+  particles[nparticles-1].get_f(tmp);
+  cout << setw(10) << tmp[0] << setw(10) << tmp[1] << setw(10) << tmp[2];
+  cout << endl;
+  */
+d198 2
+d210 1
+d212 4
+a300 15
+    /*
+    double tmp[3];
+    cout << setw(4) << particles[iparticle].get_type() << " "
+	 << setw(4) << particles[iparticle].get_tag() << " "
+	 << setw(4) << particles[iparticle].get_id() << " "
+	 << setw(4) << particles[iparticle].get_color() << " ";
+    cout << setw(10) << particles[iparticle].get_charge() << " ";
+    particles[iparticle].get_x(tmp);
+    cout << setw(10) << tmp[0] << setw(10) << tmp[1] << setw(10) << tmp[2];
+    particles[iparticle].get_v(tmp);
+    cout << setw(10) << tmp[0] << setw(10) << tmp[1] << setw(10) << tmp[2];
+    particles[iparticle].get_f(tmp);
+    cout << setw(10) << tmp[0] << setw(10) << tmp[1] << setw(10) << tmp[2];
+    cout << endl;
+    */
+d315 41
+@
+
+
+1.2
+log
+@
+Added ReadParticleTypes, and improved organization of input,
+including error checking.
+@
+text
+@a8 1
+#include "box.h"
+d11 1
+d13 2
+a14 1
+#include "force_twobody_inline.h"
+d16 4
+a19 3
+Box& Box::get(const double& x1, const double& x2,
+	      const double& y1, const double& y2,
+	      const double& z1, const double& z2,
+d22 1
+a22 1
+  static Box thebox(x1,x2,y1,y2,z1,z2,i1,i2,i3);
+d26 4
+a29 3
+Box::Box(const double& x1, const double& x2, 
+	 const double& y1, const double& y2,
+	 const double& z1, const double& z2, 
+d32 7
+d41 8
+a48 2
+  xboundlo = x1;
+  xboundhi = x2;
+d51 3
+a53 2
+  yboundlo = y1;
+  yboundhi = y2;
+d56 3
+a58 2
+  zboundlo = z1;
+  zboundhi = z2;
+d61 1
+d66 1
+d72 1
+d175 11
+d198 2
+a199 4
+  vector<Particle>::iterator iter;
+  for (iter=particles.begin();iter!=particles.end();
+       iter++) {
+    iter->step_v(timestep);
+d205 2
+a206 4
+  vector<Particle>::iterator iter;
+  for (iter=particles.begin();iter!=particles.end();
+       iter++) {
+    iter->step_x(timestep, *this);
+d212 5
+a216 9
+  double f[3];
+  double energy_ij;
+  int itype,jtype,ientry;
+  Force_Twobody::ff_type twobody_type;
+  vector<Particle>::iterator iteri,iterj;
+
+  for (iteri=particles.begin();iteri!=particles.end();
+       iteri++) {
+    iteri->set_f();
+d218 1
+a221 47
+  Particle_Types& t = Particle_Types::get();
+
+  for (iteri=particles.begin();iteri!=particles.end()-1;
+       iteri++) {
+    itype = t.get_twobody_type(iteri->get_type());
+    for (iterj=iteri+1;iterj!=particles.end();
+	 iterj++) {
+
+      jtype = t.get_twobody_type(iterj->get_type());
+      ientry = ftwobody.get_entry(itype,jtype);
+      twobody_type = ftwobody.get_type(ientry);
+      switch(twobody_type) {
+      case Force_Twobody::lj_nocut :
+	if (perflag) {
+	  ftwobody.force_lj_minimg(iteri,iterj,f,energy_ij,*this,ientry);
+	} else {
+	  ftwobody.force_lj_nopbc(iteri,iterj,f,energy_ij,*this,ientry);
+	}
+	break;
+      case Force_Twobody::exp6_nocut :
+	if (perflag) {
+	  ftwobody.force_exp6_minimg(iteri,iterj,f,energy_ij,*this,ientry);
+	} else {
+	  ftwobody.force_exp6_nopbc(iteri,iterj,f,energy_ij,*this,ientry);
+	}
+	break;
+      case Force_Twobody::square_exp6_nocut :
+	if (perflag) {
+	  ftwobody.force_square_exp6_minimg(iteri,iterj,f,energy_ij,*this,ientry);
+	} else {
+	  ftwobody.force_square_exp6_nopbc(iteri,iterj,f,energy_ij,*this,ientry);
+	}
+	break;
+      default:
+	cout << twobody_type << " " 
+	     << Force_Twobody::lj_nocut << " " 
+	     << Force_Twobody::exp6_nocut << " " 
+	     << Force_Twobody::square_exp6_nocut << endl;
+	cout << "Error: invalid twobody forcefield type" << endl;
+	exit(0);
+      }
+   
+      iteri->increment_f(f);
+      iterj->decrement_f(f);
+      energy+=energy_ij;
+    }
+  }
+d223 2
+d229 2
+a230 1
+  cout << setprecision(10) << "Energy = " << energy << endl;
+d325 1
+d327 10
+@
+
+
+1.1
+log
+@Starting source distribution for Grasp.
+Basic molecular dynamics code with twobody interactions
+@
+text
+@d34 1
+a34 1
+  rxprd = 1.0/xprd;
+d38 1
+a38 1
+  ryprd = 1.0/yprd;
+d42 1
+a42 1
+  rzprd = 1.0/zprd;
+d91 1
+d105 1
+d123 1
+a123 2
+  static const int sz = 1000; // Line width
+  char buf[sz];
+d127 1
+a127 1
+  ifstream config_in("config.in"); 
+d129 2
+a130 1
+  while (config_in.getline(buf,sz)){
+d132 7
+a138 5
+    if (buf_in >> itag >> id >> icolor >> q >> x[0] >> x[1] >> x[2]) {
+      /*
+	cout << itag << " " << id;
+	cout << " " << q << " " << x[0] << " " << x[1] << " " << x[2] << endl;
+      */
+d140 3
+a142 3
+      cout << "Before AddParticle Size is " << particles.size() << endl;
+      cout << "Before AddParticle Max_size is " << particles.max_size() << endl;
+      cout << "Before AddParticle Capacity is " << particles.capacity() << endl;
+d144 2
+a145 3
+      //Adding particle with uninitialized type
+      AddParticle(-1,itag,id,icolor,x,q);
+    }
+d241 1
+a241 1
+      energy+=0.5*energy_ij;
+d261 1
+a261 1
+      cout << "Error: excessive displacement";
+d268 1
+a268 1
+      cout << "Error: excessive displacement";
+d278 1
+a278 1
+      cout << "Error: excessive displacement";
+d285 1
+a285 1
+      cout << "Error: excessive displacement";
+d295 1
+a295 1
+      cout << "Error: excessive displacement";
+d302 1
+a302 1
+      cout << "Error: excessive displacement";
+d311 1
+a311 1
+void Box::SetupTypes()
+d320 6
+a325 1
+    itype = t.AddType(id_tmp);
+d327 2
+d342 1
+d345 1
+@
+

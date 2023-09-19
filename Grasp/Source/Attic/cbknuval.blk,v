@@ -1,0 +1,67 @@
+head	1.1;
+access;
+symbols
+	PreMonaco:1.1
+	REAX-2:1.1.2.2
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2005.01.11.22.49.40;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.01.11.22.49.40;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file cbknuval.blk was initially added on branch REAXFF.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Modified use of nat to allow treatment of big parallel systems.
+@
+text
+@a0 6
+ 
+       
+       
+      common
+     $/cbknuval/ nuvala(nbomax,mbond,2),nuvalb(nbomax,mbond,2),
+     $	          nuvalna(nbomax),nuvalnb(nbomax)
+@
+
+
+1.1.2.2
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@a6 2
+
+
+@
+
+

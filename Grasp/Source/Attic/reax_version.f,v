@@ -1,0 +1,92 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@c @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2005.02.07.22.43.46;	author athomps;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@********************************************************************** 
+********************************************************************** 
+*                                                                    *
+*     REAXFF Reactive force field program                            *
+*                                                                    *
+*     Developed and written by Adri van Duin, duin@@wag.caltech.edu   *
+*                                                                    *
+*     Copyright (c) 2001-2010 California Institute of Technology     *
+*                                                                    *
+*     This is an open-source program. Feel free to modify its        *
+*     contents. Please keep me informed of any useful modification   *
+*     or addition that you made. Please do not distribute this       *
+*     program to others; if people are interested in obtaining       *
+*     a copy of this program let them contact me first.              *
+*                                                                    *
+********************************************************************** 
+      subroutine version   
+      include 'cbka.blk'
+      character*20 qhulp
+      qhulp='Compiled on:'
+      write (*,100)
+      write (*,110)qhulp
+      return
+  100 format ('ReaxFF version 2.0')
+  110 format(a20,'Thu Mar 11 11:24:48 PST 2004')
+      end
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Removed version() from distribution
+@
+text
+@@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

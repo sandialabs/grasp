@@ -1,0 +1,105 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoTesting:3.0.0.6
+	InitialGraspTesting:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:1.1.2.1
+	cjkimme_version:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.11.03.23.34.18;	author athomps;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@#
+#	This is the most dense system treated by TOWHEE.
+#
+#	The TOWHEE energy is -13867.87102 [kcal/mol]
+#	This corresponds to  -290.11586 [kJ/mol/particle]
+#
+#	The GRASP number is  -290.11583 [kJ/mol/particle]
+#
+# primitive lattice vectors  1  1  1
+#   0.00000000  2.35960000  2.35960000
+#   2.35960000  0.00000000  2.35960000
+#   2.35960000  2.35960000  0.00000000
+# number of atoms in unit cell
+#   2
+# Total volume of unit cell =   26.275147    
+# Total density of unit cell =  0.76117556E-01
+# atom, id, color, charge, position vector
+       1    A                 1      0.00000000  0.00000000  0.00000000  0.00000000
+       2    A                 2      0.00000000  1.17980000  1.17980000  1.17980000
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@@
+
+
+1.1
+log
+@Pushed the examples down into directories.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+

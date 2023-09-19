@@ -1,0 +1,433 @@
+head	4.2;
+access;
+symbols
+	ReverseComm_branch:4.1.0.10
+	ADTools_branch:4.1.0.8
+	Monaco_Aidan:4.1.0.6
+	Root-of-Monaco_Aidan:4.1
+	PPPM_Crozier2:4.1.0.4
+	PPPM_Crozier:4.1
+	Root-of-PPPM_Crozier:4.1
+	Monaco:4.1.0.2
+	PreMonaco:4.1
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:3.2.2.14
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.2
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.01.03.00.29.17;	author athomps;	state Exp;
+branches;
+next	3.2.2.4;
+
+3.2.2.4
+date	2005.01.04.00.23.00;	author athomps;	state Exp;
+branches;
+next	3.2.2.5;
+
+3.2.2.5
+date	2005.01.11.22.49.41;	author athomps;	state Exp;
+branches;
+next	3.2.2.6;
+
+3.2.2.6
+date	2005.01.14.22.56.02;	author athomps;	state Exp;
+branches;
+next	3.2.2.7;
+
+3.2.2.7
+date	2005.01.21.22.24.30;	author athomps;	state Exp;
+branches;
+next	3.2.2.8;
+
+3.2.2.8
+date	2005.01.31.04.22.50;	author athomps;	state Exp;
+branches;
+next	3.2.2.9;
+
+3.2.2.9
+date	2005.02.02.00.20.49;	author athomps;	state Exp;
+branches;
+next	3.2.2.10;
+
+3.2.2.10
+date	2005.02.03.21.40.18;	author athomps;	state Exp;
+branches;
+next	3.2.2.11;
+
+3.2.2.11
+date	2005.02.07.22.43.46;	author athomps;	state Exp;
+branches;
+next	3.2.2.12;
+
+3.2.2.12
+date	2005.02.09.07.14.57;	author athomps;	state Exp;
+branches;
+next	3.2.2.13;
+
+3.2.2.13
+date	2005.02.09.16.19.23;	author athomps;	state Exp;
+branches;
+next	3.2.2.14;
+
+3.2.2.14
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.2
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include "reax_defs.h"
+class ReaxParams {
+ public:
+  enum {nneighmax=NNEIGHMAXDEF, 
+	nat=NATDEF, 
+	nattot=NATTOTDEF, 
+        nsort=NSORTDEF,
+	mbond=MBONDDEF, 
+        nbomax=NBOMAXDEF,
+  };
+};
+@
+
+
+4.1
+log
+@Fixed glitch in header.
+@
+text
+@d54 1
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d45 1
+@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@d1 29
+d32 6
+a37 5
+  // As the person who wrote stl_alloc.h said,
+  // "Really we should use static const int x = N
+  // instead of enum { x = N }, but few compilers accept the former."
+  //  static const int nat = 1500; 
+  enum {nat = 1500,mbond=60};
+a38 2
+
+
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@d7 1
+a7 1
+  enum {nat = 1500,mbond=60,nsort=20,neem=1500};
+@
+
+
+3.2.2.3
+log
+@Added REAXFF energy evaluation to Grasp
+@
+text
+@d7 1
+a7 1
+  enum {nat = 3000,mbond=60,nsort=20,neem=1500};
+@
+
+
+3.2.2.4
+log
+@Added energies to Reax code, added kcal unit style and added
+the example testrdx to Makefile.testing
+@
+text
+@d7 1
+a7 1
+  enum {nat = 3000,mbond=60,nsort=20,neem=3000};
+@
+
+
+3.2.2.5
+log
+@Modified use of nat to allow treatment of big parallel systems.
+@
+text
+@d7 1
+a7 1
+  enum {nat = 3000,mbond=60,nsort=20,nattot=3000,neem=3000};
+@
+
+
+3.2.2.6
+log
+@Fixed bug in reax_cbkch.h, switched neem to nat
+@
+text
+@d7 1
+a7 1
+  enum {nat = 3000,mbond=60,nsort=20,nattot=5000,neem=5000};
+d9 2
+@
+
+
+3.2.2.7
+log
+@Implemented a parallel CG scheme. Does not exploit sparsity and
+so is still quite slow.
+@
+text
+@d3 5
+a7 3
+  // nat must be as big as the number of ghost and local atoms
+  // neem must be at least nat+1
+  enum {nat = 3000,mbond=60,nsort=20,nattot=3000,neem=3000};
+@
+
+
+3.2.2.8
+log
+@Streamlined memory for global and local data
+@
+text
+@d3 3
+a5 1
+  enum {nat = 8000,mbond=60,nsort=20,nattot=4968};
+@
+
+
+3.2.2.9
+log
+@Fixed bug in srtbon1 that allowed memory overflow.
+@
+text
+@d3 1
+a3 1
+  enum {nat = 11776,mbond=60,nsort=20,nattot=4968};
+@
+
+
+3.2.2.10
+log
+@Greatly reduced memory usage.
+@
+text
+@d3 1
+a3 1
+  enum {nneighmax = 50, nat = 11776,mbond=60,nsort=20,nattot=4968};
+@
+
+
+3.2.2.11
+log
+@Removed version() from distribution
+@
+text
+@d3 1
+a3 1
+  enum {nneighmax = 50, nat = 462,mbond=10,nsort=20,nattot=21};
+@
+
+
+3.2.2.12
+log
+@Added some error checking and some memory efficiency.
+@
+text
+@a0 1
+#include "reax_defs.h"
+d3 1
+a3 6
+  enum {nneighmax=50, 
+	nat=462, 
+	nattot=21, 
+        nsort=20,
+	mbond=20, 
+  };
+@
+
+
+3.2.2.13
+log
+@One more memory management tweak.
+@
+text
+@d1 1
+d5 2
+a6 2
+	nat=11776, 
+	nattot=4968, 
+@
+
+
+3.2.2.14
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@a0 1
+#include "reax_defs.h"
+d3 5
+a7 5
+  enum {nneighmax=NNEIGHMAXDEF, 
+	nat=NATDEF, 
+	nattot=NATTOTDEF, 
+        nsort=NSORTDEF,
+	mbond=MBONDDEF, 
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

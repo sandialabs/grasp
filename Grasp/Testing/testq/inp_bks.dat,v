@@ -1,0 +1,98 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.1
+	REAX-2:1.1
+	P_MonacoTesting:1.1.0.6
+	InitialGraspTesting:1.1
+	P_Monaco:1.1.0.4
+	InitialGrasp:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.16.21.47.50;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@# Input for SiO2 BKS example
+units metal
+forcefield twobody 	twobody.in Exponential-Six
+forcefield ewald        1.0e-5   10.0
+box dimensions 19.7437613322520   0.0   0.0  \
+               0.0  17.0985988787133  0.0 \
+               0.0    0.0   21.7564043343804
+box origin 		0.0   0.0   0.0
+neighbor none
+thermo   1
+dump particles 		1
+dump velocities 	1
+dump forces             1
+dump cfg                1
+#
+#
+#conjugate gradient
+#    - Maximum number of CG iterations (int)
+#    - Maximum number of line search iterations (int)
+#    - Line search tolerance (float, energy units)
+#    - Force tolerance (float, force units)
+#    
+#    Minimize the system energy with a conjugate gradient minimizer. 
+#    The force tolerance specifies the maximum absolute value any single 
+#    component of the force on an atom may have before the routine is
+#    considered converged. The line search tolerance is an energy tolerance
+#    for a 1D minimization which can have the specified number of line
+#    search iterations. The types of particles to be minimized need to
+#    be specified with the "minimized particles" command.
+#
+#
+#    conjugate gradient   1000 100 0.000001 0.001
+nsteps 1
+conjugate gradient  100 100 5.0e-2 2.0e-2
+minimized particles type 2 Si O
+
+
+
+
+
+
+
+@
+
+
+1.1
+log
+@Added BKS example to test suite
+@
+text
+@@
+

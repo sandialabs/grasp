@@ -1,0 +1,2928 @@
+head	4.15;
+access;
+symbols
+	ReverseComm_branch:4.10.0.2
+	ADTools_branch:4.7.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.4
+	REAX-2:3.3
+	P_MonacoSource:3.3.0.6
+	GraspSource:3.3
+	P_Monaco:3.3.0.4
+	InitialGrasp:3.3
+	REAXFF:3.3.0.2
+	premerge_cjkimme_version:3.2
+	CRAY:2.5.0.4
+	cjkimme_version_merge_from_trunk_1:2.5.2.1
+	cjkimme_version:2.5.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.15
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2007.03.19.05.22.50;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2006.08.26.02.04.29;	author athomps;	state Exp;
+branches
+	4.10.2.1;
+next	4.9;
+
+4.9
+date	2006.06.29.14.27.21;	author foiles;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.05.04.22.00.58;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2005.10.28.19.10.56;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.06.09.16.06.37;	author foiles;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.3.6.1;
+next	3.2;
+
+3.2
+date	2004.10.19.21.58.23;	author foiles;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.15.21.45.11;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.08.24.15.32.11;	author athomps;	state Exp;
+branches
+	2.5.2.1;
+next	2.4;
+
+2.4
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.08.02.18.00.47;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2004.07.19.17.05.38;	author athomps;	state Exp;
+branches;
+next	;
+
+2.5.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.3.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.3.6.2;
+
+3.3.6.2
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.3.6.3;
+
+3.3.6.3
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.10.2.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	4.10.2.2;
+
+4.10.2.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.15
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_tersoff.h"
+#include "force_tersoff_inline.h"
+#include "box.h"
+#include "box_inline.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "log.h"
+#include "machine.h"
+#include "comm.h"
+extern Log glog;
+
+Force_Tersoff::Force_Tersoff(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = tersoff;
+  timeforce = 0.0;
+  nforce = 0;
+  npieces = 2;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "Repulsive";
+  label_piece[1] = "Attractive";
+  rcutmax = 0.0;
+  input_param_index = NULL;
+  param_index = NULL;
+  rcutneighsq_table = NULL;
+}
+
+Force_Tersoff::~Force_Tersoff() {
+  if (input_param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      for (int jtype=0;jtype<ntypes;jtype++) {
+	delete []input_param_index[itype][jtype];
+      }
+      delete []input_param_index[itype];
+    }
+    delete []input_param_index;
+  }
+  if (param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      for (int jtype=0;jtype<ntypes;jtype++) {
+	delete []param_index[itype][jtype];
+      }
+      delete []param_index[itype];
+    }
+    delete []param_index;
+  }
+// Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+  // Free the memory allocated to param_list
+  for (int i = 0;i<param_list.size();i++) {
+    delete[] param_list[i].params;
+  }
+}
+
+void Force_Tersoff::ReadInteractions(Comm* comm) {
+  string buf,buf2;
+  string id1,id2,id3;
+  string forcefieldname;
+  string filename;
+  double lam3,c,d,h,powern,beta,lam2,bigb,bigr,bigd,lam1,biga;
+  double z_short_range,r_short_range_1,r_short_range_2;
+  double mu,gamma,bigs,d0,r0,ds,rs; 
+  int nparams;
+  int* i_tmp;
+  int itype,jtype,ktype,itriple;
+  int isize;
+  ff_params ff_param_tmp;
+  bool match;
+  vector<int*> ff_triples;
+  int node;
+  string str_tmp;
+  ifstream infile;
+
+  std::istringstream buf_in(arg_string);
+
+  node = comm->get_node();
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Tersoff::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Tersoff::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  glog.get_logfile() << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+
+  str_tmp = glog.path_str + filename;
+  if (node == 0) {
+    infile.open(str_tmp.c_str()); 
+  
+    if (!infile) {
+      infile.close();
+      infile.open(str_tmp.c_str()); 
+      if (!infile) {
+	glog.abort("Force_Tersoff::ReadInteractions:\n"
+		   "Failed to open " + str_tmp,comm);
+      }
+    }
+  }
+
+  ntypes = 0;
+
+  do {
+    if (node==0) {
+      if(input_string_get(infile,buf)) {
+	if(buf != "End of Input") {
+	  glog.abort("Force_Tersoff::ReadInput:\n"
+		     "Read error in "+str_tmp,comm);
+	}
+      }
+      isize = buf.size();
+    }
+
+    MPI_Bcast(&isize,1,MPI_INT,0,comm->get_world());
+    if (node != 0) buf.resize(isize);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << isize << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << buf << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (input_string_match(buf,"End of Input")) {
+      break;
+    }
+
+    buf_in.clear();
+    buf_in.str(buf);
+    
+    // Construct index for ids on the fly
+    buf_in >> id1 >> id2 >> id3;
+
+    match = find_id(id1,itype);
+    if (!match) {
+      ntypes++;
+      itype = ntypes-1;
+      id_index.push_back(id1);
+    }
+
+    match = find_id(id2,jtype);
+    if (!match) {
+      ntypes++;
+      jtype = ntypes-1;
+      id_index.push_back(id2);
+    }
+
+    match = find_id(id3,ktype);
+    if (!match) {
+      ntypes++;
+      ktype = ntypes-1;
+      id_index.push_back(id3);
+    }
+
+    buf_in >> forcefieldname;
+    if (forcefieldname == "tersoff_cut") {
+      // To avoid ambiguity, pair interactions only read in 
+      // when end atoms are identical
+      if (jtype == ktype) {
+	buf_in >> lam3 >> c >> d >> h >> powern >> beta >> lam2 >>
+	  bigb >> bigr >> bigd >> lam1 >> biga;
+	if (lam3 < 0.0 || c <= 0.0 || d <= 0.0 || h > 1.0 || h < -1.0 || 
+	    powern <= 0.0 || beta < 0.0 || lam2 < 0.0 || bigb < 0.0 || 
+	    bigr <= 0.0 || bigd <= 0.0 || bigd >= bigr ||
+	    lam3 < 0.0 || biga < 0.0) {
+	  glog.error("Force_Tersoff::ReadInteractions:\n"
+		     "Invalid parameter in " + str_tmp);
+	}
+	nparams = 12;
+	ff_param_tmp.type = tersoff_cut;
+	ff_param_tmp.np = nparams;
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = lam3;
+	ff_param_tmp.params[1] = c;
+	ff_param_tmp.params[2] = d;
+	ff_param_tmp.params[3] = h;
+	ff_param_tmp.params[4] = powern;
+	ff_param_tmp.params[5] = beta;
+	ff_param_tmp.params[6] = lam2;
+	ff_param_tmp.params[7] = bigb;
+	ff_param_tmp.params[8] = bigr;
+	ff_param_tmp.params[9] = bigd;
+	ff_param_tmp.params[10] = lam1;
+	ff_param_tmp.params[11] = biga;
+      } else {
+	buf_in >> lam3 >> c >> d >> h;
+	if (h > 1.0 || h < -1.0 ) {
+	  glog.error("Force_Tersoff::ReadInteractions:\n"
+		     "Invalid parameter in " + str_tmp);
+	}
+	nparams = 4;
+	ff_param_tmp.type = tersoff_cut;
+	ff_param_tmp.np = nparams;
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = lam3;
+	ff_param_tmp.params[1] = c;
+	ff_param_tmp.params[2] = d;
+	ff_param_tmp.params[3] = h;
+      }
+	
+      input_param_list.push_back(ff_param_tmp);
+    } else if (forcefieldname == "tersoff_zbl" || forcefieldname == "tersoff_moliere") {
+      // To avoid ambiguity, pair interactions only read in 
+      // when end atoms are identical
+      if (jtype == ktype) {
+	buf_in >> lam3 >> c >> d >> h >> powern >> beta >> lam2 >>
+	  bigb >> bigr >> bigd >> lam1 >> biga >> z_short_range >> r_short_range_1 >> r_short_range_2;
+	if (lam3 < 0.0 || c <= 0.0 || d <= 0.0 || h > 1.0 || h < -1.0 || 
+	    powern <= 0.0 || beta < 0.0 || lam2 < 0.0 || bigb < 0.0 || 
+	    bigr <= 0.0 || bigd <= 0.0 || bigd >= bigr ||
+	    lam3 < 0.0 || biga < 0.0) {
+	  glog.error("Force_Tersoff::ReadInteractions:\n"
+		     "Invalid parameter in " + str_tmp);
+	}
+	nparams = 15;
+	ff_param_tmp.type = tersoff_zbl;
+        if (forcefieldname == "tersoff_moliere") ff_param_tmp.type = tersoff_moliere;
+	ff_param_tmp.np = nparams;
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = lam3;
+	ff_param_tmp.params[1] = c;
+	ff_param_tmp.params[2] = d;
+	ff_param_tmp.params[3] = h;
+	ff_param_tmp.params[4] = powern;
+	ff_param_tmp.params[5] = beta;
+	ff_param_tmp.params[6] = lam2;
+	ff_param_tmp.params[7] = bigb;
+	ff_param_tmp.params[8] = bigr;
+	ff_param_tmp.params[9] = bigd;
+	ff_param_tmp.params[10] = lam1;
+	ff_param_tmp.params[11] = biga;
+	ff_param_tmp.params[12] = z_short_range;
+	ff_param_tmp.params[13] = r_short_range_1;
+	ff_param_tmp.params[14] = r_short_range_2;
+      } else {
+	buf_in >> lam3 >> c >> d >> h;
+	if (h > 1.0 || h < -1.0 ) {
+	  glog.error("Force_Tersoff::ReadInteractions:\n"
+		     "Invalid parameter in " + str_tmp);
+	}
+	nparams = 4;
+	ff_param_tmp.type = tersoff_cut;
+	ff_param_tmp.np = nparams;
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = lam3;
+	ff_param_tmp.params[1] = c;
+	ff_param_tmp.params[2] = d;
+	ff_param_tmp.params[3] = h;
+      }
+	
+      input_param_list.push_back(ff_param_tmp);
+    } else if (forcefieldname == "tersoff_morse") {
+      // For simplicity, and in opposition to previous tersoff and 
+      // threebody styles, pair interactions are read in for all triplets
+      // but ultimately, ijj entry is used for  ij pair interaction.
+      buf_in >> mu >> c >> d >> h >> gamma >> bigs >> beta >>
+	d0 >> r0 >> ds >> rs;
+      if (mu < 0.0 || c <= 0.0 || d <= 0.0 || h > 1.0 || h < -1.0 || 
+	  gamma < 0.0 || bigs <= 1.0 || beta < 0.0 || d0 < 0.0 || 
+	  r0 <= 0.0 || ds <= 0.0 || rs <= 0.0 || ds >= rs ) {
+	glog.error("Force_Tersoff::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+      nparams = 11;
+      ff_param_tmp.type = tersoff_morse;
+      ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = mu;
+      ff_param_tmp.params[1] = c;
+      ff_param_tmp.params[2] = d;
+      ff_param_tmp.params[3] = h;
+      ff_param_tmp.params[4] = gamma;
+      ff_param_tmp.params[5] = bigs;
+      ff_param_tmp.params[6] = beta;
+      ff_param_tmp.params[7] = d0;
+      ff_param_tmp.params[8] = r0;
+      ff_param_tmp.params[9] = ds;
+      ff_param_tmp.params[10] = rs;
+      input_param_list.push_back(ff_param_tmp);
+    } else {
+      glog.error("Force_Tersoff::ReadInteractions:\n"
+		 "Invalid forcefield name"+forcefieldname);
+    }
+
+    if (buf_in.fail()) {
+      glog.error("Force_Tersoff::ReadInteractions:\n"
+		 "Read error in " + str_tmp);
+    }
+
+    // Save the triple and their address for later compilation
+    i_tmp = new int[3];
+    i_tmp[0] = itype;
+    i_tmp[1] = jtype;
+    i_tmp[2] = ktype;
+    ff_triples.push_back(i_tmp);
+
+  } while (!input_string_match(buf,"End of Input"));
+
+  // Allocate ntypes x ntypes x ntypes array input_param_index
+  input_param_index = new int**[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    input_param_index[itype] = new int*[ntypes];
+    for (jtype=0;jtype<ntypes;jtype++) {
+      input_param_index[itype][jtype] = new int[ntypes];
+    }
+  }
+  // Initialize input_param_index to empty value
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      for (ktype=0;ktype<ntypes;ktype++) {
+	input_param_index[itype][jtype][ktype] = -1;
+      }
+    }
+  }
+
+  for (itriple=0;itriple<input_param_list.size();itriple++) {
+    itype = ff_triples[itriple][0];
+    jtype = ff_triples[itriple][1];
+    ktype = ff_triples[itriple][2];
+    //Note: first index identifies central atom, which is unique.
+    // second and third indices identify end atoms.
+    // Sometimes ijk differs from ikj, so symmetry is
+    // used only if 'other' entry is empty
+    input_param_index[itype][jtype][ktype] = itriple;
+    if (input_param_index[itype][ktype][jtype] == -1) {
+      input_param_index[itype][ktype][jtype] = itriple;
+    }
+  }
+
+  for (itriple=0;itriple<input_param_list.size();itriple++) {
+    delete []ff_triples[itriple];
+  }
+
+}
+
+void Force_Tersoff::SetupInteractions(const Box* b, 
+                                      const double& g_ewald, 
+				      Comm* comm) {
+  int i,itype,jtype,ktype,ii,jj,kk,iparam,kstart;
+  double powern,beta,c,d,h,lam2,bigb,lam3,bigr,bigd,lam1,biga;
+  double z_short_range,r_short_range_1,r_short_range_2;
+  double mu,gamma,bigs,d0,r0,ds,rs; 
+  ff_params ff_param_tmp;
+  int node,nprocs;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  // Allocate ntypes x ntypes x ntypes array param_index
+  param_index = new int**[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    param_index[itype] = new int*[ntypes];
+    for (jtype=0;jtype<ntypes;jtype++) {
+      param_index[itype][jtype] = new int[ntypes];
+    }
+  }
+
+  // Initialize param_index to empty value
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      for (ktype=0;ktype<ntypes;ktype++) {
+      param_index[itype][jtype][ktype] = -1;
+      }
+    }
+  }
+
+  Lnocut = false;
+
+  glog.get_logfile() << setprecision(4);
+  glog.get_logfile().unsetf(ios::fixed);
+  //First do pure component forms
+
+  if (node == 0) {
+    glog.get_logfile() << endl << "id1\tid2\tid3\tt \tn" << 
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      endl;
+  }
+
+  nentries = 0;
+  for (itype=0;itype<ntypes;itype++) {
+    ii = input_param_index[itype][itype][itype];
+    if (ii != -1) {
+      ff_param_tmp.type = input_param_list[ii].type;
+      switch(ff_param_tmp.type) {
+      case tersoff_cut :
+	lam3 = input_param_list[ii].params[0];
+	c = input_param_list[ii].params[1];
+	d = input_param_list[ii].params[2];
+	h = input_param_list[ii].params[3];
+	powern = input_param_list[ii].params[4];
+	beta = input_param_list[ii].params[5];
+	lam2 = input_param_list[ii].params[6];
+	bigb = input_param_list[ii].params[7];
+	bigr = input_param_list[ii].params[8];
+	bigd = input_param_list[ii].params[9];
+	lam1 = input_param_list[ii].params[10];
+	biga = input_param_list[ii].params[11];
+	tersoff_cut_pure_setup(lam3,c,d,h,powern,beta,
+			       lam2,bigb,bigr,bigd,lam1,biga,
+			       ff_param_tmp);
+	break;
+      case tersoff_zbl :
+	lam3 = input_param_list[ii].params[0];
+	c = input_param_list[ii].params[1];
+	d = input_param_list[ii].params[2];
+	h = input_param_list[ii].params[3];
+	powern = input_param_list[ii].params[4];
+	beta = input_param_list[ii].params[5];
+	lam2 = input_param_list[ii].params[6];
+	bigb = input_param_list[ii].params[7];
+	bigr = input_param_list[ii].params[8];
+	bigd = input_param_list[ii].params[9];
+	lam1 = input_param_list[ii].params[10];
+	biga = input_param_list[ii].params[11];
+        z_short_range = input_param_list[ii].params[12];
+        r_short_range_1 = input_param_list[ii].params[13];
+        r_short_range_2 = input_param_list[ii].params[14];
+	tersoff_zbl_pure_setup(lam3,c,d,h,powern,beta,
+			       lam2,bigb,bigr,bigd,lam1,biga,
+                               z_short_range,r_short_range_1,r_short_range_2,
+			       ff_param_tmp);
+	break;
+      case tersoff_moliere :
+	lam3 = input_param_list[ii].params[0];
+	c = input_param_list[ii].params[1];
+	d = input_param_list[ii].params[2];
+	h = input_param_list[ii].params[3];
+	powern = input_param_list[ii].params[4];
+	beta = input_param_list[ii].params[5];
+	lam2 = input_param_list[ii].params[6];
+	bigb = input_param_list[ii].params[7];
+	bigr = input_param_list[ii].params[8];
+	bigd = input_param_list[ii].params[9];
+	lam1 = input_param_list[ii].params[10];
+	biga = input_param_list[ii].params[11];
+        z_short_range = input_param_list[ii].params[12];
+        r_short_range_1 = input_param_list[ii].params[13];
+        r_short_range_2 = input_param_list[ii].params[14];
+	tersoff_moliere_pure_setup(lam3,c,d,h,powern,beta,
+			       lam2,bigb,bigr,bigd,lam1,biga,
+                               z_short_range,r_short_range_1,r_short_range_2,
+			       ff_param_tmp);
+	break;
+      case tersoff_morse :
+	mu = input_param_list[ii].params[0];
+	c = input_param_list[ii].params[1];
+	d = input_param_list[ii].params[2];
+	h = input_param_list[ii].params[3];
+	gamma = input_param_list[ii].params[4];
+	bigs = input_param_list[ii].params[5];
+	beta = input_param_list[ii].params[6];
+	d0 = input_param_list[ii].params[7];
+	r0 = input_param_list[ii].params[8];
+	ds = input_param_list[ii].params[9];
+	rs = input_param_list[ii].params[10];
+	tersoff_morse_pure_setup(mu,c,d,h,gamma,bigs,
+			       beta,d0,r0,ds,rs,ff_param_tmp);
+	break;
+      default:
+	glog.error("Force_Tersoff::SetupInteractions:\n"
+		   "Invalid forcefield type");
+      }
+      param_list.push_back(ff_param_tmp);
+      nentries++;
+      i = nentries-1;
+      param_index[itype][itype][itype] = i;
+      if (node == 0) {
+	glog.get_logfile() << id_index[itype] << "\t" << id_index[itype] << "\t" << id_index[itype] << "\t" 
+		     << param_list[i].type << "\t" << param_list[i].np; 
+	for (iparam=0;iparam<param_list[i].np;iparam++) {
+	  glog.get_logfile() << setw(13) << param_list[i].params[iparam];
+	}
+	glog.get_logfile() << endl;
+      }
+    } else {
+      glog.warning("Force_Tersoff::SetupInteractions:\n"
+		   "Force field has no pure entry for particle type "
+		   + id_index[itype]);
+    }
+  }
+
+  // Now we treat the cross interactions
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+        //      if (itype==jtype) {
+	//	kstart = jtype+1;
+        //       } else{
+	//	kstart = jtype;
+        //       }
+      //      for (ktype=kstart;ktype<ntypes;ktype++) {
+      for (ktype=0;ktype<ntypes;ktype++) {
+	// Only do cross interactions
+	if (itype == jtype && itype == ktype) continue;
+	ii = input_param_index[itype][jtype][ktype];
+	// Obtain parameters from user input
+	if (ii!=-1) {
+	  ff_param_tmp.type = input_param_list[ii].type;
+	  switch(ff_param_tmp.type) {
+	  case tersoff_cut :
+	    lam3 = input_param_list[ii].params[0];
+	    c = input_param_list[ii].params[1];
+	    d = input_param_list[ii].params[2];
+	    h = input_param_list[ii].params[3];
+	    powern = input_param_list[ii].params[4];
+	    beta = input_param_list[ii].params[5];
+	    lam2 = input_param_list[ii].params[6];
+	    bigb = input_param_list[ii].params[7];
+	    bigr = input_param_list[ii].params[8];
+	    bigd = input_param_list[ii].params[9];
+	    if (jtype != ktype) {
+	      tersoff_cut_cross_setup(lam3,c,d,h,powern,
+				      beta,lam2,bigb,bigr,bigd,
+				      ff_param_tmp);
+	    } else {
+	      lam1 = input_param_list[ii].params[10];
+	      biga = input_param_list[ii].params[11];
+	      tersoff_cut_pure_setup(lam3,c,d,h,powern,beta,
+				     lam2,bigb,bigr,bigd,lam1,biga,
+				     ff_param_tmp);
+	    }
+	    break;
+	  case tersoff_zbl :
+	    lam3 = input_param_list[ii].params[0];
+	    c = input_param_list[ii].params[1];
+	    d = input_param_list[ii].params[2];
+	    h = input_param_list[ii].params[3];
+	    powern = input_param_list[ii].params[4];
+	    beta = input_param_list[ii].params[5];
+	    lam2 = input_param_list[ii].params[6];
+	    bigb = input_param_list[ii].params[7];
+	    bigr = input_param_list[ii].params[8];
+	    bigd = input_param_list[ii].params[9];
+	    if (jtype != ktype) {
+	      tersoff_cut_cross_setup(lam3,c,d,h,powern,
+				      beta,lam2,bigb,bigr,bigd,
+				      ff_param_tmp);
+	    } else {
+	      lam1 = input_param_list[ii].params[10];
+	      biga = input_param_list[ii].params[11];
+              z_short_range = input_param_list[ii].params[12];
+              r_short_range_1 = input_param_list[ii].params[13];
+              r_short_range_2 = input_param_list[ii].params[14];
+              tersoff_zbl_pure_setup(lam3,c,d,h,powern,beta,
+			       lam2,bigb,bigr,bigd,lam1,biga,
+                               z_short_range,r_short_range_1,r_short_range_2,
+			       ff_param_tmp);
+	    }
+	    break;
+	  case tersoff_moliere :
+	    lam3 = input_param_list[ii].params[0];
+	    c = input_param_list[ii].params[1];
+	    d = input_param_list[ii].params[2];
+	    h = input_param_list[ii].params[3];
+	    powern = input_param_list[ii].params[4];
+	    beta = input_param_list[ii].params[5];
+	    lam2 = input_param_list[ii].params[6];
+	    bigb = input_param_list[ii].params[7];
+	    bigr = input_param_list[ii].params[8];
+	    bigd = input_param_list[ii].params[9];
+	    if (jtype != ktype) {
+	      tersoff_cut_cross_setup(lam3,c,d,h,powern,
+				      beta,lam2,bigb,bigr,bigd,
+				      ff_param_tmp);
+	    } else {
+	      lam1 = input_param_list[ii].params[10];
+	      biga = input_param_list[ii].params[11];
+              z_short_range = input_param_list[ii].params[12];
+              r_short_range_1 = input_param_list[ii].params[13];
+              r_short_range_2 = input_param_list[ii].params[14];
+              tersoff_moliere_pure_setup(lam3,c,d,h,powern,beta,
+			       lam2,bigb,bigr,bigd,lam1,biga,
+                               z_short_range,r_short_range_1,r_short_range_2,
+			       ff_param_tmp);
+	    }
+	    break;
+	  case tersoff_morse :
+	    mu = input_param_list[ii].params[0];
+	    c = input_param_list[ii].params[1];
+	    d = input_param_list[ii].params[2];
+	    h = input_param_list[ii].params[3];
+	    gamma = input_param_list[ii].params[4];
+	    bigs = input_param_list[ii].params[5];
+	    beta = input_param_list[ii].params[6];
+	    d0 = input_param_list[ii].params[7];
+	    r0 = input_param_list[ii].params[8];
+	    ds = input_param_list[ii].params[9];
+	    rs = input_param_list[ii].params[10];
+	    tersoff_morse_pure_setup(mu,c,d,h,gamma,bigs,
+				     beta,d0,r0,ds,rs,ff_param_tmp);
+	    break;
+	  default:
+	    glog.error("Force_Tersoff::SetupInteractions:\n"
+		       "Invalid forcefield type");
+	  }
+
+	  param_list.push_back(ff_param_tmp);
+	  nentries++;
+	  i = nentries-1;
+	  param_index[itype][jtype][ktype] = i;
+// 	  param_index[itype][ktype][jtype] = i;
+	  if (node == 0) {
+	    glog.get_logfile() << id_index[itype] << "\t" << id_index[jtype] << "\t"
+			 << id_index[ktype] << "\t"
+			 << param_list[i].type << "\t" << param_list[i].np; 
+	    for (iparam=0;iparam<param_list[i].np;iparam++) {
+	      glog.get_logfile() << setw(13) << param_list[i].params[iparam];
+	    }
+	    glog.get_logfile() << endl;
+	  }
+
+	  // Obtain parameters from mixing rule
+	} else {
+	  ii = input_param_index[itype][itype][itype];
+	  jj = input_param_index[jtype][jtype][jtype];
+	  kk = input_param_index[ktype][ktype][ktype];
+	  if (ii==-1 || jj==-1 || kk==-1) {
+          glog.warning("Force_Tersoff::SetupInteractions:\n"
+                     "Missing pure entry for this cross triple\n"
+                       "No interaction for this cross triple ("
+                     + id_index[itype] + ","
+                     + id_index[jtype] + ","
+                     + id_index[ktype] + ")");
+	  } else {
+	    if (input_param_list[ii].type!=input_param_list[jj].type ||
+		input_param_list[ii].type!=input_param_list[kk].type 
+		) {
+	      glog.error("Force_Tersoff::SetupInteractions:\n"
+			 "Pure components have different forcefield types "
+			 "for cross triple ("
+			 + id_index[itype] + ","
+			 + id_index[jtype] + ","
+			 + id_index[ktype] + ")");
+	    } else {
+	      // These commands should be customized for each case
+	      ff_param_tmp.type = input_param_list[ii].type;
+	      switch(input_param_list[ii].type) {
+	      case tersoff_cut :
+		glog.error("Force_Tersoff::SetupInteractions:\n"
+			   "no mixing rule for type tersoff_cut"
+                         "for cross triple\n"
+                         "No interaction for this cross pair ("
+                + id_index[itype] + ","
+                + id_index[jtype] + ","
+                + id_index[ktype] + ")");
+		break;
+	      case tersoff_zbl :
+		glog.error("Force_Tersoff::SetupInteractions:\n"
+			   "no mixing rule for type tersoff_zbl"
+                         "for cross triple\n"
+                         "No interaction for this cross pair ("
+                + id_index[itype] + ","
+                + id_index[jtype] + ","
+                + id_index[ktype] + ")");
+		break;
+	      case tersoff_moliere :
+		glog.error("Force_Tersoff::SetupInteractions:\n"
+			   "no mixing rule for type tersoff_moliere"
+                         "for cross triple\n"
+                         "No interaction for this cross pair ("
+                + id_index[itype] + ","
+                + id_index[jtype] + ","
+                + id_index[ktype] + ")");
+		break;
+	      case tersoff_morse :
+		glog.error("Force_Tersoff::SetupInteractions:\n"
+			   "no mixing rule for type tersoff_morse"
+                         "for cross triple\n"
+                         "No interaction for this cross pair ("
+                + id_index[itype] + ","
+                + id_index[jtype] + ","
+                + id_index[ktype] + ")");
+		break;
+	      default:
+		glog.error("Force_Tersoff::SetupInteractions:\n"
+			   "Invalid forcefield type");
+	      }
+	      param_list.push_back(ff_param_tmp);
+	      nentries++;
+	      i = nentries-1;
+	      param_index[itype][jtype][ktype] = i;
+	      // Do not use symmetry!!
+	      //	      param_index[itype][ktype][jtype] = i;
+	      if (node == 0) {
+		glog.get_logfile() << id_index[itype] << "\t" << id_index[jtype] << "\t"
+			     << id_index[ktype] << "\t" 
+			     << param_list[i].type << "\t" << param_list[i].np; 
+		for (iparam=0;iparam<param_list[i].np;iparam++) {
+		  glog.get_logfile() << setw(13) << param_list[i].params[iparam];
+		}
+		glog.get_logfile() << endl;
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  }
+
+  // Free the memory allocated to input_param_list
+  for (i = 0;i<input_param_list.size();i++) {
+    delete[] input_param_list[i].params;
+  }
+  input_param_list.clear();
+}
+
+void Force_Tersoff::SetupCutNeighSq(const double& rskin, Comm* comm)
+{
+  double rsq;
+  int itype,jtype,ktype,i;
+  ForceFieldTypes type;
+  int node;
+
+  node = comm->get_node();
+
+  // Allocate ntypes x ntypes array rcutneighsq_table
+  rcutneighsq_table = new double*[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    rcutneighsq_table[itype] = new double[ntypes];
+  }
+
+  // initialize rcutneighsq_table
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      rcutneighsq_table[itype][jtype] = 0.0;
+    }
+  }
+
+  // Assign values to rcutneighsq_table[][] using force field parameters
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      rcutneighsq_table[itype][jtype] = 0.0;
+      // Loop over third atom type to find largest cut-off
+      for (ktype=0;ktype<ntypes;ktype++) {
+	i = param_index[itype][jtype][ktype];
+	if (i != -1) {
+	type = param_list[i].type;
+	switch(type) {
+	case tersoff_cut :
+	  rsq = pow(sqrt(param_list[i].params[10])+rskin,2);
+	  rcutneighsq_table[itype][jtype] = max(rcutneighsq_table[itype][jtype],rsq);
+	  break;
+	case tersoff_zbl :
+	  rsq = pow(sqrt(param_list[i].params[10])+rskin,2);
+	  rcutneighsq_table[itype][jtype] = max(rcutneighsq_table[itype][jtype],rsq);
+	  break;
+	case tersoff_moliere :
+	  rsq = pow(sqrt(param_list[i].params[10])+rskin,2);
+	  rcutneighsq_table[itype][jtype] = max(rcutneighsq_table[itype][jtype],rsq);
+	  break;
+	case tersoff_morse :
+	  rsq = pow(sqrt(param_list[i].params[10])+rskin,2);
+	  rcutneighsq_table[itype][jtype] = max(rcutneighsq_table[itype][jtype],rsq);
+	  break;
+	default:
+	  glog.error("Force_Tersoff::SetupCutNeighSq:\n"
+		     "Invalid forcefield type");
+	}
+	}
+      }
+    }
+  }
+}
+
+void Force_Tersoff::ApplyForce(
+			       const bool& Lenergy, const bool& Lvirial, 
+			       const bool& Latomvirial, 
+			       ParticleList* p, 
+			       const Box* b, Comm* comm) {
+
+  double fi[3],fj[3],fk[3];
+  double energy_ijk,energy_ij;
+  int itype,jtype,ktype,ientry,ijentry,ijkentry;
+  ForceFieldTypes tersoff_type;
+  int i,j,k,image;
+  double xi[3],xj[3];
+  double* rshift;
+  int jstart;
+  bool perflag;
+  Particle* i_pnt;
+  Particle* j_pnt;
+  Particle* k_pnt;
+  int nparticles;
+  int itag,jtag;
+  int* neighptr;
+  double virial_ij[nvirial];
+  double virial_ijk[nvirial];
+  double zeta_ij,prefac;
+  double *drdataij,*drdataik;
+
+  perflag = b->get_perflag();
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+    energy_piece[1] = 0.0;
+  }
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  nparticles = p->get_nparticles();
+    
+  if (!Lneighbor) {
+    glog.error("Force_Tersoff::Applyforce:\n"
+	       "Tersoff force field only implemented with neighbor list");
+  }
+
+  // Single loop over neighbors to compute repulsive interactions.
+  for (i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    itype = type_index[i_pnt->get_type()];
+    i_pnt->get_x(xi);
+    itag = i_pnt->get_tag();
+
+    neighptr = neighbor->first_ptr[i];
+
+    if (neighbor->nneigh_list[i] > TERSONEATOM) {
+      glog.abort("Force_Tersoff::ApplyForce:\n"
+		 "Exceeded TERSONEATOM; increase value in force_tersoff.h",comm);
+    }
+
+    drdataij = drdatalist-TERSNDATA;
+    for (int jneigh=0;
+	 jneigh<neighbor->nneigh_list[i];jneigh++) {
+      j = neighptr[jneigh];
+      j_pnt = p->get_particle(j);
+
+      //Repulsive pair parameters obtained from ijj tersoff entry
+      jtype = type_index[j_pnt->get_type()];
+      ijentry = param_index[itype][jtype][jtype];
+
+      // Compute rij values now, to avoid problems if skipped
+      j_pnt->get_x(xj);
+      drdataij+=TERSNDATA;
+      drdataij[3] = vec3_distsq(xj,xi,drdataij);
+      drdataij[4] = sqrt(drdataij[3]);
+
+      drdataij[5] = 1.0/drdataij[4];
+      vec3_scale(drdataij[5],drdataij,&drdataij[6]);
+      drdataij[9] = ters_fc(drdataij[4],ijentry);
+      if (drdataij[9] > 0.0) {
+	drdataij[10] = ters_fc_d(drdataij[4],ijentry);
+	drdataij[11] = ters_fa(drdataij[4],drdataij[9],ijentry);
+	drdataij[12] = ters_fa_d(drdataij[4],drdataij[9],drdataij[10],ijentry);
+      } else {
+	drdataij[10] = 0.0;
+	drdataij[11] = 0.0;
+	drdataij[12] = 0.0;
+      }
+	
+      // skip interactions not included in force field
+      if (ijentry == -1) {
+	continue;
+      }
+
+      //Since Ltwoway=true, need to avoid double counting.
+      jtag = j_pnt->get_tag();
+
+      if (itag > jtag) {
+	if ((itag+jtag)%2 == 0) continue;
+      } else if (itag < jtag) {
+	if ((itag+jtag)%2 == 1) continue;
+      }
+
+      //Since Ltwoway=true, need to avoid double counting.
+      if (itag == jtag) {
+	if (drdataij[2] > small) {
+	  continue;
+	} else if (fabs(drdataij[2]) < small) {
+	  if (drdataij[1] > small) {
+	    continue;
+	  } else if (fabs(drdataij[1]) < small) {
+	    if (drdataij[0] > small) continue;
+	  }
+	}
+      }
+
+      tersoff_type = param_list[ijentry].type;
+      switch(tersoff_type) {
+      case tersoff_cut :
+	force_tersoff_repulsive_cut(drdataij,fi,Lenergy,Lvirial,
+				    energy_ij,virial_ij,ijentry);
+	break;
+      case tersoff_zbl :
+	force_tersoff_repulsive_zbl(drdataij,fi,Lenergy,Lvirial,
+				    energy_ij,virial_ij,ijentry);
+	break;
+      case tersoff_moliere :
+	force_tersoff_repulsive_moliere(drdataij,fi,Lenergy,Lvirial,
+				    energy_ij,virial_ij,ijentry);
+	break;
+      case tersoff_morse :
+	force_tersoff_repulsive_morse(drdataij,fi,Lenergy,Lvirial,
+				    energy_ij,virial_ij,ijentry);
+	break;
+      default:
+	glog.error("Force_Tersoff::ApplyForce:\n"
+		   "Invalid forcefield type for Lneighbor true");
+      }
+      i_pnt->increment_f(fi);
+      j_pnt->decrement_f(fi);
+      if (Lenergy) {
+	energy_piece[0]+=energy_ij;
+      }
+      if (Lvirial) {
+	for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	  virial[ivirial] += virial_ij[ivirial];
+	}
+      }
+	
+    } // for jneigh
+
+    // Double loop over neighbors to compute attractive interactions.
+    drdataij = drdatalist-TERSNDATA;
+    for (int jneigh=0;
+	 jneigh<neighbor->nneigh_list[i];jneigh++) {
+      j = neighptr[jneigh];
+      j_pnt = p->get_particle(j);
+      jtype = type_index[j_pnt->get_type()];
+      ijentry = param_index[itype][jtype][jtype];
+
+      // Increment pointer at starat, to avoid problems if skipped
+      drdataij+=TERSNDATA;
+
+      // skip interactions not included in force field
+      if (ijentry == -1) {
+	continue;
+      }
+      //Double loop over neighbors to compute bond orders
+      zeta_ij = 0.0;
+      drdataik = drdatalist-TERSNDATA;
+      for (int kneigh=0;
+	   kneigh<neighbor->nneigh_list[i];kneigh++) {
+
+	// Increment pointer at start, to avoid problems if skipped
+	drdataik+=TERSNDATA;
+
+	if (kneigh != jneigh) {
+	  k = neighptr[kneigh];
+	  k_pnt = p->get_particle(k);
+	  ktype = type_index[k_pnt->get_type()];
+	  ijkentry = param_index[itype][jtype][ktype];
+	  // skip interactions not included in force field
+	  if (ijkentry == -1) {
+	    continue;
+	  }
+
+	  tersoff_type = param_list[ijkentry].type;
+	  switch(tersoff_type) {
+	  case tersoff_cut :
+	    zeta_ij += zetaterm_tersoff_cut(drdataij,drdataik,ijentry,ijkentry);
+	    break;
+	  case tersoff_zbl :
+	    zeta_ij += zetaterm_tersoff_cut(drdataij,drdataik,ijentry,ijkentry);
+	    break;
+	  case tersoff_moliere :
+	    zeta_ij += zetaterm_tersoff_cut(drdataij,drdataik,ijentry,ijkentry);
+	    break;
+	  case tersoff_morse :
+	    zeta_ij += zetaterm_tersoff_morse(drdataij,drdataik,ijentry,ijkentry);
+	    break;
+	  default:
+	    glog.error("Force_Tersoff::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	  }
+	} // if kneigh != jneigh
+      } // for kneigh
+
+      tersoff_type = param_list[ijentry].type;
+      switch(tersoff_type) {
+      case tersoff_cut :
+	force_tersoff_ij_cut(zeta_ij,drdataij,
+			     fi,Lenergy,Lvirial,
+			     energy_ij,virial_ij,prefac,ijentry);
+	break;
+      case tersoff_zbl :
+	force_tersoff_ij_cut(zeta_ij,drdataij,
+			     fi,Lenergy,Lvirial,
+			     energy_ij,virial_ij,prefac,ijentry);
+	break;
+      case tersoff_moliere :
+	force_tersoff_ij_cut(zeta_ij,drdataij,
+			     fi,Lenergy,Lvirial,
+			     energy_ij,virial_ij,prefac,ijentry);
+	break;
+      case tersoff_morse :
+	force_tersoff_ij_morse(zeta_ij,drdataij,
+			       fi,Lenergy,Lvirial,
+			       energy_ij,virial_ij,prefac,ijentry);
+	break;
+      default:
+	glog.error("Force_Tersoff::ApplyForce:\n"
+		   "Invalid forcefield type for Lneighbor true");
+      }
+
+      i_pnt->increment_f(fi);
+      j_pnt->decrement_f(fi);
+      if (Lenergy) {
+	energy_piece[1]+=energy_ij;
+      }
+      if (Lvirial) {
+	for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	  virial[ivirial] += virial_ij[ivirial];
+	}
+      }
+
+      //Double loop over neighbors to compute attractive forces
+      drdataik = drdatalist-TERSNDATA;
+      for (int kneigh=0;
+	   kneigh<neighbor->nneigh_list[i];kneigh++) {
+
+	// Increment pointer at start, to avoid problems if skipped
+	drdataik+=TERSNDATA;
+
+	if (kneigh != jneigh) {
+	  k = neighptr[kneigh];
+	  k_pnt = p->get_particle(k);
+	  ktype = type_index[k_pnt->get_type()];
+	  ijkentry = param_index[itype][jtype][ktype];
+	  // skip interactions not included in force field
+	  if (ijkentry == -1) {
+	    continue;
+	  }
+
+	  tersoff_type = param_list[ijkentry].type;
+	  switch(tersoff_type) {
+	  case tersoff_cut :
+	    force_tersoff_ijk_cut(prefac,drdataij,drdataik,
+				  fj,fk,Lvirial,
+				  virial_ijk,ijentry,ijkentry);
+	    break;
+	  case tersoff_zbl :
+	    force_tersoff_ijk_cut(prefac,drdataij,drdataik,
+				  fj,fk,Lvirial,
+				  virial_ijk,ijentry,ijkentry);
+	    break;
+	  case tersoff_moliere :
+	    force_tersoff_ijk_cut(prefac,drdataij,drdataik,
+				  fj,fk,Lvirial,
+				  virial_ijk,ijentry,ijkentry);
+	    break;
+	  case tersoff_morse :
+	    force_tersoff_ijk_morse(prefac,drdataij,drdataik,
+				    fj,fk,Lvirial,
+				    virial_ijk,ijentry,ijkentry);
+	    break;
+	  default:
+	    glog.error("Force_Tersoff::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	  }
+	
+	  i_pnt->decrement_f(fj);
+	  i_pnt->decrement_f(fk);
+	  j_pnt->increment_f(fj);
+	  k_pnt->increment_f(fk);
+	  if (Lvirial) {
+	    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	      virial[ivirial] += virial_ijk[ivirial];
+	    }
+	  }
+
+	} // if kneigh != jneigh
+      } // for kneigh
+
+    } // for jneigh
+  } // for nparticles
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+}
+
+void Force_Tersoff::tersoff_cut_cross_setup(
+					    const double& lam3,
+					    const double& c, 
+					    const double& d, 
+					    const double& h,
+					    const double& powern,
+					    const double& beta,
+					    const double& lam2,
+					    const double& bigb,
+					    const double& bigr,
+					    const double& bigd,
+					    ff_params& ff_param_tmp) {
+  double rcut;
+
+  ff_param_tmp.np = 15;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  rcut = bigr+bigd;
+  ff_param_tmp.params[0] = lam3;
+  ff_param_tmp.params[1] = c;
+  ff_param_tmp.params[2] = d;
+  ff_param_tmp.params[3] = h;
+  ff_param_tmp.params[4] = powern;
+  ff_param_tmp.params[5] = beta;
+  ff_param_tmp.params[6] = lam2;
+  ff_param_tmp.params[7] = bigb;
+  ff_param_tmp.params[8] = bigr;
+  ff_param_tmp.params[9] = bigd;
+  ff_param_tmp.params[10] = rcut*rcut;
+
+  ff_param_tmp.params[14] = pow(2.*powern*1.e-16,-1./powern);
+  ff_param_tmp.params[13] = pow(2.*powern*1.e-8,-1./powern);
+  ff_param_tmp.params[12] = 1./ff_param_tmp.params[13];
+  ff_param_tmp.params[11] = 1./ff_param_tmp.params[14];
+}  
+
+
+void Force_Tersoff::tersoff_cut_pure_setup(
+					   const double& lam3,
+					   const double& c, 
+					   const double& d, 
+					   const double& h,
+					   const double& powern,
+					   const double& beta,
+					   const double& lam2,
+					   const double& bigb,
+					   const double& bigr,
+					   const double& bigd,
+					   const double& lam1,
+					   const double& biga,
+					   ff_params& ff_param_tmp) {
+  double rcut;
+
+  ff_param_tmp.np = 17;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  rcut = bigr+bigd;
+  ff_param_tmp.params[0] = lam3;
+  ff_param_tmp.params[1] = c;
+  ff_param_tmp.params[2] = d;
+  ff_param_tmp.params[3] = h;
+  ff_param_tmp.params[4] = powern;
+  ff_param_tmp.params[5] = beta;
+  ff_param_tmp.params[6] = lam2;
+  ff_param_tmp.params[7] = bigb;
+  ff_param_tmp.params[8] = bigr;
+  ff_param_tmp.params[9] = bigd;
+  ff_param_tmp.params[10] = rcut*rcut;
+
+  ff_param_tmp.params[14] = pow(2.*powern*1.e-16,-1./powern);
+  ff_param_tmp.params[13] = pow(2.*powern*1.e-8,-1./powern);
+  ff_param_tmp.params[12] = 1./ff_param_tmp.params[13];
+  ff_param_tmp.params[11] = 1./ff_param_tmp.params[14];
+
+  ff_param_tmp.params[15] = lam1;
+  ff_param_tmp.params[16] = biga;
+  rcutmax = max(rcut, rcutmax);
+}  
+
+void Force_Tersoff::tersoff_zbl_pure_setup(
+					   const double& lam3,
+					   const double& c, 
+					   const double& d, 
+					   const double& h,
+					   const double& powern,
+					   const double& beta,
+					   const double& lam2,
+					   const double& bigb,
+					   const double& bigr,
+					   const double& bigd,
+					   const double& lam1,
+					   const double& biga,
+					   const double& z_short_range,
+					   const double& r_short_range_1,
+					   const double& r_short_range_2,
+					   ff_params& ff_param_tmp) {
+  double rcut;
+
+  ff_param_tmp.np = 20;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  rcut = bigr+bigd;
+  ff_param_tmp.params[0] = lam3;
+  ff_param_tmp.params[1] = c;
+  ff_param_tmp.params[2] = d;
+  ff_param_tmp.params[3] = h;
+  ff_param_tmp.params[4] = powern;
+  ff_param_tmp.params[5] = beta;
+  ff_param_tmp.params[6] = lam2;
+  ff_param_tmp.params[7] = bigb;
+  ff_param_tmp.params[8] = bigr;
+  ff_param_tmp.params[9] = bigd;
+  ff_param_tmp.params[10] = rcut*rcut;
+
+  ff_param_tmp.params[14] = pow(2.*powern*1.e-16,-1./powern);
+  ff_param_tmp.params[13] = pow(2.*powern*1.e-8,-1./powern);
+  ff_param_tmp.params[12] = 1./ff_param_tmp.params[13];
+  ff_param_tmp.params[11] = 1./ff_param_tmp.params[14];
+
+  ff_param_tmp.params[15] = lam1;
+  ff_param_tmp.params[16] = biga;
+  ff_param_tmp.params[17] = z_short_range;
+  ff_param_tmp.params[18] = r_short_range_1;
+  ff_param_tmp.params[19] = r_short_range_2;
+  rcutmax = max(rcut, rcutmax);
+}  
+
+void Force_Tersoff::tersoff_moliere_pure_setup(
+					   const double& lam3,
+					   const double& c, 
+					   const double& d, 
+					   const double& h,
+					   const double& powern,
+					   const double& beta,
+					   const double& lam2,
+					   const double& bigb,
+					   const double& bigr,
+					   const double& bigd,
+					   const double& lam1,
+					   const double& biga,
+					   const double& z_short_range,
+					   const double& r_short_range_1,
+					   const double& r_short_range_2,
+					   ff_params& ff_param_tmp) {
+  double rcut;
+
+  ff_param_tmp.np = 20;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  rcut = bigr+bigd;
+  ff_param_tmp.params[0] = lam3;
+  ff_param_tmp.params[1] = c;
+  ff_param_tmp.params[2] = d;
+  ff_param_tmp.params[3] = h;
+  ff_param_tmp.params[4] = powern;
+  ff_param_tmp.params[5] = beta;
+  ff_param_tmp.params[6] = lam2;
+  ff_param_tmp.params[7] = bigb;
+  ff_param_tmp.params[8] = bigr;
+  ff_param_tmp.params[9] = bigd;
+  ff_param_tmp.params[10] = rcut*rcut;
+
+  ff_param_tmp.params[14] = pow(2.*powern*1.e-16,-1./powern);
+  ff_param_tmp.params[13] = pow(2.*powern*1.e-8,-1./powern);
+  ff_param_tmp.params[12] = 1./ff_param_tmp.params[13];
+  ff_param_tmp.params[11] = 1./ff_param_tmp.params[14];
+
+  ff_param_tmp.params[15] = lam1;
+  ff_param_tmp.params[16] = biga;
+  ff_param_tmp.params[17] = z_short_range;
+  ff_param_tmp.params[18] = r_short_range_1;
+  ff_param_tmp.params[19] = r_short_range_2;
+  rcutmax = max(rcut, rcutmax);
+}  
+
+void Force_Tersoff::tersoff_morse_pure_setup(
+					   const double& mu,
+					   const double& c, 
+					   const double& d, 
+					   const double& h,
+					   const double& gamma,
+					   const double& bigs,
+					   const double& beta,
+					   const double& d0,
+					   const double& r0,
+					   const double& ds,
+					   const double& rs,
+					   ff_params& ff_param_tmp) {
+  double rcut;
+  double lam1,lam2;
+
+  ff_param_tmp.np = 17;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  rcut = rs+ds;
+
+  ff_param_tmp.params[0] = mu;
+  ff_param_tmp.params[1] = c;
+  ff_param_tmp.params[2] = d;
+  ff_param_tmp.params[3] = h;
+  ff_param_tmp.params[4] = gamma;
+  ff_param_tmp.params[5] = NULL;
+  lam1 = beta*sqrt(2.0*bigs);
+  lam2 = beta*sqrt(2.0/bigs);
+  ff_param_tmp.params[6] = lam2;
+  ff_param_tmp.params[7] = bigs*d0/(bigs-1.0)*exp(lam2*r0);
+  ff_param_tmp.params[8] = rs;
+  ff_param_tmp.params[9] = ds;
+  ff_param_tmp.params[10] = rcut*rcut;
+
+  ff_param_tmp.params[11] = 2.*1.e-16;
+  ff_param_tmp.params[12] = 2.*1.e-8;
+  ff_param_tmp.params[13] = 1./ff_param_tmp.params[12];
+  ff_param_tmp.params[14] = 1./ff_param_tmp.params[11];
+
+  ff_param_tmp.params[15] = lam1;
+  ff_param_tmp.params[16] = d0/(bigs-1.0)*exp(lam1*r0);
+
+  rcutmax = max(rcut, rcutmax);
+}  
+
+void Force_Tersoff::SetupNeighbor(const string& neighbor_style,
+				  const int& neighbor_freq,
+				  const double& neighbor_rskin, 
+				  double& rcutneighmax, double& rcutcomm,
+				  const Box* b, Comm* comm){
+  int node,nprocs;
+  bool Ltwoway,Ltwoway_ghost;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Ltwoway = true;
+    Ltwoway_ghost = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else if (neighbor_style == "bin") {
+    Ltwoway = true;
+    Ltwoway_ghost = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_Tersoff::SetupNeighbor:\n"
+	       "Invalid neighbor style");
+  }
+
+  if (!Lneighbor) {
+    glog.error("Force_Tersoff::Applyforce:\n"
+	       "Tersoff force field only implemented with neighbor list");
+  }
+
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_Tersoff::SetupNeighbor:\n"
+	       "Can not use nocut types with neighboring");
+  }
+
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_Tersoff::SetupNeighbor:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_Tersoff::SetupNeighbor:\n"
+		 "Smallest separation of periodic images less than twice cut-off\n"
+		 "Need to use neighbor list to capture all images");
+    }
+  }
+
+  rcutneighmax = 0.0;
+  if (Lneighbor) {
+    rcutneighmax = rcutmax + neighbor_rskin;
+    rcutcomm = rcutmax + neighbor_rskin;
+    neighbor->set_rcutneighmax(rcutneighmax);
+    SetupCutNeighSq(neighbor_rskin,comm);
+    if (node == 0) {
+      glog.get_logfile() << "Cutoffs for this forcefield" << endl;
+      glog.get_logfile() << "rcutmax = " << rcutmax << endl;
+      glog.get_logfile() << "rskin = " << neighbor_rskin << endl;
+      glog.get_logfile() << "rcutneighmax = " << rcutneighmax << endl;
+    }
+  }
+}
+@
+
+
+4.14
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d206 2
+a207 1
+    std::istringstream buf_in(buf);
+d786 1
+a786 1
+  for (int i = 0;i<input_param_list.size();i++) {
+d895 1
+a895 1
+  for (int i=0;i<nparticles;i++) {
+d1055 1
+d1107 1
+a1107 1
+	  if (ientry == -1) {
+@
+
+
+4.13
+log
+@Optimized Tersoff
+@
+text
+@d1390 2
+a1391 1
+				  const double& neighbor_rskin, double& rcutneighmax,
+d1446 1
+@
+
+
+4.12
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d860 1
+a860 1
+  double xi[3],xj[3],xk[3];
+a868 1
+  double rsq,delr[3];
+d873 1
+a875 1
+
+d902 6
+d913 1
+a914 1
+      //Repulsive pair parameters obtained from ijj tersoff entry
+d916 20
+a949 2
+      j_pnt->get_x(xj);
+
+d952 1
+a952 2
+	rsq = vec3_distsq(xi,xj,delr);
+	if (delr[2] > small) {
+d954 2
+a955 2
+	} else if (fabs(delr[2]) < small) {
+	  if (delr[1] > small) {
+d957 2
+a958 2
+	  } else if (fabs(delr[1]) < small) {
+	    if (delr[0] > small) continue;
+d966 1
+a966 1
+	force_tersoff_repulsive_cut(xi,xj,fi,Lenergy,Lvirial,
+d970 1
+a970 1
+	force_tersoff_repulsive_zbl(xi,xj,fi,Lenergy,Lvirial,
+d974 1
+a974 1
+	force_tersoff_repulsive_moliere(xi,xj,fi,Lenergy,Lvirial,
+d978 1
+a978 1
+	force_tersoff_repulsive_morse(xi,xj,fi,Lenergy,Lvirial,
+a996 8
+  } // for nparticles
+
+  // Double loop over neighbors to compute attractive interactions.
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    itype = type_index[i_pnt->get_type()];
+    i_pnt->get_x(xi);
+    neighptr = neighbor->first_ptr[i];
+d998 2
+d1006 4
+a1013 1
+      j_pnt->get_x(xj);
+d1016 1
+d1019 4
+a1031 1
+	  k_pnt->get_x(xk);
+d1036 1
+a1036 1
+	    zeta_ij += zetaterm_tersoff_cut(xi,xj,xk,ijentry,ijkentry);
+d1039 1
+a1039 1
+	    zeta_ij += zetaterm_tersoff_cut(xi,xj,xk,ijentry,ijkentry);
+d1042 1
+a1042 1
+	    zeta_ij += zetaterm_tersoff_cut(xi,xj,xk,ijentry,ijkentry);
+d1045 1
+a1045 1
+	    zeta_ij += zetaterm_tersoff_morse(xi,xj,xk,ijentry,ijkentry);
+d1056 2
+a1057 1
+	force_tersoff_ij_cut(zeta_ij,xi,xj,fi,Lenergy,Lvirial,
+d1061 2
+a1062 1
+	force_tersoff_ij_cut(zeta_ij,xi,xj,fi,Lenergy,Lvirial,
+d1066 2
+a1067 1
+	force_tersoff_ij_cut(zeta_ij,xi,xj,fi,Lenergy,Lvirial,
+d1071 3
+a1073 2
+	force_tersoff_ij_morse(zeta_ij,xi,xj,fi,Lenergy,Lvirial,
+			     energy_ij,virial_ij,prefac,ijentry);
+d1092 1
+d1095 4
+a1107 1
+	  k_pnt->get_x(xk);
+d1112 2
+a1113 1
+	    force_tersoff_ijk_cut(prefac,xi,xj,xk,fj,fk,Lvirial,
+d1117 2
+a1118 1
+	    force_tersoff_ijk_cut(prefac,xi,xj,xk,fj,fk,Lvirial,
+d1122 2
+a1123 1
+	    force_tersoff_ijk_cut(prefac,xi,xj,xk,fj,fk,Lvirial,
+d1127 3
+a1129 2
+	    force_tersoff_ijk_morse(prefac,xi,xj,xk,fj,fk,Lvirial,
+				  virial_ijk,ijentry,ijkentry);
+@
+
+
+4.11
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@a983 2
+//        cout << "\nitag = " << p->get_usertag(i_pnt->get_tag()) << " itype = " << itype << endl;
+
+a988 1
+//            cout << "\njtag = " << p->get_usertag(j_pnt->get_tag()) << " jtype = " << jtype << endl;
+a1003 1
+// 	  	  cout << " ktag = " << p->get_usertag(k_pnt->get_tag()) << " ktype = " << ktype << " ijkentry = " << ijkentry << endl;
+a1063 2
+//            cout  << "\n";
+
+a1071 1
+// 	  	  cout << " ktag = " << p->get_usertag(k_pnt->get_tag()) << " ktype = " << ktype << " ijkentry = " << ijkentry << endl;
+@
+
+
+4.10
+log
+@Added damping constant commands for Nose-Hoover barostats and thermostats
+@
+text
+@d851 1
+d1088 1
+a1088 1
+	    force_tersoff_ijk_cut(prefac,xi,xj,xk,fi,fj,fk,Lvirial,
+d1092 1
+a1092 1
+	    force_tersoff_ijk_cut(prefac,xi,xj,xk,fi,fj,fk,Lvirial,
+d1096 1
+a1096 1
+	    force_tersoff_ijk_cut(prefac,xi,xj,xk,fi,fj,fk,Lvirial,
+d1100 1
+a1100 1
+	    force_tersoff_ijk_morse(prefac,xi,xj,xk,fi,fj,fk,Lvirial,
+d1108 2
+a1109 1
+	  i_pnt->increment_f(fi);
+@
+
+
+4.10.2.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@d1087 1
+a1087 1
+	    force_tersoff_ijk_cut(prefac,xi,xj,xk,fj,fk,Lvirial,
+d1091 1
+a1091 1
+	    force_tersoff_ijk_cut(prefac,xi,xj,xk,fj,fk,Lvirial,
+d1095 1
+a1095 1
+	    force_tersoff_ijk_cut(prefac,xi,xj,xk,fj,fk,Lvirial,
+d1099 1
+a1099 1
+	    force_tersoff_ijk_morse(prefac,xi,xj,xk,fj,fk,Lvirial,
+d1107 1
+a1107 2
+	  i_pnt->decrement_f(fj);
+	  i_pnt->decrement_f(fk);
+@
+
+
+4.10.2.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@a850 1
+			       const bool& Latomvirial, 
+@
+
+
+4.9
+log
+@add the files for the veldependent forcefiled along with modifications
+in other files (vec3.h Makefile forcefield.h forcefieldlist.cpp ) needed to
+support the new forcefield
+@
+text
+@d983 2
+d990 1
+d1006 1
+d1067 2
+d1077 1
+@
+
+
+4.8
+log
+@Fixed bug in parameter selection for Tersoff alloys.
+@
+text
+@d570 9
+a578 6
+      if (itype==jtype) {
+	kstart = jtype+1;
+      } else{
+	kstart = jtype;
+      }
+      for (ktype=kstart;ktype<ntypes;ktype++) {
+d685 1
+a685 1
+	  param_index[itype][ktype][jtype] = i;
+d766 2
+a767 1
+	      param_index[itype][ktype][jtype] = i;
+a1126 6
+    //     cout << virial[0]/b->get_volume() << " " << 
+    //             virial[1]/b->get_volume() << " " << 
+    //             virial[2]/b->get_volume() << " " <<
+    //             virial[3]/b->get_volume() << " " << 
+    //             virial[4]/b->get_volume() << " " <<
+    //             virial[5]/b->get_volume() << endl;
+@
+
+
+4.7
+log
+@Added multiple replica feature.
+@
+text
+@d62 1
+a64 1
+#include "force_tersoff_inline.h"
+d67 1
+a69 1
+#include "log.h"
+a71 2
+#include "force_tersoff_inline.h"
+
+d852 1
+a852 1
+  int itype,jtype,ktype,ientry;
+d905 1
+a905 1
+      ientry = param_index[itype][jtype][jtype];
+d907 1
+a907 1
+      if (ientry == -1) {
+d936 1
+a936 1
+      tersoff_type = param_list[ientry].type;
+d940 1
+a940 1
+				    energy_ij,virial_ij,ientry);
+d944 1
+a944 1
+				    energy_ij,virial_ij,ientry);
+d948 1
+a948 1
+				    energy_ij,virial_ij,ientry);
+d952 1
+a952 1
+				    energy_ij,virial_ij,ientry);
+d984 5
+d998 1
+a998 1
+	  ientry = param_index[itype][jtype][ktype];
+d1000 1
+a1000 1
+	  if (ientry == -1) {
+d1005 1
+a1005 1
+	  tersoff_type = param_list[ientry].type;
+d1008 1
+a1008 1
+	    zeta_ij += zetaterm_tersoff_cut(xi,xj,xk,ientry);
+d1011 1
+a1011 1
+	    zeta_ij += zetaterm_tersoff_cut(xi,xj,xk,ientry);
+d1014 1
+a1014 1
+	    zeta_ij += zetaterm_tersoff_cut(xi,xj,xk,ientry);
+d1017 1
+a1017 1
+	    zeta_ij += zetaterm_tersoff_morse(xi,xj,xk,ientry);
+d1029 1
+a1029 1
+			     energy_ij,virial_ij,prefac,ientry);
+d1033 1
+a1033 1
+			     energy_ij,virial_ij,prefac,ientry);
+d1037 1
+a1037 1
+			     energy_ij,virial_ij,prefac,ientry);
+d1041 1
+a1041 1
+			     energy_ij,virial_ij,prefac,ientry);
+d1066 1
+a1066 1
+	  ientry = param_index[itype][jtype][ktype];
+d1073 1
+a1073 1
+	  tersoff_type = param_list[ientry].type;
+d1077 1
+a1077 1
+				  virial_ijk,ientry);
+d1081 1
+a1081 1
+				  virial_ijk,ientry);
+d1085 1
+a1085 1
+				  virial_ijk,ientry);
+d1089 1
+a1089 1
+				  virial_ijk,ientry);
+@
+
+
+4.6
+log
+@Added GaAs version of Tersoff
+@
+text
+@d147 1
+a147 1
+    glog.logfile << endl;
+d154 1
+a154 1
+    glog.logfile << endl;
+d159 1
+a159 1
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+d453 2
+a454 2
+  glog.logfile << setprecision(4);
+  glog.logfile.unsetf(ios::fixed);
+d458 1
+a458 1
+    glog.logfile << endl << "id1\tid2\tid3\tt \tn" << 
+d555 1
+a555 1
+	glog.logfile << id_index[itype] << "\t" << id_index[itype] << "\t" << id_index[itype] << "\t" 
+d558 1
+a558 1
+	  glog.logfile << setw(13) << param_list[i].params[iparam];
+d560 1
+a560 1
+	glog.logfile << endl;
+d686 1
+a686 1
+	    glog.logfile << id_index[itype] << "\t" << id_index[jtype] << "\t"
+d690 1
+a690 1
+	      glog.logfile << setw(13) << param_list[i].params[iparam];
+d692 1
+a692 1
+	    glog.logfile << endl;
+d767 1
+a767 1
+		glog.logfile << id_index[itype] << "\t" << id_index[jtype] << "\t"
+d771 1
+a771 1
+		  glog.logfile << setw(13) << param_list[i].params[iparam];
+d773 1
+a773 1
+		glog.logfile << endl;
+d1410 4
+a1413 4
+      glog.logfile << "Cutoffs for this forcefield" << endl;
+      glog.logfile << "rcutmax = " << rcutmax << endl;
+      glog.logfile << "rskin = " << neighbor_rskin << endl;
+      glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+@
+
+
+4.5
+log
+@add the Moliere short-range potential to the tersoff potential
+@
+text
+@d72 2
+d127 3
+a129 1
+  double lam3,c,d,h,powern,beta,lam2,bigb,bigr,bigd,lam1,biga,z_short_range,r_short_range_1,r_short_range_2;
+d335 30
+a364 2
+    }
+    else {
+d405 3
+a407 1
+    //second and third indices identify end atoms, which are interchangeable
+d409 3
+a411 1
+    input_param_index[itype][ktype][jtype] = itriple;
+d426 1
+d510 1
+a510 1
+        case tersoff_moliere :
+d531 15
+d660 15
+d748 9
+d833 4
+d952 4
+a970 15
+      //      if (itag == 0 && jtag == 4) {
+      //	cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+      //	cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+      //	cout << "f[0] = " << fi[0] << " " << fi[1] << " " << fi[2] << endl;
+      //	cout << "f[4] = " << -fi[0] << " " << -fi[1] << " " << -fi[2] << endl;
+      //	if (Lvirial) {
+      //	  cout << "virial_ij[0][0] = " <<  virial_ij[0] << endl;
+      //	  cout << "virial_ij[1][1] = " <<  virial_ij[1] << endl;
+      //	  cout << "virial_ij[2][2] = " <<  virial_ij[2] << endl;
+      //	  cout << "virial_ij[0][1] = " <<  virial_ij[3] << endl;
+      //	  cout << "virial_ij[0][2] = " <<  virial_ij[4] << endl;
+      //	  cout << "virial_ij[1][2] = " <<  virial_ij[5] << endl;
+      //	}
+      //      }
+
+a1005 8
+	    //	    if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4
+	    //		&& k_pnt->get_tag() == 125) {
+	    //	      cout << endl;
+	    //	      cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	    //	      cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	    //	      cout << "r[125] = " << xk[0] << " " << xk[1] << " " << xk[2] << endl;
+	    //	      cout << "zetaterm = " <<  zetaterm_tersoff_cut(xi,xj,xk,ientry) << endl;
+	    //	    }
+a1008 8
+	    //	    if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4
+	    //		&& k_pnt->get_tag() == 125) {
+	    //	      cout << endl;
+	    //	      cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	    //	      cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	    //	      cout << "r[125] = " << xk[0] << " " << xk[1] << " " << xk[2] << endl;
+	    //	      cout << "zetaterm = " <<  zetaterm_tersoff_cut(xi,xj,xk,ientry) << endl;
+	    //	    }
+d1012 3
+a1014 8
+	    //	    if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4
+	    //		&& k_pnt->get_tag() == 125) {
+	    //	      cout << endl;
+	    //	      cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	    //	      cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	    //	      cout << "r[125] = " << xk[0] << " " << xk[1] << " " << xk[2] << endl;
+	    //	      cout << "zetaterm = " <<  zetaterm_tersoff_cut(xi,xj,xk,ientry) << endl;
+	    //	    }
+a1026 16
+	//	if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4) {
+	//	  cout << endl;
+	//	  cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	//	  cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	//	  cout << "f[0] = " << fi[0] << " " << fi[1] << " " << fi[2] << endl;
+	//	  cout << "f[4] = " << -fi[0] << " " << -fi[1] << " " << -fi[2] << endl;
+	//	  cout << "energy_ij = " <<  energy_ij << endl;
+	//	  if (Lvirial) {
+	//	    cout << "virial_ij[0][0] = " <<  virial_ij[0] << endl;
+	//	    cout << "virial_ij[1][1] = " <<  virial_ij[1] << endl;
+	//	    cout << "virial_ij[2][2] = " <<  virial_ij[2] << endl;
+	//	    cout << "virial_ij[0][1] = " <<  virial_ij[3] << endl;
+	//	    cout << "virial_ij[0][2] = " <<  virial_ij[4] << endl;
+	//	    cout << "virial_ij[1][2] = " <<  virial_ij[5] << endl;
+	//	  }
+	//	}
+a1030 16
+	//	if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4) {
+	//	  cout << endl;
+	//	  cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	//	  cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	//	  cout << "f[0] = " << fi[0] << " " << fi[1] << " " << fi[2] << endl;
+	//	  cout << "f[4] = " << -fi[0] << " " << -fi[1] << " " << -fi[2] << endl;
+	//	  cout << "energy_ij = " <<  energy_ij << endl;
+	//	  if (Lvirial) {
+	//	    cout << "virial_ij[0][0] = " <<  virial_ij[0] << endl;
+	//	    cout << "virial_ij[1][1] = " <<  virial_ij[1] << endl;
+	//	    cout << "virial_ij[2][2] = " <<  virial_ij[2] << endl;
+	//	    cout << "virial_ij[0][1] = " <<  virial_ij[3] << endl;
+	//	    cout << "virial_ij[0][2] = " <<  virial_ij[4] << endl;
+	//	    cout << "virial_ij[1][2] = " <<  virial_ij[5] << endl;
+	//	  }
+	//	}
+d1035 4
+a1038 16
+	//	if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4) {
+	//	  cout << endl;
+	//	  cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	//	  cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	//	  cout << "f[0] = " << fi[0] << " " << fi[1] << " " << fi[2] << endl;
+	//	  cout << "f[4] = " << -fi[0] << " " << -fi[1] << " " << -fi[2] << endl;
+	//	  cout << "energy_ij = " <<  energy_ij << endl;
+	//	  if (Lvirial) {
+	//	    cout << "virial_ij[0][0] = " <<  virial_ij[0] << endl;
+	//	    cout << "virial_ij[1][1] = " <<  virial_ij[1] << endl;
+	//	    cout << "virial_ij[2][2] = " <<  virial_ij[2] << endl;
+	//	    cout << "virial_ij[0][1] = " <<  virial_ij[3] << endl;
+	//	    cout << "virial_ij[0][2] = " <<  virial_ij[4] << endl;
+	//	    cout << "virial_ij[1][2] = " <<  virial_ij[5] << endl;
+	//	  }
+	//	}
+d1084 4
+a1092 18
+	  // 	if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4
+	  // 	     && k_pnt->get_tag() == 125) {
+	  // 	  cout << endl;
+	  // 	  cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	  // 	  cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	  // 	  cout << "r[125] = " << xk[0] << " " << xk[1] << " " << xk[2] << endl;
+	  // 	  cout << "f[0] = " << fi[0] << " " << fi[1] << " " << fi[2] << endl;
+	  // 	  cout << "f[4] = " << fj[0] << " " << fj[1] << " " << fj[2] << endl;
+	  // 	  cout << "f[125] = " << fk[0] << " " << fk[1] << " " << fk[2] << endl;
+	  // 	  if (Lvirial) {
+	  // 	    cout << "virial_ijk[0][0] = " <<  virial_ijk[0] << endl;
+	  // 	    cout << "virial_ijk[1][1] = " <<  virial_ijk[1] << endl;
+	  // 	    cout << "virial_ijk[2][2] = " <<  virial_ijk[2] << endl;
+	  // 	    cout << "virial_ijk[0][1] = " <<  virial_ijk[3] << endl;
+	  // 	    cout << "virial_ijk[0][2] = " <<  virial_ijk[4] << endl;
+	  // 	    cout << "virial_ijk[1][2] = " <<  virial_ijk[5] << endl;
+	  // 	  }
+	  // 	}
+d1304 46
+@
+
+
+4.4
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d125 1
+a125 1
+  double lam3,c,d,h,powern,beta,lam2,bigb,bigr,bigd,lam1,biga,z_zbl,r_zbl_1,r_zbl_2;
+d279 1
+a279 1
+    } else if (forcefieldname == "tersoff_zbl") {
+d284 1
+a284 1
+	  bigb >> bigr >> bigd >> lam1 >> biga >> z_zbl >> r_zbl_1 >> r_zbl_2;
+d294 1
+d310 3
+a312 3
+	ff_param_tmp.params[12] = z_zbl;
+	ff_param_tmp.params[13] = r_zbl_1;
+	ff_param_tmp.params[14] = r_zbl_2;
+d389 1
+a389 1
+  double z_zbl,r_zbl_1,r_zbl_2;
+d465 3
+a467 3
+        z_zbl = input_param_list[ii].params[12];
+        r_zbl_1 = input_param_list[ii].params[13];
+        r_zbl_2 = input_param_list[ii].params[14];
+d470 22
+a491 1
+                               z_zbl,r_zbl_1,r_zbl_2,
+d572 3
+a574 3
+              z_zbl = input_param_list[ii].params[12];
+              r_zbl_1 = input_param_list[ii].params[13];
+              r_zbl_2 = input_param_list[ii].params[14];
+d577 28
+a604 1
+                               z_zbl,r_zbl_1,r_zbl_2,
+d672 9
+d753 4
+d868 4
+d957 11
+d1016 20
+d1076 4
+d1231 51
+a1281 3
+					   const double& z_zbl,
+					   const double& r_zbl_1,
+					   const double& r_zbl_2,
+d1308 3
+a1310 3
+  ff_param_tmp.params[17] = z_zbl;
+  ff_param_tmp.params[18] = r_zbl_1;
+  ff_param_tmp.params[19] = r_zbl_2;
+@
+
+
+4.4.2.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d383 1
+a383 2
+void Force_Tersoff::SetupInteractions(const ParticleList* p, 
+				      const Box* b, 
+@
+
+
+4.4.2.2
+log
+@Latest PPPM version
+@
+text
+@d383 1
+a383 1
+void Force_Tersoff::SetupInteractions(ParticleList* p, 
+d385 1
+a385 1
+                                      double& g_ewald, 
+d709 1
+a709 1
+			       const Box* b, double& g_ewald, Comm* comm) {
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d384 2
+a385 1
+				      const Force_Ewald* ff_ewald, Comm* comm) {
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a1230 8
+
+// added saubry (01-24-05)
+void Force_Tersoff::EnergyChange(int* atom, vector <double> boost,
+				 const bool& Lenergy,
+				 ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Twobody::EnergyChange:\n"
+	     "Not implemented yet");
+}
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d1233 1
+a1233 1
+void Force_Tersoff::EnergyChange(int* atom, double boost[3],
+@
+
+
+4.3.2.1.2.2
+log
+@Added EAM energy change calculation
+@
+text
+@a78 1
+  energy_save.resize(npieces);
+@
+
+
+4.3.2.1.2.3
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d1233 7
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d333 1
+a333 1
+		 "Invalid forcefield name");
+d403 9
+d488 3
+a490 2
+      glog.error("Force_Twobody::SetupInteractions:\n"
+		 "Type has no pure entry");
+d584 6
+a589 2
+	    glog.error("Force_Tersoff::SetupInteractions:\n"
+		       "Missing pure entry for this cross pair");
+d595 5
+a599 1
+			 "Pure components of cross pair have different forcefield types");
+d606 6
+a611 1
+			   "no mixing rule for type tersoff_cut");
+d615 6
+a620 1
+			   "no mixing rule for type tersoff_zbl");
+d669 7
+d683 1
+d698 1
+d762 8
+a778 1
+      jtype = type_index[j_pnt->get_type()];
+a794 2
+      //Repulsive pair parameters obtained from ijj tersoff entry
+      ientry = param_index[itype][jtype][jtype];
+d859 5
+a865 1
+	  ientry = param_index[itype][jtype][ktype];
+d961 5
+a967 1
+	  ientry = param_index[itype][jtype][ktype];
+a1036 8
+// added saubry (01-24-05)
+void Force_Tersoff::EnergyChange(int* atom, vector <double> boost,
+		  const bool& Lenergy, ParticleList* p,
+                  const Box* b, Comm* comm) {
+  glog.error("Force_Tersoff::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d317 1
+a317 1
+		 "Invalid forcefield name"+forcefieldname);
+a386 9
+  // Initialize param_index to empty value
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      for (ktype=0;ktype<ntypes;ktype++) {
+      param_index[itype][jtype][ktype] = -1;
+      }
+    }
+  }
+
+d463 2
+a464 3
+      glog.warning("Force_Tersoff::SetupInteractions:\n"
+		   "Force field has no pure entry for particle type "
+		   + id_index[itype]);
+d558 2
+a559 6
+          glog.warning("Force_Tersoff::SetupInteractions:\n"
+                     "Missing pure entry for this cross triple\n"
+                       "No interaction for this cross triple ("
+                     + id_index[itype] + ","
+                     + id_index[jtype] + ","
+                     + id_index[ktype] + ")");
+d565 1
+a565 5
+			 "Pure components have different forcefield types "
+			 "for cross triple ("
+			 + id_index[itype] + ","
+			 + id_index[jtype] + ","
+			 + id_index[ktype] + ")");
+d572 1
+a572 6
+			   "no mixing rule for type tersoff_cut"
+                         "for cross triple\n"
+                         "No interaction for this cross pair ("
+                + id_index[itype] + ","
+                + id_index[jtype] + ","
+                + id_index[ktype] + ")");
+d576 1
+a576 6
+			   "no mixing rule for type tersoff_zbl"
+                         "for cross triple\n"
+                         "No interaction for this cross pair ("
+                + id_index[itype] + ","
+                + id_index[jtype] + ","
+                + id_index[ktype] + ")");
+a624 7
+  // initialize rcutneighsq_table
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      rcutneighsq_table[itype][jtype] = 0.0;
+    }
+  }
+
+a631 1
+	if (i != -1) {
+a645 1
+	}
+a708 8
+      jtype = type_index[j_pnt->get_type()];
+      //Repulsive pair parameters obtained from ijj tersoff entry
+      ientry = param_index[itype][jtype][jtype];
+      // skip interactions not included in force field
+      if (ientry == -1) {
+	continue;
+      }
+
+d718 1
+d735 2
+a800 5
+	  ientry = param_index[itype][jtype][ktype];
+	  // skip interactions not included in force field
+	  if (ientry == -1) {
+	    continue;
+	  }
+d803 1
+a898 5
+	  ientry = param_index[itype][jtype][ktype];
+	  // skip interactions not included in force field
+	  if (ientry == -1) {
+	    continue;
+	  }
+d901 1
+d971 8
+@
+
+
+3.5
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.4
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.3
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d317 1
+a317 1
+		 "Invalid forcefield name");
+d387 9
+d472 3
+a474 2
+      glog.error("Force_Twobody::SetupInteractions:\n"
+		 "Type has no pure entry");
+d568 6
+a573 2
+	    glog.error("Force_Tersoff::SetupInteractions:\n"
+		       "Missing pure entry for this cross pair");
+d579 5
+a583 1
+			 "Pure components of cross pair have different forcefield types");
+d590 6
+a595 1
+			   "no mixing rule for type tersoff_cut");
+d599 6
+a604 1
+			   "no mixing rule for type tersoff_zbl");
+d653 7
+d667 1
+d682 1
+d746 8
+a762 1
+      jtype = type_index[j_pnt->get_type()];
+a778 2
+      //Repulsive pair parameters obtained from ijj tersoff entry
+      ientry = param_index[itype][jtype][jtype];
+d843 5
+a849 1
+	  ientry = param_index[itype][jtype][ktype];
+d945 5
+a951 1
+	  ientry = param_index[itype][jtype][ktype];
+@
+
+
+3.3.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a970 10
+// added saubry (01-24-05)
+void Force_Tersoff::EnergyChange(int* atom, vector <double> boost,
+		  const bool& Lenergy, const bool& Lvirial, 
+                  ParticleList* p,
+                  const Box* b, Comm* comm) {
+  glog.error("Force_Tersoff::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+
+@
+
+
+3.3.6.2
+log
+@Update changes.
+@
+text
+@d973 2
+a974 1
+		  const bool& Lenergy, ParticleList* p,
+@
+
+
+3.3.6.3
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d979 1
+@
+
+
+3.2
+log
+@Added tersoff_zbl force type.  This crosses over from the Tersoff form to the
+'ZBL" potential at short range.  The ZBL potential is designed to get the correct short range behavior for high energy collisions.
+@
+text
+@d171 4
+a174 1
+    comm->get_nodefile() << isize << endl;
+d178 3
+a180 1
+    comm->get_nodefile() << buf << endl;
+@
+
+
+3.1
+log
+@Added settings for Apple OSX with LAM/MPI to Makefile.
+@
+text
+@d109 1
+a109 1
+  double lam3,c,d,h,powern,beta,lam2,bigb,bigr,bigd,lam1,biga;
+d258 51
+d366 1
+d420 21
+d500 27
+d569 4
+d633 4
+d738 4
+d757 15
+d803 19
+d834 36
+d903 4
+d912 18
+d1045 48
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@a644 15
+      //      if (itag == 0 && jtag == 4) {
+      //	cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+      //	cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+      //	cout << "f[0] = " << fi[0] << " " << fi[1] << " " << fi[2] << endl;
+      //	cout << "f[4] = " << -fi[0] << " " << -fi[1] << " " << -fi[2] << endl;
+      //	if (Lvirial) {
+      //	  cout << "virial_ij[0][0] = " <<  virial_ij[0] << endl;
+      //	  cout << "virial_ij[1][1] = " <<  virial_ij[1] << endl;
+      //	  cout << "virial_ij[2][2] = " <<  virial_ij[2] << endl;
+      //	  cout << "virial_ij[0][1] = " <<  virial_ij[3] << endl;
+      //	  cout << "virial_ij[0][2] = " <<  virial_ij[4] << endl;
+      //	  cout << "virial_ij[1][2] = " <<  virial_ij[5] << endl;
+      //	}
+      //      }
+
+a675 8
+	    //	    if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4
+	    //		&& k_pnt->get_tag() == 125) {
+	    //	      cout << endl;
+	    //	      cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	    //	      cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	    //	      cout << "r[125] = " << xk[0] << " " << xk[1] << " " << xk[2] << endl;
+	    //	      cout << "zetaterm = " <<  zetaterm_tersoff_cut(xi,xj,xk,ientry) << endl;
+	    //	    }
+a687 16
+	//	if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4) {
+	//	  cout << endl;
+	//	  cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	//	  cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	//	  cout << "f[0] = " << fi[0] << " " << fi[1] << " " << fi[2] << endl;
+	//	  cout << "f[4] = " << -fi[0] << " " << -fi[1] << " " << -fi[2] << endl;
+	//	  cout << "energy_ij = " <<  energy_ij << endl;
+	//	  if (Lvirial) {
+	//	    cout << "virial_ij[0][0] = " <<  virial_ij[0] << endl;
+	//	    cout << "virial_ij[1][1] = " <<  virial_ij[1] << endl;
+	//	    cout << "virial_ij[2][2] = " <<  virial_ij[2] << endl;
+	//	    cout << "virial_ij[0][1] = " <<  virial_ij[3] << endl;
+	//	    cout << "virial_ij[0][2] = " <<  virial_ij[4] << endl;
+	//	    cout << "virial_ij[1][2] = " <<  virial_ij[5] << endl;
+	//	  }
+	//	}
+a725 18
+	  // 	if (i_pnt->get_tag() == 0 && j_pnt->get_tag() == 4
+	  // 	     && k_pnt->get_tag() == 125) {
+	  // 	  cout << endl;
+	  // 	  cout << "r[0] = " << xi[0] << " " << xi[1] << " " << xi[2] << endl;
+	  // 	  cout << "r[4] = " << xj[0] << " " << xj[1] << " " << xj[2] << endl;
+	  // 	  cout << "r[125] = " << xk[0] << " " << xk[1] << " " << xk[2] << endl;
+	  // 	  cout << "f[0] = " << fi[0] << " " << fi[1] << " " << fi[2] << endl;
+	  // 	  cout << "f[4] = " << fj[0] << " " << fj[1] << " " << fj[2] << endl;
+	  // 	  cout << "f[125] = " << fk[0] << " " << fk[1] << " " << fk[2] << endl;
+	  // 	  if (Lvirial) {
+	  // 	    cout << "virial_ijk[0][0] = " <<  virial_ijk[0] << endl;
+	  // 	    cout << "virial_ijk[1][1] = " <<  virial_ijk[1] << endl;
+	  // 	    cout << "virial_ijk[2][2] = " <<  virial_ijk[2] << endl;
+	  // 	    cout << "virial_ijk[0][1] = " <<  virial_ijk[3] << endl;
+	  // 	    cout << "virial_ijk[0][2] = " <<  virial_ijk[4] << endl;
+	  // 	    cout << "virial_ijk[1][2] = " <<  virial_ijk[5] << endl;
+	  // 	  }
+	  // 	}
+@
+
+
+2.5
+log
+@Added a new variant of the neighbor list, invoked by
+Ltwoway = false
+Ltwoway_ghost = true
+
+This is the same as what LAMMPS uses when Newton's Law is not used.
+
+The new variant is used in by the Force_Eam class, in order
+to eliminate the communication of fp.
+
+It was more of an experiment than anything. It works, and for
+examples with lots of ghost atoms, seems to speed things up, but
+I doubt that it is dramatic.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.5.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@@
+
+
+2.4
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d902 1
+a902 1
+  bool Ltwoway;
+d911 1
+d914 2
+a915 1
+			    Ltwoway,neighbor_freq,neighbor_rskin);
+d918 1
+d921 2
+a922 1
+			    Ltwoway,neighbor_freq,neighbor_rskin);
+@
+
+
+2.3
+log
+@Fixed problem with virial in class Force_External
+@
+text
+@d66 35
+d492 6
+@
+
+
+2.2
+log
+@Updated header
+@
+text
+@a65 1
+  virial.resize(nvirial);
+@
+
+
+2.1
+log
+@Added the Tersoff force field class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+

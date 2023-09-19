@@ -1,0 +1,616 @@
+head	4.5;
+access;
+symbols
+	ReverseComm_branch:4.5.0.2
+	ADTools_branch:4.4.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoSource:3.0.0.6
+	GraspSource:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.5.0.2
+	cjkimme_version_merge_from_trunk_1:2.2.2.1
+	cjkimme_version:2.2.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.5
+date	2006.06.29.14.27.21;	author foiles;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.02.03.21.20.03;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.6.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.07.19.17.05.38;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.03.20.00.15.39;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.2.2.1;
+next	2.1;
+
+2.1
+date	2003.09.23.23.33.34;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.03.03.20.32.39;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.04.00.12.41;	author athomps;	state Exp;
+branches;
+next	;
+
+2.2.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+4.3.6.1
+date	2006.02.08.23.43.02;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2006.08.28.22.33.15;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.5
+log
+@add the files for the veldependent forcefiled along with modifications
+in other files (vec3.h Makefile forcefield.h forcefieldlist.cpp ) needed to
+support the new forcefield
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+// INLINE FUNCTION DEFINITIONS
+//
+// Inlining inner loop operations provides significant performance gain
+//
+// Set of inline 3D vector operations
+
+inline void vec3_zero(double x[]) {
+  x[0] = 0.0;
+  x[1] = 0.0;
+  x[2] = 0.0;
+}
+
+inline void vec3_copy(const double k, double x[]) {
+  x[0] = k;
+  x[1] = k;
+  x[2] = k;
+}
+
+inline void vec3_copy(const double x[], double y[]) {
+  y[0] = x[0];
+  y[1] = x[1];
+  y[2] = x[2];
+}
+
+inline double vec3_dot(const double x[], const double y[]) {
+  return x[0]*y[0] + x[1]*y[1] + x[2]*y[2];
+}
+
+inline void vec3_cross(const double x[], const double y[], double z[]) {
+  z[0] = +x[1]*y[2]-x[2]*y[1];
+  z[1] = -x[0]*y[2]+x[2]*y[0];
+  z[2] = +x[0]*y[1]-x[1]*y[0];
+}
+
+inline void vec3_scale(const double k, const double x[], double y[]) {
+  y[0] = k*x[0];
+  y[1] = k*x[1];
+  y[2] = k*x[2];
+}
+
+inline void vec3_add(const double x[], const double y[], double z[]) {
+  z[0] = x[0]+y[0];
+  z[1] = x[1]+y[1];
+  z[2] = x[2]+y[2];
+}
+
+inline void vec3_scaleadd(const double k, const double x[], const double y[], double z[]) {
+  z[0] = k*x[0]+y[0];
+  z[1] = k*x[1]+y[1];
+  z[2] = k*x[2]+y[2];
+}
+
+inline double vec3_distsq(const double x[], const double y[]) {
+  double delr0,delr1,delr2;
+  delr0 = x[0]-y[0];
+  delr1 = x[1]-y[1];
+  delr2 = x[2]-y[2];
+  return delr0*delr0+delr1*delr1+delr2*delr2;
+}
+
+inline double vec3_distsq(const double x[], const double y[], double z[]) {
+  z[0] = x[0]-y[0];
+  z[1] = x[1]-y[1];
+  z[2] = x[2]-y[2];
+  return z[0]*z[0]+z[1]*z[1]+z[2]*z[2];
+}
+
+inline void vec3_subtract(const double x[], const double y[], double z[]) {
+  z[0] = x[0]-y[0];
+  z[1] = x[1]-y[1];
+  z[2] = x[2]-y[2];
+}
+
+inline double vec3_norm(const double x[]) {
+  return sqrt(x[0]*x[0]+x[1]*x[1]+x[2]*x[2]);
+}
+
+inline double vec3_normsq(const double x[]) {
+  return x[0]*x[0]+x[1]*x[1]+x[2]*x[2];
+}
+
+inline double vec3_unit(const double x[], double y[]) {
+  double xnorm,xnorminv;
+  xnorm = sqrt(x[0]*x[0]+x[1]*x[1]+x[2]*x[2]);
+  xnorminv = 1.0/xnorm;
+  y[0] = x[0]*xnorminv;
+  y[1] = x[1]*xnorminv;
+  y[2] = x[2]*xnorminv;
+  return xnorm;
+}
+@
+
+
+4.4
+log
+@Fixed error in vec3_unit()
+@
+text
+@d123 4
+@
+
+
+4.4.2.1
+log
+@Created automatic differentiation version for LJ force field, called lj_cut_AD
+@
+text
+@d98 2
+a99 5
+// Template version to allow AD types to access this function.
+// The return type is that of the first argument
+template <typename ScalarTx, typename ScalarTy>
+inline ScalarTx vec3_distsq(const ScalarTx x[], const ScalarTy y[]) {
+  ScalarTx delr0,delr1,delr2;
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d127 3
+a129 3
+  y[0] = x[0]*xnorm;
+  y[1] = x[1]*xnorm;
+  y[2] = x[2]*xnorm;
+@
+
+
+4.3.6.1
+log
+@Added bin-based energy calc
+@
+text
+@d127 3
+a129 3
+  y[0] = x[0]*xnorminv;
+  y[1] = x[1]*xnorminv;
+  y[2] = x[2]*xnorminv;
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.1
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+2.5
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.4
+log
+@Added the Tersoff force field class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.3
+log
+@Various
+@
+text
+@a102 1
+  double delr[3];
+d104 10
+@
+
+
+2.2
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.2.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d103 1
+a104 10
+}
+
+inline double vec3_unit(const double x[], double y[]) {
+  double xnorm,xnorminv;
+  xnorm = sqrt(x[0]*x[0]+x[1]*x[1]+x[2]*x[2]);
+  xnorminv = 1.0/xnorm;
+  y[0] = x[0]*xnorm;
+  y[1] = x[1]*xnorm;
+  y[2] = x[2]*xnorm;
+  return xnorm;
+@
+
+
+2.1
+log
+@Fixed up the output log immensely.  Fixed some bugs in the
+rescale thermostat.
+@
+text
+@d1 28
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d7 12
+@
+
+
+1.4
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d42 5
+a46 5
+  double delr[3];
+  delr[0] = x[0]-y[0];
+  delr[1] = x[1]-y[1];
+  delr[2] = x[2]-y[2];
+  return delr[0]*delr[0]+delr[1]*delr[1]+delr[2]*delr[2];
+@
+
+
+1.3
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@a10 1
+  return;
+a20 1
+  return;
+a26 1
+  return;
+a32 1
+  return;
+a38 1
+  return;
+a42 1
+
+a45 1
+
+a49 1
+
+a52 1
+
+d56 1
+a56 2
+inline double vec3_subtract(const double x[], const double y[], double z[]) {
+
+a59 1
+
+a63 1
+
+@
+
+
+1.2
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d73 5
+@
+
+
+1.1
+log
+@
+
+Added neighbor list object.
+@
+text
+@d1 4
+@
+

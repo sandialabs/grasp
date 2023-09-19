@@ -1,0 +1,130 @@
+head	4.2;
+access;
+symbols
+	ReverseComm_branch:4.0.0.16
+	ADTools_branch:4.0.0.14
+	Monaco_Aidan:4.0.0.12
+	Root-of-Monaco_Aidan:4.0
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0;
+locks; strict;
+comment	@# @;
+
+
+4.2
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches
+	4.0.16.1;
+next	1.1;
+
+1.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	;
+
+4.0.16.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	4.0.16.2;
+
+4.0.16.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.2
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@      integer Lvirial,Latomvirial
+
+      common
+     $/cbkd/ d(3,nat),estrain(nat)
+
+      common
+     $/cbkvirial/ atomvirial(6,nat),virial(6),Lvirial,Latomvirial
+@
+
+
+4.1
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d4 1
+a4 1
+     $/cbkd/ d(3,nat)
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d1 2
+d6 2
+@
+
+
+4.0.16.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@a0 2
+      logical Latomvirial
+
+a3 2
+      common
+     $/cbkvirial/ atomvirial(6,nat),virial(6),Latomvirial
+@
+
+
+4.0.16.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d1 1
+a1 1
+      integer Lvirial,Latomvirial
+d7 1
+a7 1
+     $/cbkvirial/ atomvirial(6,nat),virial(6),Lvirial,Latomvirial
+@
+
+
+1.1
+log
+@Merged REAX version with main version
+@
+text
+@@
+

@@ -1,0 +1,266 @@
+head	4.3;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.1
+	P_MonacoTesting:3.1.0.6
+	InitialGraspTesting:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	cjkimme_version_merge_from_trunk_1:1.2.2.1
+	cjkimme_version:1.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.3
+date	2007.06.02.03.27.22;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2006.08.28.23.28.22;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.09.30.18.46.12;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.03.24.21.11.35;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.07.30.20.18.56;	author athomps;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2004.07.13.21.21.21;	author athomps;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.3
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@# Timestep 0
+# 
+# Unit cell lattice vectors:
+# 2.000000000 0.000000000 0.000000000
+# 0.000000000 2.000000000 0.000000000
+# 0.000000000 0.000000000 2.000000000
+# 
+# Unit cell origin:
+# -1.000000000 -1.000000000 -1.000000000
+# 
+# Number of particles 4
+# 
+# Particle positions 
+         3          A         13         0.3000000000         -1.000000000         0.000000000         -1.000000000
+         4          A         14         0.4000000000         0.000000000         -1.000000000         -1.000000000
+         1          A         11         0.1000000000         0.000000000         0.000000000         0.000000000
+         2          A         12         0.2000000000         -1.000000000         -1.000000000         0.000000000
+# 
+# Timestep 1000
+# 
+# Unit cell lattice vectors:
+# 2.362495443 0.000000000 0.000000000
+# 0.000000000 2.362495443 0.000000000
+# 0.000000000 0.000000000 2.362495443
+# 
+# Unit cell origin:
+# -1.000000000 -1.000000000 -1.000000000
+# 
+# Particle positions 
+         3          A         13         0.3000000000         -0.9085225727         0.5109735822         -0.6288057110
+         1          A         11         0.1000000000         0.2964089700         -0.02447202135         0.1449731976
+         4          A         14         0.4000000000         0.01025739796         1.021912273         0.8884687126
+         2          A         12         0.2000000000         1.326847091         -0.7834229476         0.3203546871
+# 
+@
+
+
+4.2
+log
+@New PRNG caused new initial conditions
+@
+text
+@d14 4
+a17 4
+       3        A      13        0.3000000000        -1.000000000         0.000000000        -1.000000000
+       4        A      14        0.4000000000         0.000000000        -1.000000000        -1.000000000
+       1        A      11        0.1000000000         0.000000000         0.000000000         0.000000000
+       2        A      12        0.2000000000        -1.000000000        -1.000000000         0.000000000
+d30 4
+a33 4
+       3        A      13        0.3000000000       -0.9085225727        0.5109735822       -0.6288057110
+       1        A      11        0.1000000000        0.2964089700      -0.02447202135        0.1449731976
+       4        A      14        0.4000000000       0.01025739796         1.021912273        0.8884687126
+       2        A      12        0.2000000000         1.326847091       -0.7834229476        0.3203546871
+@
+
+
+4.1
+log
+@Modified definition for NPT conserved energy and time constant
+@
+text
+@d22 3
+a24 3
+# 2.321550835 0.000000000 0.000000000
+# 0.000000000 2.321550835 0.000000000
+# 0.000000000 0.000000000 2.321550835
+d30 4
+a33 4
+       2        A      12        0.2000000000       -0.9879856638         1.021584363       -0.1729933548
+       3        A      13        0.3000000000       -0.9267237090      -0.07822372704       -0.8434506209
+       1        A      11        0.1000000000        0.1273932870        0.4819848689        0.3916282812
+       4        A      14        0.4000000000        0.1088669212       -0.7822438339         1.267917365
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d22 3
+a24 3
+# 2.302389329 0.000000000 0.000000000
+# 0.000000000 2.302389329 0.000000000
+# 0.000000000 0.000000000 2.302389329
+d30 4
+a33 4
+       2        A      12        0.2000000000       -0.9947513345        0.9970279356       -0.1948824179
+       3        A      13        0.3000000000       -0.9092691015      -0.08315649956       -0.8409185926
+       1        A      11        0.1000000000        0.1135064202        0.4787317492        0.3918153137
+       4        A      14        0.4000000000       0.09290334515       -0.7878245265         1.248764356
+@
+
+
+3.2
+log
+@Added a bunch of test case for mixing force fields
+@
+text
+@d9 1
+a9 1
+# -1.0000000000 -1.0000000000 -1.0000000000
+d27 1
+a27 1
+# -1.0000000000 -1.0000000000 -1.0000000000
+@
+
+
+3.1
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d9 1
+a9 1
+# -1.000000000 -1.000000000 -1.000000000
+d27 1
+a27 1
+# -1.000000000 -1.000000000 -1.000000000
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d9 1
+a9 1
+# -1.0000000000 -1.0000000000 -1.0000000000
+d27 1
+a27 1
+# -1.0000000000 -1.0000000000 -1.0000000000
+@
+
+
+1.2
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@@
+
+
+1.2.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.1
+log
+@Added NPT ensemble
+@
+text
+@d19 1
+a19 1
+# Timestep 10000
+d22 3
+a24 3
+# 2.052082288 0.000000000 0.000000000
+# 0.000000000 2.052082288 0.000000000
+# 0.000000000 0.000000000 2.052082288
+d30 4
+a33 4
+       3        A      13        0.3000000000        0.9948754278       -0.1426391645       -0.9155188374
+       1        A      11        0.1000000000       0.04944192368        0.1150420258       0.02497081076
+       4        A      14        0.4000000000       0.06674722729       -0.9322942990        0.9409661217
+       2        A      12        0.2000000000         1.045182285       -0.9880262742       0.05374648083
+@
+

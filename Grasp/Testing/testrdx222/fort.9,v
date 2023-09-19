@@ -1,0 +1,78 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@.\" @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.05.23.05;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.02.09.08.04.53;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.02.09.08.04.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@@
+
+
+1.2
+log
+@Cleaning up testrdx222
+@
+text
+@@
+
+
+1.1
+log
+@file fort.9 was initially added on branch REAXFF.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Added testrdx222 example to repository
+@
+text
+@@
+

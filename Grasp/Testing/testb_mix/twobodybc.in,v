@@ -1,0 +1,69 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.2
+	REAX-2:1.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.03.12.01.54.18;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.03.12.00.10.10;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@# make (B,C) interaction satisfy L-B mixing rule
+B   C   lj_cut  1.3964240044 1.05  3.0
+@
+
+
+1.2
+log
+@added use of mixing rule to example
+@
+text
+@@
+
+
+1.1
+log
+@Added a example of mixing twobos force fields
+@
+text
+@d1 2
+a2 1
+B   C   lj_cut  1.4 1.0  3.0
+@
+

@@ -1,0 +1,2364 @@
+head	4.12;
+access;
+symbols
+	ReverseComm_branch:4.7.0.2
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.1
+	CRAY:2.2.0.4
+	cjkimme_version_merge_from_trunk_1:2.2.2.1
+	cjkimme_version:2.2.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.12
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.03.19.05.22.50;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.09.15.17.51.20;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.08.26.02.04.29;	author athomps;	state Exp;
+branches
+	4.7.2.1;
+next	4.6;
+
+4.6
+date	2006.05.04.22.00.58;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2005.10.28.19.10.56;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.06.09.16.06.37;	author foiles;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.19.21.59.17;	author foiles;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches
+	2.2.2.1;
+next	2.1;
+
+2.1
+date	2004.07.19.17.05.38;	author athomps;	state Exp;
+branches;
+next	;
+
+2.2.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+4.7.2.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.12
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCE_TERSOFF_INLINE_H
+#define FORCE_TERSOFF_INLINE_H
+
+#include <iostream>
+#include <math.h>
+
+// INLINE(inline) FUNCTION DEFINITIONS
+//
+// Inlining inner loop operations provides significant performance gain
+//
+
+inline void Force_Tersoff::force_tersoff_ij_cut(const double& zeta_ij,
+		       const double drdata[], 
+		       double fi[],
+                       const bool& Lenergy, const bool& Lvirial, 
+                       double& energy, double virial_ij[],
+		       double& prefac, const int& ientry) const {
+  /*
+    This is the tersoff part of tersoff forcefield.
+    This forcefield form is based on that of J. Tersoff,
+    Phys. Rev. B, v. 37, p. 6991, (1988). The implementation
+    is based on a code by Stephen Foiles.
+
+    The precomputed parameters stored in ff_params.params[] are as follows:
+
+    rcut = bigr + bigd;
+    params[0] = lam3;
+    params[1] = c;
+    params[2] = d;
+    params[3] = h;
+    params[4] = powern
+    params[5] = beta
+    params[6] = lam2
+    params[7] = bigb
+    params[8] = bigr
+    params[9] = bigd
+    params[10] = rcut*rcut
+    params[11] = ters_beta_zeta_ranges[0]
+    params[12] = ters_beta_zeta_ranges[1]
+    params[13] = ters_beta_zeta_ranges[2]
+    params[14] = ters_beta_zeta_ranges[3]
+    params[15] = lam1
+    params[16] = biga
+  */
+
+  double forces,bij;
+
+  if (drdata[3] <= param_list[ientry].params[10]) {
+    bij = ters_bij(zeta_ij,ientry);
+    forces = 0.5*bij*drdata[12]*drdata[5];
+    prefac = -0.5*drdata[11]*ters_bij_d(zeta_ij,ientry);
+    fi[0] = forces*drdata[0];
+    fi[1] = forces*drdata[1];
+    fi[2] = forces*drdata[2];
+    if (Lenergy) {
+      energy = 0.5*bij*drdata[11];
+    }
+    if (Lvirial) {
+      virial_ij[0] = -fi[0]*drdata[0];
+      virial_ij[1] = -fi[1]*drdata[1];
+      virial_ij[2] = -fi[2]*drdata[2];
+      virial_ij[3] = -fi[0]*drdata[1];
+      virial_ij[4] = -fi[0]*drdata[2];
+      virial_ij[5] = -fi[1]*drdata[2];
+    }
+  } else {
+    prefac = 0.0;
+    fi[0] = 0.0;
+    fi[1] = 0.0;
+    fi[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ij[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+inline double Force_Tersoff::zetaterm_tersoff_cut(
+	    const double drdataij[],
+	    const double drdataik[],
+	    const int& ijentry, const int& ijkentry) const {
+  double costheta;
+  double tmp,ex_delr;
+  double result;
+
+  result = 0.0;
+  if (drdataij[3] <= param_list[ijentry].params[10]) {
+    if (drdataik[3] <= param_list[ijkentry].params[10] ) {
+      costheta = vec3_dot(&drdataij[6],&drdataik[6]);
+
+      tmp = pow(param_list[ijkentry].params[0]*(drdataij[4]-drdataik[4]),3);
+      if (tmp > 69.0776) {
+	ex_delr = 1.e30;
+      }
+      else if (tmp < -69.0776) {
+	ex_delr = 0.;
+      }
+      else {
+	ex_delr = exp(tmp);
+      }
+
+      result = drdataik[9]*ters_gijk(costheta,ijkentry)*ex_delr;
+    }
+  }
+  return result;
+}
+
+inline void Force_Tersoff::force_tersoff_ijk_cut(const double& prefac,
+	    const double drdataij[], const double drdataik[], 
+	    double fj[], double fk[], 
+                       const bool& Lvirial, 
+                       double virial_ijk[],
+		       const int& ijentry,
+		       const int& ikentry) const
+{
+  double costheta;
+  double dcosdri[3], dcosdrj[3], dcosdrk[3];
+  double gijk,gijk_d;
+  double ex_delr,ex_delr_d;
+  double tmp;
+  double ters_lam3;
+
+  if (drdataij[3] <= param_list[ijentry].params[10]) {
+    if (drdataik[3] <= param_list[ikentry].params[10] ) {
+
+      ters_lam3 = param_list[ikentry].params[0];
+
+      tmp = pow(ters_lam3*(drdataij[4]-drdataik[4]),3);
+      if (tmp > 69.0776) {
+	ex_delr = 1.e30;
+      }
+      else if (tmp < -69.0776) {
+	ex_delr = 0.;
+      }
+      else {
+	ex_delr = exp(tmp);
+      }
+      ex_delr_d = (3.*pow(ters_lam3,3))*pow(drdataij[4]-drdataik[4],2)*ex_delr;
+      costheta = vec3_dot(&drdataij[6],&drdataik[6]);
+      gijk = ters_gijk(costheta,ijentry);
+      gijk_d = ters_gijk_d(costheta,ijentry);
+      costheta_d(&drdataij[6],drdataij[4],&drdataik[6],drdataik[4],dcosdri,dcosdrj,dcosdrk);
+      
+      vec3_scale(drdataik[9]*gijk_d*ex_delr,dcosdrj,fj);
+      vec3_scaleadd(drdataik[9]*gijk*ex_delr_d,&drdataij[6],fj,fj);
+      vec3_scale(prefac,fj,fj);
+      
+      vec3_scale(drdataik[10]*gijk*ex_delr,&drdataik[6],fk);
+      vec3_scaleadd(drdataik[9]*gijk_d*ex_delr,dcosdrk,fk,fk);
+      vec3_scaleadd(-drdataik[9]*gijk*ex_delr_d,&drdataik[6],fk,fk);
+      vec3_scale(prefac,fk,fk);
+
+      if (Lvirial) {
+	virial_ijk[0] = (fj[0]*drdataij[0]+fk[0]*drdataik[0]);
+	virial_ijk[1] = (fj[1]*drdataij[1]+fk[1]*drdataik[1]);
+	virial_ijk[2] = (fj[2]*drdataij[2]+fk[2]*drdataik[2]);
+	virial_ijk[3] = (fj[0]*drdataij[1]+fk[0]*drdataik[1]);
+	virial_ijk[4] = (fj[0]*drdataij[2]+fk[0]*drdataik[2]);
+	virial_ijk[5] = (fj[1]*drdataij[2]+fk[1]*drdataik[2]);
+      }
+    } else {
+      fj[0] = 0.0;
+      fj[1] = 0.0;
+      fj[2] = 0.0;
+      fk[0] = 0.0;
+      fk[1] = 0.0;
+      fk[2] = 0.0;
+      if (Lvirial) {
+	for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	  virial_ijk[ivirial] = 0.0;
+	}
+      }
+    }
+  } else {
+    fj[0] = 0.0;
+    fj[1] = 0.0;
+    fj[2] = 0.0;
+    fk[0] = 0.0;
+    fk[1] = 0.0;
+    fk[2] = 0.0;
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ijk[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+inline void Force_Tersoff::force_tersoff_repulsive_cut(
+	       const double drdata[], double fi[], 
+	       const bool& Lenergy, const bool& Lvirial, double& energy, 
+	       double virial_ij[], const int& ientry) const {
+
+  double tmp_fc,tmp_fc_d;
+  double tmp_exp;
+  double virial_tmp;
+  double ters_lam1,ters_A;
+
+  ters_lam1 = param_list[ientry].params[15];
+  ters_A = param_list[ientry].params[16];
+
+  if (drdata[3] <= param_list[ientry].params[10]) {
+    tmp_fc = drdata[9];
+    tmp_fc_d = drdata[10];
+    tmp_exp = exp(-ters_lam1*drdata[4]);
+    virial_tmp = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1)*drdata[5];
+    fi[0] = virial_tmp*drdata[0];
+    fi[1] = virial_tmp*drdata[1];
+    fi[2] = virial_tmp*drdata[2];
+    if (Lenergy) {
+      energy = tmp_fc*ters_A*tmp_exp;
+    }
+    if (Lvirial) {
+      virial_ij[0] = -virial_tmp*drdata[0]*drdata[0];
+      virial_ij[1] = -virial_tmp*drdata[1]*drdata[1];
+      virial_ij[2] = -virial_tmp*drdata[2]*drdata[2];
+      virial_ij[3] = -virial_tmp*drdata[0]*drdata[1];
+      virial_ij[4] = -virial_tmp*drdata[0]*drdata[2];
+      virial_ij[5] = -virial_tmp*drdata[1]*drdata[2];
+    }
+  }  else {
+    fi[0] = 0.0;
+    fi[1] = 0.0;
+    fi[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ij[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+inline void Force_Tersoff::force_tersoff_repulsive_zbl(
+	       const double drdata[], double fi[], 
+	       const bool& Lenergy, const bool& Lvirial, double& energy, 
+	       double virial_ij[], const int& ientry) const {
+
+  double tmp_fc,tmp_fc_d;
+  double tmp_exp;
+  double r,virial_tmp;
+  double ters_lam1,ters_A;
+
+  ters_lam1 = param_list[ientry].params[15];
+  ters_A = param_list[ientry].params[16];
+
+  // Purely to satisfy compiler uninitialized data checks
+  virial_tmp = 0.0;
+
+  if (drdata[3] <= param_list[ientry].params[10]) {
+    r = drdata[4];
+    if (r < param_list[ientry].params[18]) {
+      virial_tmp = zbl_d(r,drdata[12],ientry)*drdata[5];
+      if (Lenergy) energy = zbl(r,drdata[11],ientry);
+    };
+    if (r > param_list[ientry].params[18] && r < param_list[ientry].params[19]) {
+      double x,s,s_d,dxdr;
+      double tmp_1,tmp_1_d,tmp_2,tmp_2_d;
+      dxdr = 1./(param_list[ientry].params[19] - param_list[ientry].params[18]);
+      x = (r - param_list[ientry].params[18])*dxdr;
+      s = (3. - 2.*x)*x*x;
+      s_d = 6.*x*(1. - x);
+      tmp_1 = zbl(r,drdata[11],ientry);
+      tmp_1_d = zbl_d(r,drdata[12],ientry);
+      tmp_fc = drdata[9];
+      tmp_fc_d = drdata[10];
+      tmp_exp = exp(-ters_lam1*r);
+      tmp_2 = tmp_fc*ters_A*tmp_exp;
+      tmp_2_d = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1);
+      virial_tmp = (tmp_1_d*(1.-s) - tmp_1*s_d*dxdr + tmp_2_d*s + tmp_2*s_d*dxdr)*drdata[5];
+      if (Lenergy) energy = (1. - s)*tmp_1 +  s*tmp_2;
+    };
+    if (r > param_list[ientry].params[19]) {
+      tmp_fc = drdata[9];
+      tmp_fc_d = drdata[10];
+      tmp_exp = exp(-ters_lam1*r);
+      virial_tmp = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1)*drdata[5];
+      if (Lenergy) {
+        energy = tmp_fc*ters_A*tmp_exp;
+      }
+    };
+    fi[0] = virial_tmp*drdata[0];
+    fi[1] = virial_tmp*drdata[1];
+    fi[2] = virial_tmp*drdata[2];
+    if (Lvirial) {
+      virial_ij[0] = -virial_tmp*drdata[0]*drdata[0];
+      virial_ij[1] = -virial_tmp*drdata[1]*drdata[1];
+      virial_ij[2] = -virial_tmp*drdata[2]*drdata[2];
+      virial_ij[3] = -virial_tmp*drdata[0]*drdata[1];
+      virial_ij[4] = -virial_tmp*drdata[0]*drdata[2];
+      virial_ij[5] = -virial_tmp*drdata[1]*drdata[2];
+    }
+  }  else {
+    fi[0] = 0.0;
+    fi[1] = 0.0;
+    fi[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ij[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+inline void Force_Tersoff::force_tersoff_repulsive_moliere(
+	       const double drdata[],double fi[], 
+	       const bool& Lenergy, const bool& Lvirial, double& energy, 
+	       double virial_ij[], const int& ientry) const {
+
+  double tmp_fc,tmp_fc_d;
+  double tmp_exp;
+  double r,virial_tmp;
+  double ters_lam1,ters_A;
+
+  ters_lam1 = param_list[ientry].params[15];
+  ters_A = param_list[ientry].params[16];
+
+  // Purely to satisfy compiler uninitialized data checks
+  virial_tmp = 0.0;
+
+  if (drdata[3] <= param_list[ientry].params[10]) {
+    r = drdata[4];
+    if (r < param_list[ientry].params[18]) {
+      virial_tmp = moliere_d(r,drdata[12],ientry)*drdata[5];
+      if (Lenergy) energy = moliere(r,drdata[11],ientry);
+    };
+    if (r > param_list[ientry].params[18] && r < param_list[ientry].params[19]) {
+      double x,s,s_d,dxdr;
+      double tmp_1,tmp_1_d,tmp_2,tmp_2_d;
+      dxdr = 1./(param_list[ientry].params[19] - param_list[ientry].params[18]);
+      x = (r - param_list[ientry].params[18])*dxdr;
+      s = (3. - 2.*x)*x*x;
+      s_d = 6.*x*(1. - x);
+      tmp_1 = moliere(r,drdata[11],ientry);
+      tmp_1_d = moliere_d(r,drdata[12],ientry);
+      tmp_fc = drdata[9];
+      tmp_fc_d = drdata[10];
+      tmp_exp = exp(-ters_lam1*r);
+      tmp_2 = tmp_fc*ters_A*tmp_exp;
+      tmp_2_d = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1);
+      virial_tmp = (tmp_1_d*(1.-s) - tmp_1*s_d*dxdr + tmp_2_d*s + tmp_2*s_d*dxdr)*drdata[5];
+      if (Lenergy) energy = (1. - s)*tmp_1 +  s*tmp_2;
+    };
+    if (r > param_list[ientry].params[19]) {
+      tmp_fc = drdata[9];
+      tmp_fc_d = drdata[10];
+      tmp_exp = exp(-ters_lam1*r);
+      virial_tmp = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1)*drdata[5];
+      if (Lenergy) {
+        energy = tmp_fc*ters_A*tmp_exp;
+      }
+    };
+    fi[0] = virial_tmp*drdata[0];
+    fi[1] = virial_tmp*drdata[1];
+    fi[2] = virial_tmp*drdata[2];
+    if (Lvirial) {
+      virial_ij[0] = -virial_tmp*drdata[0]*drdata[0];
+      virial_ij[1] = -virial_tmp*drdata[1]*drdata[1];
+      virial_ij[2] = -virial_tmp*drdata[2]*drdata[2];
+      virial_ij[3] = -virial_tmp*drdata[0]*drdata[1];
+      virial_ij[4] = -virial_tmp*drdata[0]*drdata[2];
+      virial_ij[5] = -virial_tmp*drdata[1]*drdata[2];
+    }
+  }  else {
+    fi[0] = 0.0;
+    fi[1] = 0.0;
+    fi[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ij[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+
+// This is the most convenient way to define static class constants
+// associated with inline functions.
+//
+// These constants have external linkage, and so if this file is
+// included twice in one or more program units, the compiler
+// will give a 'duplicate initialization' error.
+// However, this file is only required
+// by one program unit, the class implementation. 
+// In addition, accidental double inclusion 
+// in a single program unit is prevented by the
+// preprocessor boilerplate at the top of this file.
+//
+const double Force_Tersoff::ZBL_C1 = 0.02817;
+const double Force_Tersoff::ZBL_C2 = 0.28022;
+const double Force_Tersoff::ZBL_C3 = 0.50986;
+const double Force_Tersoff::ZBL_C4 = 0.18175;
+const double Force_Tersoff::ZBL_D1 = 0.20162;
+const double Force_Tersoff::ZBL_D2 = 0.40290;
+const double Force_Tersoff::ZBL_D3 = 0.94229;
+const double Force_Tersoff::ZBL_D4 = 3.19980;
+const double Force_Tersoff::ZBL_ACONST = 0.46850;
+const double Force_Tersoff::ZBL_ZEXP = 0.23;
+//  units: e^2/angstrom = 2*Ryd*bohr 
+const double Force_Tersoff::ZBL_ECONV = 2.*13.6058*0.529177;
+
+
+inline double Force_Tersoff::zbl(const double& r,const double& fa,
+		      const int& ientry) const {
+
+  double a;
+  double sum;
+  double result;
+  double z1,z2;
+
+  z1 = z2 = param_list[ientry].params[17];
+
+  a = ZBL_ACONST/(pow(double(z1),ZBL_ZEXP) + pow(double(z2),ZBL_ZEXP));
+  sum = ZBL_C1*exp(-ZBL_D1*r/a);
+  sum += ZBL_C2*exp(-ZBL_D2*r/a);
+  sum += ZBL_C3*exp(-ZBL_D3*r/a);
+  sum += ZBL_C4*exp(-ZBL_D4*r/a);
+  result = double(z1)*double(z2)*ZBL_ECONV*sum/r - fa;
+
+  return result;
+}   
+
+inline double Force_Tersoff::zbl_d(const double& r, const double& fa_d,
+		      const int& ientry) const {
+
+  double a;
+  double sum,sum_d;
+  double result;
+  double z1,z2;
+  double e1,e2,e3,e4,roa;
+
+  z1 = z2 = param_list[ientry].params[17];
+
+  a = ZBL_ACONST/(pow(double(z1),ZBL_ZEXP) + pow(double(z2),ZBL_ZEXP));
+
+  roa = r/a;
+  e1 = exp(-ZBL_D1*roa);
+  e2 = exp(-ZBL_D2*roa);
+  e3 = exp(-ZBL_D3*roa);
+  e4 = exp(-ZBL_D4*roa);
+  sum = ZBL_C1*e1;
+  sum += ZBL_C2*e2;
+  sum += ZBL_C3*e3;
+  sum += ZBL_C4*e4;
+  sum_d = -ZBL_C1*ZBL_D1*e1/a;
+  sum_d -= ZBL_C2*ZBL_D2*e2/a;
+  sum_d -= ZBL_C3*ZBL_D3*e3/a;
+  sum_d -= ZBL_C4*ZBL_D4*e4/a;
+
+  result = (sum_d - sum/r)/r;
+  result = double(z1)*double(z2)*ZBL_ECONV*result - fa_d;
+
+  return result;
+}   
+
+// This is the most convenient way to define static class constants
+// associated with inline functions.
+//
+// These constants have external linkage, and so if this file is
+// included twice in one or more program units, the compiler
+// will give a 'duplicate initialization' error.
+// However, this file is only required
+// by one program unit, the class implementation. 
+// In addition, accidental double inclusion 
+// in a single program unit is prevented by the
+// preprocessor boilerplate at the top of this file.
+//
+const double Force_Tersoff::MOLIERE_C1 = 0.35;
+const double Force_Tersoff::MOLIERE_C2 = 0.55;
+const double Force_Tersoff::MOLIERE_C3 = 0.10;
+const double Force_Tersoff::MOLIERE_D1 = 0.3;
+const double Force_Tersoff::MOLIERE_D2 = 1.2;
+const double Force_Tersoff::MOLIERE_D3 = 6.0;
+const double Force_Tersoff::MOLIERE_ACONST = 0.46850;
+//  units: e^2/angstrom = 2*Ryd*bohr 
+const double Force_Tersoff::MOLIERE_ECONV = 2.*13.6058*0.529177;
+
+
+inline double Force_Tersoff::moliere(const double& r, const double& fa, 
+		      const int& ientry) const {
+
+  double a;
+  double sum;
+  double result;
+  double z1,z2;
+
+  z1 = z2 = param_list[ientry].params[17];
+
+  a = MOLIERE_ACONST/pow(sqrt(double(z1)) + sqrt(double(z2)),2./3.);
+  sum = MOLIERE_C1*exp(-MOLIERE_D1*r/a);
+  sum += MOLIERE_C2*exp(-MOLIERE_D2*r/a);
+  sum += MOLIERE_C3*exp(-MOLIERE_D3*r/a);
+  result = double(z1)*double(z2)*MOLIERE_ECONV*sum/r - fa;
+
+  return result;
+}   
+
+inline double Force_Tersoff::moliere_d(const double& r, const double& fa_d,
+		      const int& ientry) const {
+
+  double a;
+  double sum,sum_d;
+  double result;
+  double z1,z2;
+  double e1,e2,e3,e4,roa;
+
+  z1 = z2 = param_list[ientry].params[17];
+
+  a = MOLIERE_ACONST/pow(sqrt(double(z1)) + sqrt(double(z2)),2./3.);
+  roa = r/a;
+  e1 = exp(-MOLIERE_D1*roa);
+  e2 = exp(-MOLIERE_D2*roa);
+  e3 = exp(-MOLIERE_D3*roa);
+  sum = MOLIERE_C1*e1;
+  sum += MOLIERE_C2*e2;
+  sum += MOLIERE_C3*e3;
+  sum_d = -MOLIERE_C1*MOLIERE_D1*e1/a;
+  sum_d -= MOLIERE_C2*MOLIERE_D2*e2/a;
+  sum_d -= MOLIERE_C3*MOLIERE_D3*e3/a;
+
+  result = (sum_d - sum/r)/r;
+  result = double(z1)*double(z2)*MOLIERE_ECONV*result - fa_d;
+
+  return result;
+}   
+
+inline double Force_Tersoff::ters_fc(const double& r,
+				     const int& ientry) const {
+  double result;
+  double ters_R,ters_D;
+
+  ters_R = param_list[ientry].params[8];
+  ters_D = param_list[ientry].params[9];
+
+  if (r < (ters_R-ters_D)) {
+    result = 1.;
+  } else if (r > (ters_R+ters_D)) {
+    result = 0.;
+  } else {
+    result = 0.5*(1. - sin(M_PI_2*(r-ters_R)/ters_D));
+  }
+
+  return result;
+};
+
+
+inline double Force_Tersoff::ters_fc_d(const double& r,
+				     const int& ientry) const {
+  double result;
+  double ters_R,ters_D;
+
+  ters_R = param_list[ientry].params[8];
+  ters_D = param_list[ientry].params[9];
+
+  if (r < (ters_R-ters_D) || r > (ters_R+ters_D) ) {
+    result = 0.;
+  } else {
+    result = -(M_PI_4/ters_D)*cos(M_PI_2*(r - ters_R)/ters_D);
+  }
+
+  return result;
+}
+
+inline double Force_Tersoff::ters_fa(const double& r, const double& fc,
+		      const int& ientry) const {
+  double ters_B,ters_lam2;
+
+  //  We assume r*r < rcutsq = param_list[ientry].params[10];
+  //  No need to check if r > ters_R+ters_D
+  ters_lam2 = param_list[ientry].params[6];
+  ters_B = param_list[ientry].params[7];
+  return -ters_B*exp(-ters_lam2*r)*fc;
+}   
+
+inline double Force_Tersoff::ters_fa_d(const double& r, const double& fc, const double& fc_d,
+				     const int& ientry) const {
+  double ters_B,ters_lam2;
+
+  //  We assume r*r < rcutsq = param_list[ientry].params[10];
+  //  No need to check if r > ters_R+ters_D
+  ters_lam2 = param_list[ientry].params[6];
+  ters_B = param_list[ientry].params[7];
+  double ex;
+  ex = exp(-ters_lam2*r);
+  return ters_B*ex*(ters_lam2*fc - fc_d);
+}
+
+inline double Force_Tersoff::ters_bij(const double& zeta,
+				      const int& ientry) const {
+    double result;
+    double tmp;
+    double ters_beta,ters_n;
+    double ters_beta_zeta_ranges[4];
+
+    ters_n = param_list[ientry].params[4];
+    ters_beta = param_list[ientry].params[5];
+    ters_beta_zeta_ranges[0] = param_list[ientry].params[11];
+    ters_beta_zeta_ranges[1] = param_list[ientry].params[12];
+    ters_beta_zeta_ranges[2] = param_list[ientry].params[13];
+    ters_beta_zeta_ranges[3] = param_list[ientry].params[14];
+
+    tmp = ters_beta*zeta;
+    if (tmp > ters_beta_zeta_ranges[3] ) {
+      result = 1./sqrt(tmp);
+      return result;
+    };
+    if (tmp > ters_beta_zeta_ranges[2] ) {
+      result = (1. - pow(tmp,-ters_n)/(2.*ters_n))/sqrt(tmp);
+      return result;
+    };
+    if (tmp <  ters_beta_zeta_ranges[0]) {
+      result = 1.;
+      return result;
+    };
+    if (tmp < ters_beta_zeta_ranges[1] ) {
+      result = 1. - pow(tmp,ters_n)/(2.*ters_n);
+      return result;
+    };
+
+    result = pow(1. + pow(tmp,ters_n),-1/(2.*ters_n));
+
+    return result;
+  };
+
+inline double Force_Tersoff::ters_bij_d(const double& zeta, 
+					const int& ientry) const {
+    double tmp,tmp_n;
+    double result;
+
+    double ters_beta,ters_n;
+    double ters_beta_zeta_ranges[4];
+
+    ters_n = param_list[ientry].params[4];
+    ters_beta = param_list[ientry].params[5];
+    ters_beta_zeta_ranges[0] = param_list[ientry].params[11];
+    ters_beta_zeta_ranges[1] = param_list[ientry].params[12];
+    ters_beta_zeta_ranges[2] = param_list[ientry].params[13];
+    ters_beta_zeta_ranges[3] = param_list[ientry].params[14];
+
+    tmp = ters_beta*zeta;
+
+    if (tmp > ters_beta_zeta_ranges[3] ) {
+      result = -0.5*pow(tmp,-1.5);
+      result = ters_beta*result;
+      return result;
+    };
+    if (tmp > ters_beta_zeta_ranges[2] ) {
+      result = -0.5*pow(tmp,-1.5)*(1. - 0.5*(1. + 1./(2.*ters_n))*
+				   pow(tmp,-ters_n));
+      result = ters_beta*result;
+      return result;
+    };
+    if (tmp < ters_beta_zeta_ranges[0]) {
+      result = 0.;
+      return result;
+    };
+    if (tmp < ters_beta_zeta_ranges[1]) {
+     result = -0.5*ters_beta*pow(tmp,ters_n-1.);
+     return result;
+    };
+      
+    tmp_n = pow(tmp,ters_n);
+    result = -0.5*pow(1.+tmp_n,-1. - (1./(2.*ters_n)))*tmp_n/zeta;
+
+    return result;
+  };
+
+inline double Force_Tersoff::ters_gijk(const double& costheta,
+					const int& ientry) const {
+  double result;
+  double ters_c, ters_d, ters_h;
+
+  ters_c = param_list[ientry].params[1];
+  ters_d = param_list[ientry].params[2];
+  ters_h = param_list[ientry].params[3];
+
+  result = 1.0 + pow(ters_c/ters_d,2) 
+    - pow(ters_c,2)/(pow(ters_d,2) + pow(ters_h - costheta,2));
+
+  return result;
+};
+
+inline double Force_Tersoff::ters_gijk_d(const double& costheta,
+					 const int& ientry) const {
+  double numer,denom;
+
+  double ters_c, ters_d, ters_h;
+
+  ters_c = param_list[ientry].params[1];
+  ters_d = param_list[ientry].params[2];
+  ters_h = param_list[ientry].params[3];
+
+  numer = -2.*pow(ters_c,2)*(ters_h - costheta);
+  denom = pow(pow(ters_d,2) + pow(ters_h - costheta,2),2);
+  
+  return numer/denom;
+}
+
+/* inline void Force_Tersoff::zetaterm_tersoff_cut_d( */
+/*                     const double& prefac, const double rij_hat[],  */
+/* 		    const double& rij_m, const double rik_hat[],  */
+/* 		    const double& rik_m, const double& fc, const double& fc_d,   */
+/* 		    double drj[], double drk[], const int& ientry) const { */
+/*   double costheta; */
+/*   double dcosdri[3], dcosdrj[3], dcosdrk[3]; */
+/*   double gijk,gijk_d; */
+/*   double ex_delr,ex_delr_d; */
+/*   double tmp; */
+/*   double ters_lam3; */
+
+/*   ters_lam3 = param_list[ientry].params[0]; */
+
+/*   tmp = pow(ters_lam3*(rij_m-rik_m),3); */
+/*   if (tmp > 69.0776) { */
+/*     ex_delr = 1.e30; */
+/*   } */
+/*   else if (tmp < -69.0776) { */
+/*     ex_delr = 0.; */
+/*   } */
+/*   else { */
+/*     ex_delr = exp(tmp); */
+/*   } */
+/*   ex_delr_d = (3.*pow(ters_lam3,3))*pow(rij_m-rik_m,2)*ex_delr; */
+/*   costheta = vec3_dot(rij_hat,rik_hat); */
+/*   gijk = ters_gijk(costheta,ientry); */
+/*   gijk_d = ters_gijk_d(costheta,ientry); */
+/*   costheta_d(rij_hat,rij_m,rik_hat,rik_m,dcosdri,dcosdrj,dcosdrk); */
+
+/* /\*   Don't need this no more *\/ */
+/* /\*   // compute the derivative wrt Ri *\/ */
+
+/* /\*   /\\*     dri = (-dfc)*gijk*ex_delr*rik_hat; *\\/ *\/ */
+/* /\*   /\\*     dri += fc*gijk_d*ex_delr*dcosdri; *\\/ *\/ */
+/* /\*   /\\*     dri += fc*gijk*ex_delr_d*(rik_hat - rij_hat); *\\/ *\/ */
+/* /\*   vec3_scale((-dfc)*gijk*ex_delr,rik_hat,dri); *\/ */
+/* /\*   vec3_scaleadd(fc*gijk_d*ex_delr,dcosdri,dri,dri); *\/ */
+/* /\*   vec3_scaleadd(fc*gijk*ex_delr_d,rik_hat,dri,dri); *\/ */
+/* /\*   vec3_scaleadd(-fc*gijk*ex_delr_d,rij_hat,dri,dri); *\/ */
+/* /\*   vec3_scale(prefac,dri,dri); *\/ */
+
+/*   // compute the derivative wrt Rj */
+
+/*   /\*     drj = fc*gijk_d*ex_delr*dcosdrj; *\/ */
+/*   /\*     drj += fc*gijk*ex_delr_d*rij_hat; *\/ */
+/*   vec3_scale(fc*gijk_d*ex_delr,dcosdrj,drj); */
+/*   vec3_scaleadd(fc*gijk*ex_delr_d,rij_hat,drj,drj); */
+/*   vec3_scale(prefac,drj,drj); */
+
+/*   // compute the derivative wrt Rk */
+
+/*   /\*     drk = dfc*gijk*ex_delr*rik_hat; *\/ */
+/*   /\*     drk += fc*gijk_d*ex_delr*dcosdrk; *\/ */
+/*   /\*     drk += -fc*gijk*ex_delr_d*rik_hat; *\/ */
+/*   vec3_scale(fc_d*gijk*ex_delr,rik_hat,drk); */
+/*   vec3_scaleadd(fc*gijk_d*ex_delr,dcosdrk,drk,drk); */
+/*   vec3_scaleadd(-fc*gijk*ex_delr_d,rik_hat,drk,drk); */
+/*   vec3_scale(prefac,drk,drk); */
+/*   return; */
+/* } */
+
+inline void Force_Tersoff::costheta_d(const double rij_hat[], 
+				      const double& rij_mag, 
+		const double rik_hat[], const double& rik_mag, 
+		double dri[], double drj[], double drk[]) const {
+  //  the first element gives the devative wrt Ri, second wrt Rj, third wrt Rk
+  double costheta;
+
+  costheta = vec3_dot(rij_hat,rik_hat);
+
+  vec3_scaleadd( - costheta, rij_hat, rik_hat, drj);
+  vec3_scale(1.0/rij_mag, drj, drj);
+  vec3_scaleadd( - costheta, rik_hat, rij_hat, drk);
+  vec3_scale(1.0/rik_mag, drk, drk);
+  vec3_add(drj,drk,dri);
+  vec3_scale(-1,dri,dri);
+
+  return;
+};
+
+inline void Force_Tersoff::force_tersoff_ij_morse( const double& zeta_ij,
+						   const double drdata[], 
+		       double fi[],
+                       const bool& Lenergy, const bool& Lvirial, 
+                       double& energy, double virial_ij[],
+		       double& prefac, const int& ientry) const {
+  /*
+    This is the tersoff part of the Morse-style tersoff forcefield.
+    This forcefield form is based on that of the GaAs force field of 
+    Albe et al., Phys. Rev. B, v. 66, p.035205/1-14 (2002). 
+
+    The precomputed parameters stored in ff_params.params[] are as follows.
+    The variable names are those of the standard tersoff force field.
+    In parentheses are the corresponding Morse-like variable names.
+    The original Tersoff paramters n and beta are set to 1.
+
+    rcut = bigr + bigd;
+    params[0] = mu;
+    params[1] = c;
+    params[2] = d;
+    params[3] = h;
+    params[4] = gamma
+    params[5] = NULL
+    params[6] = lam2                       (=beta Sqrt[2/bigs])
+    params[7] = bigb                       (=bigs d0/(bigs-1) Exp[lam2 r0])
+    params[8] = bigr                       (=rs)
+    params[9] = bigd                       (=ds)
+    params[10] = rcut*rcut
+    params[11] = ters_beta_zeta_ranges[0]
+    params[12] = ters_beta_zeta_ranges[1]
+    params[13] = ters_beta_zeta_ranges[2]
+    params[14] = ters_beta_zeta_ranges[3]
+    params[15] = lam1                      (=beta Sqrt(2 bigs))
+    params[16] = biga                      (=d0/(bigs-1) Exp[lam1 r0])
+  */
+
+  double r;
+  double fa,fa_d,forces,bij;
+
+  if (drdata[3] <= param_list[ientry].params[10]) {
+    r = drdata[4];
+    fa = drdata[11];
+    fa_d = drdata[12];
+    bij = ters_bij_morse(zeta_ij,ientry);
+    forces = 0.5*bij*fa_d*drdata[5];
+    prefac = -0.5*fa*ters_bij_morse_d(zeta_ij,ientry);
+    fi[0] = forces*drdata[0];
+    fi[1] = forces*drdata[1];
+    fi[2] = forces*drdata[2];
+    if (Lenergy) {
+      energy = 0.5*bij*fa;
+    }
+    if (Lvirial) {
+      virial_ij[0] = -fi[0]*drdata[0];
+      virial_ij[1] = -fi[1]*drdata[1];
+      virial_ij[2] = -fi[2]*drdata[2];
+      virial_ij[3] = -fi[0]*drdata[1];
+      virial_ij[4] = -fi[0]*drdata[2];
+      virial_ij[5] = -fi[1]*drdata[2];
+    }
+  } else {
+    prefac = 0.0;
+    fi[0] = 0.0;
+    fi[1] = 0.0;
+    fi[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ij[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+inline void Force_Tersoff::force_tersoff_ijk_morse(const double& prefac,
+                       const double drdataij[],
+		       const double drdataik[],
+		       double fj[],double fk[],
+                       const bool& Lvirial, 
+                       double virial_ijk[],
+		       const int& ijentry, const int& ijkentry) const
+{
+  /*
+    This is the triplet part of tersoff forcefield.
+  */
+
+  double rij,rijinv,rik,rikinv;
+
+  if (drdataij[3] <= param_list[ijentry].params[10]) {
+    if (drdataik[3] <= param_list[ijkentry].params[10] ) {
+      rij = drdataij[4];
+      rijinv = drdataij[5];
+      rik = drdataik[4];
+      rikinv = drdataik[5];
+
+      zetaterm_tersoff_morse_d(prefac,&drdataij[6],drdataij[4],&drdataik[6],drdataik[4],drdataik[9],drdataik[10],
+			       fj,fk,ijkentry);
+
+      if (Lvirial) {
+	virial_ijk[0] = (fj[0]*drdataij[0]+fk[0]*drdataik[0]);
+	virial_ijk[1] = (fj[1]*drdataij[1]+fk[1]*drdataik[1]);
+	virial_ijk[2] = (fj[2]*drdataij[2]+fk[2]*drdataik[2]);
+	virial_ijk[3] = (fj[0]*drdataij[1]+fk[0]*drdataik[1]);
+	virial_ijk[4] = (fj[0]*drdataij[2]+fk[0]*drdataik[2]);
+	virial_ijk[5] = (fj[1]*drdataij[2]+fk[1]*drdataik[2]);
+      }
+    } else {
+      fj[0] = 0.0;
+      fj[1] = 0.0;
+      fj[2] = 0.0;
+      fk[0] = 0.0;
+      fk[1] = 0.0;
+      fk[2] = 0.0;
+      if (Lvirial) {
+	for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	  virial_ijk[ivirial] = 0.0;
+	}
+      }
+    }
+  } else {
+    fj[0] = 0.0;
+    fj[1] = 0.0;
+    fj[2] = 0.0;
+    fk[0] = 0.0;
+    fk[1] = 0.0;
+    fk[2] = 0.0;
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ijk[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+inline void Force_Tersoff::force_tersoff_repulsive_morse(
+	       const double drdata[], double fi[], 
+	       const bool& Lenergy, const bool& Lvirial, double& energy, 
+	       double virial_ij[], const int& ientry) const {
+
+  double tmp_fc,tmp_fc_d;
+  double tmp_exp;
+  double r,virial_tmp;
+  double ters_lam1,ters_A;
+
+  ters_lam1 = param_list[ientry].params[15];
+  ters_A = param_list[ientry].params[16];
+
+  if (drdata[3] <= param_list[ientry].params[10]) {
+    r = drdata[4];
+    tmp_fc = drdata[9];
+    tmp_fc_d = drdata[10];
+    tmp_exp = exp(-ters_lam1*r);
+    virial_tmp = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1)*drdata[5];
+    fi[0] = virial_tmp*drdata[0];
+    fi[1] = virial_tmp*drdata[1];
+    fi[2] = virial_tmp*drdata[2];
+    if (Lenergy) {
+      energy = tmp_fc*ters_A*tmp_exp;
+    }
+    if (Lvirial) {
+      virial_ij[0] = -virial_tmp*drdata[0]*drdata[0];
+      virial_ij[1] = -virial_tmp*drdata[1]*drdata[1];
+      virial_ij[2] = -virial_tmp*drdata[2]*drdata[2];
+      virial_ij[3] = -virial_tmp*drdata[0]*drdata[1];
+      virial_ij[4] = -virial_tmp*drdata[0]*drdata[2];
+      virial_ij[5] = -virial_tmp*drdata[1]*drdata[2];
+    }
+  }  else {
+    fi[0] = 0.0;
+    fi[1] = 0.0;
+    fi[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ij[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+inline double Force_Tersoff::zetaterm_tersoff_morse(
+                       const double drdataij[],
+		       const double drdataik[],
+	    const int& ijentry, const int& ijkentry) const {
+  double rij,rik,costheta;
+  double tmp,ex_delr;
+  double result;
+
+  result = 0.0;
+  if (drdataij[3] <= param_list[ijentry].params[10]) {
+    if (drdataik[3] <= param_list[ijkentry].params[10] ) {
+      rij = drdataij[4];
+      rik = drdataik[4];
+      costheta = vec3_dot(&drdataij[6],&drdataik[6]);
+
+      tmp = param_list[ijkentry].params[0]*(rij-rik);
+      if (tmp > 69.0776) {
+	ex_delr = 1.e30;
+      }
+      else if (tmp < -69.0776) {
+	ex_delr = 0.;
+      }
+      else {
+	ex_delr = exp(tmp);
+      }
+
+      result = drdataik[9]*ters_gijk(costheta,ijkentry)*ex_delr;
+      result *= param_list[ijkentry].params[4];
+    }
+  }
+  return result;
+}
+
+inline void Force_Tersoff::zetaterm_tersoff_morse_d(
+                    const double& prefac, const double rij_hat[], 
+		    const double& rij_m, const double rik_hat[], 
+		    const double& rik_m, const double& fc, const double& fc_d, 
+		    double drj[], double drk[], const int& ientry) const {
+  double costheta;
+  double dcosdri[3], dcosdrj[3], dcosdrk[3];
+  double gijk,gijk_d;
+  double ex_delr,ex_delr_d;
+  double tmp;
+  double ters_mu,ters_gamma;
+
+  ters_mu = param_list[ientry].params[0];
+  ters_gamma = param_list[ientry].params[4];
+
+  tmp = ters_mu*(rij_m-rik_m);
+  if (tmp > 69.0776) {
+    ex_delr = 1.e30;
+  }
+  else if (tmp < -69.0776) {
+    ex_delr = 0.;
+  }
+  else {
+    ex_delr = exp(tmp);
+  }
+  ex_delr_d = ters_mu*ex_delr;
+  costheta = vec3_dot(rij_hat,rik_hat);
+  gijk = ters_gijk(costheta,ientry);
+  gijk_d = ters_gijk_d(costheta,ientry);
+  costheta_d(rij_hat,rij_m,rik_hat,rik_m,dcosdri,dcosdrj,dcosdrk);
+
+/*   Don't need this no more */
+/*   // compute the derivative wrt Ri */
+
+/*   vec3_scale((-dfc)*gijk*ex_delr,rik_hat,dri); */
+/*   vec3_scaleadd(fc*gijk_d*ex_delr,dcosdri,dri,dri); */
+/*   vec3_scaleadd(fc*gijk*ex_delr_d,rik_hat,dri,dri); */
+/*   vec3_scaleadd(-fc*gijk*ex_delr_d,rij_hat,dri,dri); */
+/*   vec3_scale(ters_gamma*prefac,dri,dri); */
+
+  // compute the derivative wrt Rj
+
+  vec3_scale(fc*gijk_d*ex_delr,dcosdrj,drj);
+  vec3_scaleadd(fc*gijk*ex_delr_d,rij_hat,drj,drj);
+  vec3_scale(ters_gamma*prefac,drj,drj);
+
+  // compute the derivative wrt Rk
+
+  vec3_scale(fc_d*gijk*ex_delr,rik_hat,drk);
+  vec3_scaleadd(fc*gijk_d*ex_delr,dcosdrk,drk,drk);
+  vec3_scaleadd(-fc*gijk*ex_delr_d,rik_hat,drk,drk);
+  vec3_scale(ters_gamma*prefac,drk,drk);
+  return;
+}
+
+inline double Force_Tersoff::ters_bij_morse(const double& zeta,
+				      const int& ientry) const {
+    double result;
+    double tmp;
+    double ters_beta_zeta_ranges[4];
+
+    ters_beta_zeta_ranges[0] = param_list[ientry].params[11];
+    ters_beta_zeta_ranges[1] = param_list[ientry].params[12];
+    ters_beta_zeta_ranges[2] = param_list[ientry].params[13];
+    ters_beta_zeta_ranges[3] = param_list[ientry].params[14];
+
+    tmp = zeta;
+    if (tmp > ters_beta_zeta_ranges[3] ) {
+      result = 1./sqrt(tmp);
+      return result;
+    };
+    if (tmp > ters_beta_zeta_ranges[2] ) {
+      result = (1. - 0.5/tmp)/sqrt(tmp);
+      return result;
+    };
+    if (tmp <  ters_beta_zeta_ranges[0]) {
+      result = 1.;
+      return result;
+    };
+    if (tmp < ters_beta_zeta_ranges[1] ) {
+      result = 1. - 0.5*tmp;
+      return result;
+    };
+
+    result = 1.0/sqrt(1. + tmp);
+
+    return result;
+  };
+
+inline double Force_Tersoff::ters_bij_morse_d(const double& zeta, 
+					const int& ientry) const {
+    double tmp,tmp_n;
+    double result;
+
+    double ters_beta_zeta_ranges[4];
+
+    ters_beta_zeta_ranges[0] = param_list[ientry].params[11];
+    ters_beta_zeta_ranges[1] = param_list[ientry].params[12];
+    ters_beta_zeta_ranges[2] = param_list[ientry].params[13];
+    ters_beta_zeta_ranges[3] = param_list[ientry].params[14];
+
+    tmp = zeta;
+
+    if (tmp > ters_beta_zeta_ranges[3] ) {
+      result = -0.5*pow(tmp,-1.5);
+      return result;
+    };
+    if (tmp > ters_beta_zeta_ranges[2] ) {
+      result = -0.5*pow(tmp,-1.5)*(1. - 0.75/tmp);
+      return result;
+    };
+    if (tmp < ters_beta_zeta_ranges[0]) {
+      result = -0.5;
+      return result;
+    };
+    if (tmp < ters_beta_zeta_ranges[1]) {
+      result = -0.5+0.75*tmp;
+      return result;
+    };
+      
+    result = -0.5*pow(1.+tmp,-1.5);
+
+    return result;
+  };
+
+#endif
+@
+
+
+4.11
+log
+@Optimized Tersoff
+@
+text
+@d61 1
+a61 1
+                       double& energy, double virial[],
+d104 6
+a109 6
+      virial[0] = -fi[0]*drdata[0];
+      virial[1] = -fi[1]*drdata[1];
+      virial[2] = -fi[2]*drdata[2];
+      virial[3] = -fi[0]*drdata[1];
+      virial[4] = -fi[0]*drdata[2];
+      virial[5] = -fi[1]*drdata[2];
+d121 1
+a121 1
+	virial[ivirial] = 0.0;
+d161 1
+a161 1
+                       double virial[],
+d203 6
+a208 6
+	virial[0] = (fj[0]*drdataij[0]+fk[0]*drdataik[0]);
+	virial[1] = (fj[1]*drdataij[1]+fk[1]*drdataik[1]);
+	virial[2] = (fj[2]*drdataij[2]+fk[2]*drdataik[2]);
+	virial[3] = (fj[0]*drdataij[1]+fk[0]*drdataik[1]);
+	virial[4] = (fj[0]*drdataij[2]+fk[0]*drdataik[2]);
+	virial[5] = (fj[1]*drdataij[2]+fk[1]*drdataik[2]);
+d219 1
+a219 1
+	  virial[ivirial] = 0.0;
+d232 1
+a232 1
+	virial[ivirial] = 0.0;
+d241 1
+a241 1
+	       double virial[], const int& ientry) const {
+d263 6
+a268 6
+      virial[0] = -virial_tmp*drdata[0]*drdata[0];
+      virial[1] = -virial_tmp*drdata[1]*drdata[1];
+      virial[2] = -virial_tmp*drdata[2]*drdata[2];
+      virial[3] = -virial_tmp*drdata[0]*drdata[1];
+      virial[4] = -virial_tmp*drdata[0]*drdata[2];
+      virial[5] = -virial_tmp*drdata[1]*drdata[2];
+d279 1
+a279 1
+	virial[ivirial] = 0.0;
+d288 1
+a288 1
+	       double virial[], const int& ientry) const {
+d298 3
+d337 6
+a342 6
+      virial[0] = -virial_tmp*drdata[0]*drdata[0];
+      virial[1] = -virial_tmp*drdata[1]*drdata[1];
+      virial[2] = -virial_tmp*drdata[2]*drdata[2];
+      virial[3] = -virial_tmp*drdata[0]*drdata[1];
+      virial[4] = -virial_tmp*drdata[0]*drdata[2];
+      virial[5] = -virial_tmp*drdata[1]*drdata[2];
+d353 1
+a353 1
+	virial[ivirial] = 0.0;
+d362 1
+a362 1
+	       double virial[], const int& ientry) const {
+d372 3
+d411 6
+a416 6
+      virial[0] = -virial_tmp*drdata[0]*drdata[0];
+      virial[1] = -virial_tmp*drdata[1]*drdata[1];
+      virial[2] = -virial_tmp*drdata[2]*drdata[2];
+      virial[3] = -virial_tmp*drdata[0]*drdata[1];
+      virial[4] = -virial_tmp*drdata[0]*drdata[2];
+      virial[5] = -virial_tmp*drdata[1]*drdata[2];
+d427 1
+a427 1
+	virial[ivirial] = 0.0;
+d841 1
+a841 1
+                       double& energy, double virial[],
+d890 6
+a895 6
+      virial[0] = -fi[0]*drdata[0];
+      virial[1] = -fi[1]*drdata[1];
+      virial[2] = -fi[2]*drdata[2];
+      virial[3] = -fi[0]*drdata[1];
+      virial[4] = -fi[0]*drdata[2];
+      virial[5] = -fi[1]*drdata[2];
+d907 1
+a907 1
+	virial[ivirial] = 0.0;
+d918 1
+a918 1
+                       double virial[],
+d938 6
+a943 6
+	virial[0] = (fj[0]*drdataij[0]+fk[0]*drdataik[0]);
+	virial[1] = (fj[1]*drdataij[1]+fk[1]*drdataik[1]);
+	virial[2] = (fj[2]*drdataij[2]+fk[2]*drdataik[2]);
+	virial[3] = (fj[0]*drdataij[1]+fk[0]*drdataik[1]);
+	virial[4] = (fj[0]*drdataij[2]+fk[0]*drdataik[2]);
+	virial[5] = (fj[1]*drdataij[2]+fk[1]*drdataik[2]);
+d954 1
+a954 1
+	  virial[ivirial] = 0.0;
+d967 1
+a967 1
+	virial[ivirial] = 0.0;
+d976 1
+a976 1
+	       double virial[], const int& ientry) const {
+d999 6
+a1004 6
+      virial[0] = -virial_tmp*drdata[0]*drdata[0];
+      virial[1] = -virial_tmp*drdata[1]*drdata[1];
+      virial[2] = -virial_tmp*drdata[2]*drdata[2];
+      virial[3] = -virial_tmp*drdata[0]*drdata[1];
+      virial[4] = -virial_tmp*drdata[0]*drdata[2];
+      virial[5] = -virial_tmp*drdata[1]*drdata[2];
+d1015 1
+a1015 1
+	virial[ivirial] = 0.0;
+@
+
+
+4.10
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@d57 2
+a58 2
+inline void Force_Tersoff::force_tersoff_ij_cut( const double& zeta_ij,
+		       const double xi[],const double xj[], 
+d91 1
+a91 3
+  double delr[3];
+  double r,rsq;
+  double fa,fa_d,forces,bij;
+d93 1
+a93 5
+  rsq = vec3_distsq(xj,xi,delr);
+  if (rsq <= param_list[ientry].params[10]) {
+    r = sqrt(rsq);
+    fa = ters_fa(r,ientry);
+    fa_d = ters_fa_d(r,ientry);
+d95 5
+a99 5
+    forces = 0.5*bij*fa_d/r;
+    prefac = -0.5*fa*ters_bij_d(zeta_ij,ientry);
+    fi[0] = forces*delr[0];
+    fi[1] = forces*delr[1];
+    fi[2] = forces*delr[2];
+d101 1
+a101 1
+      energy = 0.5*bij*fa;
+d104 6
+a109 6
+      virial[0] = -fi[0]*delr[0];
+      virial[1] = -fi[1]*delr[1];
+      virial[2] = -fi[2]*delr[2];
+      virial[3] = -fi[0]*delr[1];
+      virial[4] = -fi[0]*delr[2];
+      virial[5] = -fi[1]*delr[2];
+d127 30
+d158 2
+a159 2
+		       const double xi[],const double xj[],const double xk[], 
+		       double fj[],double fk[],
+d163 1
+a163 1
+		       const int& ijkentry) const
+d165 6
+a170 3
+  /*
+    This is the triplet part of tersoff forcefield.
+  */
+d172 2
+a173 2
+  double delrij[3],delrik[3],rij_hat[3],rik_hat[3];
+  double rij,rsqij,rijinv,rik,rsqik,rikinv;
+d175 1
+a175 10
+  rsqij = vec3_distsq(xj,xi,delrij);
+  if (rsqij <= param_list[ijentry].params[10]) {
+    rsqik = vec3_distsq(xk,xi,delrik);
+    if (rsqik <= param_list[ijkentry].params[10] ) {
+      rij = sqrt(rsqij);
+      rijinv = 1.0/rij;
+      vec3_scale(rijinv,delrij,rij_hat);
+      rik = sqrt(rsqik);
+      rikinv = 1.0/rik;
+      vec3_scale(rikinv,delrik,rik_hat);
+d177 24
+a200 1
+      ters_zetaterm_d(prefac,rij_hat,rij,rik_hat,rik,fj,fk,ijkentry);
+d203 6
+a208 6
+	virial[0] = (fj[0]*delrij[0]+fk[0]*delrik[0]);
+	virial[1] = (fj[1]*delrij[1]+fk[1]*delrik[1]);
+	virial[2] = (fj[2]*delrij[2]+fk[2]*delrik[2]);
+	virial[3] = (fj[0]*delrij[1]+fk[0]*delrik[1]);
+	virial[4] = (fj[0]*delrij[2]+fk[0]*delrik[2]);
+	virial[5] = (fj[1]*delrij[2]+fk[1]*delrik[2]);
+d239 1
+a239 1
+	       const double xi[], const double xj[], double fi[], 
+d245 1
+a245 2
+  double rsq,r,virial_tmp;
+  double delr[3];
+d251 8
+a258 11
+  rsq = vec3_distsq(xj,xi,delr);
+
+  if (rsq <= param_list[ientry].params[10]) {
+    r = sqrt(rsq);
+    tmp_fc = ters_fc(r,ientry);
+    tmp_fc_d = ters_fc_d(r,ientry);
+    tmp_exp = exp(-ters_lam1*r);
+    virial_tmp = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1)/r;
+    fi[0] = virial_tmp*delr[0];
+    fi[1] = virial_tmp*delr[1];
+    fi[2] = virial_tmp*delr[2];
+d263 6
+a268 6
+      virial[0] = -virial_tmp*delr[0]*delr[0];
+      virial[1] = -virial_tmp*delr[1]*delr[1];
+      virial[2] = -virial_tmp*delr[2]*delr[2];
+      virial[3] = -virial_tmp*delr[0]*delr[1];
+      virial[4] = -virial_tmp*delr[0]*delr[2];
+      virial[5] = -virial_tmp*delr[1]*delr[2];
+d286 1
+a286 1
+	       const double xi[], const double xj[], double fi[], 
+d292 1
+a292 2
+  double rsq,r,virial_tmp;
+  double delr[3];
+d298 2
+a299 3
+  rsq = vec3_distsq(xj,xi,delr);
+  if (rsq <= param_list[ientry].params[10]) {
+    r = sqrt(rsq);
+d301 2
+a302 2
+      virial_tmp = zbl_d(r,ientry)/r;
+      if (Lenergy) energy = zbl(r,ientry);
+d311 4
+a314 4
+      tmp_1 = zbl(r,ientry);
+      tmp_1_d = zbl_d(r,ientry);
+      tmp_fc = ters_fc(r,ientry);
+      tmp_fc_d = ters_fc_d(r,ientry);
+d318 1
+a318 1
+      virial_tmp = (tmp_1_d*(1.-s) - tmp_1*s_d*dxdr + tmp_2_d*s + tmp_2*s_d*dxdr)/r;
+d322 2
+a323 2
+      tmp_fc = ters_fc(r,ientry);
+      tmp_fc_d = ters_fc_d(r,ientry);
+d325 1
+a325 1
+      virial_tmp = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1)/r;
+d330 3
+a332 3
+    fi[0] = virial_tmp*delr[0];
+    fi[1] = virial_tmp*delr[1];
+    fi[2] = virial_tmp*delr[2];
+d334 6
+a339 6
+      virial[0] = -virial_tmp*delr[0]*delr[0];
+      virial[1] = -virial_tmp*delr[1]*delr[1];
+      virial[2] = -virial_tmp*delr[2]*delr[2];
+      virial[3] = -virial_tmp*delr[0]*delr[1];
+      virial[4] = -virial_tmp*delr[0]*delr[2];
+      virial[5] = -virial_tmp*delr[1]*delr[2];
+d357 1
+a357 1
+	       const double xi[], const double xj[], double fi[], 
+d363 1
+a363 2
+  double rsq,r,virial_tmp;
+  double delr[3];
+d369 2
+a370 3
+  rsq = vec3_distsq(xj,xi,delr);
+  if (rsq <= param_list[ientry].params[10]) {
+    r = sqrt(rsq);
+d372 2
+a373 2
+      virial_tmp = moliere_d(r,ientry)/r;
+      if (Lenergy) energy = moliere(r,ientry);
+d382 4
+a385 4
+      tmp_1 = moliere(r,ientry);
+      tmp_1_d = moliere_d(r,ientry);
+      tmp_fc = ters_fc(r,ientry);
+      tmp_fc_d = ters_fc_d(r,ientry);
+d389 1
+a389 1
+      virial_tmp = (tmp_1_d*(1.-s) - tmp_1*s_d*dxdr + tmp_2_d*s + tmp_2*s_d*dxdr)/r;
+d393 2
+a394 2
+      tmp_fc = ters_fc(r,ientry);
+      tmp_fc_d = ters_fc_d(r,ientry);
+d396 1
+a396 1
+      virial_tmp = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1)/r;
+d401 3
+a403 3
+    fi[0] = virial_tmp*delr[0];
+    fi[1] = virial_tmp*delr[1];
+    fi[2] = virial_tmp*delr[2];
+d405 6
+a410 6
+      virial[0] = -virial_tmp*delr[0]*delr[0];
+      virial[1] = -virial_tmp*delr[1]*delr[1];
+      virial[2] = -virial_tmp*delr[2]*delr[2];
+      virial[3] = -virial_tmp*delr[0]*delr[1];
+      virial[4] = -virial_tmp*delr[0]*delr[2];
+      virial[5] = -virial_tmp*delr[1]*delr[2];
+d454 1
+a454 1
+inline double Force_Tersoff::zbl(const double& r,
+d469 1
+a469 1
+  result = double(z1)*double(z2)*ZBL_ECONV*sum/r - ters_fa(r,ientry);
+d474 1
+a474 1
+inline double Force_Tersoff::zbl_d(const double& r,
+d502 1
+a502 1
+  result = double(z1)*double(z2)*ZBL_ECONV*result - ters_fa_d(r,ientry);
+d530 1
+a530 1
+inline double Force_Tersoff::moliere(const double& r,
+d544 1
+a544 1
+  result = double(z1)*double(z2)*MOLIERE_ECONV*sum/r - ters_fa(r,ientry);
+d549 1
+a549 1
+inline double Force_Tersoff::moliere_d(const double& r,
+d573 1
+a573 1
+  result = double(z1)*double(z2)*MOLIERE_ECONV*result - ters_fa_d(r,ientry);
+a577 34
+inline double Force_Tersoff::zetaterm_tersoff_cut(
+	    const double xi[], const double xj[], const double xk[], 
+	    const int& ijentry, const int& ijkentry) const {
+  double rij,rik,costheta;
+  double tmp,ex_delr;
+  double result;
+  double rsqij,rsqik,delrij[3],delrik[3];
+
+  result = 0.0;
+  rsqij = vec3_distsq(xj,xi,delrij);
+  if (rsqij <= param_list[ijentry].params[10]) {
+    rsqik = vec3_distsq(xk,xi,delrik);
+    if (rsqik <= param_list[ijkentry].params[10] ) {
+      rij = sqrt(rsqij);
+      rik = sqrt(rsqik);
+      costheta = vec3_dot(delrij,delrik)/(rij*rik);
+
+      tmp = pow(param_list[ijkentry].params[0]*(rij-rik),3);
+      if (tmp > 69.0776) {
+	ex_delr = 1.e30;
+      }
+      else if (tmp < -69.0776) {
+	ex_delr = 0.;
+      }
+      else {
+	ex_delr = exp(tmp);
+      }
+
+      result = ters_fc(rik,ijkentry)*ters_gijk(costheta,ijkentry)*ex_delr;
+    }
+  }
+  return result;
+}
+
+d615 1
+a615 1
+inline double Force_Tersoff::ters_fa(const double& r,
+d623 1
+a623 1
+  return -ters_B*exp(-ters_lam2*r)*ters_fc(r,ientry);
+d626 1
+a626 1
+inline double Force_Tersoff::ters_fa_d(const double& r,
+d636 1
+a636 1
+  return ters_B*ex*(ters_lam2*ters_fc(r,ientry) - ters_fc_d(r,ientry));
+d750 61
+a810 85
+inline void Force_Tersoff::ters_zetaterm_d(
+                    const double& prefac, const double rij_hat[], 
+		    const double& rij_m, const double rik_hat[], 
+		    const double& rik_m, 
+		    double drj[], double drk[], const int& ientry) const {
+  double cos_theta;
+  double dcosdri[3], dcosdrj[3], dcosdrk[3];
+  double gijk,gijk_d;
+  double ex_delr,ex_delr_d;
+  double fc,dfc;
+  double tmp;
+  double ters_lam3;
+
+  ters_lam3 = param_list[ientry].params[0];
+
+  fc = ters_fc(rik_m,ientry);
+  dfc = ters_fc_d(rik_m,ientry);
+  tmp = pow(ters_lam3*(rij_m-rik_m),3);
+  if (tmp > 69.0776) {
+    ex_delr = 1.e30;
+  }
+  else if (tmp < -69.0776) {
+    ex_delr = 0.;
+  }
+  else {
+    ex_delr = exp(tmp);
+  }
+  ex_delr_d = (3.*pow(ters_lam3,3))*pow(rij_m-rik_m,2)*ex_delr;
+  cos_theta = vec3_dot(rij_hat,rik_hat);
+  gijk = ters_gijk(cos_theta,ientry);
+  gijk_d = ters_gijk_d(cos_theta,ientry);
+  costheta_d(rij_hat,rij_m,rik_hat,rik_m,dcosdri,dcosdrj,dcosdrk);
+
+/*   Don't need this no more */
+/*   // compute the derivative wrt Ri */
+
+/*   /\*     dri = (-dfc)*gijk*ex_delr*rik_hat; *\/ */
+/*   /\*     dri += fc*gijk_d*ex_delr*dcosdri; *\/ */
+/*   /\*     dri += fc*gijk*ex_delr_d*(rik_hat - rij_hat); *\/ */
+/*   vec3_scale((-dfc)*gijk*ex_delr,rik_hat,dri); */
+/*   vec3_scaleadd(fc*gijk_d*ex_delr,dcosdri,dri,dri); */
+/*   vec3_scaleadd(fc*gijk*ex_delr_d,rik_hat,dri,dri); */
+/*   vec3_scaleadd(-fc*gijk*ex_delr_d,rij_hat,dri,dri); */
+/*   vec3_scale(prefac,dri,dri); */
+
+  // compute the derivative wrt Rj
+
+  /*     drj = fc*gijk_d*ex_delr*dcosdrj; */
+  /*     drj += fc*gijk*ex_delr_d*rij_hat; */
+  vec3_scale(fc*gijk_d*ex_delr,dcosdrj,drj);
+  vec3_scaleadd(fc*gijk*ex_delr_d,rij_hat,drj,drj);
+  vec3_scale(prefac,drj,drj);
+
+  // compute the derivative wrt Rk
+
+  /*     drk = dfc*gijk*ex_delr*rik_hat; */
+  /*     drk += fc*gijk_d*ex_delr*dcosdrk; */
+  /*     drk += -fc*gijk*ex_delr_d*rik_hat; */
+  vec3_scale(dfc*gijk*ex_delr,rik_hat,drk);
+  vec3_scaleadd(fc*gijk_d*ex_delr,dcosdrk,drk,drk);
+  vec3_scaleadd(-fc*gijk*ex_delr_d,rik_hat,drk,drk);
+  vec3_scale(prefac,drk,drk);
+  return;
+}
+
+inline void Force_Tersoff::costheta_d(const double rij[], const double rik[], 
+		  double dri[], double drj[], double drk[]) const {
+  double result[3];
+  //  the first element gives the devative wrt Ri, second wrt Rj, third wrt Rk
+  double rij_hat[3], rik_hat[3];
+  double rij_mag,rik_mag,cos_theta;
+
+  rij_mag = vec3_unit(rij,rij_hat);
+  rik_mag = vec3_unit(rik,rik_hat);
+  cos_theta = vec3_dot(rij_hat,rik_hat);
+
+  vec3_scaleadd( - cos_theta, rij_hat, rik_hat, drj);
+  vec3_scale(1.0/rij_mag, drj, drj);
+  vec3_scaleadd( - cos_theta, rik_hat, rij_hat, drk);
+  vec3_scale(1.0/rik_mag, drk, drk);
+  vec3_add(drj,drk,dri);
+  vec3_scale(-1,dri,dri);
+
+  return;
+}
+d817 1
+a817 1
+  double cos_theta;
+d819 1
+a819 1
+  cos_theta = vec3_dot(rij_hat,rik_hat);
+d821 1
+a821 1
+  vec3_scaleadd( - cos_theta, rij_hat, rik_hat, drj);
+d823 1
+a823 1
+  vec3_scaleadd( - cos_theta, rik_hat, rij_hat, drk);
+d832 1
+a832 1
+		       const double xi[],const double xj[], 
+d867 1
+a867 2
+  double delr[3];
+  double r,rsq;
+d870 4
+a873 5
+  rsq = vec3_distsq(xj,xi,delr);
+  if (rsq <= param_list[ientry].params[10]) {
+    r = sqrt(rsq);
+    fa = ters_fa(r,ientry);
+    fa_d = ters_fa_d(r,ientry);
+d875 1
+a875 1
+    forces = 0.5*bij*fa_d/r;
+d877 3
+a879 3
+    fi[0] = forces*delr[0];
+    fi[1] = forces*delr[1];
+    fi[2] = forces*delr[2];
+d884 6
+a889 6
+      virial[0] = -fi[0]*delr[0];
+      virial[1] = -fi[1]*delr[1];
+      virial[2] = -fi[2]*delr[2];
+      virial[3] = -fi[0]*delr[1];
+      virial[4] = -fi[0]*delr[2];
+      virial[5] = -fi[1]*delr[2];
+d908 2
+a909 1
+		       const double xi[],const double xj[],const double xk[], 
+d919 1
+a919 2
+  double delrij[3],delrik[3],rij_hat[3],rik_hat[3];
+  double rij,rsqij,rijinv,rik,rsqik,rikinv;
+d921 6
+a926 10
+  rsqij = vec3_distsq(xj,xi,delrij);
+  if (rsqij <= param_list[ijentry].params[10]) {
+    rsqik = vec3_distsq(xk,xi,delrik);
+    if (rsqik <= param_list[ijkentry].params[10] ) {
+      rij = sqrt(rsqij);
+      rijinv = 1.0/rij;
+      vec3_scale(rijinv,delrij,rij_hat);
+      rik = sqrt(rsqik);
+      rikinv = 1.0/rik;
+      vec3_scale(rikinv,delrik,rik_hat);
+d928 2
+a929 1
+      ters_zetaterm_morse_d(prefac,rij_hat,rij,rik_hat,rik,fj,fk,ijkentry);
+d932 6
+a937 6
+	virial[0] = (fj[0]*delrij[0]+fk[0]*delrik[0]);
+	virial[1] = (fj[1]*delrij[1]+fk[1]*delrik[1]);
+	virial[2] = (fj[2]*delrij[2]+fk[2]*delrik[2]);
+	virial[3] = (fj[0]*delrij[1]+fk[0]*delrik[1]);
+	virial[4] = (fj[0]*delrij[2]+fk[0]*delrik[2]);
+	virial[5] = (fj[1]*delrij[2]+fk[1]*delrik[2]);
+d968 1
+a968 1
+	       const double xi[], const double xj[], double fi[], 
+d974 1
+a974 2
+  double rsq,r,virial_tmp;
+  double delr[3];
+d980 4
+a983 5
+  rsq = vec3_distsq(xj,xi,delr);
+  if (rsq <= param_list[ientry].params[10]) {
+    r = sqrt(rsq);
+    tmp_fc = ters_fc(r,ientry);
+    tmp_fc_d = ters_fc_d(r,ientry);
+d985 4
+a988 4
+    virial_tmp = ters_A*tmp_exp*(tmp_fc_d - tmp_fc*ters_lam1)/r;
+    fi[0] = virial_tmp*delr[0];
+    fi[1] = virial_tmp*delr[1];
+    fi[2] = virial_tmp*delr[2];
+d993 6
+a998 6
+      virial[0] = -virial_tmp*delr[0]*delr[0];
+      virial[1] = -virial_tmp*delr[1]*delr[1];
+      virial[2] = -virial_tmp*delr[2]*delr[2];
+      virial[3] = -virial_tmp*delr[0]*delr[1];
+      virial[4] = -virial_tmp*delr[0]*delr[2];
+      virial[5] = -virial_tmp*delr[1]*delr[2];
+d1016 2
+a1017 1
+	    const double xi[], const double xj[], const double xk[], 
+a1021 1
+  double rsqij,rsqik,delrij[3],delrik[3];
+d1024 5
+a1028 7
+  rsqij = vec3_distsq(xj,xi,delrij);
+  if (rsqij <= param_list[ijentry].params[10]) {
+    rsqik = vec3_distsq(xk,xi,delrik);
+    if (rsqik <= param_list[ijkentry].params[10] ) {
+      rij = sqrt(rsqij);
+      rik = sqrt(rsqik);
+      costheta = vec3_dot(delrij,delrik)/(rij*rik);
+d1041 1
+a1041 1
+      result = ters_fc(rik,ijkentry)*ters_gijk(costheta,ijkentry)*ex_delr;
+d1048 1
+a1048 1
+inline void Force_Tersoff::ters_zetaterm_morse_d(
+d1051 1
+a1051 1
+		    const double& rik_m, 
+d1053 1
+a1053 1
+  double cos_theta;
+a1056 1
+  double fc,dfc;
+a1062 2
+  fc = ters_fc(rik_m,ientry);
+    dfc = ters_fc_d(rik_m,ientry);
+d1074 3
+a1076 3
+  cos_theta = vec3_dot(rij_hat,rik_hat);
+  gijk = ters_gijk(cos_theta,ientry);
+  gijk_d = ters_gijk_d(cos_theta,ientry);
+d1096 1
+a1096 1
+  vec3_scale(dfc*gijk*ex_delr,rik_hat,drk);
+@
+
+
+4.9
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d212 1
+@
+
+
+4.8
+log
+@Fixed inactive bug in force_tersoff_inline.h and fixed syntax warning in reax_grasp.F
+@
+text
+@d135 1
+a135 1
+		       double fi[], double fj[],double fk[],
+d159 1
+a159 1
+      ters_zetaterm_d(prefac,rij_hat,rij,rik_hat,rik,fi,fj,fk,ijkentry);
+a169 3
+      fi[0] = 0.0;
+      fi[1] = 0.0;
+      fi[2] = 0.0;
+a182 3
+    fi[0] = 0.0;
+    fi[1] = 0.0;
+    fi[2] = 0.0;
+d753 1
+a753 1
+		    const double& rik_m, double dri[], 
+d783 11
+a793 1
+  // compute the derivative wrt Ri
+a794 8
+  /*     dri = (-dfc)*gijk*ex_delr*rik_hat; */
+  /*     dri += fc*gijk_d*ex_delr*dcosdri; */
+  /*     dri += fc*gijk*ex_delr_d*(rik_hat - rij_hat); */
+  vec3_scale((-dfc)*gijk*ex_delr,rik_hat,dri);
+  vec3_scaleadd(fc*gijk_d*ex_delr,dcosdri,dri,dri);
+  vec3_scaleadd(fc*gijk*ex_delr_d,rik_hat,dri,dri);
+  vec3_scaleadd(-fc*gijk*ex_delr_d,rij_hat,dri,dri);
+  vec3_scale(prefac,dri,dri);
+d935 1
+a935 1
+		       double fi[], double fj[],double fk[],
+d958 1
+a958 1
+      ters_zetaterm_morse_d(prefac,rij_hat,rij,rik_hat,rik,fi,fj,fk,ijkentry);
+a968 3
+      fi[0] = 0.0;
+      fi[1] = 0.0;
+      fi[2] = 0.0;
+a981 3
+    fi[0] = 0.0;
+    fi[1] = 0.0;
+    fi[2] = 0.0;
+d1084 1
+a1084 1
+		    const double& rik_m, double dri[], 
+a1096 2
+/*    cout << " gamma = " << ters_gamma << " dist " << rij_m << " " << rik_m << " " << " prefac " << prefac << " ientry = " << ientry << endl; */
+
+d1115 2
+a1116 1
+  // compute the derivative wrt Ri
+d1118 5
+a1122 5
+  vec3_scale((-dfc)*gijk*ex_delr,rik_hat,dri);
+  vec3_scaleadd(fc*gijk_d*ex_delr,dcosdri,dri,dri);
+  vec3_scaleadd(fc*gijk*ex_delr_d,rik_hat,dri,dri);
+  vec3_scaleadd(-fc*gijk*ex_delr_d,rij_hat,dri,dri);
+  vec3_scale(ters_gamma*prefac,dri,dri);
+@
+
+
+4.7
+log
+@Added damping constant commands for Nose-Hoover barostats and thermostats
+@
+text
+@a622 1
+  double rcut;
+d625 5
+a629 9
+  rcut = param_list[ientry].params[10];
+
+  if (r > rcut) {
+    return 0.;
+  } else {
+    ters_lam2 = param_list[ientry].params[6];
+    ters_B = param_list[ientry].params[7];
+    return -ters_B*exp(-ters_lam2*r)*ters_fc(r,ientry);
+  }
+d634 1
+a634 1
+  double ters_B,ters_lam2,ters_R,ters_D;
+d636 7
+a642 12
+  ters_R = param_list[ientry].params[8];
+  ters_D = param_list[ientry].params[9];
+
+  if (r > (ters_R+ters_D)) {
+    return 0.;
+  } else {
+    ters_lam2 = param_list[ientry].params[6];
+    ters_B = param_list[ientry].params[7];
+    double ex;
+    ex = exp(-ters_lam2*r);
+    return ters_B*ex*(ters_lam2*ters_fc(r,ientry) - ters_fc_d(r,ientry));
+  }
+@
+
+
+4.7.2.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@d135 1
+a135 1
+		       double fj[],double fk[],
+d159 1
+a159 1
+      ters_zetaterm_d(prefac,rij_hat,rij,rik_hat,rik,fj,fk,ijkentry);
+d170 3
+d186 3
+d769 1
+a769 1
+		    const double& rik_m, 
+d799 1
+a799 11
+/*   Don't need this no more */
+/*   // compute the derivative wrt Ri */
+
+/*   /\*     dri = (-dfc)*gijk*ex_delr*rik_hat; *\/ */
+/*   /\*     dri += fc*gijk_d*ex_delr*dcosdri; *\/ */
+/*   /\*     dri += fc*gijk*ex_delr_d*(rik_hat - rij_hat); *\/ */
+/*   vec3_scale((-dfc)*gijk*ex_delr,rik_hat,dri); */
+/*   vec3_scaleadd(fc*gijk_d*ex_delr,dcosdri,dri,dri); */
+/*   vec3_scaleadd(fc*gijk*ex_delr_d,rik_hat,dri,dri); */
+/*   vec3_scaleadd(-fc*gijk*ex_delr_d,rij_hat,dri,dri); */
+/*   vec3_scale(prefac,dri,dri); */
+d801 8
+d949 1
+a949 1
+		       double fj[],double fk[],
+d972 1
+a972 1
+      ters_zetaterm_morse_d(prefac,rij_hat,rij,rik_hat,rik,fj,fk,ijkentry);
+d983 3
+d999 3
+d1104 1
+a1104 1
+		    const double& rik_m, 
+d1117 2
+d1137 1
+a1137 2
+/*   Don't need this no more */
+/*   // compute the derivative wrt Ri */
+d1139 5
+a1143 5
+/*   vec3_scale((-dfc)*gijk*ex_delr,rik_hat,dri); */
+/*   vec3_scaleadd(fc*gijk_d*ex_delr,dcosdri,dri,dri); */
+/*   vec3_scaleadd(fc*gijk*ex_delr_d,rik_hat,dri,dri); */
+/*   vec3_scaleadd(-fc*gijk*ex_delr_d,rij_hat,dri,dri); */
+/*   vec3_scale(ters_gamma*prefac,dri,dri); */
+@
+
+
+4.6
+log
+@Fixed bug in parameter selection for Tersoff alloys.
+@
+text
+@d1117 2
+@
+
+
+4.5
+log
+@Added GaAs version of Tersoff
+@
+text
+@d138 2
+a139 1
+		       const int& ientry) const
+d149 1
+a149 1
+  if (rsqij <= param_list[ientry].params[10]) {
+d151 1
+a151 1
+    if (rsqik <= param_list[ientry].params[10] ) {
+d159 1
+a159 1
+      ters_zetaterm_d(prefac,rij_hat,rij,rik_hat,rik,fi,fj,fk,ientry);
+d552 1
+a552 1
+	    const int& ientry) const {
+d560 1
+a560 1
+  if (rsqij <= param_list[ientry].params[10]) {
+d562 1
+a562 1
+    if (rsqik <= param_list[ientry].params[10] ) {
+d567 1
+a567 1
+      tmp = pow(param_list[ientry].params[0]*(rij-rik),3);
+d578 1
+a578 1
+      result = ters_fc(rik,ientry)*ters_gijk(costheta,ientry)*ex_delr;
+d952 1
+a952 1
+		       const int& ientry) const
+d962 1
+a962 1
+  if (rsqij <= param_list[ientry].params[10]) {
+d964 1
+a964 1
+    if (rsqik <= param_list[ientry].params[10] ) {
+d972 1
+a972 1
+      ters_zetaterm_morse_d(prefac,rij_hat,rij,rik_hat,rik,fi,fj,fk,ientry);
+d1068 1
+a1068 1
+	    const int& ientry) const {
+d1076 1
+a1076 1
+  if (rsqij <= param_list[ientry].params[10]) {
+d1078 1
+a1078 1
+    if (rsqik <= param_list[ientry].params[10] ) {
+d1083 1
+a1083 1
+      tmp = param_list[ientry].params[0]*(rij-rik);
+d1094 2
+a1095 2
+      result = ters_fc(rik,ientry)*ters_gijk(costheta,ientry)*ex_delr;
+      result *= param_list[ientry].params[4];
+@
+
+
+4.4
+log
+@add the Moliere short-range potential to the tersoff potential
+@
+text
+@d398 13
+a410 3
+// This is a little risky, since if for any reason,
+// this file is include in more than one file,
+// the compiler will baulk. 
+d478 12
+a489 3
+// This is a little risky, since if for any reason,
+// this file is include in more than one file,
+// the compiler will baulk. 
+d868 359
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d325 73
+d468 62
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.2
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.1
+log
+@Added tersoff_zbl force type
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d236 143
+@
+
+
+2.2
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.2.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@@
+
+
+2.1
+log
+@Added the Tersoff force field class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+

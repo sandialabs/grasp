@@ -1,0 +1,200 @@
+head	1.2;
+access;
+symbols
+	PPPM_Crozier2:1.2.0.2
+	PPPM_Crozier:1.2
+	Root-of-PPPM_Crozier:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2005.06.08.21.19.05;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Added a feature to turn on and off nodefiles.
+@
+text
+@/Users/athomps/netapp/codes/Grasp/Testing/tests/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /Users/athomps/netapp/codes/Grasp/Testing/tests/
+PATH_MAX is 1024
+
+
+
+Entering Input::ReadInput()
+use_nodefiles 0
+
+forcefield twobody twobody.in Lennard-Jones
+forcefield pppm 1.0e-5 6.0
+timestep 0.0100000000
+nsteps 100
+box dimensions	14.0000000000	0.0000000000	0.0000000000 \
+			0.0000000000	14.0000000000	0.0000000000 \
+			0.0000000000	0.0000000000	14.0000000000
+box origin	-7.0000000000	-7.0000000000	-7.0000000000
+initialize temperature 0.0000000000 256
+neighbor bin 10 0.3000000000
+thermo 100
+dump particles 100
+dump velocities 100
+dump forces 100
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 3
+A 10.0000000000
+B 2.0000000000
+C 3.0000000000
+
+
+
+Reading Lennard-Jones from file twobody.in
+PPPM arg_string is  1.0e-5 6.0
+PPPM precision is 0.0000100000
+PPPM cutoff is 6.0000000000
+  G vector = 0.5128231366
+
+
+
+Setting up force field class 0 called Lennard-Jones
+
+id1 	 id2 	 type 	rcutsq 	 np	 p1      p2    ....   p_np  
+A	A	7	36.00	7        200.8        100.4        16.74        16.74   -0.0003587        1389.       0.5128
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield particle type match for particle type B
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield particle type match for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 6.000
+rskin = 0.3000
+rcutneighmax = 6.300
+
+
+
+Setting up force field class 5 called Long-Range
+
+
+
+Entering ParticleList::ReadConfig()
+Will not read an initial velocity file 
+Will not read an initial displacement file 
+Total particles read = 1372
+
+
+
+Entering Output::Setup()
+Actual 1d max vectors = 967 7 1687
+
+
+
+Entering FixList::Setup()
+
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =    -18444.6528695705
+   Coulombic        =   -521757.6651970324
+Long-Range          =   -551414.6660625177
+Potential Energy    =  -1091616.9841291206
+Kinetic Energy      =         0.0000000000
+Extended Energy     =         0.0000000000
+Total Energy        =  -1091616.9841291206
+Pressure            =   -236090.9705812156
+Temperature         =         0.0000000000
+Total Particles     =                 1372
+Volume              =      2744.0000000000
+--------------- Step       100 ---- CPU =    42.8768 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =    -18444.2248130438
+   Coulombic        =   -521881.3448868393
+Long-Range          =   -551414.7373456343
+Potential Energy    =  -1091740.3070455175
+Kinetic Energy      =        91.2493726679
+Extended Energy     =         0.0000000000
+Total Energy        =  -1091649.0576728496
+Pressure            =   -236203.3654396456
+Temperature         =         5.3366226906
+
+
+
+Loop time: 42.8911299706 on 2 processors for 1372 particles for 100 steps
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time   35.9441     83.80
+          Neigh Time    1.5686      3.66
+           Comm Time    2.0420      4.76
+       Exchange Time    0.4315      1.01
+        Revcomm Time    2.5368      5.91
+        Barrier Time    0.0000      0.00
+          Other Time    0.3681      0.86
+          Total Time   42.8911    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+Lennard-Jones          22.8966 (   100)     1.5686 (    10) 
+Long-Range             13.0475 (   100) 
+
+
+
+Finished 
+@
+
+
+1.1
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d9 2
+d100 1
+a100 1
+--------------- Step       100 ---- CPU =    38.5489 (sec) ---------------
+d114 1
+a114 1
+Loop time: 38.5650320053 on 2 processors for 1372 particles for 100 steps
+d120 5
+a124 5
+          Force Time   31.6288     82.01
+          Neigh Time    1.5251      3.95
+           Comm Time    2.3025      5.97
+       Exchange Time    0.3610      0.94
+        Revcomm Time    2.4146      6.26
+d126 2
+a127 2
+          Other Time    0.3329      0.86
+          Total Time   38.5650    100.00
+d133 2
+a134 2
+Lennard-Jones          19.6849 (   100)     1.5251 (    10) 
+Long-Range             11.9440 (   100) 
+@
+

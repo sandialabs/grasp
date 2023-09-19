@@ -1,0 +1,4786 @@
+head	4.8;
+access;
+symbols
+	ReverseComm_branch:4.5.0.4
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.5
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.25.0.2
+	cjkimme_version_merge_from_trunk_1:2.13.2.4
+	cjkimme_version:2.13.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.8
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.5.4.1;
+next	4.4;
+
+4.4
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.6;
+
+3.6
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.03.24.21.44.21;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.02.16.20.35.26;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.2.6.1;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.25;
+
+2.25
+date	2004.08.24.15.32.11;	author athomps;	state Exp;
+branches;
+next	2.24;
+
+2.24
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.23;
+
+2.23
+date	2004.08.02.18.00.47;	author athomps;	state Exp;
+branches;
+next	2.22;
+
+2.22
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.07.19.17.05.38;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.03.02.17.49.47;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.02.12.00.13.00;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.02.06.20.19.12;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	2.13.2.1;
+next	2.12;
+
+2.12
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.04.02.46.52;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.03.03.20.32.39;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.25.23.06.37;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	;
+
+2.13.2.1
+date	2004.02.05.23.54.20;	author cjkimme;	state Exp;
+branches;
+next	2.13.2.2;
+
+2.13.2.2
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.13.2.3;
+
+2.13.2.3
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.13.2.4;
+
+2.13.2.4
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	2.13.2.5;
+
+2.13.2.5
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.2.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.2.6.2;
+
+3.2.6.2
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.2.6.3;
+
+3.2.6.3
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.5.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.8
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_threebody.h"
+#include "box.h"
+#include "box_inline.h"
+#include "force_threebody_inline.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "machine.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+
+Force_Threebody::Force_Threebody(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = threebody;
+  timeforce = 0.0;
+  nforce = 0;
+  npieces = 2;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "Twobody";
+  label_piece[1] = "Threebody";
+  rcutmax = 0.0;
+  input_param_index = NULL;
+  param_index = NULL;
+  rcutneighsq_table = NULL;
+}
+
+Force_Threebody::~Force_Threebody() {
+  if (input_param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      for (int jtype=0;jtype<ntypes;jtype++) {
+	delete []input_param_index[itype][jtype];
+      }
+      delete []input_param_index[itype];
+    }
+    delete []input_param_index;
+  }
+  if (param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      for (int jtype=0;jtype<ntypes;jtype++) {
+	delete []param_index[itype][jtype];
+      }
+      delete []param_index[itype];
+    }
+    delete []param_index;
+  }
+  // Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+  // Free the memory allocated to param_list
+  for (int i = 0;i<param_list.size();i++) {
+    delete[] param_list[i].params;
+  }
+}
+
+void Force_Threebody::ReadInteractions(Comm* comm) {
+  string buf,buf2;
+  string id1,id2,id3;
+  string forcefieldname;
+  string filename;
+  double eps,sigma,littlea,lambda,gamma,costheta;
+  double biga,bigb,powerp,powerq;
+  int nparams;
+  int* i_tmp;
+  int itype,jtype,ktype,itriple;
+  int isize;
+  ff_params ff_param_tmp;
+  bool match;
+  vector<int*> ff_triples;
+  int node;
+  string str_tmp;
+  ifstream infile;
+
+  std::istringstream buf_in(arg_string);
+
+  node = comm->get_node();
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Threebody::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Threebody::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  glog.get_logfile() << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+
+  str_tmp = glog.path_str + filename;
+  if (node == 0) {
+    infile.open(str_tmp.c_str()); 
+  
+    if (!infile) {
+      infile.close();
+      infile.open(str_tmp.c_str()); 
+      if (!infile) {
+	glog.abort("Force_Threebody::ReadInteractions:\n"
+		   "Failed to open " + str_tmp,comm);
+      }
+    }
+  }
+
+  ntypes = 0;
+
+  do {
+    if (node==0) {
+      if(input_string_get(infile,buf)) {
+	if(buf != "End of Input") {
+	  glog.abort("Force_Threebody::ReadInput:\n"
+		     "Read error in "+str_tmp,comm);
+	}
+      }
+      isize = buf.size();
+    }
+
+    MPI_Bcast(&isize,1,MPI_INT,0,comm->get_world());
+    if (node != 0) buf.resize(isize);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << isize << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << buf << endl;
+    }
+
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (input_string_match(buf,"End of Input")) {
+      break;
+    }
+
+    buf_in.clear();
+    buf_in.str(buf);
+    
+    // Construct index for ids on the fly
+    buf_in >> id1 >> id2 >> id3;
+
+    match = find_id(id1,itype);
+    if (!match) {
+      ntypes++;
+      itype = ntypes-1;
+      id_index.push_back(id1);
+    }
+
+    match = find_id(id2,jtype);
+    if (!match) {
+      ntypes++;
+      jtype = ntypes-1;
+      id_index.push_back(id2);
+    }
+
+    match = find_id(id3,ktype);
+    if (!match) {
+      ntypes++;
+      ktype = ntypes-1;
+      id_index.push_back(id3);
+    }
+
+    buf_in >> forcefieldname;
+    if (forcefieldname == "sw_cut") {
+      // To avoid ambiguity, pair interactions only read in 
+      // when end atoms are identical
+      if (jtype == ktype) {
+	buf_in >> eps >> sigma >> littlea >> 
+	  lambda >> gamma >> costheta >>
+	  biga >> bigb >> powerp >> powerq;
+	if (eps < 0.0 || sigma <= 0.0 || littlea <= 0.0 || 
+	    lambda < 0.0 || gamma < 0.0 || costheta > 1.0 || costheta < -1.0 ||
+	    biga < 0.0 || bigb < 0.0 || powerp < 0.0 || powerq < 0.0 ) {
+	  glog.error("Force_Threebody::ReadInteractions:\n"
+		     "Invalid parameter in " + str_tmp);
+	}
+	nparams = 10;
+	ff_param_tmp.type = sw_cut;
+	ff_param_tmp.np = nparams;
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = eps;
+	ff_param_tmp.params[1] = sigma;
+	ff_param_tmp.params[2] = littlea;
+	ff_param_tmp.params[3] = lambda;
+	ff_param_tmp.params[4] = gamma;
+	ff_param_tmp.params[5] = costheta;
+	ff_param_tmp.params[6] = biga;
+	ff_param_tmp.params[7] = bigb;
+	ff_param_tmp.params[8] = powerp;
+	ff_param_tmp.params[9] = powerq;
+      } else {
+	buf_in >> eps >> sigma >> littlea >> 
+	  lambda >> gamma >> costheta;
+	if (eps < 0.0 || sigma <= 0.0 || littlea <= 0.0 ||
+	    lambda < 0.0 || gamma < 0.0 || costheta > 1.0 || costheta < -1.0 ) {
+	glog.error("Force_Threebody::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+	}
+	nparams = 6;
+	ff_param_tmp.type = sw_cut;
+	ff_param_tmp.np = nparams;
+	// Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = eps;
+	ff_param_tmp.params[1] = sigma;
+	ff_param_tmp.params[2] = littlea;
+	ff_param_tmp.params[3] = lambda;
+	ff_param_tmp.params[4] = gamma;
+	ff_param_tmp.params[5] = costheta;
+      }
+	
+      input_param_list.push_back(ff_param_tmp);
+    }
+    else {
+      glog.error("Force_Threebody::ReadInteractions:\n"
+		   "Invalid forcefield name"+forcefieldname);
+    }
+
+    if (buf_in.fail()) {
+      glog.error("Force_Threebody::ReadInteractions:\n"
+		   "Read error in " + str_tmp);
+    }
+
+    // Save the triple and their address for later compilation
+    i_tmp = new int[3];
+    i_tmp[0] = itype;
+    i_tmp[1] = jtype;
+    i_tmp[2] = ktype;
+    ff_triples.push_back(i_tmp);
+
+  } while (!input_string_match(buf,"End of Input"));
+
+  // Allocate ntypes x ntypes x ntypes array input_param_index
+  input_param_index = new int**[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    input_param_index[itype] = new int*[ntypes];
+    for (jtype=0;jtype<ntypes;jtype++) {
+      input_param_index[itype][jtype] = new int[ntypes];
+    }
+  }
+  // Initialize input_param_index to empty value
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      for (ktype=0;ktype<ntypes;ktype++) {
+	input_param_index[itype][jtype][ktype] = -1;
+      }
+    }
+  }
+
+  for (itriple=0;itriple<input_param_list.size();itriple++) {
+    itype = ff_triples[itriple][0];
+    jtype = ff_triples[itriple][1];
+    ktype = ff_triples[itriple][2];
+    //Note: first index identifies central atom, which is unique.
+    //second and third indices identify end atoms, which are interchangeable
+    input_param_index[itype][jtype][ktype] = itriple;
+    input_param_index[itype][ktype][jtype] = itriple;
+  }
+
+  for (itriple=0;itriple<input_param_list.size();itriple++) {
+    delete []ff_triples[itriple];
+  }
+
+}
+
+void Force_Threebody::SetupInteractions(const Box* b, 
+                                      const double& g_ewald, 
+				      Comm* comm) {
+  int i,itype,jtype,ktype,ii,jj,kk,iparam,kstart;
+  double eps,sigma,littlea,lambda,gamma,costheta;
+  double biga,bigb,powerp,powerq;
+  ff_params ff_param_tmp;
+  int node,nprocs;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  // Allocate ntypes x ntypes x ntypes array param_index
+  param_index = new int**[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    param_index[itype] = new int*[ntypes];
+    for (jtype=0;jtype<ntypes;jtype++) {
+      param_index[itype][jtype] = new int[ntypes];
+    }
+  }
+
+  // Initialize param_index to empty value
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      for (ktype=0;ktype<ntypes;ktype++) {
+	param_index[itype][jtype][ktype] = -1;
+      }
+    }
+  }
+
+  Lnocut = false;
+
+  glog.get_logfile() << setprecision(4);
+  glog.get_logfile().unsetf(ios::fixed);
+  //First do pure component forms
+
+  if (node == 0) {
+    glog.get_logfile() << endl << "id1\tid2\tid3\tt \tn" << 
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      endl;
+  }
+
+  nentries = 0;
+  for (itype=0;itype<ntypes;itype++) {
+    ii = input_param_index[itype][itype][itype];
+    if (ii != -1) {
+      ff_param_tmp.type = input_param_list[ii].type;
+      switch(ff_param_tmp.type) {
+      case sw_cut :
+	eps = input_param_list[ii].params[0];
+	sigma = input_param_list[ii].params[1];
+	littlea = input_param_list[ii].params[2];
+	lambda = input_param_list[ii].params[3];
+	gamma = input_param_list[ii].params[4];
+	costheta = input_param_list[ii].params[5];
+	biga = input_param_list[ii].params[6];
+	bigb = input_param_list[ii].params[7];
+	powerp = input_param_list[ii].params[8];
+	powerq = input_param_list[ii].params[9];
+	sw_cut_pure_setup(
+              eps,sigma,littlea,lambda,gamma,costheta,
+	      biga,bigb,powerp,powerq,ff_param_tmp);
+	break;
+      default:
+	glog.error("Force_Threebody::SetupInteractions:\n"
+		   "Invalid forcefield type");
+      }
+      param_list.push_back(ff_param_tmp);
+      nentries++;
+      i = nentries-1;
+      param_index[itype][itype][itype] = i;
+      if (node == 0) {
+	glog.get_logfile() << id_index[itype] << "\t" << id_index[itype] << "\t" << id_index[itype] << "\t" 
+		     << param_list[i].type << "\t" << param_list[i].np; 
+	for (iparam=0;iparam<param_list[i].np;iparam++) {
+	  glog.get_logfile() << setw(13) << param_list[i].params[iparam];
+	}
+	glog.get_logfile() << endl;
+      }
+    } else {
+      glog.warning("Force_Threebody::SetupInteractions:\n"
+		 "Force field has no pure entry for particle type "
+		   + id_index[itype]);
+    }
+  }
+
+  // Now we treat the cross interactions
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      if (itype==jtype) {
+	kstart = jtype+1;
+      } else{
+	kstart = jtype;
+      }
+      for (ktype=kstart;ktype<ntypes;ktype++) {
+	ii = input_param_index[itype][jtype][ktype];
+      // Obtain parameters from user input
+	if (ii!=-1) {
+	  ff_param_tmp.type = input_param_list[ii].type;
+	  switch(ff_param_tmp.type) {
+	  case sw_cut :
+	    eps = input_param_list[ii].params[0];
+	    sigma = input_param_list[ii].params[1];
+	    littlea = input_param_list[ii].params[2];
+	    lambda = input_param_list[ii].params[3];
+	    gamma = input_param_list[ii].params[4];
+	    costheta = input_param_list[ii].params[5];
+	    if (jtype != ktype) {
+	      sw_cut_cross_setup(eps,sigma,littlea,lambda,
+				 gamma,costheta,ff_param_tmp);
+	    } else {
+	      biga = input_param_list[ii].params[6];
+	      bigb = input_param_list[ii].params[7];
+	      powerp = input_param_list[ii].params[8];
+	      powerq = input_param_list[ii].params[9];
+	      sw_cut_pure_setup(eps,sigma,littlea,lambda,gamma,costheta,
+				biga,bigb,powerp,powerq,ff_param_tmp);
+	    }
+	    break;
+	  default:
+	    glog.error("Force_Threebody::SetupInteractions:\n"
+		       "Invalid forcefield type");
+	  }
+
+	  param_list.push_back(ff_param_tmp);
+	  nentries++;
+	  i = nentries-1;
+	  param_index[itype][jtype][ktype] = i;
+	  param_index[itype][ktype][jtype] = i;
+	  if (node == 0) {
+	    glog.get_logfile() << id_index[itype] << "\t" << id_index[jtype] << "\t"
+			 << id_index[ktype] << "\t"
+			 << param_list[i].type << "\t" << param_list[i].np; 
+	    for (iparam=0;iparam<param_list[i].np;iparam++) {
+	      glog.get_logfile() << setw(13) << param_list[i].params[iparam];
+	    }
+	    glog.get_logfile() << endl;
+	  }
+
+	  // Obtain parameters from mixing rule
+	} else {
+	  ii = input_param_index[itype][itype][itype];
+	  jj = input_param_index[jtype][jtype][jtype];
+	  kk = input_param_index[ktype][ktype][ktype];
+	  if (ii==-1 || jj==-1 || kk==-1) {
+	    glog.warning("Force_Threebody::SetupInteractions:\n"
+		       "Missing pure entry for this cross triple\n"
+			 "No interaction for this cross triple (" 
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + "," 
+		       + id_index[ktype] + ")");
+
+	  } else {
+	    if (input_param_list[ii].type!=input_param_list[jj].type ||
+		input_param_list[ii].type!=input_param_list[kk].type 
+		) {
+	      glog.error("Force_Threebody::SetupInteractions:\n"
+			 "Pure components have different forcefield types "
+			 "for cross triple (" 		       
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + "," 
+		       + id_index[ktype] + ")");
+	    } else {
+	      // These commands should be customized for each case
+	      ff_param_tmp.type = input_param_list[ii].type;
+	      switch(input_param_list[ii].type) {
+	      case sw_cut :
+		glog.error("Force_Threebody::SetupInteractions:\n"
+			   "no mixing rule for type sw_cut "
+			   "for cross triple\n"
+			   "No interaction for this cross pair (" 
+		  + id_index[itype] + "," 
+		  + id_index[jtype] + "," 
+		  + id_index[ktype] + ")");
+		break;
+	      default:
+		glog.error("Force_Threebody::SetupInteractions:\n"
+			   "Invalid forcefield type");
+	      }
+	      param_list.push_back(ff_param_tmp);
+	      nentries++;
+	      i = nentries-1;
+	      param_index[itype][jtype][ktype] = i;
+	      param_index[itype][ktype][jtype] = i;
+	      if (node == 0) {
+		glog.get_logfile() << id_index[itype] << "\t" << id_index[jtype] << "\t"
+			     << id_index[ktype] << "\t" 
+			     << param_list[i].type << "\t" << param_list[i].np; 
+		for (iparam=0;iparam<param_list[i].np;iparam++) {
+		  glog.get_logfile() << setw(13) << param_list[i].params[iparam];
+		}
+		glog.get_logfile() << endl;
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  }
+
+  // Free the memory allocated to input_param_list
+  for (i = 0;i<input_param_list.size();i++) {
+    delete[] input_param_list[i].params;
+  }
+  input_param_list.clear();
+}
+
+void Force_Threebody::SetupCutNeighSq(const double& rskin, Comm* comm) {
+  double rsq;
+  int itype,jtype,ktype,i;
+  ForceFieldTypes type;
+  int node;
+
+  node = comm->get_node();
+
+  // Allocate ntypes x ntypes array rcutneighsq_table
+  rcutneighsq_table = new double*[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    rcutneighsq_table[itype] = new double[ntypes];
+  }
+
+  // initialize rcutneighsq_table
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      rcutneighsq_table[itype][jtype] = 0.0;
+    }
+  }
+
+  // Assign values to rcutneighsq_table[][] using force field parameters
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      rcutneighsq_table[itype][jtype] = 0.0;
+      // Loop over third atom type to find largest cut-off
+      for (ktype=0;ktype<ntypes;ktype++) {
+	i = param_index[itype][jtype][ktype];
+
+	if (i != -1) {
+	type = param_list[i].type;
+	switch(type) {
+	case sw_cut :
+	  rsq = pow(sqrt(param_list[i].params[5])+rskin,2);
+	  rcutneighsq_table[itype][jtype] = max(rcutneighsq_table[itype][jtype],rsq);
+	  break;
+	default:
+	  glog.error("Force_Threebody::SetupCutNeighSq:\n"
+		     "Invalid forcefield type");
+	}
+	}
+      }
+    }
+  }
+}
+
+void Force_Threebody::ApplyForce(
+		      const bool& Lenergy, const bool& Lvirial, 
+		      const bool& Latomvirial, 
+		      ParticleList* p, 
+		      const Box* b, Comm* comm) {
+
+  double fi[3],fj[3],fk[3];
+  double energy_ijk,energy_ij;
+  int itype,jtype,ktype,ientry;
+  ForceFieldTypes threebody_type;
+  int i,j,k,image;
+  double xi[3],xj[3],xk[3];
+  double* rshift;
+  int jstart;
+  bool perflag;
+  Particle* i_pnt;
+  Particle* j_pnt;
+  Particle* k_pnt;
+  int nparticles;
+  int itag,jtag;
+  double rsq,delr[3];
+  int* neighptr;
+  double virial_ij[nvirial];
+  double virial_j[nvirial], virial_k[nvirial];
+
+  double e_cohesive = p->get_cohesive_energy();
+
+  perflag = b->get_perflag();
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+    energy_piece[1] = 0.0;
+  }
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  if (Lneighbor) {
+
+    nparticles = p->get_nparticles();
+    
+    for (i=0;i<nparticles;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      i_pnt->get_x(xi);
+      itag = i_pnt->get_tag();
+
+      neighptr = neighbor->first_ptr[i];
+
+      // Single loop over neighbors to compute twobody interactions.
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+
+	jtype = type_index[j_pnt->get_type()];
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+	// skip interactions not included in force field
+	if (ientry == -1) {
+	  continue;
+	}
+
+	//Since Ltwoway=true, need to avoid double counting.
+	jtag = j_pnt->get_tag();
+
+	if (itag > jtag) {
+	  if ((itag+jtag)%2 == 0) continue;
+	} else if (itag < jtag) {
+	  if ((itag+jtag)%2 == 1) continue;
+	}
+
+	j_pnt->get_x(xj);
+
+	//Since Ltwoway=true, need to avoid double counting.
+	if (itag == jtag) {
+	  rsq = vec3_distsq(xi,xj,delr);
+	  if (delr[2] > small) {
+	    continue;
+	  } else if (fabs(delr[2]) < small) {
+	    if (delr[1] > small) {
+	      continue;
+	    } else if (fabs(delr[1]) < small) {
+	      if (delr[0] > small) continue;
+	    }
+	  }
+	}
+
+	threebody_type = param_list[ientry].type;
+	switch(threebody_type) {
+	case sw_cut :
+	  force_sw_twobody_cut(xi,xj,fi,Lenergy,Lvirial,
+                               energy_ij,virial_ij,ientry);
+	  break;
+	default:
+	  glog.error("Force_Threebody::ApplyForce:\n"
+		     "Invalid forcefield type for Lneighbor true");
+	  exit(1); // Purely to satisfy compiler uninitialized data checks
+	}
+	
+     	i_pnt->increment_f(fi);
+     	j_pnt->decrement_f(fi);
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	}
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+	  
+      }
+      //Double loop over neighbors to compute threebody interactions
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i]-1;ineigh++) {
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+	for (int jneigh=ineigh+1;
+	     jneigh<neighbor->nneigh_list[i];jneigh++) {
+	  k = neighptr[jneigh];
+	  k_pnt = p->get_particle(k);
+	  ktype = type_index[k_pnt->get_type()];
+	  ientry = param_index[itype][jtype][ktype];
+	  // skip interactions not included in force field
+	  if (ientry == -1) {
+	    continue;
+	  }
+	  k_pnt->get_x(xk);
+
+	  threebody_type = param_list[ientry].type;
+	  switch(threebody_type) {
+	  case sw_cut :
+	    force_sw_cut(xi,xj,xk,fj,fk,Lenergy,Lvirial,
+                         energy_ijk,virial_j,virial_k,ientry);
+	    break;
+	  default:
+	    glog.error("Force_Threebody::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	    exit(1); // Purely to satisfy compiler uninitialized data checks
+	  }
+	
+	  i_pnt->decrement_f(fj);
+	  i_pnt->decrement_f(fk);
+	  j_pnt->increment_f(fj);
+	  k_pnt->increment_f(fk);
+
+	  if (Lenergy) {
+	    energy_piece[1]+=energy_ijk;
+	    energy_ijk /= 3.;
+	    i_pnt->increment_phi(energy_ijk);
+	    j_pnt->increment_phi(energy_ijk);
+	    k_pnt->increment_phi(energy_ijk);
+	  }
+	  if (Lvirial) {
+	    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	      virial[ivirial] += virial_j[ivirial] + virial_k[ivirial];
+	    }
+	  }
+
+	}
+      }
+    }
+
+  } else {
+
+    // Single loop over neighbors to compute twobody interactions.
+    nparticles = p->get_nparticles();
+    for (i=0;i<nparticles-1;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      for (j=i+1;j<nparticles;j++) {
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+	// skip interactions not included in force field
+	if (ientry == -1) {
+	  continue;
+	}
+	threebody_type = param_list[ientry].type;
+	switch(threebody_type) {
+	case sw_cut :
+	  force_sw_twobody_cut_minimg(*i_pnt,*j_pnt,fi,Lenergy,Lvirial,
+				      energy_ij,virial_ij,ientry,b);
+	  break;
+	default:
+	  glog.error("Force_Threebody::ApplyForce:\n"
+		     "Invalid forcefield type");
+	  exit(1); // Purely to satisfy compiler uninitialized data checks
+	}
+	  
+     	i_pnt->increment_f(fi);
+     	j_pnt->decrement_f(fi);
+
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	}
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+      }
+    }
+
+    //Double loop over neighbors to compute threebody interactions
+    for (i=0;i<nparticles;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      for (j=0;j<nparticles-1;j++) {
+	if (j!=i) {
+	  j_pnt = p->get_particle(j);
+	  jtype = type_index[j_pnt->get_type()];
+	  for (k=j+1;k<nparticles;k++) {
+	    if (k!=i) {
+	      k_pnt = p->get_particle(k);
+	      ktype = type_index[k_pnt->get_type()];
+
+	      ientry = param_index[itype][jtype][ktype];
+	      // skip interactions not included in force field
+	      if (ientry == -1) {
+		continue;
+	      }
+	      threebody_type = param_list[ientry].type;
+	      switch(threebody_type) {
+	      case sw_cut :
+		force_sw_cut_minimg(*i_pnt,*j_pnt,*k_pnt,
+				    fj,fk,Lenergy,Lvirial,
+				    energy_ijk,virial_j,virial_k,ientry,b);
+		break;
+	      default:
+		glog.error("Force_Threebody::ApplyForce:\n"
+			   "Invalid forcefield type");
+		exit(1); // Purely to satisfy compiler uninitialized data checks
+	      }
+	      
+	      i_pnt->decrement_f(fj);
+	      i_pnt->decrement_f(fk);
+	      j_pnt->increment_f(fj);
+	      k_pnt->increment_f(fk);
+	      if (Lenergy) {
+		energy_piece[1]+=energy_ijk;
+		energy_ijk /= 3.0;
+		i_pnt->increment_phi(energy_ijk);
+		j_pnt->increment_phi(energy_ijk);
+		k_pnt->increment_phi(energy_ijk);
+	      }
+	      if (Lvirial) {
+		for (int ivirial=0;ivirial<nvirial;ivirial++) {
+		  virial[ivirial] += virial_j[ivirial] + virial_k[ivirial];
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+}
+
+// probably a temporary function. Lvirial should be true, but no unpleasant
+// side effects if it isn't.
+// deals mainly with particles to be minimized and their interactions
+// with fixed particles
+void Force_Threebody::ApplyPartialForce(
+		      const bool& Lenergy, const bool& Lvirial, 
+		      const bool& Latomvirial, 
+		      ParticleList* p, 
+		      const Box* b, Comm* comm) {
+
+  double fi[3],fj[3],fk[3];
+  double energy_ijk,energy_ij;
+  int itype,jtype,ktype,ientry;
+  ForceFieldTypes threebody_type;
+  int i,j,k,image;
+  double xi[3],xj[3],xk[3];
+  double* rshift;
+  int jstart;
+  bool perflag, ifree, jfree, kfree;
+  Particle* i_pnt;
+  Particle* j_pnt;
+  Particle* k_pnt;
+  int nparticles;
+  int itag,jtag;
+  double rsq,delr[3];
+  int* neighptr;
+  double virial_ij[nvirial];
+  double virial_j[nvirial], virial_k[nvirial];
+  double ui[3], uj[3], uk[3];
+
+  double e_cohesive = p->get_cohesive_energy();
+
+  perflag = b->get_perflag();
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+    energy_piece[1] = 0.0;
+  }
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  if (Lneighbor) {
+
+    nparticles = p->get_nparticles();
+    
+    for (i=0;i<nparticles;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      i_pnt->get_x(xi);
+      itag = i_pnt->get_tag();
+      ifree = i_pnt->get_minimized();
+      
+      neighptr = neighbor->first_ptr[i];
+
+      // Single loop over neighbors to compute twobody interactions.
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	jfree = j_pnt->get_minimized();
+	jtype = type_index[j_pnt->get_type()];
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+	// skip interactions not included in force field
+	if (ientry == -1) {
+	  continue;
+	}
+
+
+	//Since Ltwoway=true, need to avoid double counting.
+	jtag = j_pnt->get_tag();
+
+	if (itag > jtag) {
+	  if ((itag+jtag)%2 == 0) continue;
+	} else if (itag < jtag) {
+	  if ((itag+jtag)%2 == 1) continue;
+	}
+
+	j_pnt->get_x(xj);
+
+	//Since Ltwoway=true, need to avoid double counting.
+	if (itag == jtag) {
+	  rsq = vec3_distsq(xi,xj,delr);
+	  if (delr[2] > small) {
+	    continue;
+	  } else if (fabs(delr[2]) < small) {
+	    if (delr[1] > small) {
+	      continue;
+	    } else if (fabs(delr[1]) < small) {
+	      if (delr[0] > small) continue;
+	    }
+	  }
+	}
+
+	threebody_type = param_list[ientry].type;
+	switch(threebody_type) {
+	case sw_cut :
+	  force_sw_twobody_cut(xi,xj,fi,Lenergy,Lvirial,
+                               energy_ij,virial_ij,ientry);
+	  break;
+	default:
+	  glog.error("Force_Threebody::ApplyPartialForce:\n"
+		     "Invalid forcefield type for Lneighbor true");
+	  exit(1); // Purely to satisfy compiler uninitialized data checks
+	}
+	  
+     	i_pnt->increment_f(fi);
+     	j_pnt->decrement_f(fi);
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	}
+	if (Lvirial) {
+	  if (ifree || jfree) {
+	    if (!(ifree && jfree)) {
+	      if (ifree) {
+		j_pnt->get_u(uj);
+		virial_ij[2] = fi[2]*(xi[2] - uj[2]); 
+		//glog.get_logfile() << " ifree " <<  xj[2] << " " << uj[2] << " " << fi[2] << " \n";
+	      } else {
+		i_pnt->get_u(ui);
+		virial_ij[2] = fi[2]*(ui[2] - xj[2]);
+
+		//glog.get_logfile() << " else part " << fi[2] << " " << ui[2] << " ";
+		//i_pnt->get_X(ui);
+		//glog.get_logfile() << ui[2] << " " << xi[2] << "\n";
+	      }
+	      for (int ivirial=0;ivirial<nvirial;ivirial++) 
+		virial[ivirial] += virial_ij[ivirial];
+	    }
+	  }
+	}
+      }
+    
+      //Double loop over neighbors to compute threebody interactions
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i]-1;ineigh++) {
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	jfree = j_pnt->get_minimized();
+	j_pnt->get_x(xj);
+	for (int jneigh=ineigh+1;
+	     jneigh<neighbor->nneigh_list[i];jneigh++) {
+	  k = neighptr[jneigh];
+	  k_pnt = p->get_particle(k);
+	  kfree = k_pnt->get_minimized();
+	  ktype = type_index[k_pnt->get_type()];
+	  ientry = param_index[itype][jtype][ktype];
+	  // skip interactions not included in force field
+	  if (ientry == -1) {
+	    continue;
+	  }
+	  k_pnt->get_x(xk);
+
+	  threebody_type = param_list[ientry].type;
+	  switch(threebody_type) {
+	  case sw_cut :
+	    force_sw_cut(xi,xj,xk,fj,fk,Lenergy,Lvirial,
+                         energy_ijk,virial_j,virial_k,ientry);
+	    break;
+	  default:
+	    glog.error("Force_Threebody::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	    exit(1); // Purely to satisfy compiler uninitialized data checks
+	  }
+	
+	  i_pnt->decrement_f(fj);
+	  i_pnt->decrement_f(fk);
+	  j_pnt->increment_f(fj);
+	  k_pnt->increment_f(fk);
+
+	  if (Lenergy) {
+	    energy_piece[1]+=energy_ijk;
+	    energy_ijk /= 3.;
+	    i_pnt->increment_phi(energy_ijk);
+	    j_pnt->increment_phi(energy_ijk);
+	    k_pnt->increment_phi(energy_ijk);
+	  }
+	  if (Lvirial) {
+	    if (ifree || jfree || kfree) {
+	      if (ifree) { 
+		j_pnt->get_u(uj);
+		k_pnt->get_u(uk);
+	      }
+	      if (jfree || kfree)
+		i_pnt->get_u(ui);
+	      if (!(ifree && jfree)) {
+		if (ifree) 
+		  virial_j[2] = fj[2]*(uj[2] - xi[2]); 
+		if (jfree) 
+		  virial_j[2] = fj[2]*(xj[2] - ui[2]);
+	      }
+	      if (!(ifree && kfree)) { 
+		if (ifree) 
+		  virial_k[2] = fk[2]*(uk[2] - xi[2]); 
+	        if (kfree) 
+		  virial_k[2] = fk[2]*(xk[2] - ui[2]);
+	      }
+	      for (int ivirial=0;ivirial<nvirial;ivirial++) 
+		virial[ivirial] += virial_j[ivirial] + virial_k[ivirial];
+	    }
+	  }
+	}
+      }
+    }
+
+  } else {
+
+    // Single loop over neighbors to compute twobody interactions.
+    nparticles = p->get_nparticles();
+    for (i=0;i<nparticles-1;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      ifree = i_pnt->get_minimized();
+      for (j=i+1;j<nparticles;j++) {
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	jfree = j_pnt->get_minimized();
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+	// skip interactions not included in force field
+	if (ientry == -1) {
+	  continue;
+	}
+	threebody_type = param_list[ientry].type;
+	switch(threebody_type) {
+	case sw_cut :
+	  force_sw_twobody_cut_minimg(*i_pnt,*j_pnt,fi,Lenergy,Lvirial,
+				      energy_ij,virial_ij,ientry,b);
+	  break;
+	default:
+	  glog.error("Force_Threebody::ApplyForce:\n"
+		     "Invalid forcefield type");
+	  exit(1); // Purely to satisfy compiler uninitialized data checks
+	}
+	  
+     	i_pnt->increment_f(fi);
+     	j_pnt->decrement_f(fi);
+
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	}
+	if (Lvirial) {
+	  if (ifree || jfree) {
+	    if (!(ifree && jfree)) {
+	      if (ifree) {
+		i_pnt->get_x(xi);
+		j_pnt->get_u(uj);
+		virial_ij[2] = fi[2]*(xi[2] - uj[2]); 
+		//glog.get_logfile() << " else " << uj[2] << " " << fi[2] << " ";
+	      } else {
+		j_pnt->get_x(xj);
+		i_pnt->get_u(ui);
+		virial_ij[2] = fi[2]*(ui[2] - xj[2]);
+
+		//glog.get_logfile() << ui[2] << " " << fi[2] << " ";
+	      }
+	      for (int ivirial=0;ivirial<nvirial;ivirial++) 
+		virial[ivirial] += virial_ij[ivirial];
+	    }
+	  }
+	}
+      }
+    }
+
+    //Double loop over neighbors to compute threebody interactions
+    for (i=0;i<nparticles;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      ifree = i_pnt->get_minimized();
+      for (j=0;j<nparticles-1;j++) {
+	if (j!=i) {
+	  j_pnt = p->get_particle(j);
+	  jtype = type_index[j_pnt->get_type()];
+	  jfree = j_pnt->get_minimized();
+	  for (k=j+1;k<nparticles;k++) {
+	    if (k!=i) {
+	      k_pnt = p->get_particle(k);
+	      ktype = type_index[k_pnt->get_type()];
+	      kfree = k_pnt->get_minimized();
+	      ientry = param_index[itype][jtype][ktype];
+	      // skip interactions not included in force field
+	      if (ientry == -1) {
+		continue;
+	      }
+	      threebody_type = param_list[ientry].type;
+	      switch(threebody_type) {
+	      case sw_cut :
+		force_sw_cut_minimg(*i_pnt,*j_pnt,*k_pnt,
+				    fj,fk,Lenergy,Lvirial,
+				    energy_ijk,virial_j,virial_k,ientry,b);
+		break;
+	      default:
+		glog.error("Force_Threebody::ApplyForce:\n"
+			   "Invalid forcefield type");
+		exit(1); // Purely to satisfy compiler uninitialized data checks
+	      }
+	      
+	      i_pnt->decrement_f(fj);
+	      i_pnt->decrement_f(fk);
+	      j_pnt->increment_f(fj);
+	      k_pnt->increment_f(fk);
+
+	      if (Lenergy) {
+		energy_piece[1]+=energy_ijk;
+		energy_ijk /= 3.0;
+		i_pnt->increment_phi(energy_ijk);
+		j_pnt->increment_phi(energy_ijk);
+		k_pnt->increment_phi(energy_ijk);
+	      }
+	      if (Lvirial) {
+		if (ifree || jfree || kfree) {
+		  i_pnt->get_x(xi);
+		  j_pnt->get_x(xj);
+		  k_pnt->get_x(xk);
+		  if (ifree) {
+		    j_pnt->get_u(uj);
+		    k_pnt->get_u(uk);
+		  }
+		  if (jfree || kfree)
+		    i_pnt->get_u(ui);
+		  if (!(ifree && jfree)) {
+		    if (ifree) 
+		      virial_j[2] = fj[2]*(uj[2] - xi[2]); 
+		    if (jfree) 
+		      virial_j[2] = fj[2]*(xj[2] - ui[2]);
+		  }
+		  if (!(ifree && kfree)) {
+		    if (ifree) 
+		      virial_k[2] = fk[2]*(uk[2] - xi[2]); 
+		    if (kfree) 
+		      virial_k[2] = fk[2]*(xk[2] - ui[2]); 
+		  }
+		  for (int ivirial=0;ivirial<nvirial;ivirial++) 
+		    virial[ivirial] += virial_j[ivirial] + virial_k[ivirial];
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+}
+
+void Force_Threebody::sw_cut_cross_setup(const double& eps,
+				   const double& sigma, 
+				   const double& littlea, 
+				   const double& lambda,
+				   const double& gamma,
+				   const double& costheta,
+				   ff_params& ff_param_tmp) 
+{
+  double rcut;
+
+  ff_param_tmp.np = 6;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  rcut = sigma*littlea;
+  ff_param_tmp.params[0] = rcut;
+  ff_param_tmp.params[1] = sigma*gamma;
+  ff_param_tmp.params[2] = costheta;
+  ff_param_tmp.params[3] = lambda*eps;
+  ff_param_tmp.params[4] = 2.0*lambda*eps;
+  ff_param_tmp.params[5] = rcut*rcut;
+  rcutmax = max(rcut, rcutmax);
+}  
+
+
+void Force_Threebody::sw_cut_pure_setup(const double& eps,
+				   const double& sigma, 
+				   const double& littlea, 
+				   const double& lambda,
+				   const double& gamma,
+				   const double& costheta,
+				   const double& biga,
+				   const double& bigb,
+				   const double& powerp,
+				   const double& powerq,
+				   ff_params& ff_param_tmp) 
+{
+  double rcut;
+
+  ff_param_tmp.np = 15;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  rcut = sigma*littlea;
+  ff_param_tmp.params[0] = rcut;
+  ff_param_tmp.params[1] = sigma*gamma;
+  ff_param_tmp.params[2] = costheta;
+  ff_param_tmp.params[3] = lambda*eps;
+  ff_param_tmp.params[4] = 2.0*lambda*eps;
+  ff_param_tmp.params[5] = rcut*rcut;
+  ff_param_tmp.params[6] = powerp;
+  ff_param_tmp.params[7] = powerq;
+  ff_param_tmp.params[8] = sigma;
+  ff_param_tmp.params[9] = biga*eps*powerp*bigb*pow(sigma,powerp);
+  ff_param_tmp.params[10] = biga*eps*powerq*pow(sigma,powerq);
+  ff_param_tmp.params[11] = biga*eps*bigb*pow(sigma,powerp+1);
+  ff_param_tmp.params[12] = biga*eps*pow(sigma,powerq+1);
+  ff_param_tmp.params[13] = biga*eps*bigb*pow(sigma,powerp);
+  ff_param_tmp.params[14] = biga*eps*pow(sigma,powerq);
+  rcutmax = max(rcut, rcutmax);
+}  
+
+void Force_Threebody::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+				    double& rcutcomm,
+       const Box* b, Comm* comm){
+  int node,nprocs;
+  bool Ltwoway,Ltwoway_ghost;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Ltwoway = true;
+    Ltwoway_ghost = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else if (neighbor_style == "bin") {
+    Ltwoway = true;
+    Ltwoway_ghost = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_Threebody::SetupNeighbor:\n"
+	       "Invalid neighbor style"+neighbor_style);
+  }
+
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_Threebody::SetupNeighbor:\n"
+	       "Can not use nocut types with neighboring");
+  }
+
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_Threebody::SetupNeighbor:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_Threebody::SetupNeighbor:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+  }
+
+  rcutneighmax = 0.0;
+  if (Lneighbor) {
+    rcutneighmax = rcutmax + neighbor_rskin;
+    rcutcomm = rcutmax + neighbor_rskin;
+    neighbor->set_rcutneighmax(rcutneighmax);
+    SetupCutNeighSq(neighbor_rskin,comm);
+    if (node == 0) {
+      glog.get_logfile() << "Cutoffs for this forcefield" << endl;
+      glog.get_logfile() << "rcutmax = " << rcutmax << endl;
+      glog.get_logfile() << "rskin = " << neighbor_rskin << endl;
+      glog.get_logfile() << "rcutneighmax = " << rcutneighmax << endl;
+    }
+  }
+}
+@
+
+
+4.7
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d206 2
+a207 1
+    std::istringstream buf_in(buf);
+d541 1
+a541 1
+  for (int i = 0;i<input_param_list.size();i++) {
+d636 1
+a636 1
+    for (int i=0;i<nparticles;i++) {
+d692 1
+d738 1
+d788 1
+d836 1
+d924 1
+a924 1
+    for (int i=0;i<nparticles;i++) {
+d982 1
+d1045 1
+d1095 1
+a1095 1
+      bool ifree = i_pnt->get_minimized();
+d1115 1
+d1180 1
+d1197 3
+a1200 1
+		    i_pnt->get_x(xi);
+a1209 1
+		      j_pnt->get_x(xj);
+a1215 1
+		      k_pnt->get_x(xk);
+@
+
+
+4.6
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d1297 1
+d1347 1
+@
+
+
+4.5
+log
+@Added multiple replica feature.
+@
+text
+@d594 1
+d877 1
+@
+
+
+4.5.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@a593 1
+		      const bool& Latomvirial, 
+a875 1
+		      const bool& Latomvirial, 
+@
+
+
+4.4
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d144 1
+a144 1
+    glog.logfile << endl;
+d151 1
+a151 1
+    glog.logfile << endl;
+d156 1
+a156 1
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+d368 2
+a369 2
+  glog.logfile << setprecision(4);
+  glog.logfile.unsetf(ios::fixed);
+d373 1
+a373 1
+    glog.logfile << endl << "id1\tid2\tid3\tt \tn" << 
+d411 1
+a411 1
+	glog.logfile << id_index[itype] << "\t" << id_index[itype] << "\t" << id_index[itype] << "\t" 
+d414 1
+a414 1
+	  glog.logfile << setw(13) << param_list[i].params[iparam];
+d416 1
+a416 1
+	glog.logfile << endl;
+d469 1
+a469 1
+	    glog.logfile << id_index[itype] << "\t" << id_index[jtype] << "\t"
+d473 1
+a473 1
+	      glog.logfile << setw(13) << param_list[i].params[iparam];
+d475 1
+a475 1
+	    glog.logfile << endl;
+d524 1
+a524 1
+		glog.logfile << id_index[itype] << "\t" << id_index[jtype] << "\t"
+d528 1
+a528 1
+		  glog.logfile << setw(13) << param_list[i].params[iparam];
+d530 1
+a530 1
+		glog.logfile << endl;
+d991 1
+a991 1
+		//glog.logfile << " ifree " <<  xj[2] << " " << uj[2] << " " << fi[2] << " \n";
+d996 1
+a996 1
+		//glog.logfile << " else part " << fi[2] << " " << ui[2] << " ";
+d998 1
+a998 1
+		//glog.logfile << ui[2] << " " << xi[2] << "\n";
+d1124 1
+a1124 1
+		//glog.logfile << " else " << uj[2] << " " << fi[2] << " ";
+d1130 1
+a1130 1
+		//glog.logfile << ui[2] << " " << fi[2] << " ";
+d1347 4
+a1350 4
+      glog.logfile << "Cutoffs for this forcefield" << endl;
+      glog.logfile << "rcutmax = " << rcutmax << endl;
+      glog.logfile << "rskin = " << neighbor_rskin << endl;
+      glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+@
+
+
+4.4.2.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d336 1
+a336 2
+void Force_Threebody::SetupInteractions(const ParticleList* p, 
+				      const Box* b, 
+@
+
+
+4.4.2.2
+log
+@Latest PPPM version
+@
+text
+@d336 1
+a336 1
+void Force_Threebody::SetupInteractions(ParticleList* p, 
+d338 1
+a338 1
+                                      double& g_ewald, 
+d596 1
+a596 1
+		      const Box* b, double& g_ewald, Comm* comm) {
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d337 2
+a338 1
+                      const Force_Ewald* ff_ewald, Comm* comm) {
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a1352 8
+
+// added saubry (01-24-05)
+void Force_Threebody::EnergyChange(int* atom, vector <double> boost,
+				 const bool& Lenergy,
+				 ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Twobody::EnergyChange:\n"
+	     "Not implemented yet");
+}
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d1355 1
+a1355 1
+void Force_Threebody::EnergyChange(int* atom, double boost[3],
+@
+
+
+4.3.2.1.2.2
+log
+@Added EAM energy change calculation
+@
+text
+@a78 1
+  energy_save.resize(npieces);
+@
+
+
+4.3.2.1.2.3
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d1355 7
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d286 1
+a286 1
+		   "Invalid forcefield name");
+d356 9
+d418 3
+a420 2
+      glog.error("Force_Twobody::SetupInteractions:\n"
+		 "Type has no pure entry");
+d483 7
+a489 2
+	    glog.error("Force_Threebody::SetupInteractions:\n"
+		       "Missing pure entry for this cross pair");
+d495 5
+a499 1
+			 "Pure components of cross pair have different forcefield types");
+d506 6
+a511 1
+			   "no mixing rule for type sw_cut");
+d559 7
+d573 2
+d585 1
+d647 8
+a663 1
+	jtype = type_index[j_pnt->get_type()];
+a679 2
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+d718 5
+a724 1
+	  ientry = param_index[itype][jtype][ktype];
+d770 4
+d816 4
+a868 10
+// added saubry (01-24-05)
+void Force_Threebody::EnergyChange(int* atom, vector <double> boost,
+		  const bool& Lenergy, 
+                  ParticleList* p,
+                  const Box* b, Comm* comm) {
+  glog.error("Force_Threebody::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+
+d931 8
+a948 1
+	jtype = type_index[j_pnt->get_type()];
+a964 2
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+d1018 1
+d1020 5
+a1024 1
+	  kfree = k_pnt->get_minimized();
+a1026 1
+	  ientry = param_index[itype][jtype][ktype];
+d1092 4
+d1155 4
+d1319 1
+a1319 1
+	       "Invalid neighbor style");
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d270 1
+a270 1
+		   "Invalid forcefield name"+forcefieldname);
+a339 9
+  // Initialize param_index to empty value
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      for (ktype=0;ktype<ntypes;ktype++) {
+	param_index[itype][jtype][ktype] = -1;
+      }
+    }
+  }
+
+d393 2
+a394 3
+      glog.warning("Force_Threebody::SetupInteractions:\n"
+		 "Force field has no pure entry for particle type "
+		   + id_index[itype]);
+d457 2
+a458 7
+	    glog.warning("Force_Threebody::SetupInteractions:\n"
+		       "Missing pure entry for this cross triple\n"
+			 "No interaction for this cross triple (" 
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + "," 
+		       + id_index[ktype] + ")");
+
+d464 1
+a464 5
+			 "Pure components have different forcefield types "
+			 "for cross triple (" 		       
+		       + id_index[itype] + "," 
+		       + id_index[jtype] + "," 
+		       + id_index[ktype] + ")");
+d471 1
+a471 6
+			   "no mixing rule for type sw_cut "
+			   "for cross triple\n"
+			   "No interaction for this cross pair (" 
+		  + id_index[itype] + "," 
+		  + id_index[jtype] + "," 
+		  + id_index[ktype] + ")");
+a518 7
+  // initialize rcutneighsq_table
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      rcutneighsq_table[itype][jtype] = 0.0;
+    }
+  }
+
+a525 2
+
+	if (i != -1) {
+a535 1
+	}
+a596 8
+	jtype = type_index[j_pnt->get_type()];
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+	// skip interactions not included in force field
+	if (ientry == -1) {
+	  continue;
+	}
+
+d606 1
+d623 2
+a662 5
+	  ientry = param_index[itype][jtype][ktype];
+	  // skip interactions not included in force field
+	  if (ientry == -1) {
+	    continue;
+	  }
+d665 1
+a710 4
+	// skip interactions not included in force field
+	if (ientry == -1) {
+	  continue;
+	}
+a752 4
+	      // skip interactions not included in force field
+	      if (ientry == -1) {
+		continue;
+	      }
+d802 10
+a873 8
+	jtype = type_index[j_pnt->get_type()];
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+	// skip interactions not included in force field
+	if (ientry == -1) {
+	  continue;
+	}
+
+d884 1
+d901 2
+d956 1
+a957 6
+	  ktype = type_index[k_pnt->get_type()];
+	  ientry = param_index[itype][jtype][ktype];
+	  // skip interactions not included in force field
+	  if (ientry == -1) {
+	    continue;
+	  }
+d960 1
+a1025 4
+	// skip interactions not included in force field
+	if (ientry == -1) {
+	  continue;
+	}
+a1084 4
+	      // skip interactions not included in force field
+	      if (ientry == -1) {
+		continue;
+	      }
+d1245 1
+a1245 1
+	       "Invalid neighbor style"+neighbor_style);
+@
+
+
+3.6
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.5
+log
+@Fixed one more glitch in force_threebody.cpp
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.4
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d489 1
+a489 1
+		glog.warning("Force_Threebody::SetupInteractions:\n"
+@
+
+
+3.3
+log
+@Fixed bug in comm.cpp regaarding nodefile and bug in force_threeebody.cpp regarding virial.
+@
+text
+@d270 1
+a270 1
+		   "Invalid forcefield name");
+d340 9
+d402 3
+a404 2
+      glog.error("Force_Twobody::SetupInteractions:\n"
+		 "Type has no pure entry");
+d467 7
+a473 2
+	    glog.error("Force_Threebody::SetupInteractions:\n"
+		       "Missing pure entry for this cross pair");
+d479 5
+a483 1
+			 "Pure components of cross pair have different forcefield types");
+d489 7
+a495 2
+		glog.error("Force_Threebody::SetupInteractions:\n"
+			   "no mixing rule for type sw_cut");
+d543 7
+d557 2
+d569 1
+d631 8
+a647 1
+	jtype = type_index[j_pnt->get_type()];
+a663 2
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+d702 5
+a708 1
+	  ientry = param_index[itype][jtype][ktype];
+d754 4
+d800 4
+d915 8
+a932 1
+	jtype = type_index[j_pnt->get_type()];
+a948 2
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+d1002 1
+d1004 5
+a1008 1
+	  kfree = k_pnt->get_minimized();
+a1010 1
+	  ientry = param_index[itype][jtype][ktype];
+d1076 4
+d1139 4
+d1303 1
+a1303 1
+	       "Invalid neighbor style");
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d1040 1
+d1045 1
+d1102 1
+d1112 1
+d1119 1
+@
+
+
+3.2.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a801 9
+// added saubry (01-24-05)
+void Force_Threebody::EnergyChange(int* atom, vector <double> boost,
+		  const bool& Lenergy, const bool& Lvirial, 
+                  ParticleList* p,
+                  const Box* b, Comm* comm) {
+  glog.error("Force_Threebody::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+@
+
+
+3.2.6.2
+log
+@Update changes.
+@
+text
+@d804 1
+a804 1
+		  const bool& Lenergy, 
+@
+
+
+3.2.6.3
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a810 1
+
+a1048 1
+		i_pnt->get_x(xi);
+a1052 1
+		j_pnt->get_x(xj);
+a1108 1
+		    i_pnt->get_x(xi);
+a1117 1
+		      j_pnt->get_x(xj);
+a1123 1
+		      k_pnt->get_x(xk);
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d172 4
+a175 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << isize << endl;
+#endif
+d178 5
+a182 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << buf << endl;
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d172 1
+d174 1
+d177 1
+a177 1
+
+d179 1
+d560 3
+a562 1
+  double virial_ijk[nvirial];
+d632 1
+a632 1
+	  
+d637 3
+a646 1
+
+d667 1
+a667 1
+                         energy_ijk,virial_ijk,ientry);
+d678 1
+d681 4
+d688 1
+a688 1
+	      virial[ivirial] += virial_ijk[ivirial];
+d721 1
+d724 3
+d755 1
+a755 1
+				    energy_ijk,virial_ijk,ientry,b);
+d768 4
+d775 341
+a1115 1
+		  virial[ivirial] += virial_ijk[ivirial];
+@
+
+
+2.25
+log
+@Added a new variant of the neighbor list, invoked by
+Ltwoway = false
+Ltwoway_ghost = true
+
+This is the same as what LAMMPS uses when Newton's Law is not used.
+
+The new variant is used in by the Force_Eam class, in order
+to eliminate the communication of fp.
+
+It was more of an experiment than anything. It works, and for
+examples with lots of ghost atoms, seems to speed things up, but
+I doubt that it is dramatic.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.24
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d843 1
+a843 1
+  bool Ltwoway;
+d852 1
+d855 2
+a856 1
+			    Ltwoway,neighbor_freq,neighbor_rskin);
+d859 1
+d862 2
+a863 1
+			    Ltwoway,neighbor_freq,neighbor_rskin);
+@
+
+
+2.23
+log
+@Fixed problem with virial in class Force_External
+@
+text
+@d66 35
+d490 6
+d498 1
+a498 2
+void Force_Threebody::SetupCutNeighSq(const double& rskin, Comm* comm)
+{
+@
+
+
+2.22
+log
+@Updated header
+@
+text
+@a65 1
+  virial.resize(nvirial);
+@
+
+
+2.21
+log
+@Added the Tersoff force field class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.20
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d379 2
+a380 2
+	      sw_cut_cross_setup(
+				 eps,sigma,littlea,lambda,gamma,costheta,ff_param_tmp);
+d386 2
+a387 3
+	      sw_cut_pure_setup(
+		eps,sigma,littlea,lambda,gamma,costheta,
+		biga,bigb,powerp,powerq,ff_param_tmp);
+d549 1
+a549 1
+	//Since Lasymm=true, need to avoid double counting.
+d561 1
+a561 1
+	//Since Lasymm=true, need to avoid double counting.
+d804 1
+a804 1
+  bool Lasymm;
+d812 1
+a812 1
+    Lasymm = true;
+d815 1
+a815 1
+			    Lasymm,neighbor_freq,neighbor_rskin);
+d817 1
+a817 1
+    Lasymm = true;
+d820 1
+a820 1
+			    Lasymm,neighbor_freq,neighbor_rskin);
+@
+
+
+2.19
+log
+@Various
+@
+text
+@d66 1
+d517 2
+d522 9
+a530 2
+  energy_piece[0] = 0.0;
+  energy_piece[1] = 0.0;
+d581 2
+a582 1
+	  force_sw_twobody_cut(xi,xj,fi,energy_ij,ientry);
+d591 10
+a600 1
+	energy_piece[0]+=energy_ij;
+d620 2
+a621 1
+	    force_sw_cut(xi,xj,xk,fj,fk,energy_ijk,ientry);
+d632 9
+a640 1
+	  energy_piece[1]+=energy_ijk;
+d660 2
+a661 1
+	  force_sw_twobody_cut_minimg(*i_pnt,*j_pnt,fi,energy_ij,ientry,b);
+d670 8
+a677 1
+	energy_piece[0]+=energy_ij;
+d699 2
+a700 1
+				    fj,fk,energy_ijk,ientry,b);
+d711 8
+a718 1
+	      energy_piece[1]+=energy_ijk;
+d731 6
+@
+
+
+2.18
+log
+@Updated documentation
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.17
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d278 2
+a279 1
+void Force_Threebody::SetupInteractions(const Box* b, Comm* comm) {
+@
+
+
+2.16
+log
+@Added Ewald sum example
+@
+text
+@d86 1
+a86 1
+  stringstream buf_in(arg_string);
+d94 1
+a94 1
+	       "Read error in input stringstream");
+d101 1
+a101 1
+	       "Read error in input stringstream");
+d148 1
+a148 1
+    stringstream buf_in(buf);
+@
+
+
+2.15
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@d55 2
+a56 5
+Force_Threebody::Force_Threebody(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin) {
+  bool Lasymm;
+
+a57 17
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Lasymm = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+				Lasymm,neighbor_freq,neighbor_rskin);
+  } else if (neighbor_style == "bin") {
+    Lasymm = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+			    Lasymm,neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_Threebody::Force_Threebody:\n"
+	       "Invalid neighbor style");
+  }
+
+d65 1
+d68 1
+a68 4
+void Force_Threebody::ReadInteractions(
+                      const string& filename, 
+                      const string& label_in, Comm* comm)
+{
+d72 1
+d86 2
+d90 16
+a105 1
+  label = label_in;
+d278 1
+a278 2
+void Force_Threebody::SetupInteractions(const Box* b, Comm* comm)
+{
+a296 1
+  rcutmax = 0.0;
+a454 19
+
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_Threebody::SetupInteractions:\n"
+	       "Can not use nocut types with neighboring");
+  }
+
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_Threebody::SetupInteractions:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_Threebody::SetupInteractions:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+  }
+
+d495 1
+d497 1
+a497 1
+		      const Box* b, const int type_index[], Comm* comm) {
+d679 7
+d748 31
+d780 26
+@
+
+
+2.14
+log
+@fixed error in force_threebody.cpp
+@
+text
+@a228 24
+#ifdef DEBUG_THREEBODY
+      if (node == 0) {
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id1 = " << id1 << endl;
+	glog.logfile << "id2 = " << id2 << endl;
+	glog.logfile << "id3 = " << id3 << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "eps = " << eps << endl;
+	glog.logfile << "sigma = " << sigma << endl;
+	glog.logfile << "littlea = " << littlea << endl;
+	glog.logfile << "lambda = " << lambda << endl;
+	glog.logfile << "gamma = " << gamma << endl;
+	glog.logfile << "costheta = " << costheta << endl;
+	if (jtype == ktype) {
+	  glog.logfile << "biga = " << biga << endl;
+	  glog.logfile << "bigb = " << bigb << endl;
+	  glog.logfile << "powerp = " << powerp << endl;
+	  glog.logfile << "powerq = " << powerq << endl;
+	}
+	glog.logfile << "itype = " << itype << endl;
+	glog.logfile << "jtype = " << jtype << endl;
+	glog.logfile << "ktype = " << ktype << endl;
+      }
+#endif
+a279 26
+#ifdef DEBUG_THREEBODY
+  if (node == 0) {
+    glog.logfile << endl;
+    for (itype=0;itype<ntypes;itype++) {
+      for (jtype=0;jtype<ntypes;jtype++) {
+	for (ktype=0;jtype<ntypes;jtype++) {
+	  glog.logfile << input_param_index[itype][jtype][ktype];
+	  if (input_param_index[itype][jtype][ktype] == -1) {
+	    glog.logfile << " ----------------------------------";
+	  } else {
+	    glog.logfile << "\t" << input_param_list[input_param_index[itype][jtype][ktype]].type 
+			 << "\t" << input_param_list[input_param_index[itype][jtype][ktype]].np; 
+	    for (int iparam=0;
+		 iparam<input_param_list[input_param_index[itype][jtype][ktype]].np;
+		 iparam++) {
+	      glog.logfile << "\t" << input_param_list[input_param_index[itype][jtype][ktype]].
+		params[iparam];
+	    }
+	  }
+	  glog.logfile << "\t\t";
+	}
+      }
+      glog.logfile << endl;
+    }
+  }
+#endif
+@
+
+
+2.13
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@a225 4
+	ff_param_tmp.params[6] = biga;
+	ff_param_tmp.params[7] = bigb;
+	ff_param_tmp.params[8] = powerp;
+	ff_param_tmp.params[9] = powerq;
+@
+
+
+2.13.2.1
+log
+@Don't read in pair potential interaction parameters for different 3-body types
+@
+text
+@d226 4
+a229 4
+	//ff_param_tmp.params[6] = biga;
+	//ff_param_tmp.params[7] = bigb;
+	//ff_param_tmp.params[8] = powerp;
+	//ff_param_tmp.params[9] = powerq;
+@
+
+
+2.13.2.2
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a139 1
+#ifdef USE_NODEFILES
+a140 1
+#endif
+d143 1
+a143 1
+#ifdef USE_NODEFILES
+a144 1
+#endif
+@
+
+
+2.13.2.3
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a596 2
+  double e_cohesive = p->get_cohesive_energy();
+
+d660 1
+a660 4
+        energy_piece[0]+=energy_ij;
+        energy_ij/=2.0;
+        i_pnt->increment_phi(energy_ij);
+        j_pnt->increment_phi(energy_ij);
+d691 1
+a691 5
+          energy_piece[1]+=energy_ijk;
+	  energy_ijk /= 3.;
+          i_pnt->increment_phi(energy_ijk);
+          j_pnt->increment_phi(energy_ijk);
+          k_pnt->increment_phi(energy_ijk);
+a720 3
+        energy_ij /= 2.0;
+        i_pnt->increment_phi(energy_ij);
+        j_pnt->increment_phi(energy_ij);
+a753 4
+              energy_ijk /= 3.;
+              i_pnt->increment_phi(energy_ijk);
+              j_pnt->increment_phi(energy_ijk);
+              k_pnt->increment_phi(energy_ijk);
+a759 6
+/*
+  for (int i = 0; i < nparticles; i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->increment_phi(-e_cohesive);
+  }
+*/
+@
+
+
+2.13.2.4
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d55 5
+a59 2
+Force_Threebody::Force_Threebody(const string arg_string_in) {
+  arg_string = arg_string_in;
+d61 17
+a84 4
+  rcutmax = 0.0;
+  input_param_index = NULL;
+  param_index = NULL;
+  rcutneighsq_table = NULL;
+d87 4
+a90 33
+Force_Threebody::~Force_Threebody() {
+  if (input_param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      for (int jtype=0;jtype<ntypes;jtype++) {
+	delete []input_param_index[itype][jtype];
+      }
+      delete []input_param_index[itype];
+    }
+    delete []input_param_index;
+  }
+  if (param_index != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      for (int jtype=0;jtype<ntypes;jtype++) {
+	delete []param_index[itype][jtype];
+      }
+      delete []param_index[itype];
+    }
+    delete []param_index;
+  }
+  // Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+  // Free the memory allocated to param_list
+  for (int i = 0;i<param_list.size();i++) {
+    delete[] param_list[i].params;
+  }
+}
+
+void Force_Threebody::ReadInteractions(Comm* comm) {
+a93 1
+  string filename;
+a106 2
+  std::istringstream buf_in(arg_string);
+
+d109 1
+a109 16
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_Threebody::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_Threebody::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+d155 1
+a155 1
+    std::istringstream buf_in(buf);
+d229 4
+d236 24
+d311 26
+d339 2
+a340 2
+void Force_Threebody::SetupInteractions(const Box* b, 
+                      const Force_Ewald* ff_ewald, Comm* comm) {
+d359 1
+d440 2
+a441 2
+	      sw_cut_cross_setup(eps,sigma,littlea,lambda,
+				 gamma,costheta,ff_param_tmp);
+d447 3
+a449 2
+	      sw_cut_pure_setup(eps,sigma,littlea,lambda,gamma,costheta,
+				biga,bigb,powerp,powerq,ff_param_tmp);
+d519 16
+a534 3
+  // Free the memory allocated to input_param_list
+  for (int i = 0;i<input_param_list.size();i++) {
+    delete[] input_param_list[i].params;
+d536 1
+a536 1
+  input_param_list.clear();
+d539 2
+a540 1
+void Force_Threebody::SetupCutNeighSq(const double& rskin, Comm* comm) {
+a576 1
+		      const bool& Lenergy, const bool& Lvirial, 
+d578 1
+a578 1
+		      const Box* b, Comm* comm) {
+a595 2
+  double virial_ij[nvirial];
+  double virial_ijk[nvirial];
+d601 2
+a602 9
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+    energy_piece[1] = 0.0;
+  }
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+d622 1
+a622 1
+	//Since Ltwoway=true, need to avoid double counting.
+d634 1
+a634 1
+	//Since Ltwoway=true, need to avoid double counting.
+d653 1
+a653 2
+	  force_sw_twobody_cut(xi,xj,fi,Lenergy,Lvirial,
+                               energy_ij,virial_ij,ientry);
+d662 4
+a665 12
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	}
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+	  
+d685 1
+a685 2
+	    force_sw_cut(xi,xj,xk,fj,fk,Lenergy,Lvirial,
+                         energy_ijk,virial_ijk,ientry);
+d696 5
+a700 14
+
+	  if (Lenergy) {
+	    energy_piece[1]+=energy_ijk;
+	    energy_ijk /= 3.;
+	    i_pnt->increment_phi(energy_ijk);
+	    j_pnt->increment_phi(energy_ijk);
+	    k_pnt->increment_phi(energy_ijk);
+	  }
+	  if (Lvirial) {
+	    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	      virial[ivirial] += virial_ijk[ivirial];
+	    }
+	  }
+
+d720 1
+a720 2
+	  force_sw_twobody_cut_minimg(*i_pnt,*j_pnt,fi,Lenergy,Lvirial,
+				      energy_ij,virial_ij,ientry,b);
+d729 4
+a732 11
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	}
+	if (Lvirial) {
+	  for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	    virial[ivirial] += virial_ij[ivirial];
+	  }
+	}
+d754 1
+a754 2
+				    fj,fk,Lenergy,Lvirial,
+				    energy_ijk,virial_ijk,ientry,b);
+d765 5
+a769 12
+	      if (Lenergy) {
+		energy_piece[1]+=energy_ijk;
+		energy_ijk /= 3.0;
+		i_pnt->increment_phi(energy_ijk);
+		j_pnt->increment_phi(energy_ijk);
+		k_pnt->increment_phi(energy_ijk);
+	      }
+	      if (Lvirial) {
+		for (int ivirial=0;ivirial<nvirial;ivirial++) {
+		  virial[ivirial] += virial_ijk[ivirial];
+		}
+	      }
+d776 4
+a779 12
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+d781 1
+a843 35
+void Force_Threebody::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+       const Box* b, Comm* comm){
+  int node,nprocs;
+  bool Ltwoway,Ltwoway_ghost;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Ltwoway = true;
+    Ltwoway_ghost = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else if (neighbor_style == "bin") {
+    Ltwoway = true;
+    Ltwoway_ghost = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_Threebody::SetupNeighbor:\n"
+	       "Invalid neighbor style");
+  }
+
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_Threebody::SetupNeighbor:\n"
+	       "Can not use nocut types with neighboring");
+  }
+a844 26
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_Threebody::SetupNeighbor:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_Threebody::SetupNeighbor:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+  }
+
+  rcutneighmax = 0.0;
+  if (Lneighbor) {
+    rcutneighmax = rcutmax + neighbor_rskin;
+    neighbor->set_rcutneighmax(rcutneighmax);
+    SetupCutNeighSq(neighbor_rskin,comm);
+    if (node == 0) {
+      glog.logfile << "Cutoffs for this forcefield" << endl;
+      glog.logfile << "rcutmax = " << rcutmax << endl;
+      glog.logfile << "rskin = " << neighbor_rskin << endl;
+      glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+    }
+  }
+}
+@
+
+
+2.13.2.5
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d559 1
+a559 1
+  double virial_j[nvirial], virial_k[nvirial];
+d631 1
+a631 1
+	
+d666 1
+a666 1
+                         energy_ijk,virial_j,virial_k,ientry);
+d687 1
+a687 1
+	      virial[ivirial] += virial_j[ivirial] + virial_k[ivirial];
+d753 1
+a753 1
+				    energy_ijk,virial_j,virial_k,ientry,b);
+d773 1
+a773 341
+		  virial[ivirial] += virial_j[ivirial] + virial_k[ivirial];
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+}
+
+// probably a temporary function. Lvirial should be true, but no unpleasant
+// side effects if it isn't.
+// deals mainly with particles to be minimized and their interactions
+// with fixed particles
+void Force_Threebody::ApplyPartialForce(
+		      const bool& Lenergy, const bool& Lvirial, 
+		      ParticleList* p, 
+		      const Box* b, Comm* comm) {
+
+  double fi[3],fj[3],fk[3];
+  double energy_ijk,energy_ij;
+  int itype,jtype,ktype,ientry;
+  ForceFieldTypes threebody_type;
+  int i,j,k,image;
+  double xi[3],xj[3],xk[3];
+  double* rshift;
+  int jstart;
+  bool perflag, ifree, jfree, kfree;
+  Particle* i_pnt;
+  Particle* j_pnt;
+  Particle* k_pnt;
+  int nparticles;
+  int itag,jtag;
+  double rsq,delr[3];
+  int* neighptr;
+  double virial_ij[nvirial];
+  double virial_j[nvirial], virial_k[nvirial];
+  double ui[3], uj[3], uk[3];
+
+  double e_cohesive = p->get_cohesive_energy();
+
+  perflag = b->get_perflag();
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+    energy_piece[1] = 0.0;
+  }
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  if (Lneighbor) {
+
+    nparticles = p->get_nparticles();
+    
+    for (int i=0;i<nparticles;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      i_pnt->get_x(xi);
+      itag = i_pnt->get_tag();
+      ifree = i_pnt->get_minimized();
+      
+      neighptr = neighbor->first_ptr[i];
+
+      // Single loop over neighbors to compute twobody interactions.
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	jfree = j_pnt->get_minimized();
+
+	//Since Ltwoway=true, need to avoid double counting.
+	jtag = j_pnt->get_tag();
+
+	if (itag > jtag) {
+	  if ((itag+jtag)%2 == 0) continue;
+	} else if (itag < jtag) {
+	  if ((itag+jtag)%2 == 1) continue;
+	}
+
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+
+	//Since Ltwoway=true, need to avoid double counting.
+	if (itag == jtag) {
+	  rsq = vec3_distsq(xi,xj,delr);
+	  if (delr[2] > small) {
+	    continue;
+	  } else if (fabs(delr[2]) < small) {
+	    if (delr[1] > small) {
+	      continue;
+	    } else if (fabs(delr[1]) < small) {
+	      if (delr[0] > small) continue;
+	    }
+	  }
+	}
+
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+	threebody_type = param_list[ientry].type;
+	switch(threebody_type) {
+	case sw_cut :
+	  force_sw_twobody_cut(xi,xj,fi,Lenergy,Lvirial,
+                               energy_ij,virial_ij,ientry);
+	  break;
+	default:
+	  glog.error("Force_Threebody::ApplyPartialForce:\n"
+		     "Invalid forcefield type for Lneighbor true");
+	}
+	  
+     	i_pnt->increment_f(fi);
+     	j_pnt->decrement_f(fi);
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	}
+	if (Lvirial) {
+	  if (ifree || jfree) {
+	    if (!(ifree && jfree)) {
+	      if (ifree) {
+		j_pnt->get_u(uj);
+		virial_ij[2] = fi[2]*(xi[2] - uj[2]); 
+		//glog.logfile << " ifree " <<  xj[2] << " " << uj[2] << " " << fi[2] << " \n";
+	      } else {
+		i_pnt->get_u(ui);
+		virial_ij[2] = fi[2]*(ui[2] - xj[2]);
+
+		//glog.logfile << " else part " << fi[2] << " " << ui[2] << " ";
+		//i_pnt->get_X(ui);
+		//glog.logfile << ui[2] << " " << xi[2] << "\n";
+	      }
+	      for (int ivirial=0;ivirial<nvirial;ivirial++) 
+		virial[ivirial] += virial_ij[ivirial];
+	    }
+	  }
+	}
+      }
+    
+      //Double loop over neighbors to compute threebody interactions
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i]-1;ineigh++) {
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	jfree = j_pnt->get_minimized();
+	j_pnt->get_x(xj);
+	for (int jneigh=ineigh+1;
+	     jneigh<neighbor->nneigh_list[i];jneigh++) {
+	  k = neighptr[jneigh];
+	  k_pnt = p->get_particle(k);
+	  ktype = type_index[k_pnt->get_type()];
+	  kfree = k_pnt->get_minimized();
+	  k_pnt->get_x(xk);
+
+	  ientry = param_index[itype][jtype][ktype];
+	  threebody_type = param_list[ientry].type;
+	  switch(threebody_type) {
+	  case sw_cut :
+	    force_sw_cut(xi,xj,xk,fj,fk,Lenergy,Lvirial,
+                         energy_ijk,virial_j,virial_k,ientry);
+	    break;
+	  default:
+	    glog.error("Force_Threebody::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	  }
+	
+	  i_pnt->decrement_f(fj);
+	  i_pnt->decrement_f(fk);
+	  j_pnt->increment_f(fj);
+	  k_pnt->increment_f(fk);
+
+	  if (Lenergy) {
+	    energy_piece[1]+=energy_ijk;
+	    energy_ijk /= 3.;
+	    i_pnt->increment_phi(energy_ijk);
+	    j_pnt->increment_phi(energy_ijk);
+	    k_pnt->increment_phi(energy_ijk);
+	  }
+	  if (Lvirial) {
+	    if (ifree || jfree || kfree) {
+	      if (ifree) { 
+		j_pnt->get_u(uj);
+		k_pnt->get_u(uk);
+	      }
+	      if (jfree || kfree)
+		i_pnt->get_u(ui);
+	      if (!(ifree && jfree)) {
+		if (ifree) 
+		  virial_j[2] = fj[2]*(uj[2] - xi[2]); 
+		if (jfree) 
+		  virial_j[2] = fj[2]*(xj[2] - ui[2]);
+	      }
+	      if (!(ifree && kfree)) { 
+		if (ifree) 
+		  virial_k[2] = fk[2]*(uk[2] - xi[2]); 
+	        if (kfree) 
+		  virial_k[2] = fk[2]*(xk[2] - ui[2]);
+	      }
+	      for (int ivirial=0;ivirial<nvirial;ivirial++) 
+		virial[ivirial] += virial_j[ivirial] + virial_k[ivirial];
+	    }
+	  }
+	  
+	}
+      }
+    }
+
+  } else {
+
+    // Single loop over neighbors to compute twobody interactions.
+    nparticles = p->get_nparticles();
+    for (i=0;i<nparticles-1;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      bool ifree = i_pnt->get_minimized();
+      for (j=i+1;j<nparticles;j++) {
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	jfree = j_pnt->get_minimized();
+	//Two body interaction obtained from ijj threebody entry
+	ientry = param_index[itype][jtype][jtype];
+	threebody_type = param_list[ientry].type;
+	switch(threebody_type) {
+	case sw_cut :
+	  force_sw_twobody_cut_minimg(*i_pnt,*j_pnt,fi,Lenergy,Lvirial,
+				      energy_ij,virial_ij,ientry,b);
+	  break;
+	default:
+	  glog.error("Force_Threebody::ApplyForce:\n"
+		     "Invalid forcefield type");
+	}
+	  
+     	i_pnt->increment_f(fi);
+     	j_pnt->decrement_f(fi);
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	  energy_ij /= 2.0;
+	  i_pnt->increment_phi(energy_ij);
+	  j_pnt->increment_phi(energy_ij);
+	}
+	if (Lvirial) {
+	  if (ifree || jfree) {
+	    if (!(ifree && jfree)) {
+	      if (ifree) {
+		j_pnt->get_u(uj);
+		virial_ij[2] = fi[2]*(xi[2] - uj[2]); 
+		//glog.logfile << " else " << uj[2] << " " << fi[2] << " ";
+	      } else {
+		i_pnt->get_u(ui);
+		virial_ij[2] = fi[2]*(ui[2] - xj[2]);
+
+		//glog.logfile << ui[2] << " " << fi[2] << " ";
+	      }
+	      for (int ivirial=0;ivirial<nvirial;ivirial++) 
+		virial[ivirial] += virial_ij[ivirial];
+	    }
+	  }
+	}
+      }
+    }
+
+    //Double loop over neighbors to compute threebody interactions
+    for (i=0;i<nparticles;i++) {
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      ifree = i_pnt->get_minimized();
+      for (j=0;j<nparticles-1;j++) {
+	if (j!=i) {
+	  j_pnt = p->get_particle(j);
+	  jtype = type_index[j_pnt->get_type()];
+	  jfree = j_pnt->get_minimized();
+	  for (k=j+1;k<nparticles;k++) {
+	    if (k!=i) {
+	      k_pnt = p->get_particle(k);
+	      ktype = type_index[k_pnt->get_type()];
+	      kfree = k_pnt->get_minimized();
+	      ientry = param_index[itype][jtype][ktype];
+	      threebody_type = param_list[ientry].type;
+	      switch(threebody_type) {
+	      case sw_cut :
+		force_sw_cut_minimg(*i_pnt,*j_pnt,*k_pnt,
+				    fj,fk,Lenergy,Lvirial,
+				    energy_ijk,virial_j,virial_k,ientry,b);
+		break;
+	      default:
+		glog.error("Force_Threebody::ApplyForce:\n"
+			   "Invalid forcefield type");
+	      }
+	      
+	      i_pnt->decrement_f(fj);
+	      i_pnt->decrement_f(fk);
+	      j_pnt->increment_f(fj);
+	      k_pnt->increment_f(fk);
+	      if (Lenergy) {
+		energy_piece[1]+=energy_ijk;
+		energy_ijk /= 3.0;
+		i_pnt->increment_phi(energy_ijk);
+		j_pnt->increment_phi(energy_ijk);
+		k_pnt->increment_phi(energy_ijk);
+	      }
+	      if (Lvirial) {
+		if (ifree || jfree || kfree) {
+		  if (ifree) {
+		    j_pnt->get_u(uj);
+		    k_pnt->get_u(uk);
+		    glog.logfile << " 3-body " << fj[2] << " " << fk[2] << " " << uj[2] << " " << uk[2]  <<" ";
+		  }
+		  if (jfree || kfree)
+		    i_pnt->get_u(ui);
+		  if (!(ifree && jfree)) {
+		    if (ifree) 
+		      virial_j[2] = fj[2]*(uj[2] - xi[2]); 
+		    if (jfree) 
+		      virial_j[2] = fj[2]*(xj[2] - ui[2]);
+		  }
+		  if (!(ifree && kfree)) {
+		    if (ifree) 
+		      virial_k[2] = fk[2]*(uk[2] - xi[2]); 
+		    if (kfree) 
+		      virial_k[2] = fk[2]*(xk[2] - ui[2]); 
+		  }
+		  for (int ivirial=0;ivirial<nvirial;ivirial++) 
+		    virial[ivirial] += virial_j[ivirial] + virial_k[ivirial];
+@
+
+
+2.12
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d142 1
+a142 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,comm->get_world());
+d146 1
+a146 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,comm->get_world());
+@
+
+
+2.11
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@a76 1
+  Lneighbor_cosp = false;
+d138 1
+a138 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,comm->get_world());
+d336 1
+a336 1
+void Force_Threebody::SetupInteractions(const Box& b, Comm* comm)
+d526 8
+d575 1
+a575 1
+		      const Box& b, const int type_index[]) {
+d594 1
+a594 1
+  perflag = b.get_perflag();
+a690 86
+    }
+
+  } else if (Lneighbor_cosp) {
+
+    for (int icosp=0;icosp < neighbor->cosp_list.size()-1;icosp++) {
+      i = neighbor->cosp_list[icosp].i;
+      i_pnt = p->get_particle(i);
+      itype = type_index[i_pnt->get_type()];
+      i_pnt->get_x(xi);
+      image = neighbor->cosp_list[icosp].image;
+      rshift = neighbor->image_stencil[image];
+      vec3_add(rshift,xi,xi);
+      //Decide whether to include original as neighbor of this image.
+      jstart = i+1;
+      if (image>0) {
+	if (rshift[0] > 0.0) {
+	  jstart = i;
+	} else if (rshift[0] == 0.0) {
+	  if (rshift[1] > 0.0) {
+	    jstart = i;
+	  } else if (rshift[1] == 0.0) {
+	    if (rshift[2] > 0.0) {
+	      jstart = i;
+	    }
+	  }
+	}
+      }
+      // Single loop over neighbors to compute twobody interactions.
+      // Only compute twobody force if j>=(i or i+1).
+      for (int ineigh=neighbor->cosp_list[icosp].first;
+	   ineigh < neighbor->cosp_list[icosp+1].first;ineigh++) {
+	j = neighbor->neigh_list[ineigh];
+	j_pnt = p->get_particle(j);
+	if (j>=jstart) {
+	  jtype = type_index[j_pnt->get_type()];
+	  j_pnt->get_x(xj);
+	  //Two body interaction obtained from ijj threebody entry
+	  ientry = param_index[itype][jtype][jtype];
+	  threebody_type = param_list[ientry].type;
+	  switch(threebody_type) {
+	  case sw_cut :
+	    force_sw_twobody_cut(xi,xj,fi,energy_ij,ientry);
+	    break;
+	  default:
+	    glog.error("Force_Threebody::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	  }
+	  i_pnt->increment_f(fi);
+	  j_pnt->decrement_f(fi);
+	  energy_piece[0]+=energy_ij;
+	}
+      }
+
+      //Double loop over neighbors to compute threebody interactions
+      for (int ineigh=neighbor->cosp_list[icosp].first;
+	   ineigh < neighbor->cosp_list[icosp+1].first-1;ineigh++) {
+	j = neighbor->neigh_list[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+	for (int jneigh=ineigh+1; 
+	     jneigh < neighbor->cosp_list[icosp+1].first;jneigh++) {
+	  k = neighbor->neigh_list[jneigh];
+	  k_pnt = p->get_particle(k);
+	  ktype = type_index[k_pnt->get_type()];
+	  k_pnt->get_x(xk);
+
+	  ientry = param_index[itype][jtype][ktype];
+	  threebody_type = param_list[ientry].type;
+	  switch(threebody_type) {
+	  case sw_cut :
+	    force_sw_cut(xi,xj,xk,fj,fk,energy_ijk,ientry);
+	    break;
+	  default:
+	    glog.error("Force_Threebody::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	  }
+	
+	  i_pnt->decrement_f(fj);
+	  i_pnt->decrement_f(fk);
+	  j_pnt->increment_f(fj);
+	  k_pnt->increment_f(fk);
+	  energy_piece[1]+=energy_ijk;
+	}
+      }
+
+@
+
+
+2.10
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.9
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@d27 1
+a27 1
+Force_Threebody::Force_Threebody(const Neighbor::NeighborStyles& neighbor_style,
+d33 1
+a33 2
+  switch(neighbor_style) {
+  case Neighbor::neighbor_none:
+d35 1
+a35 2
+    break;
+  case Neighbor::neighbor_nsq:
+d38 1
+a38 1
+    neighbor = new Neighbor(neighbor_style,
+d40 1
+a40 2
+    break;
+  case Neighbor::neighbor_bin:
+d43 1
+a43 1
+    neighbor = new Neighbor(neighbor_style,
+d45 1
+a45 2
+    break;
+  default:
+d104 1
+a104 1
+	  glog.abort("Input::ReadInput:\n"
+@
+
+
+2.8
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d88 1
+a89 1
+    str_tmp = glog.path_str + filename;
+d93 6
+a98 2
+      glog.abort("Force_Threebody::ReadInteractions:\n"
+		 "Failed to open " + filename,comm);
+d109 1
+a109 1
+		     "Read error in "+filename,comm);
+d167 1
+a167 1
+		     "Invalid parameter in " + filename);
+d190 1
+a190 1
+		   "Invalid parameter in " + filename);
+d242 1
+a242 1
+		   "Read error in " + filename);
+@
+
+
+2.7
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d102 4
+a105 12
+      if (!getline(infile,buf)) {
+	buf = "End of Input";
+      } else {
+	// Concatenate continuation lines, if requested.
+	if (buf[buf.size()-1] == '\\') {
+	  buf2 = buf;
+	  while (buf2[buf2.size()-1] == '\\') {
+	    buf.replace(buf.size()-1,1," ");
+	    // buf.replace(buf.size()-1,1,&char_tmp);
+	    getline(infile,buf2);
+	    buf+=buf2;
+	  }
+a122 4
+    } else if (input_string_match(buf,"")) {
+      continue;
+    } else if (input_string_match(buf,"#")) {
+      continue;
+d124 1
+a125 3
+    // Skip lines with only whitespace
+    buf_in >> ws;
+    if (buf_in.eof()) continue;
+@
+
+
+2.6
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d27 1
+a27 1
+Force_Threebody::Force_Threebody(const int& neighbor_style,
+d57 5
+a80 1
+  MPI_Comm world;
+a84 1
+  world = comm->get_world();
+d119 1
+a119 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,world);
+d123 1
+a123 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+d127 1
+a127 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+d519 1
+a519 1
+  int type;
+d559 1
+a559 1
+  int threebody_type;
+d575 2
+a576 1
+  energy = 0.0;
+d636 1
+a636 1
+	energy+=energy_ij;
+d667 1
+a667 1
+	  energy+=energy_ijk;
+d719 1
+a719 1
+	  energy+=energy_ij;
+d752 1
+a752 1
+	  energy+=energy_ijk;
+d782 1
+a782 1
+      	energy+=energy_ij;
+d815 1
+a815 1
+	      energy+=energy_ijk;
+@
+
+
+2.5
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d54 3
+d59 3
+a61 1
+void Force_Threebody::ReadInteractions(const string& filename, Comm* comm)
+d83 2
+d343 2
+d348 1
+a348 1
+    glog.logfile << endl << "i \tii \tid \tt \tn" << 
+d386 1
+a386 1
+	glog.logfile << i << "\t" << ii << "\t" << id_index[itype] << "\t" 
+a397 1
+  glog.logfile << endl;
+a399 8
+  if (node == 0) {
+    glog.logfile << "i \tii \tjj \tid1 \tid2 \tt \tn" << 
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      endl;
+  }
+d444 1
+a444 2
+	    glog.logfile << i << "\t" << ii << "\t" << " " << "\t"
+			 << id_index[itype] << "\t" << id_index[jtype] << "\t"
+d485 1
+a485 2
+		glog.logfile << i << "\t" << ii << "\t" << jj << "\t"
+			     << id_index[itype] << "\t" << id_index[jtype] << "\t"
+a497 3
+    if (node == 0) {
+      glog.logfile << endl;
+    }
+d550 1
+a550 1
+		      ParticleList* p, double& energy, 
+a817 1
+
+@
+
+
+2.4
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@d43 6
+d72 1
+d79 2
+a80 1
+    infile.open(filename.c_str()); 
+d84 1
+a84 1
+		 "Failed to open " + filename);
+d333 1
+a333 1
+  rcut_max = 0.0;
+d573 1
+d588 3
+d592 3
+a594 3
+      for (int ineigh=neighbor->first_list[i];
+	   ineigh<neighbor->first_list[i+1];ineigh++) {
+	j = neighbor->neigh_list[ineigh];
+d599 1
+d640 3
+a642 3
+      for (int ineigh=neighbor->first_list[i];
+	   ineigh<neighbor->first_list[i+1]-1;ineigh++) {
+	j = neighbor->neigh_list[ineigh];
+d647 2
+a648 2
+	   jneigh<neighbor->first_list[i+1];jneigh++) {
+	  k = neighbor->neigh_list[jneigh];
+d846 1
+a846 1
+  rcut_max = max(rcut, rcut_max);
+d883 1
+a883 1
+  rcut_max = max(rcut, rcut_max);
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d28 1
+a28 1
+       const bool& Lasymm, const int& neighbor_freq,
+d30 2
+d38 1
+d580 4
+a583 29
+      for (int ineigh=neighbor->first_list_local[i];
+	   ineigh<neighbor->first_list_local[i+1];ineigh++) {
+	j = neighbor->neigh_list_local[ineigh];
+	//Since Lasymm=true, need to avoid double counting.
+	if (j>i) {
+	  j_pnt = p->get_particle(j);
+	  jtype = type_index[j_pnt->get_type()];
+	  j_pnt->get_x(xj);
+	  //Two body interaction obtained from ijj threebody entry
+	  ientry = param_index[itype][jtype][jtype];
+	  threebody_type = param_list[ientry].type;
+	  switch(threebody_type) {
+	  case sw_cut :
+	    force_sw_twobody_cut(xi,xj,fi,energy_ij,ientry);
+	    break;
+	  default:
+	    glog.error("Force_Threebody::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	  }
+	  i_pnt->increment_f(fi);
+	  j_pnt->decrement_f(fi);
+	  energy+=energy_ij;
+	}
+      }
+      // Single loop over ghost neighbors to compute twobody interactions.
+      for (int ineigh=neighbor->first_list_ghost[i];
+	   ineigh<neighbor->first_list_ghost[i+1];ineigh++) {
+	j = neighbor->neigh_list_ghost[ineigh];
+	j_pnt = p->get_ghost_particle(j);
+d627 3
+a629 3
+      for (int ineigh=neighbor->first_list_local[i];
+	   ineigh<neighbor->first_list_local[i+1]-1;ineigh++) {
+	j = neighbor->neigh_list_local[ineigh];
+d634 2
+a635 2
+	   jneigh<neighbor->first_list_local[i+1];jneigh++) {
+	  k = neighbor->neigh_list_local[jneigh];
+a636 64
+	  ktype = type_index[k_pnt->get_type()];
+	  k_pnt->get_x(xk);
+
+	  ientry = param_index[itype][jtype][ktype];
+	  threebody_type = param_list[ientry].type;
+	  switch(threebody_type) {
+	  case sw_cut :
+	    force_sw_cut(xi,xj,xk,fj,fk,energy_ijk,ientry);
+	    break;
+	  default:
+	    glog.error("Force_Threebody::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	  }
+	
+	  i_pnt->decrement_f(fj);
+	  i_pnt->decrement_f(fk);
+	  j_pnt->increment_f(fj);
+	  k_pnt->increment_f(fk);
+	  energy+=energy_ijk;
+	}
+      }
+      //Double loop over ghost neighbors to compute threebody interactions
+      for (int ineigh=neighbor->first_list_ghost[i];
+	   ineigh<neighbor->first_list_ghost[i+1]-1;ineigh++) {
+	j = neighbor->neigh_list_ghost[ineigh];
+	j_pnt = p->get_ghost_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+	for (int jneigh=ineigh+1;
+	   jneigh<neighbor->first_list_ghost[i+1];jneigh++) {
+	  k = neighbor->neigh_list_ghost[jneigh];
+	  k_pnt = p->get_ghost_particle(k);
+	  ktype = type_index[k_pnt->get_type()];
+	  k_pnt->get_x(xk);
+
+	  ientry = param_index[itype][jtype][ktype];
+	  threebody_type = param_list[ientry].type;
+	  switch(threebody_type) {
+	  case sw_cut :
+	    force_sw_cut(xi,xj,xk,fj,fk,energy_ijk,ientry);
+	    break;
+	  default:
+	    glog.error("Force_Threebody::ApplyForce:\n"
+		       "Invalid forcefield type for Lneighbor true");
+	  }
+	
+	  i_pnt->decrement_f(fj);
+	  i_pnt->decrement_f(fk);
+	  j_pnt->increment_f(fj);
+	  k_pnt->increment_f(fk);
+	  energy+=energy_ijk;
+	}
+      }
+      //Double loop over local then ghost neighbors to compute threebody interactions
+      for (int ineigh=neighbor->first_list_local[i];
+	   ineigh<neighbor->first_list_local[i+1];ineigh++) {
+	j = neighbor->neigh_list_local[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+	for (int jneigh=neighbor->first_list_ghost[i];
+	   jneigh<neighbor->first_list_ghost[i+1];jneigh++) {
+	  k = neighbor->neigh_list_ghost[jneigh];
+	  k_pnt = p->get_ghost_particle(k);
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d22 1
+d308 1
+a308 1
+  int node;
+d311 1
+d499 5
+d510 1
+a510 1
+  ff_type type;
+d515 2
+a516 2
+  // Allocate ntypes x ntypes array cutneighsq_table
+  cutneighsq_table = new double*[ntypes];
+d518 1
+a518 1
+    cutneighsq_table[itype] = new double[ntypes];
+d521 1
+a521 1
+  // Assign values to cutneighsq_table[][] using force field parameters
+d524 1
+a524 1
+      cutneighsq_table[itype][jtype] = 0.0;
+d532 1
+a532 1
+	  cutneighsq_table[itype][jtype] = max(cutneighsq_table[itype][jtype],rsq);
+d561 1
+a561 1
+  double rsq,delr[3],tol;
+d621 1
+a621 2
+	  tol = 1.0e-2;
+	  if (delr[2] > tol) {
+d623 2
+a624 2
+	  } else if (fabs(delr[2]) < tol) {
+	    if (delr[1] > tol) {
+d626 2
+a627 2
+	    } else if (fabs(delr[1]) < tol) {
+	      if (delr[0] > tol) continue;
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@a8 1
+extern ofstream logfile;
+d14 1
+d23 2
+d40 2
+a41 2
+    logfile << "Error: Invalid neighbor style" << endl;;
+    exit(0);
+d43 1
+d46 1
+a46 1
+void Force_Threebody::ReadInteractions(const string& filename, Comm*)
+d48 1
+a48 1
+  string buf;
+d56 1
+d60 3
+d64 5
+a68 1
+  ifstream infile(filename.c_str()); 
+d70 4
+a73 3
+  if (!infile) {
+    logfile << "Failed to open " << filename << endl;
+    exit(0);
+d75 1
+d78 26
+a103 1
+  while (std::getline(infile,buf)) {
+d105 9
+a113 2
+    // Skip empty or comment lines
+    if (buf.empty() || buf[0]=='#') continue;
+d118 1
+a118 1
+
+d154 2
+a155 2
+	  logfile << "Invalid parameter in " << filename << endl;
+	  exit(0);
+d177 2
+a178 2
+	  logfile << "Invalid parameter in " << filename << endl;
+	  exit(0);
+d199 22
+a220 20
+      logfile << "-------------------------------------------" << endl;
+      logfile << "id1 = " << id1 << endl;
+      logfile << "id2 = " << id2 << endl;
+      logfile << "id3 = " << id3 << endl;
+      logfile << "forcefieldname = " << forcefieldname << endl;
+      logfile << "eps = " << eps << endl;
+      logfile << "sigma = " << sigma << endl;
+      logfile << "littlea = " << littlea << endl;
+      logfile << "lambda = " << lambda << endl;
+      logfile << "gamma = " << gamma << endl;
+      logfile << "costheta = " << costheta << endl;
+      if (jtype == ktype) {
+	logfile << "biga = " << biga << endl;
+	logfile << "bigb = " << bigb << endl;
+	logfile << "powerp = " << powerp << endl;
+	logfile << "powerq = " << powerq << endl;
+      }
+      logfile << "itype = " << itype << endl;
+      logfile << "jtype = " << jtype << endl;
+      logfile << "ktype = " << ktype << endl;
+d224 2
+a225 2
+      cerr << "Invalid forcefield name" << endl;;
+      exit(0);
+d229 2
+a230 2
+      logfile << "Read error in " << filename << endl;
+      exit(0);
+d240 2
+a241 1
+  }
+d274 17
+a290 15
+  logfile << endl;
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      for (ktype=0;jtype<ntypes;jtype++) {
+	logfile << input_param_index[itype][jtype][ktype];
+	if (input_param_index[itype][jtype][ktype] == -1) {
+	  logfile << " ----------------------------------";
+	} else {
+	  logfile << "\t" << input_param_list[input_param_index[itype][jtype][ktype]].type 
+	       << "\t" << input_param_list[input_param_index[itype][jtype][ktype]].np; 
+	  for (int iparam=0;
+	       iparam<input_param_list[input_param_index[itype][jtype][ktype]].np;
+	       iparam++) {
+	    logfile << "\t" << input_param_list[input_param_index[itype][jtype][ktype]].
+	      params[iparam];
+d292 1
+a293 1
+      logfile << "\t\t";
+d295 1
+a296 1
+    logfile << endl;
+d307 3
+d325 9
+a333 6
+  logfile << endl << "i \tii \tid \tt \tn" << 
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    endl;
+d356 2
+a357 2
+	logfile << "Error: invalid threebody forcefield type" << endl;
+	exit(0);
+d363 7
+a369 4
+      logfile << i << "\t" << ii << "\t" << id_index[itype] << "\t" 
+	   << param_list[i].type << "\t" << param_list[i].np; 
+      for (iparam=0;iparam<param_list[i].np;iparam++) {
+	logfile << setw(13) << param_list[i].params[iparam];
+a370 1
+      logfile << endl;
+d372 2
+a373 2
+      logfile << "Error: Threebody type has no pure entry" << endl;
+      exit(0);
+d376 1
+a376 1
+  logfile << endl;
+d379 8
+a386 6
+  logfile << "i \tii \tjj \tid1 \tid2 \tt \tn" << 
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    endl;
+d401 15
+a415 15
+	  eps = input_param_list[ii].params[0];
+	  sigma = input_param_list[ii].params[1];
+	  littlea = input_param_list[ii].params[2];
+	  lambda = input_param_list[ii].params[3];
+	  gamma = input_param_list[ii].params[4];
+	  costheta = input_param_list[ii].params[5];
+	  if (jtype != ktype) {
+	    sw_cut_cross_setup(
+		eps,sigma,littlea,lambda,gamma,costheta,ff_param_tmp);
+	  } else {
+	    biga = input_param_list[ii].params[6];
+	    bigb = input_param_list[ii].params[7];
+	    powerp = input_param_list[ii].params[8];
+	    powerq = input_param_list[ii].params[9];
+	    sw_cut_pure_setup(
+d418 2
+a419 2
+	  }
+	  break;
+d421 2
+a422 2
+	    logfile << "Error: invalid threebody forcefield type" << endl;
+	    exit(0);
+d430 9
+a438 6
+	  logfile << i << "\t" << ii << "\t" << " " << "\t"
+	       << id_index[itype] << "\t" << id_index[jtype] << "\t"
+	       << id_index[ktype] << "\t"
+	       << param_list[i].type << "\t" << param_list[i].np; 
+	  for (iparam=0;iparam<param_list[i].np;iparam++) {
+	    logfile << setw(13) << param_list[i].params[iparam];
+a439 1
+	  logfile << endl;
+d447 2
+a448 2
+	    logfile << "Error: missing pure entry for this cross triple" << endl;
+	    exit(0);
+d453 2
+a454 7
+	      logfile << "Error: pure components of cross triple "
+		"have different forcefield types " << 
+		ii << " " << jj << " " << kk << " " <<
+		input_param_list[ii].type << " " << 
+		input_param_list[jj].type << " " << 
+		input_param_list[kk].type << endl;
+	      exit(0);
+d460 2
+a461 2
+		logfile << "Error: no mixing rule for type sw_cut";
+		exit(0);
+d464 2
+a465 2
+		logfile << "Error: invalid threebody forcefield type" << endl;
+		exit(0);
+d472 9
+a480 6
+	      logfile << i << "\t" << ii << "\t" << jj << "\t"
+		   << id_index[itype] << "\t" << id_index[jtype] << "\t"
+		   << id_index[ktype] << "\t" 
+		   << param_list[i].type << "\t" << param_list[i].np; 
+	      for (iparam=0;iparam<param_list[i].np;iparam++) {
+		logfile << setw(13) << param_list[i].params[iparam];
+a481 1
+	      logfile << endl;
+d487 3
+a489 1
+    logfile << endl;
+d493 2
+a494 2
+    logfile << "Error: Can not use nocut types with neighboring" << endl;
+    exit(0);
+a496 9
+  if (Lneighbor) {
+    logfile << "Error: threebody force field does not support neighbor lists"
+	 << endl;
+    exit(0);
+  }
+  //  if (Lneighbor && Lnocut) {
+  //    logfile << "Error: Can not use nocut types with neighboring" << endl;
+  //    exit(0);
+  //  }
+d504 3
+d528 2
+a529 2
+	  logfile << "Error: invalid threebody forcefield type" << endl;
+	  exit(0);
+d536 3
+a538 3
+void Force_Threebody::ApplyForce(ParticleList* p, 
+				 double& energy, 
+				 const Box& b, const int type_index[]) {
+d553 2
+d562 180
+d782 2
+a783 3
+	    logfile << "Error: invalid threebody forcefield type for "
+	      "Lneighbor true" << endl;
+	    exit(0);
+a784 1
+	  
+d812 2
+a813 3
+	    logfile << "Error: invalid threebody forcefield type for "
+	      "Lneighbor true" << endl;
+	    exit(0);
+d844 2
+a845 2
+	  logfile << "Error: invalid threebody forcefield type " << endl;
+	  exit(0);
+d860 25
+a884 17
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	for (k=j+1;k<nparticles;k++) {
+	  if (k!=i) {
+	  k_pnt = p->get_particle(k);
+	  ktype = type_index[k_pnt->get_type()];
+
+	  ientry = param_index[itype][jtype][ktype];
+	  threebody_type = param_list[ientry].type;
+	  switch(threebody_type) {
+	  case sw_cut :
+	    force_sw_cut_minimg(*i_pnt,*j_pnt,*k_pnt,
+				fj,fk,energy_ijk,ientry,b);
+	    break;
+	  default:
+	    logfile << "Error: invalid threebody forcefield type for " << endl;
+	    exit(0);
+a885 8
+	
+  	  i_pnt->decrement_f(fj);
+  	  i_pnt->decrement_f(fk);
+ 	  j_pnt->increment_f(fj);
+  	  k_pnt->increment_f(fk);
+      	  energy+=energy_ijk;
+	  }
+	}
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d9 2
+d22 1
+d38 1
+a38 1
+    cout << "Error: Invalid neighbor style" << endl;;
+d43 1
+a43 1
+void Force_Threebody::ReadInteractions(const string& filename)
+d60 1
+a60 1
+    cout << "Failed to open " << filename << endl;
+d109 1
+a109 1
+	  cout << "Invalid parameter in " << filename << endl;
+d132 1
+a132 1
+	  cout << "Invalid parameter in " << filename << endl;
+d154 11
+a164 11
+      cout << "-------------------------------------------" << endl;
+      cout << "id1 = " << id1 << endl;
+      cout << "id2 = " << id2 << endl;
+      cout << "id3 = " << id3 << endl;
+      cout << "forcefieldname = " << forcefieldname << endl;
+      cout << "eps = " << eps << endl;
+      cout << "sigma = " << sigma << endl;
+      cout << "littlea = " << littlea << endl;
+      cout << "lambda = " << lambda << endl;
+      cout << "gamma = " << gamma << endl;
+      cout << "costheta = " << costheta << endl;
+d166 8
+a173 8
+	cout << "biga = " << biga << endl;
+	cout << "bigb = " << bigb << endl;
+	cout << "powerp = " << powerp << endl;
+	cout << "powerq = " << powerq << endl;
+      }
+      cout << "itype = " << itype << endl;
+      cout << "jtype = " << jtype << endl;
+      cout << "ktype = " << ktype << endl;
+d182 1
+a182 1
+      cout << "Read error in " << filename << endl;
+d226 1
+a226 1
+  cout << endl;
+d230 1
+a230 1
+	cout << input_param_index[itype][jtype][ktype];
+d232 1
+a232 1
+	  cout << " ----------------------------------";
+d234 1
+a234 1
+	  cout << "\t" << input_param_list[input_param_index[itype][jtype][ktype]].type 
+d239 1
+a239 1
+	    cout << "\t" << input_param_list[input_param_index[itype][jtype][ktype]].
+d243 1
+a243 1
+      cout << "\t\t";
+d246 1
+a246 1
+    cout << endl;
+d251 1
+a251 1
+void Force_Threebody::SetupInteractions(const Box& b)
+d272 1
+a272 1
+  cout << endl << "i \tii \tid \tt \tn" << 
+d300 1
+a300 1
+	cout << "Error: invalid threebody forcefield type" << endl;
+d307 1
+a307 1
+      cout << i << "\t" << ii << "\t" << id_index[itype] << "\t" 
+d310 1
+a310 1
+	cout << setw(13) << param_list[i].params[iparam];
+d312 1
+a312 1
+      cout << endl;
+d314 1
+a314 1
+      cout << "Error: Threebody type has no pure entry" << endl;
+d318 1
+a318 1
+  cout << endl;
+d321 1
+a321 1
+  cout << "i \tii \tjj \tid1 \tid2 \tt \tn" << 
+d361 1
+a361 1
+	    cout << "Error: invalid threebody forcefield type" << endl;
+d370 1
+a370 1
+	  cout << i << "\t" << ii << "\t" << " " << "\t"
+d375 1
+a375 1
+	    cout << setw(13) << param_list[i].params[iparam];
+d377 1
+a377 1
+	  cout << endl;
+d385 1
+a385 1
+	    cout << "Error: missing pure entry for this cross triple" << endl;
+d391 1
+a391 1
+	      cout << "Error: pure components of cross triple "
+d403 1
+a403 1
+		cout << "Error: no mixing rule for type sw_cut";
+d407 1
+a407 1
+		cout << "Error: invalid threebody forcefield type" << endl;
+d415 1
+a415 1
+	      cout << i << "\t" << ii << "\t" << jj << "\t"
+d420 1
+a420 1
+		cout << setw(13) << param_list[i].params[iparam];
+d422 1
+a422 1
+	      cout << endl;
+d428 1
+a428 1
+    cout << endl;
+d432 1
+a432 1
+    cout << "Error: Can not use nocut types with neighboring" << endl;
+d437 1
+a437 1
+    cout << "Error: threebody force field does not support neighbor lists"
+d442 1
+a442 1
+  //    cout << "Error: Can not use nocut types with neighboring" << endl;
+d447 1
+a447 1
+void Force_Threebody::SetupCutNeighSq(const double& rskin)
+d473 1
+a473 1
+	  cout << "Error: invalid threebody forcefield type" << endl;
+d545 1
+a545 1
+	    cout << "Error: invalid threebody forcefield type for "
+d577 1
+a577 1
+	    cout << "Error: invalid threebody forcefield type for "
+d610 1
+a610 1
+	  cout << "Error: invalid threebody forcefield type " << endl;
+d641 1
+a641 1
+	    cout << "Error: invalid threebody forcefield type for " << endl;
+@
+
+
+1.5
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@a0 2
+using namespace std;
+
+d7 3
+a9 1
+#include <math.h>
+d18 2
+d21 4
+a24 5
+Force_Threebody::Force_Threebody(const int& neighbor_style_in,
+				 const double& rskin_in){
+  bool Lasymm = true;
+  neighbor_style = neighbor_style_in;
+  rskin = rskin_in;
+d29 1
+a29 2
+  default:
+    neighbor = new Neighbor(Lasymm);
+d31 2
+d34 3
+a37 1
+  classname = threebody;
+a436 2
+    //    neighbor->SetupImageStencil(*this);
+    //    SetupCutNeighSq();
+d438 4
+d444 1
+a444 1
+void Force_Threebody::SetupCutNeighSq()
+d478 2
+a479 2
+void Force_Threebody::ApplyForce(vector<Particle>& particles, 
+				 double& energy, const bool& perflag, 
+d490 7
+d504 3
+a506 2
+      itype = type_index[particles[i].get_type()];
+      particles[i].get_x(xi);
+d530 1
+d532 2
+a533 2
+	  jtype = type_index[particles[j].get_type()];
+	  particles[j].get_x(xj);
+d547 2
+a548 2
+	  particles[i].increment_f(fi);
+	  particles[j].decrement_f(fi);
+d557 3
+a559 2
+	jtype = type_index[particles[j].get_type()];
+	particles[j].get_x(xj);
+d563 3
+a565 2
+	  ktype = type_index[particles[k].get_type()];
+	  particles[k].get_x(xk);
+d579 4
+a582 4
+	  particles[i].decrement_f(fj);
+	  particles[i].decrement_f(fk);
+	  particles[j].increment_f(fj);
+	  particles[k].increment_f(fk);
+d592 7
+a598 4
+    for (i=0;i<particles.size()-1;i++) {
+      itype = type_index[particles[i].get_type()];
+      for (j=i+1;j<particles.size();j++) {
+	jtype = type_index[particles[j].get_type()];
+d604 1
+a604 1
+	  force_sw_twobody_cut_minimg(particles[i],particles[j],fi,energy_ij,ientry,b);
+d611 2
+a612 2
+     	particles[i].increment_f(fi);
+     	particles[j].decrement_f(fi);
+d618 4
+a621 3
+    for (i=0;i<particles.size();i++) {
+      itype = type_index[particles[i].get_type()];
+      for (j=0;j<particles.size()-1;j++) {
+d623 3
+a625 2
+	jtype = type_index[particles[j].get_type()];
+	for (k=j+1;k<particles.size();k++) {
+d627 2
+a628 1
+	  ktype = type_index[particles[k].get_type()];
+d634 1
+a634 1
+	    force_sw_cut_minimg(particles[i],particles[j],particles[k],
+d642 4
+a645 4
+  	  particles[i].decrement_f(fj);
+  	  particles[i].decrement_f(fk);
+ 	  particles[j].increment_f(fj);
+  	  particles[k].increment_f(fk);
+@
+
+
+1.4
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d19 2
+a20 1
+Force_Threebody::Force_Threebody(){
+d22 12
+a33 1
+  neighbor = new Neighbor(Lasymm);
+d36 1
+a36 1
+void Force_Threebody::ReadInteractions()
+d50 1
+a50 1
+  ifstream infile("threebody.in"); 
+d53 1
+a53 1
+    cout << "Failed to open threebody.in" << endl;
+d102 1
+a102 1
+	  cout << "Invalid parameter in threebody.in" << endl;
+d125 1
+a125 1
+	  cout << "Invalid parameter in threebody.in" << endl;
+d175 1
+a175 1
+      cout << "Read error in threebody.in" << endl;
+d423 13
+a435 8
+  // Need to suppress neighboring until failure of COSP method for threebody
+  Lneighbor = false;
+  // interactions is resolved.
+  //  Lneighbor = !Lnocut;
+  //  if (Lneighbor) {
+  //    neighbor->SetupImageStencil(*this);
+  //    SetupCutNeighSq();
+  //  }
+@
+
+
+1.3
+log
+@Added configuration output routine to Box.
+Added shifted origin to minimg routines.
+Cleaned up minimg routines to consistently
+Deal with following issues:
+	orthorhombic versus triclinic
+	inner-loop Minimig_Dist functions only perform single box shift,
+		as it is more efficient than general shift.
+	For this reason, standard Minimg_Pos function also only
+		performs single box shift, but also checks that
+		aparticles have not strayed too far.
+	Initial config may require more than single box shift, and
+		so for this we use Minimg_Full_pos.
+Treatment of equality conditions:
+	Positions on )0,1[ are mapped onto [0,1).
+	Positions on [0,1) are left alone.
+	Distances on )-1,1( should not occur
+	Distances on )-0.5,0.5( are mapped (-0.5,0.5).
+	Distances on [-0.5,0.5] are left alone.
+@
+text
+@d232 1
+a232 1
+void Force_Threebody::SetupInteractions()
+d467 2
+@
+
+
+1.2
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@d40 1
+a40 1
+  if (infile.fail()) {
+d48 1
+d51 4
+@
+
+
+1.1
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d27 1
+a27 1
+  int id1,id2,id3;
+d40 4
+d83 1
+a83 1
+	    lambda < 0.0 || gamma <= 0.0 || costheta > 1.0 || costheta < -1.0 ||
+d107 1
+a107 1
+	    lambda < 0.0 || gamma <= 0.0 || costheta > 1.0 || costheta < -1.0 ) {
+d133 1
+a133 1
+      cout << "id3 = " << id2 << endl;
+a488 3
+      cout << " i = " << i << endl;
+      cout << " first = " << neighbor->cosp_list[icosp].first << endl;
+      cout << " last = " << neighbor->cosp_list[icosp+1].first-1 << endl;
+d541 1
+a541 1
+	  particles[j].increment_f(fk);
+d567 3
+a569 3
+	particles[i].increment_f(fi);
+	particles[j].decrement_f(fi);
+	energy+=energy_ij;
+d595 5
+a599 5
+	  particles[i].decrement_f(fj);
+	  particles[i].decrement_f(fk);
+	  particles[j].increment_f(fj);
+	  particles[j].increment_f(fk);
+	  energy+=energy_ijk;
+@
+

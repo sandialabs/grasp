@@ -1,0 +1,643 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.2.0.4
+	ADTools_branch:4.2.0.2
+	Monaco_Aidan:4.0.0.12
+	Root-of-Monaco_Aidan:4.0
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0;
+locks; strict;
+comment	@c @;
+
+
+4.4
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2006.09.15.17.51.20;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2006.03.20.20.56.03;	author athomps;	state Exp;
+branches
+	4.2.4.1;
+next	4.1;
+
+4.1
+date	2005.07.29.00.13.55;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	;
+
+4.2.4.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	4.2.4.2;
+
+4.2.4.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@**********************************************************************
+*                                                                    *
+*     REAXFF Reactive force field program                            *
+*                                                                    *
+*     Developed and written by Adri van Duin, duin@@wag.caltech.edu   *
+*                                                                    *
+*     Copyright (c) 2001-2010 California Institute of Technology     *
+*                                                                    *
+*     This is an open-source program. Feel free to modify its        *
+*     contents. Please keep me informed of any useful modification   *
+*     or addition that you made. Please do not distribute this       *
+*     program to others; if people are interested in obtaining       *
+*     a copy of this program let them contact me first.              *
+*                                                                    *
+********************************************************************** 
+********************************************************************** 
+
+      subroutine getswb(swb_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "cbkff.blk"
+      real*8 swb_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of swb                                        *
+*                                                                    *
+********************************************************************** 
+
+      swb_tmp = swb
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getswa(swa_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "cbkff.blk"
+      real*8 swa_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of swa                                        *
+*                                                                    *
+********************************************************************** 
+
+      swa_tmp = swa
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getvrange(vrange_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "control.blk"
+      real*8 vrange_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of vrange                                     *
+*                                                                    *
+********************************************************************** 
+
+      vrange_tmp = vrange
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getnvlist(nvlist_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+      integer nvlist_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of nvlist                                     *
+*                                                                    *
+********************************************************************** 
+
+      nvlist_tmp = nvlist
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getvlbora(vlbora_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "control.blk"
+      real*8 vlbora_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of vlbora                                        *
+*                                                                    *
+********************************************************************** 
+
+      vlbora_tmp = vlbora
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getnval(nval_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "cbkvalence.blk"
+      integer nval_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of nval                                       *
+*                                                                    *
+********************************************************************** 
+
+      nval_tmp = nval
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getntor(ntor_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "cbktorsion.blk"
+      integer ntor_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of ntor                                       *
+*                                                                    *
+********************************************************************** 
+
+      ntor_tmp = ntor
+
+      return
+      end
+
+
+********************************************************************** 
+
+      subroutine getnhb(nhb_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "cbksrthb.blk"
+      integer nhb_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of nhb                                       *
+*                                                                    *
+********************************************************************** 
+
+      nhb_tmp = nhb
+
+      return
+      end
+
+
+********************************************************************** 
+
+      subroutine getnbonall(nbonall_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "cbksrtbon1.blk"
+      integer nbonall_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of nbonall                                    *
+*                                                                    *
+********************************************************************** 
+
+      nbonall_tmp = nbonall
+
+      return
+      end
+
+
+********************************************************************** 
+
+      subroutine getnneighmax(nneighmax_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+      integer nneighmax_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of nneighmax                                       *
+*                                                                    *
+********************************************************************** 
+
+      nneighmax_tmp = nneighmax
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getnat(nat_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+      integer nat_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of nat                                       *
+*                                                                    *
+********************************************************************** 
+
+      nat_tmp = nat
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getnattot(nattot_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+      integer nattot_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of nattot                                       *
+*                                                                    *
+********************************************************************** 
+
+      nattot_tmp = nattot
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getnsort(nsort_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+      integer nsort_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of nsort                                       *
+*                                                                    *
+********************************************************************** 
+
+      nsort_tmp = nsort 
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getmbond(mbond_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+      integer mbond_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of mbond                                       *
+*                                                                    *
+********************************************************************** 
+
+      mbond_tmp = mbond 
+
+      return
+      end
+
+********************************************************************** 
+
+      subroutine getnso(nso_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "cbkff.blk"
+      integer nso_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Report the value of nso                                        *
+*                                                                    *
+********************************************************************** 
+
+      nso_tmp = nso
+
+      return
+      end
+
+
+********************************************************************** 
+
+      subroutine setngeofor(ngeofor_tmp)
+
+********************************************************************** 
+#include "cbka.blk"
+#include "control.blk"
+      integer ngeofor_tmp
+
+********************************************************************** 
+*                                                                    *
+*     Set value of ngeofor
+*                                                                    *
+********************************************************************** 
+
+      ngeofor = ngeofor_tmp
+      return
+      end
+
+**********************************************************************
+ 
+      subroutine getnsbmax(nsbmax_tmp)
+ 
+**********************************************************************
+#include "cbka.blk"
+#include "cbksrtbon1.blk"
+      integer nsbmax_tmp
+ 
+**********************************************************************
+*                                                                    *
+*     Report the value of nsbmax                                     *
+*                                                                    *
+**********************************************************************
+ 
+      nsbmax_tmp = nsbmax
+ 
+      return
+      end
+ 
+**********************************************************************
+ 
+      subroutine getnsbma2(nsbma2_tmp)
+ 
+**********************************************************************
+#include "cbka.blk"
+#include "cbksrtbon1.blk"
+      integer nsbma2_tmp
+ 
+**********************************************************************
+*                                                                    *
+*     Report the value of nsbma2                                     *
+*                                                                    *
+**********************************************************************
+ 
+      nsbma2_tmp = nsbma2
+ 
+      return
+      end
+ 
+**********************************************************************
+ 
+      subroutine getcutof3(cutof3_tmp)
+ 
+**********************************************************************
+#include "cbka.blk"
+#include "control.blk"
+      real*8 cutof3_tmp
+ 
+**********************************************************************
+*                                                                    *
+*     Report the value of cutof3                                     *
+*                                                                    *
+**********************************************************************
+ 
+      cutof3_tmp = cutof3
+ 
+      return
+      end
+
+@
+
+
+4.3
+log
+@Fixed inactive bug in force_tersoff_inline.h and fixed syntax warning in reax_grasp.F
+@
+text
+@d333 59
+@
+
+
+4.2
+log
+@Added better diagnostics for ReaxFF memory footprint.
+Output to nodefiles for successful runs (grep reax_def).
+Output to standard output for unsuccessful runs.
+@
+text
+@d18 1
+a18 1
+      subroutine getswb(swb_tmp);
+d38 1
+a38 1
+      subroutine getswa(swa_tmp);
+d78 1
+a78 1
+      subroutine getnvlist(nvlist_tmp);
+d97 1
+a97 1
+      subroutine getvlbora(vlbora_tmp);
+d117 1
+a117 1
+      subroutine getnval(nval_tmp);
+d137 1
+a137 1
+      subroutine getntor(ntor_tmp);
+d158 1
+a158 1
+      subroutine getnhb(nhb_tmp);
+d179 1
+a179 1
+      subroutine getnbonall(nbonall_tmp);
+d200 1
+a200 1
+      subroutine getnneighmax(nneighmax_tmp);
+d219 1
+a219 1
+      subroutine getnat(nat_tmp);
+d238 1
+a238 1
+      subroutine getnattot(nattot_tmp);
+d257 1
+a257 1
+      subroutine getnsort(nsort_tmp);
+d276 1
+a276 1
+      subroutine getmbond(mbond_tmp);
+d295 1
+a295 1
+      subroutine getnso(nso_tmp);
+d316 1
+a316 1
+      subroutine setngeofor(ngeofor_tmp);
+@
+
+
+4.2.4.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@d18 1
+a18 1
+      subroutine getswb(swb_tmp)
+d38 1
+a38 1
+      subroutine getswa(swa_tmp)
+d78 1
+a78 1
+      subroutine getnvlist(nvlist_tmp)
+d97 1
+a97 1
+      subroutine getvlbora(vlbora_tmp)
+d117 1
+a117 1
+      subroutine getnval(nval_tmp)
+d137 1
+a137 1
+      subroutine getntor(ntor_tmp)
+d158 1
+a158 1
+      subroutine getnhb(nhb_tmp)
+d179 1
+a179 1
+      subroutine getnbonall(nbonall_tmp)
+d200 1
+a200 1
+      subroutine getnneighmax(nneighmax_tmp)
+d219 1
+a219 1
+      subroutine getnat(nat_tmp)
+d238 1
+a238 1
+      subroutine getnattot(nattot_tmp)
+d257 1
+a257 1
+      subroutine getnsort(nsort_tmp)
+d276 1
+a276 1
+      subroutine getmbond(mbond_tmp)
+d295 1
+a295 1
+      subroutine getnso(nso_tmp)
+d316 1
+a316 1
+      subroutine setngeofor(ngeofor_tmp)
+a333 19
+********************************************************************** 
+
+      subroutine setatomvirial()
+
+********************************************************************** 
+#include "cbka.blk"
+#include "cbkd.blk"
+
+********************************************************************** 
+*                                                                    *
+*     Set Latomvirial_tmp to true
+*                                                                    *
+********************************************************************** 
+
+      Latomvirial = .true.
+      return
+      end
+
+
+@
+
+
+4.2.4.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d334 19
+@
+
+
+4.1
+log
+@Miscellaneous fixes
+@
+text
+@d146 1
+a146 1
+*     Report the torue of ntor                                       *
+d158 42
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d272 20
+@
+
+
+1.1
+log
+@Merged REAX version with main version
+@
+text
+@@
+

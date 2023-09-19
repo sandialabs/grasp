@@ -1,0 +1,147 @@
+head	4.1;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoTesting:3.0.0.6
+	InitialGraspTesting:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:1.1.2.1
+	cjkimme_version:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.1
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.01.28.20.37.01;	author athomps;	state Exp;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.1
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@# Timestep 0
+# 
+# Number of particles 4
+# 
+# Particle forces 
+         1         -0.1082806490         -0.2164975680         -0.3245861629
+         2         0.05840309675         0.1166675609         -0.02588240569
+         3         0.05855186197         -0.01731341920         0.1751004265
+         4         -0.008674309762         0.1171434263         0.1753681421
+# 
+# Timestep 10
+# 
+# Number of particles 4
+# 
+# Particle forces 
+         1         -0.09334328128         -0.1866586769         -0.2799182733
+         3         0.04761516079         -0.003581212876         0.1425454307
+         4         -0.001798664991         0.09526134128         0.1427044745
+         2         0.04752678547         0.09497854853         -0.005331631858
+# 
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d6 4
+a9 4
+       1       -0.1082806490       -0.2164975680       -0.3245861629
+       2       0.05840309675        0.1166675609      -0.02588240569
+       3       0.05855186197      -0.01731341920        0.1751004265
+       4     -0.008674309762        0.1171434263        0.1753681421
+d16 4
+a19 4
+       1      -0.09334328128       -0.1866586769       -0.2799182733
+       3       0.04761516079     -0.003581212876        0.1425454307
+       4     -0.001798664991       0.09526134128        0.1427044745
+       2       0.04752678547       0.09497854853     -0.005331631858
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@@
+
+
+1.1
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+

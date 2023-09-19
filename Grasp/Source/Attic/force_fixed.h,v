@@ -1,0 +1,156 @@
+head	1.2;
+access;
+symbols
+	PreMonaco:1.2;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2003.03.17.17.14.18;	author athomps;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.03.20.32.39;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@#ifndef FORCE_TWOBODY_H
+#define FORCE_TWOBODY_H
+
+class Particle_Types;
+class Box;
+
+// Data structure for two-body force fields
+// Derived from Forcefield base class.
+class Force_Twobody: public Forcefield {
+ public:
+  // List of allowable forcefield types. Several types
+  // can be used in a single simulation.
+  //
+  // nocut types do not use a force cut-off. Instead,
+  // forces are calculated between every pair.  The
+  // minimum image convention may be applied in zero, one,
+  // two or all directions, depending on the boundary
+  // conditions specified.
+  //
+  // Note: Any occurence of nocut types will prevent
+  // the use of neighbor lists for all atom pairs. 
+  // In this case, any force cut-offs must not exceed
+  // half the minimum box width.
+  //
+  enum ff_type { lj_cut, lj_cut_shift, 
+		 lj_nocut, exp6_nocut, square_exp6_nocut};
+ private:
+  struct ff_params {ff_type type;int np;double* params;};
+  //Array of ff_params created on imput 
+  vector<ff_params> input_param_list;
+  //Array of ff_params created in SetupInteractions
+  int nentries;
+  vector<ff_params> param_list;
+  //2-D array of pointers to elements in input_param_list, 
+  // indexed by two particle types
+  int** input_param_index;
+  //2-D array of pointers to elements in param_list 
+  // indexed by two particle types
+  int** param_index;
+ public:
+
+  Force_Twobody();
+
+  void SetupCutNeighSq();
+
+  int get_entry(const int&, const int&) const;
+
+  int get_type(const int&) const;
+
+  void ApplyForce(vector<Particle>&, double& , 
+		  const bool&, const Box&, const int[]);
+  void ReadInteractions();
+  void SetupInteractions();
+
+  void force_lj_cut(const double[], const double[], 
+		    double[], double&, 
+		    const int&) const;
+  void force_lj_cut_shift(const double[], const double[], 
+			double[], double&,
+			const int&) const;
+  void force_lj_cut_minimg(const Particle&, const Particle&, 
+			   double[], double&,
+			   const int&, const Box&) const;
+  void force_lj_cut_shift_minimg(const Particle&, const Particle&, 
+			double[], double&,
+			const int&, const Box&) const;
+  void force_lj_nocut_minimg(const Particle&, const Particle&, 
+			double[], double&,
+			const int&, const Box&) const;
+  void force_exp6_nocut_minimg(const Particle&, const Particle&, 
+			double[], double&,
+			const int&, const Box&) const;
+  void force_square_exp6_nocut_minimg(const Particle&, const Particle&, 
+			double[], double&,
+			const int&, const Box&) const;
+  void force_lj_cut_nopbc(const Particle&, const Particle&, 
+			double[], double&,
+			const int&) const;
+  void force_lj_cut_shift_nopbc(const Particle&, const Particle&, 
+			double[], double&,
+			const int&) const;
+  void force_lj_nocut_nopbc(const Particle&, const Particle&, 
+			double[], double&,
+			const int&) const;
+  void force_exp6_nocut_nopbc(const Particle&, const Particle&, 
+			double[], double&,
+			const int&) const;
+  void force_square_exp6_nocut_nopbc(const Particle&, const Particle&, 
+			double[], double&,
+			const int&) const;
+
+  void lj_cut_setup(const double&, const double&, const double&, ff_params&);
+
+  void lj_cut_shift_setup(const double&, const double&, const double&, ff_params&);
+
+  void lj_nocut_setup(const double&, const double&, ff_params&);
+
+  void exp6_nocut_setup(const double&, const double&, const double&, ff_params&);
+
+  void square_exp6_nocut_setup(const double&, const double&, const double&, ff_params&);
+
+};
+
+// INLINE(inline) FUNCTION DEFINITIONS
+//
+// Inlining inner loop operations provides significant performance gain
+//
+
+#endif
+
+@
+
+
+1.1
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@@
+

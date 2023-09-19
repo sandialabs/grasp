@@ -1,0 +1,2845 @@
+head	4.8;
+access;
+symbols
+	ReverseComm_branch:4.5.0.4
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.22.0.2
+	cjkimme_version_merge_from_trunk_1:2.14.2.3
+	cjkimme_version:2.14.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.8
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.5.4.1;
+next	4.4;
+
+4.4
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches
+	3.2.6.1;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.22;
+
+2.22
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.08.02.18.00.47;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.03.02.17.49.47;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.02.12.00.13.00;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	2.14.2.1;
+next	2.13;
+
+2.13
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.04.02.46.52;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.08.15.18.23.41;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.08.14.22.50.23;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.03.20.32.39;	author athomps;	state Exp;
+branches;
+next	;
+
+2.14.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.2;
+
+2.14.2.2
+date	2004.05.14.16.12.58;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.3;
+
+2.14.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.2.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.2.6.2;
+
+3.2.6.2
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.5.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.8
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_external.h"
+#include "box.h"
+#include "box_inline.h"
+#include "fixed_object.h"
+#include "force_external_inline.h"
+#include "machine.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+
+//  Currently the nsq neighboring scheme does not
+//  account for periodic images of the external field.
+//  The position of the field is shifted into the periodic
+//  box and that position is used to calculate interactions
+//  with the particles in the periodic box.
+//
+//  The way to account for periodic images is to generate
+//  additional "ghost" fields and add them to the list of fields
+//
+Force_External::Force_External(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = external;
+  timeforce = 0.0;
+  nforce = 0;
+  npieces = 1;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "n/a";
+  rcutmax = 0.0;
+  input_param_index = NULL;
+  param_index = NULL;
+  rcutneighsq_table = NULL;
+}
+
+Force_External::~Force_External() {
+  if (input_param_index != NULL) {
+    for (int itype=0;itype<ntypes_external;itype++) {
+      delete []input_param_index[itype];
+    }
+    delete []input_param_index;
+  }
+  if (param_index != NULL) {
+    for (int itype=0;itype<ntypes_external;itype++) {
+      delete []param_index[itype];
+    }
+    delete []param_index;
+  }
+// Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes_external;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+  // Free the memory allocated to param_list
+  for (int i = 0;i<param_list.size();i++) {
+    delete[] param_list[i].params;
+  }
+}
+
+void Force_External::ReadInteractions(Comm* comm) {
+  string buf;
+  string id,id_external;
+  string forcefieldname;
+  string filename;
+  double eps,sigma,rmin,alpha,rcut;
+  double pos;
+  int nparams;
+  int i,iaxis;
+  int* i_tmp;
+  int jtype,ipair;
+  int isize;
+  ff_params ff_param_tmp;
+  bool match;
+  vector<int*> ff_pairs;
+  string str_tmp;
+  ifstream infile;
+  int node;
+
+  std::istringstream buf_in(arg_string);
+
+  node = comm->get_node();
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_External::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_External::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  glog.get_logfile() << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+
+  str_tmp = glog.path_str + filename;
+  if (node == 0) {
+    infile.open(str_tmp.c_str()); 
+  
+    if (!infile) {
+      infile.close();
+      infile.open(str_tmp.c_str()); 
+      if (!infile) {
+	glog.abort("Force_External::ReadInteractions:\n"
+		   "Failed to open " + str_tmp,comm);
+      }
+    }
+  }
+
+  // We use particle id "self" to flag records
+  // describing the intrinsic properties of external force object types.
+  // Hence we add it to the list of particle types first.
+  // This means that the pair (i,0) always refers to the intrinsic
+  // properties of external force object i. This is obviously
+  // a little devious, but it saves creating additional arrays.
+  ntypes_external = 0;
+  id_index.push_back("self");
+  ntypes = 1;
+  do {
+    if (node==0) {
+      if(input_string_get(infile,buf)) {
+	if(buf != "End of Input") {
+	  glog.abort("Force_External::ReadInput:\n"
+		     "Read error in "+str_tmp,comm);
+	}
+      }
+      isize = buf.size();
+    }
+
+    MPI_Bcast(&isize,1,MPI_INT,0,comm->get_world());
+    if (node != 0) buf.resize(isize);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << isize << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << buf << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (input_string_match(buf,"End of Input")) {
+      break;
+    }
+
+    buf_in.clear();
+    buf_in.str(buf);
+    // Construct index for ids on the fly
+    buf_in >> id_external >> id;
+    
+    match = find_id_external(id_external,i);
+    if (!match) {
+      ntypes_external++;
+      i = ntypes_external-1;
+      id_index_external.push_back(id_external);
+    }
+
+    match = find_id(id,jtype);
+    if (!match) {
+      ntypes++;
+      jtype = ntypes-1;
+      id_index.push_back(id);
+    }
+
+    buf_in >> forcefieldname;
+    if (forcefieldname == "lj93_cut") {
+      //jtype==0 indicates this is a "self" line
+      if (jtype == 0) {
+	buf_in >> pos >> iaxis;
+	if (iaxis < 1 || iaxis > 3) {
+	  glog.error("Force_External::ReadInteractions:\n"
+		     "Invalid parameter in " + str_tmp);
+	}
+
+	nparams = 2;
+	ff_param_tmp.type = lj93_cut;
+	ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = pos;
+	ff_param_tmp.params[1] = iaxis;
+	input_param_list.push_back(ff_param_tmp);
+      } else {
+	buf_in >> eps >> sigma >> rcut;
+	if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	  glog.error("Force_External::ReadInteractions:\n"
+		     "Invalid parameter in " + str_tmp);
+	}
+	nparams = 3;
+	ff_param_tmp.type = lj93_cut;
+	ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = eps;
+	ff_param_tmp.params[1] = sigma;
+	ff_param_tmp.params[2] = rcut;
+	input_param_list.push_back(ff_param_tmp);
+      }
+    }
+    else if (forcefieldname == "lj93_cut_shift") {
+      //jtype==0 indicates this is a "self" line
+      if (jtype == 0) {
+	buf_in >> pos >> iaxis;
+	if (iaxis < 1 || iaxis > 3) {
+	  glog.error("Force_External::ReadInteractions:\n"
+		     "Invalid parameter in " + str_tmp);
+	}
+
+	nparams = 2;
+	ff_param_tmp.type = lj93_cut_shift;
+	ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = pos;
+	ff_param_tmp.params[1] = iaxis;
+	input_param_list.push_back(ff_param_tmp);
+      } else {
+	buf_in >> eps >> sigma >> rcut;
+	if (eps < 0.0 || sigma <= 0.0 || rcut <= 0.0) {
+	  glog.error("Force_External::ReadInteractions:\n"
+		     "Invalid parameter in " + str_tmp);
+	}
+	nparams = 3;
+	ff_param_tmp.type = lj93_cut_shift;
+	ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+	ff_param_tmp.params = new double[nparams];
+	ff_param_tmp.params[0] = eps;
+	ff_param_tmp.params[1] = sigma;
+	ff_param_tmp.params[2] = rcut;
+	input_param_list.push_back(ff_param_tmp);
+      }
+    }
+    else {
+      glog.error("Force_External::ReadInteractions:\n"
+		   "Invalid forcefield name");
+    }
+
+    if (buf_in.fail()) {
+      glog.error("Force_External::ReadInteractions:\n"
+		   "Read error in " + str_tmp);
+    }
+
+    // Save the pair and their address for later compilation
+    i_tmp = new int[2];
+    i_tmp[0] = i;
+    i_tmp[1] = jtype;
+    ff_pairs.push_back(i_tmp);
+
+  } while (!input_string_match(buf,"End of Input"));
+
+  // Allocate ntypes_external x ntypes array input_param_index
+  input_param_index = new int*[ntypes_external];
+  for (i=0;i<ntypes_external;i++) {
+    input_param_index[i] = new int[ntypes];
+  }
+  // Initialize input_param_index to empty value
+  for (i=0;i<ntypes_external;i++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      input_param_index[i][jtype] = -1;
+    }
+  }
+
+  for (ipair=0;ipair<input_param_list.size();ipair++) {
+    i = ff_pairs[ipair][0];
+    jtype = ff_pairs[ipair][1];
+    input_param_index[i][jtype] = ipair;
+    }
+
+  for (ipair=0;ipair<input_param_list.size();ipair++) {
+    delete []ff_pairs[ipair];
+    }
+
+}
+
+void Force_External::SetupInteractions(const Box* b, 
+                                      const double& g_ewald, 
+				      Comm* comm) {
+  int i,jtype,ii,jj,iparam,ientry;
+  int ii_external;
+  double eps,sigma,rcut,pos,x_tmp[3];
+  int iaxis;
+  ff_params ff_param_tmp;
+  int node,nprocs;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  // Allocate ntypes_external x ntypes array param_index
+  param_index = new int*[ntypes_external];
+  for (i=0;i<ntypes_external;i++) {
+    param_index[i] = new int[ntypes];
+  }
+  nentries = 0;
+
+  // Allocate ntypes_external array of Fixed_Object objects
+  walls.reserve(ntypes_external);
+
+  Lnocut = false;
+
+  glog.get_logfile() << setprecision(4);
+  glog.get_logfile().unsetf(ios::fixed);
+
+  if (node == 0) {
+    glog.get_logfile() << "id_external \ttype \ttag \tid " << 
+      "iaxis " <<
+      setw(13) << "x     " <<
+      setw(13) << "y     " <<
+      setw(13) << "z     " <<
+      endl;
+  }
+
+  for (i=0;i<ntypes_external;i++) {
+    ii_external = input_param_index[i][0];
+    if (ii_external!=-1) {
+      ff_param_tmp.type = input_param_list[ii_external].type;
+      switch(ff_param_tmp.type) {
+      case lj93_cut :
+	if (!b->get_Lorthorhombic()) {
+	  glog.error("Force_External::SetupInteractions:\n"
+		     "lj93_cut only implemented "
+		     "for orthorhombic box");
+	}
+	  
+	pos = input_param_list[ii_external].params[0];
+	iaxis = (int)input_param_list[ii_external].params[1];
+	x_tmp[0] = 0.0;
+	x_tmp[1] = 0.0;
+	x_tmp[2] = 0.0;
+	x_tmp[iaxis-1] = pos;
+	b->Minimg_Pos_Full(x_tmp, NULL, NULL);
+	{
+        Fixed_Object p_tmp(i,i,
+		       id_index_external[i],iaxis,x_tmp);
+	walls.push_back(p_tmp);
+	}
+	break;
+      case lj93_cut_shift :
+	if (!b->get_Lorthorhombic()) {
+	  glog.error("Force_External::SetupInteractions:\n"
+		     "lj93_cut_shift only implemented "
+		     "for orthorhombic box");
+	}
+	pos = input_param_list[ii_external].params[0];
+	iaxis = (int)input_param_list[ii_external].params[1];
+	x_tmp[0] = 0.0;
+	x_tmp[1] = 0.0;
+	x_tmp[2] = 0.0;
+	x_tmp[iaxis-1] = pos;
+	b->Minimg_Pos_Full(x_tmp, NULL, NULL);
+	{
+        Fixed_Object p_tmp(i,i,
+		       id_index_external[i],iaxis,x_tmp);
+	walls.push_back(p_tmp);
+	}
+	break;
+      default:
+	glog.error("Force_External::SetupInteractions:\n"
+		   "Invalid forcefield type");
+      }
+
+      if (node == 0) {
+	glog.get_logfile() << id_index_external[i] << "\t"  << "\t"
+		     << walls[i].get_type() << "\t"
+		     << walls[i].get_tag() << "\t" 
+		     << walls[i].get_id() << "\t";
+	walls[i].get_x(x_tmp);
+	glog.get_logfile() << walls[i].get_color() 
+		     << setw(13) << x_tmp[0] <<setw(13) << x_tmp[1] 
+		     << setw(13) << x_tmp[2] << " " 
+		     << endl;
+      }
+    } else {
+      glog.error("Force_External::SetupInteractions:\n"
+		 "Missing entry for this wall");
+    }
+  }
+  if (node == 0) {
+    glog.get_logfile() << "id_external \tid \tt \tn" << 
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      setw(13) << "p     " <<
+      endl;
+  }
+  for (i=0;i<ntypes_external;i++) {
+    // We skip jtype=0, as it was used for the 
+    // intrinsic properties of i.
+    for (jtype=1;jtype<ntypes;jtype++) {
+      ii = input_param_index[i][jtype];
+      ii_external = input_param_index[i][0];
+      // Obtain parameters from user input
+      if (ii!=-1 && ii_external!=-1) {
+	if (input_param_list[ii].type == input_param_list[ii_external].type)
+	  {
+	    ff_param_tmp.type = input_param_list[ii].type;
+	    switch(ff_param_tmp.type) {
+	    case lj93_cut :
+	      eps = input_param_list[ii].params[0];
+	      sigma = input_param_list[ii].params[1];
+	      rcut = input_param_list[ii].params[2];
+	      lj93_cut_setup(eps,sigma,rcut,ff_param_tmp);
+	      break;
+	    case lj93_cut_shift :
+	      eps = input_param_list[ii].params[0];
+	      sigma = input_param_list[ii].params[1];
+	      rcut = input_param_list[ii].params[2];
+	      lj93_cut_shift_setup(eps,sigma,rcut,ff_param_tmp);
+	      break;
+	    default:
+	      glog.error("Force_External::SetupInteractions:\n"
+			 "Invalid forcefield type");
+	    }
+
+	    param_list.push_back(ff_param_tmp);
+	    nentries++;
+	    ientry = nentries-1;
+	    param_index[i][jtype] = ientry;
+	    if (node == 0) {
+	      glog.get_logfile() << id_index_external[i] << "\t\t" 
+			   << id_index[jtype] << "\t"
+			   << param_list[ientry].type << "\t" << param_list[ientry].np; 
+	      for (iparam=0;iparam<param_list[ientry].np;iparam++) {
+		glog.get_logfile() << setw(13) << param_list[ientry].params[iparam];
+	      }
+	      glog.get_logfile() << endl;
+	    }
+	  } else {
+	    glog.error("Force_External::SetupInteractions:\n"
+		       "Intrinsic type of wall differs from" 
+		       "that of interaction with particle");
+	  }
+      } else {
+	glog.error("Force_External::SetupInteractions:\n"
+		   "Missing entry for this pair");
+      }
+    }
+  }
+
+  // Free the memory allocated to input_param_list
+  for (i = 0;i<input_param_list.size();i++) {
+    delete[] input_param_list[i].params;
+  }
+  input_param_list.clear();
+
+}
+
+void Force_External::SetupCutNeighSq(const double& rskin, Comm*)
+{
+  int i,jtype,ientry;
+  ForceFieldTypes type;
+
+  // Allocate ntypes_external x ntypes array rcutneighsq_table
+  rcutneighsq_table = new double*[ntypes_external];
+  for (i=0;i<ntypes_external;i++) {
+    rcutneighsq_table[i] = new double[ntypes];
+  }
+
+  // Assign values to rcutneighsq_table[][] using force field parameters
+  for (i=0;i<ntypes_external;i++) {
+    // We skip jtype=0, as it was used for the 
+    // intrinsic properties of i.
+    for (jtype=1;jtype<ntypes;jtype++) {
+      ientry = param_index[i][jtype];
+
+      type = param_list[ientry].type;
+      switch(type) {
+      case lj93_cut :
+	rcutneighsq_table[i][jtype] = 
+	  pow(param_list[ientry].params[4]+rskin,2);
+      break;
+      case lj93_cut_shift :
+	rcutneighsq_table[i][jtype] = 
+	  pow(param_list[ientry].params[4]+rskin,2);
+      break;
+      default:
+	glog.error("Force_External::SetupCutNeighSq:\n"
+		   "Invalid forcefield type");
+      }
+    }
+  }
+}
+
+void Force_External::ApplyForce(const bool& Lenergy, const bool& Lvirial, 
+				const bool& Latomvirial, 
+		     ParticleList* p,
+		     const Box* b, Comm* comm) 
+{
+
+  double f[3];
+  double energy_ij;
+  double pos;
+  int i,jtype,ientry;
+  ForceFieldTypes external_type;
+  int j,image;
+  int iaxis;
+  double xi[3],xj[3];
+  bool perflag;
+  Particle* j_pnt;
+  int nparticles;
+  double t1,t2;
+
+  perflag = b->get_perflag();
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+  }
+
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  // Purely to satisfy compiler uninitialized data checks
+  energy_ij = 0.0;
+
+  if (Lneighbor) {
+
+    for (i=0;i<walls.size();i++) {
+      iaxis = walls[i].get_color();
+      walls[i].get_x(xi);
+      pos = xi[iaxis-1];
+      for (int ineigh=neighbor->first_list[i];
+	   ineigh<neighbor->first_list[i+1];ineigh++) {
+	j = neighbor->neigh_list[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+
+	ientry = param_index[i][jtype];
+	external_type = param_list[ientry].type;
+	switch(external_type) {
+	case lj93_cut :
+	  force_lj93_cut(pos,iaxis,xj,f,energy_ij,ientry);
+	  break;
+	case lj93_cut_shift :
+	  force_lj93_cut_shift(pos,iaxis,xj,f,energy_ij,ientry);
+	  break;
+	default:
+	  glog.error("Force_External::ApplyForce:\n"
+		     "Invalid forcefield type for Lneighbor true");
+	}
+	j_pnt->decrement_f(f);
+
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	}
+
+      }
+
+    }
+
+  } else {
+
+    nparticles = p->get_nparticles();
+    for (i=0;i<ntypes_external;i++) {
+      for (j=0;j<nparticles;j++) {
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+
+	ientry = param_index[i][jtype];
+	external_type = param_list[ientry].type;
+	switch(external_type) {
+	case lj93_cut :
+	  force_lj93_cut_minimg(walls[i],*j_pnt,f,energy_ij,ientry,b);
+	  break;
+	case lj93_cut_shift :
+	  force_lj93_cut_shift_minimg(walls[i],*j_pnt,f,energy_ij,ientry,b);
+	  break;
+	default:
+	  glog.error("Force_External::ApplyForce:\n"
+		     "Invalid forcefield type");
+	}
+	// if (node == 0) {
+	//	glog.get_logfile() << "i = " << i;
+	//	walls[i].get_x(xi);
+	//	glog.get_logfile() << "xi = " << xi[0];
+	//	glog.get_logfile() << "j = " << j;
+	//	particles[j].get_x(xj);
+	//	glog.get_logfile() << "xj = " << xj[0];
+	//	glog.get_logfile() << "F = " << f[0] << " " << f[1] << " " << f[2] << endl;
+	//}
+	j_pnt->decrement_f(f);
+
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	}
+
+	if (Lvirial) {
+	  vector<double> virial_all(nvirial);
+	  MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+			MPI_SUM,comm->get_world());
+	  virial.swap(virial_all);
+	}
+
+      }
+    }
+  }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+}
+
+void Force_External::lj93_cut_setup(
+	   const double& eps, const double& sigma, const double& rcut, 
+	   ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 5;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = (6.0/5.0)*eps*pow(sigma,9);
+  ff_param_tmp.params[1] = (3.0)*eps*pow(sigma,3);
+  ff_param_tmp.params[2] = (2.0/15.0)*eps*pow(sigma,9);
+  ff_param_tmp.params[3] = (1.0)*eps*pow(sigma,3);
+  ff_param_tmp.params[4] = rcut;
+  rcutmax = max(rcut, rcutmax);
+}  
+
+void Force_External::lj93_cut_shift_setup(
+	   const double& eps, const double& sigma, const double& rcut, 
+	   ff_params& ff_param_tmp) 
+{
+  ff_param_tmp.np = 6;
+  // Need to delete this at some point
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = (6.0/5.0)*eps*pow(sigma,9);
+  ff_param_tmp.params[1] = (3.0)*eps*pow(sigma,3);
+  ff_param_tmp.params[2] = (2.0/15.0)*eps*pow(sigma,9);
+  ff_param_tmp.params[3] = (1.0)*eps*pow(sigma,3);
+  ff_param_tmp.params[4] = rcut;
+  ff_param_tmp.params[5] = 
+    eps*((2.0/15.0)*pow(sigma/rcut,9) - (1.0)*pow(sigma/rcut,3));
+  rcutmax = max(rcut, rcutmax);
+}  
+
+bool Force_External::find_id_external(const string& id, int& itype) const
+{
+  bool match;
+  match = false;
+  itype = -1;
+  for (int i=0;(i < ntypes_external) 
+	 && !match ; i++) {
+    if (id == id_index_external[i]) {
+      match = true;
+      itype = i;
+      break;
+    }
+  }
+  return match;
+}
+
+void Force_External::Neighboring(
+	         ParticleList* p, 
+	         const Box* b, Comm* comm) {
+  neighbor->NeighboringWall(walls,p,type_index,rcutneighsq_table,b,comm);
+}
+
+
+
+@
+
+
+4.7
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d217 2
+a218 1
+    std::istringstream buf_in(buf);
+d512 1
+a512 1
+  for (int i = 0;i<input_param_list.size();i++) {
+d586 3
+d591 1
+a591 1
+    for (int i=0;i<walls.size();i++) {
+@
+
+
+4.6
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d401 1
+a401 1
+	b->Minimg_Pos_Full(x_tmp, NULL);
+d420 1
+a420 1
+	b->Minimg_Pos_Full(x_tmp, NULL);
+@
+
+
+4.5
+log
+@Added multiple replica feature.
+@
+text
+@d555 1
+@
+
+
+4.5.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@a554 1
+				const bool& Latomvirial, 
+@
+
+
+4.4
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d148 1
+a148 1
+    glog.logfile << endl;
+d155 1
+a155 1
+    glog.logfile << endl;
+d160 1
+a160 1
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+d371 2
+a372 2
+  glog.logfile << setprecision(4);
+  glog.logfile.unsetf(ios::fixed);
+d375 1
+a375 1
+    glog.logfile << "id_external \ttype \ttag \tid " << 
+d433 1
+a433 1
+	glog.logfile << id_index_external[i] << "\t"  << "\t"
+d438 1
+a438 1
+	glog.logfile << walls[i].get_color() 
+d449 1
+a449 1
+    glog.logfile << "id_external \tid \tt \tn" << 
+d490 1
+a490 1
+	      glog.logfile << id_index_external[i] << "\t\t" 
+d494 1
+a494 1
+		glog.logfile << setw(13) << param_list[ientry].params[iparam];
+d496 1
+a496 1
+	      glog.logfile << endl;
+d642 1
+a642 1
+	//	glog.logfile << "i = " << i;
+d644 2
+a645 2
+	//	glog.logfile << "xi = " << xi[0];
+	//	glog.logfile << "j = " << j;
+d647 2
+a648 2
+	//	glog.logfile << "xj = " << xj[0];
+	//	glog.logfile << "F = " << f[0] << " " << f[1] << " " << f[2] << endl;
+@
+
+
+4.4.2.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d346 1
+a346 2
+void Force_External::SetupInteractions(const ParticleList* p, 
+				      const Box* b, 
+@
+
+
+4.4.2.2
+log
+@Latest PPPM version
+@
+text
+@d346 1
+a346 1
+void Force_External::SetupInteractions(ParticleList* p, 
+d348 1
+a348 1
+                                      double& g_ewald, 
+d557 1
+a557 1
+		     const Box* b, double& g_ewald, Comm* comm) 
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d347 2
+a348 1
+                     const Force_Ewald* ff_ewald, Comm* comm) {
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a729 7
+// added saubry (01-24-05)
+void Force_External::EnergyChange(int* atom, vector <double> boost,
+				 const bool& Lenergy,
+				 ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Twobody::EnergyChange:\n"
+	     "Not implemented yet");
+}
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d731 1
+a731 1
+void Force_External::EnergyChange(int* atom, double boost[3],
+@
+
+
+4.3.2.1.2.2
+log
+@Added EAM energy change calculation
+@
+text
+@a88 1
+  energy_save.resize(npieces);
+@
+
+
+4.3.2.1.2.3
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d731 7
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+a673 8
+// added saubry (01-24-05)
+void Force_External::EnergyChange(int* atom, vector <double> boost,
+		  const bool& Lenergy, ParticleList* p,
+                  const Box* b, Comm* comm) {
+  glog.error("Force_External::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d658 8
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.2.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a657 9
+// added saubry (01-24-05)
+void Force_External::EnergyChange(int* atom, vector <double> boost,
+		  const bool& Lenergy, const bool& Lvirial, 
+                  ParticleList* p,
+                  const Box* b, Comm* comm) {
+  glog.error("Force_External::EnergyChange:\n"
+		   "Not implemented yet");
+}
+
+@
+
+
+3.2.6.2
+log
+@Update changes.
+@
+text
+@d660 2
+a661 1
+		  const bool& Lenergy, ParticleList* p,
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d183 4
+a186 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << isize << endl;
+#endif
+d190 4
+a193 3
+#ifdef USE_NODEFILES
+    comm->get_nodefile() << buf << endl;
+#endif
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d183 1
+d185 1
+d189 1
+d191 1
+d382 1
+a382 1
+	b->Minimg_Pos_Full(x_tmp);
+d401 1
+a401 1
+	b->Minimg_Pos_Full(x_tmp);
+@
+
+
+2.22
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.21
+log
+@Fixed problem with virial in class Force_External
+@
+text
+@d75 29
+d485 6
+@
+
+
+2.20
+log
+@Updated header
+@
+text
+@d515 9
+a523 1
+  energy_piece[0] = 0.0;
+d552 5
+a556 1
+	energy_piece[0]+=energy_ij;
+d592 11
+a602 1
+	energy_piece[0]+=energy_ij;
+@
+
+
+2.19
+log
+@Various
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.18
+log
+@Updated documentation
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.17
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d294 2
+a295 1
+void Force_External::SetupInteractions(const Box* b, Comm* comm) {
+@
+
+
+2.16
+log
+@Added Ewald sum example
+@
+text
+@d96 1
+a96 1
+  stringstream buf_in(arg_string);
+d104 1
+a104 1
+	       "Read error in input stringstream");
+d111 1
+a111 1
+	       "Read error in input stringstream");
+d165 1
+a165 1
+    stringstream buf_in(buf);
+@
+
+
+2.15
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@d65 2
+a66 5
+Force_External::Force_External(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin) {
+  bool Lasymm;
+
+a67 12
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Lasymm = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+				Lasymm,neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_External::Force_External:\n"
+	       "Invalid neighbor style");
+  }
+
+d74 1
+d77 1
+a77 4
+void Force_External::ReadInteractions(
+                     const string& filename, 
+                     const string& label_in, Comm* comm)
+{
+d81 1
+d96 2
+d100 16
+a115 1
+  label = label_in;
+d294 1
+a294 2
+void Force_External::SetupInteractions(const Box* b, Comm* comm)
+{
+a304 1
+
+a314 1
+  rcutmax = 0.0;
+a455 19
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_External::SetupInteractions:\n"
+	       "Can not use nocut types with neighboring");
+  }
+
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_External::SetupInteractions:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_External::SetupInteractions:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+  }
+
+
+d494 3
+a496 2
+void Force_External::ApplyForce(ParticleList* p,
+	const Box* b, const int type_index[], Comm* comm) 
+a511 2
+  t1 = MPI_Wtime();
+
+d585 6
+a590 3
+  t2 = MPI_Wtime();
+  timeforce += t2-t1;
+  nforce++;
+d641 4
+a644 2
+const vector<Fixed_Object>& Force_External::get_walls() {
+  return walls;
+d646 2
+@
+
+
+2.14
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@a199 10
+#ifdef DEBUG_EXTERNAL
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id_external = " << id_external << endl;
+	glog.logfile << "id = " << id << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "pos = " << pos << endl;
+	glog.logfile << "iaxis = " << iaxis << endl;
+	glog.logfile << "i = " << i << endl;
+	glog.logfile << "jtype = " << jtype << endl;
+#endif
+a214 11
+#ifdef DEBUG_EXTERNAL
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id_external = " << id_external << endl;
+	glog.logfile << "id = " << id << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "eps = " << eps << endl;
+	glog.logfile << "sigma = " << sigma << endl;
+	glog.logfile << "rcut = " << rcut << endl;
+	glog.logfile << "i = " << i << endl;
+	glog.logfile << "jtype = " << jtype << endl;
+#endif
+a233 10
+#ifdef DEBUG_EXTERNAL
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id_external = " << id_external << endl;
+	glog.logfile << "id = " << id << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "pos = " << pos << endl;
+	glog.logfile << "iaxis = " << iaxis << endl;
+	glog.logfile << "i = " << i << endl;
+	glog.logfile << "jtype = " << jtype << endl;
+#endif
+a248 11
+#ifdef DEBUG_EXTERNAL
+	glog.logfile << "-------------------------------------------" << endl;
+	glog.logfile << "id_external = " << id_external << endl;
+	glog.logfile << "id = " << id << endl;
+	glog.logfile << "forcefieldname = " << forcefieldname << endl;
+	glog.logfile << "eps = " << eps << endl;
+	glog.logfile << "sigma = " << sigma << endl;
+	glog.logfile << "rcut = " << cut << endl;
+	glog.logfile << "i = " << i << endl;
+	glog.logfile << "jtype = " << jtype << endl;
+#endif
+a290 22
+#ifdef DEBUG_EXTERNAL
+  glog.logfile << endl;
+  for (i=0;i<ntypes_external;i++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      glog.logfile << input_param_index[i][jtype];
+      if (input_param_index[i][jtype] == -1) {
+	glog.logfile << " ----------------------------------";
+      } else {
+	glog.logfile << "\t" << input_param_list[input_param_index[i][jtype]].type 
+	     << "\t" << input_param_list[input_param_index[i][jtype]].np; 
+	for (int iparam=0;
+	     iparam<input_param_list[input_param_index[i][jtype]].np;
+	     iparam++) {
+	  glog.logfile << "\t" << input_param_list[input_param_index[i][jtype]].
+	    params[iparam];
+	}
+      }
+      glog.logfile << "\t\t";
+    }
+    glog.logfile << endl;
+  }
+#endif
+@
+
+
+2.14.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@a151 1
+#ifdef USE_NODEFILES
+a152 1
+#endif
+a155 1
+#ifdef USE_NODEFILES
+a156 1
+#endif
+@
+
+
+2.14.2.2
+log
+@Keeping track of displacements for each particle.
+@
+text
+@d417 1
+a417 1
+	b->Minimg_Pos_Full(x_tmp, NULL);
+d436 1
+a436 1
+	b->Minimg_Pos_Full(x_tmp, NULL);
+@
+
+
+2.14.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d65 5
+a69 2
+Force_External::Force_External(const string arg_string_in) {
+  arg_string = arg_string_in;
+d71 12
+a88 4
+  rcutmax = 0.0;
+  input_param_index = NULL;
+  param_index = NULL;
+  rcutneighsq_table = NULL;
+d91 4
+a94 27
+Force_External::~Force_External() {
+  if (input_param_index != NULL) {
+    for (int itype=0;itype<ntypes_external;itype++) {
+      delete []input_param_index[itype];
+    }
+    delete []input_param_index;
+  }
+  if (param_index != NULL) {
+    for (int itype=0;itype<ntypes_external;itype++) {
+      delete []param_index[itype];
+    }
+    delete []param_index;
+  }
+// Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes_external;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+  // Free the memory allocated to param_list
+  for (int i = 0;i<param_list.size();i++) {
+    delete[] param_list[i].params;
+  }
+}
+
+void Force_External::ReadInteractions(Comm* comm) {
+a97 1
+  string filename;
+a111 2
+  std::istringstream buf_in(arg_string);
+
+d114 1
+a114 16
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_External::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_External::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+d168 1
+a168 1
+    std::istringstream buf_in(buf);
+d204 10
+d229 11
+d259 10
+d284 11
+d337 22
+d361 2
+a362 2
+void Force_External::SetupInteractions(const Box* b, 
+                     const Force_Ewald* ff_ewald, Comm* comm) {
+d373 1
+d384 1
+d526 3
+a528 3
+  // Free the memory allocated to input_param_list
+  for (int i = 0;i<input_param_list.size();i++) {
+    delete[] input_param_list[i].params;
+d530 14
+a543 1
+  input_param_list.clear();
+d583 2
+a584 3
+void Force_External::ApplyForce(const bool& Lenergy, const bool& Lvirial, 
+		     ParticleList* p,
+		     const Box* b, Comm* comm) 
+d600 2
+d604 1
+a604 9
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+  }
+
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+d633 1
+a633 5
+
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	}
+
+d669 1
+a669 11
+
+	if (Lenergy) {
+	  energy_piece[0]+=energy_ij;
+	}
+
+	if (Lvirial) {
+	  vector<double> virial_all(nvirial);
+	  MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+			MPI_SUM,comm->get_world());
+	  virial.swap(virial_all);
+	}
+d675 3
+a677 6
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+d728 2
+a729 4
+void Force_External::Neighboring(
+	         ParticleList* p, 
+	         const Box* b, Comm* comm) {
+  neighbor->NeighboringWall(walls,p,type_index,rcutneighsq_table,b,comm);
+a730 2
+
+
+@
+
+
+2.13
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d154 1
+a154 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,comm->get_world());
+d158 1
+a158 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,comm->get_world());
+@
+
+
+2.12
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@a81 1
+  Lneighbor_cosp = false;
+d150 1
+a150 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,comm->get_world());
+d357 1
+a357 1
+void Force_External::SetupInteractions(const Box& b, Comm* comm)
+d401 1
+a401 1
+	if (!b.get_Lorthorhombic()) {
+d413 1
+a413 1
+	b.Minimg_Pos_Full(x_tmp);
+d421 1
+a421 1
+	if (!b.get_Lorthorhombic()) {
+d432 1
+a432 1
+	b.Minimg_Pos_Full(x_tmp);
+d528 1
+a528 1
+    glog.error("Force_Twobody::SetupInteractions:\n"
+d532 8
+d580 1
+a580 1
+	const Box& b, const int type_index[]) 
+d598 1
+a598 1
+  perflag = b.get_perflag();
+a629 35
+      }
+
+    }
+  } else if (Lneighbor_cosp) {
+
+    for (int icosp=0;icosp<neighbor->cosp_list.size()-1;icosp++) {
+      i = neighbor->cosp_list[icosp].i;
+      image = neighbor->cosp_list[icosp].image;
+      iaxis = walls[i].get_color();
+      walls[i].get_x(xi);
+      pos = xi[iaxis-1]+neighbor->image_stencil[image][iaxis-1];
+      for (int ineigh=neighbor->cosp_list[icosp].first;
+	   ineigh<neighbor->cosp_list[icosp+1].first;ineigh++) {
+	j = neighbor->neigh_list[ineigh];
+	j_pnt = p->get_particle(j);
+	jtype = type_index[j_pnt->get_type()];
+	j_pnt->get_x(xj);
+
+	ientry = param_index[i][jtype];
+	external_type = param_list[ientry].type;
+	switch(external_type) {
+	case lj93_cut :
+	  force_lj93_cut(pos,iaxis,xj,f,energy_ij,ientry);
+	  break;
+	case lj93_cut_shift :
+	  force_lj93_cut_shift(pos,iaxis,xj,f,energy_ij,ientry);
+	  break;
+	default:
+	  glog.error("Force_External::ApplyForce:\n"
+		     "Invalid forcefield type for Lneighbor true");
+	}
+
+	j_pnt->decrement_f(f);
+	energy_piece[0]+=energy_ij;
+
+@
+
+
+2.11
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.10
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@d37 1
+a37 1
+Force_External::Force_External(const Neighbor::NeighborStyles& neighbor_style,
+d43 1
+a43 2
+  switch(neighbor_style) {
+  case Neighbor::neighbor_none:
+d45 1
+a45 2
+    break;
+  case Neighbor::neighbor_nsq:
+d48 1
+a48 1
+    neighbor = new Neighbor(neighbor_style,
+d50 1
+a50 2
+    break;
+  default:
+d116 1
+a116 1
+	  glog.abort("Input::ReadInput:\n"
+@
+
+
+2.9
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d92 1
+a93 1
+    str_tmp = glog.path_str + filename;
+d97 6
+a102 2
+      glog.abort("Force_External::ReadInteractions:\n"
+		 "Failed to open " + filename,comm);
+d120 1
+a120 1
+		     "Read error in "+filename,comm);
+d165 1
+a165 1
+		     "Invalid parameter in " + filename);
+d190 1
+a190 1
+		     "Invalid parameter in " + filename);
+d220 1
+a220 1
+		     "Invalid parameter in " + filename);
+d245 1
+a245 1
+		     "Invalid parameter in " + filename);
+d276 1
+a276 1
+		   "Read error in " + filename);
+@
+
+
+2.8
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d71 1
+a71 1
+  string buf,buf2;
+d113 4
+a116 12
+      if (!getline(infile,buf)) {
+	buf = "End of Input";
+      } else {
+	// Concatenate continuation lines, if requested.
+	if (buf[buf.size()-1] == '\\') {
+	  buf2 = buf;
+	  while (buf2[buf2.size()-1] == '\\') {
+	    buf.replace(buf.size()-1,1," ");
+	    // buf.replace(buf.size()-1,1,&char_tmp);
+	    getline(infile,buf2);
+	    buf+=buf2;
+	  }
+a133 4
+    } else if (input_string_match(buf,"")) {
+      continue;
+    } else if (input_string_match(buf,"#")) {
+      continue;
+d135 1
+a136 3
+    // Skip lines with only whitespace
+    buf_in >> ws;
+    if (buf_in.eof()) continue;
+@
+
+
+2.7
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d37 1
+a37 1
+Force_External::Force_External(const int& neighbor_style,
+d61 4
+a86 1
+  MPI_Comm world;
+a88 1
+  world = comm->get_world();
+d130 1
+a130 1
+    MPI_Bcast(&isize,1,MPI_INTEGER,0,world);
+d134 1
+a134 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+d138 1
+a138 1
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHARACTER,0,world);
+d524 1
+a524 1
+  int type;
+d565 1
+a565 1
+  int external_type;
+d578 1
+a578 1
+  energy = 0.0;
+d607 1
+a607 1
+	energy+=energy_ij;
+d641 1
+a641 1
+	energy+=energy_ij;
+d678 1
+a678 1
+	energy+=energy_ij;
+@
+
+
+2.6
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d14 1
+d57 4
+a60 1
+  Lneighbor_cosp = true;
+d63 3
+a65 1
+void Force_External::ReadInteractions(const string& filename, Comm* comm)
+d67 2
+a68 2
+  string buf;
+  string id_external,id;
+d70 2
+a71 2
+  double eps,sigma,rcut,pos;
+  int iaxis;
+d73 1
+d75 2
+a76 1
+  int i,jtype,ipair;
+d82 11
+d94 4
+a97 5
+  str_tmp = glog.path_str + filename;
+  infile.open(str_tmp.c_str()); 
+  if (!infile) {
+    glog.abort("Force_External::ReadInteractions:\n"
+	       "Failed to open " + filename,comm);
+d109 22
+d132 1
+a132 1
+  while (std::getline(infile,buf)) {
+d134 11
+a144 2
+    // Skip empty or comment lines
+    if (buf.empty() || buf[0]=='#') continue;
+a148 1
+
+d151 1
+a151 2
+    glog.logfile << id_external << " " << id << endl;
+
+d293 2
+a294 1
+  }
+d367 3
+d371 1
+a371 1
+    glog.logfile << "i \tii \tid_ext \t\ttype \ttag \tid " << 
+d429 1
+a429 2
+	glog.logfile << i << "\t" << ii_external << "\t"
+		     << id_index_external[i] << "\t"  << "\t"
+d445 1
+a445 4
+    glog.logfile << endl;
+
+
+    glog.logfile << "ientry \ti \tii \tid_external \tid \tt \tn" << 
+d486 1
+a486 2
+	      glog.logfile << ientry << "\t" << ii_external << "\t" << ii << "\t"
+			   << id_index_external[i] << "\t\t" 
+a503 3
+    if (node == 0) {
+      glog.logfile << endl;
+    }
+d555 1
+a555 1
+void Force_External::ApplyForce(ParticleList* p, double& energy, 
+d570 3
+d682 3
+@
+
+
+2.5
+log
+@Added note on non-treatment of periodic images of external fields
+Added tiny displacement to origin in box.cpp to eliminate problems
+with floating point errors.
+@
+text
+@d59 1
+a59 1
+void Force_External::ReadInteractions(const string& filename, Comm*)
+d72 2
+a73 2
+
+  ifstream infile(filename.c_str()); 
+d75 2
+d79 1
+a79 1
+	       "Failed to open " + filename);
+d316 1
+a316 1
+  rcut_max = 0.0;
+d650 1
+a650 1
+  rcut_max = max(rcut, rcut_max);
+d667 1
+a667 1
+  rcut_max = max(rcut, rcut_max);
+@
+
+
+2.4
+log
+@Combined particles and ghost_particles into one list.
+@
+text
+@d27 9
+d56 1
+a56 1
+  Lneighbor_cosp = false;
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d28 1
+a28 1
+       const bool& Lasymm, const int& neighbor_freq,
+d30 2
+d38 1
+d527 3
+a529 3
+      for (int ineigh=neighbor->first_list_local[i];
+	   ineigh<neighbor->first_list_local[i+1];ineigh++) {
+	j = neighbor->neigh_list_local[ineigh];
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d286 5
+d305 8
+a312 6
+  glog.logfile << "i \tii \tid_ext \t\ttype \ttag \tid " << 
+    "iaxis " <<
+    setw(13) << "x     " <<
+    setw(13) << "y     " <<
+    setw(13) << "z     " <<
+    endl;
+d363 12
+a374 10
+      glog.logfile << i << "\t" << ii_external << "\t"
+	     << id_index_external[i] << "\t"  << "\t"
+	     << walls[i].get_type() << "\t"
+	     << walls[i].get_tag() << "\t" 
+	   << walls[i].get_id() << "\t";
+      walls[i].get_x(x_tmp);
+      glog.logfile << walls[i].get_color() 
+	   << setw(13) << x_tmp[0] <<setw(13) << x_tmp[1] 
+	   << setw(13) << x_tmp[2] << " " 
+	   << endl;
+d380 3
+a382 1
+  glog.logfile << endl;
+d384 7
+a390 6
+  glog.logfile << "ientry \ti \tii \tid_external \tid \tt \tn" << 
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    setw(13) << "p     " <<
+    endl;
+d424 9
+a432 6
+	    glog.logfile << ientry << "\t" << ii_external << "\t" << ii << "\t"
+		 << id_index_external[i] << "\t\t" 
+	         << id_index[jtype] << "\t"
+		 << param_list[ientry].type << "\t" << param_list[ientry].np; 
+	    for (iparam=0;iparam<param_list[ientry].np;iparam++) {
+	      glog.logfile << setw(13) << param_list[ientry].params[iparam];
+a433 1
+	    glog.logfile << endl;
+d444 3
+a446 1
+    glog.logfile << endl;
+d454 6
+d465 1
+a465 1
+  ff_type type;
+d467 2
+a468 2
+  // Allocate ntypes_external x ntypes array cutneighsq_table
+  cutneighsq_table = new double*[ntypes_external];
+d470 1
+a470 1
+    cutneighsq_table[i] = new double[ntypes];
+d473 1
+a473 1
+  // Assign values to cutneighsq_table[][] using force field parameters
+d483 1
+a483 1
+	cutneighsq_table[i][jtype] = 
+d487 1
+a487 1
+	cutneighsq_table[i][jtype] = 
+d606 1
+d614 1
+a614 1
+
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@a8 1
+extern ofstream logfile;
+d24 2
+a25 2
+
+using namespace std;
+d41 2
+a42 2
+    logfile << "Error: Invalid neighbor style" << endl;;
+    exit(0);
+d44 1
+d64 2
+a65 2
+    logfile << "Failed to open " << filename << endl;
+    exit(0);
+d89 1
+a89 1
+    logfile << id_external << " " << id << endl;
+d111 2
+a112 2
+	  logfile << "Invalid parameter in " << filename << endl;
+	  exit(0);
+d124 8
+a131 8
+	logfile << "-------------------------------------------" << endl;
+	logfile << "id_external = " << id_external << endl;
+	logfile << "id = " << id << endl;
+	logfile << "forcefieldname = " << forcefieldname << endl;
+	logfile << "pos = " << pos << endl;
+	logfile << "iaxis = " << iaxis << endl;
+	logfile << "i = " << i << endl;
+	logfile << "jtype = " << jtype << endl;
+d136 2
+a137 2
+	  logfile << "Invalid parameter in " << filename << endl;
+	  exit(0);
+d149 9
+a157 9
+	logfile << "-------------------------------------------" << endl;
+	logfile << "id_external = " << id_external << endl;
+	logfile << "id = " << id << endl;
+	logfile << "forcefieldname = " << forcefieldname << endl;
+	logfile << "eps = " << eps << endl;
+	logfile << "sigma = " << sigma << endl;
+	logfile << "rcut = " << rcut << endl;
+	logfile << "i = " << i << endl;
+	logfile << "jtype = " << jtype << endl;
+d166 2
+a167 2
+	  logfile << "Invalid parameter in " << filename << endl;
+	  exit(0);
+d179 8
+a186 8
+	logfile << "-------------------------------------------" << endl;
+	logfile << "id_external = " << id_external << endl;
+	logfile << "id = " << id << endl;
+	logfile << "forcefieldname = " << forcefieldname << endl;
+	logfile << "pos = " << pos << endl;
+	logfile << "iaxis = " << iaxis << endl;
+	logfile << "i = " << i << endl;
+	logfile << "jtype = " << jtype << endl;
+d191 2
+a192 2
+	  logfile << "Invalid parameter in " << filename << endl;
+	  exit(0);
+d204 9
+a212 9
+	logfile << "-------------------------------------------" << endl;
+	logfile << "id_external = " << id_external << endl;
+	logfile << "id = " << id << endl;
+	logfile << "forcefieldname = " << forcefieldname << endl;
+	logfile << "eps = " << eps << endl;
+	logfile << "sigma = " << sigma << endl;
+	logfile << "rcut = " << cut << endl;
+	logfile << "i = " << i << endl;
+	logfile << "jtype = " << jtype << endl;
+d217 2
+a218 2
+      cerr << "Invalid forcefield name" << endl;;
+      exit(0);
+d222 2
+a223 2
+      logfile << "Read error in " << filename << endl;
+      exit(0);
+d256 1
+a256 1
+  logfile << endl;
+d259 1
+a259 1
+      logfile << input_param_index[i][jtype];
+d261 1
+a261 1
+	logfile << " ----------------------------------";
+d263 1
+a263 1
+	logfile << "\t" << input_param_list[input_param_index[i][jtype]].type 
+d268 1
+a268 1
+	  logfile << "\t" << input_param_list[input_param_index[i][jtype]].
+d272 1
+a272 1
+      logfile << "\t\t";
+d274 1
+a274 1
+    logfile << endl;
+d300 1
+a300 1
+  logfile << "i \tii \tid_ext \t\ttype \ttag \tid " << 
+d314 3
+a316 3
+	  logfile << "Error: lj93_cut only"
+	    " implemented for orthorhombic box" << endl;
+	  exit(0);
+d334 3
+a336 3
+	  logfile << "Error: lj93_cut_shift only"
+	    " implemented for orthorhombic box" << endl;
+	  exit(0);
+d352 2
+a353 2
+	logfile << "Error: invalid external forcefield type" << endl;
+	exit(0);
+d356 1
+a356 1
+      logfile << i << "\t" << ii_external << "\t"
+d362 1
+a362 1
+      logfile << walls[i].get_color() 
+d367 2
+a368 2
+      logfile << "Error: missing entry for this wall" << endl;
+      exit(0);
+d371 1
+a371 1
+  logfile << endl;
+d373 1
+a373 1
+  logfile << "ientry \ti \tii \tid_external \tid \tt \tn" << 
+d404 2
+a405 2
+	      logfile << "Error: invalid external forcefield type" << endl;
+	      exit(0);
+d412 1
+a412 1
+	    logfile << ientry << "\t" << ii_external << "\t" << ii << "\t"
+d417 1
+a417 1
+	      logfile << setw(13) << param_list[ientry].params[iparam];
+d419 1
+a419 1
+	    logfile << endl;
+d421 3
+a423 3
+	    logfile << "Error: intrinsic type of wall differs from" 
+	      "that of interaction with particle" << endl;
+	    exit(0);
+d426 2
+a427 2
+	logfile << "Error: missing entry for this pair" << endl;
+	exit(0);
+d430 1
+a430 1
+    logfile << endl;
+d434 2
+a435 2
+    logfile << "Error: Can not use nocut types with neighboring" << endl;
+    exit(0);
+d469 2
+a470 2
+	logfile << "Error: invalid external forcefield type" << endl;
+	exit(0);
+d498 31
+d552 2
+a553 3
+	  logfile << "Error: invalid external forcefield type"
+	    "for Lneighbor true" << endl;
+	  exit(0);
+d581 2
+a582 2
+	  logfile << "Error: invalid external forcefield type" << endl;
+	  exit(0);
+d584 1
+a584 1
+	//	logfile << "i = " << i;
+d586 2
+a587 2
+	//	logfile << "xi = " << xi[0];
+	//	logfile << "j = " << j;
+d589 2
+a590 2
+	//	logfile << "xj = " << xj[0];
+	//	logfile << "F = " << f[0] << " " << f[1] << " " << f[2] << endl;
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d9 2
+d24 1
+d42 1
+a42 1
+    cout << "Error: Invalid neighbor style" << endl;;
+d47 1
+a47 1
+void Force_External::ReadInteractions(const string& filename)
+d64 1
+a64 1
+    cout << "Failed to open " << filename << endl;
+d89 1
+a89 1
+    cout << id_external << " " << id << endl;
+d111 1
+a111 1
+	  cout << "Invalid parameter in " << filename << endl;
+d124 8
+a131 8
+	cout << "-------------------------------------------" << endl;
+	cout << "id_external = " << id_external << endl;
+	cout << "id = " << id << endl;
+	cout << "forcefieldname = " << forcefieldname << endl;
+	cout << "pos = " << pos << endl;
+	cout << "iaxis = " << iaxis << endl;
+	cout << "i = " << i << endl;
+	cout << "jtype = " << jtype << endl;
+d136 1
+a136 1
+	  cout << "Invalid parameter in " << filename << endl;
+d149 9
+a157 9
+	cout << "-------------------------------------------" << endl;
+	cout << "id_external = " << id_external << endl;
+	cout << "id = " << id << endl;
+	cout << "forcefieldname = " << forcefieldname << endl;
+	cout << "eps = " << eps << endl;
+	cout << "sigma = " << sigma << endl;
+	cout << "rcut = " << rcut << endl;
+	cout << "i = " << i << endl;
+	cout << "jtype = " << jtype << endl;
+d166 1
+a166 1
+	  cout << "Invalid parameter in " << filename << endl;
+d179 8
+a186 8
+	cout << "-------------------------------------------" << endl;
+	cout << "id_external = " << id_external << endl;
+	cout << "id = " << id << endl;
+	cout << "forcefieldname = " << forcefieldname << endl;
+	cout << "pos = " << pos << endl;
+	cout << "iaxis = " << iaxis << endl;
+	cout << "i = " << i << endl;
+	cout << "jtype = " << jtype << endl;
+d191 1
+a191 1
+	  cout << "Invalid parameter in " << filename << endl;
+d204 9
+a212 9
+	cout << "-------------------------------------------" << endl;
+	cout << "id_external = " << id_external << endl;
+	cout << "id = " << id << endl;
+	cout << "forcefieldname = " << forcefieldname << endl;
+	cout << "eps = " << eps << endl;
+	cout << "sigma = " << sigma << endl;
+	cout << "rcut = " << cut << endl;
+	cout << "i = " << i << endl;
+	cout << "jtype = " << jtype << endl;
+d222 1
+a222 1
+      cout << "Read error in " << filename << endl;
+d256 1
+a256 1
+  cout << endl;
+d259 1
+a259 1
+      cout << input_param_index[i][jtype];
+d261 1
+a261 1
+	cout << " ----------------------------------";
+d263 1
+a263 1
+	cout << "\t" << input_param_list[input_param_index[i][jtype]].type 
+d268 1
+a268 1
+	  cout << "\t" << input_param_list[input_param_index[i][jtype]].
+d272 1
+a272 1
+      cout << "\t\t";
+d274 1
+a274 1
+    cout << endl;
+d279 1
+a279 1
+void Force_External::SetupInteractions(const Box& b)
+d300 1
+a300 1
+  cout << "i \tii \tid_ext \t\ttype \ttag \tid " << 
+d314 1
+a314 1
+	  cout << "Error: lj93_cut only"
+d334 1
+a334 1
+	  cout << "Error: lj93_cut_shift only"
+d352 1
+a352 1
+	cout << "Error: invalid external forcefield type" << endl;
+d356 1
+a356 1
+      cout << i << "\t" << ii_external << "\t"
+d362 1
+a362 1
+      cout << walls[i].get_color() 
+d367 1
+a367 1
+      cout << "Error: missing entry for this wall" << endl;
+d371 1
+a371 1
+  cout << endl;
+d373 1
+a373 1
+  cout << "ientry \ti \tii \tid_external \tid \tt \tn" << 
+d404 1
+a404 1
+	      cout << "Error: invalid external forcefield type" << endl;
+d412 1
+a412 1
+	    cout << ientry << "\t" << ii_external << "\t" << ii << "\t"
+d417 1
+a417 1
+	      cout << setw(13) << param_list[ientry].params[iparam];
+d419 1
+a419 1
+	    cout << endl;
+d421 1
+a421 1
+	    cout << "Error: intrinsic type of wall differs from" 
+d426 1
+a426 1
+	cout << "Error: missing entry for this pair" << endl;
+d430 1
+a430 1
+    cout << endl;
+d434 1
+a434 1
+    cout << "Error: Can not use nocut types with neighboring" << endl;
+d440 1
+a440 1
+void Force_External::SetupCutNeighSq(const double& rskin)
+d469 1
+a469 1
+	cout << "Error: invalid external forcefield type" << endl;
+d521 1
+a521 1
+	  cout << "Error: invalid external forcefield type"
+d551 1
+a551 1
+	  cout << "Error: invalid external forcefield type" << endl;
+d554 1
+a554 1
+	//	cout << "i = " << i;
+d556 2
+a557 2
+	//	cout << "xi = " << xi[0];
+	//	cout << "j = " << j;
+d559 2
+a560 2
+	//	cout << "xj = " << xj[0];
+	//	cout << "F = " << f[0] << " " << f[1] << " " << f[2] << endl;
+@
+
+
+1.2
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d7 3
+a9 1
+#include <math.h>
+d20 2
+d25 4
+a28 5
+Force_External::Force_External(const int& neighbor_style_in,
+			       const double& rskin_in){
+  bool Lasymm = true;
+  neighbor_style = neighbor_style_in;
+  rskin = rskin_in;
+d33 1
+a33 2
+  default:
+    neighbor = new Neighbor(Lasymm);
+d35 2
+d38 3
+a41 1
+  classname = external;
+a434 4
+  if (Lneighbor) {
+    neighbor->SetupImageStencil(*this);
+    SetupCutNeighSq();
+  }
+d437 1
+a437 1
+void Force_External::SetupCutNeighSq()
+d473 2
+a474 2
+void Force_External::ApplyForce(vector<Particle>& particles, double& energy, 
+	const bool& perflag, const Box& b, const int type_index[]) 
+d485 5
+d504 3
+a506 2
+	jtype = type_index[particles[j].get_type()];
+	particles[j].get_x(xj);
+d523 1
+a523 1
+	particles[j].decrement_f(f);
+d532 1
+d534 3
+a536 2
+      for (j=0;j<particles.size();j++) {
+	jtype = type_index[particles[j].get_type()];
+d542 1
+a542 1
+	  force_lj93_cut_minimg(walls[i],particles[j],f,energy_ij,ientry,b);
+d545 1
+a545 1
+	  force_lj93_cut_shift_minimg(walls[i],particles[j],f,energy_ij,ientry,b);
+d559 1
+a559 1
+	particles[j].decrement_f(f);
+d616 2
+a617 4
+void Force_External::SetupNeighborListNsqWall(
+	    const vector<Particle>& particles, 
+	    const int* type_index) {
+  neighbor->SetupNeighborListNsqWall(walls,particles,type_index,*this);
+@
+
+
+1.1
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d21 2
+a22 1
+Force_External::Force_External(){
+d24 12
+a35 1
+  neighbor = new Neighbor(Lasymm);
+d38 1
+a38 1
+void Force_External::ReadInteractions()
+d52 1
+a52 1
+  ifstream infile("external.in"); 
+d55 1
+a55 1
+    cout << "Failed to open external.in" << endl;
+d102 1
+a102 1
+	  cout << "Invalid parameter in external.in" << endl;
+d127 1
+a127 1
+	  cout << "Invalid parameter in external.in" << endl;
+d157 1
+a157 1
+	  cout << "Invalid parameter in external.in" << endl;
+d182 1
+a182 1
+	  cout << "Invalid parameter in external.in" << endl;
+d213 1
+a213 1
+      cout << "Read error in external.in" << endl;
+a284 1
+
+d304 6
+d324 5
+d424 5
+a428 1
+  Lneighbor = !Lnocut;
+d541 8
+a548 1
+	
+@
+

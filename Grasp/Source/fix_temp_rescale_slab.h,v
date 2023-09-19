@@ -1,0 +1,104 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2007.02.15.04.49.33;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FIX_TEMP_RESCALE_SLAB_H
+#define FIX_TEMP_RESCALE_SLAB_H
+// Derived from Fix base class.
+class Fix_TempRescaleSlab: public Fix {
+ private:
+  double temp_target,temp_final,ramp_rate,temp_window,temp_factor;
+  int temp_skip,temp_freq;
+  double slablo,slabhi;
+  int slabdir;
+ public:
+  Fix_TempRescaleSlab();
+  ~Fix_TempRescaleSlab();
+  void Final(ParticleList*, Box*, Comm*);
+  void Start(ParticleList*, Box*, Comm*);
+  void Setup(string&, const Box*, const ParticleTypeList*, Comm*);
+  void Output(ParticleList*, const Box*, Comm*);
+};
+#endif
+@
+
+
+1.1
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d58 2
+a59 2
+  void Final(ParticleList*, const Box*, Comm*);
+  void Start(ParticleList*, const Box*, Comm*);
+@
+

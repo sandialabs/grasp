@@ -1,0 +1,302 @@
+head	2.6;
+access;
+symbols
+	PreMonaco:2.6;
+locks; strict;
+comment	@# @;
+
+
+2.6
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.5;
+
+2.5
+date	2003.10.20.22.05.56;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.10.04.02.47.22;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.23.23.32.37;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.18.15.48.43;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.6
+log
+@Moved examples into subdirectories.
+@
+text
+@/tmp_mnt/Net/sana014/home/athomps/codes/Grasp/Testing/grasp.out
+Clock tick = 0.0000010000 Seconds
+
+
+
+Entering Input::ReadInput()
+forcefield threebody threebody.in Stillinger-Weber
+timestep 1.0000000000
+nsteps 0
+box dimensions	0.0000000000	2.3596000000	2.3596000000 \
+			2.3596000000	0.0000000000	2.3596000000 \
+			2.3596000000	2.3596000000	0.0000000000
+box origin	5.8990000000	5.8990000000	0.0000000000
+initialize temperature 0.0000000000 256
+thermo 1
+dump atoms 1
+dump velocities 1
+neighbor bin 10 0.1000000000
+
+
+
+Entering Box::Setup()
+volume = 26.2751472255
+widths = 2.7246313904 2.7246313904 2.7246313904
+lva = 0.0000000000 2.3596000000 2.3596000000
+lvb = 2.3596000000 0.0000000000 2.3596000000
+lvc = 2.3596000000 2.3596000000 0.0000000000
+rvh = -0.2119003221 0.2119003221 0.2119003221
+rvk = 0.2119003221 -0.2119003221 0.2119003221
+rvl = 0.2119003221 0.2119003221 -0.2119003221
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 3
+A 10.0000000000
+B 2.0000000000
+C 3.0000000000
+
+
+
+Reading Stillinger-Weber from file threebody.in
+
+id1	id2	id3	t 	n       p            p            p            p     
+A	A	A	0	15        3.771        2.514      -0.3333        4393.        8786.        14.22        4.000        0.000        2.095    6.845e+04        0.000    3.585e+04        3090.    1.711e+04        1475.
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+****************************************************
+Warning: Particle id has no ff match
+****************************************************
+-1 B 0
+****************************************************
+Warning: Particle id has no ff match
+****************************************************
+-1 C 0
+
+
+
+Entering ParticleList::ReadConfig()
+Total particles read = 2
+
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =      -715.7161606518 kJ/mol
+   Threebody        =       135.4844934609 kJ/mol
+Potential Energy    =      -580.2316671909 kJ/mol
+Kinetic Energy      =         0.0000000000 kJ/mol
+Extended Energy     =         0.0000000000 kJ/mol
+Total Energy        =      -580.2316671909 kJ/mol
+Temperature         =         0.0000000000 K
+Total Particles     =                    2
+
+
+
+Loop time: 0.0000000000 on 2 processors for 2 particles
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.0000       nan
+          Neigh Time    0.0000       nan
+           Comm Time    0.0000       nan
+       Exchange Time    0.0000       nan
+        Revcomm Time    0.0000       nan
+          Other Time    0.0000       nan
+          Total Time    0.0000       nan
+
+
+
+Breakdown of Average Loop Time by Force Field
+                         Force  Neighbor
+Stillinger-Weber        0.0000    0.0000
+
+
+
+Finished 
+@
+
+
+2.5
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@@
+
+
+2.4
+log
+@Fixed up the output a little more.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@a6 5
+#  threebody 250-particle tetrahedral input data
+# 
+#  This is used for energy evaluation of the
+#  configuration in config_250tet.in
+# 
+a18 2
+# neighbor none
+
+d72 1
+d75 1
+d79 1
+a79 1
+Loop time: 0.0000000000 on 2 processors for 1 particles
+@
+
+
+2.3
+log
+@Fixed up the output log immensely. Fixed up the velocity-rescale
+thermostat, which changed the dft example a little.
+Other than that, all the other examples (NVE) stayed the same.
+@
+text
+@d74 7
+a80 5
+Stillinger-Weber    = -580.2316671909 kJ/mol
+Potential Energy    = -580.2316671909 kJ/mol
+Kinetic Energy      =    0.0000000000 kJ/mol
+Total Energy        = -580.2316671909 kJ/mol
+Temperature         =    0.0000000000 K
+@
+
+
+2.2
+log
+@Switched the neighbor style from nsq to binning in all examples.
+@
+text
+@d2 4
+d12 2
+a13 2
+forcefield threebody threebody.in
+timestep 1.000000000
+d15 5
+a19 5
+box dimensions	0.000000000	2.359600000	2.359600000 \
+			2.359600000	0.000000000	2.359600000 \
+			2.359600000	2.359600000	0.000000000
+box origin	5.899000000	5.899000000	0.000000000
+initialize temperature 0.000000000 256
+d26 3
+a28 1
+Entering Stepper::Setup()
+d30 5
+a34 5
+volume = 26.27514723
+widths = 2.724631390 2.724631390 2.724631390
+lva = 0.000000000 2.359600000 2.359600000
+lvb = 2.359600000 0.000000000 2.359600000
+lvc = 2.359600000 2.359600000 0.000000000
+d38 3
+d43 3
+a45 4
+A 10.00000000
+B 2.000000000
+C 3.000000000
+Entering ForceFieldList::Setup()
+a46 2
+i 	ii 	id 	t 	n       p            p            p            p     
+0	0	A	0	15  3.771180000  2.514120000-0.3333333333  4393.200000  8786.400000  14.22179859  4.000000000  0.000000000  2.095100000  68448.02833  0.000000000  35851.36604  3089.784704  17112.00708  1474.767173
+a47 1
+i 	ii 	jj 	id1 	id2 	t 	n       p            p            p            p     
+d49 4
+d54 3
+a56 3
+rcutmax = 3.771180000
+rskin = 0.1000000000
+rcutneighmax = 3.871180000
+d65 3
+a67 3
+Entering Comm::Setup()
+Exiting Comm::Setup()
+Entering ParticleList::Setup()
+d69 34
+a102 1
+Exchange Communicate time is 0.009999999776
+a103 11
+Forcefield class is [enum Forcefield::ff_class_type] 1
+Neighboring time is 0.000000000
+Number of neighbors is 32
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 1
+Energy [kJ/mol] = -580.2316672
+Energy/particle [kJ/mol] = -290.1158336
+Force time [s] = 0.000000000
+Reverse Communicate time is 0.000000000
+Elapse Time is 0.000000000
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@d1 1
+d19 1
+a19 1
+neighbor nsq 10 0.2000000000
+d44 4
+a47 6
+Lattice vector a = 0.000000000 2.359600000 2.359600000 
+Lattice vector b = 2.359600000 0.000000000 2.359600000 
+Lattice vector c = 2.359600000 2.359600000 0.000000000 
+Unit cell origin = 5.899000000 5.899000000 1.000000000e-10 
+Unit cell lattice spacings = 2.724631390 2.724631390 2.724631390 
+rcutsq_max = 14.22179859
+d60 1
+d62 1
+a62 1
+Neighboring style is [enum Neighbor::neighbor_styles] 1
+d64 1
+d67 1
+a67 1
+Forcefield classname [enum Forcefield::ff_class_types] is 1
+d71 2
+@
+

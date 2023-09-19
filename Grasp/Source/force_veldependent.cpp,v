@@ -1,0 +1,597 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.4
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2006.06.29.14.27.21;	author foiles;	state Exp;
+branches
+	4.1.2.1;
+next	;
+
+4.1.2.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+using namespace std;
+#include "constants.h"
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_veldependent.h"
+#include "box.h"
+#include "box_inline.h"
+#include "fixed_object.h"
+#include "machine.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+//
+Force_Veldependent::Force_Veldependent(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = veldependent;
+  timeforce = 0.0;
+  nforce = 0;
+  npieces = 1;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "n/a";
+  rcutmax = 0.0;
+  input_param_index = NULL;
+  param_index = NULL;
+  rcutneighsq_table = NULL;
+  energy_piece[0]=0.;
+}
+
+Force_Veldependent::~Force_Veldependent() {
+  if (input_param_index != NULL) {
+    delete []input_param_index;
+  }
+  if (param_index != NULL) {
+    delete []param_index;
+  }
+  // Free the memory allocated to param_list
+  for (int i = 0;i<param_list.size();i++) {
+    delete[] param_list[i].params;
+  }
+}
+
+void Force_Veldependent::ReadInteractions(Comm* comm) {
+  string buf;
+  string id;
+  string forcefieldname;
+  string filename;
+  double vmin,drag_coeff;
+  int nparams;
+  int* i_tmp;
+  int jtype,ipair;
+  int isize;
+  ff_params ff_param_tmp;
+  bool match;
+  vector<int*> ff_pairs;
+  string str_tmp;
+  ifstream infile;
+  int node;
+
+  std::istringstream buf_in(arg_string);
+
+  node = comm->get_node();
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Veldependent::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_Veldependent::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  glog.get_logfile() << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+
+  str_tmp = glog.path_str + filename;
+  if (node == 0) {
+    infile.open(str_tmp.c_str()); 
+  
+    if (!infile) {
+      infile.close();
+      infile.open(str_tmp.c_str()); 
+      if (!infile) {
+	glog.abort("Force_Veldependent::ReadInteractions:\n"
+		   "Failed to open " + str_tmp,comm);
+      }
+    }
+  }
+
+  ntypes = 0;
+  do {
+    if (node==0) {
+      if(input_string_get(infile,buf)) {
+	if(buf != "End of Input") {
+	  glog.abort("Force_Veldependent::ReadInput:\n"
+		     "Read error in "+str_tmp,comm);
+	}
+      }
+      isize = buf.size();
+    }
+
+    MPI_Bcast(&isize,1,MPI_INT,0,comm->get_world());
+    if (node != 0) buf.resize(isize);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << isize << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << buf << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (input_string_match(buf,"End of Input")) {
+      break;
+    }
+
+    buf_in.clear();
+    buf_in.str(buf);
+    // Construct index for ids on the fly
+    buf_in >>  id;
+    
+    match = find_id(id,jtype);
+    if (!match) {
+      ntypes++;
+      jtype = ntypes-1;
+      id_index.push_back(id);
+    }
+
+    buf_in >> forcefieldname;
+    if (forcefieldname == "elec_drag") {
+      buf_in >> vmin >> drag_coeff;
+      nparams = 2;
+      ff_param_tmp.type = elec_drag;
+      ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = vmin;
+      ff_param_tmp.params[1] = drag_coeff;
+      input_param_list.push_back(ff_param_tmp);
+    } 
+    else if (forcefieldname == "elec_drag_drift") {
+      buf_in >> vmin >> drag_coeff;
+      nparams = 2;
+      ff_param_tmp.type = elec_drag_drift;
+      ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = vmin;
+      ff_param_tmp.params[1] = drag_coeff;
+      input_param_list.push_back(ff_param_tmp);
+    } 
+    else if (forcefieldname == "elec_drag_smooth") {
+      buf_in >> vmin >> drag_coeff;
+      nparams = 2;
+      ff_param_tmp.type = elec_drag_smooth;
+      ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = vmin;
+      ff_param_tmp.params[1] = drag_coeff;
+      input_param_list.push_back(ff_param_tmp);
+    } 
+    else if (forcefieldname == "elec_drag_smooth_drift"
+	     || forcefieldname == "elec_drag_drift_smooth") {
+      buf_in >> vmin >> drag_coeff;
+      nparams = 2;
+      ff_param_tmp.type = elec_drag_smooth_drift;
+      ff_param_tmp.np = nparams;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = vmin;
+      ff_param_tmp.params[1] = drag_coeff;
+      input_param_list.push_back(ff_param_tmp);
+    } 
+    else {
+      glog.error("Force_Veldependent::ReadInteractions:\n"
+		   "Invalid forcefield name");
+    }
+
+    if (buf_in.fail()) {
+      glog.error("Force_Veldependent::ReadInteractions:\n"
+		   "Read error in " + str_tmp);
+    }
+
+    // Save the pair and their address for later compilation
+    i_tmp = new int[1];
+    i_tmp[0] = jtype;
+    ff_pairs.push_back(i_tmp);
+
+  } while (!input_string_match(buf,"End of Input"));
+
+  glog.get_logfile() << "ReadInteractions ntypes: " << ntypes << endl;
+
+
+  // Allocate ntypes_veldependent array input_param_index
+  input_param_index = new int[ntypes];
+  // Initialize input_param_index to empty value
+  for (int i=0;i<ntypes;i++) input_param_index[i] = -1;
+
+  for (ipair=0;ipair<input_param_list.size();ipair++) {
+    jtype = ff_pairs[ipair][0];
+    input_param_index[jtype] = ipair;
+    }
+
+  for (ipair=0;ipair<input_param_list.size();ipair++) {
+    delete []ff_pairs[ipair];
+  }
+
+}
+
+void Force_Veldependent::SetupInteractions(const Box* b, 
+                                      const double& g_ewald, 
+				      Comm* comm) {
+  int i,jtype,ii,jj,iparam,ientry;
+  int ii_veldependent;
+  ff_params ff_param_tmp;
+  int node,nprocs;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  // Allocate ntypes_veldependent x ntypes array param_index
+  param_index = new int[ntypes];
+  nentries = 0;
+
+
+  for (i=0;i<ntypes;i++) {
+    ii = input_param_index[i];
+    if (ii!=-1 ) {
+      ff_param_tmp.type = input_param_list[ii].type;
+      switch(ff_param_tmp.type) {
+      case elec_drag :
+        ff_param_tmp.np = 2;
+	ff_param_tmp.params = new double[ff_param_tmp.np];
+	ff_param_tmp.params[0] = pow(constants.tfactor*input_param_list[ii].params[0],2);
+	ff_param_tmp.params[1] = input_param_list[ii].params[1]/constants.tfactor;
+	break;
+      case elec_drag_drift :
+        ff_param_tmp.np = 2;
+	ff_param_tmp.params = new double[ff_param_tmp.np];
+	ff_param_tmp.params[0] = pow(constants.tfactor*input_param_list[ii].params[0],2);
+	ff_param_tmp.params[1] = input_param_list[ii].params[1]/constants.tfactor;
+	break;
+      case elec_drag_smooth :
+        ff_param_tmp.np = 2;
+	ff_param_tmp.params = new double[ff_param_tmp.np];
+	ff_param_tmp.params[0] = pow(constants.tfactor*input_param_list[ii].params[0],2);
+	ff_param_tmp.params[1] = input_param_list[ii].params[1]/constants.tfactor;
+	break;
+      case elec_drag_smooth_drift :
+        ff_param_tmp.np = 2;
+	ff_param_tmp.params = new double[ff_param_tmp.np];
+	ff_param_tmp.params[0] = pow(constants.tfactor*input_param_list[ii].params[0],2);
+	ff_param_tmp.params[1] = input_param_list[ii].params[1]/constants.tfactor;
+	break;
+      default:
+	glog.error("Force_Veldependent::SetupInteractions:\n"
+		   "Invalid forcefield type");
+      }
+
+      param_list.push_back(ff_param_tmp);
+      nentries++;
+      ientry = nentries-1;
+      param_index[i] = ientry;
+    }
+  }
+
+  // Free the memory allocated to input_param_list
+  for (i = 0;i<input_param_list.size();i++) {
+    delete[] input_param_list[i].params;
+  }
+  input_param_list.clear();
+
+}
+
+void Force_Veldependent::ApplyForce(const bool& Lenergy, const bool& Lvirial, 
+				    const bool& Latomvirial, 
+				    ParticleList* p,
+				    const Box* b, Comm* comm) 
+{
+
+  double ftot[3];
+  double ftot_all[3];
+  double ftot_shift[3];
+  vector<double> f_store;
+  vector<int> have_drag;
+  int i,itype,ientry;
+  ForceFieldTypes veldependent_type;
+  int j,drag_ptr1,drag_ptr2;
+  double vi[3];
+  Particle* j_pnt;
+  int nparticles;
+  bool elim_net_force=false;
+
+
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  nparticles = p->get_nparticles();
+  f_store.clear();
+  have_drag.clear();
+  vec3_zero(ftot);
+  for (j=0;j<nparticles;j++) {
+    double this_f[3];
+    j_pnt = p->get_particle(j);
+    itype = type_index[j_pnt->get_type()];
+
+    ientry = param_index[itype];
+    veldependent_type = param_list[ientry].type;
+    switch(veldependent_type) {
+    case elec_drag :
+      elim_net_force=true;
+      j_pnt->get_v(vi);
+      if (vec3_normsq(vi) > param_list[ientry].params[0]) {
+	vec3_scale(param_list[ientry].params[1],vi,this_f);
+	have_drag.push_back(j);
+	f_store.push_back(this_f[0]);
+	f_store.push_back(this_f[1]);
+	f_store.push_back(this_f[2]);
+	ftot[0] += this_f[0];
+	ftot[1] += this_f[1];
+	ftot[2] += this_f[2];
+      } 
+      break;
+    case elec_drag_drift :
+      j_pnt->get_v(vi);
+      if (vec3_normsq(vi) > param_list[ientry].params[0]) {
+	vec3_scale(param_list[ientry].params[1],vi,this_f);
+	j_pnt->decrement_f(this_f);
+      } 
+      break;
+    case elec_drag_smooth :
+      elim_net_force=true;
+      j_pnt->get_v(vi);
+      if (vec3_normsq(vi) > param_list[ientry].params[0]) {
+	double net_vel[3];
+	double net_vel_mag = vec3_norm(vi) - sqrt(param_list[ientry].params[0]);
+	vec3_unit(vi,net_vel);
+	vec3_scale(param_list[ientry].params[1]*net_vel_mag,net_vel,this_f);
+	have_drag.push_back(j);
+	f_store.push_back(this_f[0]);
+	f_store.push_back(this_f[1]);
+	f_store.push_back(this_f[2]);
+	ftot[0] += this_f[0];
+	ftot[1] += this_f[1];
+	ftot[2] += this_f[2];
+      } 
+      break;
+    case elec_drag_smooth_drift :
+      j_pnt->get_v(vi);
+      if (vec3_normsq(vi) > param_list[ientry].params[0]) {
+	double net_vel[3];
+	double net_vel_mag = vec3_norm(vi) - sqrt(param_list[ientry].params[0]);
+	vec3_unit(vi,net_vel);
+	vec3_scale(param_list[ientry].params[1]*net_vel_mag,net_vel,this_f);
+	j_pnt->decrement_f(this_f);
+      } 
+      break;
+    default:
+      glog.error("Force_Veldependent::ApplyForce:\n"
+		 "Invalid forcefield type");
+    } // switch (veldependent)
+    if (Lenergy) {
+      energy_piece[0]+=0.0;
+    }
+  }  // for j
+
+  if (!elim_net_force) return;
+
+  vec3_zero(ftot_all);
+  MPI_Allreduce(ftot,ftot_all,3,MPI_DOUBLE,MPI_SUM,comm->get_world());
+
+  if (vec3_normsq(ftot_all) <= 0.) return;
+
+  vec3_scale((1./(double)p->get_nparticles_tot()),ftot_all,ftot_shift);
+
+  if (have_drag.size() == 0) {
+    for (j=0;j<nparticles;j++) {
+      j_pnt = p->get_particle(j);
+      j_pnt->increment_f(ftot_shift);
+    }
+  } else {
+    drag_ptr1 = 0;
+    have_drag.push_back(-1);
+    drag_ptr2 = 0;
+    for (j=0;j<nparticles;j++) {
+      if (have_drag[drag_ptr1] == j) {
+	double this_f[3];
+	drag_ptr1++;
+	this_f[0] = f_store[drag_ptr2++] - ftot_shift[0];
+	this_f[1] = f_store[drag_ptr2++] - ftot_shift[1];
+	this_f[2] = f_store[drag_ptr2++] - ftot_shift[2];
+	j_pnt = p->get_particle(j);
+	j_pnt->decrement_f(this_f);
+      } else {
+	j_pnt = p->get_particle(j);
+	j_pnt->increment_f(ftot_shift);
+      };
+    };
+  }
+}
+
+void Force_Veldependent::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+				       double& rcutcomm,
+       const Box* b, Comm* comm){
+
+    Lneighbor = false;
+    rcutneighmax = 0.0;
+    rcutcomm = 0.0;
+}
+
+
+
+
+
+@
+
+
+4.3
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d188 2
+a189 1
+    std::istringstream buf_in(buf);
+d340 1
+a340 1
+  for (int i = 0;i<input_param_list.size();i++) {
+a476 8
+void Force_Veldependent::Neighboring(
+	         ParticleList* p, 
+	         int* type_index,
+	         const Box* b, Comm* comm) {
+  glog.error("Force_Veldependent::Neighboring:\n"
+		   "No neighboring required for Veldependent sum");
+}
+
+@
+
+
+4.2
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d487 1
+d492 1
+@
+
+
+4.1
+log
+@add the files for the veldependent forcefiled along with modifications
+in other files (vec3.h Makefile forcefield.h forcefieldlist.cpp ) needed to
+support the new forcefield
+@
+text
+@d347 3
+a349 2
+		     ParticleList* p,
+		     const Box* b, Comm* comm) 
+@
+
+
+4.1.2.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d347 2
+a348 3
+				    const bool& Latomvirial, 
+				    ParticleList* p,
+				    const Box* b, Comm* comm) 
+@
+

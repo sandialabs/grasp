@@ -1,0 +1,406 @@
+head	4.3;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.3
+date	2008.02.12.18.32.14;	author athomps;	state dead;
+branches;
+next	4.2;
+
+4.2
+date	2006.12.12.17.40.19;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.08.05.17.08.01;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.05.49.08;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.01.04.00.50.55;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.01.04.00.50.55;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.3
+log
+@Added Nov2006 stuff
+@
+text
+@# General parameters
+      1 itrans   
+      1 icentr   
+      0 imetho     0: Normal MD-run 1: Energy minimisation 2:MD-energy minimisation
+      1 igeofo     0:xyz-input geometry 1: Biograf input geometry 2: xmol-input geometry
+ 80.000 axis1      a (for non-periodical systems)
+ 80.000 axis2      b (for non-periodical systems)
+ 80.000 axis3      c (for non-periodical systems)
+ 0.0010 cutof2     BO-cutoff for valency angles and torsion angles
+  0.300 cutof3     BO-cutoff for bond order for graphs
+      4 icharg     Charges. 1:EEM 2:- 3: Shielded EEM (default for crystals) 4: Full system EEM 5: Fixed (unit 26) 6: Fragment EEM
+      1 ichaen     Charges. 1:include charge energy 0: Do not include charge energy
+      0 iappen     1: Append fort.7 and fort.8
+      0 isurpr     1: Surpress lots of output 2: Read in all geometries at the same time
+     25 irecon     Frequency of reading control-file
+      0 icheck     0: Normal run 1:Check first derivatives;2: Single run
+      0 idebug     0: normal run 1: debug run
+#      1 idebug     0: normal run 1: debug run
+      0 ixmolo     0: only x,y,z-coordinates in xmolout  1: x,y,z + velocities + molnr. in xmolout
+10.0000 volcha     volume change (%) with 'S' and 'B' labels
+      0 iconne     0: Normal run 1: Run with fixed connection table 2: Read in from cnt.in
+      0 imolde     0: Normal run 1: Run with fixed molecule definition (moldef.in)
+# MD-parameters
+      3 imdmet     MD-method. 1:Velocity Verlet+Berendsen 2:Hoover-Nose;3:NVE 4: NPT
+ 0.2500 tstep      MD-time step (fs)
+0000.00 mdtemp     1st MD-temperature
+0005.00 mdtem2     2nd MD-temperature
+-000.00 tincr      Increase/decrease temperature
+      1 itdmet     0: T-damp atoms 1: Energy cons 2:System 3: Mols 4: Anderson 5: Mols+2 types of damping  6: System with 2 types of damping 
+   1.00 tdamp1     1st Berendsen/Anderson temperature damping constant (fs)
+    1.0 tdamp2     2nd Berendsen/Anderson temperature damping constant (fs)
+    192 ntdamp     Nr. of atoms with 1st Berendsen damping constant and 1st MD-temperature
+0000.00 mdpres     MD-pressure (MPa)
+00100.0 pdamp1     Berendsen pressure damping constant (fs)
+      0 inpt       0: Change all cell parameters in NPT-run  1: fixed x 2: fixed y 3: fixed z
+#0003000 nmdit      Number of MD-iterations
+0000001 nmdit      Number of MD-iterations
+ 000000 nmdeqi     Number of MD-equilibrium iterations
+  00001 ichupd     Charge update frequency
+      1 iout1      Output to unit 71 and unit 73
+      1 iout2      Save coordinates
+      0 ivels      1:Set vels and accels from moldyn.vel to zero
+  00025 itrafr     Frequency of trarot-calls
+      1 iout3      0: create moldyn.xxxx-files 1: do not create moldyn.xxxx-files
+      1 iravel     1: Random initial velocities
+2.00000 endmd      End point criterium for MD energy minimisation
+ 000001 iout6      Save velocity file
+ 000025 irten      Frequency of removal of rotational and translational energy
+      0 npreit     Nr. of iterations in previous runs
+  02.50 range      Range for back-translation of atoms
+# MM-parameters
+1.00000 endmm      End point criterium for MM energy minimisation
+ -00005 imaxmo     Maximum movement (1/1D6 A) during minimisation 0: Conjugate gradient
+  00010 imaxit     Maximum number of iterations
+    500 iout4      Frequency of structure output during minimisation
+      0 iout5      1:Remove fort.57 and fort.58 files
+1.00025 celopt     Cell parameter change
+      0 icelo2     Change all cell parameters (0) or only x/y/z axis (1/2/3)
+ 0.0005 delvib     Coordinate translation in numerical 2nd derivatives
+# FF-optimisation parameters
+   0.50 parsca     Parameter optimization: parameter step scaling
+ 0.0050 parext     Parameter optimization: extrapolation
+      0 icelop     0: No cell parameter optimisation 1:Cell parameter optimisation
+      1 igeopt     0: Always use same start gemetries 1:Use latest geometries in optimisation
+      1 iincop     heat increment optimisation 1: yes 0: no
+05.0000 accerr     Accepted increase in error force field
+    502 nmoset     Nr. of molecules in training set
+#Outdated parameters 
+      0 ideve1     0: Normal run 1:Check for radical/double bond distances
+   2000 ideve2     Frequency of radical/double bond check
+      0 nreac      0: reactive; 1: non-reactive; 2: Place default atoms
+      0 ibiola     0: Use old Biograf-labels 1: Assign Biograf-labels
+100.000 tdhoov     Hoover-Noose temperature damping constant (fs)
+ 01.000 achoov     100*Accuracy Hoover-Noose
+      0 itfix      1:Keep temperature fixed at exactly tset
+@
+
+
+4.2
+log
+@Updated ReaxFF examples to new version
+@
+text
+@@
+
+
+4.1
+log
+@Modified argument list for chargeequil force field command
+@
+text
+@d2 2
+a3 5
+      0 iexx
+      0 iexy
+      1 iexz
+      1 icentr
+      1 itrans
+d6 4
+a9 4
+ 100.000 axis1      a (for non-periodical systems)
+ 100.000 axis2      b (for non-periodical systems)
+ 100.000 axis3      c (for non-periodical systems)
+ 0.0050 cutof2     BO-cutoff for valency angles and torsion angles
+d11 1
+a11 2
+#      3 icharg     Charges. 1:EEM 2:- 3: Shielded EEM (default for crystals) 4: Full system EEM 5: Fixed (unit 26) 6: Fragment EEM
+      0 icharg     Charges. 0:no charges 1:EEM 2:- 3: Shielded EEM (default for crystals) 4: Full system EEM 5: Fixed (unit 26) 6: Fragment EEM
+d18 1
+d25 8
+a32 11
+#  0.25  tstep      MD-time step (fs)
+  0.000 tstep      MD-time step (fs)
+   0.00 mdtemp     1st MD-temperature
+0000.00 mdtem2     2nd MD-temperature
+0000.00 tincr      Increase/decrease temperature
+      2 itdmet     0: T-damp atoms 1: Energy cons 2:System 3: Mols 4: Anderson 5: Mols+2 types of damping  6: System with 2 types of damping 
+00000.0 tdamp1     1st Berendsen/Anderson temperature damping constant (fs)
+00000.0 tdamp2     2nd Berendsen/Anderson temperature damping constant (fs)
+#50000.0 tdamp1     1st Berendsen/Anderson temperature damping constant (fs)
+#50000.0 tdamp2     2nd Berendsen/Anderson temperature damping constant (fs)
+      0 ntdamp     Nr. of atoms with 1st Berendsen damping constant and 1st MD-temperature
+d34 1
+a34 1
+00000.0 pdamp1     Berendsen pressure damping constant (fs)
+d36 2
+a37 2
+0000000 nmdit      Number of MD-iterations
+#0000010 nmdit      Number of MD-iterations
+d40 2
+a41 2
+    001 iout1      Output to unit 71 and unit 73
+   0050 iout2      Save coordinates
+d45 2
+a46 2
+      0 iravel     1: Random initial velocities
+0.00001 endmd      End point criterium for MD energy minimisation
+d48 1
+a48 1
+5000000 irten      Frequency of removal of rotational and translational energy
+d52 4
+a55 4
+2.00000 endmm      End point criterium for MM energy minimisation
+ -00001 imaxmo     Maximum movement (1/1D6 A) during minimisation 0: Conjugate gradient
+  00100 imaxit     Maximum number of iterations
+    100 iout4      Frequency of structure output during minimisation
+d57 1
+a57 1
+1.00010 celopt     Cell parameter change
+d59 1
+d61 1
+a61 1
+   1.00 parsca     Parameter optimization: parameter step scaling
+d65 3
+a67 3
+      0 iincop     heat increment optimisation 1: yes 0: no
+5.00000 accerr     Accepted increase in error force field
+    251 nmoset     Nr. of molecules in training set
+d72 1
+a72 1
+      1 ibiola     0: Use old Biograf-labels 1: Assign Biograf-labels
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d2 5
+a6 2
+      1 itrans   
+      1 icentr   
+d9 4
+a12 4
+ 80.000 axis1      a (for non-periodical systems)
+ 80.000 axis2      b (for non-periodical systems)
+ 80.000 axis3      c (for non-periodical systems)
+ 0.0010 cutof2     BO-cutoff for valency angles and torsion angles
+d14 2
+a15 1
+      4 icharg     Charges. 1:EEM 2:- 3: Shielded EEM (default for crystals) 4: Full system EEM 5: Fixed (unit 26) 6: Fragment EEM
+a21 1
+#      1 idebug     0: normal run 1: debug run
+d28 11
+a38 8
+ 0.2500 tstep      MD-time step (fs)
+0000.00 mdtemp     1st MD-temperature
+0005.00 mdtem2     2nd MD-temperature
+-000.00 tincr      Increase/decrease temperature
+      1 itdmet     0: T-damp atoms 1: Energy cons 2:System 3: Mols 4: Anderson 5: Mols+2 types of damping  6: System with 2 types of damping 
+   1.00 tdamp1     1st Berendsen/Anderson temperature damping constant (fs)
+    1.0 tdamp2     2nd Berendsen/Anderson temperature damping constant (fs)
+    192 ntdamp     Nr. of atoms with 1st Berendsen damping constant and 1st MD-temperature
+d40 1
+a40 1
+00100.0 pdamp1     Berendsen pressure damping constant (fs)
+d42 2
+a43 2
+#0003000 nmdit      Number of MD-iterations
+0000025 nmdit      Number of MD-iterations
+d46 2
+a47 2
+      1 iout1      Output to unit 71 and unit 73
+   1000 iout2      Save coordinates
+d51 4
+a54 4
+      1 iravel     1: Random initial velocities
+2.00000 endmd      End point criterium for MD energy minimisation
+ 001000 iout6      Save velocity file
+ 000025 irten      Frequency of removal of rotational and translational energy
+d58 4
+a61 4
+1.00000 endmm      End point criterium for MM energy minimisation
+ -00005 imaxmo     Maximum movement (1/1D6 A) during minimisation 0: Conjugate gradient
+  00010 imaxit     Maximum number of iterations
+    500 iout4      Frequency of structure output during minimisation
+d63 1
+a63 1
+1.00025 celopt     Cell parameter change
+a64 1
+ 0.0005 delvib     Coordinate translation in numerical 2nd derivatives
+d66 1
+a66 1
+   0.50 parsca     Parameter optimization: parameter step scaling
+d70 3
+a72 3
+      1 iincop     heat increment optimisation 1: yes 0: no
+05.0000 accerr     Accepted increase in error force field
+    502 nmoset     Nr. of molecules in training set
+d77 1
+a77 1
+      0 ibiola     0: Use old Biograf-labels 1: Assign Biograf-labels
+@
+
+
+1.2
+log
+@Cleaned up testrdx_reax
+@
+text
+@@
+
+
+1.1
+log
+@file control was initially added on branch REAXFF.
+@
+text
+@d1 75
+@
+
+
+1.1.2.1
+log
+@Input and output for the example testrdx but using Adri's reac code.
+run.log_CMDF contains initial energy and forces generated by the
+CMDF verson of reac.  fort_March.71 and fort_March.73 are output
+from the March_Reduced_Mac version of reac.
+@
+text
+@a0 75
+# General parameters
+      1 itrans   
+      1 icentr   
+      0 imetho     0: Normal MD-run 1: Energy minimisation 2:MD-energy minimisation
+      1 igeofo     0:xyz-input geometry 1: Biograf input geometry 2: xmol-input geometry
+ 80.000 axis1      a (for non-periodical systems)
+ 80.000 axis2      b (for non-periodical systems)
+ 80.000 axis3      c (for non-periodical systems)
+ 0.0010 cutof2     BO-cutoff for valency angles and torsion angles
+  0.300 cutof3     BO-cutoff for bond order for graphs
+      4 icharg     Charges. 1:EEM 2:- 3: Shielded EEM (default for crystals) 4: Full system EEM 5: Fixed (unit 26) 6: Fragment EEM
+      1 ichaen     Charges. 1:include charge energy 0: Do not include charge energy
+      0 iappen     1: Append fort.7 and fort.8
+      0 isurpr     1: Surpress lots of output 2: Read in all geometries at the same time
+     25 irecon     Frequency of reading control-file
+      0 icheck     0: Normal run 1:Check first derivatives;2: Single run
+      0 idebug     0: normal run 1: debug run
+#      1 idebug     0: normal run 1: debug run
+      0 ixmolo     0: only x,y,z-coordinates in xmolout  1: x,y,z + velocities + molnr. in xmolout
+10.0000 volcha     volume change (%) with 'S' and 'B' labels
+      0 iconne     0: Normal run 1: Run with fixed connection table 2: Read in from cnt.in
+      0 imolde     0: Normal run 1: Run with fixed molecule definition (moldef.in)
+# MD-parameters
+      3 imdmet     MD-method. 1:Velocity Verlet+Berendsen 2:Hoover-Nose;3:NVE 4: NPT
+ 0.2500 tstep      MD-time step (fs)
+0000.00 mdtemp     1st MD-temperature
+0005.00 mdtem2     2nd MD-temperature
+-000.00 tincr      Increase/decrease temperature
+      1 itdmet     0: T-damp atoms 1: Energy cons 2:System 3: Mols 4: Anderson 5: Mols+2 types of damping  6: System with 2 types of damping 
+   1.00 tdamp1     1st Berendsen/Anderson temperature damping constant (fs)
+    1.0 tdamp2     2nd Berendsen/Anderson temperature damping constant (fs)
+    192 ntdamp     Nr. of atoms with 1st Berendsen damping constant and 1st MD-temperature
+0000.00 mdpres     MD-pressure (MPa)
+00100.0 pdamp1     Berendsen pressure damping constant (fs)
+      0 inpt       0: Change all cell parameters in NPT-run  1: fixed x 2: fixed y 3: fixed z
+#0003000 nmdit      Number of MD-iterations
+0000025 nmdit      Number of MD-iterations
+ 000000 nmdeqi     Number of MD-equilibrium iterations
+  00001 ichupd     Charge update frequency
+      1 iout1      Output to unit 71 and unit 73
+   1000 iout2      Save coordinates
+      0 ivels      1:Set vels and accels from moldyn.vel to zero
+  00025 itrafr     Frequency of trarot-calls
+      1 iout3      0: create moldyn.xxxx-files 1: do not create moldyn.xxxx-files
+      1 iravel     1: Random initial velocities
+2.00000 endmd      End point criterium for MD energy minimisation
+ 001000 iout6      Save velocity file
+ 000025 irten      Frequency of removal of rotational and translational energy
+      0 npreit     Nr. of iterations in previous runs
+  02.50 range      Range for back-translation of atoms
+# MM-parameters
+1.00000 endmm      End point criterium for MM energy minimisation
+ -00005 imaxmo     Maximum movement (1/1D6 A) during minimisation 0: Conjugate gradient
+  00010 imaxit     Maximum number of iterations
+    500 iout4      Frequency of structure output during minimisation
+      0 iout5      1:Remove fort.57 and fort.58 files
+1.00025 celopt     Cell parameter change
+      0 icelo2     Change all cell parameters (0) or only x/y/z axis (1/2/3)
+ 0.0005 delvib     Coordinate translation in numerical 2nd derivatives
+# FF-optimisation parameters
+   0.50 parsca     Parameter optimization: parameter step scaling
+ 0.0050 parext     Parameter optimization: extrapolation
+      0 icelop     0: No cell parameter optimisation 1:Cell parameter optimisation
+      1 igeopt     0: Always use same start gemetries 1:Use latest geometries in optimisation
+      1 iincop     heat increment optimisation 1: yes 0: no
+05.0000 accerr     Accepted increase in error force field
+    502 nmoset     Nr. of molecules in training set
+#Outdated parameters 
+      0 ideve1     0: Normal run 1:Check for radical/double bond distances
+   2000 ideve2     Frequency of radical/double bond check
+      0 nreac      0: reactive; 1: non-reactive; 2: Place default atoms
+      0 ibiola     0: Use old Biograf-labels 1: Assign Biograf-labels
+100.000 tdhoov     Hoover-Noose temperature damping constant (fs)
+ 01.000 achoov     100*Accuracy Hoover-Noose
+      0 itfix      1:Keep temperature fixed at exactly tset
+@
+

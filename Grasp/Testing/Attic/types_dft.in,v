@@ -1,0 +1,57 @@
+head	2.1;
+access;
+symbols
+	PreMonaco:2.1;
+locks; strict;
+comment	@# @;
+
+
+2.1
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.12.23.27.06;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.1
+log
+@Moved examples into subdirectories.
+@
+text
+@# Specification of particle id's.
+A    atom  1.0
+
+
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.1
+log
+@This is another example demonstrating use of reduced units
+and LJ93 walls and density profile to compare with dft
+calculations.
+@
+text
+@@
+

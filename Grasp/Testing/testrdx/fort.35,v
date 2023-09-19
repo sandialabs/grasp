@@ -1,0 +1,82 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.05.03.58;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.23.03.26.06;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.12.23.03.26.06;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@234535.1
+@
+
+
+1.2
+log
+@Cleaning up testrdx
+@
+text
+@@
+
+
+1.1
+log
+@file fort.35 was initially added on branch REAXFF.
+@
+text
+@d1 1
+@
+
+
+1.1.2.1
+log
+@Added 600 atom example to REAXFF branch
+@
+text
+@a0 1
+234535.1
+@
+

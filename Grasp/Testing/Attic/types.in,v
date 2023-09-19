@@ -1,0 +1,55 @@
+head	1.2;
+access;
+symbols
+	PreMonaco:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2003.02.21.23.04.33;	author athomps;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.18.00.22.27;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Finally finished implementing Stillinger-Weber forcefield
+Increased number of examples to six. The LJ and SW force
+fields have been tested for energy conservation, and so are
+have high confidence.
+
+The first three are short MD runs using perturbed FCC LJ systems.
+The fourth is an energy evaluation of a dense tetrahedral
+Stillinger-Weber Silicon crystal, which matches a TOWHEE example
+to seven decimal places.
+The fifth and sixth are short MD runs using perturbed tetrahedral
+Stillinger-Weber Silicon.
+@
+text
+@41    atom  1.0
+42    atom  2.0
+43    atom  3.0
+
+
+@
+
+
+1.1
+log
+@
+
+Added types.in, which contains mass definitions.
+@
+text
+@@
+

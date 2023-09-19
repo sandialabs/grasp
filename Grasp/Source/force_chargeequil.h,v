@@ -1,0 +1,583 @@
+head	4.7;
+access;
+symbols
+	ReverseComm_branch:4.3.0.4
+	ADTools_branch:4.3.0.2
+	Monaco_Aidan:4.1.2.1.0.2
+	Root-of-Monaco_Aidan:4.1.2.1
+	PPPM_Crozier2:4.2.0.2
+	PPPM_Crozier:4.2
+	Root-of-PPPM_Crozier:4.2
+	Monaco:4.1.0.2
+	PreMonaco:4.1
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.5
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.7
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.07.29.00.13.55;	author athomps;	state Exp;
+branches
+	4.3.4.1;
+next	4.2;
+
+4.2
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.2.2.1;
+next	4.1;
+
+4.1
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.1.2.1;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.01.16.21.56.05;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.01.16.21.56.05;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.01.21.22.24.30;	author athomps;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.01.27.22.09.36;	author athomps;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2005.01.29.01.44.20;	author athomps;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	2005.03.30.23.32.07;	author athomps;	state Exp;
+branches;
+next	;
+
+4.1.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.1.2.1.2.1;
+next	;
+
+4.1.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.1.2.1.2.2;
+
+4.1.2.1.2.2
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.2.2.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.2.2.2;
+
+4.2.2.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.3.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.7
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCE_CHARGEEQUIL_H
+#define FORCE_CHARGEEQUIL_H
+
+class Particle_Types;
+class Box;
+
+class Force_ChargeEquil: public ForceField {
+ public:
+  enum ForceFieldTypes {reax,streitz};
+ private:
+  struct ff_params {ForceFieldTypes type; double rcutsq; 
+    int np; double* params;};
+  //Array of ff_params created on input, indexed by ff type 
+  vector<ff_params> input_param_list;
+  //Array of ff_params created in SetupInteractions, indexed by ff type
+  int nentries;
+  vector<ff_params> param_list;
+  bool Lcoul;
+  double chpot;
+
+  double swa,swb;
+  double swc0,swc1,swc2,swc3,swc4,swc5,swc6,swc7;
+  bool Linputreax;
+  double precision;
+  bool Lmidpoint;
+ public:
+
+  Force_ChargeEquil(const string);
+  ~Force_ChargeEquil();
+  void SetupCutNeighSq(const double&, Comm*);
+
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+		  const Box*, Comm*);
+  void ReadInteractions(Comm*);
+  void SetupInteractions(const Box*, const double&, Comm*);
+  void SetupNeighbor(const string&, const int&,const double&, 
+                        double&, double&, const Box*, Comm*);
+  void SetupTypes(const ParticleTypeList*);
+  void ComputeCharges(ParticleList*, double&, const Box*, Comm*);
+  void CharGrasp(ParticleList*, const int&, const int&, double[], 
+			       double[], int[], int[], double[], Comm*);
+  void CGSolve(ParticleList*, const int&, const int&, double[], int[], 
+		       int[], double[], double[], Comm*);
+  void SparseProduct(const int&, const int&, const int&, double[], int[], int[], 
+		       double[], double[]);
+  void TaperSetup();
+  double TaperE(const double&, const double&);
+  double TaperF(const double&, const double&);
+  void reax_setup(const ff_params&, ff_params&);
+  void streitz_setup(const ff_params&, ff_params&);
+  bool get_Linputreax();
+  void set_Lmidpoint(const bool);
+};
+
+#endif
+
+@
+
+
+4.6
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d86 1
+a86 1
+  void CharGrasp(const int&, const int&, double[], 
+d88 1
+a88 1
+  void CGSolve(const int&, const int&, double[], int[], 
+d92 1
+a92 1
+  void TaperSetup(const double&, const double&);
+@
+
+
+4.5
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d70 1
+d98 1
+@
+
+
+4.4
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d82 1
+a82 1
+                        double&, const Box*, Comm*);
+d84 1
+a84 1
+  void ComputeCharges(ParticleList*, double&, Comm*);
+d89 1
+a89 1
+  void SparseProduct(const int&, const int&, double[], int[], int[], 
+@
+
+
+4.3
+log
+@Miscellaneous fixes
+@
+text
+@d76 2
+a77 1
+  void ApplyForce(const bool&, const bool&, ParticleList*, 
+@
+
+
+4.3.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d76 1
+a76 2
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+@
+
+
+4.2
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d69 1
+@
+
+
+4.2.2.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@a0 1
+
+d78 1
+a78 1
+  void SetupInteractions(const ParticleList*, const Box*, const double&, Comm*);
+@
+
+
+4.2.2.2
+log
+@Latest PPPM version
+@
+text
+@d77 1
+a77 1
+		  const Box*, double&, Comm*);
+d79 1
+a79 1
+  void SetupInteractions(ParticleList*, const Box*, double&, Comm*);
+@
+
+
+4.1
+log
+@Fixed glitch in header.
+@
+text
+@d78 1
+a78 1
+  void SetupInteractions(const Box*, const Force_Ewald*, Comm*);
+@
+
+
+4.1.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a76 3
+  void EnergyChange(int* , vector <double>,
+		    const bool&, ParticleList*, 
+		    const Box*, Comm*);
+@
+
+
+4.1.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d77 1
+a77 1
+  void EnergyChange(int* , double [3],
+@
+
+
+4.1.2.1.2.2
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d77 3
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+3.1
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+1.1
+log
+@file force_chargeequil.h was initially added on branch REAXFF.
+@
+text
+@d1 82
+@
+
+
+1.1.2.1
+log
+@Separated charge equilibration part of REAXFF into separate force field.
+@
+text
+@a0 58
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#ifndef FORCE_CHARGEEQUIL_H
+#define FORCE_CHARGEEQUIL_H
+
+class Particle_Types;
+class Box;
+
+class Force_ChargeEquil: public ForceField {
+ public:
+  enum ForceFieldTypes {  };
+ private:
+  bool Lcoul;
+ public:
+
+  Force_ChargeEquil(const string);
+  ~Force_ChargeEquil();
+  void SetupCutNeighSq(const double&, Comm*);
+
+  void ApplyForce(const bool&, const bool&, ParticleList*, 
+		  const Box*, Comm*);
+  void ReadInteractions(Comm*);
+  void SetupInteractions(const Box*, const Force_Ewald*, Comm*);
+  void SetupNeighbor(const string&, const int&,const double&, 
+                        double&, const Box*, Comm*);
+  void SetupTypes(const ParticleTypeList*);
+  void ComputeCharges(ParticleList*, double&, Comm*);
+};
+
+#endif
+
+@
+
+
+1.1.2.2
+log
+@Implemented a parallel CG scheme. Does not exploit sparsity and
+so is still quite slow.
+@
+text
+@a40 1
+  double chpot;
+a54 6
+  void chargrasp(const int&, double*, double*);
+  void cgsolve(const int&, double*[], double[], double[]);
+  void ComputeChargesParallel(ParticleList*, double&, Comm*);
+  void chargraspparallel(const int&, const int&, double*, Comm*);
+  void cgsolveparallel(const int&, const int&, double*[], double[], 
+		       double[], Comm*);
+@
+
+
+1.1.2.3
+log
+@Sparse matrix multiply implemented for the parallel CG solver.
+@
+text
+@a61 7
+  void ComputeChargesSparseParallel(ParticleList*, double&, Comm*);
+  void chargraspsparseparallel(const int&, const int&, double[], 
+			       double[], int[], int[], double[], Comm*);
+  void cgsolvesparseparallel(const int&, const int&, double[], int[], 
+		       int[], double[], double[], Comm*);
+  void sparse_product(const int&, const int&, double[], int[], int[], 
+		       double[], double[]);
+@
+
+
+1.1.2.4
+log
+@Cleaned up charge eequilibration, removed some FORTRAN allocations
+@
+text
+@d56 8
+a63 1
+  void CharGrasp(const int&, const int&, double[], 
+d65 1
+a65 1
+  void CGSolve(const int&, const int&, double[], int[], 
+d67 1
+a67 1
+  void SparseProduct(const int&, const int&, double[], int[], int[], 
+@
+
+
+1.1.2.5
+log
+@Separated charge equilibration input from REAX
+@
+text
+@d38 1
+a38 1
+  enum ForceFieldTypes {reax,streitz};
+a39 7
+  struct ff_params {ForceFieldTypes type; double rcutsq; 
+    int np; double* params;};
+  //Array of ff_params created on input, indexed by ff type 
+  vector<ff_params> input_param_list;
+  //Array of ff_params created in SetupInteractions, indexed by ff type
+  int nentries;
+  vector<ff_params> param_list;
+a41 4
+
+  double swa,swb;
+  double swc0,swc1,swc2,swc3,swc4,swc5,swc6,swc7;
+  bool Linputreax;
+a61 6
+  void TaperSetup(const double&, const double&);
+  double TaperE(const double&, const double&);
+  double TaperF(const double&, const double&);
+  void reax_setup(const ff_params&, ff_params&);
+  void streitz_setup(const ff_params&, ff_params&);
+  bool get_Linputreax();
+@
+
+

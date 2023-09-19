@@ -1,0 +1,253 @@
+head	4.5;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.3
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.5
+date	2007.09.09.21.25.47;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2007.06.02.03.27.22;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2007.05.29.15.34.16;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2006.12.12.18.03.39;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.08.30.21.42.44;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.04.02.05.23.05;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.02.09.08.04.53;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.02.09.08.04.53;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.02.10.01.57.05;	author athomps;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.03.30.23.32.07;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.5
+log
+@Fixed problem with hbonds in ReaxFF implementation. Now matches pre-midpoint results
+@
+text
+@# twobody 4-particle input data
+# forcefield twobody 	twobody.in   Lennard-Jones
+units kcal
+forcefield reax         ReaxFF
+forcefield chargeequil chargeequil.in 1.0e-6
+init config reax
+timestep 		0.25
+nsteps 			25
+#nsteps 			3000
+box dimensions 		75.0	0.0	0.0	\
+			0.0	75.0	0.0	\
+			0.0	0.0	75.0
+box origin 		6.25	6.25	6.25	
+initialize temperature 	0.0 		256
+neighbor		bin 		25 		2.5
+thermo 			1
+dump particles 		25
+dump velocities 		25
+dump forces 		25
+
+reax hbcut              10.0
+
+
+
+@
+
+
+4.4
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d20 1
+a20 3
+midpoint                1
+reax iprune             4
+reax ihb                1
+@
+
+
+4.3
+log
+@Enabled neighboring style bin with ReaxFF
+@
+text
+@d20 4
+a23 2
+
+
+@
+
+
+4.2
+log
+@More aftershocks from the ReaxFF upgrade
+@
+text
+@d15 1
+a15 1
+neighbor		nsq 		25 		2.5
+@
+
+
+4.1
+log
+@Updated testrdx222
+@
+text
+@a9 4
+# 
+# Currently, these dimensions must match the Reaxx
+# geo or fort.3 file.
+#
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d5 1
+a5 2
+#forcefield chargeequil  REAX ChargeEquil
+forcefield chargeequil chargeequil.in ChargeEquil
+@
+
+
+1.2
+log
+@Cleaning up testrdx222
+@
+text
+@@
+
+
+1.1
+log
+@file inp_rdx.dat was initially added on branch REAXFF.
+@
+text
+@d1 29
+@
+
+
+1.1.2.1
+log
+@Added testrdx222 example to repository
+@
+text
+@a0 28
+# twobody 4-particle input data
+# forcefield twobody 	twobody.in   Lennard-Jones
+units kcal
+forcefield reax         ReaxFF
+forcefield chargeequil  ChargeEquil
+init config reax
+timestep 		0.25
+nsteps 			25
+#nsteps 			3000
+# 
+# Currently, these dimensions must match the Reaxx
+# geo or fort.3 file.
+#
+box dimensions 		75.0	0.0	0.0	\
+			0.0	75.0	0.0	\
+			0.0	0.0	75.0
+box origin 		0.0 		0.0 		0.0
+initialize temperature 	0.0 		256
+neighbor		nsq 		25 		2.5
+thermo 			1
+dump particles 		25
+dump velocities 		25
+dump forces 		25
+
+
+
+
+
+@
+
+
+1.1.2.2
+log
+@Added origin shift (6.25A) to input.
+Included reax_defs.h file for each example.
+@
+text
+@d17 1
+a17 1
+box origin 		6.25	6.25	6.25	
+@
+
+
+1.1.2.3
+log
+@Separated charge equilibration input from REAX
+@
+text
+@d5 1
+a5 2
+#forcefield chargeequil  REAX ChargeEquil
+forcefield chargeequil chargeequil.in ChargeEquil
+@
+
+

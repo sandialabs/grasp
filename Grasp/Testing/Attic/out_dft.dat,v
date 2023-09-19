@@ -1,0 +1,2675 @@
+head	2.2;
+access;
+symbols
+	PreMonaco:2.2;
+locks; strict;
+comment	@# @;
+
+
+2.2
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.04.24.16.46.53;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.12.23.27.06;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.2
+log
+@Moved examples into subdirectories.
+@
+text
+@Warning: your default path uses the automounter; this may
+cause some problems if you use other NFS-connected systems.
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d1 2
+a2 66
+#  dft 256-particle input data
+#  x-dimension must be made big enough to avoid
+#  particle-wall periodic interactions, i.e.
+#  xlo <= x_leftwall - rcut/2.0 
+#  xhi >= x_rightwall + rcut/2.0 
+forcefield external external.in
+forcefield twobody twobody.in
+timestep 0.00500000
+nsteps 10000
+box dimensions	12.0000	0.00000	0.00000 \
+			0.00000	6.34960	0.00000 \
+			0.00000	0.00000	6.34960
+box origin	-6.00000	0.00000	0.00000
+initialize temperature 2.00000 256
+neighbor none
+thermo 100
+dump atoms 1000
+dump velocities 1000
+density profile 10 120 1
+units reduced
+temperature control rescale 2.00000 100 0.0500000 1.00000
+
+ntypes = 1
+A 1.00000
+rightwall self
+rightwall A
+leftwall self
+leftwall A
+i 	ii 	id_ext 		type 	tag 	id iaxis        x            y            z     
+0	0	rightwall		0	0	rightwall	1      5.00000      0.00000      0.00000 
+1	2	leftwall		1	1	leftwall	1     -5.00000      0.00000      0.00000 
+
+ientry 	i 	ii 	id_external 	id 	t 	n       p            p            p            p     
+0	0	1	rightwall		A	0	5      6.00000      15.0000     0.666667      5.00000      2.50000
+
+1	2	3	leftwall		A	0	5      6.00000      15.0000     0.666667      5.00000      2.50000
+
+
+i 	ii 	id 	t 	n       p            p            p            p     
+0	0	A	0	5      48.0000      24.0000      4.00000      4.00000      6.25000
+
+i 	ii 	jj 	id1 	id2 	t 	n       p            p            p            p     
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -26.2193
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -1760.44
+Twobody force time [s] = 0.0200000
+Twobody force-pair time [s/pair] = 6.12745e-07
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -26.2446
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -1762.61
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+@
+
+
+1.2
+log
+@This is final update of version 1, before switching to version 2
+This is final update of version 1 before switching to verison 2
+This is final update of version 1 before switching to verison 2
+@
+text
+@@
+
+
+1.1
+log
+@This is another example demonstrating use of reduced units
+and LJ93 walls and density profile to compare with dft
+calculations.
+@
+text
+@a42 13
+Finished ForcefieldSetup
+iaxis = 1
+nbins = 120
+xbin = 0.100000
+Number of particles in box = 256
+Number of particle types = 1
+Number of external force types = 2
+Number of external force pairs = 32640
+Number of twobody force types = 1
+Number of twobody force pairs = 32640
+
+****************************************************
+Timestep = 0
+d53 2
+a54 536
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -6.979127103
+Total Energy [epsilon] = -3.979127103
+****************************************************
+
+****************************************************
+Timestep = 100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -121.863
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -1320.98
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -5.636117495
+Total Energy [epsilon] = -2.636117495
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 1.34301
+Change in Total Energy [epsilon] = 1.34301
+Error in Total Energy [%] = 44.7670
+****************************************************
+
+****************************************************
+Timestep = 200
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -238.171
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -1017.66
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.905593069
+Total Energy [epsilon] = -1.905593069
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.07353
+Change in Total Energy [epsilon] = 2.07353
+Error in Total Energy [%] = 69.1178
+****************************************************
+
+****************************************************
+Timestep = 300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -243.752
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -975.662
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.763337869
+Total Energy [epsilon] = -1.763337869
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.21579
+Change in Total Energy [epsilon] = 2.21579
+Error in Total Energy [%] = 73.8596
+****************************************************
+
+****************************************************
+Timestep = 400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -273.857
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -905.729
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.607760166
+Total Energy [epsilon] = -1.607760166
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.37137
+Change in Total Energy [epsilon] = 2.37137
+Error in Total Energy [%] = 79.0456
+****************************************************
+
+****************************************************
+Timestep = 500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -270.970
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -891.837
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.956307119
+Kinetic Energy [epsilon] = 2.934460679
+Potential Energy [epsilon] = -4.542216484
+Total Energy [epsilon] = -1.607755805
+Change in Kinetic Energy [epsilon] = -0.0655393
+Change in Potential Energy [epsilon] = 2.43691
+Change in Total Energy [epsilon] = 2.37137
+Error in Total Energy [%] = 80.8111
+****************************************************
+
+****************************************************
+Timestep = 600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -274.634
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -909.173
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.011574055
+Kinetic Energy [epsilon] = 3.017361082
+Potential Energy [epsilon] = -4.624244034
+Total Energy [epsilon] = -1.606882952
+Change in Kinetic Energy [epsilon] = 0.0173611
+Change in Potential Energy [epsilon] = 2.35488
+Change in Total Energy [epsilon] = 2.37224
+Error in Total Energy [%] = 78.6198
+****************************************************
+
+****************************************************
+Timestep = 700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -259.493
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -953.612
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.738690469
+Total Energy [epsilon] = -1.738690469
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.24044
+Change in Total Energy [epsilon] = 2.24044
+Error in Total Energy [%] = 74.6812
+****************************************************
+
+****************************************************
+Timestep = 800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -291.410
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -951.270
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.854217023
+Total Energy [epsilon] = -1.854217023
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.12491
+Change in Total Energy [epsilon] = 2.12491
+Error in Total Energy [%] = 70.8303
+****************************************************
+
+****************************************************
+Timestep = 900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -285.748
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -925.186
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.730210789
+Total Energy [epsilon] = -1.730210789
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.24892
+Change in Total Energy [epsilon] = 2.24892
+Error in Total Energy [%] = 74.9639
+****************************************************
+
+****************************************************
+Timestep = 1000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -297.470
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -927.969
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.032984416
+Kinetic Energy [epsilon] = 3.049476623
+Potential Energy [epsilon] = -4.786871567
+Total Energy [epsilon] = -1.737394943
+Change in Kinetic Energy [epsilon] = 0.0494766
+Change in Potential Energy [epsilon] = 2.19226
+Change in Total Energy [epsilon] = 2.24173
+Error in Total Energy [%] = 73.5120
+****************************************************
+
+****************************************************
+Timestep = 1100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -284.395
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -918.345
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.978597829
+Kinetic Energy [epsilon] = 2.967896744
+Potential Energy [epsilon] = -4.698203995
+Total Energy [epsilon] = -1.730307251
+Change in Kinetic Energy [epsilon] = -0.0321033
+Change in Potential Energy [epsilon] = 2.28092
+Change in Total Energy [epsilon] = 2.24882
+Error in Total Energy [%] = 75.7715
+****************************************************
+
+****************************************************
+Timestep = 1200
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -293.343
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -912.112
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.984773016
+Kinetic Energy [epsilon] = 2.977159524
+Potential Energy [epsilon] = -4.708807749
+Total Energy [epsilon] = -1.731648225
+Change in Kinetic Energy [epsilon] = -0.0228405
+Change in Potential Energy [epsilon] = 2.27032
+Change in Total Energy [epsilon] = 2.24748
+Error in Total Energy [%] = 75.4907
+****************************************************
+
+****************************************************
+Timestep = 1300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -300.280
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -876.088
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.595186434
+Total Energy [epsilon] = -1.595186434
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.38394
+Change in Total Energy [epsilon] = 2.38394
+Error in Total Energy [%] = 79.4647
+****************************************************
+
+****************************************************
+Timestep = 1400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -305.371
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -940.844
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.868025581
+Total Energy [epsilon] = -1.868025581
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.11110
+Change in Total Energy [epsilon] = 2.11110
+Error in Total Energy [%] = 70.3701
+****************************************************
+
+****************************************************
+Timestep = 1500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -295.586
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -895.475
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.652579703
+Total Energy [epsilon] = -1.652579703
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.32655
+Change in Total Energy [epsilon] = 2.32655
+Error in Total Energy [%] = 77.5516
+****************************************************
+
+****************************************************
+Timestep = 1600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -287.517
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -910.541
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.022677741
+Kinetic Energy [epsilon] = 3.034016612
+Potential Energy [epsilon] = -4.679914438
+Total Energy [epsilon] = -1.645897826
+Change in Kinetic Energy [epsilon] = 0.0340166
+Change in Potential Energy [epsilon] = 2.29921
+Change in Total Energy [epsilon] = 2.33323
+Error in Total Energy [%] = 76.9023
+****************************************************
+
+****************************************************
+Timestep = 1700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -280.744
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -940.754
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.771476018
+Total Energy [epsilon] = -1.771476018
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.20765
+Change in Total Energy [epsilon] = 2.20765
+Error in Total Energy [%] = 73.5884
+****************************************************
+
+****************************************************
+Timestep = 1800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -312.939
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -907.865
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 1.997692865
+Kinetic Energy [epsilon] = 2.996539297
+Potential Energy [epsilon] = -4.768767074
+Total Energy [epsilon] = -1.772227777
+Change in Kinetic Energy [epsilon] = -0.00346070
+Change in Potential Energy [epsilon] = 2.21036
+Change in Total Energy [epsilon] = 2.20690
+Error in Total Energy [%] = 73.6483
+****************************************************
+
+****************************************************
+Timestep = 1900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -295.407
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -935.133
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.024794514
+Kinetic Energy [epsilon] = 3.037191771
+Potential Energy [epsilon] = -4.806796445
+Total Energy [epsilon] = -1.769604675
+Change in Kinetic Energy [epsilon] = 0.0371918
+Change in Potential Energy [epsilon] = 2.17233
+Change in Total Energy [epsilon] = 2.20952
+Error in Total Energy [%] = 72.7489
+****************************************************
+
+****************************************************
+Timestep = 2000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -286.841
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -913.749
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.689803526
+Total Energy [epsilon] = -1.689803526
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.28932
+Change in Total Energy [epsilon] = 2.28932
+Error in Total Energy [%] = 76.3108
+****************************************************
+
+****************************************************
+Timestep = 2100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -285.746
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -937.187
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.777080251
+Total Energy [epsilon] = -1.777080251
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.20205
+Change in Total Energy [epsilon] = 2.20205
+Error in Total Energy [%] = 73.4016
+****************************************************
+
+****************************************************
+Timestep = 2200
+d58 1
+a58 1
+External energy [epsilon] = -301.820
+d64 1
+a64 1
+Twobody energy [epsilon] = -875.534
+a66 1961
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.599036009
+Total Energy [epsilon] = -1.599036009
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.38009
+Change in Total Energy [epsilon] = 2.38009
+Error in Total Energy [%] = 79.3364
+****************************************************
+
+****************************************************
+Timestep = 2300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -298.820
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -888.752
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.027568097
+Kinetic Energy [epsilon] = 3.041352146
+Potential Energy [epsilon] = -4.638955450
+Total Energy [epsilon] = -1.597603304
+Change in Kinetic Energy [epsilon] = 0.0413521
+Change in Potential Energy [epsilon] = 2.34017
+Change in Total Energy [epsilon] = 2.38152
+Error in Total Energy [%] = 78.3048
+****************************************************
+
+****************************************************
+Timestep = 2400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -305.181
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -905.266
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.728307997
+Total Energy [epsilon] = -1.728307997
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.25082
+Change in Total Energy [epsilon] = 2.25082
+Error in Total Energy [%] = 75.0273
+****************************************************
+
+****************************************************
+Timestep = 2500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -305.369
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -886.948
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 1.950273893
+Kinetic Energy [epsilon] = 2.925410840
+Potential Energy [epsilon] = -4.657490994
+Total Energy [epsilon] = -1.732080154
+Change in Kinetic Energy [epsilon] = -0.0745892
+Change in Potential Energy [epsilon] = 2.32164
+Change in Total Energy [epsilon] = 2.24705
+Error in Total Energy [%] = 76.8113
+****************************************************
+
+****************************************************
+Timestep = 2600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -270.298
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -954.018
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.030036667
+Kinetic Energy [epsilon] = 3.045055000
+Potential Energy [epsilon] = -4.782484427
+Total Energy [epsilon] = -1.737429427
+Change in Kinetic Energy [epsilon] = 0.0450550
+Change in Potential Energy [epsilon] = 2.19664
+Change in Total Energy [epsilon] = 2.24170
+Error in Total Energy [%] = 73.6176
+****************************************************
+
+****************************************************
+Timestep = 2700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -280.666
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -924.099
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.983296182
+Kinetic Energy [epsilon] = 2.974944273
+Potential Energy [epsilon] = -4.706115927
+Total Energy [epsilon] = -1.731171654
+Change in Kinetic Energy [epsilon] = -0.0250557
+Change in Potential Energy [epsilon] = 2.27301
+Change in Total Energy [epsilon] = 2.24796
+Error in Total Energy [%] = 75.5629
+****************************************************
+
+****************************************************
+Timestep = 2800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -281.427
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -934.685
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.011742570
+Kinetic Energy [epsilon] = 3.017613855
+Potential Energy [epsilon] = -4.750439376
+Total Energy [epsilon] = -1.732825522
+Change in Kinetic Energy [epsilon] = 0.0176139
+Change in Potential Energy [epsilon] = 2.22869
+Change in Total Energy [epsilon] = 2.24630
+Error in Total Energy [%] = 74.4397
+****************************************************
+
+****************************************************
+Timestep = 2900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -282.512
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -905.733
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.641583878
+Total Energy [epsilon] = -1.641583878
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.33754
+Change in Total Energy [epsilon] = 2.33754
+Error in Total Energy [%] = 77.9181
+****************************************************
+
+****************************************************
+Timestep = 3000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -284.297
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -880.232
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.548939923
+Total Energy [epsilon] = -1.548939923
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.43019
+Change in Total Energy [epsilon] = 2.43019
+Error in Total Energy [%] = 81.0062
+****************************************************
+
+****************************************************
+Timestep = 3100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -294.606
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -887.995
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.043487656
+Kinetic Energy [epsilon] = 3.065231484
+Potential Energy [epsilon] = -4.619536877
+Total Energy [epsilon] = -1.554305393
+Change in Kinetic Energy [epsilon] = 0.0652315
+Change in Potential Energy [epsilon] = 2.35959
+Change in Total Energy [epsilon] = 2.42482
+Error in Total Energy [%] = 79.1073
+****************************************************
+
+****************************************************
+Timestep = 3200
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -285.041
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -887.853
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.019612206
+Kinetic Energy [epsilon] = 3.029418309
+Potential Energy [epsilon] = -4.581615398
+Total Energy [epsilon] = -1.552197088
+Change in Kinetic Energy [epsilon] = 0.0294183
+Change in Potential Energy [epsilon] = 2.39751
+Change in Total Energy [epsilon] = 2.42693
+Error in Total Energy [%] = 80.1121
+****************************************************
+
+****************************************************
+Timestep = 3300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -277.144
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -932.148
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.723795634
+Total Energy [epsilon] = -1.723795634
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.25533
+Change in Total Energy [epsilon] = 2.25533
+Error in Total Energy [%] = 75.1777
+****************************************************
+
+****************************************************
+Timestep = 3400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -287.526
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -927.438
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.014022918
+Kinetic Energy [epsilon] = 3.021034377
+Potential Energy [epsilon] = -4.745953742
+Total Energy [epsilon] = -1.724919365
+Change in Kinetic Energy [epsilon] = 0.0210344
+Change in Potential Energy [epsilon] = 2.23317
+Change in Total Energy [epsilon] = 2.25421
+Error in Total Energy [%] = 74.6171
+****************************************************
+
+****************************************************
+Timestep = 3500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -284.091
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -918.842
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.981398669
+Kinetic Energy [epsilon] = 2.972098004
+Potential Energy [epsilon] = -4.698956723
+Total Energy [epsilon] = -1.726858720
+Change in Kinetic Energy [epsilon] = -0.0279020
+Change in Potential Energy [epsilon] = 2.28017
+Change in Total Energy [epsilon] = 2.25227
+Error in Total Energy [%] = 75.7804
+****************************************************
+
+****************************************************
+Timestep = 3600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -273.934
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -929.782
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.987879251
+Kinetic Energy [epsilon] = 2.981818877
+Potential Energy [epsilon] = -4.702016732
+Total Energy [epsilon] = -1.720197856
+Change in Kinetic Energy [epsilon] = -0.0181811
+Change in Potential Energy [epsilon] = 2.27711
+Change in Total Energy [epsilon] = 2.25893
+Error in Total Energy [%] = 75.7568
+****************************************************
+
+****************************************************
+Timestep = 3700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -279.944
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -921.905
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.979912823
+Kinetic Energy [epsilon] = 2.969869234
+Potential Energy [epsilon] = -4.694722212
+Total Energy [epsilon] = -1.724852978
+Change in Kinetic Energy [epsilon] = -0.0301308
+Change in Potential Energy [epsilon] = 2.28440
+Change in Total Energy [epsilon] = 2.25427
+Error in Total Energy [%] = 75.9048
+****************************************************
+
+****************************************************
+Timestep = 3800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -270.445
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -923.873
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.956329170
+Kinetic Energy [epsilon] = 2.934493754
+Potential Energy [epsilon] = -4.665305815
+Total Energy [epsilon] = -1.730812060
+Change in Kinetic Energy [epsilon] = -0.0655062
+Change in Potential Energy [epsilon] = 2.31382
+Change in Total Energy [epsilon] = 2.24832
+Error in Total Energy [%] = 76.6168
+****************************************************
+
+****************************************************
+Timestep = 3900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -285.931
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -930.131
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.014081081
+Kinetic Energy [epsilon] = 3.021121621
+Potential Energy [epsilon] = -4.750242074
+Total Energy [epsilon] = -1.729120453
+Change in Kinetic Energy [epsilon] = 0.0211216
+Change in Potential Energy [epsilon] = 2.22889
+Change in Total Energy [epsilon] = 2.25001
+Error in Total Energy [%] = 74.4759
+****************************************************
+
+****************************************************
+Timestep = 4000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -287.259
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -896.773
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.625127474
+Total Energy [epsilon] = -1.625127474
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.35400
+Change in Total Energy [epsilon] = 2.35400
+Error in Total Energy [%] = 78.4667
+****************************************************
+
+****************************************************
+Timestep = 4100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -278.799
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -918.278
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.040185574
+Kinetic Energy [epsilon] = 3.060278361
+Potential Energy [epsilon] = -4.676084014
+Total Energy [epsilon] = -1.615805652
+Change in Kinetic Energy [epsilon] = 0.0602784
+Change in Potential Energy [epsilon] = 2.30304
+Change in Total Energy [epsilon] = 2.36332
+Error in Total Energy [%] = 77.2257
+****************************************************
+
+****************************************************
+Timestep = 4200
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -287.668
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -909.788
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.038570064
+Kinetic Energy [epsilon] = 3.057855096
+Potential Energy [epsilon] = -4.677563048
+Total Energy [epsilon] = -1.619707953
+Change in Kinetic Energy [epsilon] = 0.0578551
+Change in Potential Energy [epsilon] = 2.30156
+Change in Total Energy [epsilon] = 2.35942
+Error in Total Energy [%] = 77.1593
+****************************************************
+
+****************************************************
+Timestep = 4300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -268.584
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -903.453
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.973055848
+Kinetic Energy [epsilon] = 2.959583773
+Potential Energy [epsilon] = -4.578269347
+Total Energy [epsilon] = -1.618685575
+Change in Kinetic Energy [epsilon] = -0.0404162
+Change in Potential Energy [epsilon] = 2.40086
+Change in Total Energy [epsilon] = 2.36044
+Error in Total Energy [%] = 79.7559
+****************************************************
+
+****************************************************
+Timestep = 4400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -273.761
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -915.302
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.019230634
+Kinetic Energy [epsilon] = 3.028845951
+Potential Energy [epsilon] = -4.644777823
+Total Energy [epsilon] = -1.615931873
+Change in Kinetic Energy [epsilon] = 0.0288460
+Change in Potential Energy [epsilon] = 2.33435
+Change in Total Energy [epsilon] = 2.36320
+Error in Total Energy [%] = 78.0230
+****************************************************
+
+****************************************************
+Timestep = 4500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -267.382
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -927.534
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.036371750
+Kinetic Energy [epsilon] = 3.054557625
+Potential Energy [epsilon] = -4.667643546
+Total Energy [epsilon] = -1.613085922
+Change in Kinetic Energy [epsilon] = 0.0545576
+Change in Potential Energy [epsilon] = 2.31148
+Change in Total Energy [epsilon] = 2.36604
+Error in Total Energy [%] = 77.4594
+****************************************************
+
+****************************************************
+Timestep = 4600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -266.387
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -912.311
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.991921118
+Kinetic Energy [epsilon] = 2.987881677
+Potential Energy [epsilon] = -4.604288478
+Total Energy [epsilon] = -1.616406801
+Change in Kinetic Energy [epsilon] = -0.0121183
+Change in Potential Energy [epsilon] = 2.37484
+Change in Total Energy [epsilon] = 2.36272
+Error in Total Energy [%] = 79.0768
+****************************************************
+
+****************************************************
+Timestep = 4700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -276.988
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -901.602
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.993915036
+Kinetic Energy [epsilon] = 2.990872554
+Potential Energy [epsilon] = -4.603867147
+Total Energy [epsilon] = -1.612994593
+Change in Kinetic Energy [epsilon] = -0.00912745
+Change in Potential Energy [epsilon] = 2.37526
+Change in Total Energy [epsilon] = 2.36613
+Error in Total Energy [%] = 79.1118
+****************************************************
+
+****************************************************
+Timestep = 4800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -281.700
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -906.064
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.010645551
+Kinetic Energy [epsilon] = 3.015968326
+Potential Energy [epsilon] = -4.639705129
+Total Energy [epsilon] = -1.623736803
+Change in Kinetic Energy [epsilon] = 0.0159683
+Change in Potential Energy [epsilon] = 2.33942
+Change in Total Energy [epsilon] = 2.35539
+Error in Total Energy [%] = 78.0973
+****************************************************
+
+****************************************************
+Timestep = 4900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -303.807
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -901.924
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.709887225
+Total Energy [epsilon] = -1.709887225
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.26924
+Change in Total Energy [epsilon] = 2.26924
+Error in Total Energy [%] = 75.6413
+****************************************************
+
+****************************************************
+Timestep = 5000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -281.898
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -922.565
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.996742355
+Kinetic Energy [epsilon] = 2.995113533
+Potential Energy [epsilon] = -4.704931363
+Total Energy [epsilon] = -1.709817830
+Change in Kinetic Energy [epsilon] = -0.00488647
+Change in Potential Energy [epsilon] = 2.27420
+Change in Total Energy [epsilon] = 2.26931
+Error in Total Energy [%] = 75.7671
+****************************************************
+
+****************************************************
+Timestep = 5100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -282.406
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -911.455
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.966655990
+Kinetic Energy [epsilon] = 2.949983984
+Potential Energy [epsilon] = -4.663517191
+Total Energy [epsilon] = -1.713533206
+Change in Kinetic Energy [epsilon] = -0.0500160
+Change in Potential Energy [epsilon] = 2.31561
+Change in Total Energy [epsilon] = 2.26559
+Error in Total Energy [%] = 76.8002
+****************************************************
+
+****************************************************
+Timestep = 5200
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -293.507
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -930.666
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.046083329
+Kinetic Energy [epsilon] = 3.069124994
+Potential Energy [epsilon] = -4.781926180
+Total Energy [epsilon] = -1.712801186
+Change in Kinetic Energy [epsilon] = 0.0691250
+Change in Potential Energy [epsilon] = 2.19720
+Change in Total Energy [epsilon] = 2.26633
+Error in Total Energy [%] = 73.8427
+****************************************************
+
+****************************************************
+Timestep = 5300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -275.107
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -930.526
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.997448919
+Kinetic Energy [epsilon] = 2.996173378
+Potential Energy [epsilon] = -4.709502383
+Total Energy [epsilon] = -1.713329005
+Change in Kinetic Energy [epsilon] = -0.00382662
+Change in Potential Energy [epsilon] = 2.26962
+Change in Total Energy [epsilon] = 2.26580
+Error in Total Energy [%] = 75.6231
+****************************************************
+
+****************************************************
+Timestep = 5400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -286.194
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -950.351
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.830254574
+Total Energy [epsilon] = -1.830254574
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.14887
+Change in Total Energy [epsilon] = 2.14887
+Error in Total Energy [%] = 71.6291
+****************************************************
+
+****************************************************
+Timestep = 5500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -300.493
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -938.108
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.002072895
+Kinetic Energy [epsilon] = 3.003109343
+Potential Energy [epsilon] = -4.838283241
+Total Energy [epsilon] = -1.835173899
+Change in Kinetic Energy [epsilon] = 0.00310934
+Change in Potential Energy [epsilon] = 2.14084
+Change in Total Energy [epsilon] = 2.14395
+Error in Total Energy [%] = 71.3911
+****************************************************
+
+****************************************************
+Timestep = 5600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -294.364
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -936.440
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.982196979
+Kinetic Energy [epsilon] = 2.973295469
+Potential Energy [epsilon] = -4.807829761
+Total Energy [epsilon] = -1.834534291
+Change in Kinetic Energy [epsilon] = -0.0267045
+Change in Potential Energy [epsilon] = 2.17130
+Change in Total Energy [epsilon] = 2.14459
+Error in Total Energy [%] = 72.1285
+****************************************************
+
+****************************************************
+Timestep = 5700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -294.627
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -926.205
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.960471372
+Kinetic Energy [epsilon] = 2.940707058
+Potential Energy [epsilon] = -4.768874216
+Total Energy [epsilon] = -1.828167159
+Change in Kinetic Energy [epsilon] = -0.0592929
+Change in Potential Energy [epsilon] = 2.21025
+Change in Total Energy [epsilon] = 2.15096
+Error in Total Energy [%] = 73.1443
+****************************************************
+
+****************************************************
+Timestep = 5800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -270.904
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -934.514
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.708664941
+Total Energy [epsilon] = -1.708664941
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.27046
+Change in Total Energy [epsilon] = 2.27046
+Error in Total Energy [%] = 75.6821
+****************************************************
+
+****************************************************
+Timestep = 5900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -291.925
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -871.122
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.543152080
+Total Energy [epsilon] = -1.543152080
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.43598
+Change in Total Energy [epsilon] = 2.43598
+Error in Total Energy [%] = 81.1992
+****************************************************
+
+****************************************************
+Timestep = 6000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -283.747
+External force time [s] = 0.01000000
+External force-pair time [s/pair] = 3.06373e-07
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -906.961
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.651202268
+Total Energy [epsilon] = -1.651202268
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.32792
+Change in Total Energy [epsilon] = 2.32792
+Error in Total Energy [%] = 77.5975
+****************************************************
+
+****************************************************
+Timestep = 6100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -293.076
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -941.414
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.822228105
+Total Energy [epsilon] = -1.822228105
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.15690
+Change in Total Energy [epsilon] = 2.15690
+Error in Total Energy [%] = 71.8966
+****************************************************
+
+****************************************************
+Timestep = 6200
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -286.277
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -922.456
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.721613906
+Total Energy [epsilon] = -1.721613906
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.25751
+Change in Total Energy [epsilon] = 2.25751
+Error in Total Energy [%] = 75.2504
+****************************************************
+
+****************************************************
+Timestep = 6300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -280.834
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -905.654
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.634717089
+Total Energy [epsilon] = -1.634717089
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.34441
+Change in Total Energy [epsilon] = 2.34441
+Error in Total Energy [%] = 78.1470
+****************************************************
+
+****************************************************
+Timestep = 6400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -300.528
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -919.032
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.763906424
+Total Energy [epsilon] = -1.763906424
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.21522
+Change in Total Energy [epsilon] = 2.21522
+Error in Total Energy [%] = 73.8407
+****************************************************
+
+****************************************************
+Timestep = 6500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -266.774
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -945.420
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.978227888
+Kinetic Energy [epsilon] = 2.967341832
+Potential Energy [epsilon] = -4.735130453
+Total Energy [epsilon] = -1.767788621
+Change in Kinetic Energy [epsilon] = -0.0326582
+Change in Potential Energy [epsilon] = 2.24400
+Change in Total Energy [epsilon] = 2.21134
+Error in Total Energy [%] = 74.5225
+****************************************************
+
+****************************************************
+Timestep = 6600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -272.069
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -945.095
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.991348129
+Kinetic Energy [epsilon] = 2.987022194
+Potential Energy [epsilon] = -4.754546738
+Total Energy [epsilon] = -1.767524544
+Change in Kinetic Energy [epsilon] = -0.0129778
+Change in Potential Energy [epsilon] = 2.22458
+Change in Total Energy [epsilon] = 2.21160
+Error in Total Energy [%] = 74.0404
+****************************************************
+
+****************************************************
+Timestep = 6700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -269.964
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -944.813
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.991330255
+Kinetic Energy [epsilon] = 2.986995382
+Potential Energy [epsilon] = -4.745223086
+Total Energy [epsilon] = -1.758227704
+Change in Kinetic Energy [epsilon] = -0.0130046
+Change in Potential Energy [epsilon] = 2.23390
+Change in Total Energy [epsilon] = 2.22090
+Error in Total Energy [%] = 74.3523
+****************************************************
+
+****************************************************
+Timestep = 6800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -269.927
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -923.165
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.660514494
+Total Energy [epsilon] = -1.660514494
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.31861
+Change in Total Energy [epsilon] = 2.31861
+Error in Total Energy [%] = 77.2871
+****************************************************
+
+****************************************************
+Timestep = 6900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -256.108
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -947.897
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.023662663
+Kinetic Energy [epsilon] = 3.035493994
+Potential Energy [epsilon] = -4.703145616
+Total Energy [epsilon] = -1.667651621
+Change in Kinetic Energy [epsilon] = 0.0354940
+Change in Potential Energy [epsilon] = 2.27598
+Change in Total Energy [epsilon] = 2.31148
+Error in Total Energy [%] = 76.1482
+****************************************************
+
+****************************************************
+Timestep = 7000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -282.296
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -892.573
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.951333110
+Kinetic Energy [epsilon] = 2.926999664
+Potential Energy [epsilon] = -4.589331036
+Total Energy [epsilon] = -1.662331371
+Change in Kinetic Energy [epsilon] = -0.0730003
+Change in Potential Energy [epsilon] = 2.38980
+Change in Total Energy [epsilon] = 2.31680
+Error in Total Energy [%] = 79.1526
+****************************************************
+
+****************************************************
+Timestep = 7100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -286.785
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -954.859
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.850171986
+Total Energy [epsilon] = -1.850171986
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.12896
+Change in Total Energy [epsilon] = 2.12896
+Error in Total Energy [%] = 70.9652
+****************************************************
+
+****************************************************
+Timestep = 7200
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -290.695
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -925.408
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.750402779
+Total Energy [epsilon] = -1.750402779
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.22872
+Change in Total Energy [epsilon] = 2.22872
+Error in Total Energy [%] = 74.2908
+****************************************************
+
+****************************************************
+Timestep = 7300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -275.308
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -905.607
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.612948392
+Total Energy [epsilon] = -1.612948392
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.36618
+Change in Total Energy [epsilon] = 2.36618
+Error in Total Energy [%] = 78.8726
+****************************************************
+
+****************************************************
+Timestep = 7400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -290.377
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -921.428
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.733611971
+Total Energy [epsilon] = -1.733611971
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.24552
+Change in Total Energy [epsilon] = 2.24552
+Error in Total Energy [%] = 74.8505
+****************************************************
+
+****************************************************
+Timestep = 7500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -273.981
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -969.582
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.857671289
+Total Energy [epsilon] = -1.857671289
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.12146
+Change in Total Energy [epsilon] = 2.12146
+Error in Total Energy [%] = 70.7152
+****************************************************
+
+****************************************************
+Timestep = 7600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -285.353
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -903.944
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.645687665
+Total Energy [epsilon] = -1.645687665
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.33344
+Change in Total Energy [epsilon] = 2.33344
+Error in Total Energy [%] = 77.7813
+****************************************************
+
+****************************************************
+Timestep = 7700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -289.610
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -928.050
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.756485334
+Total Energy [epsilon] = -1.756485334
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.22264
+Change in Total Energy [epsilon] = 2.22264
+Error in Total Energy [%] = 74.0881
+****************************************************
+
+****************************************************
+Timestep = 7800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -296.762
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -970.772
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.951307455
+Total Energy [epsilon] = -1.951307455
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.02782
+Change in Total Energy [epsilon] = 2.02782
+Error in Total Energy [%] = 67.5940
+****************************************************
+
+****************************************************
+Timestep = 7900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -292.995
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -942.586
+Twobody force time [s] = 0.00000
+Twobody force-pair time [s/pair] = 0.00000
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.826488340
+Total Energy [epsilon] = -1.826488340
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.15264
+Change in Total Energy [epsilon] = 2.15264
+Error in Total Energy [%] = 71.7546
+****************************************************
+
+****************************************************
+Timestep = 8000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -267.459
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -913.393
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.612703345
+Total Energy [epsilon] = -1.612703345
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.36642
+Change in Total Energy [epsilon] = 2.36642
+Error in Total Energy [%] = 78.8808
+****************************************************
+
+****************************************************
+Timestep = 8100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -298.372
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -910.071
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.720480895
+Total Energy [epsilon] = -1.720480895
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.25865
+Change in Total Energy [epsilon] = 2.25865
+Error in Total Energy [%] = 75.2882
+****************************************************
+
+****************************************************
+Timestep = 8200
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -275.604
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -929.472
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.983429677
+Kinetic Energy [epsilon] = 2.975144516
+Potential Energy [epsilon] = -4.707328137
+Total Energy [epsilon] = -1.732183621
+Change in Kinetic Energy [epsilon] = -0.0248555
+Change in Potential Energy [epsilon] = 2.27180
+Change in Total Energy [epsilon] = 2.24694
+Error in Total Energy [%] = 75.5238
+****************************************************
+
+****************************************************
+Timestep = 8300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -295.779
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -942.068
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.835340434
+Total Energy [epsilon] = -1.835340434
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.14379
+Change in Total Energy [epsilon] = 2.14379
+Error in Total Energy [%] = 71.4596
+****************************************************
+
+****************************************************
+Timestep = 8400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -285.000
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -913.783
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.682744766
+Total Energy [epsilon] = -1.682744766
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.29638
+Change in Total Energy [epsilon] = 2.29638
+Error in Total Energy [%] = 76.5461
+****************************************************
+
+****************************************************
+Timestep = 8500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -293.653
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -909.147
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.012309434
+Kinetic Energy [epsilon] = 3.018464151
+Potential Energy [epsilon] = -4.698434775
+Total Energy [epsilon] = -1.679970624
+Change in Kinetic Energy [epsilon] = 0.0184642
+Change in Potential Energy [epsilon] = 2.28069
+Change in Total Energy [epsilon] = 2.29916
+Error in Total Energy [%] = 76.1697
+****************************************************
+
+****************************************************
+Timestep = 8600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -287.020
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -914.087
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.006255931
+Kinetic Energy [epsilon] = 3.009383896
+Potential Energy [epsilon] = -4.691825111
+Total Energy [epsilon] = -1.682441215
+Change in Kinetic Energy [epsilon] = 0.00938390
+Change in Potential Energy [epsilon] = 2.28730
+Change in Total Energy [epsilon] = 2.29669
+Error in Total Energy [%] = 76.3175
+****************************************************
+
+****************************************************
+Timestep = 8700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -279.956
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -898.549
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.603534680
+Total Energy [epsilon] = -1.603534680
+Change in Kinetic Energy [epsilon] = 4.44089e-16
+Change in Potential Energy [epsilon] = 2.37559
+Change in Total Energy [epsilon] = 2.37559
+Error in Total Energy [%] = 79.1864
+****************************************************
+
+****************************************************
+Timestep = 8800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -285.064
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -920.744
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.710185996
+Total Energy [epsilon] = -1.710185996
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.26894
+Change in Total Energy [epsilon] = 2.26894
+Error in Total Energy [%] = 75.6314
+****************************************************
+
+****************************************************
+Timestep = 8900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -280.415
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -881.262
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.537803255
+Total Energy [epsilon] = -1.537803255
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.44132
+Change in Total Energy [epsilon] = 2.44132
+Error in Total Energy [%] = 81.3775
+****************************************************
+
+****************************************************
+Timestep = 9000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -277.707
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -899.873
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.042515142
+Kinetic Energy [epsilon] = 3.063772713
+Potential Energy [epsilon] = -4.599923991
+Total Energy [epsilon] = -1.536151278
+Change in Kinetic Energy [epsilon] = 0.0637727
+Change in Potential Energy [epsilon] = 2.37920
+Change in Total Energy [epsilon] = 2.44298
+Error in Total Energy [%] = 79.7375
+****************************************************
+
+****************************************************
+Timestep = 9100
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -285.436
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -936.983
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.775074179
+Total Energy [epsilon] = -1.775074179
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.20405
+Change in Total Energy [epsilon] = 2.20405
+Error in Total Energy [%] = 73.4684
+****************************************************
+
+****************************************************
+Timestep = 9200
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -277.935
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -928.377
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.958730030
+Kinetic Energy [epsilon] = 2.938095045
+Potential Energy [epsilon] = -4.712155123
+Total Energy [epsilon] = -1.774060078
+Change in Kinetic Energy [epsilon] = -0.0619050
+Change in Potential Energy [epsilon] = 2.26697
+Change in Total Energy [epsilon] = 2.20507
+Error in Total Energy [%] = 75.0509
+****************************************************
+
+****************************************************
+Timestep = 9300
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -287.078
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -943.323
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.022167796
+Kinetic Energy [epsilon] = 3.033251694
+Potential Energy [epsilon] = -4.806252041
+Total Energy [epsilon] = -1.773000347
+Change in Kinetic Energy [epsilon] = 0.0332517
+Change in Potential Energy [epsilon] = 2.17288
+Change in Total Energy [epsilon] = 2.20613
+Error in Total Energy [%] = 72.7314
+****************************************************
+
+****************************************************
+Timestep = 9400
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -281.854
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -900.902
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.620137876
+Total Energy [epsilon] = -1.620137876
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.35899
+Change in Total Energy [epsilon] = 2.35899
+Error in Total Energy [%] = 78.6330
+****************************************************
+
+****************************************************
+Timestep = 9500
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -284.367
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -928.183
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.736522029
+Total Energy [epsilon] = -1.736522029
+Change in Kinetic Energy [epsilon] = -8.88178e-16
+Change in Potential Energy [epsilon] = 2.24261
+Change in Total Energy [epsilon] = 2.24261
+Error in Total Energy [%] = 74.7535
+****************************************************
+
+****************************************************
+Timestep = 9600
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -291.706
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -901.795
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 1.953567266
+Kinetic Energy [epsilon] = 2.930350899
+Potential Energy [epsilon] = -4.662111868
+Total Energy [epsilon] = -1.731760968
+Change in Kinetic Energy [epsilon] = -0.0696491
+Change in Potential Energy [epsilon] = 2.31702
+Change in Total Energy [epsilon] = 2.24737
+Error in Total Energy [%] = 76.6927
+****************************************************
+
+****************************************************
+Timestep = 9700
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -268.548
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -908.161
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.596521162
+Total Energy [epsilon] = -1.596521162
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.38261
+Change in Total Energy [epsilon] = 2.38261
+Error in Total Energy [%] = 79.4202
+****************************************************
+
+****************************************************
+Timestep = 9800
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -269.212
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -928.405
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.678191376
+Total Energy [epsilon] = -1.678191376
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.30094
+Change in Total Energy [epsilon] = 2.30094
+Error in Total Energy [%] = 76.6979
+****************************************************
+
+****************************************************
+Timestep = 9900
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -282.305
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -942.477
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.784305867
+Total Energy [epsilon] = -1.784305867
+Change in Kinetic Energy [epsilon] = -4.44089e-16
+Change in Potential Energy [epsilon] = 2.19482
+Change in Total Energy [epsilon] = 2.19482
+Error in Total Energy [%] = 73.1607
+****************************************************
+
+****************************************************
+Timestep = 10000
+
+Force evaluation for Forcefield object 0
+Forcefield classname [enum Forcefield::ff_class_type] = 2
+External energy [epsilon] = -280.031
+External force time [s] = 0.00000
+External force-pair time [s/pair] = 0.00000
+
+Force evaluation for Forcefield object 1
+Forcefield classname [enum Forcefield::ff_class_type] = 0
+Twobody energy [epsilon] = -923.611
+Twobody force time [s] = 0.01000000
+Twobody force-pair time [s/pair] = 3.06373e-07
+
+Temperature [epsilon] = 2.000000000
+Kinetic Energy [epsilon] = 3.000000000
+Potential Energy [epsilon] = -4.701724767
+Total Energy [epsilon] = -1.701724767
+Change in Kinetic Energy [epsilon] = 0.00000
+Change in Potential Energy [epsilon] = 2.27740
+Change in Total Energy [epsilon] = 2.27740
+Error in Total Energy [%] = 75.9134
+****************************************************
+Total run time is 57.0300
+@
+

@@ -1,0 +1,91 @@
+head	2.4;
+access;
+symbols
+	PreMonaco:2.4;
+locks; strict;
+comment	@# @;
+
+
+2.4
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.23.23.32.37;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.09.18.15.48.44;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.07.23.15.41.17;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.4
+log
+@Moved examples into subdirectories.
+@
+text
+@# twobody 4-particle input data
+forcefield twobody 	twobody.in Lennard-Jones
+timestep 		10.0
+nsteps 			100
+box dimensions 		2.0	0.0	0.0	\
+			0.0	2.0	0.0	\
+			0.0	0.0	2.0
+box origin 		-1.0 		-1.0 		-1.0
+initialize temperature 	0.0 		256
+neighbor		bin 		10 		1.0
+thermo 			1
+dump atoms 		10
+dump forces 	10
+minimize steepest_descent 0  1  1
+
+@
+
+
+2.3
+log
+@Fixed up the output log immensely. Fixed up the velocity-rescale
+thermostat, which changed the dft example a little.
+Other than that, all the other examples (NVE) stayed the same.
+@
+text
+@@
+
+
+2.2
+log
+@Switched the neighbor style from nsq to binning in all examples.
+@
+text
+@d2 1
+a2 1
+forcefield twobody 	twobody.in
+@
+
+
+2.1
+log
+@This is just an updated set of data files for the test suite.
+Important additions are the dft (density profile) run,
+the relax (steepest descent energy minimization) run, and
+the 2tet_sw_cut run, which gives identical energies to
+the 250tet_sw_cut run, using only 2 instead of 250 particles.
+@
+text
+@d10 1
+a10 1
+neighbor		nsq 		10 		1.0
+@
+

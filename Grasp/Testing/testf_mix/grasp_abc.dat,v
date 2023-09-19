@@ -1,0 +1,244 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.3;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2005.03.24.21.11.35;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.03.12.01.55.31;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.03.11.18.06.31;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@/home/athomps/Grasp/Testing/testf_mix/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /home/athomps/Grasp/Testing/testf_mix/
+PATH_MAX is 4096
+
+
+
+Entering Input::ReadInput()
+forcefield threebody threebodyall.in Stillinger-Weber
+timestep 0.0100000000
+nsteps 100
+box dimensions	0.0000000000	10.4000000000	10.4000000000 \
+			10.4000000000	0.0000000000	10.4000000000 \
+			10.4000000000	10.4000000000	0.0000000000
+box origin	0.0000000000	0.0000000000	0.0000000000
+initialize temperature 0.0000000000 256
+thermo 100
+neighbor bin 10 0.1000000000
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 3
+A 10.0000000000
+B 10.0000000000
+C 10.0000000000
+
+
+
+Reading Stillinger-Weber from file threebodyall.in
+
+
+
+Setting up force field class 1 called Stillinger-Weber
+
+id1	id2	id3	t 	n       p            p            p            p     
+A	A	A	0	15        3.771        2.514      -0.3333        4393.        8786.        14.22        4.000        0.000        2.095    6.845e+04        0.000    3.585e+04        3090.    1.711e+04        1475.
+B	B	B	0	15        3.771        2.514      -0.3333        4582.        9164.        14.22        4.000        0.000        2.095    7.139e+04        0.000    3.739e+04        3223.    1.785e+04        1538.
+C	C	C	0	15        3.771        2.514      -0.3333        4750.        9500.        14.22        4.000        0.000        2.095    7.401e+04        0.000    3.876e+04        3341.    1.850e+04        1595.
+A	A	B	0	6        3.771        2.514      -0.3333        4414.        8828.        14.22
+A	A	C	0	6        3.771        2.514      -0.3333        4435.        8870.        14.22
+A	B	B	0	15        3.771        2.514      -0.3333        4456.        8912.        14.22        4.000        0.000        2.095    6.943e+04        0.000    3.637e+04        3134.    1.736e+04        1496.
+A	B	C	0	6        3.771        2.514      -0.3333        4477.        8954.        14.22
+A	C	C	0	15        3.771        2.514      -0.3333        4498.        8996.        14.22        4.000        0.000        2.095    7.008e+04        0.000    3.671e+04        3164.    1.752e+04        1510.
+B	A	A	0	15        3.771        2.514      -0.3333        4519.        9038.        14.22        4.000        0.000        2.095    7.041e+04        0.000    3.688e+04        3178.    1.760e+04        1517.
+B	A	B	0	6        3.771        2.514      -0.3333        4540.        9080.        14.22
+B	A	C	0	6        3.771        2.514      -0.3333        4561.        9122.        14.22
+B	B	C	0	6        3.771        2.514      -0.3333        4603.        9206.        14.22
+B	C	C	0	15        3.771        2.514      -0.3333        4624.        9248.        14.22        4.000        0.000        2.095    7.205e+04        0.000    3.774e+04        3252.    1.801e+04        1552.
+C	A	A	0	15        3.771        2.514      -0.3333        4645.        9290.        14.22        4.000        0.000        2.095    7.237e+04        0.000    3.791e+04        3267.    1.809e+04        1559.
+C	A	B	0	6        3.771        2.514      -0.3333        4666.        9332.        14.22
+C	A	C	0	6        3.771        2.514      -0.3333        4687.        9374.        14.22
+C	B	B	0	15        3.771        2.514      -0.3333        4708.        9416.        14.22        4.000        0.000        2.095    7.336e+04        0.000    3.842e+04        3311.    1.834e+04        1581.
+C	B	C	0	6        3.771        2.514      -0.3333        4729.        9458.        14.22
+Cutoffs for this forcefield
+rcutmax = 3.771
+rskin = 0.1000
+rcutneighmax = 3.871
+
+
+
+Entering ParticleList::ReadConfig()
+Will not read an initial velocity file 
+Will not read an initial displacement file 
+Total particles read = 128
+
+
+
+Entering Output::Setup()
+
+
+
+Entering FixList::Setup()
+
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -53900.5412530058
+   Threebody        =       200.4489152948
+Potential Energy    =    -53700.0923377109
+Kinetic Energy      =         0.0000000000
+Extended Energy     =         0.0000000000
+Total Energy        =    -53700.0923377109
+Pressure            =     17184.6000540756
+Temperature         =         0.0000000000
+Total Particles     =                  128
+Volume              =      2249.7280000000
+--------------- Step       100 ---- CPU =     1.2744 (sec) ---------------
+Stillinger-Weber:
+   Twobody          =    -53923.6179561013
+   Threebody        =       191.5277454284
+Potential Energy    =    -53732.0902106728
+Kinetic Energy      =        31.9978369522
+Extended Energy     =         0.0000000000
+Total Energy        =    -53700.0923737206
+Pressure            =     17178.8832266855
+Temperature         =        20.2018418058
+
+
+
+Loop time: 1.2754699915 on 2 processors for 128 particles
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.9722     76.22
+          Neigh Time    0.0072      0.57
+           Comm Time    0.0329      2.58
+       Exchange Time    0.0130      1.02
+        Revcomm Time    0.0564      4.43
+        Barrier Time    0.1892     14.84
+          Other Time    0.0045      0.35
+          Total Time    1.2755    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+Stillinger-Weber        0.9659 (   100)     0.0068 (    10) 
+
+
+
+Finished 
+@
+
+
+1.3
+log
+@Added a bunch of test case for mixing force fields
+@
+text
+@@
+
+
+1.2
+log
+@Changed some of the warning messages
+@
+text
+@d93 1
+a93 1
+--------------- Step       100 ---- CPU =     1.2917 (sec) ---------------
+d106 1
+a106 1
+Loop time: 1.2915855161 on 2 processors for 128 particles
+d112 8
+a119 8
+          Force Time    0.9718     75.24
+          Neigh Time    0.0084      0.65
+           Comm Time    0.0312      2.42
+       Exchange Time    0.0148      1.14
+        Revcomm Time    0.0584      4.52
+        Barrier Time    0.2035     15.75
+          Other Time    0.0035      0.27
+          Total Time    1.2916    100.00
+d125 1
+a125 1
+Stillinger-Weber        0.9664 (   100)     0.0080 (    10) 
+@
+
+
+1.1
+log
+@Added example of mixing threebody force fields
+@
+text
+@d36 4
+d93 1
+a93 1
+--------------- Step       100 ---- CPU =     1.2692 (sec) ---------------
+d106 1
+a106 1
+Loop time: 1.2691530017 on 2 processors for 128 particles
+d112 8
+a119 8
+          Force Time    0.9706     76.48
+          Neigh Time    0.0073      0.57
+           Comm Time    0.0283      2.23
+       Exchange Time    0.0111      0.87
+        Revcomm Time    0.0712      5.61
+        Barrier Time    0.1771     13.95
+          Other Time    0.0035      0.28
+          Total Time    1.2692    100.00
+d125 1
+a125 1
+Stillinger-Weber        0.9641 (   100)     0.0069 (    10) 
+@
+

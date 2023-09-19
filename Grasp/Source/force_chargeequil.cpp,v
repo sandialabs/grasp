@@ -1,0 +1,3829 @@
+head	4.13;
+access;
+symbols
+	ReverseComm_branch:4.6.0.4
+	ADTools_branch:4.6.0.2
+	Monaco_Aidan:4.1.2.1.0.2
+	Root-of-Monaco_Aidan:4.1.2.1
+	PPPM_Crozier2:4.2.0.2
+	PPPM_Crozier:4.2
+	Root-of-PPPM_Crozier:4.2
+	Monaco:4.1.0.2
+	PreMonaco:4.1
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	REAX-2:1.1.2.6
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.13
+date	2008.11.06.05.31.16;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2008.11.04.00.24.50;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.6.4.1;
+next	4.5;
+
+4.5
+date	2005.10.28.19.10.56;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.07.29.00.13.55;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.07.06.18.06.09;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.2.2.1;
+next	4.1;
+
+4.1
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.1.2.1;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.01.16.21.56.05;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+4.6.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+4.2.2.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.2.2.2;
+
+4.2.2.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.1.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.1.2.1.2.1;
+next	;
+
+4.1.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.1.2.1.2.2;
+
+4.1.2.1.2.2
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.1.2.1.2.3;
+
+4.1.2.1.2.3
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2005.01.16.21.56.05;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.01.21.22.24.30;	author athomps;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.01.27.22.09.36;	author athomps;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2005.01.29.01.44.20;	author athomps;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	2005.01.31.04.22.50;	author athomps;	state Exp;
+branches;
+next	1.1.2.6;
+
+1.1.2.6
+date	2005.03.30.23.32.07;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.13
+log
+@Added a few tweaks to charge equilibration
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+#ifdef USE_BLAS
+#include <cblas.h>
+#endif
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "constants.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_chargeequil.h"
+#include "force_ewald.h"
+#include "box.h"
+#include "box_inline.h"
+#include "force_chargeequil_inline.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "comm.h"
+#include "particletypelist.h"
+#include "log.h"
+#include "machine.h"
+
+#ifdef USE_REAX
+#include "reax_fortran.h"
+#include "reax_params.h"
+#include "reax_cbkch.h"
+#include "reax_energies.h"
+#include "reax_small.h"
+#include "reax_functions.h"
+#endif
+
+extern Log glog;
+extern Constants constants;
+
+Force_ChargeEquil::Force_ChargeEquil(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = chargeequil;
+  timeforce = 0.0;
+  nforce = 0;
+  label = "ChargeEquil";
+  npieces = 1;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "n/a";
+  rcutmax = 0.0;
+  Lcoul = false;
+  rcutneighsq_table = NULL;
+  chpot = 0.0;
+  Linputreax = false;
+  swa = 0.0;
+  swb = 0.0;
+}
+
+Force_ChargeEquil::~Force_ChargeEquil() {
+  // Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+}
+
+void Force_ChargeEquil::ReadInteractions(Comm* comm) {
+  string buf;
+  string forcefieldname;
+  string filename;
+  string id1;
+  int itype;
+  int isize;
+  ff_params ff_param_tmp;
+  bool match;
+  int node;
+  string str_tmp;
+  ifstream infile;
+  double chi,eta,gamma,rcuta,rcutb;
+  int nparams;
+
+  std::istringstream buf_in(arg_string);
+
+  node = comm->get_node();
+
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_ChargeEquil::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  buf_in >> precision;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_ChargeEquil::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  if (filename == "REAX") {
+    Linputreax = true;
+    return;
+  }
+
+  glog.get_logfile() << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+
+  str_tmp = glog.path_str + filename;
+  if (node == 0) {
+    infile.open(str_tmp.c_str()); 
+  
+    if (!infile) {
+      infile.close();
+      infile.open(str_tmp.c_str()); 
+      if (!infile) {
+	glog.abort("Force_ChargeEquil::ReadInteractions:\n"
+		   "Failed to open " + str_tmp,comm);
+      }
+    }
+  }
+
+  ntypes = 0;
+
+  do {
+    if (node==0) {
+      if(input_string_get(infile,buf)) {
+	if(buf != "End of Input") {
+	  glog.abort("Force_ChargeEquil::ReadInput:\n"
+		     "Read error in "+str_tmp,comm);
+	}
+      }
+      isize = buf.size();
+    }
+
+    MPI_Bcast(&isize,1,MPI_INT,0,comm->get_world());
+    if (node != 0) buf.resize(isize);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << isize << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << buf << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (input_string_match(buf,"End of Input")) {
+      break;
+    }
+
+    buf_in.clear();
+    buf_in.str(buf);
+    
+    // Construct index for ids on the fly
+    buf_in >> id1;
+
+    match = find_id(id1,itype);
+    if (!match) {
+      ntypes++;
+      itype = ntypes-1;
+      id_index.push_back(id1);
+    }
+
+    buf_in >> forcefieldname;
+    if (forcefieldname == "reax") {
+      buf_in >> chi >> eta >> gamma >> rcuta >> rcutb;
+      if (gamma < 0.0 || rcuta < 0.0 || rcuta > rcutb) {
+	glog.error("Force_ChargeEquil::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+      nparams = 5;
+      ff_param_tmp.type = reax;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.rcutsq = rcutb*rcutb;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = chi;
+      ff_param_tmp.params[1] = eta;
+      ff_param_tmp.params[2] = gamma;
+      ff_param_tmp.params[3] = rcuta;
+      ff_param_tmp.params[4] = rcutb;
+	
+      input_param_list.push_back(ff_param_tmp);
+      
+    } else {
+      glog.error("Force_ChargeEquil::ReadInteractions:\n"
+	       "Invalid forcefield name");
+    }
+    
+    if (buf_in.fail()) {
+      glog.error("Force_ChargeEquil::ReadInteractions:\n"
+		 "Read error in " + str_tmp);
+    }
+
+  } while (!input_string_match(buf,"End of Input"));
+
+}
+
+void Force_ChargeEquil::SetupInteractions(const Box* b, 
+                                      const double& g_ewald, 
+				      Comm* comm) {
+  int node,nprocs;
+  ff_params ff_param_tmp;
+  double chi,eta,gamma;
+  int nparams;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  Lnocut = false;
+  
+#ifdef USE_REAX
+  if (Linputreax) {
+    glog.warning("Force_ChargeEquil::SetupInteractions:\n"
+		 "Using ReaxFF input");
+    FORTRAN(getswa,GETSWA)(&swa);
+    FORTRAN(getswb,GETSWB)(&swb);
+    
+    rcutmax = swb;
+
+    TaperSetup();
+
+    nparams = 5;
+
+    FORTRAN(getnso,GETNSO)(&ntypes);
+
+    for (int itype=0;itype<ntypes;itype++) {
+      chi = FORTRAN(cbkchb,CBKCHB).chi[itype];
+      eta = FORTRAN(cbkchb,CBKCHB).eta[itype];
+      gamma = FORTRAN(cbkchb,CBKCHB).gam[itype];
+      ff_param_tmp.type = reax;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.rcutsq = rcutmax*rcutmax;
+    // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = chi;
+      ff_param_tmp.params[1] = eta;
+      ff_param_tmp.params[2] = gamma;
+      ff_param_tmp.params[3] = swa;
+      ff_param_tmp.params[4] = swb;
+	
+      input_param_list.push_back(ff_param_tmp);
+    }
+  }
+#endif
+
+  if (node == 0) {
+    glog.get_logfile() << endl << "id \t type \trcutsq \t np" << 
+      setw(13) << "\t p1      p2      p3  " <<  endl;
+  }
+
+  nentries = 0;
+  for (int itype=0;itype<ntypes;itype++) {
+    ff_param_tmp.type = input_param_list[itype].type;
+    switch(ff_param_tmp.type) {
+    case reax :
+      reax_setup(input_param_list[itype],ff_param_tmp);
+      break;
+    case streitz :
+      streitz_setup(input_param_list[itype],ff_param_tmp);
+      break;
+    default:
+      glog.error("Force_ChargeEquil::SetupInteractions:\n"
+		 "Invalid forcefield type");
+    }
+    param_list.push_back(ff_param_tmp);
+    nentries++;
+    if (node == 0) {
+      glog.get_logfile() << itype << "\t" 
+		   << param_list[itype].type << "\t" << 
+	param_list[itype].rcutsq 
+		   << "\t" << param_list[itype].np; 
+      for (int iparam=0;iparam<param_list[itype].np;iparam++) {
+	glog.get_logfile() << setw(15) << param_list[itype].params[iparam];
+      }
+      glog.get_logfile() << endl;
+    }
+  }
+
+  if (Lcoul) {
+    npieces = 2;
+    energy_piece.resize(npieces);
+    label_piece.resize(npieces);
+    label_piece[0] = "Reax";
+    label_piece[1] = "Coulombic";
+  }
+
+  TaperSetup();
+}
+
+void Force_ChargeEquil::SetupCutNeighSq(const double& rskin, Comm* comm) {
+  int itype,jtype;
+  ForceFieldTypes type;
+  int node;
+
+  node = comm->get_node();
+
+  // Allocate ntypes x ntypes array rcutneighsq_table
+  rcutneighsq_table = new double*[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    rcutneighsq_table[itype] = new double[ntypes];
+  }
+
+  // Assign values to rcutneighsq_table[][] using global cutoff
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      // Using a maximum mixing rule here
+      rcutneighsq_table[itype][jtype] = pow(sqrt(max(param_list[itype].rcutsq,param_list[jtype].rcutsq))+rskin,2);
+    }
+  }
+}
+
+void Force_ChargeEquil::ApplyForce(
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+		    const Box* b, Comm* comm) {
+
+  bool perflag;
+  double energy;
+
+  perflag = b->get_perflag();
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+  }
+
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  ComputeCharges(p,energy,b,comm);
+
+  if (Lenergy) {
+    energy_piece[0] = energy;
+  }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+}
+
+void Force_ChargeEquil::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+				      double& rcutcomm,
+       const Box* b, Comm* comm){
+  int node,nprocs;
+  bool Ltwoway,Ltwoway_ghost;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+  
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    if (Lmidpoint) {
+      Ltwoway = false;
+      Ltwoway_ghost = true;
+      Lneighbor = true;
+      neighbor = new Neighbor(Neighbor::neighbor_nsq_ghost,
+			      Ltwoway,Ltwoway_ghost,
+			      neighbor_freq,neighbor_rskin);
+    } else {
+      Ltwoway = false;
+      Ltwoway_ghost = false;
+      Lneighbor = true;
+      neighbor = new Neighbor(Neighbor::neighbor_nsq,
+			      Ltwoway,Ltwoway_ghost,
+			      neighbor_freq,neighbor_rskin);
+    }
+  } else if (neighbor_style == "bin") {
+    if (Lmidpoint) {
+      Ltwoway = false;
+      Ltwoway_ghost = true;
+      Lneighbor = true;
+      neighbor = new Neighbor(Neighbor::neighbor_bin_ghost,
+			      Ltwoway,Ltwoway_ghost,
+			      neighbor_freq,neighbor_rskin);
+    } else {
+      Ltwoway = false;
+      Ltwoway_ghost = false;
+      Lneighbor = true;
+      neighbor = new Neighbor(Neighbor::neighbor_bin,
+			      Ltwoway,Ltwoway_ghost,
+			      neighbor_freq,neighbor_rskin);
+    }
+  } else {
+    glog.error("Force_ChargeEquil::SetupNeighbor:\n"
+	       "Invalid neighbor style");
+  }
+
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_ChargeEquil::SetupNeighbor:\n"
+	       "Can not use nocut types with neighboring");
+  }
+
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_ChargeEquil::SetupNeighbor:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_ChargeEquil::SetupNeighbor:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+  }
+
+  rcutneighmax = 0.0;
+  rcutcomm = 0.0;
+  if (Lneighbor) {
+    rcutneighmax = rcutmax + neighbor_rskin;
+    if (Lmidpoint) {
+      rcutcomm = 0.5*rcutmax + neighbor_rskin;
+    } else {
+      rcutcomm = rcutmax + neighbor_rskin;
+    }
+    neighbor->set_rcutneighmax(rcutneighmax);
+    SetupCutNeighSq(neighbor_rskin,comm);
+    if (node == 0) {
+      glog.get_logfile() << "Cutoffs for this forcefield" << endl;
+      glog.get_logfile() << "rcutmax = " << rcutmax << endl;
+      glog.get_logfile() << "rskin = " << neighbor_rskin << endl;
+      glog.get_logfile() << "rcutneighmax = " << rcutneighmax << endl;
+      glog.get_logfile() << "rcutcomm = " << rcutcomm << endl;
+      glog.get_logfile() << "Lmidpoint = " << Lmidpoint << endl;
+    }
+  }
+}
+
+void Force_ChargeEquil::SetupTypes(const ParticleTypeList* t) {
+  int itype,itype_ff;
+  bool match;
+  int nparticletypes;
+  std::ostringstream strstrm_tmp;
+
+  nparticletypes = t->get_ntypes();
+
+  type_index.resize(nparticletypes);
+
+#ifdef USE_REAX
+  if (Linputreax) {
+    if (nparticletypes > ntypes) {
+      strstrm_tmp  << nparticletypes << " " << ntypes;
+      glog.error("Force_ChargeEquil::SetupTypes:\n"
+		   "nparticletypes > ntypes "+strstrm_tmp.str());
+    }
+    id_index.resize(ntypes);
+    for (itype = 0; itype < nparticletypes; itype++) {
+      type_index[itype]=itype;
+      id_index[itype]=t->get_id(itype);
+    }
+    for (itype = nparticletypes; itype < ntypes; itype++) {
+      id_index[itype]="type_undefined";
+    }
+  }
+#endif
+
+  // For each id in t, generate ff index
+  // If id not found in ff, generate warning
+  for (itype = 0; itype < nparticletypes; itype++) {
+    match = find_id(t->get_id(itype),itype_ff);
+    if (!match) {
+      glog.warning("Force_ChargeEquil::SetupTypes:\n"
+		   "particled type id has no ff type match");
+      glog.get_logfile() << itype_ff << " " << t->get_id(itype) << endl;
+      type_index[itype]=-1;
+    } else {
+      type_index[itype]=itype_ff;
+    }
+  }
+
+  // Check that each id in ff appears in t
+  for (itype_ff = 0; itype_ff < ntypes; itype_ff++) {
+    match = t->find_id(id_index[itype_ff],itype);
+    if (!match) {
+      glog.warning("Force_ChargeEquil::SetupTypes:\n"
+		   "ff type id has no particle type match "+
+		   id_index[itype_ff]);
+    }
+  }
+  CheckMasses(t);
+}
+
+void Force_ChargeEquil::ComputeCharges(
+			ParticleList* p, double& energy, const Box* b, Comm* comm) {
+  double xi[3],xj[3];
+  int nparticles,nghost_particles;
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int* neighptr;
+  int j;
+  int itype,jtype;
+  double delr2,rcutsq,delr_norm,gamt,hulp1,hulp2;
+  int node,nprocs;
+  MPI_Comm world;
+  double qtot,qsum,qi;
+  double* ch;
+  double* elcvec;
+  double* aval;
+  int* arow_ptr;
+  int* acol_ind;
+  int maxmatentries,nmatentries;
+  double sw;
+  double rtmp[3];
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  rcutsq = rcutmax*rcutmax;
+
+  arow_ptr = new int[nparticles+nghost_particles+1];
+  ch = new double[nparticles+nghost_particles+1];
+  elcvec = new double[nparticles+nghost_particles+1];
+  maxmatentries = neighbor->get_nneighbors()+2*nparticles;
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "maxmatentries = " << maxmatentries << endl;
+  }
+  aval = new double[maxmatentries];
+  acol_ind = new int[maxmatentries];
+  nmatentries = 0;
+
+  // Add local particle diagonal and pair interactions to linear system
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    itype = type_index[i_pnt->get_type()];
+    neighptr = neighbor->first_ptr[i];
+
+    arow_ptr[i] = nmatentries;
+
+    aval[nmatentries] = 2.0*param_list[itype].params[1];
+    //    glog.get_logfile() << FORTRAN(cbkchb,CBKCHB).eta[itype]-
+    //     param_list[itype].params[1] << endl;
+    acol_ind[nmatentries] = i;
+    nmatentries++;
+
+    aval[nmatentries] = 1.0;
+    acol_ind[nmatentries] = nparticles+nghost_particles;
+    nmatentries++;
+
+    for (int ineigh=0;
+	 ineigh<neighbor->nneigh_list[i];ineigh++) {
+
+      j = neighptr[ineigh];
+      j_pnt = p->get_particle(j);
+      j_pnt->get_x(xj);
+
+      // Use midpoint test to skip some matentries
+      if (Lmidpoint) {
+	// First check if both atoms are local
+	// If j not local, do midpoint test
+	if (j >= nparticles) {
+	  vec3_add(xi,xj,rtmp);
+	  vec3_scale(0.5,rtmp,rtmp);
+	  if (!(comm->sub_check_strict(b,rtmp))) continue;
+	}
+      }
+
+      delr2 = vec3_distsq(xi,xj);
+
+      if (delr2 <= rcutsq) {
+	jtype = type_index[j_pnt->get_type()];
+	gamt=sqrt(param_list[itype].params[2]*
+		  param_list[jtype].params[2]);
+	//	glog.get_logfile() << sqrt(FORTRAN(cbkchb,CBKCHB).gam[itype]*
+	//              FORTRAN(cbkchb,CBKCHB).gam[jtype]) - gamt << endl; 
+
+	delr_norm = sqrt(delr2);
+	sw = TaperE(delr_norm,delr2);
+	//	FORTRAN(taper,TAPER)(&delr_norm,&delr2);
+	//	glog.get_logfile() << FORTRAN(cbkenergies,CBKENERGIES).sw - sw << endl;
+	hulp1=(delr_norm*delr2+(1.0/(gamt*gamt*gamt)));
+	hulp2=sw*14.40/cbrt(hulp1);
+	aval[nmatentries] = hulp2;
+	acol_ind[nmatentries] = j;
+	nmatentries++;
+      }
+    }
+  }
+
+  // Add ghost particle pair interactions to linear system
+  // If not Lmidpoint, then no matentries are added
+  // This is rather wasteful, but simplifies the code.
+  for (int i=nparticles;i<nparticles+nghost_particles;i++) {
+    arow_ptr[i] = nmatentries;
+    if (Lmidpoint) {
+      i_pnt = p->get_particle(i);
+      i_pnt->get_x(xi);
+      itype = type_index[i_pnt->get_type()];
+      neighptr = neighbor->first_ptr[i];
+      for (int ineigh=0;
+	   ineigh<neighbor->nneigh_list[i];ineigh++) {
+	
+	j = neighptr[ineigh];
+	j_pnt = p->get_particle(j);
+	j_pnt->get_x(xj);
+	
+	vec3_add(xi,xj,rtmp);
+	vec3_scale(0.5,rtmp,rtmp);
+        if (!(comm->sub_check_strict(b,rtmp))) continue;
+	
+	delr2 = vec3_distsq(xi,xj);
+
+	if (delr2 <= rcutsq) {
+
+	  jtype = type_index[j_pnt->get_type()];
+	  gamt=sqrt(param_list[itype].params[2]*
+		    param_list[jtype].params[2]);
+
+	  delr_norm = sqrt(delr2);
+	  sw = TaperE(delr_norm,delr2);
+	  hulp1=(delr_norm*delr2+(1.0/(gamt*gamt*gamt)));
+	  hulp2=sw*14.40/cbrt(hulp1);
+	  aval[nmatentries] = hulp2;
+	  acol_ind[nmatentries] = j;
+	  nmatentries++;
+	}
+      }
+    }
+  }
+  arow_ptr[nparticles+nghost_particles] = nmatentries;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "nmatentries = " << nmatentries << endl;
+  }
+
+  // Add rhs matentries to linear system
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    itype = type_index[i_pnt->get_type()];
+    elcvec[i] = -param_list[itype].params[0];
+  }
+
+  for (int i=nparticles;i<nparticles+nghost_particles;i++) {
+    elcvec[i] = 0.0;
+  }
+
+  // Assign current charges to charge vector  
+  qsum = 0.0;
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    qi = i_pnt->get_charge();
+    ch[i] = qi;
+    if (i<nparticles) qsum += qi;
+  }
+  MPI_Allreduce(&qsum,&qtot,1,MPI_DOUBLE,
+		MPI_SUM,comm->get_world());
+  // This introduces numerical instability, so leave it out
+  //  elcvec[nparticles+nghost_particles] = qtot;
+
+  elcvec[nparticles+nghost_particles] = 0.0;
+
+  ch[nparticles+nghost_particles] = chpot;
+
+  // Solve linear system for charges
+
+  CharGrasp(p,nparticles,nghost_particles,
+			  ch,aval,acol_ind,arow_ptr,elcvec,comm);
+
+  energy = 0.0;
+
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    itype = type_index[i_pnt->get_type()];
+    // 23.02 is the ReaxFF conversion from eV to kcal/mol
+    // Should really use constants.evfactor ~ 23.06, but
+    // that would break consistency with serial ReaxFF code.
+    qi = 23.02*(
+            param_list[itype].params[0]*ch[i]+
+	    param_list[itype].params[1]*ch[i]*ch[i]);
+    energy+=qi;
+    i_pnt->increment_phi(qi);
+  }
+
+  // Copy charge vector back to particles
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->set_charge(ch[i]);
+  }
+  chpot = ch[nparticles+nghost_particles];
+
+  delete []aval;
+  delete []arow_ptr;
+  delete []elcvec;
+  delete []ch;
+  delete []acol_ind;
+}
+
+void Force_ChargeEquil::CharGrasp(ParticleList* p, const int& nparticles, 
+                        const int& nghost_particles, 
+			double ch[], double aval[], int acol_ind[], 
+			int arow_ptr[], double elcvec[], Comm* comm) {
+  double chpottmp,suma;
+  double sumtmp;
+// need to update this to new form
+// c
+// c     On first iteration, generate initial guess
+// c     by assuming diagonal matrix 
+// c
+//   if (FORTRAN(cbkcha,CBKCHA).ioldchg == 0) {
+//     suma = 0.0;
+//     for (int i = 0 ; i < nparticles; i++) {
+//       suma += 1.0/FORTRAN(cbkm,CBKM).xmortr[i][i];
+//     }
+//     MPI_Allreduce(&suma,&sumtmp,1,MPI_DOUBLE,
+// 		  MPI_SUM,comm->get_world());
+//     suma = sumtmp;
+//     chpottmp = -elcvec[nparticles+nghost_particles];
+//     for (int i = 0; i < nparticles; i++) {
+//       chpottmp += elcvec[i]/FORTRAN(cbkm,CBKM).xmortr[i][i];
+//     }
+//     MPI_Allreduce(&chpottmp,&sumtmp,1,MPI_DOUBLE,
+// 		  MPI_SUM,comm->get_world());
+//     chpottmp = sumtmp/suma;
+//     FORTRAN(cbkch,CBKCH).ch[nparticles+nghost_particles] = chpottmp;
+//     for (int i = 0 ; i < nparticles; i++) {
+//       FORTRAN(cbkch,CBKCH).ch[i] = (elcvec[i]-chpottmp)/
+// 	FORTRAN(cbkm,CBKM).xmortr[i][i];
+//     }
+//     comm->comm_double(FORTRAN(cbkch,CBKCH).ch);
+//     FORTRAN(cbkcha,CBKCHA).ioldchg=1;
+//   }
+
+  
+  CGSolve(p,nparticles,nghost_particles,
+	  aval,acol_ind,arow_ptr,ch,elcvec,comm);
+}
+
+void Force_ChargeEquil::CGSolve(ParticleList* plist, const int& nparticles, 
+			const int& nghost_particles, 
+			double aval[], int acol_ind[], int arow_ptr[], 
+		        double x[], double b[], Comm* comm) {
+  double one,zero,rho,rho_old,beta,alpha,gamma;
+  int iter,maxiter;
+  int n;
+  double sumtmp;
+  double* r;
+  double* p;
+  double* w;
+  double* p_old;
+  double* q;
+  //
+  //  Sketch of parallel CG method
+  //
+  // Distributed (partial) vectors: b, r, q, A
+  // Accumulated (full) vectors: x, w, p
+  //
+  // r = b-A.x
+  // w = r            /* (ReverseComm + Comm) */
+  // 
+  // rho_old = 1
+  // while (rho > tol) { 
+  //   rho = w.w      /* (AllReduceSum) */
+  //   beta = rho/rho_old
+  //   p = w + beta*p_old
+  //   q = A.p
+  //   gamma = p.q    /* (AllReduceSum) */
+  //   alpha = rho/gammma
+  //   x += alpha.p
+  //   r -= alpha.q
+  //   w = r          /* (ReverseComm + Comm) */
+  //   p_old = p
+  //   rho_old = rho
+  // }
+
+  r = new double[nparticles+nghost_particles+1];
+  p = new double[nparticles+nghost_particles+1];
+  w = new double[nparticles+nghost_particles+1];
+  p_old = new double[nparticles+nghost_particles+1];
+  q = new double[nparticles+nghost_particles+1];
+
+  n = nparticles+nghost_particles+1;
+
+  one = 1.0;
+  zero = 0.0;
+  maxiter = 100;
+
+  SparseProduct(n,nparticles,nghost_particles,aval,acol_ind,arow_ptr,x,r); // ! r = Ax
+#ifdef USE_BLAS
+  cblas_dscal(n,-one,r,1);
+  cblas_daxpy(n,one,b,1,r,1);
+  cblas_dcopy(n,r,1,w,1); // w is accumulated version of r
+#else
+  for (int i=0;i<n;i++) {
+    r[i] = b[i]-r[i];
+    w[i] = r[i];
+  }
+#endif
+  comm->reverse_comm_double_add(w);
+
+  // If chemical potential has not been previously computed,
+  // we choose value that minimizes residual
+  if (x[n-1] == 0.0) {
+    double sum = 0.0;
+    for (int i=0;i<nparticles;i++) {
+      sum += w[i];
+    }
+    MPI_Allreduce(&sum,&sumtmp,1,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    int nparticles_tot = plist->get_nparticles_tot();
+    if (nparticles_tot > 0) {
+      x[n-1] = sumtmp/nparticles_tot;
+      for (int i=0;i<nparticles;i++) {
+	w[i]-=x[n-1];
+	r[i]-=x[n-1];
+      }
+    }
+  }
+
+  comm->comm_double(w);
+  MPI_Allreduce(&w[n-1],&sumtmp,1,MPI_DOUBLE,
+		MPI_SUM,comm->get_world());
+  w[n-1] = sumtmp;
+  rho_old = one;
+
+  for (iter = 1; iter < maxiter; iter++) {
+#ifdef USE_BLAS
+    rho = cblas_ddot(nparticles,w,1,w,1);
+#else
+    rho = 0.0;
+    for (int i=0;i<nparticles;i++) {
+      rho+=w[i]*w[i];
+    }
+#endif
+    MPI_Allreduce(&rho,&sumtmp,1,MPI_DOUBLE,
+    		  MPI_SUM,comm->get_world());
+    rho = sumtmp+w[n-1]*w[n-1];
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Force_ChargeEquil::cgsolve:"
+	" iteration = " << iter << std::scientific << " rho = " << rho << endl;
+    }
+
+    if (rho < precision) break;
+#ifdef USE_BLAS
+    cblas_dcopy(n,w,1,p,1); // ! p=w
+#else
+    for (int i=0;i<n;i++) {
+      p[i] = w[i];
+    }
+#endif
+    if (iter > 1) {
+      beta = rho/rho_old;
+#ifdef USE_BLAS
+      cblas_daxpy(n,beta,p_old,1,p,1);
+#else
+      for (int i=0;i<n;i++) {
+	p[i] += beta*p_old[i];
+      }
+#endif
+    }
+    SparseProduct(n,nparticles,nghost_particles,aval,acol_ind,arow_ptr,p,q); // ! q = Ap
+#ifdef USE_BLAS
+    gamma = cblas_ddot(n,p,1,q,1);
+#else
+    gamma = 0.0;
+    for (int i=0;i<n;i++) {
+      gamma+=p[i]*q[i];
+    }
+#endif
+    MPI_Allreduce(&gamma,&sumtmp,1,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    gamma = sumtmp;
+    alpha = rho/gamma;
+#ifdef USE_BLAS
+    cblas_daxpy(n,alpha,p,1,x,1); // ! x += alpha*p
+    cblas_daxpy(n,-alpha,q,1,r,1); //  ! r -= alpha*q
+    cblas_dcopy(n,r,1,w,1); // w is accumulated version of r
+#else
+    for (int i=0;i<n;i++) {
+      x[i] += alpha*p[i];
+      r[i] -= alpha*q[i];
+      w[i] = r[i];
+    }
+#endif
+    comm->reverse_comm_double_add(w);
+    comm->comm_double(w);
+    MPI_Allreduce(&w[n-1],&sumtmp,1,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    w[n-1] = sumtmp;
+#ifdef USE_BLAS
+    cblas_dcopy(n,p,1,p_old,1);
+#else
+    for (int i=0;i<n;i++) {
+      p_old[i] = p[i];
+    }
+#endif
+
+    rho_old = rho;
+
+//     // Diagnostic for x,w
+//     Particle* i_pnt;
+//     if (comm->get_Lnodefile()) {
+//       comm->get_nodefile() << "rho = " << rho << "\n";
+//       for (int i=0;i<nparticles;i++) {
+// 	i_pnt = plist->get_particle(i);
+// 	comm->get_nodefile() << "Nforce = " << nforce << " Niter = " << iter << " " << i_pnt->get_tag() << " " << x[i] << " " << w[i] << "\n";
+//       }
+//       comm->get_nodefile() << endl;
+//     }
+    
+  }
+  if (rho >= precision) {
+    ostringstream buf_out;
+    buf_out << rho;
+    glog.warning("Force_ChargeEquil::cgsolve:\n"
+		 "Warning:maxiter exceeded. Continuing. rho = "+buf_out.str());
+    if (comm->get_Lnodefile()) {
+      //      comm->get_nodefile().setf(ios::scientific)
+      comm->get_nodefile() << "Force_ChargeEquil::cgsolve:\n" <<
+		 "Warning:maxiter exceeded. Continuing. rho = "
+			   << std::scientific << rho << endl;
+    }
+
+  } else {
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Force_ChargeEquil::cgsolve:"
+	" Successsfully converged after " << iter << " iterations" 
+			   << std::scientific << " rho = " << rho << endl;
+    }
+  }
+  delete []r;
+  delete []p;
+  delete []w;
+  delete []p_old;
+  delete []q;
+}
+
+void Force_ChargeEquil::SparseProduct(const int& n, const int& nparticles,
+				      const int& nghost_particles,
+	      double aval[], int acol_ind[], int arow_ptr[],
+              double x[], double r[]) {
+  int jj;
+
+  for (int i=0;i<n;i++) {
+    r[i] = 0.0;
+  }
+
+  // Loop over local particle matentries
+  for (int i=0;i<nparticles;i++) {
+    // We know that first entry is the diagonal term
+    r[i]+=aval[arow_ptr[i]]*x[i];
+    // Now loop over remaining matentries, and transposes
+    for (int j=arow_ptr[i]+1;j<arow_ptr[i+1];j++) {
+      jj = acol_ind[j];
+      r[i]+=aval[j]*x[jj];
+      r[jj]+=aval[j]*x[i];
+    }
+  }
+
+  // Loop over ghost particle matentries
+  for (int i=nparticles;i<nparticles+nghost_particles;i++) {
+    for (int j=arow_ptr[i];j<arow_ptr[i+1];j++) {
+      jj = acol_ind[j];
+      r[i]+=aval[j]*x[jj];
+      r[jj]+=aval[j]*x[i];
+    }
+  }
+}
+  
+double Force_ChargeEquil::TaperE(const double& r, const double& r2) {
+  double r3;
+  r3=r2*r;
+  return swc7*r3*r3*r+swc6*r3*r3+swc5*r3*r2+swc4*r2*r2+swc3*r3+swc2*r2+
+     swc1*r+swc0;
+}
+
+
+double Force_ChargeEquil::TaperF(const double& r, const double& r2) {
+  double r3;
+  r3=r2*r;
+  return 7.0e0*swc7*r3*r3+6.0e0*swc6*r3*r2+5.0e0*swc5*r2*r2+
+    4.0e0*swc4*r3+3.0e0*swc3*r2+2.0e0*swc2*r+swc1;
+}
+
+void Force_ChargeEquil::TaperSetup() {
+  double swb2,swa2,swb3,swa3,d1,d7;
+
+  d1=swb-swa;
+  d7=pow(d1,7);
+  swa2=swa*swa;
+  swa3=swa2*swa;
+  swb2=swb*swb;
+  swb3=swb2*swb;
+ 
+  swc7=  20.0e0/d7;
+  swc6= -70.0e0*(swa+swb)/d7;
+  swc5=  84.0e0*(swa2+3.0e0*swa*swb+swb2)/d7;
+  swc4= -35.0e0*(swa3+9.0e0*swa2*swb+9.0e0*swa*swb2+swb3)/d7;
+  swc3= 140.0e0*(swa3*swb+3.0e0*swa2*swb2+swa*swb3)/d7;
+  swc2=-210.0e0*(swa3*swb2+swa2*swb3)/d7;
+  swc1= 140.0e0*swa3*swb3/d7;
+  swc0=(-35.0e0*swa3*swb2*swb2+21.0e0*swa2*swb3*swb2+
+	7.0e0*swa*swb3*swb3+swb3*swb3*swb)/d7;
+}
+
+void Force_ChargeEquil::reax_setup(const ff_params& ff_input_param_tmp, 
+			     ff_params& ff_param_tmp) {
+  double chi,eta,gamma,rcutsq,rcuta,rcutb;
+
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  chi = ff_input_param_tmp.params[0];
+  eta = ff_input_param_tmp.params[1];
+  gamma = ff_input_param_tmp.params[2];
+  rcuta = ff_input_param_tmp.params[3];
+  rcutb = ff_input_param_tmp.params[4];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 5;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = chi;
+  ff_param_tmp.params[1] = eta;
+  ff_param_tmp.params[2] = gamma;
+  ff_param_tmp.params[3] = rcuta;
+  ff_param_tmp.params[4] = rcutb;
+  ff_param_tmp.rcutsq = rcutsq;
+  rcutmax = max(sqrt(rcutsq), rcutmax);
+
+  if (swa == 0.0) {
+    swa = rcuta;
+  } else if (swa != rcuta) {
+    glog.error("Force_ChargeEquil::reax_setup:\n"
+	       "swa not equal to current rcuta");
+  }
+
+  if (swb == 0.0) {
+    swb = rcutb;
+  } else if (swb != rcutb) {
+    glog.error("Force_ChargeEquil::reax_setup:\n"
+	       "swb not equal to current rcutb");
+  }
+
+
+}  
+
+void Force_ChargeEquil::streitz_setup(const ff_params& ff_input_param_tmp, 
+			     ff_params& ff_param_tmp) {
+}  
+
+bool Force_ChargeEquil::get_Linputreax() {
+  return Linputreax;
+}
+
+void Force_ChargeEquil::set_Lmidpoint(const bool Lmidpoint_in) {
+  Lmidpoint = Lmidpoint_in;
+};
+@
+
+
+4.12
+log
+@Tweaked the charge equilibration output a little.
+@
+text
+@a851 1
+  //     Form r=b-Ax
+d864 20
+@
+
+
+4.11
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@d724 1
+d798 1
+d800 1
+a800 1
+		  aval,acol_ind,arow_ptr,ch,elcvec,comm);
+d883 6
+d963 6
+d973 2
+a974 1
+	" Successsfully converged after " << iter << " iterations" << endl;
+@
+
+
+4.10
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d205 2
+a206 1
+    std::istringstream buf_in(buf);
+d275 1
+a275 1
+    TaperSetup(swa,swb);
+d342 1
+a342 1
+  TaperSetup(swa,swb);
+d571 1
+a571 1
+  int maxentries,nentries;
+d587 1
+a587 1
+  maxentries = neighbor->get_nneighbors()+2*nparticles;
+d589 1
+a589 1
+    comm->get_nodefile() << "maxentries = " << maxentries << endl;
+d591 3
+a593 3
+  aval = new double[maxentries];
+  acol_ind = new int[maxentries];
+  nentries = 0;
+d602 1
+a602 1
+    arow_ptr[i] = nentries;
+d604 1
+a604 1
+    aval[nentries] = 2.0*param_list[itype].params[1];
+d607 2
+a608 2
+    acol_ind[nentries] = i;
+    nentries++;
+d610 3
+a612 3
+    aval[nentries] = 1.0;
+    acol_ind[nentries] = nparticles+nghost_particles;
+    nentries++;
+d621 1
+a621 1
+      // Use midpoint test to skip some entries
+d647 3
+a649 3
+	aval[nentries] = hulp2;
+	acol_ind[nentries] = j;
+	nentries++;
+d655 1
+a655 1
+  // If not Lmidpoint, then no entries are added
+d658 1
+a658 1
+    arow_ptr[i] = nentries;
+d687 3
+a689 3
+	  aval[nentries] = hulp2;
+	  acol_ind[nentries] = j;
+	  nentries++;
+d694 1
+a694 1
+  arow_ptr[nparticles+nghost_particles] = nentries;
+d697 1
+a697 1
+    comm->get_nodefile() << "nentries = " << nentries << endl;
+d700 1
+a700 1
+  // Add rhs entries to linear system
+d730 1
+a730 1
+  CharGrasp(nparticles,nghost_particles,
+d762 1
+a762 1
+void Force_ChargeEquil::CharGrasp(const int& nparticles, 
+d797 1
+a797 1
+  CGSolve(nparticles,nghost_particles,
+d801 1
+a801 1
+void Force_ChargeEquil::CGSolve(const int& nparticles, 
+d937 12
+d951 2
+d954 2
+a955 1
+		 "Warning:maxiter exceeded. Continuing.");
+d973 1
+a973 1
+  int j,jj;
+d979 1
+a979 1
+  // Loop over local particle entries
+d983 1
+a983 1
+    // Now loop over remaining entries, and transposes
+d991 1
+a991 1
+  // Loop over ghost particle entries
+d1016 1
+a1016 1
+void Force_ChargeEquil::TaperSetup(const double& swa, const double& swb) {
+@
+
+
+4.9
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d422 15
+a436 6
+    Ltwoway = false;
+    Ltwoway_ghost = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq_ghost,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+d438 15
+a452 6
+    Ltwoway = false;
+    Ltwoway_ghost = true;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin_ghost,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+d477 1
+d480 5
+a484 1
+    rcutcomm = 0.5*rcutmax + neighbor_rskin;
+d492 2
+a572 1
+  bool Lown;
+d620 9
+a628 8
+      // First check if both atoms are local
+      if (j < nparticles) {
+	Lown = true;
+	// If not, do midpoint test
+      } else {
+	vec3_add(xi,xj,rtmp);
+	vec3_scale(0.5,rtmp,rtmp);
+	Lown = comm->sub_check_strict(b,rtmp);
+a630 2
+      if (Lown) {
+
+a649 1
+      }
+d654 2
+a656 4
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    itype = type_index[i_pnt->get_type()];
+    neighptr = neighbor->first_ptr[i];
+d658 32
+a689 33
+    for (int ineigh=0;
+	 ineigh<neighbor->nneigh_list[i];ineigh++) {
+
+      j = neighptr[ineigh];
+      j_pnt = p->get_particle(j);
+      j_pnt->get_x(xj);
+
+      vec3_add(xi,xj,rtmp);
+      vec3_scale(0.5,rtmp,rtmp);
+      Lown = comm->sub_check_strict(b,rtmp);
+
+      if (Lown) {
+
+      delr2 = vec3_distsq(xi,xj);
+
+      if (delr2 <= rcutsq) {
+
+	jtype = type_index[j_pnt->get_type()];
+	gamt=sqrt(param_list[itype].params[2]*
+		  param_list[jtype].params[2]);
+	//	glog.get_logfile() << sqrt(FORTRAN(cbkchb,CBKCHB).gam[itype]*
+	//              FORTRAN(cbkchb,CBKCHB).gam[jtype]) - gamt << endl; 
+
+	delr_norm = sqrt(delr2);
+	sw = TaperE(delr_norm,delr2);
+	//	FORTRAN(taper,TAPER)(&delr_norm,&delr2);
+	//	glog.get_logfile() << FORTRAN(cbkenergies,CBKENERGIES).sw - sw << endl;
+	hulp1=(delr_norm*delr2+(1.0/(gamt*gamt*gamt)));
+	hulp2=sw*14.40/cbrt(hulp1);
+	aval[nentries] = hulp2;
+	acol_ind[nentries] = j;
+	nentries++;
+      }
+d1072 3
+@
+
+
+4.8
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@d387 1
+a387 1
+  ComputeCharges(p,energy,comm);
+d411 1
+d423 1
+a423 1
+    Ltwoway_ghost = false;
+d425 1
+a425 1
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+d430 1
+a430 1
+    Ltwoway_ghost = false;
+d432 1
+a432 1
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+d461 1
+d528 1
+a528 1
+			ParticleList* p, double& energy, Comm* comm) {
+d547 2
+d559 1
+a559 1
+  arow_ptr = new int[nparticles+1];
+d570 1
+a570 1
+  // Add diagonal and pair interactions to linear system
+d596 55
+d654 1
+d671 1
+d674 1
+a674 1
+  arow_ptr[nparticles] = nentries;
+d676 3
+d831 1
+a831 1
+  SparseProduct(n, nparticles,aval,acol_ind,arow_ptr,x,r); // ! r = Ax
+d879 1
+a879 1
+    SparseProduct(n,nparticles,aval,acol_ind,arow_ptr,p,q); // ! q = Ap
+d935 1
+d944 1
+d955 9
+@
+
+
+4.7
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d654 4
+a657 1
+    energy+=23.02*(
+d660 2
+@
+
+
+4.6
+log
+@Added multiple replica feature.
+@
+text
+@d367 3
+a369 1
+                    const bool& Lenergy, const bool& Lvirial, ParticleList* p, 
+@
+
+
+4.6.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d367 1
+a367 3
+                    const bool& Lenergy, const bool& Lvirial, 
+		    const bool& Latomvirial, 
+		    ParticleList* p, 
+@
+
+
+4.5
+log
+@Added GaAs version of Tersoff
+@
+text
+@d139 1
+a139 1
+    glog.logfile << endl;
+d146 1
+a146 1
+    glog.logfile << endl;
+d156 1
+a156 1
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+d301 1
+a301 1
+    glog.logfile << endl << "id \t type \trcutsq \t np" << 
+d322 1
+a322 1
+      glog.logfile << itype << "\t" 
+d327 1
+a327 1
+	glog.logfile << setw(15) << param_list[itype].params[iparam];
+d329 1
+a329 1
+      glog.logfile << endl;
+d461 4
+a464 4
+      glog.logfile << "Cutoffs for this forcefield" << endl;
+      glog.logfile << "rcutmax = " << rcutmax << endl;
+      glog.logfile << "rskin = " << neighbor_rskin << endl;
+      glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+d504 1
+a504 1
+      glog.logfile << itype_ff << " " << t->get_id(itype) << endl;
+d574 1
+a574 1
+    //    glog.logfile << FORTRAN(cbkchb,CBKCHB).eta[itype]-
+d596 1
+a596 1
+	//	glog.logfile << sqrt(FORTRAN(cbkchb,CBKCHB).gam[itype]*
+d602 1
+a602 1
+	//	glog.logfile << FORTRAN(cbkenergies,CBKENERGIES).sw - sw << endl;
+@
+
+
+4.4
+log
+@Miscellaneous fixes
+@
+text
+@d850 5
+@
+
+
+4.3
+log
+@Fixed memory leak in charge equilibration
+@
+text
+@d94 1
+d144 1
+a144 1
+  buf_in >> label;
+a411 2
+  double vrange;
+  int nvlist;
+a714 1
+  double tol;
+a757 1
+  tol = 1.0e-6;
+d790 1
+a790 1
+    if (rho < tol) break;
+d847 1
+a847 1
+  if (rho >= tol) {
+@
+
+
+4.2
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d669 1
+@
+
+
+4.2.2.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d251 1
+a251 2
+void Force_ChargeEquil::SetupInteractions(const ParticleList* p, 
+				      const Box* b, 
+@
+
+
+4.2.2.2
+log
+@Latest PPPM version
+@
+text
+@d251 1
+a251 1
+void Force_ChargeEquil::SetupInteractions(ParticleList* p, 
+d253 1
+a253 1
+                                      double& g_ewald, 
+d368 1
+a368 1
+		    const Box* b, double& g_ewald, Comm* comm) {
+@
+
+
+4.1
+log
+@Fixed glitch in header.
+@
+text
+@d252 2
+a253 2
+				      const Force_Ewald* ff_ewald,
+                                      Comm* comm) {
+@
+
+
+4.1.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a967 7
+// added saubry (01-24-05)
+void Force_ChargeEquil::EnergyChange(int* atom, vector <double> boost,
+				 const bool& Lenergy,
+				 ParticleList* p,const Box* b, Comm* comm) {
+  glog.error("Force_Twobody::EnergyChange:\n"
+	     "Not implemented yet");
+}
+@
+
+
+4.1.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d968 2
+a969 1
+void Force_ChargeEquil::EnergyChange(int* atom, double boost[3],
+@
+
+
+4.1.2.1.2.2
+log
+@Added EAM energy change calculation
+@
+text
+@a95 1
+  energy_save.resize(npieces);
+@
+
+
+4.1.2.1.2.3
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d969 6
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+3.1
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+1.1
+log
+@file force_chargeequil.cpp was initially added on branch REAXFF.
+@
+text
+@d1 951
+@
+
+
+1.1.2.1
+log
+@Separated charge equilibration part of REAXFF into separate force field.
+@
+text
+@a0 541
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "constants.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_chargeequil.h"
+#include "force_ewald.h"
+#include "box.h"
+#include "box_inline.h"
+#include "force_chargeequil_inline.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "comm.h"
+#include "particletypelist.h"
+#include "log.h"
+#include "machine.h"
+
+#include "reax_fortran.h"
+#include "reax_params.h"
+#include "reax_cbkch.h"
+#include "reax_energies.h"
+#include "reax_small.h"
+#include "reax_functions.h"
+
+extern Log glog;
+extern Constants constants;
+
+Force_ChargeEquil::Force_ChargeEquil(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = chargeequil;
+  timeforce = 0.0;
+  nforce = 0;
+  npieces = 1;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "n/a";
+  rcutmax = 0.0;
+  Lcoul = false;
+  rcutneighsq_table = NULL;
+}
+
+Force_ChargeEquil::~Force_ChargeEquil() {
+  // Deallocate ntypes x ntypes array rcutneighsq_table
+  if (rcutneighsq_table != NULL) {
+    for (int itype=0;itype<ntypes;itype++) {
+      delete []rcutneighsq_table[itype];
+    }
+    delete []rcutneighsq_table;
+  }
+}
+
+void Force_ChargeEquil::ReadInteractions(Comm* comm) {
+  int node;
+
+  std::istringstream buf_in(arg_string);
+
+  node = comm->get_node();
+
+  buf_in >> label;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_ChargeEquil::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+}
+
+void Force_ChargeEquil::SetupInteractions(const Box* b, 
+				      const Force_Ewald* ff_ewald,
+                                      Comm* comm) {
+  int node,nprocs;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  Lnocut = false;
+  
+  FORTRAN(getswb,GETSWB)(&rcutmax);
+
+  if (Lcoul) {
+    npieces = 2;
+    energy_piece.resize(npieces);
+    label_piece.resize(npieces);
+    label_piece[0] = "Reax";
+    label_piece[1] = "Coulombic";
+  }
+}
+
+void Force_ChargeEquil::SetupCutNeighSq(const double& rskin, Comm* comm) {
+  int itype,jtype;
+  ForceFieldTypes type;
+  int node;
+  double rsq_tmp;
+
+  node = comm->get_node();
+
+  rsq_tmp = rcutmax*rcutmax;
+
+  // Allocate ntypes x ntypes array rcutneighsq_table
+  rcutneighsq_table = new double*[ntypes];
+  for (itype=0;itype<ntypes;itype++) {
+    rcutneighsq_table[itype] = new double[ntypes];
+  }
+
+  // Assign values to rcutneighsq_table[][] using global cutoff
+  for (itype=0;itype<ntypes;itype++) {
+    for (jtype=0;jtype<ntypes;jtype++) {
+      rcutneighsq_table[itype][jtype] = rsq_tmp;
+    }
+  }
+}
+
+void Force_ChargeEquil::ApplyForce(
+                    const bool& Lenergy, const bool& Lvirial, ParticleList* p, 
+		    const Box* b, Comm* comm) {
+
+  bool perflag;
+  double energy;
+
+  perflag = b->get_perflag();
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+  }
+
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  ComputeCharges(p,energy,comm);
+
+  if (Lenergy) {
+    energy_piece[0] = energy;
+  }
+
+  if (Lenergy) {
+    vector<double> energy_piece_all(npieces);
+    MPI_Allreduce(&energy_piece[0],&energy_piece_all[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    energy_piece.swap(energy_piece_all);
+  }
+
+  if (Lvirial) {
+    vector<double> virial_all(nvirial);
+    MPI_Allreduce(&virial[0],&virial_all[0],nvirial,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    virial.swap(virial_all);
+  }
+}
+
+void Force_ChargeEquil::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+       const Box* b, Comm* comm){
+  int node,nprocs;
+  bool Ltwoway,Ltwoway_ghost;
+  double vrange;
+  int nvlist;
+
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+  
+  if (neighbor_style == "none") {
+    Lneighbor = false;
+  } else if (neighbor_style == "nsq") {
+    Ltwoway = false;
+    Ltwoway_ghost = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_nsq,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else if (neighbor_style == "bin") {
+    Ltwoway = false;
+    Ltwoway_ghost = false;
+    Lneighbor = true;
+    neighbor = new Neighbor(Neighbor::neighbor_bin,
+			    Ltwoway,Ltwoway_ghost,
+			    neighbor_freq,neighbor_rskin);
+  } else {
+    glog.error("Force_ChargeEquil::SetupNeighbor:\n"
+	       "Invalid neighbor style");
+  }
+
+  if (Lneighbor && Lnocut) {
+    glog.error("Force_ChargeEquil::SetupNeighbor:\n"
+	       "Can not use nocut types with neighboring");
+  }
+
+  if (!Lneighbor && nprocs>1) { 
+    glog.error("Force_ChargeEquil::SetupNeighbor:\n"
+	       "Must use neighboring with multiple processes");
+  }
+
+  if (!Lneighbor) {
+    if (2.0*rcutmax >  b->get_lmin()) {
+      glog.error("Force_ChargeEquil::SetupNeighbor:\n"
+	 "Smallest separation of periodic images less than twice cut-off\n"
+	 "Need to use neighbor list to capture all images");
+    }
+  }
+
+  rcutneighmax = 0.0;
+  if (Lneighbor) {
+    rcutneighmax = rcutmax + neighbor_rskin;
+    neighbor->set_rcutneighmax(rcutneighmax);
+    SetupCutNeighSq(neighbor_rskin,comm);
+    if (node == 0) {
+      glog.logfile << "Cutoffs for this forcefield" << endl;
+      glog.logfile << "rcutmax = " << rcutmax << endl;
+      glog.logfile << "rskin = " << neighbor_rskin << endl;
+      glog.logfile << "rcutneighmax = " << rcutneighmax << endl;
+    }
+  }
+}
+
+void Force_ChargeEquil::SetupTypes(const ParticleTypeList* t) {
+  int itype,itype_ff;
+  bool match;
+  int nparticletypes;
+
+  nparticletypes = t->get_ntypes();
+  type_index.resize(nparticletypes);
+  ntypes = nparticletypes;
+  id_index.resize(ntypes);
+  // For each id in t, generate ff index
+  // By construction ff index is type index
+  for (itype = 0; itype < nparticletypes; itype++) {
+    type_index[itype]=itype;
+    id_index[itype]=t->get_id(itype);
+  }
+  // Check that each id in ff appears in t
+  // This is obviously redundant
+  for (itype_ff = 0; itype_ff < ntypes; itype_ff++) {
+    match = t->find_id(id_index[itype_ff],itype);
+    if (!match) {
+      glog.warning("Force_ChargeEquil::SetupTypes:\n"
+		   "ff type id has no particle type match");
+    }
+  }
+  CheckMasses(t);
+}
+
+void Force_ChargeEquil::ComputeCharges(ParticleList* p, double& energy, 
+				       Comm* comm) {
+  double xi[3],xj[3];
+  int nparticles;
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int* neighptr;
+  int jj;
+  int itag,jtag,itype,jtype;
+  double delr2,rcutsq,delr_norm,gamt,hulp1,hulp2;
+  double elcvec[ReaxParams::neem],chgglobal[ReaxParams::neem];
+
+  int nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  rcutsq = rcutmax*rcutmax;
+
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+
+  // Note: xmortr[i][j] is matrix element in row j+1, column i+1
+  // The system Ax==b looks like this:
+  //
+  //  |a11 ...  a1n 1|  |q1|   | b1 |
+  //  |:            :| x| :| = | :  |
+  //  |:            :| x| :| = | :  |
+  //  |an1 ...  ann 1|  |qn|   | bn |
+  //  | 1  ...   1  0|  |mu|   |qtot|
+  //
+  // We compute the lower triangular part and then copy it up.
+  // Could also write it as a two linear symmetric linear systems
+  // with the same A and different b's
+  //
+  // Initialize global linear system
+  FORTRAN(cbkm,CBKM).xmortr[nparticles_tot][nparticles_tot] = 0.0;
+
+  for (int i=0;i<nparticles_tot;i++) {
+    FORTRAN(cbkm,CBKM).xmortr[i][nparticles_tot] = 1.0;
+  }
+
+  for (int i=0;i<nparticles_tot+1;i++) {
+    elcvec[i] = 0.0;
+    for (int j=i;j<nparticles_tot;j++) {
+	FORTRAN(cbkm,CBKM).xmortr[i][j] = 0.0;
+    }
+  }
+	  
+  // Add local entries to global linear system
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    itag = i_pnt->get_tag();
+    itype = type_index[i_pnt->get_type()];
+ 
+    FORTRAN(cbkm,CBKM).xmortr[itag][itag] =
+      2.0*FORTRAN(cbkchb,CBKCHB).eta[itype];
+    elcvec[itag] = -FORTRAN(cbkchb,CBKCHB).chi[itype];
+  }
+
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    itag = i_pnt->get_tag();
+    itype = type_index[i_pnt->get_type()];
+    neighptr = neighbor->first_ptr[i];
+
+    for (int ineigh=0;
+	 ineigh<neighbor->nneigh_list[i];ineigh++) {
+
+      j = neighptr[ineigh];
+      j_pnt = p->get_particle(j);
+      j_pnt->get_x(xj);
+
+      delr2 = vec3_distsq(xi,xj);
+
+      if (delr2 <= rcutsq) {
+	jtag = j_pnt->get_tag();
+	jtype = type_index[j_pnt->get_type()];
+	gamt=sqrt(FORTRAN(cbkchb,CBKCHB).gam[itype]*
+		  FORTRAN(cbkchb,CBKCHB).gam[jtype]);
+	delr_norm = sqrt(delr2);
+	FORTRAN(taper,TAPER)(&delr_norm,&delr2);
+	hulp1=(delr_norm*delr2+(1.0/(gamt*gamt*gamt)));
+	hulp2=FORTRAN(cbkenergies,CBKENERGIES).sw*14.40/cbrt(hulp1);
+	if (itag <= jtag) {
+	  FORTRAN(cbkm,CBKM).xmortr[itag][jtag]+=hulp2;
+	} else {
+	  FORTRAN(cbkm,CBKM).xmortr[jtag][itag]+=hulp2;
+	}
+      }
+    }
+  }
+
+  // Complete symmetric image of global linear system
+  for (int i=0;i<nparticles_tot+1;i++) {
+    for (int j=0;j<i;j++) {
+      FORTRAN(cbkm,CBKM).xmortr[i][j] = 
+	FORTRAN(cbkm,CBKM).xmortr[j][i];
+    }
+  }
+
+  // Output to node file
+//   if (comm->get_Lnodefile()) {
+//     comm->get_nodefile() << "Elements" << endl;
+//     for (int i=0;i<nparticles_tot+1;i++) {
+//       for (int j=0;j<nparticles_tot+1;j++) {
+// 	comm->get_nodefile() << 
+// 	  FORTRAN(cbkm,CBKM).xmortr[i][j] << endl;
+//       }
+//       comm->get_nodefile() << "\n" << elcvec[i] << "\n" << endl;
+//     }
+//   }
+
+  // Compute own buffer size	  
+  jj = 0;
+  for (int i=0;i<nparticles_tot+1;i++) {
+    for (int j=i;j<nparticles_tot;j++) {
+      if (FORTRAN(cbkm,CBKM).xmortr[i][j] != 0.0) {
+	jj++;
+      }
+    }
+    if (elcvec[i] != 0.0) {
+      jj++;
+    }
+  }
+	  
+  // Allocate maximum buffer size
+  iperatom = 3;
+  MPI_Allreduce(&jj,&most,1,MPI_INT,MPI_MAX,comm->get_world());
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  // Copy local entries to buffer.
+  jj = 0;
+  for (int i=0;i<nparticles_tot+1;i++) {
+    for (int j=i;j<nparticles_tot;j++) {
+      if (FORTRAN(cbkm,CBKM).xmortr[i][j] != 0.0) {
+	buf[jj] = i;
+	buf[jj+1] = j;
+	buf[jj+2] = FORTRAN(cbkm,CBKM).xmortr[i][j];
+	jj+=iperatom;
+      }
+    }
+    if (elcvec[i] != 0.0) {
+      buf[jj] = i;
+      buf[jj+1] = -1;
+      buf[jj+2] = elcvec[i];
+      jj+=iperatom;
+    }
+  }
+	  
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    // Re-initialize global linear system
+
+    for (int i=0;i<nparticles_tot+1;i++) {
+      elcvec[i] = 0.0;
+      for (int j=i;j<nparticles_tot;j++) {
+	FORTRAN(cbkm,CBKM).xmortr[i][j] = 0.0;
+      }
+    }
+	  
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = jj/iperatom;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      jj = 0;
+      for (int i=0;i<nlocal_tmp;i++) {
+	itag = nint(buf[jj]);
+	jtag = nint(buf[jj+1]);
+	if (jtag == -1) {
+	  elcvec[itag] = buf[jj+2];
+	} else {
+	  FORTRAN(cbkm,CBKM).xmortr[itag][jtag] += buf[jj+2];
+	}
+	jj+=iperatom;
+      }
+    }  
+  } else {
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],jj,MPI_DOUBLE,0,0,world);
+  }
+
+  if (node == 0) {
+    // Complete symmetric image of global linear system
+    for (int i=0;i<nparticles_tot+1;i++) {
+      for (int j=0;j<i;j++) {
+	FORTRAN(cbkm,CBKM).xmortr[i][j] = 
+	  FORTRAN(cbkm,CBKM).xmortr[j][i];
+      }
+    }
+
+    // Output to node file
+//     if (comm->get_Lnodefile()) {
+//       comm->get_nodefile() << "Elements" << endl;
+//       for (int i=0;i<nparticles_tot+1;i++) {
+// 	for (int j=0;j<nparticles_tot+1;j++) {
+// 	  comm->get_nodefile() << 
+// 	    FORTRAN(cbkm,CBKM).xmortr[i][j] << endl;
+// 	}
+// 	comm->get_nodefile() << "\n" << elcvec[i] << "\n" << endl;
+//       }
+//     }
+
+    // Solve global linear system for charges
+    FORTRAN(chargrasp,CHARGRASP)(&nparticles_tot,elcvec,chgglobal);
+
+    // Output charges to node file
+//     if (comm->get_Lnodefile()) {
+//       comm->get_nodefile() << "Charges" << endl;
+//       for (int i=0;i<nparticles_tot;i++) {
+// 	comm->get_nodefile() << 
+// 	  chgglobal[i] << endl;
+//       }
+//     }
+	  
+  }
+
+  MPI_Bcast(&chgglobal[0],nparticles_tot,MPI_DOUBLE,0,comm->get_world());
+  
+  energy = 0.0;
+  // Copy charges to local list
+  // and compute energy
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    itag = i_pnt->get_tag();
+    FORTRAN(cbkch,CBKCH).ch[i] = chgglobal[itag];
+    i_pnt->set_charge(chgglobal[itag]);
+    itype = type_index[i_pnt->get_type()];
+    energy+=23.02*(
+            FORTRAN(cbkchb,CBKCHB).chi[itype]*
+	    chgglobal[itag]+
+	    FORTRAN(cbkchb,CBKCHB).eta[itype]*
+            chgglobal[itag]*chgglobal[itag]);
+  }
+
+  comm->comm_double(FORTRAN(cbkch,CBKCH).ch);
+
+}
+@
+
+
+1.1.2.2
+log
+@Implemented a parallel CG scheme. Does not exploit sparsity and
+so is still quite slow.
+@
+text
+@a36 1
+#include <cblas.h>
+a79 1
+  chpot = 0.0;
+d171 1
+a171 2
+  // ComputeCharges(p,energy,comm);
+  ComputeChargesParallel(p,energy,comm);
+d287 1
+a287 1
+  int nparticles,nghost_particles;
+a310 1
+  nghost_particles = p->get_nghost_particles();
+d496 10
+a505 13
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Elements" << endl;
+      for (int i=0;i<nparticles_tot+1;i++) {
+	for (int j=0;j<nparticles_tot+1;j++) {
+	  comm->get_nodefile() << 
+	    FORTRAN(cbkm,CBKM).xmortr[i][j] << endl;
+	}
+      }
+      comm->get_nodefile() << "Right Side" << endl;
+      for (int i=0;i<nparticles_tot+1;i++) {
+	comm->get_nodefile() << elcvec[i] << endl;
+      }
+    }
+d508 1
+a508 2
+    //    FORTRAN(chargrasp,CHARGRASP)(&nparticles_tot,elcvec,chgglobal);
+    chargrasp(nparticles_tot,elcvec,chgglobal);
+d511 7
+a517 7
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "Charges" << endl;
+      for (int i=0;i<nparticles_tot+1;i++) {
+	comm->get_nodefile() << 
+	  chgglobal[i] << endl;
+      }
+    }
+d524 2
+a525 1
+  // Compute energy
+d529 2
+d539 1
+a539 236
+  // Copy charge vector back to particles
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    itag = i_pnt->get_tag();
+    i_pnt->set_charge(chgglobal[itag]);
+  }
+
+}
+
+void Force_ChargeEquil::chargrasp(const int& natot,double* elcvec,
+			     double* chgglobal) {
+  int ipiv[ReaxParams::neem];
+  double work[5*ReaxParams::neem];
+  double chpottmp,suma;
+  int natmp,mdstep,neemtmp;
+// **********************************************************************
+// *                                                                    *
+// *     Determine charges on atoms: matrix suplied by Grasp            *
+// *                                                                    *
+// **********************************************************************
+      
+// c$$$      do i = 1,natot+1
+// c$$$         do j = 1,natot+1
+// c$$$            write(6,*) xmortr(i,j)
+// c$$$         end do
+// c$$$      end do
+
+// c
+// c     On first iteration, generate initial guess
+// c     by assuming diagonal matrix 
+// c
+  if (FORTRAN(cbkcha,CBKCHA).ioldchg == 0) {
+    suma = 0.0;
+    for (int i = 0 ; i < natot; i++) {
+      suma += 1.0/FORTRAN(cbkm,CBKM).xmortr[i][i];
+    }
+    chpottmp = -elcvec[natot];
+    for (int i = 0; i < natot; i++) {
+      chpottmp += elcvec[i]/FORTRAN(cbkm,CBKM).xmortr[i][i];
+    }
+    chpottmp /= suma;
+    for (int i = 0 ; i < natot; i++) {
+      FORTRAN(cbkm,CBKM).chgold[i] = (elcvec[i]-chpottmp)/
+	FORTRAN(cbkm,CBKM).xmortr[i][i];
+    }
+    FORTRAN(cbkm,CBKM).chgold[natot] = chpottmp;
+    FORTRAN(cbkcha,CBKCHA).ioldchg=1;
+  }
+
+  mdstep = 0;
+  natmp = natot+1;
+  neemtmp = ReaxParams::neem;
+  cblas_dcopy(natot+1,FORTRAN(cbkm,CBKM).chgold,1,chgglobal,1);
+  //  FORTRAN(cgsolve,CGSOLVE)(&natmp,&FORTRAN(cbkm,CBKM).xmortr[0][0],
+  //			   &neemtmp,chgglobal,elcvec,&mdstep);
+  cgsolve(natot+1,(double**)FORTRAN(cbkm,CBKM).xmortr,chgglobal,elcvec);
+// c$$$      sumsq = 0.0
+// c$$$      do i = 1,natot+1
+// c$$$         sumsq = sumsq+(chgold(i)-chgglobal(i))**2
+// c$$$      end do
+// c$$$      write(6,*) sumsq
+      
+  cblas_dcopy(natot+1,chgglobal,1,FORTRAN(cbkm,CBKM).chgold,1); // ! Save the charges
+
+}
+
+void Force_ChargeEquil::cgsolve(const int& n, double* a[],
+			   double x[], double b[]) {
+
+  double r[ReaxParams::neem],p[ReaxParams::neem],
+    p_old[ReaxParams::neem],q[ReaxParams::neem];
+  double one,zero,rho,rho_old,beta,alpha;
+  double tol;
+  int iter,maxiter;
+  int lda;
+
+  lda = ReaxParams::neem;
+
+  one = 1.0;
+  zero = 0.0;
+  maxiter = 100;
+  tol = 1.0e-6;
+
+  //     Form r=b-Ax
+  cblas_dgemv(CblasRowMajor,
+	      CblasNoTrans,n,n,one,
+	      (const double*)a,lda,x,1,zero,r,1); // ! r = Ax
+  cblas_dscal(n,-one,r,1);
+  cblas_daxpy(n,one,b,1,r,1);
+  rho_old = one;
+
+  for (iter = 1; iter < maxiter; iter++) {
+    rho = cblas_ddot(n,r,1,r,1);
+    if (rho < tol) break;
+    cblas_dcopy(n,r,1,p,1); // ! p=r
+    if (iter > 1) {
+      beta = rho/rho_old;
+      cblas_daxpy(n,beta,p_old,1,p,1);
+    }
+    cblas_dgemv(CblasRowMajor,
+		CblasNoTrans,n,n,one,
+		(const double*)a,lda,p,1,zero,q,1); // ! q = Ap
+    alpha = rho/cblas_ddot(n,p,1,q,1);
+    cblas_daxpy(n,alpha,p,1,x,1); // ! x += alpha*p
+    cblas_daxpy(n,-alpha,q,1,r,1); //  ! r -= alpha*q
+    cblas_dcopy(n,p,1,p_old,1);
+    rho_old = rho;
+  }
+  if (rho >= tol) {
+    glog.warning("Force_ChargeEquil::cgsolve:\n"
+		 "Warning:maxiter exceeded. Continuing.");
+  }
+}
+
+void Force_ChargeEquil::ComputeChargesParallel(
+			ParticleList* p, double& energy, Comm* comm) {
+  double xi[3],xj[3];
+  int nparticles,nghost_particles;
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int* neighptr;
+  int j;
+  int itype,jtype;
+  double delr2,rcutsq,delr_norm,gamt,hulp1,hulp2;
+  double elcvec[ReaxParams::neem];
+  int node,nprocs;
+  MPI_Comm world;
+  double qtot,qsum,qi;
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  rcutsq = rcutmax*rcutmax;
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  // Note: xmortr[i][j] is matrix element in row j+1, column i+1
+  // The global system Ax==b looks like this:
+  //
+  //  |a11 ...  a1n 1|  |q1|   | b1 |
+  //  |:            :| x| :| = | :  |
+  //  |:            :| x| :| = | :  |
+  //  |an1 ...  ann 1|  |qn|   | bn |
+  //  | 1  ...   1  0|  |mu|   |qtot|
+  //
+  // Could also write it as a two linear symmetric linear systems
+  // with the same A and different b's
+  // 
+  // Each processor treats a reduced matrix with all local-local
+  // interactions and some local-ghost interactions.
+  //
+  // Initialize linear system
+  FORTRAN(cbkm,CBKM).xmortr[nparticles+nghost_particles]
+    [nparticles+nghost_particles] = 0.0;
+
+  for (int i=0;i<nparticles;i++) {
+    FORTRAN(cbkm,CBKM).xmortr[nparticles+nghost_particles][i] = 1.0;
+    FORTRAN(cbkm,CBKM).xmortr[i][nparticles+nghost_particles] = 1.0;
+  }
+
+  for (int i=nparticles;i<nparticles+nghost_particles;i++) {
+    FORTRAN(cbkm,CBKM).xmortr[nparticles+nghost_particles][i] = 0.0;
+    FORTRAN(cbkm,CBKM).xmortr[i][nparticles+nghost_particles] = 0.0;
+  }
+
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    for (int j=0;j<nparticles+nghost_particles;j++) {
+	FORTRAN(cbkm,CBKM).xmortr[i][j] = 0.0;
+    }
+  }
+	  
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    elcvec[i] = 0.0;
+  }
+
+  // Add local diagonal and rhs entries to linear system
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    itype = type_index[i_pnt->get_type()];
+ 
+    FORTRAN(cbkm,CBKM).xmortr[i][i] =
+      2.0*FORTRAN(cbkchb,CBKCHB).eta[itype];
+    elcvec[i] = -FORTRAN(cbkchb,CBKCHB).chi[itype];
+  }
+  // Assign current charges to charge vector  
+  qsum = 0.0;
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    qi = i_pnt->get_charge();
+    FORTRAN(cbkch,CBKCH).ch[i] = qi;
+    if (i<nparticles) qsum += qi;
+  }
+  MPI_Allreduce(&qsum,&qtot,1,MPI_DOUBLE,
+		MPI_SUM,comm->get_world());
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "ch1 = " << FORTRAN(cbkch,CBKCH).ch[0] << endl;
+    comm->get_nodefile() << "qtot = " << qtot << endl;
+    comm->get_nodefile() << "chpot = " << chpot << endl;
+  }
+  //  elcvec[nparticles+nghost_particles] = qtot;
+  elcvec[nparticles+nghost_particles] = 0.0;
+
+  FORTRAN(cbkch,CBKCH).ch[nparticles+nghost_particles] = chpot;
+
+  // Add pair interactions to linear system
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    itype = type_index[i_pnt->get_type()];
+    neighptr = neighbor->first_ptr[i];
+
+    for (int ineigh=0;
+	 ineigh<neighbor->nneigh_list[i];ineigh++) {
+
+      j = neighptr[ineigh];
+      j_pnt = p->get_particle(j);
+      j_pnt->get_x(xj);
+
+      delr2 = vec3_distsq(xi,xj);
+
+      if (delr2 <= rcutsq) {
+	jtype = type_index[j_pnt->get_type()];
+	gamt=sqrt(FORTRAN(cbkchb,CBKCHB).gam[itype]*
+		  FORTRAN(cbkchb,CBKCHB).gam[jtype]);
+	delr_norm = sqrt(delr2);
+	FORTRAN(taper,TAPER)(&delr_norm,&delr2);
+	hulp1=(delr_norm*delr2+(1.0/(gamt*gamt*gamt)));
+	hulp2=FORTRAN(cbkenergies,CBKENERGIES).sw*14.40/cbrt(hulp1);
+	FORTRAN(cbkm,CBKM).xmortr[i][j]+=hulp2;
+	FORTRAN(cbkm,CBKM).xmortr[j][i]+=hulp2;
+      }
+    }
+  }
+a540 206
+  // Solve linear system for charges
+  chargraspparallel(nparticles,nghost_particles,elcvec, 
+		    comm);
+
+  energy = 0.0;
+
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    itype = type_index[i_pnt->get_type()];
+    energy+=23.02*(
+            FORTRAN(cbkchb,CBKCHB).chi[itype]*
+	    FORTRAN(cbkch,CBKCH).ch[i]+
+	    FORTRAN(cbkchb,CBKCHB).eta[itype]*
+            FORTRAN(cbkch,CBKCH).ch[i]*FORTRAN(cbkch,CBKCH).ch[i]);
+  }
+
+  // Copy charge vector back to particles
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->set_charge(FORTRAN(cbkch,CBKCH).ch[i]);
+  }
+  chpot = FORTRAN(cbkch,CBKCH).ch[nparticles+nghost_particles];
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "ch1 After = " << FORTRAN(cbkch,CBKCH).ch[0] << endl;
+    comm->get_nodefile() << "chpot After = " << chpot << endl;
+  }
+}
+
+void Force_ChargeEquil::chargraspparallel(const int& nparticles, 
+                        const int& nghost_particles, double* elcvec,
+		        Comm* comm) {
+  double chpottmp,suma;
+  double sumtmp;
+// **********************************************************************
+// *                                                                    *
+// *     Determine charges on atoms: matrix suplied by Grasp            *
+// *                                                                    *
+// **********************************************************************
+      
+// c$$$      do i = 1,natot+1
+// c$$$         do j = 1,natot+1
+// c$$$            write(6,*) xmortr(i,j)
+// c$$$         end do
+// c$$$      end do
+
+// c
+// c     On first iteration, generate initial guess
+// c     by assuming diagonal matrix 
+// c
+//   if (FORTRAN(cbkcha,CBKCHA).ioldchg == 0) {
+//     suma = 0.0;
+//     for (int i = 0 ; i < nparticles; i++) {
+//       suma += 1.0/FORTRAN(cbkm,CBKM).xmortr[i][i];
+//     }
+//     MPI_Allreduce(&suma,&sumtmp,1,MPI_DOUBLE,
+// 		  MPI_SUM,comm->get_world());
+//     suma = sumtmp;
+//     chpottmp = -elcvec[nparticles+nghost_particles];
+//     for (int i = 0; i < nparticles; i++) {
+//       chpottmp += elcvec[i]/FORTRAN(cbkm,CBKM).xmortr[i][i];
+//     }
+//     MPI_Allreduce(&chpottmp,&sumtmp,1,MPI_DOUBLE,
+// 		  MPI_SUM,comm->get_world());
+//     chpottmp = sumtmp/suma;
+//     FORTRAN(cbkch,CBKCH).ch[nparticles+nghost_particles] = chpottmp;
+//     for (int i = 0 ; i < nparticles; i++) {
+//       FORTRAN(cbkch,CBKCH).ch[i] = (elcvec[i]-chpottmp)/
+// 	FORTRAN(cbkm,CBKM).xmortr[i][i];
+//     }
+//     comm->comm_double(FORTRAN(cbkch,CBKCH).ch);
+//     FORTRAN(cbkcha,CBKCHA).ioldchg=1;
+//   }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "ch1 = " << FORTRAN(cbkch,CBKCH).ch[0] << endl;
+    comm->get_nodefile() << "ch2 = " << FORTRAN(cbkch,CBKCH).ch[1] << endl;
+    comm->get_nodefile() << "ch3 = " << FORTRAN(cbkch,CBKCH).ch[2] << endl;
+    comm->get_nodefile() << "chpot = " << FORTRAN(cbkch,CBKCH).
+      ch[nparticles+nghost_particles] << endl;
+  }
+
+  cgsolveparallel(nparticles,nghost_particles,
+		  (double**)FORTRAN(cbkm,CBKM).xmortr,
+		  FORTRAN(cbkch,CBKCH).ch,elcvec,comm);
+// c$$$      sumsq = 0.0
+// c$$$      do i = 1,natot+1
+// c$$$         sumsq = sumsq+(chgold(i)-chgglobal(i))**2
+// c$$$      end do
+// c$$$      write(6,*) sumsq
+      
+}
+
+void Force_ChargeEquil::cgsolveparallel(const int& nparticles, 
+			const int& nghost_particles, 
+			double* a[], double x[], double b[], Comm* comm) {
+  double r[ReaxParams::neem],p[ReaxParams::neem],w[ReaxParams::neem],
+    p_old[ReaxParams::neem],q[ReaxParams::neem];
+  double one,zero,rho,rho_old,beta,alpha,gamma;
+  double tol;
+  int iter,maxiter;
+  int lda;
+  int n;
+  double sumtmp;
+  //
+  //  Sketch of parallel CG method
+  //
+  // Distributed (partial) vectors: b, r, q, A
+  // Accumulated (full) vectors: x, w, p
+  //
+  //  
+
+  lda = ReaxParams::neem;
+
+  n = nparticles+nghost_particles+1;
+
+  one = 1.0;
+  zero = 0.0;
+  maxiter = 100;
+  tol = 1.0e-6;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "x1 = " << x[0] << endl;
+    comm->get_nodefile() << "x2 = " << x[1] << endl;
+    comm->get_nodefile() << "x3 = " << x[2] << endl;
+    comm->get_nodefile() << "xn = " << x[n-1] << endl;
+  }
+  //     Form r=b-Ax
+  cblas_dgemv(CblasRowMajor,
+	      CblasNoTrans,n,n,one,
+	      (const double*)a,lda,x,1,zero,r,1); // ! r = Ax
+  cblas_dscal(n,-one,r,1);
+  cblas_daxpy(n,one,b,1,r,1);
+  cblas_dcopy(n,r,1,w,1); // w is accumulated version of r
+  comm->reverse_comm_double_add(w);
+  comm->comm_double(w);
+  MPI_Allreduce(&w[n-1],&sumtmp,1,MPI_DOUBLE,
+		MPI_SUM,comm->get_world());
+  w[n-1] = sumtmp;
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "r1 = " << r[0] << " " << w[0] << endl;
+    comm->get_nodefile() << "rn-1 = " << r[nparticles] << " " << w[nparticles] << endl;
+    comm->get_nodefile() << "rn = " << r[n-1] << " " << w[n-1] << endl;
+  }
+  rho_old = one;
+
+  for (iter = 1; iter < maxiter; iter++) {
+    rho = cblas_ddot(nparticles,w,1,w,1);
+    MPI_Allreduce(&rho,&sumtmp,1,MPI_DOUBLE,
+    		  MPI_SUM,comm->get_world());
+    rho = sumtmp+w[n-1]*w[n-1];
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "rho = " << rho << endl;
+      comm->get_nodefile() << "rho1 = " << w[0] << " by " << r[0] << endl;
+    }
+    if (rho < tol) break;
+    cblas_dcopy(n,w,1,p,1); // ! p=w
+    if (iter > 1) {
+      beta = rho/rho_old;
+      cblas_daxpy(n,beta,p_old,1,p,1);
+    }
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "p1 = " << p[0] << endl;
+      comm->get_nodefile() << "pn = " << p[n-1] << endl;
+    }
+    cblas_dgemv(CblasRowMajor,
+		CblasNoTrans,n,n,one,
+		(const double*)a,lda,p,1,zero,q,1); // ! q = Ap
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "q1 = " << q[0] << endl;
+      comm->get_nodefile() << "qn = " << q[n-1] << endl;
+    }
+    gamma = cblas_ddot(n,p,1,q,1);
+    MPI_Allreduce(&gamma,&sumtmp,1,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    gamma = sumtmp;
+    alpha = rho/gamma;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "alpha = " << alpha << endl;
+    }
+    cblas_daxpy(n,alpha,p,1,x,1); // ! x += alpha*p
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "x1 = " << x[0] << endl;
+      comm->get_nodefile() << "xn = " << x[n-1] << endl;
+    }
+    cblas_daxpy(n,-alpha,q,1,r,1); //  ! r -= alpha*q
+    cblas_dcopy(n,r,1,w,1); // w is accumulated version of r
+    comm->reverse_comm_double_add(w);
+    comm->comm_double(w);
+    MPI_Allreduce(&w[n-1],&sumtmp,1,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    w[n-1] = sumtmp;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "r1 = " << r[0] << " " << w[0] << endl;
+      comm->get_nodefile() << "rn-1 = " << r[nparticles] << " " << w[nparticles] << endl;
+      comm->get_nodefile() << "rn = " << r[n-1] << " " << w[n-1] << endl;
+    }
+    cblas_dcopy(n,p,1,p_old,1);
+    rho_old = rho;
+  }
+  if (rho >= tol) {
+    glog.warning("Force_ChargeEquil::cgsolve:\n"
+		 "Warning:maxiter exceeded. Continuing.");
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "iter = " << iter << endl;
+  }
+@
+
+
+1.1.2.3
+log
+@Sparse matrix multiply implemented for the parallel CG solver.
+@
+text
+@d174 1
+a174 2
+  // ComputeChargesParallel(p,energy,comm);
+  ComputeChargesSparseParallel(p,energy,comm);
+d890 1
+a890 2
+  //  r = b - A.x
+  //  w = r (requires 
+a943 3
+      for (int i=0;i<n;i++) {
+	comm->get_nodefile() << "p" << i << " = " << p[i] << endl;
+      }
+a950 350
+      for (int i=0;i<n;i++) {
+	comm->get_nodefile() << "q" << i << " = " << q[i] << endl;
+      }
+    }
+    gamma = cblas_ddot(n,p,1,q,1);
+    MPI_Allreduce(&gamma,&sumtmp,1,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    gamma = sumtmp;
+    alpha = rho/gamma;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "alpha = " << alpha << endl;
+    }
+    cblas_daxpy(n,alpha,p,1,x,1); // ! x += alpha*p
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "x1 = " << x[0] << endl;
+      comm->get_nodefile() << "xn = " << x[n-1] << endl;
+    }
+    cblas_daxpy(n,-alpha,q,1,r,1); //  ! r -= alpha*q
+    cblas_dcopy(n,r,1,w,1); // w is accumulated version of r
+    comm->reverse_comm_double_add(w);
+    comm->comm_double(w);
+    MPI_Allreduce(&w[n-1],&sumtmp,1,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    w[n-1] = sumtmp;
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "r1 = " << r[0] << " " << w[0] << endl;
+      comm->get_nodefile() << "rn-1 = " << r[nparticles] << " " << w[nparticles] << endl;
+      comm->get_nodefile() << "rn = " << r[n-1] << " " << w[n-1] << endl;
+    }
+    cblas_dcopy(n,p,1,p_old,1);
+    rho_old = rho;
+  }
+  if (rho >= tol) {
+    glog.warning("Force_ChargeEquil::cgsolve:\n"
+		 "Warning:maxiter exceeded. Continuing.");
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "iter = " << iter << endl;
+  }
+}
+
+void Force_ChargeEquil::ComputeChargesSparseParallel(
+			ParticleList* p, double& energy, Comm* comm) {
+  double xi[3],xj[3];
+  int nparticles,nghost_particles;
+  Particle* i_pnt;
+  Particle* j_pnt;
+  int* neighptr;
+  int j;
+  int itype,jtype;
+  double delr2,rcutsq,delr_norm,gamt,hulp1,hulp2;
+  int node,nprocs;
+  MPI_Comm world;
+  double qtot,qsum,qi;
+  double* ch;
+  double* elcvec;
+  double* aval;
+  int* arow_ptr;
+  int* acol_ind;
+  int maxentries,nentries;
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  nghost_particles = p->get_nghost_particles();
+
+  rcutsq = rcutmax*rcutmax;
+
+  arow_ptr = new int[nparticles+1];
+  ch = new double[nparticles+nghost_particles+1];
+  elcvec = new double[nparticles+nghost_particles+1];
+  maxentries = neighbor->get_nneighbors()+2*nparticles;
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "maxentries = " << maxentries << endl;
+  }
+  aval = new double[maxentries];
+  acol_ind = new int[maxentries];
+  nentries = 0;
+
+  // Add diagonal and pair interactions to linear system
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    itype = type_index[i_pnt->get_type()];
+    neighptr = neighbor->first_ptr[i];
+
+    arow_ptr[i] = nentries;
+
+    aval[nentries] = 2.0*FORTRAN(cbkchb,CBKCHB).eta[itype];
+    acol_ind[nentries] = i;
+    nentries++;
+
+    aval[nentries] = 1.0;
+    acol_ind[nentries] = nparticles+nghost_particles;
+    nentries++;
+
+    for (int ineigh=0;
+	 ineigh<neighbor->nneigh_list[i];ineigh++) {
+
+      j = neighptr[ineigh];
+      j_pnt = p->get_particle(j);
+      j_pnt->get_x(xj);
+
+      delr2 = vec3_distsq(xi,xj);
+
+      if (delr2 <= rcutsq) {
+	jtype = type_index[j_pnt->get_type()];
+	gamt=sqrt(FORTRAN(cbkchb,CBKCHB).gam[itype]*
+		  FORTRAN(cbkchb,CBKCHB).gam[jtype]);
+	delr_norm = sqrt(delr2);
+	FORTRAN(taper,TAPER)(&delr_norm,&delr2);
+	hulp1=(delr_norm*delr2+(1.0/(gamt*gamt*gamt)));
+	hulp2=FORTRAN(cbkenergies,CBKENERGIES).sw*14.40/cbrt(hulp1);
+	aval[nentries] = hulp2;
+	acol_ind[nentries] = j;
+	nentries++;
+      }
+    }
+  }
+  arow_ptr[nparticles] = nentries;
+
+
+  // Add rhs entries to linear system
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    itype = type_index[i_pnt->get_type()];
+    elcvec[i] = -FORTRAN(cbkchb,CBKCHB).chi[itype];
+  }
+
+  for (int i=nparticles;i<nparticles+nghost_particles;i++) {
+    elcvec[i] = 0.0;
+  }
+
+  // Assign current charges to charge vector  
+  qsum = 0.0;
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    qi = i_pnt->get_charge();
+    ch[i] = qi;
+    if (i<nparticles) qsum += qi;
+  }
+  MPI_Allreduce(&qsum,&qtot,1,MPI_DOUBLE,
+		MPI_SUM,comm->get_world());
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "ch1 = " << ch[0] << endl;
+    comm->get_nodefile() << "qtot = " << qtot << endl;
+    comm->get_nodefile() << "chpot = " << chpot << endl;
+  }
+  // This introduces numerical instability, so leave it out
+  //  elcvec[nparticles+nghost_particles] = qtot;
+  elcvec[nparticles+nghost_particles] = 0.0;
+
+  ch[nparticles+nghost_particles] = chpot;
+
+
+  if (comm->get_Lnodefile()) {
+    int jj;
+    comm->get_nodefile() << "Elements" << endl;
+    for (int i = 0; i < nparticles; i++) {
+      comm->get_nodefile() << "Row " << i << endl;
+      for (int j=arow_ptr[i];j<arow_ptr[i+1];j++) {
+	jj = acol_ind[j];
+	j_pnt = p->get_particle(jj);
+	comm->get_nodefile() << aval[j] << " " << jj << 
+	  " " << j_pnt->get_tag() << endl;
+      }
+    }
+  }
+
+  // Solve linear system for charges
+
+  chargraspsparseparallel(nparticles,nghost_particles,
+			  ch,aval,acol_ind,arow_ptr,elcvec,comm);
+
+  energy = 0.0;
+
+  for (int i=0;i<nparticles;i++) {
+    i_pnt = p->get_particle(i);
+    itype = type_index[i_pnt->get_type()];
+    energy+=23.02*(
+            FORTRAN(cbkchb,CBKCHB).chi[itype]*ch[i]+
+	    FORTRAN(cbkchb,CBKCHB).eta[itype]*ch[i]*ch[i]);
+  }
+
+  // Copy charge vector back to particles
+  for (int i=0;i<nparticles+nghost_particles;i++) {
+    i_pnt = p->get_particle(i);
+    i_pnt->set_charge(ch[i]);
+  }
+  chpot = ch[nparticles+nghost_particles];
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "ch1 After = " << ch[0] << endl;
+    comm->get_nodefile() << "chpot After = " << chpot << endl;
+  }
+
+  delete []aval;
+  delete []arow_ptr;
+  delete []elcvec;
+  delete []ch;
+}
+
+void Force_ChargeEquil::chargraspsparseparallel(const int& nparticles, 
+                        const int& nghost_particles, 
+			double ch[], double aval[], int acol_ind[], 
+			int arow_ptr[], double elcvec[], Comm* comm) {
+  double chpottmp,suma;
+  double sumtmp;
+// **********************************************************************
+// *                                                                    *
+// *     Determine charges on atoms: matrix suplied by Grasp            *
+// *                                                                    *
+// **********************************************************************
+      
+// c$$$      do i = 1,natot+1
+// c$$$         do j = 1,natot+1
+// c$$$            write(6,*) xmortr(i,j)
+// c$$$         end do
+// c$$$      end do
+
+// c
+// c     On first iteration, generate initial guess
+// c     by assuming diagonal matrix 
+// c
+//   if (FORTRAN(cbkcha,CBKCHA).ioldchg == 0) {
+//     suma = 0.0;
+//     for (int i = 0 ; i < nparticles; i++) {
+//       suma += 1.0/FORTRAN(cbkm,CBKM).xmortr[i][i];
+//     }
+//     MPI_Allreduce(&suma,&sumtmp,1,MPI_DOUBLE,
+// 		  MPI_SUM,comm->get_world());
+//     suma = sumtmp;
+//     chpottmp = -elcvec[nparticles+nghost_particles];
+//     for (int i = 0; i < nparticles; i++) {
+//       chpottmp += elcvec[i]/FORTRAN(cbkm,CBKM).xmortr[i][i];
+//     }
+//     MPI_Allreduce(&chpottmp,&sumtmp,1,MPI_DOUBLE,
+// 		  MPI_SUM,comm->get_world());
+//     chpottmp = sumtmp/suma;
+//     FORTRAN(cbkch,CBKCH).ch[nparticles+nghost_particles] = chpottmp;
+//     for (int i = 0 ; i < nparticles; i++) {
+//       FORTRAN(cbkch,CBKCH).ch[i] = (elcvec[i]-chpottmp)/
+// 	FORTRAN(cbkm,CBKM).xmortr[i][i];
+//     }
+//     comm->comm_double(FORTRAN(cbkch,CBKCH).ch);
+//     FORTRAN(cbkcha,CBKCHA).ioldchg=1;
+//   }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "ch1 = " << ch[0] << endl;
+    comm->get_nodefile() << "ch2 = " << ch[1] << endl;
+    comm->get_nodefile() << "ch3 = " << ch[2] << endl;
+    comm->get_nodefile() << "chpot = " << 
+      ch[nparticles+nghost_particles] << endl;
+  }
+
+  cgsolvesparseparallel(nparticles,nghost_particles,
+		  aval,acol_ind,arow_ptr,ch,elcvec,comm);
+// c$$$      sumsq = 0.0
+// c$$$      do i = 1,natot+1
+// c$$$         sumsq = sumsq+(chgold(i)-chgglobal(i))**2
+// c$$$      end do
+// c$$$      write(6,*) sumsq
+      
+}
+
+void Force_ChargeEquil::cgsolvesparseparallel(const int& nparticles, 
+			const int& nghost_particles, 
+			double aval[], int acol_ind[], int arow_ptr[], 
+		        double x[], double b[], Comm* comm) {
+  double r[ReaxParams::neem],p[ReaxParams::neem],w[ReaxParams::neem],
+    p_old[ReaxParams::neem],q[ReaxParams::neem];
+  double one,zero,rho,rho_old,beta,alpha,gamma;
+  double tol;
+  int iter,maxiter;
+  int lda;
+  int n;
+  double sumtmp;
+  //
+  //  Sketch of parallel CG method
+  //
+  // Distributed (partial) vectors: b, r, q, A
+  // Accumulated (full) vectors: x, w, p
+  //
+  //  r = b - A.x
+  //  w = r (requires 
+
+  lda = ReaxParams::neem;
+
+  n = nparticles+nghost_particles+1;
+
+  one = 1.0;
+  zero = 0.0;
+  maxiter = 100;
+  tol = 1.0e-6;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "x1 = " << x[0] << endl;
+    comm->get_nodefile() << "x2 = " << x[1] << endl;
+    comm->get_nodefile() << "x3 = " << x[2] << endl;
+    comm->get_nodefile() << "xn = " << x[n-1] << endl;
+  }
+  //     Form r=b-Ax
+  sparse_product(n, nparticles,aval,acol_ind,arow_ptr,x,r); // ! r = Ax
+  cblas_dscal(n,-one,r,1);
+  cblas_daxpy(n,one,b,1,r,1);
+  cblas_dcopy(n,r,1,w,1); // w is accumulated version of r
+  comm->reverse_comm_double_add(w);
+  comm->comm_double(w);
+  MPI_Allreduce(&w[n-1],&sumtmp,1,MPI_DOUBLE,
+		MPI_SUM,comm->get_world());
+  w[n-1] = sumtmp;
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "r1 = " << r[0] << " " << w[0] << endl;
+    comm->get_nodefile() << "rn-1 = " << r[nparticles] << " " << w[nparticles] << endl;
+    comm->get_nodefile() << "rn = " << r[n-1] << " " << w[n-1] << endl;
+  }
+  rho_old = one;
+
+  for (iter = 1; iter < maxiter; iter++) {
+    rho = cblas_ddot(nparticles,w,1,w,1);
+    MPI_Allreduce(&rho,&sumtmp,1,MPI_DOUBLE,
+    		  MPI_SUM,comm->get_world());
+    rho = sumtmp+w[n-1]*w[n-1];
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "rho = " << rho << endl;
+      comm->get_nodefile() << "rho1 = " << w[0] << " by " << r[0] << endl;
+    }
+    if (rho < tol) break;
+    cblas_dcopy(n,w,1,p,1); // ! p=w
+    if (iter > 1) {
+      beta = rho/rho_old;
+      cblas_daxpy(n,beta,p_old,1,p,1);
+    }
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "p1 = " << p[0] << endl;
+      comm->get_nodefile() << "pn = " << p[n-1] << endl;
+      for (int i=0;i<n;i++) {
+	comm->get_nodefile() << "p" << i << " = " << p[i] << endl;
+      }
+    }
+    sparse_product(n,nparticles,aval,acol_ind,arow_ptr,p,q); // ! q = Ap
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << "q1 = " << q[0] << endl;
+      comm->get_nodefile() << "qn = " << q[n-1] << endl;
+      for (int i=0;i<n;i++) {
+	comm->get_nodefile() << "q" << i << " = " << q[i] << endl;
+      }
+a987 22
+
+void Force_ChargeEquil::sparse_product(const int& n, const int& nparticles,
+	      double aval[], int acol_ind[], int arow_ptr[],
+              double x[], double r[]) {
+  int j,jj;
+
+  for (int i=0;i<n;i++) {
+    r[i] = 0.0;
+  }
+
+  for (int i=0;i<nparticles;i++) {
+    // We know that first entry is the diagonal term
+    r[i]+=aval[arow_ptr[i]]*x[i];
+    // Now loop over remaining entries, and transposes
+    for (int j=arow_ptr[i]+1;j<arow_ptr[i+1];j++) {
+      jj = acol_ind[j];
+      r[i]+=aval[j]*x[jj];
+      r[jj]+=aval[j]*x[i];
+    }
+  }
+}
+  
+@
+
+
+1.1.2.4
+log
+@Cleaned up charge eequilibration, removed some FORTRAN allocations
+@
+text
+@a36 1
+#ifdef USE_BLAS
+a37 1
+#endif
+d173 3
+a175 1
+  ComputeCharges(p,energy,comm);
+d288 710
+a997 1
+void Force_ChargeEquil::ComputeCharges(
+d1130 1
+a1130 1
+  CharGrasp(nparticles,nghost_particles,
+d1160 1
+a1160 1
+void Force_ChargeEquil::CharGrasp(const int& nparticles, 
+d1166 12
+a1177 1
+// need to update this to new form
+d1214 1
+a1214 1
+  CGSolve(nparticles,nghost_particles,
+d1216 6
+d1224 1
+a1224 1
+void Force_ChargeEquil::CGSolve(const int& nparticles, 
+d1242 2
+d1261 1
+a1261 2
+  SparseProduct(n, nparticles,aval,acol_ind,arow_ptr,x,r); // ! r = Ax
+#ifdef USE_BLAS
+a1264 6
+#else
+    for (int i=0;i<n;i++) {
+      r[i] = b[i]-r[i];
+      w[i] = r[i];
+    }
+#endif
+a1277 1
+#ifdef USE_BLAS
+a1278 6
+#else
+    rho = 0.0;
+    for (int i=0;i<nparticles;i++) {
+      rho+=w[i]*w[i];
+    }
+#endif
+a1286 1
+#ifdef USE_BLAS
+a1287 5
+#else
+    for (int i=0;i<n;i++) {
+      p[i] = w[i];
+    }
+#endif
+a1289 1
+#ifdef USE_BLAS
+a1290 5
+#else
+      for (int i=0;i<n;i++) {
+	p[i] += beta*p_old[i];
+      }
+#endif
+d1299 1
+a1299 1
+    SparseProduct(n,nparticles,aval,acol_ind,arow_ptr,p,q); // ! q = Ap
+a1306 1
+#ifdef USE_BLAS
+a1307 6
+#else
+    gamma = 0.0;
+    for (int i=0;i<n;i++) {
+      gamma+=p[i]*q[i];
+    }
+#endif
+a1314 1
+#ifdef USE_BLAS
+a1315 9
+    cblas_daxpy(n,-alpha,q,1,r,1); //  ! r -= alpha*q
+    cblas_dcopy(n,r,1,w,1); // w is accumulated version of r
+#else
+    for (int i=0;i<n;i++) {
+      x[i] += alpha*p[i];
+      r[i] -= alpha*q[i];
+      w[i] = r[i];
+    }
+#endif
+d1320 2
+a1331 1
+#ifdef USE_BLAS
+a1332 6
+#else
+    for (int i=0;i<n;i++) {
+      p_old[i] = p[i];
+    }
+#endif
+
+d1344 1
+a1344 1
+void Force_ChargeEquil::SparseProduct(const int& n, const int& nparticles,
+@
+
+
+1.1.2.5
+log
+@Streamlined memory for global and local data
+@
+text
+@d393 5
+d404 15
+d440 4
+d486 8
+d502 2
+d507 1
+a509 5
+  double* r;
+  double* p;
+  double* w;
+  double* p_old;
+  double* q;
+d517 1
+a517 5
+  r = new double[nparticles+nghost_particles+1];
+  p = new double[nparticles+nghost_particles+1];
+  w = new double[nparticles+nghost_particles+1];
+  p_old = new double[nparticles+nghost_particles+1];
+  q = new double[nparticles+nghost_particles+1];
+d526 6
+d539 4
+a542 4
+  for (int i=0;i<n;i++) {
+    r[i] = b[i]-r[i];
+    w[i] = r[i];
+  }
+d549 5
+d568 4
+d590 7
+d598 7
+d617 3
+d631 4
+d640 5
+d659 3
+a661 5
+  delete []r;
+  delete []p;
+  delete []w;
+  delete []p_old;
+  delete []q;
+@
+
+
+1.1.2.6
+log
+@Separated charge equilibration input from REAX
+@
+text
+@a83 3
+  Linputreax = false;
+  swa = 0.0;
+  swb = 0.0;
+a96 8
+  string buf;
+  string forcefieldname;
+  string filename;
+  string id1;
+  int itype;
+  int isize;
+  ff_params ff_param_tmp;
+  bool match;
+a97 4
+  string str_tmp;
+  ifstream infile;
+  double chi,eta,gamma,rcuta,rcutb;
+  int nparams;
+a102 7
+  buf_in >> filename;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Force_ChargeEquil::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+a108 100
+
+  if (filename == "REAX") {
+    Linputreax = true;
+    return;
+  }
+
+  glog.logfile << "\n\n\nReading " << label << " from file " <<
+    filename << endl;
+
+  str_tmp = glog.path_str + filename;
+  if (node == 0) {
+    infile.open(str_tmp.c_str()); 
+  
+    if (!infile) {
+      infile.close();
+      infile.open(str_tmp.c_str()); 
+      if (!infile) {
+	glog.abort("Force_ChargeEquil::ReadInteractions:\n"
+		   "Failed to open " + str_tmp,comm);
+      }
+    }
+  }
+
+  ntypes = 0;
+
+  do {
+    if (node==0) {
+      if(input_string_get(infile,buf)) {
+	if(buf != "End of Input") {
+	  glog.abort("Force_ChargeEquil::ReadInput:\n"
+		     "Read error in "+str_tmp,comm);
+	}
+      }
+      isize = buf.size();
+    }
+
+    MPI_Bcast(&isize,1,MPI_INT,0,comm->get_world());
+    if (node != 0) buf.resize(isize);
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << isize << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile() << buf << endl;
+    }
+
+    MPI_Bcast(&buf[0],buf.size(),MPI_CHAR,0,comm->get_world());
+
+    if (input_string_match(buf,"End of Input")) {
+      break;
+    }
+
+    std::istringstream buf_in(buf);
+    
+    // Construct index for ids on the fly
+    buf_in >> id1;
+
+    match = find_id(id1,itype);
+    if (!match) {
+      ntypes++;
+      itype = ntypes-1;
+      id_index.push_back(id1);
+    }
+
+    buf_in >> forcefieldname;
+    if (forcefieldname == "reax") {
+      buf_in >> chi >> eta >> gamma >> rcuta >> rcutb;
+      if (gamma < 0.0 || rcuta < 0.0 || rcuta > rcutb) {
+	glog.error("Force_ChargeEquil::ReadInteractions:\n"
+		   "Invalid parameter in " + str_tmp);
+      }
+      nparams = 5;
+      ff_param_tmp.type = reax;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.rcutsq = rcutb*rcutb;
+      // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = chi;
+      ff_param_tmp.params[1] = eta;
+      ff_param_tmp.params[2] = gamma;
+      ff_param_tmp.params[3] = rcuta;
+      ff_param_tmp.params[4] = rcutb;
+	
+      input_param_list.push_back(ff_param_tmp);
+      
+    } else {
+      glog.error("Force_ChargeEquil::ReadInteractions:\n"
+	       "Invalid forcefield name");
+    }
+    
+    if (buf_in.fail()) {
+      glog.error("Force_ChargeEquil::ReadInteractions:\n"
+		 "Read error in " + str_tmp);
+    }
+
+  } while (!input_string_match(buf,"End of Input"));
+
+a114 3
+  ff_params ff_param_tmp;
+  double chi,eta,gamma;
+  int nparams;
+d121 1
+a121 65
+  if (Linputreax) {
+    glog.warning("Force_ChargeEquil::SetupInteractions:\n"
+		 "Using ReaxFF input");
+    FORTRAN(getswa,GETSWA)(&swa);
+    FORTRAN(getswb,GETSWB)(&swb);
+    
+    rcutmax = swb;
+
+    TaperSetup(swa,swb);
+
+    nparams = 5;
+
+    FORTRAN(getnso,GETNSO)(&ntypes);
+
+    for (int itype=0;itype<ntypes;itype++) {
+      chi = FORTRAN(cbkchb,CBKCHB).chi[itype];
+      eta = FORTRAN(cbkchb,CBKCHB).eta[itype];
+      gamma = FORTRAN(cbkchb,CBKCHB).gam[itype];
+      ff_param_tmp.type = reax;
+      ff_param_tmp.np = nparams;
+      ff_param_tmp.rcutsq = rcutmax*rcutmax;
+    // Need to delete this at some point
+      ff_param_tmp.params = new double[nparams];
+      ff_param_tmp.params[0] = chi;
+      ff_param_tmp.params[1] = eta;
+      ff_param_tmp.params[2] = gamma;
+      ff_param_tmp.params[3] = swa;
+      ff_param_tmp.params[4] = swb;
+	
+      input_param_list.push_back(ff_param_tmp);
+    }
+  }
+
+  if (node == 0) {
+    glog.logfile << endl << "id \t type \trcutsq \t np" << 
+      setw(13) << "\t p1      p2      p3  " <<  endl;
+  }
+
+  nentries = 0;
+  for (int itype=0;itype<ntypes;itype++) {
+    ff_param_tmp.type = input_param_list[itype].type;
+    switch(ff_param_tmp.type) {
+    case reax :
+      reax_setup(input_param_list[itype],ff_param_tmp);
+      break;
+    case streitz :
+      streitz_setup(input_param_list[itype],ff_param_tmp);
+      break;
+    default:
+      glog.error("Force_ChargeEquil::SetupInteractions:\n"
+		 "Invalid forcefield type");
+    }
+    param_list.push_back(ff_param_tmp);
+    nentries++;
+    if (node == 0) {
+      glog.logfile << itype << "\t" 
+		   << param_list[itype].type << "\t" << 
+	param_list[itype].rcutsq 
+		   << "\t" << param_list[itype].np; 
+      for (int iparam=0;iparam<param_list[itype].np;iparam++) {
+	glog.logfile << setw(15) << param_list[itype].params[iparam];
+      }
+      glog.logfile << endl;
+    }
+  }
+a129 2
+
+  TaperSetup(swa,swb);
+d136 1
+d140 2
+d151 1
+a151 2
+      // Using a maximum mixing rule here
+      rcutneighsq_table[itype][jtype] = pow(sqrt(max(param_list[itype].rcutsq,param_list[jtype].rcutsq))+rskin,2);
+a264 1
+  std::ostringstream strstrm_tmp;
+a266 1
+
+d268 2
+a269 17
+
+  if (Linputreax) {
+    if (nparticletypes > ntypes) {
+      strstrm_tmp  << nparticletypes << " " << ntypes;
+      glog.error("Force_ChargeEquil::SetupTypes:\n"
+		   "nparticletypes > ntypes "+strstrm_tmp.str());
+    }
+    id_index.resize(ntypes);
+    for (itype = 0; itype < nparticletypes; itype++) {
+      type_index[itype]=itype;
+      id_index[itype]=t->get_id(itype);
+    }
+    for (itype = nparticletypes; itype < ntypes; itype++) {
+      id_index[itype]="type_undefined";
+    }
+  }
+
+d271 1
+a271 1
+  // If id not found in ff, generate warning
+d273 2
+a274 9
+    match = find_id(t->get_id(itype),itype_ff);
+    if (!match) {
+      glog.warning("Force_ChargeEquil::SetupTypes:\n"
+		   "particled type id has no ff type match");
+      glog.logfile << itype_ff << " " << t->get_id(itype) << endl;
+      type_index[itype]=-1;
+    } else {
+      type_index[itype]=itype_ff;
+    }
+a275 1
+
+d277 1
+d282 1
+a282 2
+		   "ff type id has no particle type match "+
+		   id_index[itype_ff]);
+a306 1
+  double sw;
+d337 1
+a337 3
+    aval[nentries] = 2.0*param_list[itype].params[1];
+    //    glog.logfile << FORTRAN(cbkchb,CBKCHB).eta[itype]-
+    //     param_list[itype].params[1] << endl;
+d356 2
+a357 5
+	gamt=sqrt(param_list[itype].params[2]*
+		  param_list[jtype].params[2]);
+	//	glog.logfile << sqrt(FORTRAN(cbkchb,CBKCHB).gam[itype]*
+	//              FORTRAN(cbkchb,CBKCHB).gam[jtype]) - gamt << endl; 
+
+d359 1
+a359 3
+	sw = TaperE(delr_norm,delr2);
+	//	FORTRAN(taper,TAPER)(&delr_norm,&delr2);
+	//	glog.logfile << FORTRAN(cbkenergies,CBKENERGIES).sw - sw << endl;
+d361 1
+a361 1
+	hulp2=sw*14.40/cbrt(hulp1);
+d376 1
+a376 1
+    elcvec[i] = -param_list[itype].params[0];
+d410 2
+a411 2
+            param_list[itype].params[0]*ch[i]+
+	    param_list[itype].params[1]*ch[i]*ch[i]);
+a485 17
+  // r = b-A.x
+  // w = r            /* (ReverseComm + Comm) */
+  // 
+  // rho_old = 1
+  // while (rho > tol) { 
+  //   rho = w.w      /* (AllReduceSum) */
+  //   beta = rho/rho_old
+  //   p = w + beta*p_old
+  //   q = A.p
+  //   gamma = p.q    /* (AllReduceSum) */
+  //   alpha = rho/gammma
+  //   x += alpha.p
+  //   r -= alpha.q
+  //   w = r          /* (ReverseComm + Comm) */
+  //   p_old = p
+  //   rho_old = rho
+  // }
+a619 86
+double Force_ChargeEquil::TaperE(const double& r, const double& r2) {
+  double r3;
+  r3=r2*r;
+  return swc7*r3*r3*r+swc6*r3*r3+swc5*r3*r2+swc4*r2*r2+swc3*r3+swc2*r2+
+     swc1*r+swc0;
+}
+
+
+double Force_ChargeEquil::TaperF(const double& r, const double& r2) {
+  double r3;
+  r3=r2*r;
+  return 7.0e0*swc7*r3*r3+6.0e0*swc6*r3*r2+5.0e0*swc5*r2*r2+
+    4.0e0*swc4*r3+3.0e0*swc3*r2+2.0e0*swc2*r+swc1;
+}
+
+void Force_ChargeEquil::TaperSetup(const double& swa, const double& swb) {
+  double swb2,swa2,swb3,swa3,d1,d7;
+
+  d1=swb-swa;
+  d7=pow(d1,7);
+  swa2=swa*swa;
+  swa3=swa2*swa;
+  swb2=swb*swb;
+  swb3=swb2*swb;
+ 
+  swc7=  20.0e0/d7;
+  swc6= -70.0e0*(swa+swb)/d7;
+  swc5=  84.0e0*(swa2+3.0e0*swa*swb+swb2)/d7;
+  swc4= -35.0e0*(swa3+9.0e0*swa2*swb+9.0e0*swa*swb2+swb3)/d7;
+  swc3= 140.0e0*(swa3*swb+3.0e0*swa2*swb2+swa*swb3)/d7;
+  swc2=-210.0e0*(swa3*swb2+swa2*swb3)/d7;
+  swc1= 140.0e0*swa3*swb3/d7;
+  swc0=(-35.0e0*swa3*swb2*swb2+21.0e0*swa2*swb3*swb2+
+	7.0e0*swa*swb3*swb3+swb3*swb3*swb)/d7;
+}
+
+void Force_ChargeEquil::reax_setup(const ff_params& ff_input_param_tmp, 
+			     ff_params& ff_param_tmp) {
+  double chi,eta,gamma,rcutsq,rcuta,rcutb;
+
+  ForceFieldTypes type;
+
+  type = ff_input_param_tmp.type;
+
+  chi = ff_input_param_tmp.params[0];
+  eta = ff_input_param_tmp.params[1];
+  gamma = ff_input_param_tmp.params[2];
+  rcuta = ff_input_param_tmp.params[3];
+  rcutb = ff_input_param_tmp.params[4];
+  rcutsq = ff_input_param_tmp.rcutsq;
+
+  ff_param_tmp.type = type;
+  ff_param_tmp.np = 5;
+  ff_param_tmp.params = new double[ff_param_tmp.np];
+  ff_param_tmp.params[0] = chi;
+  ff_param_tmp.params[1] = eta;
+  ff_param_tmp.params[2] = gamma;
+  ff_param_tmp.params[3] = rcuta;
+  ff_param_tmp.params[4] = rcutb;
+  ff_param_tmp.rcutsq = rcutsq;
+  rcutmax = max(sqrt(rcutsq), rcutmax);
+
+  if (swa == 0.0) {
+    swa = rcuta;
+  } else if (swa != rcuta) {
+    glog.error("Force_ChargeEquil::reax_setup:\n"
+	       "swa not equal to current rcuta");
+  }
+
+  if (swb == 0.0) {
+    swb = rcutb;
+  } else if (swb != rcutb) {
+    glog.error("Force_ChargeEquil::reax_setup:\n"
+	       "swb not equal to current rcutb");
+  }
+
+
+}  
+
+void Force_ChargeEquil::streitz_setup(const ff_params& ff_input_param_tmp, 
+			     ff_params& ff_param_tmp) {
+}  
+
+bool Force_ChargeEquil::get_Linputreax() {
+  return Linputreax;
+}
+@
+
+

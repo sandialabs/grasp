@@ -1,0 +1,219 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.2
+	REAX-2:1.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.03.12.01.54.18;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.03.12.00.10.10;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@/home/athomps/Grasp/Testing/testb_mix/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /home/athomps/Grasp/Testing/testb_mix/
+PATH_MAX is 4096
+
+
+
+Entering Input::ReadInput()
+forcefield twobody twobodyall.in LJ
+timestep 1.0000000000
+nsteps 10
+box dimensions	14.0000000000	0.0000000000	0.0000000000 \
+			0.0000000000	14.0000000000	0.0000000000 \
+			0.0000000000	0.0000000000	14.0000000000
+box origin	-7.0000000000	-7.0000000000	-7.0000000000
+initialize temperature 0.0000000000 256
+neighbor bin 10 1.0000000000
+thermo 10
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 3
+A 10.0000000000
+B 10.0000000000
+C 10.0000000000
+
+
+
+Reading LJ from file twobodyall.in
+
+
+
+Setting up force field class 0 called LJ
+
+id1 	 id2 	 type 	rcutsq 	 np	 p1      p2    ....   p_np  
+A	A	0	9.000	5        48.00        24.00        4.000        4.000        0.000
+B	B	0	9.000	5        62.40        31.20        5.200        5.200        0.000
+C	C	0	9.000	5        226.0        63.78        18.83        10.63        0.000
+A	B	0	9.000	5        52.80        26.40        4.400        4.400        0.000
+A	C	0	9.000	5        57.60        28.80        4.800        4.800        0.000
+B	C	0	9.000	5        120.4        44.91        10.03        7.485        0.000
+Cutoffs for this forcefield
+rcutmax = 3.000
+rskin = 1.000
+rcutneighmax = 4.000
+
+
+
+Entering ParticleList::ReadConfig()
+Will not read an initial velocity file 
+Will not read an initial displacement file 
+Total particles read = 1372
+
+
+
+Entering Output::Setup()
+
+
+
+Entering FixList::Setup()
+
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+LJ                  =     -6503.8856553116
+Potential Energy    =     -6503.8856553116
+Kinetic Energy      =         0.0000000000
+Extended Energy     =         0.0000000000
+Total Energy        =     -6503.8856553116
+Pressure            =     -6390.2509008908
+Temperature         =         0.0000000000
+Total Particles     =                 1372
+Volume              =      2744.0000000000
+--------------- Step        10 ---- CPU =     0.2343 (sec) ---------------
+LJ                  =     -6505.7697668826
+Potential Energy    =     -6505.7697668826
+Kinetic Energy      =         1.8841959530
+Extended Energy     =         0.0000000000
+Total Energy        =     -6503.8855709297
+Pressure            =     -6388.6072708957
+Temperature         =         0.1101952001
+
+
+
+Loop time: 0.2346085368 on 2 processors for 1372 particles
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.1188     50.64
+          Neigh Time    0.0154      6.56
+           Comm Time    0.0196      8.36
+       Exchange Time    0.0141      5.99
+        Revcomm Time    0.0413     17.62
+        Barrier Time    0.0221      9.41
+          Other Time    0.0034      1.43
+          Total Time    0.2346    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+LJ                      0.1082 (    10)     0.0153 (     1) 
+
+
+
+Finished 
+@
+
+
+1.2
+log
+@added use of mixing rule to example
+@
+text
+@@
+
+
+1.1
+log
+@Added a example of mixing twobos force fields
+@
+text
+@d36 4
+d43 1
+a43 1
+C	C	0	9.000	5        72.00        36.00        6.000        6.000        0.000
+d46 1
+a46 1
+B	C	0	9.000	5        67.20        33.60        5.600        5.600        0.000
+d70 2
+a71 2
+LJ                  =     -5355.8897585688
+Potential Energy    =     -5355.8897585688
+d74 2
+a75 2
+Total Energy        =     -5355.8897585688
+Pressure            =     -5643.4837024495
+d79 4
+a82 4
+--------------- Step        10 ---- CPU =     0.2338 (sec) ---------------
+LJ                  =     -5357.1395722167
+Potential Energy    =     -5357.1395722167
+Kinetic Energy      =         1.2499196747
+d84 3
+a86 3
+Total Energy        =     -5355.8896525420
+Pressure            =     -5642.9910570302
+Temperature         =         0.0731002253
+d90 1
+a90 1
+Loop time: 0.2338960103 on 2 processors for 1372 particles
+d96 8
+a103 8
+          Force Time    0.1233     52.71
+          Neigh Time    0.0155      6.63
+           Comm Time    0.0184      7.85
+       Exchange Time    0.0149      6.39
+        Revcomm Time    0.0397     16.96
+        Barrier Time    0.0188      8.04
+          Other Time    0.0033      1.42
+          Total Time    0.2339    100.00
+d109 1
+a109 1
+LJ                      0.1121 (    10)     0.0155 (     1) 
+@
+

@@ -1,0 +1,1158 @@
+head	1.1;
+access;
+symbols
+	Monaco_Aidan:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2005.06.15.20.40.00;	author athomps;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.06.15.20.40.00;	author athomps;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2005.06.15.23.26.07;	author athomps;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2005.08.04.18.28.14;	author saubry;	state Exp;
+branches;
+next	1.1.2.4;
+
+1.1.2.4
+date	2005.08.09.22.50.06;	author saubry;	state Exp;
+branches;
+next	1.1.2.5;
+
+1.1.2.5
+date	2005.08.12.23.55.22;	author saubry;	state Exp;
+branches;
+next	1.1.2.6;
+
+1.1.2.6
+date	2005.09.12.21.02.47;	author saubry;	state Exp;
+branches;
+next	1.1.2.7;
+
+1.1.2.7
+date	2005.10.11.21.43.24;	author saubry;	state Exp;
+branches;
+next	1.1.2.8;
+
+1.1.2.8
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	1.1.2.9;
+
+1.1.2.9
+date	2005.11.01.21.17.20;	author saubry;	state Exp;
+branches;
+next	1.1.2.10;
+
+1.1.2.10
+date	2005.11.17.20.43.30;	author athomps;	state Exp;
+branches;
+next	1.1.2.11;
+
+1.1.2.11
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	1.1.2.12;
+
+1.1.2.12
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file comm_octant.cpp was initially added on branch Monaco_Aidan.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@Forgot to add Comm_Octant class files
+@
+text
+@a0 355
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <vector>
+using namespace std;
+#include  "mpi.h"
+#include "grasp.h"
+#include "comm.h"
+#include "box.h"
+#include "particle.h"
+#include "particlelist.h"
+#include "comm_octant.h"
+#include "binlist.h"
+#include "log.h"
+#include "machine.h"
+extern Log glog;
+
+#define BUFFACTOR 1.5
+#define BUFMIN 1000
+#define BUFEXTRA 100
+#define MIN(a,b) ((a) < (b) ? (a) : (b))
+#define MAX(a,b) ((a) > (b) ? (a) : (b))
+
+/* setup MPI and allocate buffer space */
+
+Comm_Octant::Comm_Octant() {
+}
+
+/* destructor, free all memory */
+
+Comm_Octant::~Comm_Octant() {
+}
+
+
+/* setup spatial-decomposition communication patterns 
+   function of neighbor cutoff and current box size */
+
+void Comm_Octant::Setup(Comm* comm, const int oct_id[]) {
+
+  me = comm->get_node();
+  if (me==0) glog.logfile << "Entered Comm_Octant::Setup()" << endl;
+
+  world = comm->get_world();
+  universe = comm->get_universe();
+
+  nprocs = comm->get_nprocs();
+
+  comm->get_procgrid(procgrid);
+  comm->get_myloc(myloc);
+  comm->get_procneigh(procneigh);
+  
+  /* initialize comm buffers & exchange memory */
+
+  maxsend = BUFMIN;
+  buf_send.resize(maxsend+BUFEXTRA);
+  maxrecv = BUFMIN;
+  buf_recv.resize(maxrecv);
+
+  nswap = 3;
+  maxswap = nswap;
+  allocate_swap(maxswap);
+
+  sendlist.resize(maxswap);
+  maxsendlist.resize(maxswap);
+  recvlist.resize(maxswap);
+  maxrecvlist.resize(maxswap);
+  for (int i = 0; i < maxswap; i++) {
+    maxsendlist[i] = BUFMIN;
+    sendlist[i].resize(BUFMIN);
+    maxrecvlist[i] = BUFMIN;
+    recvlist[i].resize(BUFMIN);
+  }
+
+  SetupLists();
+
+  if (comm->get_Lnodefile()) { 
+    comm->get_nodefile()  << "\n oct_id = " << 
+      oct_id[0] << "\t" << 
+      oct_id[1] << "\t" << 
+      oct_id[2] << "\t" << endl;
+  }
+
+  if (comm->get_Lnodefile()) { 
+    comm->get_nodefile()  << "procneigh = \n" << 
+      procneigh[0][0] << "\t" << procneigh[0][1] << "\n" << 
+      procneigh[1][0] << "\t" << procneigh[1][1] << "\n" << 
+      procneigh[2][0] << "\t" << procneigh[2][1] << "\n";
+  }
+
+  for (int iswap=0;iswap<nswap;iswap++) {
+    sendproc[iswap] = procneigh[iswap][(oct_id[iswap]? 0 : 1)];
+  }
+
+  for (int iswap=0;iswap<nswap;iswap++) {
+    recvproc[iswap] = procneigh[iswap][oct_id[iswap]];
+  }
+
+  // pbc_flags store flags for *sending* atoms thru PBC
+  // [0] = 1 if any dim is across PBC
+  // [123] = +/-1 if dim 012 is across PBC, -1 for sending up.
+  for (int iswap=0;iswap<nswap;iswap++) {
+    pbc_flags[iswap][0] = 0;
+    pbc_flags[iswap][1] = 0;
+    pbc_flags[iswap][2] = 0;
+    pbc_flags[iswap][3] = 0;
+    if (oct_id[iswap]) {
+      if (myloc[iswap] == 0) {
+	pbc_flags[iswap][0] = 1;
+	pbc_flags[iswap][iswap+1] = 1;
+      }
+    } else {
+      if (myloc[iswap] == procgrid[iswap]-1) {
+	pbc_flags[iswap][0] = 1;
+	pbc_flags[iswap][iswap+1] = -1;
+      }
+    }      
+  }
+
+  if (comm->get_Lnodefile()) { 
+    comm->get_nodefile()  << "pbc_flags = \n" << 
+      pbc_flags[0][0] << "\t" << pbc_flags[0][1] << "\t" << 
+      pbc_flags[0][2] << "\t" << pbc_flags[0][3] << "\n" << 
+      pbc_flags[1][0] << "\t" << pbc_flags[1][1] << "\t" << 
+      pbc_flags[1][2] << "\t" << pbc_flags[1][3] << "\n" << 
+      pbc_flags[2][0] << "\t" << pbc_flags[2][1] << "\t" << 
+      pbc_flags[2][2] << "\t" << pbc_flags[2][3] << "\n";
+  }
+
+  if (comm->get_Lnodefile()) { 
+    comm->get_nodefile()  << "sendproc = " << 
+      sendproc[0] << "\t" << 
+      sendproc[1] << "\t" << 
+      sendproc[2] << "\t" << endl;
+  }
+
+  if (comm->get_Lnodefile()) { 
+    comm->get_nodefile()  << "recvproc = " << 
+      recvproc[0] << "\t" << 
+      recvproc[1] << "\t" << 
+      recvproc[2] << "\t" << endl;
+  }
+
+}
+
+/* communication of bins every timestep */
+
+void Comm_Octant::communicate(const Box* b, BinList* bl, Comm* comm) {
+  int iswap,nsend,nrecv;
+  double *buf;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = 0; iswap < nswap; iswap++) {
+
+    /* allocate buffer */
+    nsend = bl->pack_comm_size(sendnum[iswap],sendlist[iswap]);
+    if (nsend > maxsend) grow_send(nsend);
+
+    /* pack buffer */
+    bl->pack_comm(sendnum[iswap],sendlist[iswap],
+			  &buf_send[0],pbc_flags[iswap],b);
+    /* exchange with another proc
+       if self, set recv buffer to send buffer */
+    if (sendproc[iswap] != me) {
+      MPI_Send(&nsend,1,MPI_INT,sendproc[iswap],0,world);
+      MPI_Recv(&nrecv,1,MPI_INT,recvproc[iswap],0,world,&status);
+      if (nrecv > maxrecv) grow_recv(nrecv);
+      MPI_Irecv(&buf_recv[0],nrecv,MPI_DOUBLE,
+		recvproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],nsend,MPI_DOUBLE,
+	       sendproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    bl->unpack_comm(recvnum[iswap],recvlist[iswap],buf);
+  }
+
+}
+
+/* reverse communication of bins every timestep */
+      
+void Comm_Octant::reverse_communicate(const Box* b, BinList* bl, Comm* comm) {
+  int iswap,nsend,nrecv;
+  double *buf;
+  MPI_Request request;
+  MPI_Status status;
+
+  for (iswap = nswap-1; iswap >= 0; iswap--) {
+
+    /* allocate buffer */
+    nsend = bl->pack_reverse_size(recvnum[iswap],recvlist[iswap]);
+    if (nsend > maxsend) grow_send(nsend);
+
+    /* pack buffer */
+    bl->pack_reverse(recvnum[iswap],recvlist[iswap],
+			  &buf_send[0],pbc_flags[iswap],b);
+    /* exchange with another proc 
+       if self, set recv buffer to send buffer */
+
+    if (sendproc[iswap] != me) {
+      MPI_Send(&nsend,1,MPI_INT,recvproc[iswap],0,world);
+      MPI_Recv(&nrecv,1,MPI_INT,sendproc[iswap],0,world,&status);
+      if (nrecv > maxrecv) grow_recv(nrecv);
+      MPI_Irecv(&buf_recv[0],nrecv,MPI_DOUBLE,
+		sendproc[iswap],0,world,&request);
+      MPI_Send(&buf_send[0],nsend,MPI_DOUBLE,
+	       recvproc[iswap],0,world);
+      MPI_Wait(&request,&status);
+      buf = &buf_recv[0];
+    } else buf = &buf_send[0];
+
+    /* unpack buffer */
+
+    bl->unpack_reverse(sendnum[iswap],sendlist[iswap],buf);
+  }
+}
+
+
+/* realloc the size of the send buffer as needed with BUFFACTOR & BUFEXTRA */
+
+void Comm_Octant::grow_send(int n)
+{
+  maxsend = static_cast<int> (BUFFACTOR * n);
+  buf_send.resize(maxsend+BUFEXTRA);
+}
+
+/* realloc the size of the recv buffer as needed with BUFFACTOR */
+
+void Comm_Octant::grow_recv(int n)
+{
+  maxrecv = static_cast<int> (BUFFACTOR * n);
+  buf_recv.resize(maxrecv);
+}
+
+/* realloc the size of the iswap sendlist as needed with BUFFACTOR */
+
+void Comm_Octant::grow_sendlist(int iswap, int n)
+{
+  maxsendlist[iswap] = static_cast<int> (BUFFACTOR * n);
+  sendlist[iswap].resize(maxsendlist[iswap]);
+}
+
+/* realloc the size of the iswap recvlist as needed with BUFFACTOR */
+
+void Comm_Octant::grow_recvlist(int iswap, int n)
+{
+  maxrecvlist[iswap] = static_cast<int> (BUFFACTOR * n);
+  recvlist[iswap].resize(maxrecvlist[iswap]);
+}
+
+void Comm_Octant::grow_swap()
+{
+  free_swap();
+  allocate_swap(nswap);
+
+  sendlist.resize(nswap);
+  maxsendlist.resize(nswap);
+
+  for (int i = maxswap; i < nswap; i++) {
+    maxsendlist[i] = BUFMIN;
+    sendlist[i].resize(BUFMIN);
+  }
+  maxswap = nswap;
+}
+
+void Comm_Octant::allocate_swap(int n) {
+  sendnum.resize(n);
+  recvnum.resize(n);
+  sendproc.resize(n);
+  recvproc.resize(n);
+  pbc_flags.resize(n);
+  for (int iswap=0;iswap<n;iswap++) {
+    pbc_flags[iswap] = new int[4];
+  }
+}
+
+void Comm_Octant::free_swap()
+{
+  sendnum.clear();
+  recvnum.clear();
+  sendproc.clear();
+  recvproc.clear();
+  for (int iswap=0;iswap<maxswap;iswap++) {
+    delete []pbc_flags[iswap];
+  }
+  pbc_flags.clear();
+}
+
+void Comm_Octant::SetupLists()
+{
+  // construct lists containing 1 bin,
+  // purely for test purposes
+  // This needs to be replaced with correct bin lists.
+  // May want to move this to class Octant.
+  // Entries refer to BinList::bins
+  for (int iswap = 0; iswap < maxswap; iswap++) {
+    sendnum[iswap] = 1;
+    if (sendnum[iswap] > maxsendlist[iswap]) 
+      grow_sendlist(iswap,sendnum[iswap]);
+    sendlist[iswap][0] = 0;
+    recvnum[iswap] = 1;
+    if (recvnum[iswap] > maxrecvlist[iswap]) 
+      grow_recvlist(iswap,recvnum[iswap]);
+    recvlist[iswap][0] = 0;
+  }
+}
+
+@
+
+
+1.1.2.2
+log
+@Finished fist pass of testing on Comm_Octant class
+@
+text
+@a196 8
+  int ibin;
+
+  if (comm->get_Lnodefile()) { 
+    for (iswap = 0; iswap < nswap; iswap++) {
+      comm->get_nodefile()  << "Swap " << iswap << 
+	" nbins = " << sendnum[iswap] << endl;
+    }
+  }
+d348 1
+a348 1
+    sendlist[iswap][0] = 0+iswap;
+d352 1
+a352 1
+    recvlist[iswap][0] = maxswap+iswap;
+@
+
+
+1.1.2.3
+log
+@Implement Alex's algorithm to send specific octant bin lists.
+No communication implemented yet.
+@
+text
+@d347 3
+d352 10
+a361 11
+  for (int iswap = 0; iswap < maxswap; iswap++) 
+    {
+      sendnum[iswap] = 1;
+      if (sendnum[iswap] > maxsendlist[iswap]) 
+	grow_sendlist(iswap,sendnum[iswap]);
+      sendlist[iswap][0] = 0+iswap;
+      recvnum[iswap] = 1;
+      if (recvnum[iswap] > maxrecvlist[iswap]) 
+	grow_recvlist(iswap,recvnum[iswap]);
+      recvlist[iswap][0] = maxswap+iswap;
+    }
+@
+
+
+1.1.2.4
+log
+@Link communication scheme with send bins.
+@
+text
+@d58 1
+a58 1
+#include "octantlist.h"
+d69 1
+a69 3
+/* setup MPI and allocate buffer space 
+   setup spatial-decomposition communication patterns 
+   function of neighbor cutoff and current box size    */
+d71 13
+a83 3
+void Comm_Octant::Setup(Comm* comm, const int oct_id[],int send[3], 
+			int recv[3]) 
+{
+d97 2
+a98 1
+  // initialize comm buffers & exchange memory
+a110 1
+                                   
+d112 22
+a133 7
+  for (int i = 0; i < maxswap; i++) 
+    {
+      maxsendlist[i] = BUFMIN;
+      sendlist[i].resize(BUFMIN);
+      maxrecvlist[i] = BUFMIN;
+      recvlist[i].resize(BUFMIN);
+    }
+d135 3
+a137 2
+  // Fill in send/receive lists.
+  SetupLists(send,recv);
+d139 1
+a139 4
+  for (int iswap=0;iswap<nswap;iswap++) 
+    sendproc[iswap] = procneigh[iswap][(oct_id[iswap]? 0 : 1)];
+  
+  for (int iswap=0;iswap<nswap;iswap++) 
+d141 2
+a142 1
+  
+d146 41
+a186 24
+  for (int iswap=0;iswap<nswap;iswap++) 
+    {
+      pbc_flags[iswap][0] = 0;
+      pbc_flags[iswap][1] = 0;
+      pbc_flags[iswap][2] = 0;
+      pbc_flags[iswap][3] = 0;
+      if (oct_id[iswap]) 
+	{
+	  if (myloc[iswap] == 0) 
+	    {
+	      pbc_flags[iswap][0] = 1;
+	      pbc_flags[iswap][iswap+1] = 1;
+	    }
+	} 
+      else 
+	{
+	  if (myloc[iswap] == procgrid[iswap]-1) 
+	    {
+	      pbc_flags[iswap][0] = 1;
+	      pbc_flags[iswap][iswap+1] = -1;
+	    }
+	}      
+    }
+}
+a187 16
+void Comm_Octant::SetupLists(int send[3],int recv[3])
+{
+  for (int i = 0; i < maxswap; i++) 
+    {
+      sendnum[i] = send[i]; // size of sendlist
+      if (sendnum[i] > maxsendlist[i]) 
+	grow_sendlist(i,sendnum[i]);
+      for (int j = 0; j < send[i]; j++) 
+	sendlist[i][j] = 0 + j;
+      
+      recvnum[i] = recv[i];  // size of recvlist
+      if (recvnum[i] > maxrecvlist[i]) 
+      	grow_recvlist(i,recvnum[i]);
+      for (int j = 0; j < send[i]; j++) 
+	recvlist[i][j] = maxswap + j;
+    }
+d191 2
+a192 3
+void Comm_Octant::communicate(OctantList *ol, Comm* comm,const Box* b,
+			      vector <Bin*> sendbins[3],vector <Bin*> recvbins[3]) 
+{
+d199 4
+a202 28
+  for (iswap = 0; iswap < nswap; iswap++) 
+    {
+      /* allocate buffer */
+      nsend = ol->pack_comm_size(sendnum[iswap],sendlist[iswap],sendbins[iswap]);
+      if (nsend > maxsend) grow_send(nsend);
+      
+      /* pack buffer */
+      ol->pack_comm(sendnum[iswap],sendlist[iswap],
+		    &buf_send[0],pbc_flags[iswap],b,sendbins[iswap]);
+      /* exchange with another proc
+	 if self, set recv buffer to send buffer */
+      if (sendproc[iswap] != me) 
+	{
+	  MPI_Send(&nsend,1,MPI_INT,sendproc[iswap],0,world);
+	  MPI_Recv(&nrecv,1,MPI_INT,recvproc[iswap],0,world,&status);
+	  if (nrecv > maxrecv) grow_recv(nrecv);
+	  MPI_Irecv(&buf_recv[0],nrecv,MPI_DOUBLE,
+		    recvproc[iswap],0,world,&request);
+	  MPI_Send(&buf_send[0],nsend,MPI_DOUBLE,
+		   sendproc[iswap],0,world);
+	  MPI_Wait(&request,&status);
+	  buf = &buf_recv[0];
+	} 
+      else 
+	buf = &buf_send[0];
+      
+      /* unpack buffer */
+      ol->unpack_comm(recvnum[iswap],recvlist[iswap],buf,recvbins[iswap]);
+d204 30
+a233 1
+  
+d237 2
+a238 3
+void Comm_Octant::reverse_communicate(OctantList* ol, Comm* comm,const Box* b,
+				      vector <Bin*> sendbins[3],vector <Bin*> recvbins[3]) 
+{
+d243 29
+a271 30
+  
+  for (iswap = nswap-1; iswap >= 0; iswap--) 
+    {
+      /* allocate buffer */
+      nsend = ol->pack_reverse_size(recvnum[iswap],recvlist[iswap],recvbins[iswap]);
+      if (nsend > maxsend) grow_send(nsend);
+      
+      /* pack buffer */
+      ol->pack_reverse(recvnum[iswap],recvlist[iswap],
+		       &buf_send[0],pbc_flags[iswap],b,recvbins[iswap]);
+      /* exchange with another proc 
+	 if self, set recv buffer to send buffer */
+      
+      if (sendproc[iswap] != me) 
+	{
+	  MPI_Send(&nsend,1,MPI_INT,recvproc[iswap],0,world);
+	  MPI_Recv(&nrecv,1,MPI_INT,sendproc[iswap],0,world,&status);
+	  if (nrecv > maxrecv) grow_recv(nrecv);
+	  MPI_Irecv(&buf_recv[0],nrecv,MPI_DOUBLE,
+		    sendproc[iswap],0,world,&request);
+	  MPI_Send(&buf_send[0],nsend,MPI_DOUBLE,
+		   recvproc[iswap],0,world);
+	  MPI_Wait(&request,&status);
+	  buf = &buf_recv[0];
+	} 
+      else buf = &buf_send[0];
+      
+      /* unpack buffer */
+      ol->unpack_reverse(sendnum[iswap],sendlist[iswap],buf,sendbins[iswap]);
+    }
+d276 1
+d284 1
+d292 1
+d300 1
+d315 4
+a318 5
+  for (int i = maxswap; i < nswap; i++) 
+    {
+      maxsendlist[i] = BUFMIN;
+      sendlist[i].resize(BUFMIN);
+    }
+d322 1
+a322 2
+void Comm_Octant::allocate_swap(int n) 
+{
+d328 1
+a328 1
+  for (int iswap=0;iswap<n;iswap++) 
+d330 1
+d339 1
+a339 1
+  for (int iswap=0;iswap<maxswap;iswap++) 
+d341 1
+a341 1
+  
+d344 18
+@
+
+
+1.1.2.5
+log
+@Problem with pbc_flags.
+Update recent modifications.
+@
+text
+@a72 50
+int Comm_Octant::Setup_flags(Comm* comm,const int oct_id[])
+{
+  nswap = 3;
+  maxswap = nswap;
+  allocate_swap(maxswap);
+
+  comm->get_myloc(myloc);
+  for (int iswap=0;iswap<nswap;iswap++) 
+    {
+      pbc_flags[iswap][0] = 0;
+      pbc_flags[iswap][1] = 0;
+      pbc_flags[iswap][2] = 0;
+      pbc_flags[iswap][3] = 0;
+
+      if (oct_id[iswap]) 
+	{
+	  if (myloc[iswap] == 0) 
+	    {
+	      pbc_flags[iswap][0] = 1;
+	      pbc_flags[iswap][iswap+1] = 1;
+	    }
+	} 
+      else 
+	{
+	  if (myloc[iswap] == procgrid[iswap]-1) 
+	    {
+	      pbc_flags[iswap][0] = 1;
+	      pbc_flags[iswap][iswap+1] = -1;
+	    }
+	}   
+    }
+
+
+  if (comm->get_Lnodefile()) 
+    {
+      comm->get_nodefile() << "\noct_id:  " << oct_id[0] << "\t" << oct_id[1] << "\t"
+			   << oct_id[2] << "\n";
+      comm->get_nodefile() << "pbc_flags[0][0]=" << pbc_flags[0][0] << endl;
+      for (int iswap=0;iswap<nswap;iswap++) 
+	{
+	  for (int i=0;i<4;i++) 
+	    comm->get_nodefile() << pbc_flags[iswap][i] << "\t";
+	  comm->get_nodefile() << endl;
+	}
+    }
+
+  return nswap;
+
+}
+
+d86 1
+d89 1
+d95 4
+a98 1
+  // initialize comm buffers & exchange memory
+d121 26
+@
+
+
+1.1.2.6
+log
+@Correct boundary flags.
+Implement send/receive bins.
+@
+text
+@d73 1
+a73 5
+// [nswap][0] = 1 if any dim is across PBC
+// [nswap][123] = +/-1 if dim 012 is across PBC
+
+
+Comm_Octant::Comm_Octant()
+d77 1
+a77 2
+  allocate_swap(maxswap);  
+}
+a78 7
+int Comm_Octant::Setup_flags(Comm* comm,const int oct_id[])
+{
+  //nswap = 3;
+  //maxswap = nswap;
+  //allocate_swap(maxswap);
+
+  comm->get_procgrid(procgrid);
+a79 14
+
+  int nprocs = procgrid[0]*procgrid[1]*procgrid[2];
+  if (nprocs == 1)
+    {
+      for (int iswap=0;iswap<nswap;iswap++) 
+	{
+	  pbc_flags[iswap][0] = 1;
+	  pbc_flags[iswap][1] = 0;
+	  pbc_flags[iswap][2] = 0;
+	  pbc_flags[iswap][3] = 0;
+	}
+    }
+  else
+    {
+d86 2
+a87 2
+      
+      if (oct_id[iswap] == 1) 
+a91 6
+	      pbc_flags[iswap][iswap+1] = -1;
+	    }
+	  
+	  if (myloc[iswap] == procgrid[iswap]-1) 
+	    {
+	      pbc_flags[iswap][0] = 1;
+a93 1
+	  
+a96 6
+	  if (myloc[iswap] == 0)
+	    {
+	      pbc_flags[iswap][0] = 1;
+	      pbc_flags[iswap][iswap+1] = -1;	      
+	    }
+	  
+d100 1
+a100 1
+	      pbc_flags[iswap][iswap+1] = 1;
+d104 13
+d118 1
+d120 1
+a120 1
+  
+d188 1
+a188 1
+			      vector <Bin*> sendbins[3],vector <Bin*> recvbins[3])
+@
+
+
+1.1.2.7
+log
+@Correct several bugs
+@
+text
+@a60 4
+
+#include "binlist.h"
+#include "bin.h"
+
+d77 70
+a146 1
+Comm_Octant::Comm_Octant(){}
+d148 3
+a150 2
+void Comm_Octant::Setup(Comm* comm, const int oct_id[3], vector<Bin *> sendbins[3],
+			vector<Bin *> recvbins[3]) {
+a160 1
+  comm->get_myloc(myloc);
+d162 1
+a162 3
+
+  /* initialize comm buffers & exchange memory */
+
+d168 1
+a168 4
+  nswap = 3;
+  maxswap = nswap;
+  allocate_swap(maxswap);
+
+d172 1
+d174 7
+a180 6
+  for (int i = 0; i < maxswap; i++) {
+    maxsendlist[i] = BUFMIN;
+    sendlist[i].resize(BUFMIN);
+    maxrecvlist[i] = BUFMIN;
+    recvlist[i].resize(BUFMIN);
+  }
+d182 2
+a183 1
+  SetupLists(sendbins,recvbins);
+d185 1
+a185 1
+  for (int iswap=0;iswap<nswap;iswap++) {
+d187 2
+a188 3
+  }
+
+  for (int iswap=0;iswap<nswap;iswap++) {
+d190 1
+a190 23
+  }
+
+ // pbc_flags store flags for *sending* atoms thru PBC
+  // [0] = 1 if any dim is across PBC
+  // [123] = +/-1 if dim 012 is across PBC, -1 for sending up.
+  for (int iswap=0;iswap<nswap;iswap++) {
+    pbc_flags[iswap][0] = 0;
+    pbc_flags[iswap][1] = 0;
+    pbc_flags[iswap][2] = 0;
+    pbc_flags[iswap][3] = 0;
+    if (oct_id[iswap]) {
+      if (myloc[iswap] == 0) {
+        pbc_flags[iswap][0] = 1;
+        pbc_flags[iswap][iswap+1] = 1;
+      }
+    } else {
+      if (myloc[iswap] == procgrid[iswap]-1) {
+        pbc_flags[iswap][0] = 1;
+        pbc_flags[iswap][iswap+1] = -1;
+      }
+    }
+  }
+
+d193 1
+a193 3
+
+void Comm_Octant::SetupLists(vector<Bin *> sendbins[3], 
+			     vector<Bin *> recvbins[3])
+d197 1
+a197 1
+      sendnum[i] = sendbins[i].size(); // size of sendlist
+d200 2
+a201 2
+      for (int j = 0; j < sendbins[i].size(); j++) 
+	sendlist[i][j] = j;
+d203 1
+a203 1
+      recvnum[i] = recvbins[i].size();  // size of recvlist
+d206 2
+a207 2
+      for (int j = 0; j < recvbins[i].size(); j++) 
+	recvlist[i][j] = j;
+d224 1
+a224 2
+      nsend = ol->pack_comm_size(comm,sendnum[iswap],sendlist[iswap],
+				 sendbins[iswap]);
+d226 1
+a226 1
+
+a229 1
+
+a231 1
+
+a236 1
+
+d246 2
+a247 2
+
+       /* unpack buffer */
+d255 1
+a255 2
+				      vector <Bin*> sendbins[3],
+				      vector <Bin*> recvbins[3]) 
+a272 2
+
+      //exit(0);
+@
+
+
+1.1.2.8
+log
+@Correct a few things.
+@
+text
+@a63 1
+#include "bintools.h"
+d120 1
+a120 1
+  SetupLists(sendbins,recvbins,comm);
+a132 1
+
+d138 9
+a146 16
+
+    if (oct_id[iswap]) 
+      {
+	if (myloc[iswap] == 0) 
+	  {
+	    pbc_flags[iswap][0] = 1;
+	    pbc_flags[iswap][iswap+1] = 1;
+	  }
+      } 
+    else 
+      {
+	if (myloc[iswap] == procgrid[iswap]-1) 
+	  {
+	    pbc_flags[iswap][0] = 1;
+	    pbc_flags[iswap][iswap+1] = -1;
+	  }
+d148 1
+d150 1
+d152 2
+a153 1
+ 
+d155 1
+a155 1
+			     vector<Bin *> recvbins[3], Comm *comm)
+d163 2
+a164 2
+	sendlist[i][j] = sendbins[i][j]->get_id();
+
+d169 1
+a169 1
+	recvlist[i][j] = recvbins[i][j]->get_id();
+d174 2
+a175 2
+void Comm_Octant::communicate(Comm* comm,const Box* b,
+			      BinList* bl,BinTools* bt)
+d182 1
+a182 1
+  
+d186 2
+a187 2
+      nsend = bl->pack_comm_size(comm,sendnum[iswap],sendlist[iswap]);
+
+d191 2
+a192 2
+      bl->pack_comm(sendnum[iswap],sendlist[iswap],
+		    &buf_send[0],pbc_flags[iswap],b,comm);
+d214 1
+a214 1
+      bl->unpack_comm(recvnum[iswap],recvlist[iswap],buf,comm);
+d220 3
+a222 2
+void Comm_Octant::reverse_communicate(Comm* comm,const Box* b,
+				      BinList*bl, BinTools* bt)
+d232 1
+a232 1
+      nsend = bl->pack_reverse_size(recvnum[iswap],recvlist[iswap],comm);
+d236 2
+a237 2
+      bl->pack_reverse(recvnum[iswap],recvlist[iswap],
+		       &buf_send[0],pbc_flags[iswap],b,comm);
+d241 2
+d258 1
+a258 1
+      bl->unpack_reverse(sendnum[iswap],sendlist[iswap],buf,comm);
+@
+
+
+1.1.2.9
+log
+@Add a pointer to particle instead of an array of particle.
+
+Bug in particles coordinates.
+@
+text
+@d134 1
+d141 1
+a141 1
+    if (oct_id[iswap] == 1) 
+a158 2
+
+
+d169 1
+a169 1
+	sendlist[i][j] = j;
+d175 1
+a175 1
+	recvlist[i][j] = j;
+d180 2
+a181 2
+void Comm_Octant::communicate(Comm* comm,const Box* b,BinList* bl,BinTools* bt,
+			      vector <Bin *> SendBins[3], vector <Bin *> RecvBins[3])
+d192 1
+a192 2
+      nsend = bl->pack_comm_size(comm,sendnum[iswap],sendlist[iswap],
+				 SendBins[iswap]);
+d197 1
+a197 1
+      bl->pack_comm(sendnum[iswap],sendlist[iswap],SendBins[iswap],
+d220 1
+a220 1
+      bl->unpack_comm(recvnum[iswap],recvlist[iswap],RecvBins[iswap],buf,comm);
+d226 2
+a227 2
+void Comm_Octant::reverse_communicate(Comm* comm,const Box* b,BinList*bl,BinTools* bt,
+				      vector <Bin *> SendBins[3], vector <Bin *> RecvBins[3])
+d237 1
+a237 2
+      nsend = bl->pack_reverse_size(recvnum[iswap],recvlist[iswap],
+				    RecvBins[iswap],comm);
+d241 1
+a241 1
+      bl->pack_reverse(recvnum[iswap],recvlist[iswap],RecvBins[iswap],
+d261 1
+a261 2
+      bl->unpack_reverse(sendnum[iswap],sendlist[iswap],SendBins[iswap],
+			 buf,comm);
+@
+
+
+1.1.2.10
+log
+@Latest additions to Monte Carlo branch
+@
+text
+@d228 2
+a229 3
+void Comm_Octant::reverse_communicate(Comm* comm,const Box* b,
+		     BinList*bl,BinTools* bt,vector <Bin *> SendBins[3], 
+		     vector <Bin *> RecvBins[3])
+d245 1
+a245 1
+		       &buf_send[0],comm);
+d265 1
+a265 1
+			 buf,pbc_flags[iswap],b,comm);
+@
+
+
+1.1.2.11
+log
+@Bin Communication fixed
+@
+text
+@d181 1
+a181 1
+void Comm_Octant::communicate(ParticleList* p, Comm* comm,const Box* b,BinList* bl,BinTools* bt,
+d199 1
+a199 1
+      bl->pack_comm(p,sendnum[iswap],sendlist[iswap],SendBins[iswap],
+d222 1
+a222 1
+      bl->unpack_comm(p, recvnum[iswap],recvlist[iswap],RecvBins[iswap],buf,comm);
+d228 1
+a228 1
+void Comm_Octant::reverse_communicate(ParticleList* p, Comm* comm,const Box* b,
+d245 1
+a245 1
+      bl->pack_reverse(p,recvnum[iswap],recvlist[iswap],RecvBins[iswap],
+d265 1
+a265 1
+      bl->unpack_reverse(p, sendnum[iswap],sendlist[iswap],SendBins[iswap],
+@
+
+
+1.1.2.12
+log
+@Added EAM energy change calculation
+@
+text
+@d181 3
+a183 2
+void Comm_Octant::communicate(ParticleList* p, Comm* comm,const Box* b,BinList* bl,
+			      vector <Bin *> SendBins[3], vector <Bin *> RecvBins[3]) {
+a189 5
+  // Important to delete all ghost particles before starting Monte Carlo run.
+  // Otherwise these may interfere with ghost particles created by ghost bins
+  p->ResetGhosts();
+  p->localptr_clear();
+
+d193 1
+a193 1
+      nsend = bl->pack_comm_size(p,sendnum[iswap],sendlist[iswap],
+d195 1
+d228 2
+a229 2
+void Comm_Octant::reverse_communicate(ParticleList* p, Comm* comm, const Box* b,BinList* bl,
+		     vector <Bin *> SendBins[3], 
+d240 2
+a241 2
+      nsend = bl->pack_reverse_size(p,recvnum[iswap],recvlist[iswap],
+				    RecvBins[iswap]);
+@
+
+

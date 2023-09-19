@@ -1,0 +1,100 @@
+head	4.2;
+access;
+symbols
+	ReverseComm_branch:4.1.0.4
+	ADTools_branch:4.1.0.2
+	Monaco_Aidan:4.0.0.12
+	Root-of-Monaco_Aidan:4.0
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0;
+locks; strict;
+comment	@# @;
+
+
+4.2
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2006.03.20.20.56.03;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.2
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@      character*60 qmol
+      common
+     $/cbksrtbon1/ dbodr(nbomax),dbopidr(nbomax),
+     $             dbopi2dr(nbomax),
+     $             rob1(nsort,nsort),rob2(nsort,nsort),
+     $             rob3(nsort,nsort),
+     $             rat(nsort),rapt(nsort),vnq(nsort),bom(nbotym),
+     $             pdp(nbotym),ptp(nbotym),pdo(nbotym),
+     $             popi(nbotym),bop1(nbotym),bop2(nbotym),cutoff,
+     $             nbs(nbotym,2),
+     $             nsbma2,nsbmax,nboty2,nbonall,qfile(nmolset),qmol
+
+
+@
+
+
+4.1
+log
+@Added better diagnostics for ReaxFF memory footprint.
+Output to nodefiles for successful runs (grep reax_def).
+Output to standard output for unsuccessful runs.
+@
+text
+@d10 1
+a10 1
+     $             nubon1(nat,mbond),nbs(nbotym,2),
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d11 1
+a11 1
+     $             nsbma2,nsbmax,nboty2,qfile(nmolset),qmol
+@
+
+
+1.1
+log
+@Merged REAX version with main version
+@
+text
+@@
+

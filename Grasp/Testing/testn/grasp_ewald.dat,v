@@ -1,0 +1,2071 @@
+head	4.9;
+access;
+symbols
+	PPPM_Crozier2:4.2.0.2
+	PPPM_Crozier:4.2
+	Root-of-PPPM_Crozier:4.2
+	Monaco:4.1.0.2
+	PreMonaco:4.1
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.5
+	REAX-2:3.3
+	P_MonacoTesting:3.3.0.6
+	InitialGraspTesting:3.3
+	P_Monaco:3.3.0.4
+	InitialGrasp:3.3
+	REAXFF:3.3.0.2
+	cjkimme_version_merge_from_trunk_1:1.6.2.1
+	cjkimme_version:1.6.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.9
+date	2007.09.05.22.51.10;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.06.02.03.27.22;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.01.26.23.22.29;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.12.12.18.03.39;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.09.30.18.46.12;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.05.02.22.44.55;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.03.24.21.11.35;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.02.18.16.46.40;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2004.12.16.21.47.50;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.24.23.39.28;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2004.08.24.15.36.29;	author athomps;	state Exp;
+branches
+	1.6.2.1;
+next	1.5;
+
+1.5
+date	2004.07.30.20.18.56;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2004.05.20.22.11.35;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2004.04.28.22.00.03;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.03.02.17.49.48;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.03.01.18.14.14;	author athomps;	state Exp;
+branches;
+next	;
+
+1.6.2.1
+date	2004.09.13.23.05.47;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.9
+log
+@Reran most test problems using Apple laptop with 2.33 GHz Intel core 2 Duo
+@
+text
+@/Users/athomps/netapp/codes/Grasp/Testing/testn/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /Users/athomps/netapp/codes/Grasp/Testing/testn/
+PATH_MAX is 1024
+
+
+
+Entering Input::ReadInput()
+Opened /Users/athomps/netapp/codes/Grasp/Testing/testn/inp.dat for input
+forcefield twobody twobody.in Lennard-Jones
+forcefield ewald 1.0e-12 6.0
+timestep 0.0100000000
+nsteps 1000
+box dimensions	2.0000000000	0.0000000000	0.0000000000 \
+			0.0000000000	2.0000000000	0.0000000000 \
+			0.0000000000	0.0000000000	2.0000000000
+box origin	-1.0000000000	-1.0000000000	-1.0000000000
+initialize temperature 0.0000000000 256
+neighbor bin 10 0.3000000000
+thermo 100
+dump particles 100
+dump velocities 100
+dump forces 100
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 3
+A 10.0000000000
+B 2.0000000000
+C 3.0000000000
+
+
+
+Reading Lennard-Jones from file twobody.in
+Ewald arg_string is  1.0e-12 6.0
+Ewald precision is 0.0000000000
+Ewald cutoff is 6.0000000000
+  G vector = 0.9157755279
+
+
+
+Setting up force field class 0 called Lennard-Jones
+
+id1 	 id2 	 type 	rcutsq 	 np	 p1      p2    ....   p_np  
+A	A	7	36.00	7        200.8        100.4        16.74        16.74   -0.0003587        1389.       0.9158
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield particle type match for particle type B
+****************************************************
+****************************************************
+Warning: ForceField::SetupTypes:
+No forcefield particle type match for particle type C
+****************************************************
+Cutoffs for this forcefield
+rcutmax = 6.000
+rcutcomm = 6.300
+rskin = 0.3000
+rcutneighmax = 6.300
+
+
+
+Setting up force field class 4 called Long-Range
+
+
+
+Entering ParticleList::ReadConfig()
+Will not read an initial velocity file 
+Will not read an initial displacement file 
+Total particles read = 2
+
+
+
+Entering Output::Setup()
+Actual 1d max vectors = 61 3 171
+
+
+
+Entering FixList::Setup()
+
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        48.9592486483
+   Coulombic        =      -469.8297861741
+Long-Range          =     -1361.9042520835
+Potential Energy    =     -1782.7747896093
+Kinetic Energy      =         0.0000000000
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7747896093
+Pressure            =    -48443.7359593166
+Temperature         =         0.0000000000
+Total Particles     =                    2
+Volume              =         8.0000000000
+A Vector Norm       =         2.0000000000
+B Vector Norm       =         2.0000000000
+C Vector Norm       =         2.0000000000
+--------------- Step       100 ---- CPU =     0.0400 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        53.0064076676
+   Coulombic        =      -474.7771596461
+Long-Range          =     -1362.3873822711
+Potential Energy    =     -1784.1581342496
+Kinetic Energy      =         1.3833366523
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7747975974
+Pressure            =    -44965.6154849775
+Temperature         =       110.9179794998
+--------------- Step       200 ---- CPU =     0.0789 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        65.4539036608
+   Coulombic        =      -488.5948020145
+Long-Range          =     -1363.7061008817
+Potential Energy    =     -1786.8469992354
+Kinetic Energy      =         4.0721825133
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7748167220
+Pressure            =    -34407.6709324329
+Temperature         =       326.5136189309
+--------------- Step       300 ---- CPU =     0.1187 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        85.5832748246
+   Coulombic        =      -507.5759804293
+Long-Range          =     -1365.4476574440
+Potential Energy    =     -1787.4403630487
+Kinetic Energy      =         4.6655406649
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7748223838
+Pressure            =    -17690.2099534609
+Temperature         =       374.0899534256
+--------------- Step       400 ---- CPU =     0.1588 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =       106.7244406928
+   Coulombic        =      -524.3818410828
+Long-Range          =     -1366.9262477285
+Potential Energy    =     -1784.5836481185
+Kinetic Energy      =         1.8088652893
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7747828292
+Pressure            =      -467.5843179376
+Temperature         =       145.0374952072
+--------------- Step       500 ---- CPU =     0.1987 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =       114.7044649088
+   Coulombic        =      -530.0999510535
+Long-Range          =     -1367.4164553061
+Potential Energy    =     -1782.8119414508
+Kinetic Energy      =         0.0371879453
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7747535055
+Pressure            =      5962.4557003959
+Temperature         =         2.9817844734
+--------------- Step       600 ---- CPU =     0.2384 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =       102.3899331712
+   Coulombic        =      -521.1448254531
+Long-Range          =     -1366.6458928661
+Potential Energy    =     -1785.4007851480
+Kinetic Energy      =         2.6259898529
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7747952951
+Pressure            =     -3977.1211503719
+Temperature         =       210.5557516964
+--------------- Step       700 ---- CPU =     0.2775 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        80.3915340711
+   Coulombic        =      -503.0049552404
+Long-Range          =     -1365.0353894251
+Potential Energy    =     -1787.6488105944
+Kinetic Energy      =         4.8739860853
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7748245091
+Pressure            =    -21967.8588290466
+Temperature         =       390.8034156406
+--------------- Step       800 ---- CPU =     0.3211 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        61.7782671468
+   Coulombic        =      -484.7109629106
+Long-Range          =     -1363.3399045768
+Potential Energy    =     -1786.2726003406
+Kinetic Energy      =         3.4977882591
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7748120815
+Pressure            =    -37506.6932005449
+Temperature         =       280.4578377768
+--------------- Step       900 ---- CPU =     0.3600 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        51.3260842455
+   Coulombic        =      -472.7536839370
+Long-Range          =     -1362.1904959222
+Potential Energy    =     -1783.6180956137
+Kinetic Energy      =         0.8433012493
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7747943644
+Pressure            =    -46404.5407147236
+Temperature         =        67.6171418776
+--------------- Step      1000 ---- CPU =     0.3999 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        49.1782362568
+   Coulombic        =      -470.1040674990
+Long-Range          =     -1361.9311919360
+Potential Energy    =     -1782.8570231782
+Kinetic Energy      =         0.0822331198
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.7747900584
+Pressure            =    -48254.8822850705
+Temperature         =         6.5935732116
+
+
+
+Loop time: 0.3999590874 on 2 processors for 2 particles for 1000 steps
+Nprocs = 2 Tgrind = 0.0003999591
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.0667     16.67
+          Neigh Time    0.0092      2.31
+           Comm Time    0.0658     16.45
+       Exchange Time    0.0282      7.06
+        Revcomm Time    0.1726     43.14
+        Barrier Time    0.0000      0.00
+          Other Time    0.0575     14.37
+          Total Time    0.4000    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+Lennard-Jones           0.0216 (  1000)     0.0092 (   100) 
+Long-Range              0.0451 (  1000) 
+
+
+
+Finished 
+@
+
+
+4.8
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d103 1
+a103 1
+--------------- Step       100 ---- CPU =     0.7478 (sec) ---------------
+d114 1
+a114 1
+--------------- Step       200 ---- CPU =     1.4992 (sec) ---------------
+d123 1
+a123 1
+Pressure            =    -34407.6709324328
+d125 1
+a125 1
+--------------- Step       300 ---- CPU =     2.2466 (sec) ---------------
+d136 1
+a136 1
+--------------- Step       400 ---- CPU =     2.9941 (sec) ---------------
+d147 1
+a147 1
+--------------- Step       500 ---- CPU =     3.7408 (sec) ---------------
+d158 1
+a158 1
+--------------- Step       600 ---- CPU =     4.4879 (sec) ---------------
+d169 1
+a169 1
+--------------- Step       700 ---- CPU =     5.2442 (sec) ---------------
+d180 1
+a180 1
+--------------- Step       800 ---- CPU =     5.9937 (sec) ---------------
+d191 1
+a191 1
+--------------- Step       900 ---- CPU =     6.7628 (sec) ---------------
+d200 1
+a200 1
+Pressure            =    -46404.5407147237
+d202 1
+a202 1
+--------------- Step      1000 ---- CPU =     7.5094 (sec) ---------------
+d216 2
+a217 2
+Loop time: 7.5093855858 on 2 processors for 2 particles for 1000 steps
+Nprocs = 2 Tgrind = 0.0075093856
+d223 5
+a227 5
+          Force Time    0.9462     12.60
+          Neigh Time    0.1052      1.40
+           Comm Time    2.0768     27.66
+       Exchange Time    0.5834      7.77
+        Revcomm Time    3.0667     40.84
+d229 2
+a230 2
+          Other Time    0.7311      9.74
+          Total Time    7.5094    100.00
+d236 2
+a237 2
+Lennard-Jones           0.1200 (  1000)     0.1052 (   100) 
+Long-Range              0.8261 (  1000) 
+@
+
+
+4.7
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d61 1
+d103 1
+a103 1
+--------------- Step       100 ---- CPU =     0.7063 (sec) ---------------
+d114 1
+a114 1
+--------------- Step       200 ---- CPU =     1.4255 (sec) ---------------
+d125 1
+a125 1
+--------------- Step       300 ---- CPU =     2.1282 (sec) ---------------
+d136 1
+a136 1
+--------------- Step       400 ---- CPU =     2.8324 (sec) ---------------
+d147 1
+a147 1
+--------------- Step       500 ---- CPU =     3.5247 (sec) ---------------
+d158 1
+a158 1
+--------------- Step       600 ---- CPU =     4.2174 (sec) ---------------
+d169 1
+a169 1
+--------------- Step       700 ---- CPU =     4.9146 (sec) ---------------
+d180 1
+a180 1
+--------------- Step       800 ---- CPU =     5.6127 (sec) ---------------
+d191 1
+a191 1
+--------------- Step       900 ---- CPU =     6.3373 (sec) ---------------
+d202 1
+a202 1
+--------------- Step      1000 ---- CPU =     7.2268 (sec) ---------------
+d216 2
+a217 1
+Loop time: 7.2273049355 on 2 processors for 2 particles for 1000 steps
+d223 5
+a227 5
+          Force Time    0.8912     12.33
+          Neigh Time    0.2696      3.73
+           Comm Time    1.9159     26.51
+       Exchange Time    0.5772      7.99
+        Revcomm Time    2.9187     40.38
+d229 2
+a230 2
+          Other Time    0.6546      9.06
+          Total Time    7.2273    100.00
+d236 2
+a237 2
+Lennard-Jones           0.1029 (  1000)     0.2696 (   100) 
+Long-Range              0.7883 (  1000) 
+@
+
+
+4.6
+log
+@More aftershocks from the ReaxFF upgrade
+@
+text
+@d102 1
+a102 1
+--------------- Step       100 ---- CPU =     0.6448 (sec) ---------------
+d113 1
+a113 1
+--------------- Step       200 ---- CPU =     1.2748 (sec) ---------------
+d124 1
+a124 1
+--------------- Step       300 ---- CPU =     1.9125 (sec) ---------------
+d135 1
+a135 1
+--------------- Step       400 ---- CPU =     2.5384 (sec) ---------------
+d146 1
+a146 1
+--------------- Step       500 ---- CPU =     3.1712 (sec) ---------------
+d157 1
+a157 1
+--------------- Step       600 ---- CPU =     3.8029 (sec) ---------------
+d168 1
+a168 1
+--------------- Step       700 ---- CPU =     4.4336 (sec) ---------------
+d179 1
+a179 1
+--------------- Step       800 ---- CPU =     5.0669 (sec) ---------------
+d190 1
+a190 1
+--------------- Step       900 ---- CPU =     5.6967 (sec) ---------------
+d201 1
+a201 1
+--------------- Step      1000 ---- CPU =     6.3277 (sec) ---------------
+d215 1
+a215 1
+Loop time: 6.3274819851 on 2 processors for 2 particles for 1000 steps
+d221 5
+a225 5
+          Force Time    0.7767     12.28
+          Neigh Time    0.0983      1.55
+           Comm Time    1.7249     27.26
+       Exchange Time    0.5130      8.11
+        Revcomm Time    2.6305     41.57
+d227 2
+a228 2
+          Other Time    0.5842      9.23
+          Total Time    6.3275    100.00
+d234 2
+a235 2
+Lennard-Jones           0.0984 (  1000)     0.0983 (   100) 
+Long-Range              0.6783 (  1000) 
+@
+
+
+4.5
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/Grasp_Reverse/Testing/testn/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/Grasp_Reverse/Testing/testn/
+d9 1
+a9 1
+Opened /Users/athomps/netapp/codes/Grasp_Reverse/Testing/testn/inp.dat for input
+d102 1
+a102 1
+--------------- Step       100 ---- CPU =     1.7415 (sec) ---------------
+d113 1
+a113 1
+--------------- Step       200 ---- CPU =     3.3673 (sec) ---------------
+d124 1
+a124 1
+--------------- Step       300 ---- CPU =     4.8717 (sec) ---------------
+d135 1
+a135 1
+--------------- Step       400 ---- CPU =     6.8139 (sec) ---------------
+d146 1
+a146 1
+--------------- Step       500 ---- CPU =     8.4565 (sec) ---------------
+d157 1
+a157 1
+--------------- Step       600 ---- CPU =    10.2419 (sec) ---------------
+d168 1
+a168 1
+--------------- Step       700 ---- CPU =    12.1322 (sec) ---------------
+d179 1
+a179 1
+--------------- Step       800 ---- CPU =    14.0477 (sec) ---------------
+d190 1
+a190 1
+--------------- Step       900 ---- CPU =    15.4706 (sec) ---------------
+d201 1
+a201 1
+--------------- Step      1000 ---- CPU =    16.1759 (sec) ---------------
+d215 1
+a215 1
+Loop time: 16.1762210131 on 2 processors for 2 particles for 1000 steps
+d221 5
+a225 5
+          Force Time    2.4468     15.13
+          Neigh Time    0.2907      1.80
+           Comm Time    3.9000     24.11
+       Exchange Time    1.2957      8.01
+        Revcomm Time    6.5569     40.53
+d227 2
+a228 2
+          Other Time    1.6861     10.42
+          Total Time   16.1762    100.00
+d234 2
+a235 2
+Lennard-Jones           0.3737 (  1000)     0.2907 (   100) 
+Long-Range              2.0731 (  1000) 
+@
+
+
+4.4
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d102 1
+a102 1
+--------------- Step       100 ---- CPU =     0.5262 (sec) ---------------
+d113 1
+a113 1
+--------------- Step       200 ---- CPU =     1.0578 (sec) ---------------
+d124 1
+a124 1
+--------------- Step       300 ---- CPU =     1.5895 (sec) ---------------
+d135 1
+a135 1
+--------------- Step       400 ---- CPU =     2.1178 (sec) ---------------
+d146 1
+a146 1
+--------------- Step       500 ---- CPU =     2.6475 (sec) ---------------
+d157 1
+a157 1
+--------------- Step       600 ---- CPU =     3.1771 (sec) ---------------
+d168 1
+a168 1
+--------------- Step       700 ---- CPU =     3.7091 (sec) ---------------
+d179 1
+a179 1
+--------------- Step       800 ---- CPU =     4.2493 (sec) ---------------
+d190 1
+a190 1
+--------------- Step       900 ---- CPU =     4.7786 (sec) ---------------
+d201 1
+a201 1
+--------------- Step      1000 ---- CPU =     5.3142 (sec) ---------------
+d215 1
+a215 1
+Loop time: 5.3139754534 on 2 processors for 2 particles for 1000 steps
+d221 5
+a225 5
+          Force Time    0.6552     12.33
+          Neigh Time    0.0954      1.80
+           Comm Time    1.7120     32.22
+       Exchange Time    0.4944      9.30
+        Revcomm Time    1.9322     36.36
+d227 2
+a228 2
+          Other Time    0.4248      7.99
+          Total Time    5.3140    100.00
+d234 2
+a235 2
+Lennard-Jones           0.0892 (  1000)     0.0954 (   100) 
+Long-Range              0.5661 (  1000) 
+@
+
+
+4.3
+log
+@Modified definition for NPT conserved energy and time constant
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/Grasp/Testing/testn/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/Grasp/Testing/testn/
+d9 1
+d95 1
+a95 1
+Pressure            =    -67348.8691886232
+d99 4
+a102 1
+--------------- Step       100 ---- CPU =     0.4533 (sec) ---------------
+d111 1
+a111 1
+Pressure            =    -63735.4871924252
+d113 1
+a113 1
+--------------- Step       200 ---- CPU =     0.9065 (sec) ---------------
+d122 1
+a122 1
+Pressure            =    -52809.5617243355
+d124 1
+a124 1
+--------------- Step       300 ---- CPU =     1.3595 (sec) ---------------
+d133 1
+a133 1
+Pressure            =    -35608.7842914561
+d135 1
+a135 1
+--------------- Step       400 ---- CPU =     1.8134 (sec) ---------------
+d144 1
+a144 1
+Pressure            =    -17978.1045084707
+d146 1
+a146 1
+--------------- Step       500 ---- CPU =     2.2739 (sec) ---------------
+d155 1
+a155 1
+Pressure            =    -11413.2284386094
+d157 1
+a157 1
+--------------- Step       600 ---- CPU =     2.7300 (sec) ---------------
+d166 1
+a166 1
+Pressure            =    -21564.8550301056
+d168 1
+a168 1
+--------------- Step       700 ---- CPU =     3.1851 (sec) ---------------
+d177 1
+a177 1
+Pressure            =    -40000.5787150574
+d179 1
+a179 1
+--------------- Step       800 ---- CPU =     3.6429 (sec) ---------------
+d188 1
+a188 1
+Pressure            =    -56010.5921342580
+d190 1
+a190 1
+--------------- Step       900 ---- CPU =     4.1020 (sec) ---------------
+d199 1
+a199 1
+Pressure            =    -65229.5052149990
+d201 1
+a201 1
+--------------- Step      1000 ---- CPU =     4.5585 (sec) ---------------
+d210 1
+a210 1
+Pressure            =    -67152.4667845832
+d215 1
+a215 1
+Loop time: 4.5590134859 on 2 processors for 2 particles for 1000 steps
+d221 5
+a225 5
+          Force Time    0.5871     12.88
+          Neigh Time    0.0894      1.96
+           Comm Time    1.5611     34.24
+       Exchange Time    0.4387      9.62
+        Revcomm Time    1.7883     39.23
+d227 2
+a228 2
+          Other Time    0.0944      2.07
+          Total Time    4.5590    100.00
+d234 2
+a235 2
+Lennard-Jones           0.0854 (  1000)     0.0894 (   100) 
+Long-Range              0.5017 (  1000) 
+@
+
+
+4.2
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d98 1
+a98 1
+--------------- Step       100 ---- CPU =     0.5467 (sec) ---------------
+d109 1
+a109 1
+--------------- Step       200 ---- CPU =     1.0866 (sec) ---------------
+d120 1
+a120 1
+--------------- Step       300 ---- CPU =     1.6116 (sec) ---------------
+d131 1
+a131 1
+--------------- Step       400 ---- CPU =     2.1499 (sec) ---------------
+d142 1
+a142 1
+--------------- Step       500 ---- CPU =     2.7053 (sec) ---------------
+d153 1
+a153 1
+--------------- Step       600 ---- CPU =     3.2801 (sec) ---------------
+d164 1
+a164 1
+--------------- Step       700 ---- CPU =     3.8119 (sec) ---------------
+d175 1
+a175 1
+--------------- Step       800 ---- CPU =     4.3522 (sec) ---------------
+d186 1
+a186 1
+--------------- Step       900 ---- CPU =     4.9127 (sec) ---------------
+d197 1
+a197 1
+--------------- Step      1000 ---- CPU =     5.4955 (sec) ---------------
+d211 1
+a211 1
+Loop time: 5.4966565371 on 2 processors for 2 particles for 1000 steps
+d217 5
+a221 5
+          Force Time    0.6609     12.02
+          Neigh Time    0.0916      1.67
+           Comm Time    1.9605     35.67
+       Exchange Time    0.4845      8.81
+        Revcomm Time    1.9756     35.94
+d223 2
+a224 2
+          Other Time    0.3236      5.89
+          Total Time    5.4967    100.00
+d230 2
+a231 2
+Lennard-Jones           0.1099 (  1000)     0.0916 (   100) 
+Long-Range              0.5510 (  1000) 
+@
+
+
+4.1
+log
+@Recovered from corruption that occurred on April 12, 2005.
+@
+text
+@d98 1
+a98 1
+--------------- Step       100 ---- CPU =     0.5870 (sec) ---------------
+d109 1
+a109 1
+--------------- Step       200 ---- CPU =     1.2000 (sec) ---------------
+d120 1
+a120 1
+--------------- Step       300 ---- CPU =     1.8513 (sec) ---------------
+d131 1
+a131 1
+--------------- Step       400 ---- CPU =     2.5168 (sec) ---------------
+d142 1
+a142 1
+--------------- Step       500 ---- CPU =     3.2073 (sec) ---------------
+d153 1
+a153 1
+--------------- Step       600 ---- CPU =     4.1986 (sec) ---------------
+d164 1
+a164 1
+--------------- Step       700 ---- CPU =     4.9591 (sec) ---------------
+d175 1
+a175 1
+--------------- Step       800 ---- CPU =     5.7024 (sec) ---------------
+d186 1
+a186 1
+--------------- Step       900 ---- CPU =     6.4995 (sec) ---------------
+d197 1
+a197 1
+--------------- Step      1000 ---- CPU =     7.2320 (sec) ---------------
+d211 1
+a211 1
+Loop time: 7.2314366102 on 2 processors for 2 particles for 1000 steps
+d217 5
+a221 5
+          Force Time    0.7990     11.05
+          Neigh Time    0.1814      2.51
+           Comm Time    2.3852     32.98
+       Exchange Time    0.8132     11.25
+        Revcomm Time    2.6133     36.14
+d223 2
+a224 2
+          Other Time    0.4393      6.07
+          Total Time    7.2314    100.00
+d230 2
+a231 2
+Lennard-Jones           0.1139 (  1000)     0.1814 (   100) 
+Long-Range              0.6851 (  1000) 
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d98 1
+a98 1
+--------------- Step       100 ---- CPU =     0.5513 (sec) ---------------
+d109 1
+a109 1
+--------------- Step       200 ---- CPU =     1.1029 (sec) ---------------
+d120 1
+a120 1
+--------------- Step       300 ---- CPU =     1.6453 (sec) ---------------
+d131 1
+a131 1
+--------------- Step       400 ---- CPU =     2.2016 (sec) ---------------
+d142 1
+a142 1
+--------------- Step       500 ---- CPU =     2.7473 (sec) ---------------
+d153 1
+a153 1
+--------------- Step       600 ---- CPU =     3.3361 (sec) ---------------
+d164 1
+a164 1
+--------------- Step       700 ---- CPU =     3.9125 (sec) ---------------
+d175 1
+a175 1
+--------------- Step       800 ---- CPU =     4.4769 (sec) ---------------
+d186 1
+a186 1
+--------------- Step       900 ---- CPU =     5.0544 (sec) ---------------
+d197 1
+a197 1
+--------------- Step      1000 ---- CPU =     5.6348 (sec) ---------------
+d211 1
+a211 1
+Loop time: 5.6353720427 on 2 processors for 2 particles for 1000 steps
+d217 5
+a221 5
+          Force Time    0.6720     11.92
+          Neigh Time    0.0967      1.72
+           Comm Time    1.9969     35.43
+       Exchange Time    0.5481      9.73
+        Revcomm Time    2.0018     35.52
+d223 2
+a224 2
+          Other Time    0.3200      5.68
+          Total Time    5.6354    100.00
+d230 2
+a231 2
+Lennard-Jones           0.1008 (  1000)     0.0967 (   100) 
+Long-Range              0.5711 (  1000) 
+@
+
+
+3.5
+log
+@Added a bunch of test case for mixing force fields
+@
+text
+@d1 1
+a1 1
+/home/athomps/Grasp/Testing/testn/grasp.out
+d3 2
+a4 2
+path_str is /home/athomps/Grasp/Testing/testn/
+PATH_MAX is 4096
+d44 4
+d52 1
+a52 1
+No forcefield type for particle type B
+d56 1
+a56 1
+No forcefield type for particle type C
+d65 4
+d98 1
+a98 1
+--------------- Step       100 ---- CPU =     0.3327 (sec) ---------------
+d101 1
+a101 1
+   Coulombic        =      -474.7771596462
+d107 1
+a107 1
+Pressure            =    -63734.2959379933
+d109 1
+a109 1
+--------------- Step       200 ---- CPU =     0.6771 (sec) ---------------
+d118 1
+a118 1
+Pressure            =    -52809.5617243356
+d120 1
+a120 1
+--------------- Step       300 ---- CPU =     1.0264 (sec) ---------------
+d128 2
+a129 2
+Total Energy        =     -1782.7748223839
+Pressure            =    -35605.5083417681
+d131 1
+a131 1
+--------------- Step       400 ---- CPU =     1.3710 (sec) ---------------
+d140 1
+a140 1
+Pressure            =    -17977.8066948627
+d142 1
+a142 1
+--------------- Step       500 ---- CPU =     1.7228 (sec) ---------------
+d151 1
+a151 1
+Pressure            =    -11412.9306250014
+d153 1
+a153 1
+--------------- Step       600 ---- CPU =     2.0802 (sec) ---------------
+d161 2
+a162 2
+Total Energy        =     -1782.7747952952
+Pressure            =    -21563.0681484573
+d164 1
+a164 1
+--------------- Step       700 ---- CPU =     2.4376 (sec) ---------------
+d173 1
+a173 1
+Pressure            =    -40000.1319946451
+d175 1
+a175 1
+--------------- Step       800 ---- CPU =     2.7784 (sec) ---------------
+d183 2
+a184 2
+Total Energy        =     -1782.7748120816
+Pressure            =    -56008.3585321979
+d186 1
+a186 1
+--------------- Step       900 ---- CPU =     3.1353 (sec) ---------------
+d195 1
+a195 1
+Pressure            =    -65229.0584945869
+d197 1
+a197 1
+--------------- Step      1000 ---- CPU =     3.4936 (sec) ---------------
+d206 1
+a206 1
+Pressure            =    -67151.4244369552
+d211 1
+a211 1
+Loop time: 3.4936335828 on 2 processors for 2 particles
+d217 8
+a224 8
+          Force Time    0.6994     20.02
+          Neigh Time    0.0502      1.44
+           Comm Time    0.9184     26.29
+       Exchange Time    0.2997      8.58
+        Revcomm Time    1.2054     34.50
+        Barrier Time    0.2915      8.34
+          Other Time    0.0290      0.83
+          Total Time    3.4936    100.00
+d230 2
+a231 2
+Lennard-Jones           0.1285 (  1000)     0.0459 (   100) 
+Long-Range              0.4955 (  1000) 
+@
+
+
+3.4
+log
+@Added rcutmaxall to forcefieldlist.cpp
+@
+text
+@d1 1
+a1 1
+grasp.out
+d3 2
+a4 1
+path_str is 
+d47 2
+a48 2
+Warning: ForceFieldList::SetupTypes:
+Particle id has no ff match
+a49 1
+-1 B
+d51 2
+a52 2
+Warning: ForceFieldList::SetupTypes:
+Particle id has no ff match
+a53 1
+-1 C
+d90 1
+a90 1
+--------------- Step       100 ---- CPU =     0.9211 (sec) ---------------
+d93 1
+a93 1
+   Coulombic        =      -474.7771596461
+d99 1
+a99 1
+Pressure            =    -63735.4871924252
+d101 1
+a101 1
+--------------- Step       200 ---- CPU =     1.5147 (sec) ---------------
+d110 1
+a110 1
+Pressure            =    -52809.5617243355
+d112 1
+a112 1
+--------------- Step       300 ---- CPU =     2.1117 (sec) ---------------
+d120 2
+a121 2
+Total Energy        =     -1782.7748223838
+Pressure            =    -35608.7842914561
+d123 1
+a123 1
+--------------- Step       400 ---- CPU =     2.7018 (sec) ---------------
+d132 1
+a132 1
+Pressure            =    -17978.1045084707
+d134 1
+a134 1
+--------------- Step       500 ---- CPU =     3.3054 (sec) ---------------
+d143 1
+a143 1
+Pressure            =    -11413.2284386094
+d145 1
+a145 1
+--------------- Step       600 ---- CPU =     3.9319 (sec) ---------------
+d153 2
+a154 2
+Total Energy        =     -1782.7747952951
+Pressure            =    -21564.8550301056
+d156 1
+a156 1
+--------------- Step       700 ---- CPU =     4.5053 (sec) ---------------
+d165 1
+a165 1
+Pressure            =    -40000.5787150574
+d167 1
+a167 1
+--------------- Step       800 ---- CPU =     5.1126 (sec) ---------------
+d175 2
+a176 2
+Total Energy        =     -1782.7748120815
+Pressure            =    -56010.5921342580
+d178 1
+a178 1
+--------------- Step       900 ---- CPU =     5.7452 (sec) ---------------
+d187 1
+a187 1
+Pressure            =    -65229.5052149990
+d189 1
+a189 1
+--------------- Step      1000 ---- CPU =     6.3791 (sec) ---------------
+d198 1
+a198 1
+Pressure            =    -67152.4667845832
+d203 1
+a203 1
+Loop time: 6.3790140152 on 2 processors for 2 particles
+d209 8
+a216 8
+          Force Time    0.7635     11.97
+          Neigh Time    0.0485      0.76
+           Comm Time    1.9991     31.34
+       Exchange Time    0.4644      7.28
+        Revcomm Time    2.2735     35.64
+        Barrier Time    0.5950      9.33
+          Other Time    0.2351      3.69
+          Total Time    6.3790    100.00
+d222 2
+a223 2
+Lennard-Jones           0.1110 (  1000)     0.0461 (   100) 
+Long-Range              0.5611 (  1000) 
+@
+
+
+3.3
+log
+@Added BKS example to test suite
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/Grasp/Testing/testn/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/Grasp/Testing/testn/
+d91 1
+a91 1
+--------------- Step       100 ---- CPU =     0.5483 (sec) ---------------
+d102 1
+a102 1
+--------------- Step       200 ---- CPU =     1.1340 (sec) ---------------
+d113 1
+a113 1
+--------------- Step       300 ---- CPU =     1.6941 (sec) ---------------
+d124 1
+a124 1
+--------------- Step       400 ---- CPU =     2.2672 (sec) ---------------
+d135 1
+a135 1
+--------------- Step       500 ---- CPU =     2.8430 (sec) ---------------
+d146 1
+a146 1
+--------------- Step       600 ---- CPU =     3.4491 (sec) ---------------
+d157 1
+a157 1
+--------------- Step       700 ---- CPU =     4.0277 (sec) ---------------
+d168 1
+a168 1
+--------------- Step       800 ---- CPU =     4.6088 (sec) ---------------
+d179 1
+a179 1
+--------------- Step       900 ---- CPU =     5.2103 (sec) ---------------
+d190 1
+a190 1
+--------------- Step      1000 ---- CPU =     5.8126 (sec) ---------------
+d204 1
+a204 1
+Loop time: 5.8127725124 on 2 processors for 2 particles
+d210 8
+a217 8
+          Force Time    0.7037     12.11
+          Neigh Time    0.0442      0.76
+           Comm Time    1.8475     31.78
+       Exchange Time    0.4366      7.51
+        Revcomm Time    2.0144     34.65
+        Barrier Time    0.5305      9.13
+          Other Time    0.2359      4.06
+          Total Time    5.8128    100.00
+d223 2
+a224 2
+Lennard-Jones           0.1024 (  1000)     0.0416 (   100) 
+Long-Range              0.5080 (  1000) 
+@
+
+
+3.2
+log
+@Added a ForceTwobody exp6 example (BKS SiO2) to the
+test suite.
+@
+text
+@a44 4
+Cutoffs for this forcefield
+rcutmax = 6.000
+rskin = 0.3000
+rcutneighmax = 6.300
+d55 4
+d91 1
+a91 1
+--------------- Step       100 ---- CPU =     1.1461 (sec) ---------------
+d102 1
+a102 1
+--------------- Step       200 ---- CPU =     2.4831 (sec) ---------------
+d113 1
+a113 1
+--------------- Step       300 ---- CPU =     3.8031 (sec) ---------------
+d124 1
+a124 1
+--------------- Step       400 ---- CPU =     4.8589 (sec) ---------------
+d135 1
+a135 1
+--------------- Step       500 ---- CPU =     5.7175 (sec) ---------------
+d146 1
+a146 1
+--------------- Step       600 ---- CPU =     6.9409 (sec) ---------------
+d157 1
+a157 1
+--------------- Step       700 ---- CPU =     7.6675 (sec) ---------------
+d168 1
+a168 1
+--------------- Step       800 ---- CPU =     8.6999 (sec) ---------------
+d179 1
+a179 1
+--------------- Step       900 ---- CPU =     9.4196 (sec) ---------------
+d190 1
+a190 1
+--------------- Step      1000 ---- CPU =    10.0299 (sec) ---------------
+d204 1
+a204 1
+Loop time: 10.0307320356 on 2 processors for 2 particles
+d210 8
+a217 8
+          Force Time    1.2754     12.72
+          Neigh Time    0.1277      1.27
+           Comm Time    3.0493     30.40
+       Exchange Time    1.0083     10.05
+        Revcomm Time    3.0655     30.56
+        Barrier Time    0.8016      7.99
+          Other Time    0.7028      7.01
+          Total Time   10.0307    100.00
+d223 2
+a224 2
+Lennard-Jones           0.1171 (  1000)     0.1238 (   100) 
+Long-Range              0.9725 (  1000) 
+@
+
+
+3.1
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d91 1
+a91 1
+--------------- Step       100 ---- CPU =     0.8585 (sec) ---------------
+d102 1
+a102 1
+--------------- Step       200 ---- CPU =     1.3990 (sec) ---------------
+d113 1
+a113 1
+--------------- Step       300 ---- CPU =     1.9527 (sec) ---------------
+d124 1
+a124 1
+--------------- Step       400 ---- CPU =     2.4614 (sec) ---------------
+d135 1
+a135 1
+--------------- Step       500 ---- CPU =     2.9887 (sec) ---------------
+d146 1
+a146 1
+--------------- Step       600 ---- CPU =     3.5494 (sec) ---------------
+d157 1
+a157 1
+--------------- Step       700 ---- CPU =     4.0819 (sec) ---------------
+d168 1
+a168 1
+--------------- Step       800 ---- CPU =     4.6069 (sec) ---------------
+d179 1
+a179 1
+--------------- Step       900 ---- CPU =     5.1460 (sec) ---------------
+d190 1
+a190 1
+--------------- Step      1000 ---- CPU =     5.6986 (sec) ---------------
+d204 1
+a204 1
+Loop time: 5.6990010738 on 2 processors for 2 particles
+d210 8
+a217 8
+          Force Time    0.6722     11.80
+          Neigh Time    0.0413      0.73
+           Comm Time    1.7838     31.30
+       Exchange Time    0.3963      6.95
+        Revcomm Time    2.0358     35.72
+        Barrier Time    0.5323      9.34
+          Other Time    0.2373      4.16
+          Total Time    5.6990    100.00
+d223 2
+a224 2
+Lennard-Jones           0.0996 (  1000)     0.0393 (   100) 
+Long-Range              0.5012 (  1000) 
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d1 1
+a1 1
+/tmp_mnt/Net/sana014/home/athomps/codes/Grasp/Testing/testn/grasp.out
+d3 1
+d43 2
+a44 2
+id1	id2	t 	n       p            p            p            p     
+A	A	8	8        200.8        100.4        16.74        16.74        36.00        1389.       0.9158   -0.0003587
+d63 2
+d91 1
+a91 1
+--------------- Step       100 ---- CPU =     0.3233 (sec) ---------------
+d94 1
+a94 1
+   Coulombic        =      -474.7771596462
+d100 1
+a100 1
+Pressure            =    -63734.2959379933
+d102 1
+a102 1
+--------------- Step       200 ---- CPU =     0.6675 (sec) ---------------
+d111 1
+a111 1
+Pressure            =    -52809.5617243356
+d113 1
+a113 1
+--------------- Step       300 ---- CPU =     1.0011 (sec) ---------------
+d121 2
+a122 2
+Total Energy        =     -1782.7748223839
+Pressure            =    -35605.5083417681
+d124 1
+a124 1
+--------------- Step       400 ---- CPU =     1.3506 (sec) ---------------
+d133 1
+a133 1
+Pressure            =    -17977.8066948627
+d135 1
+a135 1
+--------------- Step       500 ---- CPU =     1.6964 (sec) ---------------
+d144 1
+a144 1
+Pressure            =    -11412.9306250014
+d146 1
+a146 1
+--------------- Step       600 ---- CPU =     2.0215 (sec) ---------------
+d154 2
+a155 2
+Total Energy        =     -1782.7747952952
+Pressure            =    -21563.0681484573
+d157 1
+a157 1
+--------------- Step       700 ---- CPU =     2.3541 (sec) ---------------
+d166 1
+a166 1
+Pressure            =    -40000.1319946451
+d168 1
+a168 1
+--------------- Step       800 ---- CPU =     2.7030 (sec) ---------------
+d176 2
+a177 2
+Total Energy        =     -1782.7748120816
+Pressure            =    -56008.3585321979
+d179 1
+a179 1
+--------------- Step       900 ---- CPU =     3.0674 (sec) ---------------
+d188 1
+a188 1
+Pressure            =    -65229.0584945869
+d190 1
+a190 1
+--------------- Step      1000 ---- CPU =     3.4010 (sec) ---------------
+d199 1
+a199 1
+Pressure            =    -67151.4244369552
+d204 1
+a204 1
+Loop time: 3.4012730000 on 2 processors for 2 particles
+d210 8
+a217 8
+          Force Time    0.5933     17.44
+          Neigh Time    0.0806      2.37
+           Comm Time    1.0062     29.58
+       Exchange Time    0.3112      9.15
+        Revcomm Time    1.0361     30.46
+        Barrier Time    0.3025      8.89
+          Other Time    0.0714      2.10
+          Total Time    3.4013    100.00
+d223 2
+a224 2
+Lennard-Jones           0.0997 (  1000)     0.0738 (   100) 
+Long-Range              0.4442 (  1000) 
+@
+
+
+1.6
+log
+@Updated README and got slightly faster timing for testl
+due to modified scheme for computing EAM forces.
+@
+text
+@d88 1
+a88 1
+--------------- Step       100 ---- CPU =     0.2534 (sec) ---------------
+d99 1
+a99 1
+--------------- Step       200 ---- CPU =     0.5145 (sec) ---------------
+d110 1
+a110 1
+--------------- Step       300 ---- CPU =     0.7746 (sec) ---------------
+d121 1
+a121 1
+--------------- Step       400 ---- CPU =     1.0477 (sec) ---------------
+d132 1
+a132 1
+--------------- Step       500 ---- CPU =     1.3093 (sec) ---------------
+d143 1
+a143 1
+--------------- Step       600 ---- CPU =     1.5755 (sec) ---------------
+d154 1
+a154 1
+--------------- Step       700 ---- CPU =     1.8506 (sec) ---------------
+d165 1
+a165 1
+--------------- Step       800 ---- CPU =     2.1243 (sec) ---------------
+d176 1
+a176 1
+--------------- Step       900 ---- CPU =     2.3860 (sec) ---------------
+d187 1
+a187 1
+--------------- Step      1000 ---- CPU =     2.6514 (sec) ---------------
+d201 1
+a201 1
+Loop time: 2.6516605000 on 2 processors for 2 particles
+d207 8
+a214 8
+          Force Time    0.4579     17.27
+          Neigh Time    0.0645      2.43
+           Comm Time    0.7802     29.42
+       Exchange Time    0.2444      9.22
+        Revcomm Time    0.8394     31.66
+        Barrier Time    0.2182      8.23
+          Other Time    0.0469      1.77
+          Total Time    2.6517    100.00
+d220 2
+a221 2
+Lennard-Jones           0.0938 (  1000)     0.0575 (   100) 
+Long-Range              0.3220 (  1000) 
+@
+
+
+1.6.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.5
+log
+@Fixed bugs in ForceEwald and modified testn to test fix
+Shortened run times on testm, testo, and testp by 10x.
+@
+text
+@d88 1
+a88 1
+--------------- Step       100 ---- CPU =     0.2652 (sec) ---------------
+d99 1
+a99 1
+--------------- Step       200 ---- CPU =     0.5278 (sec) ---------------
+d110 1
+a110 1
+--------------- Step       300 ---- CPU =     0.7830 (sec) ---------------
+d121 1
+a121 1
+--------------- Step       400 ---- CPU =     1.0418 (sec) ---------------
+d132 1
+a132 1
+--------------- Step       500 ---- CPU =     1.3085 (sec) ---------------
+d143 1
+a143 1
+--------------- Step       600 ---- CPU =     1.5766 (sec) ---------------
+d154 1
+a154 1
+--------------- Step       700 ---- CPU =     1.8332 (sec) ---------------
+d165 1
+a165 1
+--------------- Step       800 ---- CPU =     2.0934 (sec) ---------------
+d176 1
+a176 1
+--------------- Step       900 ---- CPU =     2.3532 (sec) ---------------
+d187 1
+a187 1
+--------------- Step      1000 ---- CPU =     2.6166 (sec) ---------------
+d201 1
+a201 1
+Loop time: 2.6168425000 on 2 processors for 2 particles
+d207 8
+a214 7
+          Force Time    0.4570     17.46
+          Neigh Time    0.0680      2.60
+           Comm Time    0.7658     29.26
+       Exchange Time    0.2365      9.04
+        Revcomm Time    0.8304     31.73
+          Other Time    0.2592      9.90
+          Total Time    2.6168    100.00
+d220 2
+a221 2
+Lennard-Jones           0.0948 (  1000)     0.0607 (   100) 
+Long-Range              0.3222 (  1000) 
+@
+
+
+1.4
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d8 1
+a8 1
+forcefield ewald 1.0e-5 6.0
+d37 2
+a38 2
+Ewald arg_string is  1.0e-5 6.0
+Ewald precision is 0.0000100000
+d40 1
+a40 1
+  G vector = 0.5128231366
+d43 1
+a43 1
+A	A	8	8        200.8        100.4        16.74        16.74        36.00        1389.       0.5128   -0.0003587
+d67 1
+a67 1
+Actual 1d max vectors = 3 1 13
+d77 4
+a80 4
+   Dispersion       =        48.9592486484
+   Coulombic        =     -1027.9603110634
+Long-Range          =      -803.8506251475
+Potential Energy    =     -1782.8516875625
+d83 2
+a84 2
+Total Energy        =     -1782.8516875625
+Pressure            =    -67454.8627352364
+d88 1
+a88 1
+--------------- Step       100 ---- CPU =     0.2268 (sec) ---------------
+d90 108
+a197 108
+   Dispersion       =        53.0065918924
+   Coulombic        =     -1033.3903517066
+Long-Range          =      -803.8513961251
+Potential Energy    =     -1784.2351559393
+Kinetic Energy      =         1.3834578526
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8516980867
+Pressure            =    -63841.3936953846
+Temperature         =       110.9276975190
+--------------- Step       200 ---- CPU =     0.4486 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        65.4547027510
+   Coulombic        =     -1048.5254496426
+Long-Range          =      -803.8534976738
+Potential Energy    =     -1786.9242445654
+Kinetic Energy      =         4.0725191905
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8517253749
+Pressure            =    -52917.2191965710
+Temperature         =       326.5406142071
+--------------- Step       300 ---- CPU =     0.6706 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        85.5851395608
+   Coulombic        =     -1069.2464677095
+Long-Range          =      -803.8562666781
+Potential Energy    =     -1787.5175948269
+Kinetic Energy      =         4.6658502621
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8517445647
+Pressure            =    -35713.7064842996
+Temperature         =       374.1147773915
+--------------- Step       400 ---- CPU =     0.8826 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =       106.7272373020
+   Coulombic        =     -1087.5292153163
+Long-Range          =      -803.8586118723
+Potential Energy    =     -1784.6605898865
+Kinetic Energy      =         1.8088709891
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8517188974
+Pressure            =    -18084.5430798360
+Temperature         =       145.0379522288
+--------------- Step       500 ---- CPU =     1.1007 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =       114.7068406833
+   Coulombic        =     -1093.7363695946
+Long-Range          =      -803.8593881723
+Potential Energy    =     -1782.8889170836
+Kinetic Energy      =         0.0372224266
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8516946570
+Pressure            =    -11520.0774736386
+Temperature         =         2.9845492358
+--------------- Step       600 ---- CPU =     1.3135 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =       102.3906667030
+   Coulombic        =     -1084.0106301633
+Long-Range          =      -803.8581674048
+Potential Energy    =     -1785.4781308652
+Kinetic Energy      =         2.6264022980
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8517285671
+Pressure            =    -21670.8795249179
+Temperature         =       210.5888221585
+--------------- Step       700 ---- CPU =     1.5198 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        80.3910098440
+   Coulombic        =     -1064.2615175614
+Long-Range          =      -803.8556115706
+Potential Energy    =     -1787.7261192880
+Kinetic Energy      =         4.8743760806
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8517432073
+Pressure            =    -40107.4671693982
+Temperature         =       390.8346860465
+--------------- Step       800 ---- CPU =     1.7295 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        61.7774488699
+   Coulombic        =     -1044.2740797676
+Long-Range          =      -803.8529142792
+Potential Energy    =     -1786.3495451769
+Kinetic Energy      =         3.4978268936
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8517182833
+Pressure            =    -56117.5202174332
+Temperature         =       280.4609355549
+--------------- Step       900 ---- CPU =     1.9391 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        51.3255882326
+   Coulombic        =     -1031.1693734433
+Long-Range          =      -803.8510818883
+Potential Energy    =     -1783.6948670990
+Kinetic Energy      =         0.8431733099
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8516937891
+Pressure            =    -65338.0716736555
+Temperature         =        67.6068835102
+--------------- Step      1000 ---- CPU =     2.1374 (sec) ---------------
+Lennard-Jones:
+   Dispersion       =        49.1784278585
+   Coulombic        =     -1028.2617561626
+Long-Range          =      -803.8506681885
+Potential Energy    =     -1782.9339964926
+Kinetic Energy      =         0.0823083456
+Extended Energy     =         0.0000000000
+Total Energy        =     -1782.8516881471
+Pressure            =    -67258.2928854605
+Temperature         =         6.5996049265
+d201 1
+a201 1
+Loop time: 2.1378345000 on 2 processors for 2 particles
+d207 7
+a213 7
+          Force Time    0.3623     16.95
+          Neigh Time    0.0603      2.82
+           Comm Time    0.6003     28.08
+       Exchange Time    0.1767      8.26
+        Revcomm Time    0.6671     31.21
+          Other Time    0.2711     12.68
+          Total Time    2.1378    100.00
+d219 2
+a220 2
+Lennard-Jones           0.0862 (  1000)     0.0529 (   100) 
+Long-Range              0.2418 (  1000) 
+@
+
+
+1.3
+log
+@See previous checkin of source for info.
+@
+text
+@a24 8
+volume = 8.0000000000
+widths = 2.0000000000 2.0000000000 2.0000000000
+lva = 2.0000000000 0.0000000000 0.0000000000
+lvb = 0.0000000000 2.0000000000 0.0000000000
+lvc = 0.0000000000 0.0000000000 2.0000000000
+rvh = 0.5000000000 0.0000000000 0.0000000000
+rvk = 0.0000000000 0.5000000000 0.0000000000
+rvl = 0.0000000000 0.0000000000 0.5000000000
+d43 1
+a43 1
+A	A	8	8        200.8        100.4        16.74        16.74        36.00   -0.0003587        1389.       0.5128
+d84 1
+d87 2
+a88 1
+--------------- Step       100 ---- CPU =     0.1962 (sec) ---------------
+d97 1
+d99 1
+a99 2
+Total Particles     =                    2
+--------------- Step       200 ---- CPU =     0.3983 (sec) ---------------
+d108 1
+d110 1
+a110 2
+Total Particles     =                    2
+--------------- Step       300 ---- CPU =     0.5989 (sec) ---------------
+d119 1
+d121 1
+a121 2
+Total Particles     =                    2
+--------------- Step       400 ---- CPU =     0.8172 (sec) ---------------
+d130 1
+d132 1
+a132 2
+Total Particles     =                    2
+--------------- Step       500 ---- CPU =     1.0213 (sec) ---------------
+d141 1
+d143 1
+a143 2
+Total Particles     =                    2
+--------------- Step       600 ---- CPU =     1.2268 (sec) ---------------
+d152 1
+d154 1
+a154 2
+Total Particles     =                    2
+--------------- Step       700 ---- CPU =     1.4294 (sec) ---------------
+d163 1
+d165 1
+a165 2
+Total Particles     =                    2
+--------------- Step       800 ---- CPU =     1.6331 (sec) ---------------
+d174 1
+d176 1
+a176 2
+Total Particles     =                    2
+--------------- Step       900 ---- CPU =     1.8360 (sec) ---------------
+d185 1
+d187 1
+a187 2
+Total Particles     =                    2
+--------------- Step      1000 ---- CPU =     2.0425 (sec) ---------------
+d196 1
+a197 1
+Total Particles     =                    2
+d201 1
+a201 1
+Loop time: 2.0427045000 on 2 processors for 2 particles
+d207 7
+a213 7
+          Force Time    0.3456     16.92
+          Neigh Time    0.0712      3.48
+           Comm Time    0.5815     28.47
+       Exchange Time    0.1731      8.47
+        Revcomm Time    0.6275     30.72
+          Other Time    0.2438     11.94
+          Total Time    2.0427    100.00
+d219 2
+a220 2
+Lennard-Jones           0.0865 (  1000)     0.0644 (   100) 
+Long-Range              0.2268 (  1000) 
+@
+
+
+1.2
+log
+@Updated documentation
+@
+text
+@d94 1
+a94 1
+--------------- Step       100 ---- CPU =     0.3583 (sec) ---------------
+d105 1
+a105 1
+--------------- Step       200 ---- CPU =     0.7241 (sec) ---------------
+d116 1
+a116 1
+--------------- Step       300 ---- CPU =     1.0904 (sec) ---------------
+d127 1
+a127 1
+--------------- Step       400 ---- CPU =     1.4511 (sec) ---------------
+d138 1
+a138 1
+--------------- Step       500 ---- CPU =     1.8175 (sec) ---------------
+d149 1
+a149 1
+--------------- Step       600 ---- CPU =     2.1824 (sec) ---------------
+d160 1
+a160 1
+--------------- Step       700 ---- CPU =     2.5436 (sec) ---------------
+d171 1
+a171 1
+--------------- Step       800 ---- CPU =     2.9085 (sec) ---------------
+d182 1
+a182 1
+--------------- Step       900 ---- CPU =     3.2741 (sec) ---------------
+d193 1
+a193 1
+--------------- Step      1000 ---- CPU =     3.6408 (sec) ---------------
+d207 1
+a207 1
+Loop time: 3.6410725000 on 2 processors for 2 particles
+d213 7
+a219 7
+          Force Time    0.5954     16.35
+          Neigh Time    0.0759      2.08
+           Comm Time    0.9773     26.84
+       Exchange Time    0.2783      7.64
+        Revcomm Time    1.0850     29.80
+          Other Time    0.6291     17.28
+          Total Time    3.6411    100.00
+d224 3
+a226 3
+                         Force  Neighbor
+Lennard-Jones           0.0933    0.0685
+Long-Range              0.4566    0.0000
+@
+
+
+1.1
+log
+@Added Ewald sum example
+@
+text
+@d45 4
+d51 1
+a51 1
+A	A	8	7        200.8        100.4        16.74        16.74        36.00   -0.0003587        1389.
+a65 4
+Ewald arg_string is  1.0e-5 6.0
+Ewald precision is 1.000e-05
+Ewald cutoff is 6.000
+  G vector = 0.5128
+d86 1
+a86 1
+   Coulombic        =     -1027.9605250976
+d88 1
+a88 1
+Potential Energy    =     -1782.8519015967
+d91 1
+a91 1
+Total Energy        =     -1782.8519015967
+d94 1
+a94 1
+--------------- Step       100 ---- CPU =     0.3408 (sec) ---------------
+d96 2
+a97 2
+   Dispersion       =        53.0065919042
+   Coulombic        =     -1033.3905657604
+d99 2
+a100 2
+Potential Energy    =     -1784.2353699813
+Kinetic Energy      =         1.3834578604
+d102 2
+a103 2
+Total Energy        =     -1782.8519121210
+Temperature         =       110.9276981432
+d105 1
+a105 1
+--------------- Step       200 ---- CPU =     0.6879 (sec) ---------------
+d107 2
+a108 2
+   Dispersion       =        65.4547028028
+   Coulombic        =     -1048.5256637511
+d110 2
+a111 2
+Potential Energy    =     -1786.9244586221
+Kinetic Energy      =         4.0725192129
+d113 2
+a114 2
+Total Energy        =     -1782.8519394092
+Temperature         =       326.5406160035
+d116 1
+a116 1
+--------------- Step       300 ---- CPU =     1.0403 (sec) ---------------
+d118 2
+a119 2
+   Dispersion       =        85.5851396853
+   Coulombic        =     -1069.2466818910
+d121 2
+a122 2
+Potential Energy    =     -1787.5178088837
+Kinetic Energy      =         4.6658502847
+d124 2
+a125 2
+Total Energy        =     -1782.8519585990
+Temperature         =       374.1147792040
+d127 1
+a127 1
+--------------- Step       400 ---- CPU =     1.3903 (sec) ---------------
+d129 2
+a130 2
+   Dispersion       =       106.7272374985
+   Coulombic        =     -1087.5294295502
+d132 2
+a133 2
+Potential Energy    =     -1784.6608039240
+Kinetic Energy      =         1.8088709923
+d135 2
+a136 2
+Total Energy        =     -1782.8519329317
+Temperature         =       145.0379524852
+d138 1
+a138 1
+--------------- Step       500 ---- CPU =     1.7401 (sec) ---------------
+d140 2
+a141 2
+   Dispersion       =       114.7068408684
+   Coulombic        =     -1093.7365838159
+d143 2
+a144 2
+Potential Energy    =     -1782.8891311198
+Kinetic Energy      =         0.0372224284
+d146 2
+a147 2
+Total Energy        =     -1782.8519086914
+Temperature         =         2.9845493827
+d149 1
+a149 1
+--------------- Step       600 ---- CPU =     2.0918 (sec) ---------------
+d151 2
+a152 2
+   Dispersion       =       102.3906667882
+   Coulombic        =     -1084.0108443082
+d154 2
+a155 2
+Potential Energy    =     -1785.4783449248
+Kinetic Energy      =         2.6264023233
+d157 2
+a158 2
+Total Energy        =     -1782.8519426015
+Temperature         =       210.5888241875
+d160 1
+a160 1
+--------------- Step       700 ---- CPU =     2.4416 (sec) ---------------
+d162 2
+a163 2
+   Dispersion       =        80.3910098408
+   Coulombic        =     -1064.2617316193
+d165 2
+a166 2
+Potential Energy    =     -1787.7263333491
+Kinetic Energy      =         4.8743761075
+d168 2
+a169 2
+Total Energy        =     -1782.8519572416
+Temperature         =       390.8346881966
+d171 1
+a171 1
+--------------- Step       800 ---- CPU =     2.7904 (sec) ---------------
+d173 2
+a174 2
+   Dispersion       =        61.7774488360
+   Coulombic        =     -1044.2742937742
+d176 2
+a177 2
+Potential Energy    =     -1786.3497592174
+Kinetic Energy      =         3.4978268999
+d179 2
+a180 2
+Total Energy        =     -1782.8519323175
+Temperature         =       280.4609360564
+d182 1
+a182 1
+--------------- Step       900 ---- CPU =     3.1414 (sec) ---------------
+d184 2
+a185 2
+   Dispersion       =        51.3255882085
+   Coulombic        =     -1031.1695874478
+d187 2
+a188 2
+Potential Energy    =     -1783.6950811276
+Kinetic Energy      =         0.8431733043
+d190 2
+a191 2
+Total Energy        =     -1782.8519078233
+Temperature         =        67.6068830588
+d193 1
+a193 1
+--------------- Step      1000 ---- CPU =     3.4915 (sec) ---------------
+d195 2
+a196 2
+   Dispersion       =        49.1784278685
+   Coulombic        =     -1028.2619702107
+d198 2
+a199 2
+Potential Energy    =     -1782.9342105308
+Kinetic Energy      =         0.0823083495
+d201 2
+a202 2
+Total Energy        =     -1782.8519021813
+Temperature         =         6.5996052434
+d207 1
+a207 1
+Loop time: 3.4918210000 on 2 processors for 2 particles
+d213 7
+a219 7
+          Force Time    0.5503     15.76
+          Neigh Time    0.0743      2.13
+           Comm Time    0.9549     27.35
+       Exchange Time    0.2709      7.76
+        Revcomm Time    1.0519     30.13
+          Other Time    0.5894     16.88
+          Total Time    3.4918    100.00
+d225 2
+a226 2
+Lennard-Jones           0.0918    0.0670
+Long-Range              0.4202    0.0000
+@
+

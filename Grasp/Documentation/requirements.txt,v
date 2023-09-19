@@ -1,0 +1,166 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.0
+	REAX-2:3.0
+	P_MonacoDoc:3.0.0.6
+	InitialGraspDoc:3.0
+	P_Monaco:3.0.0.4
+	InitialGrasp:3.0
+	REAXFF:3.0.0.2
+	cjkimme_version_merge_from_trunk_1:2.1.2.1
+	cjkimme_version:2.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2004.03.01.18.13.03;	author athomps;	state Exp;
+branches
+	2.1.2.1;
+next	2.0;
+
+2.0
+date	2003.04.24.17.18.09;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.21.23.12.01;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.18.00.23.41;	author athomps;	state Exp;
+branches;
+next	;
+
+2.1.2.1
+date	2004.09.13.23.05.46;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@Objective
+Scalable MD code which supports implementation of a wide range of new physics models
+
+Key Features (* indicates completed item).
+*O(N) Non-bond Scaling (Neighbor lists)
+*O (N/P) Non-bond Parallel Scaling (Spatial decomposition)
+*Multibody interactions (EAM, MEAM, Stillinger-Weber)
+Dynamic connection table
+Bond order potentials
+Resonance/Conjugation Energy
+Charge transfer (Linear Solve, Minimization, Car-Parrinello)
+Point dipoles, multipoles
+Molecular methods (stress, charge equilibration)
+*Non-orthorhombic (triclinic) simulation cell
+*Cut-offs extending out to arbitrary number of periodic cells
+Cross interaction between force fields.
+Interface with external force modules (TB, DFT,...)
+NVE, NVT, NPT ensembles
+
+
+
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@@
+
+
+2.1
+log
+@Added Ewald sum example
+@
+text
+@@
+
+
+2.1.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+2.0
+log
+@This is starting point for verison 2.0.
+The functionality is unchanged, even slightly degraded,
+as some items have not yet been converted, primarily
+output features such as energy conservation.
+
+The compartmentalization between different operations has
+been greatly enhanced.
+
+Performance is unchanged.
+@
+text
+@d4 4
+a7 4
+Key Features
+O(N) Non-bond Scaling (Neighbor lists)
+O (N/P) Non-bond Parallel Scaling (Spatial decomposition)
+Multibody interactions (EAM, MEAM, Stillinger-Weber)
+d14 2
+a15 2
+Non-orthorhombic (triclinic) simulation cell
+Cut-offs extending out to arbitrary number of periodic cells
+@
+
+
+1.2
+log
+@Error in write-up of time unit derivation.
+@
+text
+@@
+
+
+1.1
+log
+@
+Added project files, including new file units.txt
+@
+text
+@d20 2
+@
+

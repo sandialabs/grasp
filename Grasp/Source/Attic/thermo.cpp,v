@@ -1,0 +1,106 @@
+head	2.3;
+access;
+symbols
+	PreMonaco:2.3;
+locks; strict;
+comment	@// @;
+
+
+2.3
+date	2003.10.31.20.20.44;	author athomps;	state dead;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.3
+log
+@Removed Thermo class
+@
+text
+@#include <string>
+#include <iostream>
+#include <fstream>
+#include <vector>
+using namespace std;
+#include "grasp.h"
+#include "input.h"
+#include "thermo.h"
+#include "log.h"
+extern Log glog;
+
+Thermo::Thermo() {
+}
+
+Thermo::~Thermo() {
+}
+
+void Thermo::Setup(const Input*) {
+}
+
+void Thermo::SetTemperature(double& temp_inp) {
+  temp_current = temp_inp;
+}
+
+void Thermo::SetKineticEnergy(double& e_kinetic_inp) {
+  e_kinetic = e_kinetic_inp;
+}
+
+
+
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d2 2
+d9 2
+a10 1
+extern ofstream logfile;
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d4 1
+d7 1
+@
+

@@ -1,0 +1,3114 @@
+head	4.5;
+access;
+symbols
+	ReverseComm_branch:4.2.0.4
+	ADTools_branch:4.2.0.2
+	PPPM_Crozier2:4.1.0.2
+	PPPM_Crozier:4.1
+	Root-of-PPPM_Crozier:4.1;
+locks; strict;
+comment	@// @;
+
+
+4.5
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches
+	4.2.4.1;
+next	4.1;
+
+4.1
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches
+	4.1.2.1;
+next	;
+
+4.1.2.1
+date	2005.06.08.22.50.06;	author pscrozi;	state Exp;
+branches;
+next	4.1.2.2;
+
+4.1.2.2
+date	2005.06.16.22.23.41;	author pscrozi;	state Exp;
+branches;
+next	4.1.2.3;
+
+4.1.2.3
+date	2005.06.16.22.48.56;	author athomps;	state Exp;
+branches;
+next	4.1.2.4;
+
+4.1.2.4
+date	2005.06.20.22.19.05;	author pscrozi;	state Exp;
+branches;
+next	4.1.2.5;
+
+4.1.2.5
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.1.2.6;
+
+4.1.2.6
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	4.1.2.7;
+
+4.1.2.7
+date	2005.06.22.17.44.58;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.2.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.5
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+// This implementation of PPPM is based on the PPPM class written
+// by Steve Plimpton (LAMMPS 2003).
+// 
+#include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "vec3.h"
+#include "particle.h"
+#include "neighbor.h"
+#include "input_string.h"
+#include "forcefield.h"
+#include "force_pppm.h"
+#include "force_pppm_inline.h"
+#include "constants.h"
+#include "box.h"
+#include "box_inline.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "particletypelist.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+Force_PPPM::Force_PPPM(const string arg_string_in) {
+  arg_string = arg_string_in;
+  classname = pppm;
+  Lneighbor = false;
+  timeforce = 0.0;
+  nforce = 0;
+  label = "Long-Range";
+  npieces = 1;
+  energy_piece.resize(npieces);
+  label_piece.resize(npieces);
+  label_piece[0] = "n/a";
+  rcutmax = 0.0;
+  ntypes = 0;
+  nparticles = 0;
+  kmax = 0;
+  maxlocal = 0;
+  kcount = 0;
+}
+
+Force_PPPM::~Force_PPPM() {
+  deallocate_karrays();
+  deallocate_narrays();
+}  
+
+void Force_PPPM::ReadInteractions(Comm* comm) {
+  int node;
+
+  node = comm->get_node();
+
+  std::istringstream buf_in(arg_string);
+  buf_in >> precision;
+  buf_in >> realspace_cutoff;
+  glog.get_logfile() << "PPPM arg_string is " << arg_string << endl;
+  glog.get_logfile() << "PPPM precision is " << precision << endl;
+  glog.get_logfile() << "PPPM cutoff is " << realspace_cutoff << endl;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Force_PPPM::ReadInteractions:\n"
+	       "Read error in input string");
+  }
+
+  // setup K-space resolution
+
+  g_ewald = (1.35 - 0.15*log(precision))/realspace_cutoff;
+  gsqmx = -4.0*g_ewald*g_ewald*log(precision);
+  if (node == 0) {
+    glog.get_logfile() << "  G vector = " << g_ewald << endl;
+  }
+
+}
+
+void Force_PPPM::SetupInteractions(const Box* b, const double&, Comm* comm) {
+  prefactor = constants.esfactor/b->get_dielectric();
+}
+
+void Force_PPPM::SetupKSpace(const ParticleList* p, const Box* b, 
+                  Comm* comm) {
+
+  // volume-dependent factors
+
+  int node;
+
+  node = comm->get_node();
+
+  if (!b->get_Lorthorhombic()) {
+    glog.error("Force_PPPM::SetupInteractions:\n"
+	       "PPPM sum only implemented "
+	       "for orthorhombic box");
+  }
+
+  b->get_lw(uc_wh,uc_wk,uc_wl);
+  volume = b->get_volume();
+
+  unitk[0] = 2.0*constants.pi/uc_wh;
+  unitk[1] = 2.0*constants.pi/uc_wk;
+  unitk[2] = 2.0*constants.pi/uc_wl;
+
+  // determine kmax
+  // function of current box size, precision, g_ewald (short-range cutoff)
+
+  int nkxmx = static_cast<int> ((g_ewald*uc_wh/constants.pi) * 
+				sqrt(-log(precision)));
+  int nkymx = static_cast<int> ((g_ewald*uc_wk/constants.pi) * 
+				sqrt(-log(precision)));
+  int nkzmx = static_cast<int> ((g_ewald*uc_wl/constants.pi) * 
+				sqrt(-log(precision)));
+
+  int kmax_old = kmax;
+  kmax = max(nkxmx,nkymx);
+  kmax = max(kmax,nkzmx);
+  kmax3d = 4*kmax*kmax*kmax + 6*kmax*kmax + 3*kmax;
+
+  // if size has grown, reallocate k-dependent and nlocal-dependent arrays
+
+  if (kmax > kmax_old) {
+
+    deallocate_karrays();
+    allocate_karrays();
+    deallocate_narrays();
+    allocate_narrays();
+
+  }
+
+  // PPPM coefficients
+
+  int kcount_old = kcount;
+  Coeffs();
+
+  // if array sizes changed, print out new sizes
+
+  if (kmax != kmax_old || kcount != kcount_old) {
+    if (node == 0) {
+      glog.get_logfile() << "Actual 1d max vectors = " << kcount << " " << 
+	kmax << " " << kmax3d  << endl;
+    }
+  }
+}
+
+void Force_PPPM::allocate_karrays() {
+  kxvecs.resize(kmax3d);
+  kyvecs.resize(kmax3d);
+  kzvecs.resize(kmax3d);
+  ug.resize(kmax3d);
+  eg.resize(kmax3d);
+  vg.resize(kmax3d);
+  for (int k = 0; k < kmax3d; k++) {
+    eg[k] = new double[3];
+    vg[k] = new double[nvirial];
+  }
+  sfacrl.resize(kmax3d);
+  sfacim.resize(kmax3d);
+  sfacrl_all.resize(kmax3d);
+  sfacim_all.resize(kmax3d);
+}
+
+void Force_PPPM::deallocate_karrays() {
+  kxvecs.clear();
+  kyvecs.clear();
+  kzvecs.clear();
+  for (int k = 0; k < eg.size(); k++) {
+    delete[] eg[k];
+    delete[] vg[k];
+  }
+  ug.clear();
+  eg.clear();
+  vg.clear();
+  sfacrl.clear();
+  sfacim.clear();
+  sfacrl_all.clear();
+  sfacim_all.clear();
+}
+
+void Force_PPPM::allocate_narrays() {
+  ek.resize(nparticles);
+  for (int i = 0; i < nparticles; i++) {
+    ek[i] = new double[3];
+  }
+  cs.resize(2*kmax+1);
+  sn.resize(2*kmax+1);
+  for (int k = 0; k < 2*kmax+1; k++) {
+    cs[k] = new double*[3];
+    sn[k] = new double*[3];
+    for (int idim = 0; idim < 3; idim++) {
+      cs[k][idim] = new double[nparticles];
+      sn[k][idim] = new double[nparticles];
+    }
+  }
+  maxlocal = nparticles;
+}
+
+void Force_PPPM::deallocate_narrays() {
+  for (int i = 0; i < ek.size(); i++) {
+    delete[] ek[i];
+  }
+  ek.clear();
+
+  for (int k = 0; k < cs.size(); k++) {
+    for (int idim = 0; idim < 3; idim++) {
+      delete[] cs[k][idim];
+      delete[] sn[k][idim];
+    }
+    delete[] cs[k];
+    delete[] sn[k];
+  }
+  cs.clear();
+  sn.clear();
+  maxlocal = 0;
+}
+
+void Force_PPPM::Coeffs()
+{
+  int k,l,m;
+  double sqk,vterm;
+
+  double unitkx = unitk[0];
+  double unitky = unitk[1];
+  double unitkz = unitk[2];
+  double g_ewald_sq_inv = 1.0 / (g_ewald*g_ewald);
+  double preu = 4.0*constants.pi/volume;
+
+  kcount = 0;
+
+  // (k,0,0), (0,l,0), (0,0,m)
+
+  for (m = 1; m <= kmax; m++) {
+    sqk = (m*unitkx) * (m*unitkx);
+    if (sqk <= gsqmx) {
+      kxvecs[kcount] = m;
+      kyvecs[kcount] = 0;
+      kzvecs[kcount] = 0;
+      ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+      eg[kcount][0] = 2.0*unitkx*m*ug[kcount];
+      eg[kcount][1] = 0.0;
+      eg[kcount][2] = 0.0;
+      vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+      vg[kcount][0] = 1.0 + vterm*(unitkx*m)*(unitkx*m);
+      vg[kcount][1] = 1.0;
+      vg[kcount][2] = 1.0;
+      vg[kcount][3] = 0.0;
+      vg[kcount][4] = 0.0;
+      vg[kcount][5] = 0.0;
+      kcount++;
+    }
+    sqk = (m*unitky) * (m*unitky);
+    if (sqk <= gsqmx) {
+      kxvecs[kcount] = 0;
+      kyvecs[kcount] = m;
+      kzvecs[kcount] = 0;
+      ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+      eg[kcount][0] = 0.0;
+      eg[kcount][1] = 2.0*unitky*m*ug[kcount];
+      eg[kcount][2] = 0.0;
+      vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+      vg[kcount][0] = 1.0;
+      vg[kcount][1] = 1.0 + vterm*(unitky*m)*(unitky*m);
+      vg[kcount][2] = 1.0;
+      vg[kcount][3] = 0.0;
+      vg[kcount][4] = 0.0;
+      vg[kcount][5] = 0.0;
+      kcount++;
+    }
+    sqk = (m*unitkz) * (m*unitkz);
+    if (sqk <= gsqmx) {
+      kxvecs[kcount] = 0;
+      kyvecs[kcount] = 0;
+      kzvecs[kcount] = m;
+      ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+      eg[kcount][0] = 0.0;
+      eg[kcount][1] = 0.0;
+      eg[kcount][2] = 2.0*unitkz*m*ug[kcount];
+      vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+      vg[kcount][0] = 1.0;
+      vg[kcount][1] = 1.0;
+      vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+      vg[kcount][3] = 0.0;
+      vg[kcount][4] = 0.0;
+      vg[kcount][5] = 0.0;
+      kcount++;
+    }
+  }
+
+  // 1 = (k,l,0), 2 = (k,-l,0)
+
+  for (k = 1; k <= kmax; k++) {
+    for (l = 1; l <= kmax; l++) {
+      sqk = (unitkx*k) * (unitkx*k) + (unitky*l) * (unitky*l);
+      if (sqk <= gsqmx) {
+	kxvecs[kcount] = k;
+	kyvecs[kcount] = l;
+	kzvecs[kcount] = 0;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	eg[kcount][1] = 2.0*unitky*l*ug[kcount];
+	eg[kcount][2] = 0.0;
+	vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+	vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	vg[kcount][2] = 1.0;
+	vg[kcount][3] = vterm*unitkx*k*unitky*l;
+	vg[kcount][4] = 0.0;
+	vg[kcount][5] = 0.0;
+	kcount++;
+
+	kxvecs[kcount] = k;
+	kyvecs[kcount] = -l;
+	kzvecs[kcount] = 0;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	eg[kcount][1] = -2.0*unitky*l*ug[kcount];
+	eg[kcount][2] = 0.0;
+	vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	vg[kcount][2] = 1.0;
+	vg[kcount][3] = -vterm*unitkx*k*unitky*l;
+	vg[kcount][4] = 0.0;
+	vg[kcount][5] = 0.0;
+	kcount++;;
+      }
+    }
+  }
+
+  // 1 = (0,l,m), 2 = (0,l,-m)
+
+  for (l = 1; l <= kmax; l++) {
+    for (m = 1; m <= kmax; m++) {
+      sqk = (unitky*l) * (unitky*l) + (unitkz*m) * (unitkz*m);
+      if (sqk <= gsqmx) {
+	kxvecs[kcount] = 0;
+	kyvecs[kcount] = l;
+	kzvecs[kcount] = m;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] =  0.0;
+	eg[kcount][1] =  2.0*unitky*l*ug[kcount];
+	eg[kcount][2] =  2.0*unitkz*m*ug[kcount];
+	vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+	vg[kcount][0] = 1.0;
+	vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	vg[kcount][3] = 0.0;
+	vg[kcount][4] = 0.0;
+	vg[kcount][5] = vterm*unitky*l*unitkz*m;
+	kcount++;
+
+	kxvecs[kcount] = 0;
+	kyvecs[kcount] = l;
+	kzvecs[kcount] = -m;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] =  0.0;
+	eg[kcount][1] =  2.0*unitky*l*ug[kcount];
+	eg[kcount][2] = -2.0*unitkz*m*ug[kcount];
+	vg[kcount][0] = 1.0;
+	vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	vg[kcount][3] = 0.0;
+	vg[kcount][4] = 0.0;
+	vg[kcount][5] = -vterm*unitky*l*unitkz*m;
+	kcount++;
+      }
+    }
+  }
+
+  // 1 = (k,0,m), 2 = (k,0,-m)
+
+  for (k = 1; k <= kmax; k++) {
+    for (m = 1; m <= kmax; m++) {
+      sqk = (unitkx*k) * (unitkx*k) + (unitkz*m) * (unitkz*m);
+      if (sqk <= gsqmx) {
+	kxvecs[kcount] = k;
+	kyvecs[kcount] = 0;
+	kzvecs[kcount] = m;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] =  2.0*unitkx*k*ug[kcount];
+	eg[kcount][1] =  0.0;
+	eg[kcount][2] =  2.0*unitkz*m*ug[kcount];
+	vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+	vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	vg[kcount][1] = 1.0;
+	vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	vg[kcount][3] = 0.0;
+	vg[kcount][4] = vterm*unitkx*k*unitkz*m;
+	vg[kcount][5] = 0.0;
+	kcount++;
+
+	kxvecs[kcount] = k;
+	kyvecs[kcount] = 0;
+	kzvecs[kcount] = -m;
+	ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	eg[kcount][0] =  2.0*unitkx*k*ug[kcount];
+	eg[kcount][1] =  0.0;
+	eg[kcount][2] = -2.0*unitkz*m*ug[kcount];
+	vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	vg[kcount][1] = 1.0;
+	vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	vg[kcount][3] = 0.0;
+	vg[kcount][4] = -vterm*unitkx*k*unitkz*m;
+	vg[kcount][5] = 0.0;
+	kcount++;
+      }
+    }
+  }
+
+  // 1 = (k,l,m), 2 = (k,-l,m), 3 = (k,l,-m), 4 = (k,-l,-m)
+
+  for (k = 1; k <= kmax; k++) {
+    for (l = 1; l <= kmax; l++) {
+      for (m = 1; m <= kmax; m++) {
+	sqk = (unitkx*k) * (unitkx*k) + (unitky*l) * (unitky*l) + 
+	  (unitkz*m) * (unitkz*m);
+	if (sqk <= gsqmx) {
+	  kxvecs[kcount] = k;
+	  kyvecs[kcount] = l;
+	  kzvecs[kcount] = m;
+	  ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	  eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	  eg[kcount][1] = 2.0*unitky*l*ug[kcount];
+	  eg[kcount][2] = 2.0*unitkz*m*ug[kcount];
+	  vterm = -2.0*(1.0/sqk + 0.25*g_ewald_sq_inv);
+	  vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	  vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	  vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	  vg[kcount][3] = vterm*unitkx*k*unitky*l;
+	  vg[kcount][4] = vterm*unitkx*k*unitkz*m;
+	  vg[kcount][5] = vterm*unitky*l*unitkz*m;
+	  kcount++;
+
+	  kxvecs[kcount] = k;
+	  kyvecs[kcount] = -l;
+	  kzvecs[kcount] = m;
+	  ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	  eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	  eg[kcount][1] = -2.0*unitky*l*ug[kcount];
+	  eg[kcount][2] = 2.0*unitkz*m*ug[kcount];
+	  vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	  vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	  vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	  vg[kcount][3] = -vterm*unitkx*k*unitky*l;
+	  vg[kcount][4] = vterm*unitkx*k*unitkz*m;
+	  vg[kcount][5] = -vterm*unitky*l*unitkz*m;
+	  kcount++;
+
+	  kxvecs[kcount] = k;
+	  kyvecs[kcount] = l;
+	  kzvecs[kcount] = -m;
+	  ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	  eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	  eg[kcount][1] = 2.0*unitky*l*ug[kcount];
+	  eg[kcount][2] = -2.0*unitkz*m*ug[kcount];
+	  vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	  vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	  vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	  vg[kcount][3] = vterm*unitkx*k*unitky*l;
+	  vg[kcount][4] = -vterm*unitkx*k*unitkz*m;
+	  vg[kcount][5] = -vterm*unitky*l*unitkz*m;
+	  kcount++;
+
+	  kxvecs[kcount] = k;
+	  kyvecs[kcount] = -l;
+	  kzvecs[kcount] = -m;
+	  ug[kcount] = preu*exp(-0.25*sqk*g_ewald_sq_inv)/sqk;
+	  eg[kcount][0] = 2.0*unitkx*k*ug[kcount];
+	  eg[kcount][1] = -2.0*unitky*l*ug[kcount];
+	  eg[kcount][2] = -2.0*unitkz*m*ug[kcount];
+	  vg[kcount][0] = 1.0 + vterm*(unitkx*k)*(unitkx*k);
+	  vg[kcount][1] = 1.0 + vterm*(unitky*l)*(unitky*l);
+	  vg[kcount][2] = 1.0 + vterm*(unitkz*m)*(unitkz*m);
+	  vg[kcount][3] = -vterm*unitkx*k*unitky*l;
+	  vg[kcount][4] = -vterm*unitkx*k*unitkz*m;
+	  vg[kcount][5] = vterm*unitky*l*unitkz*m;
+	  kcount++;;
+	}
+      }
+    }
+  }
+}
+
+void Force_PPPM::ApplyForce(
+		  const bool& Lenergy, const bool& Lvirial,
+		  const bool& Latomvirial, 
+                  ParticleList* p,
+                  const Box* b, Comm* comm) {
+  nparticles = p->get_nparticles();
+  SetupKSpace(p, b, comm);
+  Compute(Lenergy,Lvirial,p,comm);
+}
+
+void Force_PPPM::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+			       double& rcutcomm,
+       const Box* b, Comm* comm){
+
+    Lneighbor = false;
+    rcutneighmax = 0.0;
+    rcutcomm = 0.0;
+}
+
+
+void Force_PPPM::Compute(const bool& Lenergy, const bool& Lvirial, 
+		  ParticleList* p, Comm* comm) {
+  MPI_Comm world;
+  double ftmp[3];
+  Particle* i_pnt;
+  double qi,qsum,qsqsum,tmp[2],tmp_all[2];
+
+  world = comm->get_world();
+
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+  }
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+    }
+  }
+
+  // extend size of nlocal-dependent arrays if necessary
+
+  if (nparticles > maxlocal) {
+
+    if (comm->get_Lnodefile()) {
+      comm->get_nodefile()  << "Performing array extension" << endl;
+    }
+
+    deallocate_narrays();
+    allocate_narrays();
+  }
+  // partial structure factors on each processor
+  // total structure factor by summing over procs
+
+  Eik_dot_r(p);
+  MPI_Allreduce(&sfacrl[0],&sfacrl_all[0],kcount,MPI_DOUBLE,MPI_SUM,world);
+  MPI_Allreduce(&sfacim[0],&sfacim_all[0],kcount,MPI_DOUBLE,MPI_SUM,world);
+
+  // K-space portion of electric field
+  // double loop over K-vectors and local atoms
+
+  int kx,ky,kz;
+  double cypz,sypz,exprl,expim,partial;
+
+  for (int i = 0; i < nparticles; i++) {
+    ek[i][0] = 0.0;
+    ek[i][1] = 0.0;
+    ek[i][2] = 0.0;
+  }
+
+  for (int k = 0; k < kcount; k++) {
+    kx = kxvecs[k]+kmax;
+    ky = kyvecs[k]+kmax;
+    kz = kzvecs[k]+kmax;
+
+    for (int i = 0; i < nparticles; i++) {
+      cypz = cs[ky][1][i]*cs[kz][2][i] - sn[ky][1][i]*sn[kz][2][i];
+      sypz = sn[ky][1][i]*cs[kz][2][i] + cs[ky][1][i]*sn[kz][2][i];
+      exprl = cs[kx][0][i]*cypz - sn[kx][0][i]*sypz;
+      expim = sn[kx][0][i]*cypz + cs[kx][0][i]*sypz;
+      partial = expim*sfacrl_all[k] - exprl*sfacim_all[k];
+      ek[i][0] += partial*eg[k][0];
+      ek[i][1] += partial*eg[k][1];
+      ek[i][2] += partial*eg[k][2];
+    }
+  }
+
+  // convert E-field to force
+
+  for (int i = 0; i < nparticles; i++) {
+    i_pnt = p->get_particle(i);
+    vec3_scale(prefactor*i_pnt->get_charge(),ek[i],ftmp);
+    i_pnt->increment_f(ftmp);
+  }
+
+  // energy if requested
+
+  if (Lenergy) {
+    for (int k = 0; k < kcount; k++) {
+      energy_piece[0] += ug[k] * (sfacrl_all[k]*sfacrl_all[k] + 
+				  sfacim_all[k]*sfacim_all[k]);
+    }
+
+    tmp[0] = 0.0;
+    tmp[1] = 0.0;
+    for (int i = 0; i < nparticles; i++) {
+      qi = p->get_particle(i)->get_charge();
+      tmp[0] += qi;
+      tmp[1] += qi*qi;
+    }
+    MPI_Allreduce(&tmp[0],&tmp_all[0],2,MPI_DOUBLE,MPI_SUM,world);
+    qsum = tmp_all[0];
+    qsqsum = tmp_all[1];
+    energy_piece[0] -= g_ewald*qsqsum/1.772453851 + 
+      0.5*constants.pi*qsum*qsum / (g_ewald*g_ewald*volume);
+    energy_piece[0] *= prefactor;
+
+  }
+
+  // virial if requested
+
+  if (Lvirial) {
+    double uk;
+    for (int k = 0; k < kcount; k++) {
+      uk = ug[k] * (sfacrl_all[k]*sfacrl_all[k] + sfacim_all[k]*sfacim_all[k]);
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial[ivirial] += uk*vg[k][ivirial];
+      }
+    }
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] *= prefactor;
+    }
+  }
+}
+
+void Force_PPPM::Eik_dot_r(ParticleList* p)
+{
+  int i,k,l,m,n,ic;
+  double cstr1,sstr1,cstr2,sstr2,cstr3,sstr3,cstr4,sstr4;
+  double sqk,clpm,slpm;
+  double xi[3],qi;
+  Particle* i_pnt;
+  int kminus,kzero,kplus,kk,ll,mm;
+
+  n = 0;
+
+  // (k,0,0), (0,l,0), (0,0,m)
+
+  kzero = kmax;
+  for (ic = 0; ic < 3; ic++) {
+    sqk = unitk[ic]*unitk[ic];
+    if (sqk <= gsqmx) {
+      cstr1 = 0.0;
+      sstr1 = 0.0;
+      for (i = 0; i < nparticles; i++) {
+	i_pnt = p->get_particle(i);
+	i_pnt->get_x(xi);
+	qi = i_pnt->get_charge();
+	cs[kzero][ic][i] = 1.0;
+	sn[kzero][ic][i] = 0.0;
+	cs[kzero+1][ic][i] = cos(unitk[ic]*xi[ic]);
+	sn[kzero+1][ic][i] = sin(unitk[ic]*xi[ic]);
+	cs[kzero-1][ic][i] = cs[kzero+1][ic][i];
+	sn[kzero-1][ic][i] = -sn[kzero+1][ic][i];
+	cstr1 += qi*cs[kzero+1][ic][i];
+	sstr1 += qi*sn[kzero+1][ic][i];
+      }
+      sfacrl[n] = cstr1;
+      sfacim[n++] = sstr1;
+    }
+  }
+
+  for (m = 2; m <= kmax; m++) {
+    kminus = kzero-m;
+    kplus = kzero+m;
+    for (ic = 0; ic < 3; ic++) {
+      sqk = m*unitk[ic] * m*unitk[ic];
+      if (sqk <= gsqmx) {
+	cstr1 = 0.0;
+	sstr1 = 0.0;
+	for (i = 0; i < nparticles; i++) {
+	  qi = p->get_particle(i)->get_charge();
+	  cs[kplus][ic][i] = cs[kplus-1][ic][i]*cs[kzero+1][ic][i] - 
+	    sn[kplus-1][ic][i]*sn[kzero+1][ic][i];
+	  sn[kplus][ic][i] = sn[kplus-1][ic][i]*cs[kzero+1][ic][i] + 
+	    cs[kplus-1][ic][i]*sn[kzero+1][ic][i];
+	  cs[kminus][ic][i] = cs[kplus][ic][i];
+	  sn[kminus][ic][i] = -sn[kplus][ic][i];
+	  cstr1 += qi*cs[kplus][ic][i];
+	  sstr1 += qi*sn[kplus][ic][i];
+	}
+	sfacrl[n] = cstr1;
+	sfacim[n++] = sstr1;
+      }
+    }
+  }
+
+  // 1 = (k,l,0), 2 = (k,-l,0)
+
+  for (k = 1; k <= kmax; k++) {
+    kk = k+kzero;
+    for (l = 1; l <= kmax; l++) {
+      ll = l+kzero;
+      sqk = (k*unitk[0] * k*unitk[0]) + (l*unitk[1] * l*unitk[1]);
+      if (sqk <= gsqmx) {
+	cstr1 = 0.0;
+	sstr1 = 0.0;
+	cstr2 = 0.0;
+	sstr2 = 0.0;
+	for (i = 0; i < nparticles; i++) {
+	  qi = p->get_particle(i)->get_charge();
+	  cstr1 += qi*(cs[kk][0][i]*cs[ll][1][i] - sn[kk][0][i]*sn[ll][1][i]);
+	  sstr1 += qi*(sn[kk][0][i]*cs[ll][1][i] + cs[kk][0][i]*sn[ll][1][i]);
+	  cstr2 += qi*(cs[kk][0][i]*cs[ll][1][i] + sn[kk][0][i]*sn[ll][1][i]);
+	  sstr2 += qi*(sn[kk][0][i]*cs[ll][1][i] - cs[kk][0][i]*sn[ll][1][i]);
+	}
+	sfacrl[n] = cstr1;
+	sfacim[n++] = sstr1;
+	sfacrl[n] = cstr2;
+	sfacim[n++] = sstr2;
+      }
+    }
+  }
+
+  // 1 = (0,l,m), 2 = (0,l,-m)
+
+  for (l = 1; l <= kmax; l++) {
+    ll = l+kzero;
+    for (m = 1; m <= kmax; m++) {
+      mm = m+kzero;
+      sqk = (l*unitk[1] * l*unitk[1]) + (m*unitk[2] * m*unitk[2]);
+      if (sqk <= gsqmx) {
+	cstr1 = 0.0;
+	sstr1 = 0.0;
+	cstr2 = 0.0;
+	sstr2 = 0.0;
+	for (i = 0; i < nparticles; i++) {
+	  qi = p->get_particle(i)->get_charge();
+	  cstr1 += qi*(cs[ll][1][i]*cs[mm][2][i] - sn[ll][1][i]*sn[mm][2][i]);
+	  sstr1 += qi*(sn[ll][1][i]*cs[mm][2][i] + cs[ll][1][i]*sn[mm][2][i]);
+	  cstr2 += qi*(cs[ll][1][i]*cs[mm][2][i] + sn[ll][1][i]*sn[mm][2][i]);
+	  sstr2 += qi*(sn[ll][1][i]*cs[mm][2][i] - cs[ll][1][i]*sn[mm][2][i]);
+	}
+	sfacrl[n] = cstr1;
+	sfacim[n++] = sstr1;
+	sfacrl[n] = cstr2;
+	sfacim[n++] = sstr2;
+      }
+    }
+  }
+
+  // 1 = (k,0,m), 2 = (k,0,-m)
+
+  for (k = 1; k <= kmax; k++) {
+    kk = k+kzero;
+    for (m = 1; m <= kmax; m++) {
+      mm = m+kzero;
+      sqk = (k*unitk[0] * k*unitk[0]) + (m*unitk[2] * m*unitk[2]);
+      if (sqk <= gsqmx) {
+	cstr1 = 0.0;
+	sstr1 = 0.0;
+	cstr2 = 0.0;
+	sstr2 = 0.0;
+	for (i = 0; i < nparticles; i++) {
+	  qi = p->get_particle(i)->get_charge();
+	  cstr1 += qi*(cs[kk][0][i]*cs[mm][2][i] - sn[kk][0][i]*sn[mm][2][i]);
+	  sstr1 += qi*(sn[kk][0][i]*cs[mm][2][i] + cs[kk][0][i]*sn[mm][2][i]);
+	  cstr2 += qi*(cs[kk][0][i]*cs[mm][2][i] + sn[kk][0][i]*sn[mm][2][i]);
+	  sstr2 += qi*(sn[kk][0][i]*cs[mm][2][i] - cs[kk][0][i]*sn[mm][2][i]);
+	}
+	sfacrl[n] = cstr1;
+	sfacim[n++] = sstr1;
+	sfacrl[n] = cstr2;
+	sfacim[n++] = sstr2;
+      }
+    }
+  }
+
+  // 1 = (k,l,m), 2 = (k,-l,m), 3 = (k,l,-m), 4 = (k,-l,-m)
+
+  for (k = 1; k <= kmax; k++) {
+    kk = k+kzero;
+    for (l = 1; l <= kmax; l++) {
+      ll = l+kzero;
+      for (m = 1; m <= kmax; m++) {
+	mm = m+kzero;
+	sqk = (k*unitk[0] * k*unitk[0]) + (l*unitk[1] * l*unitk[1]) +
+	  (m*unitk[2] * m*unitk[2]);
+	if (sqk <= gsqmx) {
+	  cstr1 = 0.0;
+	  sstr1 = 0.0;
+	  cstr2 = 0.0;
+	  sstr2 = 0.0;
+	  cstr3 = 0.0;
+	  sstr3 = 0.0;
+	  cstr4 = 0.0;
+	  sstr4 = 0.0;
+	  for (i = 0; i < nparticles; i++) {
+	    qi = p->get_particle(i)->get_charge();
+	    clpm = cs[ll][1][i]*cs[mm][2][i] - sn[ll][1][i]*sn[mm][2][i];
+	    slpm = sn[ll][1][i]*cs[mm][2][i] + cs[ll][1][i]*sn[mm][2][i];
+	    cstr1 += qi*(cs[kk][0][i]*clpm - sn[kk][0][i]*slpm);
+	    sstr1 += qi*(sn[kk][0][i]*clpm + cs[kk][0][i]*slpm);
+	    
+	    clpm = cs[ll][1][i]*cs[mm][2][i] + sn[ll][1][i]*sn[mm][2][i];
+	    slpm = -sn[ll][1][i]*cs[mm][2][i] + cs[ll][1][i]*sn[mm][2][i];
+	    cstr2 += qi*(cs[kk][0][i]*clpm - sn[kk][0][i]*slpm);
+	    sstr2 += qi*(sn[kk][0][i]*clpm + cs[kk][0][i]*slpm);
+	    
+	    clpm = cs[ll][1][i]*cs[mm][2][i] + sn[ll][1][i]*sn[mm][2][i];
+	    slpm = sn[ll][1][i]*cs[mm][2][i] - cs[ll][1][i]*sn[mm][2][i];
+	    cstr3 += qi*(cs[kk][0][i]*clpm - sn[kk][0][i]*slpm);
+	    sstr3 += qi*(sn[kk][0][i]*clpm + cs[kk][0][i]*slpm);
+	    
+	    clpm = cs[ll][1][i]*cs[mm][2][i] - sn[ll][1][i]*sn[mm][2][i];
+	    slpm = -sn[ll][1][i]*cs[mm][2][i] - cs[ll][1][i]*sn[mm][2][i];
+	    cstr4 += qi*(cs[kk][0][i]*clpm - sn[kk][0][i]*slpm);
+	    sstr4 += qi*(sn[kk][0][i]*clpm + cs[kk][0][i]*slpm);
+	  }
+	  sfacrl[n] = cstr1;
+	  sfacim[n++] = sstr1;
+	  sfacrl[n] = cstr2;
+	  sfacim[n++] = sstr2;
+	  sfacrl[n] = cstr3;
+	  sfacim[n++] = sstr3;
+	  sfacrl[n] = cstr4;
+	  sfacim[n++] = sstr4;
+	}
+      }
+    }
+  }
+}
+
+void Force_PPPM::SetupTypes(const ParticleTypeList*) {}
+
+double Force_PPPM::get_g_ewald() const {
+  return g_ewald;
+}
+@
+
+
+4.4
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d129 1
+a129 3
+void Force_PPPM::SetupInteractions(const Box* b, 
+                                      const double& g_ewald, 
+				      Comm* comm) {
+a542 8
+void Force_PPPM::Neighboring(
+	         ParticleList* p, 
+	         int* type_index,
+	         const Box* b, Comm* comm) {
+  glog.error("Force_PPPM::Neighboring:\n"
+		   "No neighboring required for PPPM sum");
+}
+
+@
+
+
+4.3
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d556 1
+d561 1
+@
+
+
+4.2
+log
+@Added multiple replica feature.
+@
+text
+@d536 2
+a537 1
+		  const bool& Lenergy, const bool& Lvirial, 
+@
+
+
+4.2.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d536 1
+a536 2
+		  const bool& Lenergy, const bool& Lvirial,
+		  const bool& Latomvirial, 
+@
+
+
+4.1
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d110 3
+a112 3
+  glog.logfile << "PPPM arg_string is " << arg_string << endl;
+  glog.logfile << "PPPM precision is " << precision << endl;
+  glog.logfile << "PPPM cutoff is " << realspace_cutoff << endl;
+d114 1
+a114 1
+    glog.logfile << endl;
+d124 1
+a124 1
+    glog.logfile << "  G vector = " << g_ewald << endl;
+d192 1
+a192 1
+      glog.logfile << "Actual 1d max vectors = " << kcount << " " << 
+@
+
+
+4.1.2.1
+log
+@Initial PPPM implementation
+@
+text
+@a47 1
+// Paul was here.
+@
+
+
+4.1.2.2
+log
+@latest additions to the PPPM FF
+@
+text
+@d47 2
+a48 1
+// by Steve Plimpton, Roy Pollock, and Paul Crozier (LAMMPS).
+a78 8
+#define MIN(a,b) ((a) < (b) ? (a) : (b))
+#define MAX(a,b) ((a) > (b) ? (a) : (b))
+
+#define MAXORDER 7
+#define SMALL 0.00001
+#define LARGE 10000.0
+#define EPS_HOC 1.0e-7
+
+a95 35
+  
+  PI = 4.0*atan(1.0);
+
+//  gridflag = 0;
+  order = 5;
+  
+  slabflag = 0;
+  slab_volfactor = 1;
+  
+  nfactors = 3;
+  factors = new int[nfactors];
+  factors[0] = 2;
+  factors[1] = 3;
+  factors[2] = 5;
+
+//  MPI_Comm_rank(world,&me);
+//  MPI_Comm_size(world,&nprocs);
+
+  density_brick = vdx_brick = vdy_brick = vdz_brick = NULL;
+  density_fft = NULL;
+  greensfn = NULL;
+  work1 = work2 = NULL;
+//  vg = NULL;
+  fkx = fky = fkz = NULL;
+  buf1 = buf2 = NULL;
+
+  gf_b = NULL;
+  rho1d = rho_coeff = NULL;
+
+//  fft1 = fft2 = NULL;
+//  remap = NULL;
+
+  maxlocal = 0;
+  part2grid = NULL;
+  
+d127 1
+d136 1
+a136 1
+void Force_PPPM::SetupKSpace(ParticleList* p, const Box* b, 
+a138 6
+  int myloc[3],procgrid[3];
+  int procneigh[3][2]; 
+  comm->get_procgrid(procgrid);
+  comm->get_myloc(myloc);
+  comm->get_procneigh(procneigh);
+	                  	                  
+a196 320
+  
+  // from LAMMPS pppm.cpp init()
+ 
+  // error check
+
+//  if (force->dimension == 2) error->all("Cannot use PPPM with 2d simulation");
+//  if (slabflag == 0 && b->nonperiodic > 0)
+//    error->all("Cannot use nonperiodic boundaries with PPPM");
+//  if (slabflag == 1) {
+//    if (b->xperiodic != 1 || b->yperiodic != 1 || 
+//	b->boundary[2][0] != 1 || b->boundary[2][1] != 1)
+//      error->all("Incorrect boundaries with slab PPPM");
+//  }
+
+  if (order > MAXORDER) {
+    char str[128];
+    sprintf(str,"PPPM order cannot be greater than %d",MAXORDER);
+//    error->all(str);
+    glog.logfile << str << endl;
+  }
+
+  // free all arrays previously allocated
+
+//  deallocate();
+
+  // insure use of pair_style with long-range Coulombics
+  // set cutoff to short-range Coulombic cutoff
+
+//  qqrd2e = force->qqrd2e;
+
+//  Pair *anypair;
+//  if (force->pair == NULL) 
+//    error->all("Pair style is incompatible with KSpace style");
+//  else if (anypair = force->pair_match("buck/coul/long"))
+//    cutoff = ((PairBuckCoulLong *) anypair)->cut_coul;
+//  else if (anypair = force->pair_match("lj/cut/coul/long"))
+//    cutoff = ((PairLJCutCoulLong *) anypair)->cut_coul;
+//  else if (anypair = force->pair_match("lj/charmm/coul/long"))
+//    cutoff = ((PairLJCharmmCoulLong *) anypair)->cut_coul;
+//  else error->all("Pair style is incompatible with KSpace style");
+
+  cutoff = realspace_cutoff;
+  
+  // compute qsum & qsqsum and warn if not charge-neutral
+
+  Particle* i_pnt;
+    
+  qsum = qsqsum = 0.0;
+  for (int i = 0; i < nparticles; i++) {
+    i_pnt = p->get_particle(i);
+    qsum += i_pnt->get_charge();
+    qsqsum += i_pnt->get_charge()*i_pnt->get_charge();
+  }
+
+  MPI_Comm world;
+  world = comm->get_world();
+  
+  double tmp;
+  MPI_Allreduce(&qsum,&tmp,1,MPI_DOUBLE,MPI_SUM,world);
+  qsum = tmp;
+  MPI_Allreduce(&qsqsum,&tmp,1,MPI_DOUBLE,MPI_SUM,world);
+  qsqsum = tmp;
+
+  if (fabs(qsum) > SMALL && me == 0)
+    glog.logfile << "System is not charge neutral" << endl;
+
+  // setup FFT grid resolution
+
+//  set_grid();
+
+  // global indices of PPPM grid range from 0 to N-1
+  // nlo_in,nhi_in = lower/upper limits of the 3d sub-brick of
+  //   global PPPM grid that I own without ghost cells
+  // for slab PPPM, assign z grid as if it were not extended
+
+  nxlo_in = myloc[0]*nx_pppm / procgrid[0];
+  nxhi_in = (myloc[0]+1)*nx_pppm / procgrid[0] - 1;
+  nylo_in = myloc[1]*ny_pppm / procgrid[1];
+  nyhi_in = (myloc[1]+1)*ny_pppm / procgrid[1] - 1;
+  nzlo_in = myloc[2] * 
+    (static_cast<int> (nz_pppm/slab_volfactor)) / procgrid[2];
+  nzhi_in = (myloc[2]+1) * 
+    (static_cast<int> (nz_pppm/slab_volfactor)) / procgrid[2] - 1;
+ 
+  // nlower,nupper = stencil size for mapping particles to PPPM grid
+
+  nlower = -(order-1)/2;
+  nupper = order/2;
+  
+  // shift values for particle <-> grid mapping
+  // add/subtract 4096 to avoid int(-0.75) = 0 when want it to be -1
+
+  if (order % 2) shift = 4096.5;
+  else shift = 4096.0;
+  if (order % 2) shiftone = 0.0;
+  else shiftone = 0.5;
+  
+  // nlo_out,nhi_out = lower/upper limits of the 3d sub-brick of
+  //   global PPPM grid that I own with ghost cells
+  // ghost 3d brick boundaries = inner + stencil + particles moving skin/2.0
+  // nlo/nhi = global coords of grid pt to "lower left" of smallest/largest
+  //           position a particle in my box can be at
+
+
+  int nlo,nhi;
+  double cuthalf = 0.5 * neighbor->get_rskin();
+  
+  double xprd = b->xprd;
+  double yprd = b->yprd;
+  double zprd = b->zprd;
+
+  // set local box scalars
+
+  double subxlo = b->xboundlo + myloc[0] * xprd / procgrid[0];
+  double subxhi = b->xboundlo + (myloc[0]+1) * xprd / procgrid[0];
+  double subylo = b->yboundlo + myloc[1] * yprd / procgrid[1];
+  double subyhi = b->yboundlo + (myloc[1]+1) * yprd / procgrid[1];
+  double subzlo = b->zboundlo + myloc[2] * zprd / procgrid[2];
+  double subzhi = b->zboundlo + (myloc[2]+1) * zprd / procgrid[2];
+  
+  cout << order << endl;
+  cout << xprd << endl;
+  cout << subzhi << endl;
+  
+  // adjustment of z dimension for 2d slab PPPM
+  // 3d PPPM just uses zprd since slab_volfactor = 1.0
+
+  double slab_volfactor = 1.0;
+  double zprd_slab = zprd*slab_volfactor;
+
+  nlo = static_cast<int> ((subxlo-cuthalf-b->xboundlo) * 
+			  nx_pppm/xprd + shift) - 4096;
+  nhi = static_cast<int> ((subxhi+cuthalf-b->xboundlo) * 
+			  nx_pppm/xprd + shift) - 4096;
+  nxlo_out = nlo + nlower;
+  nxhi_out = nhi + nupper;
+
+  nlo = static_cast<int> ((subylo-cuthalf-b->yboundlo) * 
+			  ny_pppm/yprd + shift) - 4096;
+  nhi = static_cast<int> ((subyhi+cuthalf-b->yboundlo) * 
+			  ny_pppm/yprd + shift) - 4096;
+  nylo_out = nlo + nlower;
+  nyhi_out = nhi + nupper;
+
+  nlo = static_cast<int> ((subzlo-cuthalf-b->zboundlo) * 
+			  nz_pppm/zprd_slab + shift) - 4096;
+  nhi = static_cast<int> ((subzhi+cuthalf-b->zboundlo) * 
+			  nz_pppm/zprd_slab + shift) - 4096;
+  nzlo_out = nlo + nlower;
+  nzhi_out = nhi + nupper;
+
+  // for slab-geometry-corrected calculations, change the grid boundary for
+  //   processors at +z end to include the empty volume between periodically
+  //   repeating slabs
+  // for slab PPPM, want charge data communicated from -z proc to +z proc,
+  //   but not vice versa, also want field data communicated from +z proc to
+  //   -z proc, but not vice versa
+  // this is accomplished by nzhi_in = nzhi_out on +z end (no ghost cells)
+
+  if (slabflag && ((myloc[2]+1) == (procgrid[2]))) {
+    nzhi_in =  nz_pppm - 1;
+    nzhi_out = nz_pppm - 1;
+  }
+  
+  // exchange messages for how many planes I will send,recv in 6 dirs
+  // if no neighbor proc, values comes from self since I have ghosts regardless
+
+  int nplanes;
+  MPI_Status status;
+
+  nplanes = nxlo_in - nxlo_out;
+  if (procneigh[0][0] != me)
+    MPI_Sendrecv(&nplanes,1,MPI_INT,procneigh[0][0],0,
+		 &nxhi_ghost,1,MPI_INT,procneigh[0][1],0,world,&status);
+  else nxhi_ghost = nplanes;
+
+  nplanes = nxhi_out - nxhi_in;
+  if (procneigh[0][1] != me)
+    MPI_Sendrecv(&nplanes,1,MPI_INT,procneigh[0][1],0,
+		 &nxlo_ghost,1,MPI_INT,procneigh[0][0],0,world,&status);
+  else nxlo_ghost = nplanes;
+
+  nplanes = nylo_in - nylo_out;
+  if (procneigh[1][0] != me)
+    MPI_Sendrecv(&nplanes,1,MPI_INT,procneigh[1][0],0,
+		 &nyhi_ghost,1,MPI_INT,procneigh[1][1],0,world,&status);
+  else nyhi_ghost = nplanes;
+
+  nplanes = nyhi_out - nyhi_in;
+  if (procneigh[1][1] != me)
+    MPI_Sendrecv(&nplanes,1,MPI_INT,procneigh[1][1],0,
+		 &nylo_ghost,1,MPI_INT,procneigh[1][0],0,world,&status);
+  else nylo_ghost = nplanes;
+
+  nplanes = nzlo_in - nzlo_out;
+  if (procneigh[2][0] != me)
+    MPI_Sendrecv(&nplanes,1,MPI_INT,procneigh[2][0],0,
+		 &nzhi_ghost,1,MPI_INT,procneigh[2][1],0,world,&status);
+  else nzhi_ghost = nplanes;
+
+  nplanes = nzhi_out - nzhi_in;
+  if (procneigh[2][1] != me)
+    MPI_Sendrecv(&nplanes,1,MPI_INT,procneigh[2][1],0,
+		 &nzlo_ghost,1,MPI_INT,procneigh[2][0],0,world,&status);
+  else nzlo_ghost = nplanes;
+
+  // test that ghost overlap is not bigger than my sub-domain
+
+  int flag = 0;
+  if (nxlo_ghost > nxhi_in-nxlo_in+1) flag = 1;
+  if (nxhi_ghost > nxhi_in-nxlo_in+1) flag = 1;
+  if (nylo_ghost > nyhi_in-nylo_in+1) flag = 1;
+  if (nyhi_ghost > nyhi_in-nylo_in+1) flag = 1;
+  if (nzlo_ghost > nzhi_in-nzlo_in+1) flag = 1;
+  if (nzhi_ghost > nzhi_in-nzlo_in+1) flag = 1;
+
+  int flag_all;
+  MPI_Allreduce(&flag,&flag_all,1,MPI_INT,MPI_SUM,world);
+
+  if (flag_all)
+    glog.error("PPPM stencil extends too far, reduce PPPM order");
+
+  // decomposition of FFT mesh
+  // global indices range from 0 to N-1
+  // proc owns entire x-dimension, clump of columns in y,z dimensions
+  // npey_fft,npez_fft = # of procs in y,z dims
+  // if nprocs is small enough, proc can own 1 or more entire xy planes,
+  //   else proc owns 2d sub-blocks of yz plane
+  // me_y,me_z = which proc (0-npe_fft-1) I am in y,z dimensions
+  // nlo_fft,nhi_fft = lower/upper limit of the section
+  //   of the global FFT mesh that I own
+
+  int npey_fft,npez_fft;
+  if (nz_pppm >= nprocs) {
+    npey_fft = 1;
+    npez_fft = nprocs;
+  } else ; //procs2grid2d(nprocs,ny_pppm,nz_pppm,&npey_fft,&npez_fft);
+
+  int me_y = me % npey_fft;
+  int me_z = me / npey_fft;
+
+  nxlo_fft = 0;
+  nxhi_fft = nx_pppm - 1;
+  nylo_fft = me_y*ny_pppm/npey_fft;
+  nyhi_fft = (me_y+1)*ny_pppm/npey_fft - 1;
+  nzlo_fft = me_z*nz_pppm/npez_fft;
+  nzhi_fft = (me_z+1)*nz_pppm/npez_fft - 1;
+
+  // PPPM grid for this proc, including ghosts
+
+  ngrid = (nxhi_out-nxlo_out+1) * (nyhi_out-nylo_out+1) *
+    (nzhi_out-nzlo_out+1);
+
+  // FFT arrays on this proc, without ghosts
+  // nfft = FFT points in FFT decomposition on this proc
+  // nfft_brick = FFT points in 3d brick-decomposition on this proc
+  // nfft_both = greater of 2 values
+
+  nfft = (nxhi_fft-nxlo_fft+1) * (nyhi_fft-nylo_fft+1) *
+    (nzhi_fft-nzlo_fft+1);
+  int nfft_brick = (nxhi_in-nxlo_in+1) * (nyhi_in-nylo_in+1) *
+    (nzhi_in-nzlo_in+1);
+  nfft_both = MAX(nfft,nfft_brick);
+
+  // buffer space for use in brick2fft and fillbrick
+  // idel = max # of ghost planes to send or recv in +/- direction of each dim
+  // nxx,nyy,nzz = max # of grid cells to send in each dim
+  // nbuf = max in any dim, augment by 3x for components of vd_xyz in fillbrick
+
+  int idelx,idely,idelz,nx,ny,nz,nxx,nyy,nzz;
+
+  idelx = MAX(nxlo_ghost,nxhi_ghost);
+  idelx = MAX(idelx,nxhi_out-nxhi_in);
+  idelx = MAX(idelx,nxlo_in-nxlo_out);
+
+  idely = MAX(nylo_ghost,nyhi_ghost);
+  idely = MAX(idely,nyhi_out-nyhi_in);
+  idely = MAX(idely,nylo_in-nylo_out);
+
+  idelz = MAX(nzlo_ghost,nzhi_ghost);
+  idelz = MAX(idelz,nzhi_out-nzhi_in);
+  idelz = MAX(idelz,nzlo_in-nzlo_out);
+
+  nx = nxhi_out - nxlo_out + 1;
+  ny = nyhi_out - nylo_out + 1;
+  nz = nzhi_out - nzlo_out + 1;
+
+  nxx = idelx * ny * nz;
+  nyy = idely * nx * nz;
+  nzz = idelz * nx * ny;
+
+  nbuf = MAX(nxx,nyy);
+  nbuf = MAX(nbuf,nzz);
+  nbuf *= 3;
+
+  // print stats
+
+  int ngrid_max,nfft_both_max,nbuf_max;
+  MPI_Allreduce(&ngrid,&ngrid_max,1,MPI_INT,MPI_MAX,world);
+  MPI_Allreduce(&nfft_both,&nfft_both_max,1,MPI_INT,MPI_MAX,world);
+  MPI_Allreduce(&nbuf,&nbuf_max,1,MPI_INT,MPI_MAX,world);
+
+  if (me == 0) {
+	glog.logfile << "brick FFT buffer size/proc = " << ngrid_max << " "
+	  << nfft_both_max << " " << nbuf_max << " " << endl;
+  }
+
+  // allocate K-space dependent memory
+
+//  allocate();
+
+  // pre-compute Green's function denomiator expansion
+  // pre-compute 1d charge distribution coefficients
+
+//  compute_gf_denom();
+//  compute_rho_coeff();
+
+  // volume-dependent pre-computations
+
+//  setup();   
+d550 1
+a550 1
+		   "No neighboring required for PPPM");
+@
+
+
+4.1.2.3
+log
+@Added rskin to Force_PPPM
+@
+text
+@d349 1
+a349 2
+  //  double cuthalf = 0.5 * neighbor->get_rskin();
+  double cuthalf = 0.5 * rskin;
+a1245 5
+
+double Force_PPPM::set_rskin(const double& rskin_in) {
+  rskin = rskin_in;
+}
+
+@
+
+
+4.1.2.4
+log
+@latest version of PPPM for Grasp
+@
+text
+@a74 3
+#include "memory.h"
+#include "fft3d_wrap.h"
+#include "remap_wrap.h"
+d100 1
+d102 1
+d106 1
+a106 1
+  gridflag = 0;
+d118 3
+d125 1
+a125 1
+  vg = NULL;
+d132 2
+a133 2
+  fft1 = fft2 = NULL;
+  remap = NULL;
+d137 1
+a137 3
+
+  memory = new Memory;
+  memory = NULL;
+d141 2
+a142 3
+  delete [] factors;
+  deallocate();
+  memory->destroy_2d_int_array(part2grid);
+d164 5
+a168 6
+//  g_ewald = (1.35 - 0.15*log(precision))/realspace_cutoff;
+//  gsqmx = -4.0*g_ewald*g_ewald*log(precision);
+//  if (node == 0) {
+//    glog.logfile << "  G vector = " << g_ewald << endl;
+//  }
+
+a176 36
+void Force_PPPM::ApplyForce(
+		  const bool& Lenergy, const bool& Lvirial, 
+                  ParticleList* p,
+                  const Box* b, Comm* comm) {
+  nparticles = p->get_nparticles();
+  SetupKSpace(p, b, comm);
+  Compute(Lenergy,Lvirial,p,b,comm);
+}
+
+void Force_PPPM::Neighboring(
+	         ParticleList* p, 
+	         int* type_index,
+	         const Box* b, Comm* comm) {
+  glog.error("Force_PPPM::Neighboring:\n"
+		   "No neighboring required for PPPM");
+}
+
+void Force_PPPM::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+       const Box* b, Comm* comm){
+
+    Lneighbor = false;
+    rcutneighmax = 0.0;
+}
+
+void Force_PPPM::SetupTypes(const ParticleTypeList*) {}
+
+double Force_PPPM::get_g_ewald() const {
+  return g_ewald;
+}
+
+double Force_PPPM::set_rskin(const double& rskin_in) {
+  rskin = rskin_in;
+}
+
+d185 1
+a185 4
+  xprd = b->xprd;
+  yprd = b->yprd;
+  zprd = b->zprd;
+              
+a199 1
+  dielectric = b->get_dielectric();
+d201 46
+d258 6
+a263 1
+  if (order > MAXORDER) glog.error("Reduce PPPM order");
+d267 1
+a267 1
+  deallocate();
+d272 2
+d298 1
+a299 2
+  MPI_Comm_rank(world,&me);
+  MPI_Comm_size(world,&nprocs);
+d312 1
+a312 1
+  set_grid();
+d349 1
+d352 4
+d365 4
+d372 1
+d481 1
+a481 1
+  } else procs2grid2d(nprocs,ny_pppm,nz_pppm,&npey_fft,&npez_fft);
+d554 1
+a554 1
+  allocate();
+d559 2
+a560 2
+  compute_gf_denom();
+  compute_rho_coeff();
+d564 1
+a564 1
+  setup(b);   
+d567 33
+a599 3
+/* ----------------------------------------------------------------------
+   adjust PPPM coeffs, called by init and whenever volume has changed 
+------------------------------------------------------------------------- */
+d601 14
+a614 34
+void Force_PPPM::setup(const Box* b)
+{
+  int i,j,k,l,m,n;
+
+  // volume-dependent factors
+
+  xprd = b->xprd;
+  yprd = b->yprd;
+  zprd = b->zprd;
+    
+  // adjustment of z dimension for 2d slab PPPM
+  // 3d PPPM just uses zprd since slab_volfactor = 1.0
+
+  double zprd_slab = zprd*slab_volfactor;
+
+  volume = xprd * yprd * zprd_slab;
+    
+  delxinv = nx_pppm/xprd;
+  delyinv = ny_pppm/yprd;
+  delzinv = nz_pppm/zprd_slab;
+
+  delvolinv = delxinv*delyinv*delzinv;
+
+  double unitkx = (2.0*PI/xprd);
+  double unitky = (2.0*PI/yprd);
+  double unitkz = (2.0*PI/zprd_slab);
+
+  // fkx,fky,fkz for my FFT grid pts
+
+  double per;
+
+  for (i = nxlo_fft; i <= nxhi_fft; i++) {
+    per = i - nx_pppm*(2*i/nx_pppm);
+    fkx[i] = unitkx*per;
+d616 2
+d619 3
+a621 3
+  for (i = nylo_fft; i <= nyhi_fft; i++) {
+    per = i - ny_pppm*(2*i/ny_pppm);
+    fky[i] = unitky*per;
+d623 1
+d625 7
+a631 3
+  for (i = nzlo_fft; i <= nzhi_fft; i++) {
+    per = i - nz_pppm*(2*i/nz_pppm);
+    fkz[i] = unitkz*per;
+d633 4
+d638 3
+a640 2
+  // virial coefficients
+
+d643 64
+a706 23
+  n = 0;
+  for (k = nzlo_fft; k <= nzhi_fft; k++) {
+    for (j = nylo_fft; j <= nyhi_fft; j++) {
+      for (i = nxlo_fft; i <= nxhi_fft; i++) {
+	sqk = fkx[i]*fkx[i] + fky[j]*fky[j] + fkz[k]*fkz[k];
+	if (sqk == 0.0) {
+	  vg[n][0] = 0.0;
+	  vg[n][1] = 0.0;
+	  vg[n][2] = 0.0;
+	  vg[n][3] = 0.0;
+	  vg[n][4] = 0.0;
+	  vg[n][5] = 0.0;
+	} else {
+	  vterm = -2.0 * (1.0/sqk + 0.25/(g_ewald*g_ewald));
+	  vg[n][0] = 1.0 + vterm*fkx[i]*fkx[i];
+	  vg[n][1] = 1.0 + vterm*fky[j]*fky[j];
+	  vg[n][2] = 1.0 + vterm*fkz[k]*fkz[k];
+	  vg[n][3] = vterm*fkx[i]*fky[j];
+	  vg[n][4] = vterm*fkx[i]*fkz[k];
+	  vg[n][5] = vterm*fky[j]*fkz[k];
+	}
+	n++;
+      }
+d710 1
+a710 16
+  // modified (Hockney-Eastwood) Coulomb Green's function
+
+  int nx,ny,nz,kper,lper,mper;
+  double snx,sny,snz,snx2,sny2,snz2;
+  double argx,argy,argz,wx,wy,wz,sx,sy,sz,qx,qy,qz;
+  double sum1,dot1,dot2;
+  double numerator,denominator;
+
+  int nbx = static_cast<int> ((g_ewald*xprd/(PI*nx_pppm)) * 
+			      pow(-log(EPS_HOC),0.25));
+  int nby = static_cast<int> ((g_ewald*yprd/(PI*ny_pppm)) * 
+			      pow(-log(EPS_HOC),0.25));
+  int nbz = static_cast<int> ((g_ewald*zprd_slab/(PI*nz_pppm)) * 
+			      pow(-log(EPS_HOC),0.25));
+
+  double form = 1.0;
+d712 34
+a745 50
+  n = 0;
+  for (m = nzlo_fft; m <= nzhi_fft; m++) {
+    mper = m - nz_pppm*(2*m/nz_pppm);
+    snz = sin(0.5*unitkz*mper*zprd_slab/nz_pppm);
+    snz2 = snz*snz;
+
+    for (l = nylo_fft; l <= nyhi_fft; l++) {
+      lper = l - ny_pppm*(2*l/ny_pppm);
+      sny = sin(0.5*unitky*lper*yprd/ny_pppm);
+      sny2 = sny*sny;
+
+      for (k = nxlo_fft; k <= nxhi_fft; k++) {
+	kper = k - nx_pppm*(2*k/nx_pppm);
+	snx = sin(0.5*unitkx*kper*xprd/nx_pppm);
+	snx2 = snx*snx;
+      
+	sqk = pow(unitkx*kper,2.0) + pow(unitky*lper,2.0) + 
+	  pow(unitkz*mper,2.0);
+
+	if (sqk != 0.0) {
+	  numerator = form*12.5663706/sqk;
+	  denominator = gf_denom(snx2,sny2,snz2);  
+	  sum1 = 0.0;
+	  for (nx = -nbx; nx <= nbx; nx++) {
+	    qx = unitkx*(kper+nx_pppm*nx);
+	    sx = exp(-.25*pow(qx/g_ewald,2.0));
+	    wx = 1.0;
+	    argx = 0.5*qx*xprd/nx_pppm;
+	    if (argx != 0.0) wx = pow(sin(argx)/argx,order);
+	    for (ny = -nby; ny <= nby; ny++) {
+	      qy = unitky*(lper+ny_pppm*ny);
+	      sy = exp(-.25*pow(qy/g_ewald,2.0));
+	      wy = 1.0;
+	      argy = 0.5*qy*yprd/ny_pppm;
+	      if (argy != 0.0) wy = pow(sin(argy)/argy,order);
+	      for (nz = -nbz; nz <= nbz; nz++) {
+		qz = unitkz*(mper+nz_pppm*nz);
+		sz = exp(-.25*pow(qz/g_ewald,2.0));
+		wz = 1.0;
+		argz = 0.5*qz*zprd_slab/nz_pppm;
+		if (argz != 0.0) wz = pow(sin(argz)/argz,order);
+
+		dot1 = unitkx*kper*qx + unitky*lper*qy + unitkz*mper*qz;
+		dot2 = qx*qx+qy*qy+qz*qz;
+		sum1 += (dot1/dot2) * sx*sy*sz * pow(wx*wy*wz,2.0);
+	      }
+	    }
+	  }
+	  greensfn[n++] = numerator*sum1/denominator;
+	} else greensfn[n++] = 0.0;
+a748 1
+}
+d750 1
+a750 3
+/* ----------------------------------------------------------------------
+   compute the PPPM long-range force, energy, virial 
+------------------------------------------------------------------------- */
+d752 35
+a786 11
+void Force_PPPM::Compute(const bool& Lenergy, const bool& Lvirial, 
+		  ParticleList* p, const Box* b, Comm* comm) {
+
+  int i;
+			  
+  if (Lenergy) {
+    energy_piece[0] = 0.0;
+  }
+  if (Lvirial) {
+    for (int ivirial=0;ivirial<nvirial;ivirial++) {
+      virial[ivirial] = 0.0;
+d790 1
+a790 1
+  // extend size of nparticles-dependent arrays if necessary
+d792 36
+a827 4
+  if (nparticles > maxlocal) {
+    maxlocal = nparticles;
+    memory->destroy_2d_int_array(part2grid);
+    part2grid = memory->create_2d_int_array(maxlocal,3,"pppm:part2grid");
+d830 1
+a830 2
+  // find grid points for all my particles
+  // map my particle charge onto my local 3d density grid
+d832 69
+a900 34
+  particle_map(p,b);
+  make_rho(p,b);
+
+  // all procs communicate density from their 3-d brick (with ghosts)
+  //  to others FFT columns - result is filled/summed grid in FFT decomposition
+
+  brick2fft(comm);
+
+  // compute potential gradient on my FFT grid and
+  //   portion of e_long on this proc's FFT grid
+  // return gradients in 3-d brick decomposition
+  
+  poisson(Lenergy, Lvirial);
+
+  // all procs communicate electric fields from their FFT columns 
+  //  others 3-d bricks (with ghosts) - result is filled grid in 3-d decomp
+
+  fillbrick(comm);
+
+  // calculate the force on my particles
+
+  fieldforce(p,b);
+
+  // sum energy across procs and add in volume-dependent term
+
+  if (Lenergy) {
+    double energy_all;
+    MPI_Allreduce(&energy,&energy_all,1,MPI_DOUBLE,MPI_SUM,world);
+    energy_piece[0] = energy_all;
+   
+    energy_piece[0] *= 0.5*volume;
+    energy_piece[0] -= g_ewald*qsqsum/1.772453851 +
+      0.5*PI*qsum*qsum / (g_ewald*g_ewald*volume);
+    energy_piece[0] *= prefactor;
+d902 1
+d904 7
+a910 11
+  // sum virial across procs
+
+  if (Lvirial) {
+    double virial_all[6];
+    MPI_Allreduce(virial,virial_all,6,MPI_DOUBLE,MPI_SUM,world);
+    for (i = 0; i < 6; i++) virial[i] = 0.5*prefactor*volume*virial_all[i];
+  }
+
+  // 2d slab correction
+
+  if (slabflag) slabcorr(Lenergy);
+d913 6
+a918 60
+/* ----------------------------------------------------------------------
+   allocate memory that depends on # of K-vectors and order 
+------------------------------------------------------------------------- */
+
+void Force_PPPM::allocate()
+{
+  density_brick = 
+    memory->create_3d_double_array(nzlo_out,nzhi_out,nylo_out,nyhi_out,
+				   nxlo_out,nxhi_out,"pppm:density_brick");
+  vdx_brick =
+    memory->create_3d_double_array(nzlo_out,nzhi_out,nylo_out,nyhi_out,
+				   nxlo_out,nxhi_out,"pppm:vdx_brick");
+  vdy_brick = 
+    memory->create_3d_double_array(nzlo_out,nzhi_out,nylo_out,nyhi_out,
+				   nxlo_out,nxhi_out,"pppm:vdy_brick");
+  vdz_brick = 
+    memory->create_3d_double_array(nzlo_out,nzhi_out,nylo_out,nyhi_out,
+				   nxlo_out,nxhi_out,"pppm:vdz_brick");
+
+  density_fft = new double[nfft_both];
+  greensfn = new double[nfft_both];
+  work1 = new double[2*nfft_both];
+  work2 = new double[2*nfft_both];
+  vg = memory->create_2d_double_array(nfft_both,6,"pppm:vg");
+
+  fkx = memory->create_1d_double_array(nxlo_fft,nxhi_fft,"pppm:fkx");
+  fky = memory->create_1d_double_array(nylo_fft,nyhi_fft,"pppm:fky");
+  fkz = memory->create_1d_double_array(nzlo_fft,nzhi_fft,"pppm:fkz");
+
+  buf1 = new double[nbuf];
+  buf2 = new double[nbuf];
+
+  // summation coeffs
+
+  gf_b = new double[order];
+  rho1d = memory->create_2d_double_array(3,-order/2,order/2,"pppm:rho1d");
+  rho_coeff = memory->create_2d_double_array(order,(1-order)/2,order/2,
+					     "pppm:rho_coeff");
+
+  // create 2 FFTs and a Remap
+  // 1st FFT keeps data in FFT decompostion
+  // 2nd FFT returns data in 3d brick decomposition
+  // remap takes data from 3d brick to FFT decomposition
+
+  int tmp;
+
+  fft1 = new FFT3d(world,nx_pppm,ny_pppm,nz_pppm,
+		   nxlo_fft,nxhi_fft,nylo_fft,nyhi_fft,nzlo_fft,nzhi_fft,
+		   nxlo_fft,nxhi_fft,nylo_fft,nyhi_fft,nzlo_fft,nzhi_fft,
+		   0,0,&tmp);
+
+  fft2 = new FFT3d(world,nx_pppm,ny_pppm,nz_pppm,
+		   nxlo_fft,nxhi_fft,nylo_fft,nyhi_fft,nzlo_fft,nzhi_fft,
+		   nxlo_in,nxhi_in,nylo_in,nyhi_in,nzlo_in,nzhi_in,
+		   0,0,&tmp);
+
+  remap = new Remap(world,
+		    nxlo_in,nxhi_in,nylo_in,nyhi_in,nzlo_in,nzhi_in,
+		    nxlo_fft,nxhi_fft,nylo_fft,nyhi_fft,nzlo_fft,nzhi_fft,
+		    1,0,0,2);
+d921 4
+a924 3
+/* ----------------------------------------------------------------------
+   deallocate memory that depends on # of K-vectors and order 
+------------------------------------------------------------------------- */
+d926 2
+a927 27
+void Force_PPPM::deallocate()
+{
+  memory->destroy_3d_double_array(density_brick,nzlo_out,nylo_out,nxlo_out);
+  memory->destroy_3d_double_array(vdx_brick,nzlo_out,nylo_out,nxlo_out);
+  memory->destroy_3d_double_array(vdy_brick,nzlo_out,nylo_out,nxlo_out);
+  memory->destroy_3d_double_array(vdz_brick,nzlo_out,nylo_out,nxlo_out);
+
+  delete [] density_fft;
+  delete [] greensfn;
+  delete [] work1;
+  delete [] work2;
+  memory->destroy_2d_double_array(vg);
+
+  memory->destroy_1d_double_array(fkx,nxlo_fft);
+  memory->destroy_1d_double_array(fky,nylo_fft);
+  memory->destroy_1d_double_array(fkz,nzlo_fft);
+
+  delete [] buf1;
+  delete [] buf2;
+
+  delete [] gf_b;
+  memory->destroy_2d_double_array(rho1d,-order/2);
+  memory->destroy_2d_double_array(rho_coeff,(1-order)/2);
+
+  delete fft1;
+  delete fft2;
+  delete remap;
+a929 3
+/* ----------------------------------------------------------------------
+   set size of FFT grid (nx,ny,nz_pppm) and g_ewald 
+------------------------------------------------------------------------- */
+d931 6
+a936 4
+void Force_PPPM::set_grid()
+{
+  // see JCP 109, pg. 7698 for derivation of coefficients
+  // higher order coefficients may be computed if needed
+d938 1
+a938 1
+  double **acons = memory->create_2d_double_array(8,7,"pppm:acons");
+d940 2
+a941 168
+  acons[1][0] = 2.0 / 3.0;
+  acons[2][0] = 1.0 / 50.0;
+  acons[2][1] = 5.0 / 294.0;
+  acons[3][0] = 1.0 / 588.0;
+  acons[3][1] = 7.0 / 1440.0;
+  acons[3][2] = 21.0 / 3872.0;
+  acons[4][0] = 1.0 / 4320.0;
+  acons[4][1] = 3.0 / 1936.0;
+  acons[4][2] = 7601.0 / 2271360.0;
+  acons[4][3] = 143.0 / 28800.0;
+  acons[5][0] = 1.0 / 23232.0;
+  acons[5][1] = 7601.0 / 13628160.0;
+  acons[5][2] = 143.0 / 69120.0;
+  acons[5][3] = 517231.0 / 106536960.0;
+  acons[5][4] = 106640677.0 / 11737571328.0;
+  acons[6][0] = 691.0 / 68140800.0;
+  acons[6][1] = 13.0 / 57600.0;
+  acons[6][2] = 47021.0 / 35512320.0;
+  acons[6][3] = 9694607.0 / 2095994880.0;
+  acons[6][4] = 733191589.0 / 59609088000.0;
+  acons[6][5] = 326190917.0 / 11700633600.0;
+  acons[7][0] = 1.0 / 345600.0;
+  acons[7][1] = 3617.0 / 35512320.0;
+  acons[7][2] = 745739.0 / 838397952.0;
+  acons[7][3] = 56399353.0 / 12773376000.0;
+  acons[7][4] = 25091609.0 / 1560084480.0;
+  acons[7][5] = 1755948832039.0 / 36229939200000.0;
+  acons[7][6] = 4887769399.0 / 37838389248.0;
+
+  // initial g_ewald estimate
+  
+  double q2 = qsqsum / dielectric;
+
+  // adjustment of z dimension for 2d slab PPPM
+  // 3d PPPM just uses zprd since slab_volfactor = 1.0
+
+  double zprd_slab = zprd*slab_volfactor;
+  
+  // based on desired error and real space cutoff
+  // fluid-occupied volume used to estimate real-space error
+  // zprd used rather than zprd_slab
+  
+  g_ewald = sqrt(-log(precision*sqrt(nparticles*cutoff*xprd*yprd*zprd) / 
+		      (2.0*q2))) / cutoff;
+
+  // set optimal nx_pppm,ny_pppm,nz_pppm based on order and precision
+
+  double h,h1,h2,err,er1,er2,sum,lpr;
+  int m,ncount;
+
+  if (!gridflag) {
+
+    h = 1.0;
+    h1 = 2.0;
+
+    ncount = 0;
+    err = LARGE;
+    er1 = 0.0;
+    while (fabs(err) > SMALL) {
+      sum = 0.0;
+      for (m = 0; m < order; m++) 
+	sum += acons[order][m] * pow(h*g_ewald,2.0*m);
+      lpr = q2 * pow(h*g_ewald,(double) order) * 
+	sqrt(g_ewald*xprd*sqrt(2.0*PI)*sum/nparticles)/ (xprd*xprd);
+      err = log(lpr) - log(precision);
+      er2 = er1;
+      er1 = err;
+      h2 = h1;
+      h1 = h;
+      if ((er1 - er2) == 0.0) h = h1 + er1;
+      else h = h1 + er1*(h2 - h1)/(er1 - er2);
+      ncount++;
+      if (ncount > LARGE) glog.error("Cannot compute PPPM X grid spacing");
+    }
+    nx_pppm = static_cast<int> (xprd/h + 1);
+
+    ncount = 0;
+    err = LARGE;
+    er1 = 0.0;
+    while (fabs(err) > SMALL) {
+      sum = 0.0;
+      for (m = 0; m < order; m++) 
+	sum += acons[order][m] * pow(h*g_ewald,2.0*m);
+      lpr = q2 * pow(h*g_ewald,(double) order) * 
+	sqrt(g_ewald*yprd*sqrt(2.0*PI)*sum/nparticles)/ (yprd*yprd);
+      err = log(lpr) - log(precision);
+      er2 = er1;
+      er1 = err;
+      h2 = h1;
+      h1 = h;
+      if ((er1 - er2) == 0.0) h = h1 + er1;
+      else h = h1 + er1*(h2 - h1)/(er1 - er2);
+      ncount++;
+      if (ncount > LARGE) glog.error("Cannot compute PPPM Y grid spacing");
+    }
+    ny_pppm = static_cast<int> (yprd/h + 1);
+
+    ncount = 0;
+    err = LARGE;
+    er1 = 0.0;
+    while (fabs(err) > SMALL) {
+      sum = 0.0;
+      for (m = 0; m < order; m++) 
+	sum += acons[order][m] * pow(h*g_ewald,2.0*m);
+      lpr = q2 * pow(h*g_ewald,(double) order) * 
+	sqrt(g_ewald*zprd_slab*sqrt(2.0*PI)*sum/nparticles)/ (zprd_slab*zprd_slab);
+      err = log(lpr) - log(precision);
+      er2 = er1;
+      er1 = err;
+      h2 = h1;
+      h1 = h;
+      if ((er1 - er2) == 0.0) h = h1 + er1;
+      else h = h1 + er1*(h2 - h1)/(er1 - er2);
+      ncount++;
+      if (ncount > LARGE) glog.error("Cannot compute PPPM Z grid spacing");
+    }
+    nz_pppm = static_cast<int> (zprd_slab/h + 1);
+
+  }
+
+  // convert grid into sizes that are factorable
+
+  while (!factorable(nx_pppm)) nx_pppm++;
+  while (!factorable(ny_pppm)) ny_pppm++;
+  while (!factorable(nz_pppm)) nz_pppm++;
+
+  // adjust g_ewald for new grid
+
+  double gew1,gew2,dx,dy,dz,lprx,lpry,lprz,spr;
+
+  gew1 = g_ewald + 0.01;
+  ncount = 0;
+  err = LARGE;
+  er1 = 0.0;
+  dx = xprd/nx_pppm;
+  dy = yprd/ny_pppm;
+  dz = zprd_slab/nz_pppm;
+
+  while (fabs(err) > SMALL) {
+    
+    sum = 0.0;
+    for (m = 0; m < order; m++) sum += acons[order][m] * pow(dx*g_ewald,2.0*m);
+    lprx = q2 * pow(dx*g_ewald,(double) order) *
+      sqrt(g_ewald*xprd*sqrt(2.0*PI)*sum/nparticles)/ (xprd*xprd);
+
+    sum = 0.0;
+    for (m = 0; m < order; m++) sum += acons[order][m] * pow(dy*g_ewald,2.0*m);
+    lpry = q2 * pow(dy*g_ewald,(double) order) *
+      sqrt(g_ewald*yprd*sqrt(2.0*PI)*sum/nparticles)/ (yprd*yprd);
+
+    sum = 0.0;
+    for (m = 0; m < order; m++) sum += acons[order][m] * pow(dz*g_ewald,2.0*m);
+    lprz = q2 * pow(dz*g_ewald,(double) order) *
+      sqrt(g_ewald*zprd_slab*sqrt(2.0*PI)*sum/nparticles)/ (zprd_slab*zprd_slab);
+
+    lpr = sqrt(lprx*lprx + lpry*lpry + lprz*lprz) / sqrt(3.0);
+    spr = 2.0*q2 * exp(-g_ewald*g_ewald*cutoff*cutoff) / 
+      sqrt(nparticles*cutoff*xprd*yprd*zprd_slab);
+
+    err = log(lpr) - log(spr);
+    er2 = er1;
+    er1 = err;
+    gew2 = gew1;
+    gew1 = g_ewald;
+    if ((er1 - er2) == 0.0) g_ewald = gew1 + er1;
+    else g_ewald = gew1 + er1*(gew2 - gew1)/(er1 - er2);
+    ncount++;
+    if (ncount > LARGE) glog.error("Cannot compute PPPM G");
+d943 4
+a946 11
+  
+  // free local memory
+
+  memory->destroy_2d_double_array(acons);
+  
+  // print info
+
+  if (me == 0) {
+    glog.logfile << "G vector = " << g_ewald << endl;
+    glog.logfile << "grid = " << nx_pppm << " " << ny_pppm << " " << nz_pppm << endl;
+    glog.logfile << "RMS precision = " << lpr << endl;
+a947 1
+}
+d949 1
+a949 4
+/* ----------------------------------------------------------------------
+   check if all factors of n are in list of factors
+   return 1 if yes, 0 if no 
+------------------------------------------------------------------------- */
+d951 1
+a951 3
+int Force_PPPM::factorable(int n)
+{
+  int i;
+d953 2
+a954 6
+  while (n > 1) {
+    for (i = 0; i < nfactors; i++) {
+      if (n % factors[i] == 0) {
+	n /= factors[i];
+	break;
+      }
+a955 34
+    if (i == nfactors) return 0;
+  }
+
+  return 1;
+}
+
+/* ----------------------------------------------------------------------
+   denominator for Hockney-Eastwood Green's function
+     of x,y,z = sin(kx*deltax/2), etc
+
+            inf                 n-1
+   S(n,k) = Sum  W(k+pi*j)**2 = Sum b(l)*(z*z)**l
+           j=-inf               l=0
+
+          = -(z*z)**n /(2n-1)! * (d/dx)**(2n-1) cot(x)  at z = sin(x)
+   gf_b = denominator expansion coeffs 
+------------------------------------------------------------------------- */
+
+double Force_PPPM::gf_denom(double x, double y, double z)
+{
+  double sx,sy,sz;
+  sz = sy = sx = 0.0;
+  for (int l = order-1; l >= 0; l--) {
+    sx = gf_b[l] + sx*x;
+    sy = gf_b[l] + sy*y;
+    sz = gf_b[l] + sz*z;
+  }
+  double s = sx*sy*sz;
+  return s*s;
+}
+
+/* ----------------------------------------------------------------------
+   pre-compute Green's function denominator expansion coeffs, Gamma(2n) 
+------------------------------------------------------------------------- */
+d957 2
+a958 11
+void Force_PPPM::compute_gf_denom()
+{
+  int k,l,m;
+  
+  for (l = 1; l < order; l++) gf_b[l] = 0.0;
+  gf_b[0] = 1.0;
+  
+  for (m = 1; m < order; m++) {
+    for (l = m; l > 0; l--) 
+      gf_b[l] = 4.0 * (gf_b[l]*(l-m)*(l-m-0.5)-gf_b[l-1]*(l-m-1)*(l-m-1));
+    gf_b[0] = 4.0 * (gf_b[0]*(l-m)*(l-m-0.5));
+d960 2
+d963 3
+a965 5
+  int ifact = 1;
+  for (k = 1; k < 2*order; k++) ifact *= k;
+  double gaminv = 1.0/ifact;
+  for (l = 0; l < order; l++) gf_b[l] *= gaminv;
+}
+d967 2
+a968 4
+/* ----------------------------------------------------------------------
+   map density in 3d brick (with ghosts) to density in FFT decomposition
+   first do ghost-swaps to accumulate full density in brick decomposition 
+------------------------------------------------------------------------- */
+d970 2
+a971 5
+void Force_PPPM::brick2fft(Comm* comm)
+{
+  int i,n,ix,iy,iz;
+  MPI_Request request;
+  MPI_Status status;
+d973 21
+a993 19
+  int procneigh[3][2]; 
+  comm->get_procneigh(procneigh);
+  
+  // pack my ghosts for +x processor
+  // pass data to self or +x processor
+  // unpack and sum recv data into my real cells
+
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy <= nyhi_out; iy++)
+      for (ix = nxhi_in+1; ix <= nxhi_out; ix++)
+	buf1[n++] = density_brick[iz][iy][ix];
+
+  if (procneigh[0][1] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[0][0],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[0][1],0,world);
+    MPI_Wait(&request,&status);
+d996 1
+a996 9
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy <= nyhi_out; iy++)
+      for (ix = nxlo_in; ix < nxlo_in+nxlo_ghost; ix++)
+	density_brick[iz][iy][ix] += buf2[n++];
+
+  // pack my ghosts for -x processor
+  // pass data to self or -x processor
+  // unpack and sum recv data into my real cells
+d998 4
+a1001 12
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy <= nyhi_out; iy++)
+      for (ix = nxlo_out; ix < nxlo_in; ix++)
+	buf1[n++] = density_brick[iz][iy][ix];
+
+  if (procneigh[0][0] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[0][1],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[0][0],0,world);
+    MPI_Wait(&request,&status);
+d1004 1
+a1004 9
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy <= nyhi_out; iy++)
+      for (ix = nxhi_in-nxhi_ghost+1; ix <= nxhi_in; ix++)
+	density_brick[iz][iy][ix] += buf2[n++];
+
+  // pack my ghosts for +y processor
+  // pass data to self or +y processor
+  // unpack and sum recv data into my real cells
+d1006 5
+a1010 13
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nyhi_in+1; iy <= nyhi_out; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++)
+	buf1[n++] = density_brick[iz][iy][ix];
+
+  if (procneigh[1][1] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[1][0],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[1][1],0,world);
+    MPI_Wait(&request,&status);
+  }
+d1012 13
+a1024 9
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_in; iy < nylo_in+nylo_ghost; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++)
+	density_brick[iz][iy][ix] += buf2[n++];
+
+  // pack my ghosts for -y processor
+  // pass data to self or -y processor
+  // unpack and sum recv data into my real cells
+a1025 12
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy < nylo_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++)
+	buf1[n++] = density_brick[iz][iy][ix];
+
+  if (procneigh[1][0] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[1][1],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[1][0],0,world);
+    MPI_Wait(&request,&status);
+d1028 1
+a1028 9
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nyhi_in-nyhi_ghost+1; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++)
+	density_brick[iz][iy][ix] += buf2[n++];
+
+  // pack my ghosts for +z processor
+  // pass data to self or +z processor
+  // unpack and sum recv data into my real cells
+d1030 11
+a1040 36
+  n = 0;
+  for (iz = nzhi_in+1; iz <= nzhi_out; iz++)
+    for (iy = nylo_in; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++)
+	buf1[n++] = density_brick[iz][iy][ix];
+
+  if (procneigh[2][1] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[2][0],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[2][1],0,world);
+    MPI_Wait(&request,&status);
+  }
+
+  n = 0;
+  for (iz = nzlo_in; iz < nzlo_in+nzlo_ghost; iz++)
+    for (iy = nylo_in; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++)
+	density_brick[iz][iy][ix] += buf2[n++];
+
+  // pack my ghosts for -z processor
+  // pass data to self or -z processor
+  // unpack and sum recv data into my real cells
+
+  n = 0;
+  for (iz = nzlo_out; iz < nzlo_in; iz++)
+    for (iy = nylo_in; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++)
+	buf1[n++] = density_brick[iz][iy][ix];
+
+  if (procneigh[2][0] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[2][1],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[2][0],0,world);
+    MPI_Wait(&request,&status);
+a1041 19
+
+  n = 0;
+  for (iz = nzhi_in-nzhi_ghost+1; iz <= nzhi_in; iz++)
+    for (iy = nylo_in; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++)
+	density_brick[iz][iy][ix] += buf2[n++];
+
+  // remap from 3d brick decomposition to FFT decomposition
+  // copy grabs inner portion of density from 3d brick
+  // remap could be done as pre-stage of FFT,
+  //   but this works optimally on only double values, not complex values
+
+  n = 0;
+  for (iz = nzlo_in; iz <= nzhi_in; iz++)
+    for (iy = nylo_in; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++)
+	density_fft[n++] = density_brick[iz][iy][ix];
+
+  remap->perform(density_fft,density_fft,work1);
+d1044 1
+a1044 5
+/* ----------------------------------------------------------------------
+   fill-in ghost values of potential gradients on each 3d brick 
+------------------------------------------------------------------------- */
+
+void Force_PPPM::fillbrick(Comm* comm)
+d1046 6
+a1051 10
+  int i,n,ix,iy,iz;
+  MPI_Request request;
+  MPI_Status status;
+
+  int procneigh[3][2]; 
+  comm->get_procneigh(procneigh);
+
+  // pack my real cells for +z processor
+  // pass data to self or +z processor
+  // unpack and sum recv data into my ghost cells
+a1053 7
+  for (iz = nzhi_in-nzhi_ghost+1; iz <= nzhi_in; iz++)
+    for (iy = nylo_in; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++) {
+	buf1[n++] = vdx_brick[iz][iy][ix];
+	buf1[n++] = vdy_brick[iz][iy][ix];
+	buf1[n++] = vdz_brick[iz][iy][ix];
+      }
+d1055 1
+a1055 7
+  if (procneigh[2][1] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[2][0],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[2][1],0,world);
+    MPI_Wait(&request,&status);
+  }
+d1057 18
+a1074 7
+  n = 0;
+  for (iz = nzlo_out; iz < nzlo_in; iz++)
+    for (iy = nylo_in; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++) {
+	vdx_brick[iz][iy][ix] = buf2[n++];
+	vdy_brick[iz][iy][ix] = buf2[n++];
+	vdz_brick[iz][iy][ix] = buf2[n++];
+d1076 3
+a1078 20
+
+  // pack my real cells for -z processor
+  // pass data to self or -z processor
+  // unpack and sum recv data into my ghost cells
+
+  n = 0;
+  for (iz = nzlo_in; iz < nzlo_in+nzlo_ghost; iz++)
+    for (iy = nylo_in; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++) {
+	buf1[n++] = vdx_brick[iz][iy][ix];
+	buf1[n++] = vdy_brick[iz][iy][ix];
+	buf1[n++] = vdz_brick[iz][iy][ix];
+      }
+
+  if (procneigh[2][0] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[2][1],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[2][0],0,world);
+    MPI_Wait(&request,&status);
+d1081 21
+a1101 7
+  n = 0;
+  for (iz = nzhi_in+1; iz <= nzhi_out; iz++)
+    for (iy = nylo_in; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++) {
+	vdx_brick[iz][iy][ix] = buf2[n++];
+	vdy_brick[iz][iy][ix] = buf2[n++];
+	vdz_brick[iz][iy][ix] = buf2[n++];
+d1103 1
+a1103 161
+
+  // pack my real cells for +y processor
+  // pass data to self or +y processor
+  // unpack and sum recv data into my ghost cells
+
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nyhi_in-nyhi_ghost+1; iy <= nyhi_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++) {
+	buf1[n++] = vdx_brick[iz][iy][ix];
+	buf1[n++] = vdy_brick[iz][iy][ix];
+	buf1[n++] = vdz_brick[iz][iy][ix];
+      }
+
+  if (procneigh[1][1] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[1][0],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[1][1],0,world);
+    MPI_Wait(&request,&status);
+  }
+
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy < nylo_in; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++) {
+	vdx_brick[iz][iy][ix] = buf2[n++];
+	vdy_brick[iz][iy][ix] = buf2[n++];
+	vdz_brick[iz][iy][ix] = buf2[n++];
+      }
+
+  // pack my real cells for -y processor
+  // pass data to self or -y processor
+  // unpack and sum recv data into my ghost cells
+
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_in; iy < nylo_in+nylo_ghost; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++) {
+	buf1[n++] = vdx_brick[iz][iy][ix];
+	buf1[n++] = vdy_brick[iz][iy][ix];
+	buf1[n++] = vdz_brick[iz][iy][ix];
+      }
+
+  if (procneigh[1][0] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[1][1],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[1][0],0,world);
+    MPI_Wait(&request,&status);
+  }
+
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nyhi_in+1; iy <= nyhi_out; iy++)
+      for (ix = nxlo_in; ix <= nxhi_in; ix++) {
+	vdx_brick[iz][iy][ix] = buf2[n++];
+	vdy_brick[iz][iy][ix] = buf2[n++];
+	vdz_brick[iz][iy][ix] = buf2[n++];
+      }
+
+  // pack my real cells for +x processor
+  // pass data to self or +x processor
+  // unpack and sum recv data into my ghost cells
+
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy <= nyhi_out; iy++)
+      for (ix = nxhi_in-nxhi_ghost+1; ix <= nxhi_in; ix++) {
+	buf1[n++] = vdx_brick[iz][iy][ix];
+	buf1[n++] = vdy_brick[iz][iy][ix];
+	buf1[n++] = vdz_brick[iz][iy][ix];
+      }
+
+  if (procneigh[0][1] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[0][0],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[0][1],0,world);
+    MPI_Wait(&request,&status);
+  }
+
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy <= nyhi_out; iy++)
+      for (ix = nxlo_out; ix < nxlo_in; ix++) {
+	vdx_brick[iz][iy][ix] = buf2[n++];
+	vdy_brick[iz][iy][ix] = buf2[n++];
+	vdz_brick[iz][iy][ix] = buf2[n++];
+      }
+
+  // pack my real cells for -x processor
+  // pass data to self or -x processor
+  // unpack and sum recv data into my ghost cells
+
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy <= nyhi_out; iy++)
+      for (ix = nxlo_in; ix < nxlo_in+nxlo_ghost; ix++) {
+	buf1[n++] = vdx_brick[iz][iy][ix];
+	buf1[n++] = vdy_brick[iz][iy][ix];
+	buf1[n++] = vdz_brick[iz][iy][ix];
+      }
+
+  if (procneigh[0][0] == me)
+    for (i = 0; i < n; i++) buf2[i] = buf1[i];
+  else {
+    MPI_Irecv(buf2,nbuf,MPI_DOUBLE,procneigh[0][1],0,world,&request);
+    MPI_Send(buf1,n,MPI_DOUBLE,procneigh[0][0],0,world);
+    MPI_Wait(&request,&status);
+  }
+
+  n = 0;
+  for (iz = nzlo_out; iz <= nzhi_out; iz++)
+    for (iy = nylo_out; iy <= nyhi_out; iy++)
+      for (ix = nxhi_in+1; ix <= nxhi_out; ix++) {
+	vdx_brick[iz][iy][ix] = buf2[n++];
+	vdy_brick[iz][iy][ix] = buf2[n++];
+	vdz_brick[iz][iy][ix] = buf2[n++];
+      }
+}
+
+/* ----------------------------------------------------------------------
+   find center grid pt for each of my particles
+   check that full stencil for the particle will fit in my 3d brick
+   store central grid pt indices in part2grid array 
+------------------------------------------------------------------------- */
+
+void Force_PPPM::particle_map(ParticleList* p, const Box* b)
+{
+  int nx,ny,nz;
+  double xi[3];
+  Particle* i_pnt;
+  
+  double boxxlo = b->xboundlo;
+  double boxylo = b->yboundlo;
+  double boxzlo = b->zboundlo;
+
+  int flag = 0;
+  for (int i = 0; i < nparticles; i++) {
+
+  	i_pnt = p->get_particle(i);
+	i_pnt->get_x(xi);
+	      
+    // (nx,ny,nz) = global coords of grid pt to "lower left" of charge
+    // current particle coord can be outside global and local box
+    // add/subtract 4096 to avoid int(-0.75) = 0 when want it to be -1
+
+    nx = static_cast<int> ((xi[0]-boxxlo)*delxinv+shift) - 4096;
+    ny = static_cast<int> ((xi[1]-boxylo)*delyinv+shift) - 4096;
+    nz = static_cast<int> ((xi[2]-boxzlo)*delzinv+shift) - 4096;
+
+    part2grid[i][0] = nx;
+    part2grid[i][1] = ny;
+    part2grid[i][2] = nz;
+
+    // check that entire stencil around nx,ny,nz will fit in my 3d brick
+
+    if (nx+nlower < nxlo_out || nx+nupper > nxhi_out ||
+	ny+nlower < nylo_out || ny+nupper > nyhi_out ||
+	nz+nlower < nzlo_out || nz+nupper > nzhi_out) flag++;
+d1106 1
+a1106 34
+  int flag_all;
+  MPI_Allreduce(&flag,&flag_all,1,MPI_INT,MPI_SUM,world);
+  if (flag_all) glog.error("Out of range atoms - cannot compute PPPM");
+}
+
+/* ----------------------------------------------------------------------
+   create discretized "density" on section of global grid due to my particles
+   density(x,y,z) = charge "density" at grid points of my 3d brick
+   (nxlo:nxhi,nylo:nyhi,nzlo:nzhi) is extent of my brick (including ghosts)
+   in global grid 
+------------------------------------------------------------------------- */
+
+void Force_PPPM::make_rho(ParticleList* p, const Box* b)
+{
+  int i,l,m,n,nx,ny,nz,mx,my,mz;
+  double dx,dy,dz,x0,y0,z0;
+  double xi[3];
+  Particle* i_pnt;
+
+  // clear 3d density array
+
+  double *vec = &density_brick[nzlo_out][nylo_out][nxlo_out];
+  for (i = 0; i < ngrid; i++) vec[i] = 0.0;
+
+  // loop over my charges, add their contribution to nearby grid points
+  // (nx,ny,nz) = global coords of grid pt to "lower left" of charge
+  // (dx,dy,dz) = distance to "lower left" grid pt
+  // (mx,my,mz) = global coords of moving stencil pt
+
+  double boxxlo = b->xboundlo;
+  double boxylo = b->yboundlo;
+  double boxzlo = b->zboundlo;
+
+  for (int i = 0; i < nparticles; i++) {
+d1108 16
+a1123 21
+    nx = part2grid[i][0];
+    ny = part2grid[i][1];
+    nz = part2grid[i][2];
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    dx = nx+shiftone - (xi[0]-boxxlo)*delxinv;
+    dy = ny+shiftone - (xi[1]-boxylo)*delyinv;
+    dz = nz+shiftone - (xi[2]-boxzlo)*delzinv;
+
+    compute_rho1d(dx,dy,dz);
+
+    z0 = delvolinv * i_pnt->get_charge();
+    for (n = nlower; n <= nupper; n++) {
+      mz = n+nz;
+      y0 = z0*rho1d[2][n];
+      for (m = nlower; m <= nupper; m++) {
+	my = m+ny;
+	x0 = y0*rho1d[1][m];
+	for (l = nlower; l <= nupper; l++) {
+	  mx = l+nx;
+	  density_brick[mz][my][mx] += x0*rho1d[0][l];
+d1125 4
+a1131 1
+}
+d1133 1
+a1133 3
+/* ----------------------------------------------------------------------
+   FFT-based Poisson solver 
+------------------------------------------------------------------------- */
+d1135 21
+a1155 35
+void Force_PPPM::poisson(const bool& Lenergy, const bool& Lvirial)
+{
+  int i,j,k,n;
+  double eng;
+
+  // transform charge density (r -> k) 
+
+  n = 0;
+  for (i = 0; i < nfft; i++) {
+    work1[n++] = density_fft[i];
+    work1[n++] = 0.0;
+  }
+ 
+  fft1->compute(work1,work1,1);
+
+  // if requested, compute energy and virial contribution
+
+  double scaleinv = 1.0/(nx_pppm*ny_pppm*nz_pppm);
+  double s2 = scaleinv*scaleinv;
+
+  if (Lenergy || Lvirial) {
+    if (Lvirial) {
+      n = 0;
+      for (i = 0; i < nfft; i++) {
+	eng = s2 * greensfn[i] * (work1[n]*work1[n] + work1[n+1]*work1[n+1]);
+	for (j = 0; j < 6; j++) virial[j] += eng*vg[i][j];
+	energy += eng;
+	n += 2;
+      }
+    } else {
+      n = 0;
+      for (i = 0; i < nfft; i++) {
+	energy += 
+	  s2 * greensfn[i] * (work1[n]*work1[n] + work1[n+1]*work1[n+1]);
+	n += 2;
+d1160 1
+a1160 101
+  // scale by 1/total-grid-pts to get rho(k)
+  // multiply by Green's function to get V(k)
+
+  n = 0;
+  for (i = 0; i < nfft; i++) {
+    work1[n++] *= scaleinv * greensfn[i];
+    work1[n++] *= scaleinv * greensfn[i];
+  }
+
+  // compute gradients of V(r) in each of 3 dims by transformimg -ik*V(k)
+  // FFT leaves data in 3d brick decomposition
+  // copy it into inner portion of vdx,vdy,vdz arrays
+
+  // x direction gradient
+
+  n = 0;
+  for (k = nzlo_fft; k <= nzhi_fft; k++)
+    for (j = nylo_fft; j <= nyhi_fft; j++)
+      for (i = nxlo_fft; i <= nxhi_fft; i++) {
+	work2[n] = fkx[i]*work1[n+1];
+	work2[n+1] = -fkx[i]*work1[n];
+	n += 2;
+      }
+
+  fft2->compute(work2,work2,-1);
+
+  n = 0;
+  for (k = nzlo_in; k <= nzhi_in; k++)
+    for (j = nylo_in; j <= nyhi_in; j++)
+      for (i = nxlo_in; i <= nxhi_in; i++) {
+	vdx_brick[k][j][i] = work2[n];
+	n += 2;
+      }
+
+  // y direction gradient
+
+  n = 0;
+  for (k = nzlo_fft; k <= nzhi_fft; k++)
+    for (j = nylo_fft; j <= nyhi_fft; j++)
+      for (i = nxlo_fft; i <= nxhi_fft; i++) {
+	work2[n] = fky[j]*work1[n+1];
+	work2[n+1] = -fky[j]*work1[n];
+	n += 2;
+      }
+
+  fft2->compute(work2,work2,-1);
+
+  n = 0;
+  for (k = nzlo_in; k <= nzhi_in; k++)
+    for (j = nylo_in; j <= nyhi_in; j++)
+      for (i = nxlo_in; i <= nxhi_in; i++) {
+	vdy_brick[k][j][i] = work2[n];
+	n += 2;
+      }
+
+  // z direction gradient
+
+  n = 0;
+  for (k = nzlo_fft; k <= nzhi_fft; k++)
+    for (j = nylo_fft; j <= nyhi_fft; j++)
+      for (i = nxlo_fft; i <= nxhi_fft; i++) {
+	work2[n] = fkz[k]*work1[n+1];
+	work2[n+1] = -fkz[k]*work1[n];
+	n += 2;
+      }
+
+  fft2->compute(work2,work2,-1);
+
+  n = 0;
+  for (k = nzlo_in; k <= nzhi_in; k++)
+    for (j = nylo_in; j <= nyhi_in; j++)
+      for (i = nxlo_in; i <= nxhi_in; i++) {
+	vdz_brick[k][j][i] = work2[n];
+	n += 2;
+      }
+}
+
+/* ----------------------------------------------------------------------
+   interpolate from grid to get electric field & force on my particles 
+------------------------------------------------------------------------- */
+
+void Force_PPPM::fieldforce(ParticleList* p, const Box* b)
+{
+  int i,l,m,n,nx,ny,nz,mx,my,mz;
+  double dx,dy,dz,x0,y0,z0;
+  double ek[3];
+  double xi[3];
+  Particle* i_pnt;
+  double ftmp[3];
+
+  // loop over my charges, interpolate electric field from nearby grid points
+  // (nx,ny,nz) = global coords of grid pt to "lower left" of charge
+  // (dx,dy,dz) = distance to "lower left" grid pt
+  // (mx,my,mz) = global coords of moving stencil pt
+  // ek = 3 components of E-field on particle
+
+  double boxxlo = b->xboundlo;
+  double boxylo = b->yboundlo;
+  double boxzlo = b->zboundlo;
+
+  for (i = 0; i < nparticles; i++) {
+d1162 16
+a1177 24
+    i_pnt = p->get_particle(i);
+    i_pnt->get_x(xi);
+    nx = part2grid[i][0];
+    ny = part2grid[i][1];
+    nz = part2grid[i][2];
+    dx = nx+shiftone - (xi[0]-boxxlo)*delxinv;
+    dy = ny+shiftone - (xi[1]-boxylo)*delyinv;
+    dz = nz+shiftone - (xi[2]-boxzlo)*delzinv;
+
+    compute_rho1d(dx,dy,dz);
+
+    ek[0] = ek[1] = ek[2] = 0.0;
+    for (n = nlower; n <= nupper; n++) {
+      mz = n+nz;
+      z0 = rho1d[2][n];
+      for (m = nlower; m <= nupper; m++) {
+	my = m+ny;
+	y0 = z0*rho1d[1][m];
+	for (l = nlower; l <= nupper; l++) {
+	  mx = l+nx;
+	  x0 = y0*rho1d[0][l];
+	  ek[0] -= x0*vdx_brick[mz][my][mx];;
+	  ek[1] -= x0*vdy_brick[mz][my][mx];;
+	  ek[2] -= x0*vdz_brick[mz][my][mx];;
+d1179 4
+a1184 7
+
+    // convert E-field to force
+
+    ftmp[0] = prefactor*i_pnt->get_charge()*ek[0];
+    ftmp[1] = prefactor*i_pnt->get_charge()*ek[1];
+    ftmp[2] = prefactor*i_pnt->get_charge()*ek[2];
+    i_pnt->increment_f(ftmp);
+a1185 1
+}
+d1187 1
+a1187 3
+/* ----------------------------------------------------------------------
+   map nprocs to NX by NY grid as PX by PY procs - return optimal px,py 
+------------------------------------------------------------------------- */
+d1189 48
+a1236 28
+void Force_PPPM::procs2grid2d(int nprocs, int nx, int ny, int *px, int *py)
+{
+  // loop thru all possible factorizations of nprocs
+  // surf = surface area of largest proc sub-domain
+  // innermost if test minimizes surface area and surface/volume ratio
+
+  int bestsurf = 2 * (nx + ny);
+  int bestboxx = 0;
+  int bestboxy = 0;
+
+  int boxx,boxy,surf,ipx,ipy;
+
+  ipx = 1;
+  while (ipx <= nprocs) {
+    if (nprocs % ipx == 0) {
+      ipy = nprocs/ipx;
+      boxx = nx/ipx;
+      if (nx % ipx) boxx++;
+      boxy = ny/ipy;
+      if (ny % ipy) boxy++;
+      surf = boxx + boxy;
+      if (surf < bestsurf || 
+	  (surf == bestsurf && boxx*boxy > bestboxx*bestboxy)) {
+	bestsurf = surf;
+	bestboxx = boxx;
+	bestboxy = boxy;
+	*px = ipx;
+	*py = ipy;
+a1238 1
+    ipx++;
+d1242 1
+a1242 4
+/* ----------------------------------------------------------------------
+   charge assignment into rho1d
+   dx,dy,dz = distance of particle from "lower left" grid point 
+------------------------------------------------------------------------- */
+d1244 2
+a1245 14
+void Force_PPPM::compute_rho1d(double dx, double dy, double dz)
+{
+  int k,l;
+
+  for (k = (1-order)/2; k <= order/2; k++) {
+    rho1d[0][k] = 0.0;
+    rho1d[1][k] = 0.0;
+    rho1d[2][k] = 0.0;
+    for (l = order-1; l >= 0; l--) {
+      rho1d[0][k] = rho_coeff[l][k] + rho1d[0][k]*dx;
+      rho1d[1][k] = rho_coeff[l][k] + rho1d[1][k]*dy;
+      rho1d[2][k] = rho_coeff[l][k] + rho1d[2][k]*dz;
+    }
+  }
+d1248 2
+a1249 51
+/* ----------------------------------------------------------------------
+   generate coeffients for the weight function of order n
+
+              (n-1)
+  Wn(x) =     Sum    wn(k,x) , Sum is over every other integer
+           k=-(n-1)
+  For k=-(n-1),-(n-1)+2, ....., (n-1)-2,n-1
+      k is odd integers if n is even and even integers if n is odd
+              ---
+             | n-1
+             | Sum a(l,j)*(x-k/2)**l   if abs(x-k/2) < 1/2
+  wn(k,x) = <  l=0
+             |
+             |  0                       otherwise
+              ---
+  a coeffients are packed into the array rho_coeff to eliminate zeros
+  rho_coeff(l,((k+mod(n+1,2))/2) = a(l,k) 
+------------------------------------------------------------------------- */
+
+void Force_PPPM::compute_rho_coeff()
+{
+  int j,k,l,m;
+  double s;
+
+  double **a = memory->create_2d_double_array(order,-order,order,"pppm:a");
+
+  for (k = -order; k <= order; k++) 
+    for (l = 0; l < order; l++)
+      a[l][k] = 0.0;
+        
+  a[0][0] = 1.0;
+  for (j = 1; j < order; j++) {
+    for (k = -j; k <= j; k += 2) {
+      s = 0.0;
+      for (l = 0; l < j; l++) {
+	a[l+1][k] = (a[l][k+1]-a[l][k-1]) / (l+1);
+	s += pow(0.5,(double) l+1) * 
+	  (a[l][k-1] + pow(-1.0,(double) l) * a[l][k+1]) / (l+1);
+      }
+      a[0][k] = s;
+    }
+  }
+
+  m = (1-order)/2;
+  for (k = -(order-1); k < order; k += 2) {
+    for (l = 0; l < order; l++)
+      rho_coeff[l][m] = a[l][k];
+    m++;
+  }
+
+  memory->destroy_2d_double_array(a,-order);
+a1251 43
+/* ----------------------------------------------------------------------
+   Slab-geometry correction term to dampen inter-slab interactions between
+   periodically repeating slabs.  Yields good approximation to 2D Ewald if 
+   adequate empty space is left between repeating slabs (J. Chem. Phys. 
+   111, 3155).  Slabs defined here to be parallel to the xy plane. 
+------------------------------------------------------------------------- */
+
+void Force_PPPM::slabcorr(const bool& Lenergy)
+{
+  // compute local contribution to global dipole moment
+
+  double xi[3];
+  double ftmp[3];
+  Particle* i_pnt;
+  
+  double dipole = 0.0;
+  for (int i = 0; i < nparticles; i++) {
+    i_pnt->get_x(xi);
+	dipole += i_pnt->get_charge()*xi[2];
+  }
+  
+  // sum local contributions to get global dipole moment
+
+  double dipole_all;
+  MPI_Allreduce(&dipole,&dipole_all,1,MPI_DOUBLE,MPI_SUM,world);
+
+  // compute corrections
+  
+  double e_slabcorr = 2.0*PI*dipole_all*dipole_all/volume;
+  
+  if (Lenergy) energy += prefactor*e_slabcorr;
+
+  // add on force corrections
+
+  double ffact = -4.0*PI*dipole_all/volume; 
+
+  for (int i = 0; i < nparticles; i++) {
+    ftmp[0] = 0.0;
+    ftmp[1] = 0.0;
+	ftmp[2] = prefactor*i_pnt->get_charge()*ffact;
+    i_pnt->increment_f(ftmp);
+  }
+}
+@
+
+
+4.1.2.5
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d173 1
+a173 2
+void Force_PPPM::SetupInteractions(const ParticleList* p, 
+				      const Box* b, 
+@
+
+
+4.1.2.6
+log
+@Latest PPPM version
+@
+text
+@d162 9
+d173 1
+a173 1
+void Force_PPPM::SetupInteractions(ParticleList* p, 
+d175 1
+a175 1
+                                      double& g_ewald, 
+d178 40
+a242 1
+  nparticles = p->get_nparticles();
+d287 1
+a287 1
+  
+d303 1
+a303 1
+  set_grid(g_ewald);
+d545 1
+a545 37
+  SetupKSpace(p, b, g_ewald, comm);
+}
+
+void Force_PPPM::ApplyForce(
+		  const bool& Lenergy, const bool& Lvirial, 
+                  ParticleList* p,
+                  const Box* b, double& g_ewald, Comm* comm) {
+  nparticles = p->get_nparticles();
+  SetupKSpace(p, b, g_ewald, comm);   
+  Compute(Lenergy,Lvirial,p,b,g_ewald,comm);
+}
+
+void Force_PPPM::Neighboring(
+	         ParticleList* p, 
+	         int* type_index,
+	         const Box* b, Comm* comm) {
+  glog.error("Force_PPPM::Neighboring:\n"
+		   "No neighboring required for PPPM");
+}
+
+void Force_PPPM::SetupNeighbor(const string& neighbor_style,
+       const int& neighbor_freq,
+       const double& neighbor_rskin, double& rcutneighmax,
+       const Box* b, Comm* comm){
+
+    Lneighbor = false;
+    rcutneighmax = 0.0;
+}
+
+void Force_PPPM::SetupTypes(const ParticleTypeList*) {}
+
+//double Force_PPPM::get_g_ewald() const {
+//  return g_ewald;
+//}
+
+double Force_PPPM::set_rskin(const double& rskin_in) {
+  rskin = rskin_in;
+d549 1
+a549 1
+   adjust PPPM coeffs whenever volume has changed 
+d552 2
+a553 4
+void Force_PPPM::SetupKSpace(ParticleList* p, 
+				      const Box* b, 
+                                      double& g_ewald, 
+				      Comm* comm) {
+d705 1
+a705 1
+		  ParticleList* p, const Box* b, double& g_ewald, Comm* comm) {
+d877 1
+a877 1
+void Force_PPPM::set_grid(double& g_ewald)
+@
+
+
+4.1.2.7
+log
+@latest version of PPPM
+@
+text
+@a167 8
+  g_ewald = (1.35 - 0.15*log(precision))/realspace_cutoff;
+  g_ewald = 0.5539806908;
+}
+
+void Force_PPPM::SetupPPPM(ParticleList* p, 
+				      const Box* b, 
+                                      double& g_ewald, 
+				      Comm* comm) {
+d505 1
+a505 2
+  SetupPPPM(p, b, g_ewald, comm);  
+//  SetupKSpace(p, b, g_ewald, comm);   
+a1049 2
+//  g_ewald = 0.5128231366;  // must delete
+  
+@
+
+

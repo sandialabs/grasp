@@ -1,0 +1,1116 @@
+head	4.9;
+access;
+symbols
+	ReverseComm_branch:4.4.0.2
+	ADTools_branch:4.3.0.6
+	Monaco_Aidan:4.3.2.1.0.2
+	Root-of-Monaco_Aidan:4.3.2.1
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.1.2.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.15.0.2
+	cjkimme_version_merge_from_trunk_1:2.10.2.1
+	cjkimme_version:2.10.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.9
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2007.04.02.19.30.02;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.08.26.02.04.29;	author athomps;	state Exp;
+branches
+	4.4.2.1;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1
+	4.3.4.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.02.18.16.46.40;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches
+	3.1.2.1
+	3.1.6.1;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.07.21.17.46.50;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.10.2.1;
+next	2.9;
+
+2.9
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.31.20.20.43;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+2.10.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	2.10.2.2;
+
+2.10.2.2
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.1.2.1
+date	2005.03.30.23.32.07;	author athomps;	state Exp;
+branches;
+next	;
+
+3.1.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.1.6.2;
+
+3.1.6.2
+date	2005.02.24.21.03.59;	author saubry;	state Exp;
+branches;
+next	3.1.6.3;
+
+3.1.6.3
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches
+	4.3.2.1.2.1;
+next	;
+
+4.3.2.1.2.1
+date	2005.10.21.15.44.43;	author saubry;	state Exp;
+branches;
+next	4.3.2.1.2.2;
+
+4.3.2.1.2.2
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.3;
+
+4.3.2.1.2.3
+date	2006.02.08.23.43.02;	author athomps;	state Exp;
+branches;
+next	4.3.2.1.2.4;
+
+4.3.2.1.2.4
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.3.4.1
+date	2005.06.20.22.41.00;	author athomps;	state Exp;
+branches;
+next	4.3.4.2;
+
+4.3.4.2
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.4.2.1
+date	2006.09.07.19.49.27;	author athomps;	state Exp;
+branches;
+next	4.4.2.2;
+
+4.4.2.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.9
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCEFIELDLIST_H
+#define FORCEFIELDLIST_H
+
+class ForceFieldList {
+ public:
+  enum VirialStyles {none, all_particles, free_particles, particle_sum};
+ private:
+  // List of forcefields
+  vector<ForceField*> forcefield_list;
+  double rcutneighmaxall;
+  double rcutmaxall;
+  double rcutcommall;
+  int neighbor_freq;
+  string neighbor_style; 
+  double neighbor_rskin;
+  bool Lreax;
+  vector<double> virial;
+  VirialStyles virial_style;
+  int reax_iprune,reax_ihb;
+  double reax_hbcut;
+  bool Lmidpoint;
+ public:
+   ForceFieldList();
+   ~ForceFieldList();
+   void Setup(Box*, ParticleTypeList*, ParticleList*, Comm*);
+   void ForceFieldSetup(Box*, ParticleTypeList*, Comm*);
+   void ComputeForce(const bool&, const bool&, const bool&, 
+		     Box*, ParticleTypeList*, 
+		     ParticleList*, Comm*);
+   void ComputeForceInitial(const bool&, const bool&, const bool&, 
+		     Box*, ParticleTypeList*, 
+		     ParticleList*, Comm*);
+   void ComputeVirial(ParticleList*, const bool&, Comm*);
+   void Neighboring(ParticleList*, const Box*, Comm*, const bool&, bool=false);
+   void NeighboringInitial(ParticleList*, const Box*, Comm*);
+
+   double get_rcutneighmaxall() const;
+   double get_rcutmaxall() const;
+   double get_rcutcommall() const;
+
+   ForceField* const* get_forcefields() const;
+
+   int get_nforcefields() const;
+   void input_neighbor(const string&);
+   void input_forcefield(const string&);
+   double get_virial() const;
+   void get_virial(vector <double>&) const;
+   double get_epot() const;
+   void input_virial_style(const string&);
+   void input_reax_iprune(const string&);
+   void input_reax_ihb(const string&);
+   void input_reax_hbcut(const string&);
+   void input_midpoint(const string&);
+};
+
+#endif
+@
+
+
+4.8
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d71 1
+a71 2
+   void ForceFieldSetup(const string&, const int&, const double&, 
+			Box*, ParticleTypeList*, Comm*);
+@
+
+
+4.7
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@d64 3
+d96 4
+@
+
+
+4.6
+log
+@Fixed problem with invalid neighbor list with fix deformation.
+@
+text
+@d57 1
+d82 1
+@
+
+
+4.5
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d76 1
+a76 1
+   void Neighboring(ParticleList*, const Box*, Comm*, const bool&);
+@
+
+
+4.4
+log
+@Added damping constant commands for Nose-Hoover barostats and thermostats
+@
+text
+@d51 1
+a51 1
+  enum VirialStyles {none, all_particles, free_particles};
+d61 2
+d69 2
+a70 1
+   void ComputeForce(const bool&, const VirialStyles&, Box*, ParticleTypeList*, 
+d72 2
+a73 1
+   void ComputeForceInitial(const bool&, const VirialStyles&, Box*, ParticleTypeList*, 
+d75 1
+d90 1
+@
+
+
+4.4.2.1
+log
+@Implemented ri*Fi pressure calc
+@
+text
+@d51 1
+a51 1
+  enum VirialStyles {none, all_particles, free_particles, particle_sum};
+a60 2
+  vector<double> virial;
+  VirialStyles virial_style;
+d67 1
+a67 1
+   void ComputeForce(const bool&, const bool&, Box*, ParticleTypeList*, 
+d69 1
+a69 1
+   void ComputeForceInitial(const bool&, const bool&, Box*, ParticleTypeList*, 
+a70 1
+   void ComputeVirial(ParticleList*, const bool&, Comm*);
+a84 1
+   void input_virial_style(const string&);
+@
+
+
+4.4.2.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d69 1
+a69 2
+   void ComputeForce(const bool&, const bool&, const bool&, 
+		     Box*, ParticleTypeList*, 
+d71 1
+a71 2
+   void ComputeForceInitial(const bool&, const bool&, const bool&, 
+		     Box*, ParticleTypeList*, 
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d84 1
+@
+
+
+4.3.4.1
+log
+@Added ParticleList to ForceField::SetupInterations()
+@
+text
+@d64 1
+a64 1
+   void Setup(const Box*, const ParticleTypeList*, const ParticleList*, Comm*);
+d66 1
+a66 2
+			const ParticleList*, const Box*, 
+			const ParticleTypeList*, Comm*);
+@
+
+
+4.3.4.2
+log
+@Latest PPPM version
+@
+text
+@a60 1
+  double g_ewald;
+d64 1
+a64 1
+   void Setup(const Box*, const ParticleTypeList*, ParticleList*, Comm*);
+d66 1
+a66 1
+			ParticleList*, const Box*, 
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a68 6
+
+   // added saubry (01/25/05)
+   void ComputeEnergyChange(int*, vector <double>,const bool&, 
+			    Box*, ParticleTypeList*,ParticleList*, Comm*);
+
+
+@
+
+
+4.3.2.1.2.1
+log
+@Correct a few things.
+@
+text
+@d67 1
+a67 1
+   void ComputeForce(const bool&, const VirialStyles&, const Box*, ParticleTypeList*, 
+d70 3
+a72 2
+   void ComputeEnergyChange(int*, double [3],const bool&, const Box*, 
+			    ParticleTypeList*,ParticleList*, Comm*);
+@
+
+
+4.3.2.1.2.2
+log
+@Added EAM energy change calculation
+@
+text
+@a73 4
+   double ComputeEnergyRemove(const int&, ParticleList*, const Box*, Comm*);
+   double ComputeEnergyAdd(const int&, ParticleList*, const Box*, Comm*);
+
+
+a88 3
+   void SaveEnergy();
+   void ZeroEnergy();
+   void RestoreEnergy(Comm*);
+@
+
+
+4.3.2.1.2.3
+log
+@Added bin-based energy calc
+@
+text
+@a75 2
+   double ComputeEnergyRemove(const int&, const Bin*, ParticleList*, const Box*, Comm*);
+   double ComputeEnergyAdd(const int&, const Bin*, ParticleList*, const Box*, Comm*);
+@
+
+
+4.3.2.1.2.4
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d70 4
+a77 4
+   void SaveParticles(ParticleList*, const Box*, Comm*);
+   void RestoreParticles(ParticleList*, const Box*, Comm*);
+   void SaveParticles(const Bin*, ParticleList*, const Box*, Comm*);
+   void RestoreParticles(const Bin*, ParticleList*, const Box*, Comm*);
+d82 1
+a82 1
+   void Neighboring(ParticleList*, const Box*, Comm*, const bool&, const bool& = false);
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d60 1
+a68 6
+
+   // added saubry (01/25/05)
+   void ComputeEnergyChange(int*, vector <double>,const bool&, 
+			    Box*, ParticleTypeList*,ParticleList*, Comm*);
+
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+a43 1
+  bool Lreax;
+d52 6
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Added rcutmaxall to forcefieldlist.cpp
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d44 1
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d40 1
+d58 1
+@
+
+
+3.1.2.1
+log
+@Separated charge equilibration input from REAX
+@
+text
+@a39 1
+  double rcutmaxall;
+a56 1
+   double get_rcutmaxall() const;
+@
+
+
+3.1.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a50 7
+
+   // added saubry (01/25/05)
+   void ComputeEnergyChange(int*, vector <double>,const bool&, 
+			    const VirialStyles&, Box*, ParticleTypeList*, 
+			    ParticleList*, Comm*);
+
+
+@
+
+
+3.1.6.2
+log
+@Update changes.
+@
+text
+@d54 2
+a55 1
+			    Box*, ParticleTypeList*,ParticleList*, Comm*);
+@
+
+
+3.1.6.3
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@a39 1
+  double rcutmaxall;
+a62 1
+   double get_rcutmaxall() const;
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d35 1
+d49 1
+a49 1
+   void ComputeForce(const bool&, const bool&, Box*, ParticleTypeList*, 
+d51 1
+a51 1
+   void ComputeForceInitial(const bool&, const bool&, Box*, ParticleTypeList*, 
+@
+
+
+2.15
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.14
+log
+@Added anisotropic style to pressure control,
+and included in Tersoff example testp.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.13
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d62 1
+@
+
+
+2.12
+log
+@Various
+@
+text
+@d51 1
+a51 1
+   void Neighboring(ParticleList*, const Box*, Comm*);
+d61 1
+a61 1
+
+@
+
+
+2.11
+log
+@Added Ewald sum example
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.10
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d36 1
+a36 6
+  vector <ForceField*> forcefield_list;
+  // List of forcefield type lists.
+  // One list for each forcefield in ForceFieldList
+  // Lists are indexed by particle type.
+  // Entries with no type are assigned value -1.
+  vector<int*> type_index;
+a40 3
+  vector<string> ff_classname_list;
+  vector<string> ff_filename_list;
+  vector<string> ff_label_list;
+d44 1
+a44 4
+   void Setup( 
+	      Box*, ParticleTypeList*, ParticleList*, Comm*);
+   void SetupTypes(const ParticleTypeList*);
+   int* get_type_index(const int&) const;
+a45 2
+			const vector<string>, const vector<string>,
+			const vector<string>, 
+d47 1
+a47 1
+   void ComputeForce(Box*, ParticleTypeList*, 
+d49 1
+a49 1
+   void ComputeForceInitial(Box*, ParticleTypeList*, 
+d60 1
+a60 4
+   void input_forcefield_twobody(const string&);
+   void input_forcefield_threebody(const string&);
+   void input_forcefield_external(const string&);
+   void input_forcefield_eam(const string&);
+@
+
+
+2.10.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d36 6
+a41 1
+  vector<ForceField*> forcefield_list;
+d46 3
+d52 4
+a55 1
+   void Setup(Box*, ParticleTypeList*, ParticleList*, Comm*);
+d57 2
+d60 1
+a60 1
+   void ComputeForce(const bool&, const bool&, Box*, ParticleTypeList*, 
+d62 1
+a62 1
+   void ComputeForceInitial(const bool&, const bool&, Box*, ParticleTypeList*, 
+d64 1
+a64 1
+   void Neighboring(ParticleList*, const Box*, Comm*, const bool&);
+d73 5
+a77 3
+   void input_forcefield(const string&);
+   double get_virial() const;
+   void get_virial(vector <double>&) const;
+@
+
+
+2.10.2.2
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@a33 1
+  enum VirialStyles {none, all_particles, free_particles};
+d47 1
+a47 1
+   void ComputeForce(const bool&, const VirialStyles&, Box*, ParticleTypeList*, 
+d49 1
+a49 1
+   void ComputeForceInitial(const bool&, const VirialStyles&, Box*, ParticleTypeList*, 
+@
+
+
+2.9
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d76 1
+@
+
+
+2.8
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.7
+log
+@Removed Thermo class
+@
+text
+@d15 6
+d24 1
+a24 1
+   void Setup(const Input*, 
+d28 1
+a28 1
+   void ForceFieldSetup(const Neighbor::NeighborStyles&, const int&, const double&, 
+d44 4
+@
+
+
+2.6
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@d19 1
+a19 1
+	      Box*, ParticleTypeList*, ParticleList*, Thermo*, Comm*);
+@
+
+
+2.5
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d37 1
+a37 1
+   int ForceFieldList::get_nforcefields() const;
+@
+
+
+2.4
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@a13 1
+  int units_style;
+d22 2
+a23 2
+   void ForceFieldSetup(const int&, const int&, const double&, 
+			const vector<int>, const vector<string>,
+@
+
+
+2.3
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d8 1
+a8 1
+  vector <Forcefield*> forcefield_list;
+d12 1
+a14 1
+  bool perflag;
+d25 1
+d27 3
+a29 1
+   void ComputeForce(const bool&, Box*, ParticleTypeList*, 
+d32 1
+d35 5
+@
+
+
+2.2
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d15 1
+a15 1
+  double rcutneighmax;
+d30 1
+a30 1
+   double get_rcutneighmax() const;
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d15 1
+a15 1
+  double rcutneigh;
+d29 2
+a30 1
+   double get_rcutneigh() const;
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d15 1
+d20 1
+a20 1
+	      Box*, ParticleTypeList*, ParticleList*, Thermo*);
+d25 5
+a29 3
+			Box*, ParticleTypeList*);
+   void ComputeForce(const bool&, Box*, ParticleTypeList*, ParticleList*);
+   void Neighboring(ParticleList*, const Box*);
+@
+

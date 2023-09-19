@@ -1,0 +1,162 @@
+head	4.0;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.1;
+locks; strict;
+comment	@# @;
+
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.03.24.21.11.35;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@/home/athomps/Grasp/Testing/test_eam_mix/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /home/athomps/Grasp/Testing/test_eam_mix/
+PATH_MAX is 4096
+
+
+
+Entering Input::ReadInput()
+processor grid 2 1 1
+units metal
+forcefield eam eam_ab.in EAM
+timestep 0.0005000000
+nsteps 100
+box dimensions	21.6790880000	0.0000000000	0.0000000000 \
+			0.0000000000	21.6790880000	0.0000000000 \
+			0.0000000000	0.0000000000	21.6790880000
+box origin	-0.6774715000	-0.6774715000	-0.6774715000
+initialize temperature 500.0000000000 256
+thermo 100
+neighbor bin 10 0.1000000000
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 2
+A 118.6900000000
+B 118.6900000000
+
+
+
+Reading EAM from file eam_ab.in
+id = A
+id = B
+
+
+
+Setting up force field class 3 called EAM
+Cutoffs for this forcefield
+rcutmax = 5.9875900000
+rskin = 0.1000000000
+rcutneighmax = 6.0875900000
+
+
+
+Entering ParticleList::ReadConfig()
+Will not read an initial velocity file 
+Will not read an initial displacement file 
+Total particles read = 512
+
+
+
+Entering Output::Setup()
+
+
+
+Entering FixList::Setup()
+
+
+
+--------------- Step         0 ---- CPU =     0.0000 (sec) ---------------
+EAM:
+   Embedding        =      -316.2609856487
+   Pair             =      -165.0673837261
+Potential Energy    =      -481.3283693748
+Kinetic Energy      =        33.0259637833
+Extended Energy     =         0.0000000000
+Total Energy        =      -448.3024055915
+Pressure            =     95657.8636721682
+Temperature         =       500.0000000000
+Total Particles     =                  512
+Volume              =     10188.7997048095
+--------------- Step       100 ---- CPU =     0.8418 (sec) ---------------
+EAM:
+   Embedding        =      -318.4792546377
+   Pair             =      -177.6256057383
+Potential Energy    =      -496.1048603759
+Kinetic Energy      =        47.8040972452
+Extended Energy     =         0.0000000000
+Total Energy        =      -448.3007631308
+Pressure            =     95432.4042351548
+Temperature         =       723.7350824764
+
+
+
+Loop time: 0.8419290410 on 2 processors for 512 particles
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time    0.5998     71.24
+          Neigh Time    0.0251      2.98
+           Comm Time    0.0545      6.47
+       Exchange Time    0.0180      2.14
+        Revcomm Time    0.1165     13.84
+        Barrier Time    0.0000      0.00
+          Other Time    0.0280      3.33
+          Total Time    0.8419    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+EAM                     0.5998 (   100)     0.0251 (    10) 
+
+
+
+Finished 
+@
+
+
+1.1
+log
+@Added a bunch of test case for mixing force fields
+@
+text
+@@
+

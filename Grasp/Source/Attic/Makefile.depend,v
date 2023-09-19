@@ -1,0 +1,571 @@
+head	2.11;
+access;
+symbols
+	PreMonaco:2.11
+	cjkimme_version:2.10.0.2;
+locks; strict;
+comment	@# @;
+
+
+2.11
+date	2004.02.12.00.13.00;	author athomps;	state dead;
+branches;
+next	2.10;
+
+2.10
+date	2004.02.02.16.51.58;	author athomps;	state Exp;
+branches
+	2.10.2.1;
+next	2.9;
+
+2.9
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.10.31.20.20.43;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.10.04.02.46.52;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.04.24.16.46.44;	author athomps;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.03.03.20.32.38;	author athomps;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.04.00.12.41;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.01.18.00.20.49;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.08.23.31.12;	author athomps;	state Exp;
+branches;
+next	;
+
+2.10.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.11
+log
+@This update is an excercise in housekeeping.
+I remove all of the DEBUG ifdefs.
+I added a flag to class Comm which by default
+points nodefile to /dev/null.
+Finally, I redid the Makefile to enable
+multi-architecture builds on a single machine.
+This last one will require an update to Documentation.
+@
+text
+@force_eam.o:	force_eam.cpp grasp.h vec3.h particle.h neighbor.h input_string.h forcefield.h force_eam.h force_eam_inline.h constants.h box.h box_inline.h particlelist.h particlelist_inline.h particletypelist.h comm.h log.h 
+constants.o:	constants.cpp grasp.h constants.h constants_values.h log.h 
+controller.o:	controller.cpp grasp.h controller.h constants.h stepper.h minimizer.h box.h particletypelist.h particlelist.h neighbor.h forcefieldlist.h output.h comm.h log.h fix.h fixlist.h input.h 
+input.o:	input.cpp grasp.h controller.h input_string.h input.h comm.h log.h stepper.h box.h particlelist.h output.h forcefieldlist.h fixlist.h 
+stepper.o:	stepper.cpp grasp.h constants.h stepper.h particlelist.h neighbor.h forcefieldlist.h output.h comm.h log.h fixlist.h 
+box.o:	box.cpp grasp.h box.h vec3.h comm.h log.h 
+particletypelist.o:	particletypelist.cpp grasp.h input_string.h particletypelist.h comm.h log.h 
+particlelist.o:	particlelist.cpp vec3.h grasp.h input_string.h particle.h particletypelist.h particlelist.h random.h constants.h box.h box_inline.h comm.h log.h machine.h 
+forcefieldlist.o:	forcefieldlist.cpp grasp.h forcefield.h neighbor.h force_twobody.h force_threebody.h force_external.h force_eam.h forcefieldlist.h particle.h particlelist.h particletypelist.h input.h comm.h constants.h log.h 
+output.o:	output.cpp grasp.h output.h box.h vec3.h box_inline.h particle.h particlelist.h particlelist_inline.h particletypelist.h neighbor.h forcefieldlist.h forcefield.h constants.h profile.h comm.h log.h fixlist.h 
+input_string.o:	input_string.cpp input_string.h 
+particle.o:	particle.cpp grasp.h particle.h box.h log.h 
+forcefield.o:	forcefield.cpp grasp.h forcefield.h neighbor.h log.h 
+force_twobody.o:	force_twobody.cpp grasp.h vec3.h particle.h neighbor.h input_string.h forcefield.h force_twobody.h box.h box_inline.h force_twobody_inline.h particlelist.h particlelist_inline.h comm.h log.h 
+force_threebody.o:	force_threebody.cpp grasp.h vec3.h particle.h neighbor.h input_string.h forcefield.h force_threebody.h box.h box_inline.h force_threebody_inline.h particlelist.h particlelist_inline.h machine.h comm.h log.h 
+force_external.o:	force_external.cpp grasp.h vec3.h particle.h neighbor.h input_string.h forcefield.h force_external.h box.h box_inline.h fixed_object.h force_external_inline.h machine.h particlelist.h particlelist_inline.h comm.h log.h 
+fixed_object.o:	fixed_object.cpp grasp.h fixed_object.h box.h log.h 
+profile.o:	profile.cpp grasp.h vec3.h box.h profile.h particle.h comm.h log.h 
+neighbor.o:	neighbor.cpp grasp.h particle.h vec3.h neighbor.h forcefield.h force_twobody.h box.h box_inline.h fixed_object.h particlelist.h forcefieldlist.h machine.h comm.h log.h 
+comm.o:	comm.cpp grasp.h comm.h vec3.h box.h box_inline.h particle.h particlelist.h particlelist_inline.h neighbor.h forcefieldlist.h log.h machine.h 
+log.o:	log.cpp grasp.h comm.h log.h 
+minimizer.o:	minimizer.cpp grasp.h minimizer.h constants.h particlelist.h neighbor.h forcefieldlist.h output.h comm.h log.h 
+fix_temp_rescale.o:	fix_temp_rescale.cpp grasp.h constants.h fix.h fix_temp_rescale.h input.h particlelist.h comm.h log.h 
+fix_none.o:	fix_none.cpp grasp.h constants.h fix.h fix_none.h input.h particlelist.h comm.h log.h 
+fixlist.o:	fixlist.cpp grasp.h particletypelist.h fix.h fix_none.h fix_temp_rescale.h fixlist.h box.h comm.h constants.h log.h 
+@
+
+
+2.10
+log
+@Reported to cygwin. Added Steve Plimpton's STUBS directory
+to enable compilation of serial version (Makefile.cygwin_serial).
+Fixed some minor bugs and non-standard code.
+@
+text
+@@
+
+
+2.10.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@@
+
+
+2.9
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d20 1
+a20 1
+comm.o:	comm.cpp grasp.h comm.h vec3.h box.h box_inline.h particlelist.h neighbor.h forcefieldlist.h particle.h log.h machine.h 
+@
+
+
+2.8
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d1 1
+a1 28
+#-----------------------------------------------------------------------
+#
+#   G R A S P
+#   ____________
+#   \           \
+#    \ General   \
+#     \ Reactive  \
+#      \ Atomistic \
+#       \ Simulation\
+#        \ Program   \
+#         \___________\
+#
+#    Timestamp: 8 January 2004
+#
+#    Author: Aidan P. Thompson
+#
+#    e-mail: athomps@@sandia.gov
+#   
+#    Copyright (2004) Sandia National Laboratories
+#   
+#    Sandia is a multiprogram laboratory operated by 
+#    Sandia Corporation, a Lockheed Martin company,
+#    for the United States Department of Energy under contract
+#    No. DE-AC04-94AL-85000.
+#
+#------------------------------------------------------------------------ 
+#///:EOH~
+
+d9 1
+a9 1
+forcefieldlist.o:	forcefieldlist.cpp grasp.h forcefield.h neighbor.h force_twobody.h force_threebody.h force_external.h forcefieldlist.h particle.h particlelist.h particletypelist.h input.h comm.h constants.h log.h 
+@
+
+
+2.7
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.6
+log
+@Removed Thermo class
+@
+text
+@d2 6
+a7 7
+grasp_run.o:	grasp_run.cpp grasp.h controller.h log.h constants.h 
+controller.o:	controller.cpp grasp.h controller.h constants.h input.h stepper.h minimizer.h box.h particletypelist.h particlelist.h neighbor.h forcefieldlist.h output.h comm.h log.h fix.h fixlist.h 
+input.o:	input.cpp grasp.h input_string.h input.h comm.h log.h 
+stepper.o:	stepper.cpp grasp.h constants.h input.h stepper.h particlelist.h neighbor.h forcefieldlist.h output.h comm.h log.h fixlist.h 
+box.o:	box.cpp grasp.h input.h box.h vec3.h comm.h log.h 
+particletypelist.o:	particletypelist.cpp grasp.h input_string.h input.h particletypelist.h comm.h log.h 
+particlelist.o:	particlelist.cpp vec3.h grasp.h input.h input_string.h particle.h particletypelist.h particlelist.h random.h constants.h box.h comm.h log.h machine.h 
+d9 1
+a9 1
+output.o:	output.cpp grasp.h input.h output.h box.h vec3.h box_inline.h particle.h particlelist.h particlelist_inline.h particletypelist.h neighbor.h forcefieldlist.h forcefield.h constants.h profile.h comm.h log.h 
+d21 2
+a22 2
+minimizer.o:	minimizer.cpp grasp.h input.h minimizer.h constants.h particlelist.h neighbor.h forcefieldlist.h output.h comm.h log.h 
+fix_temp_rescale.o:	fix_temp_rescale.cpp grasp.h constants.h fix.h fix_temp_rescale.h input.h particlelist.h particletypelist.h comm.h log.h 
+d24 1
+a24 1
+fixlist.o:	fixlist.cpp grasp.h particletypelist.h fix.h fix_none.h fix_temp_rescale.h fixlist.h input.h box.h comm.h constants.h log.h 
+@
+
+
+2.5
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d1 1
+a1 1
+constants.o:	constants.cpp grasp.h constants.h log.h 
+d3 3
+a5 3
+controller.o:	controller.cpp grasp.h controller.h constants.h input.h stepper.h minimizer.h box.h particletypelist.h particlelist.h forcefieldlist.h output.h thermo.h comm.h log.h 
+input.o:	input.cpp grasp.h constants.h input_string.h input.h forcefield.h controller.h stepper.h minimizer.h neighbor.h comm.h log.h 
+stepper.o:	stepper.cpp grasp.h constants.h input.h stepper.h particlelist.h forcefieldlist.h output.h comm.h log.h 
+d8 3
+a10 4
+particlelist.o:	particlelist.cpp vec3.h grasp.h input.h input_string.h thermo.h particle.h particletypelist.h particlelist.h random.h constants.h box.h comm.h log.h machine.h 
+forcefieldlist.o:	forcefieldlist.cpp grasp.h neighbor.h forcefield.h force_twobody.h force_threebody.h force_external.h forcefieldlist.h particle.h particlelist.h particletypelist.h input.h comm.h constants.h log.h 
+thermo.o:	thermo.cpp grasp.h input.h thermo.h log.h 
+output.o:	output.cpp grasp.h input.h output.h box.h particle.h particlelist.h particlelist_inline.h particletypelist.h forcefieldlist.h forcefield.h neighbor.h constants.h profile.h comm.h log.h 
+d20 1
+a20 1
+comm.o:	comm.cpp grasp.h comm.h vec3.h box.h box_inline.h particlelist.h forcefieldlist.h particle.h log.h machine.h 
+d22 4
+a25 1
+minimizer.o:	minimizer.cpp grasp.h input.h minimizer.h constants.h particlelist.h forcefieldlist.h output.h comm.h log.h 
+@
+
+
+2.4
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d1 5
+a5 4
+grasp_run.o:	grasp_run.cpp grasp.h controller.h log.h 
+controller.o:	controller.cpp grasp.h controller.h input.h stepper.h minimizer.h box.h particletypelist.h particlelist.h forcefieldlist.h output.h thermo.h comm.h log.h 
+input.o:	input.cpp grasp.h input_string.h input.h forcefield.h constants.h controller.h stepper.h minimizer.h neighbor.h comm.h log.h 
+stepper.o:	stepper.cpp grasp.h input.h stepper.h constants.h particlelist.h forcefieldlist.h output.h comm.h log.h 
+d11 1
+a11 1
+output.o:	output.cpp grasp.h input.h output.h box.h particle.h particlelist.h particlelist_inline.h particletypelist.h constants.h profile.h comm.h log.h 
+d17 1
+a17 1
+force_external.o:	force_external.cpp grasp.h vec3.h particle.h neighbor.h forcefield.h force_external.h box.h box_inline.h fixed_object.h force_external_inline.h machine.h particlelist.h particlelist_inline.h comm.h log.h 
+d20 2
+a21 2
+neighbor.o:	neighbor.cpp grasp.h particle.h vec3.h neighbor.h forcefield.h force_twobody.h box.h fixed_object.h particlelist.h forcefieldlist.h machine.h comm.h log.h 
+comm.o:	comm.cpp grasp.h comm.h box.h particlelist.h forcefieldlist.h particle.h log.h machine.h 
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d7 1
+a7 1
+particlelist.o:	particlelist.cpp vec3.h grasp.h input.h input_string.h thermo.h particle.h particletypelist.h particlelist.h random.h constants.h box.h comm.h log.h 
+d15 1
+a15 1
+force_threebody.o:	force_threebody.cpp grasp.h vec3.h particle.h neighbor.h input_string.h forcefield.h force_threebody.h box.h box_inline.h force_threebody_inline.h particlelist.h particlelist_inline.h comm.h log.h 
+d19 3
+a21 3
+neighbor.o:	neighbor.cpp grasp.h particle.h vec3.h neighbor.h forcefield.h force_twobody.h box.h fixed_object.h particlelist.h machine.h comm.h log.h 
+comm.o:	comm.cpp grasp.h comm.h box.h particlelist.h forcefieldlist.h particle.h log.h 
+log.o:	log.cpp log.h 
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d3 8
+a10 8
+input.o:	input.cpp grasp.h input_string.h input.h forcefield.h constants.h controller.h stepper.h minimizer.h neighbor.h comm.h 
+stepper.o:	stepper.cpp grasp.h input.h stepper.h constants.h particlelist.h forcefieldlist.h output.h comm.h 
+box.o:	box.cpp grasp.h input.h box.h vec3.h comm.h 
+particletypelist.o:	particletypelist.cpp grasp.h input_string.h input.h particletypelist.h comm.h 
+particlelist.o:	particlelist.cpp vec3.h grasp.h input.h input_string.h thermo.h particle.h particletypelist.h particlelist.h random.h constants.h box.h comm.h 
+forcefieldlist.o:	forcefieldlist.cpp grasp.h neighbor.h forcefield.h force_twobody.h force_threebody.h force_external.h forcefieldlist.h particle.h particlelist.h particletypelist.h input.h comm.h constants.h 
+thermo.o:	thermo.cpp grasp.h input.h thermo.h 
+output.o:	output.cpp grasp.h input.h output.h box.h particle.h particlelist.h particlelist_inline.h particletypelist.h constants.h profile.h comm.h 
+d12 9
+a20 9
+particle.o:	particle.cpp grasp.h particle.h box.h 
+forcefield.o:	forcefield.cpp grasp.h forcefield.h neighbor.h 
+force_twobody.o:	force_twobody.cpp grasp.h vec3.h particle.h neighbor.h input_string.h forcefield.h force_twobody.h box.h box_inline.h force_twobody_inline.h particlelist.h particlelist_inline.h comm.h 
+force_threebody.o:	force_threebody.cpp grasp.h vec3.h particle.h neighbor.h forcefield.h force_threebody.h box.h box_inline.h force_threebody_inline.h particlelist.h particlelist_inline.h comm.h 
+force_external.o:	force_external.cpp grasp.h vec3.h particle.h neighbor.h forcefield.h force_external.h box.h box_inline.h fixed_object.h force_external_inline.h machine.h particlelist.h particlelist_inline.h comm.h 
+fixed_object.o:	fixed_object.cpp grasp.h fixed_object.h box.h 
+profile.o:	profile.cpp grasp.h vec3.h box.h profile.h particle.h comm.h 
+neighbor.o:	neighbor.cpp grasp.h particle.h vec3.h neighbor.h forcefield.h force_twobody.h box.h fixed_object.h particlelist.h machine.h comm.h 
+comm.o:	comm.cpp grasp.h comm.h box.h particlelist.h forcefieldlist.h particle.h 
+d22 1
+a22 1
+minimizer.o:	minimizer.cpp grasp.h input.h minimizer.h constants.h particlelist.h forcefieldlist.h output.h comm.h 
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d1 3
+a3 3
+grasp_run.o:	grasp_run.cpp grasp.h controller.h 
+controller.o:	controller.cpp grasp.h controller.h input.h stepper.h box.h particletypelist.h particlelist.h forcefieldlist.h output.h thermo.h comm.h 
+input.o:	input.cpp grasp.h input_string.h input.h forcefield.h constants.h stepper.h neighbor.h comm.h 
+d10 1
+a10 1
+output.o:	output.cpp grasp.h input.h output.h box.h particle.h particlelist.h particlelist_inline.h particletypelist.h constants.h 
+d18 2
+a19 2
+profile.o:	profile.cpp grasp.h vec3.h box.h profile.h 
+neighbor.o:	neighbor.cpp grasp.h particle.h vec3.h neighbor.h forcefield.h force_twobody.h box.h fixed_object.h particlelist.h machine.h 
+d21 2
+a22 1
+logfile.o:	logfile.cpp 
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d1 10
+a10 10
+grasp_run.o:	grasp_run.cpp controller.h 
+controller.o:	controller.cpp grasp.h controller.h input.h stepper.h box.h particletypelist.h particlelist.h forcefieldlist.h output.h thermo.h 
+input.o:	input.cpp grasp.h input_string.h input.h forcefield.h constants.h stepper.h neighbor.h 
+stepper.o:	stepper.cpp grasp.h input.h stepper.h constants.h particlelist.h forcefieldlist.h output.h 
+box.o:	box.cpp grasp.h input.h box.h vec3.h 
+particletypelist.o:	particletypelist.cpp grasp.h input.h particletypelist.h 
+particlelist.o:	particlelist.cpp vec3.h grasp.h input.h thermo.h particle.h particletypelist.h particlelist.h random.h constants.h 
+forcefieldlist.o:	forcefieldlist.cpp grasp.h neighbor.h forcefield.h force_twobody.h force_threebody.h force_external.h forcefieldlist.h particle.h particlelist.h particletypelist.h input.h constants.h 
+thermo.o:	thermo.cpp input.h thermo.h 
+output.o:	output.cpp grasp.h input.h output.h box.h particle.h particlelist.h particlelist_inline.h constants.h 
+d14 3
+a16 3
+force_twobody.o:	force_twobody.cpp grasp.h vec3.h particle.h neighbor.h forcefield.h force_twobody.h box.h box_inline.h force_twobody_inline.h particlelist.h particlelist_inline.h 
+force_threebody.o:	force_threebody.cpp grasp.h vec3.h particle.h neighbor.h forcefield.h force_threebody.h box.h box_inline.h force_threebody_inline.h particlelist.h particlelist_inline.h 
+force_external.o:	force_external.cpp grasp.h vec3.h particle.h neighbor.h forcefield.h force_external.h box.h box_inline.h fixed_object.h force_external_inline.h machine.h particlelist.h particlelist_inline.h 
+d20 2
+@
+
+
+1.7
+log
+@This is final update of version 1, before switching to version 2
+This is final update of version 1 before switching to verison 2
+@
+text
+@d1 10
+a10 13
+box_test.o:	box_test.cpp input.h constants.h box.h integrator.h neighbor.h 
+box.o:	box.cpp particle.h forcefield.h force_twobody.h force_threebody.h force_external.h particle_types.h box.h vec3.h constants.h profile.h 
+particle.o:	particle.cpp particle.h box.h 
+force_twobody.o:	force_twobody.cpp vec3.h particle.h neighbor.h forcefield.h force_twobody.h box.h box_inline.h force_twobody_inline.h 
+particle_types.o:	particle_types.cpp forcefield.h particle_types.h 
+neighbor.o:	neighbor.cpp particle.h vec3.h neighbor.h forcefield.h force_twobody.h box.h fixed_object.h machine.h 
+forcefield.o:	forcefield.cpp forcefield.h neighbor.h 
+force_threebody.o:	force_threebody.cpp vec3.h particle.h neighbor.h forcefield.h force_threebody.h box.h box_inline.h force_threebody_inline.h 
+temperature.o:	temperature.cpp particle.h box.h vec3.h random.h constants.h 
+force_external.o:	force_external.cpp vec3.h particle.h neighbor.h forcefield.h force_external.h box.h box_inline.h fixed_object.h force_external_inline.h machine.h 
+fixed_object.o:	fixed_object.cpp fixed_object.h box.h 
+profile.o:	profile.cpp vec3.h box.h profile.h 
+input.o:	input.cpp input_string.h input.h forcefield.h constants.h integrator.h neighbor.h 
+d12 8
+@
+
+
+1.6
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@d1 1
+a1 1
+box_test.o:	box_test.cpp input.h constants.h box.h 
+d13 1
+a13 1
+input.o:	input.cpp input_string.h input.h forcefield.h constants.h integrator.h 
+@
+
+
+1.5
+log
+@Added the Forcefield derived class Force_External. It makes use
+of the class Fixed_Object, which resembles class Particle,
+bu does not have a velocity vector and does not provide
+timestepping operations.
+
+Also added the basic temperature initialization in temperature.cpp,
+as well as velocity output in box.cpp.
+@
+text
+@d1 2
+a2 2
+box_test.o:	box_test.cpp constants.h box.h 
+box.o:	box.cpp particle.h forcefield.h force_twobody.h force_threebody.h force_external.h particle_types.h box.h vec3.h constants.h 
+d12 3
+@
+
+
+1.4
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d1 2
+a2 2
+box_test.o:	box_test.cpp box.h 
+box.o:	box.cpp particle.h forcefield.h force_twobody.h force_threebody.h particle_types.h box.h vec3.h 
+d6 1
+a6 1
+neighbor.o:	neighbor.cpp particle.h vec3.h neighbor.h forcefield.h force_twobody.h box.h 
+d9 3
+@
+
+
+1.3
+log
+@
+
+Added neighbor list object.
+@
+text
+@d1 8
+a8 6
+box_test.o:	box_test.cpp particle.h particle_types.h neighbor.h force_twobody.h box.h 
+box.o:	box.cpp particle.h particle_types.h neighbor.h force_twobody.h box.h vec3.h 
+particle.o:	particle.cpp particle.h particle_types.h neighbor.h force_twobody.h box.h 
+force_twobody.o:	force_twobody.cpp vec3.h particle.h particle_types.h neighbor.h force_twobody.h box.h force_twobody_inline.h 
+particle_types.o:	particle_types.cpp particle.h particle_types.h neighbor.h force_twobody.h box.h 
+neighbor.o:	neighbor.cpp particle.h vec3.h particle_types.h neighbor.h force_twobody.h box.h force_twobody_inline.h 
+@
+
+
+1.2
+log
+@
+Added ReadParticleTypes, and improved organization of input,
+including error checking.
+@
+text
+@d1 6
+a6 5
+box_test.o:	box_test.cpp box.h particle.h particle_types.h force_twobody.h 
+box.o:	box.cpp box.h box_inline.h particle.h particle_types.h force_twobody.h force_twobody_inline.h 
+particle.o:	particle.cpp particle.h box.h particle_types.h force_twobody.h 
+force_twobody.o:	force_twobody.cpp particle.h box.h particle_types.h force_twobody.h 
+particle_types.o:	particle_types.cpp particle.h box.h particle_types.h force_twobody.h 
+@
+
+
+1.1
+log
+@Added list of dependencies generated by Depend.pl.
+@
+text
+@d2 1
+a2 1
+box.o:	box.cpp box.h particle.h particle_types.h force_twobody.h force_twobody_inline.h 
+@
+

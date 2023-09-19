@@ -1,0 +1,470 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAX-2:3.2.2.14
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.23;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2005.01.03.00.29.17;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.01.04.00.23.00;	author athomps;	state Exp;
+branches;
+next	3.2.2.4;
+
+3.2.2.4
+date	2005.01.07.22.51.01;	author athomps;	state Exp;
+branches;
+next	3.2.2.5;
+
+3.2.2.5
+date	2005.01.11.22.49.40;	author athomps;	state Exp;
+branches;
+next	3.2.2.6;
+
+3.2.2.6
+date	2005.01.14.22.56.02;	author athomps;	state Exp;
+branches;
+next	3.2.2.7;
+
+3.2.2.7
+date	2005.01.21.22.24.30;	author athomps;	state Exp;
+branches;
+next	3.2.2.8;
+
+3.2.2.8
+date	2005.01.31.04.22.50;	author athomps;	state Exp;
+branches;
+next	3.2.2.9;
+
+3.2.2.9
+date	2005.02.02.00.20.49;	author athomps;	state Exp;
+branches;
+next	3.2.2.10;
+
+3.2.2.10
+date	2005.02.03.21.40.18;	author athomps;	state Exp;
+branches;
+next	3.2.2.11;
+
+3.2.2.11
+date	2005.02.07.22.43.46;	author athomps;	state Exp;
+branches;
+next	3.2.2.12;
+
+3.2.2.12
+date	2005.02.09.07.14.57;	author athomps;	state Exp;
+branches;
+next	3.2.2.13;
+
+3.2.2.13
+date	2005.02.09.16.19.23;	author athomps;	state Exp;
+branches;
+next	3.2.2.14;
+
+3.2.2.14
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@      implicit double precision (a-h,o-z),integer(i-n) 
+      parameter (nat=1500)     !Max number of atoms
+      parameter (neem=1500)    !Max number of atoms for EEM method
+      parameter (na1mx3=3*nat) !3*max number of atoms
+      parameter (navib=50)     !for 2nd derivatives
+      parameter (nsort=20)    !Max number of atom types
+      parameter (nbotym=200)   !Max number of bond types
+      parameter (nvatym=200)   !Max number of valency angle types
+      parameter (ntotym=200)   !Max number of torsion angle types
+      parameter (nhbtym=200)   !Max number of hydrogen bond types
+      parameter (nodmtym=20)   !Max number of off-diagonal Morse types
+      parameter (nbomax=15000)  !Max number of bonds
+      parameter (nhbmax=05000)  !Max number of  hydrogen bonds
+      parameter (nvamax=20000)  !Max number of valency angles
+      parameter (nopmax=00010)  !Max number of out of plane angles
+      parameter (ntomax=40000)  !Max number of torsion angles
+      parameter (npamax=50)  !Max number of general parameters in force field
+c      parameter (nmolmax=0250)  !Max number of molecules in system
+      parameter (nmolmax=1000)  !Max number of molecules in system
+      parameter (nmolset=1500)  !Max number of molecules in training set
+      parameter (mbond=60)     !Max number of bonds connected to one atom
+      parameter (mrestra=100)     !Max number of restraints
+      parameter (mtreg=100)     !Max number of temperature regimes
+      parameter (mtzone=5)     !Max number of temperature zones
+      parameter (mvreg=100)     !Max number of volume regimes
+      parameter (mvzone=6)     !Max number of volume zones
+      parameter (mereg=100)     !Max number of electric field regimes
+      parameter (mezone=3)     !Max number of electric field zones
+      character*1 qr,qrset,qresi2
+      character*2 qaset,qadd
+      character*3 qresi1
+      character*5 qlabel,qffty,qbgfaxes,qbgfsgn,qresi3
+      character*20 qkeyw
+      character*25 qfile
+      character*40 qffield,qformat,qstrana2
+      character*60 qremark,qremset,qmolset
+      character*200 qstrana1
+      common
+     $/cbka/ dhbdc(nhbmax,3,3),cp(nat,3),
+     $       cadd(nat,3),d2(3*navib,3*navib),
+     $       veladd(3,nat),
+     $       aold(3,nat),dic(3,nat),pvdw1(nsort,nsort),
+     $       pvdw2(nsort,nsort),angimp(nat,6),
+     $       yt(na1mx3),pt(na1mx3),gi(na1mx3),enmolset(nmolset),
+     $       ai(na1mx3),bi(na1mx3),yi(na1mx3),pn(na1mx3),tbo(nat),
+     $       chgbgf(nat),
+     $       abo2(nat),bor4(nat),bos(nbomax),
+     $       eldef(nat),vradic(nat),
+     $       vmo2(nat),
+     $       ro(nbomax),dbondr(nbomax),
+     $       dbosidr(nbomax),thgo(nopmax),
+     $       elmol(nmolmax),
+     $       elaf(nsort),vpq(nsort),
+     $       rvdw(nsort),alf(nsort),eps(nsort),chat(nsort),
+     $       vlp2(nsort),
+     $       valp2(nsort),vincr(nsort),
+     $       vval3(nsort),
+     $       vuncor(nbotym),
+     $       vop(nsort),
+     $       sigqeq(nsort),      
+     $       rrcha(mrestra),
+     $       rmstra3(mrestra),      
+     $       rmcha(mrestra),
+     $       rtcha(mrestra),rvcha(mrestra),
+     $       v2bo(ntotym),v3bo(ntotym),
+     $       eel,fctor,elr,
+     $       presx2,presy2,presz2,
+     $       tset2,
+     $       enmol,formol,vvol,tpnrad,
+     $       delvib,
+     $       taut2,tincr,xmasmd,
+     $       gdicmax,parc1,parc2,sumelec,
+     $       xinh,fsnh,vqnh,snh,ham,errnh,sumhe,
+     $       swa,swb2,swc0,swc1,swc2,swc3,swc4,swc5,swc6,
+     $       swc7,plr,endpo2,ccpar,
+     $       c4,estrmin,endpo,accincr,
+     $       endpoold,xadd,yadd,zadd,addist,taddmol,
+     $       Hug_E0, Hug_P0, Hug_V0, xImpVcm, shock_vel,
+     $       shock_z_sep
+      common
+     $/cbka/ nubon(nat,nat),      
+     $       ioop(nopmax,9),ifreqset(nmolset),
+     $       ijk(nat,4),icgeopt(nmolset),
+     $       irap(50),irdo(50,2),
+     $       ityadd(nat),
+     $       nmoloo(nat),iradic(nat),idef(nsort),nasort(nsort),
+     $       ibgr1(nat),ibgr2(nat),idupc(6),
+     $       imolsta(nat),
+     $       ncent2(nbomax),irads,nrdd,nrddf,nbiolab,nuge,
+     $       nbon2,npar,nodmty,ngnh,irac,nincrop,
+     $       nboty,mdstep,
+     $       nreac,
+     $       nbonop,icelo2,
+     $       iaddfreq,iveladd,invt,
+     $       noop,ndtau,
+     $       nelc3,nfc,nsav2,nmmax,ibh2,
+     $       nmmaxold,nfcold,icellold,imodfile,
+     $       icelo2old,inmov1,inmov2,nchaold,naa,nadattempt,
+     $       nequi,iadj,
+     $       ntest,nmm,
+     $       nmolo5o,nradcount,nmollset,iflga,
+     $       iperiod,ibgfversion,iremark,iconne,
+     $       kx,ky,kz,iexco,iruid,ibity,nvlist,
+     $       ityrad,iredo,iexx,iexy,iexz,ncellopt,
+     $       ndata2,nprob,nit,i5758,ingeo,nmoloold,itemp,
+     $       icgeo,ishock_type,isymm,
+     $       qadd(nat),qlabel(nat),qffty(nat),qresi1(nat),
+     $       qresi2(nat),qresi3(nat),
+     $       qremark(20),qformat(20),qr,qffield,
+     $       qstrana1,qstrana2,qmolset(nmolset)
+***********************************************************************
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Added REAXFF energy evaluation to Grasp
+@
+text
+@d2 1
+a2 1
+      parameter (nat=3000)     !Max number of atoms
+@
+
+
+3.2.2.3
+log
+@Added energies to Reax code, added kcal unit style and added
+the example testrdx to Makefile.testing
+@
+text
+@d3 1
+a3 1
+      parameter (neem=3000)    !Max number of atoms for EEM method
+@
+
+
+3.2.2.4
+log
+@Finished optimized implementation of ReaxFF.
+Eliminates O(N^2) scaling of srttor and srtang.
+Also blanks out the ghost bonds that are not in dihedral
+with local atom.
+@
+text
+@d19 1
+a19 2
+c      parameter (nmolmax=1000)  !Max number of molecules in system
+      parameter (nmolmax=2000)  !Max number of molecules in system
+@
+
+
+3.2.2.5
+log
+@Modified use of nat to allow treatment of big parallel systems.
+@
+text
+@a2 1
+      parameter (nattot=3000)     !Max number of atoms
+d47 1
+a47 1
+     $       chgbgf(nattot),
+d88 1
+a88 1
+     $       ibgr1(nattot),ibgr2(nattot),idupc(6),
+d108 2
+a109 2
+     $       qadd(nat),qlabel(nattot),qffty(nattot),qresi1(nattot),
+     $       qresi2(nattot),qresi3(nattot),
+@
+
+
+3.2.2.6
+log
+@Fixed bug in reax_cbkch.h, switched neem to nat
+@
+text
+@d3 2
+a4 2
+      parameter (nattot=5000)     !Max number of atoms
+      parameter (neem=5000)    !Max number of atoms for EEM method
+@
+
+
+3.2.2.7
+log
+@Implemented a parallel CG scheme. Does not exploit sparsity and
+so is still quite slow.
+@
+text
+@d3 2
+a4 2
+      parameter (nattot=3000)     !Max number of atoms
+      parameter (neem=3000)    !Max number of atoms for EEM method
+@
+
+
+3.2.2.8
+log
+@Streamlined memory for global and local data
+@
+text
+@d2 3
+a4 2
+      parameter (nat=8000)     !Max number of atoms
+      parameter (nattot=4968)     !Max number of global atoms
+@
+
+
+3.2.2.9
+log
+@Fixed bug in srtbon1 that allowed memory overflow.
+@
+text
+@d2 1
+a2 1
+      parameter (nat=11776)     !Max number of atoms
+d12 1
+a12 1
+      parameter (nbomax=20000)  !Max number of bonds
+@
+
+
+3.2.2.10
+log
+@Greatly reduced memory usage.
+@
+text
+@d1 1
+a1 2
+      implicit real*8 (a-h,o-z),integer(i-n) 
+      parameter (nneighmax=50)     !Max number of neighbors per atom
+d12 1
+a12 1
+      parameter (nbomax=40000)  !Max number of bonds
+d82 1
+a82 1
+     $/cbka/ 
+@
+
+
+3.2.2.11
+log
+@Removed version() from distribution
+@
+text
+@d3 2
+a4 2
+      parameter (nat=462)     !Max number of atoms
+      parameter (nattot=21)     !Max number of global atoms
+d13 1
+a13 1
+      parameter (nbomax=2000)  !Max number of bonds
+d15 1
+a15 1
+      parameter (nvamax=2000)  !Max number of valency angles
+d17 1
+a17 1
+      parameter (ntomax=4000)  !Max number of torsion angles
+d23 1
+a23 1
+      parameter (mbond=10)     !Max number of bonds connected to one atom
+@
+
+
+3.2.2.12
+log
+@Added some error checking and some memory efficiency.
+@
+text
+@d2 1
+a2 1
+      parameter (nneighmax=50)
+a4 2
+      parameter (nsort=20)    !Max number of atom types
+      parameter (mbond=20)     !Max number of bonds connected to one atom
+d7 1
+d13 2
+a14 3
+      parameter (nboallmax=2000)  !Max number of all bonds
+      parameter (nbomax=1000)  !Max number of bonds
+      parameter (nhbmax=00010)  !Max number of  hydrogen bonds
+d23 1
+@
+
+
+3.2.2.13
+log
+@One more memory management tweak.
+@
+text
+@d3 2
+a4 2
+      parameter (nat=11776)     !Max number of atoms
+      parameter (nattot=4968)     !Max number of global atoms
+d14 2
+a15 2
+      parameter (nboallmax=40000)  !Max number of all bonds
+      parameter (nbomax=13000)  !Max number of bonds
+d17 1
+a17 1
+      parameter (nvamax=25000)  !Max number of valency angles
+d19 1
+a19 1
+      parameter (ntomax=40000)  !Max number of torsion angles
+@
+
+
+3.2.2.14
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@a0 1
+#include "reax_defs.h"
+d2 5
+a6 5
+      parameter (nneighmax=NNEIGHMAXDEF)
+      parameter (nat=NATDEF)     !Max number of atoms
+      parameter (nattot=NATTOTDEF)     !Max number of global atoms
+      parameter (nsort=NSORTDEF)    !Max number of atom types
+      parameter (mbond=MBONDDEF)     !Max number of bonds connected to one atom
+d8 24
+a31 22
+      parameter (navib=NAVIBDEF)     !for 2nd derivatives
+      parameter (nbotym=NBOTYMDEF)   !Max number of bond types
+      parameter (nvatym=NVATYMDEF)   !Max number of valency angle types
+      parameter (ntotym=NTOTYMDEF)   !Max number of torsion angle types
+      parameter (nhbtym=NHBTYMDEF)   !Max number of hydrogen bond types
+      parameter (nodmtym=NODMTYMDEF)   !Max number of off-diagonal Morse types
+      parameter (nboallmax=NBOALLMAXDEF)  !Max number of all bonds
+      parameter (nbomax=NBOMAXDEF)  !Max number of bonds
+      parameter (nhbmax=NHBMAXDEF)  !Max number of  hydrogen bonds
+      parameter (nvamax=NVAMAXDEF)  !Max number of valency angles
+      parameter (nopmax=NOPMAXDEF)  !Max number of out of plane angles
+      parameter (ntomax=NTOMAXDEF)  !Max number of torsion angles
+      parameter (npamax=NPAMAXDEF)  !Max number of general parameters in force field
+      parameter (nmolmax=NMOLMAXDEF)  !Max number of molecules in system
+      parameter (nmolset=NMOLSETDEF)  !Max number of molecules in training set
+      parameter (mrestra=MRESTRADEF)     !Max number of restraints
+      parameter (mtreg=MTREGDEF)     !Max number of temperature regimes
+      parameter (mtzone=MTZONEDEF)     !Max number of temperature zones
+      parameter (mvreg=MVREGDEF)     !Max number of volume regimes
+      parameter (mvzone=MVZONEDEF)     !Max number of volume zones
+      parameter (mereg=MEREGDEF)     !Max number of electric field regimes
+      parameter (mezone=MEZONEDEF)     !Max number of electric field zones
+a114 2
+
+
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

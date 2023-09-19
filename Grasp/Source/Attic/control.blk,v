@@ -1,0 +1,97 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAX-2:3.2.2.3
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@# @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2005.02.03.21.40.18;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@ 
+      common
+     $/control/ vrange,cutof2,cutof3,vlbora,tstep,range,taut,volcha,
+     $          axis1,axis2,axis3,taup,
+     $          icpres,nmethod,noutpt,inpt,napp,ianaly,ncha2,
+     $          nrand,ntscale,itstep,ndebug,icentr,itrout,
+     $          nchaudixmolo,itrans,nsav,
+     $          nrep1,ncontrol,nhop2,nsav3,ngeofor,ifreq,
+     $          nprevrun,maxstp,nvel,nsurp,ncons,
+     $          ncha,icell,imolde,nchaud
+*********************************************************************************
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Greatly reduced memory usage.
+@
+text
+@d1 1
+@
+
+
+3.2.2.3
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@a10 2
+
+
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

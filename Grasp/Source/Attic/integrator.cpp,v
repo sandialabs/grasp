@@ -1,0 +1,54 @@
+head	2.1;
+access;
+symbols
+	PreMonaco:2.1;
+locks; strict;
+comment	@// @;
+
+
+2.1
+date	2003.04.24.19.37.50;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.17.17.14.18;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.1
+log
+@Removing obsolete files from version 2.
+@
+text
+@#include "integrator.h"
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.1
+log
+@Added class Profile to measure different types of spatial profiles
+Added class Input to handle input commands.
+Added global functions input_string to parse input commands.
+@
+text
+@@
+

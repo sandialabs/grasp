@@ -1,0 +1,2095 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAX-2:3.2.2.11
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@c @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2004.12.17.16.45.55;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	3.2.2.4;
+
+3.2.2.4
+date	2005.01.07.22.51.01;	author athomps;	state Exp;
+branches;
+next	3.2.2.5;
+
+3.2.2.5
+date	2005.01.23.19.04.55;	author athomps;	state Exp;
+branches;
+next	3.2.2.6;
+
+3.2.2.6
+date	2005.01.29.01.44.20;	author athomps;	state Exp;
+branches;
+next	3.2.2.7;
+
+3.2.2.7
+date	2005.01.29.02.15.37;	author athomps;	state Exp;
+branches;
+next	3.2.2.8;
+
+3.2.2.8
+date	2005.02.03.21.40.18;	author athomps;	state Exp;
+branches;
+next	3.2.2.9;
+
+3.2.2.9
+date	2005.02.07.22.43.46;	author athomps;	state Exp;
+branches;
+next	3.2.2.10;
+
+3.2.2.10
+date	2005.02.09.07.14.57;	author athomps;	state Exp;
+branches;
+next	3.2.2.11;
+
+3.2.2.11
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@********************************************************************** 
+********************************************************************** 
+*                                                                    *
+*     REAXFF Reactive force field program                            *
+*                                                                    *
+*     Developed and written by Adri van Duin, duin@@wag.caltech.edu   *
+*                                                                    *
+*     Copyright (c) 2001-2010 California Institute of Technology     *
+*                                                                    *
+*     This is an open-source program. Feel free to modify its        *
+*     contents. Please keep me informed of any useful modification   *
+*     or addition that you made. Please do not distribute this       *
+*     program to others; if people are interested in obtaining       *
+*     a copy of this program let them contact me first.              *
+*                                                                    *
+********************************************************************** 
+********************************************************************** 
+
+      subroutine verlet1
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkc.blk'
+      include 'cbkimove.blk'
+      include 'control.blk'
+      include 'small.blk'
+********************************************************************** 
+*                                                                    *
+*     Velocity Verlet time step part 1                               *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In verlet1'
+      call timer(65)
+      close (65)
+      end if
+      do i1=1,na
+      do i2=1,3
+      if (imove(i1).eq.1) 
+     $c(i1,i2)=c(i1,i2)+vel(i2,i1)*tstep+accel(i2,i1)*ts22
+      vel(i2,i1)=imove(i1)*vel(i2,i1)+ts2*accel(i2,i1)
+      end do
+      end do
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine verlet2
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkconst.blk'
+      include 'cbkd.blk'
+      include 'cbkenergies.blk'
+      include 'cbkimove.blk'
+      include 'control.blk'
+      include 'small.blk'
+*                                                                    *
+*     Velocity Verlet time step part 2                               *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In verlet2'
+      call timer(65)
+      close (65)
+      end if
+      do i1=1,na
+      do i2=1,3
+*     aold(i2,i1)=accel(i2,i1)
+      accel(i2,i1)=-convmd*d(i2,i1)/xmasat(i1)
+      vel(i2,i1)=imove(i1)*vel(i2,i1)+accel(i2,i1)*ts2
+      ekin=ekin+imove(i1)*xmasat(i1)*vel(i2,i1)*vel(i2,i1)
+      end do
+      end do
+      ekin=0.50*ekin/convmd
+      eksav=ekin
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine tdamp(scasum)
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkconst.blk'
+      include 'cbkenergies.blk'
+      include 'cbkimove.blk'
+      include 'cbknmolat.blk'
+      include 'control.blk'
+      include 'small.blk'
+
+********************************************************************** 
+*                                                                    *
+*     Temperature control using temperature damping                  *
+*     (Berendsen et al., J. Chem. Phys. 1984,81,3684)                *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In tdamp'
+      call timer(65)
+      close (65)
+      end if
+      if (ncons.eq.2) then
+      tempmds=tempmd
+    5 tempmd=2.0*ekin/(float(3*namov)*rgasc*xjouca/1.0d3)
+      sca1=1.0+(tstep/taut)*(tset/tempmd-1.0)
+      if (sca1.lt.0.0) sca1=0.0
+      scale=sqrt(sca1)
+      if (ntscale.eq.1) scale=sqrt(tset/(tempmd+0.1))
+      if (scale.gt.2.0) scale=2.0
+      do i1=1,na
+      do i2=1,3
+      vel(i2,i1)=imove(i1)*scale*vel(i2,i1)
+      ekin=ekin+xmasat(i1)*vel(i2,i1)*vel(i2,i1)
+      end do
+      end do
+      ekin=0.50*ekin/convmd
+      tempmd=2.0*ekin/(float(3*namov)*rgasc*xjouca/1.0d3)
+      if (tempmd.gt.2.0*tempmds.and.mdstep.gt.100) then
+      open (75,file='fort.75',status='unknown',access='append')
+      write (75,*) mdstep,tempmd,tempmds
+      close (75)
+      end if
+      end if
+********************************************************************** 
+*                                                                    *
+*     Temperature control using temperature damping                  *
+*     applied to individual atoms                                    *
+*                                                                    *
+********************************************************************** 
+      if (ncons.eq.0) then
+      scasum=1.0
+      do i1=1,na
+      if (imove(i1).eq.1) then
+      ekinat=0.0
+      do i2=1,3
+      ekinat=ekinat+xmasat(i1)*vel(i2,i1)*vel(i2,i1)
+      end do
+      ekinat=0.50*ekinat/convmd
+      tempat=2.0*ekinat/(3.0*rgasc*xjouca/1.0d3)
+   10 sca1=1.0+(tstep/taut)*(tset/tempat-1.0)
+      if (sca1.lt.0.0) sca1=0.0
+      scale=sqrt(sca1)
+      if (ntscale.eq.1) scale=sqrt(tset/(tempmd+0.1))
+      if (scale.gt.2.0) scale=2.0
+      scasum=scasum*scale
+      ekinat=0.0
+      do i2=1,3
+      vel(i2,i1)=vel(i2,i1)*scale
+      ekinat=ekinat+xmasat(i1)*vel(i2,i1)*vel(i2,i1)
+      end do
+      ekinat=0.50*ekinat/convmd
+      tempat=2.0*ekinat/(3.0*rgasc*xjouca/1.0d3)
+      if (tempat.gt.tset+400.0) goto 10
+      if (tempat.lt.tset-400.0) goto 10
+      end if
+      end do
+
+      ekin=zero
+      do i1=1,na
+      do i2=1,3
+      ekin=ekin+xmasat(i1)*imove(i1)*vel(i2,i1)*vel(i2,i1)
+      end do
+      end do
+      ekin=0.50*ekin/convmd
+*     tempmd=2.0*ekin/(float(3*namov)*rgasc*xjouca/1.0d3)
+      scasum=scasum*1.0/float(na)
+      end if
+********************************************************************** 
+*                                                                    *
+*     Temperature control using temperature damping                  *
+*     applied to individual molecules                                *
+*                                                                    *
+********************************************************************** 
+      if (ncons.eq.3) then
+      if (mod(mdstep,nrep1).eq.0) then
+      open (75,file='fort.75',status='unknown')
+      end if
+      do i1=1,nmolo
+      ekinmol=0.0
+      na1m=nmolat(i1,1)
+      do i2=1,na1m
+      ihu=nmolat(i1,i2+1)
+      do i3=1,3
+      ekinmol=ekinmol+xmasat(ihu)*vel(i3,ihu)*vel(i3,ihu)
+      end do
+      end do
+      ekinmol=0.50*ekinmol/convmd
+      tempmol=2.0*ekinmol/(float(3*na1m)*rgasc*xjouca/1.0d3)
+   20 sca1=1.0+(tstep/taut)*(tset/tempmol-1.0)
+      if (sca1.lt.0.0) sca1=0.0
+      scale=sqrt(sca1)
+      if (mod(mdstep,nrep1).eq.0) then
+      write (75,'(2i8,4f12.6)')mdstep,i1,tempmol,tset,
+     $taut*1e+15,scale
+      end if
+      ekinmol=0.0
+      do i2=1,na1m
+      ihu=nmolat(i1,i2+1)
+      do i3=1,3
+      vel(i3,ihu)=vel(i3,ihu)*scale
+      ekinmol=ekinmol+xmasat(ihu)*vel(i3,ihu)*vel(i3,ihu)
+      end do
+      end do
+      ekinmol=0.50*ekinmol/convmd
+      tempmol=2.0*ekinmol/(float(3*na1m)*rgasc*xjouca/1.0d3)
+*     if (tempmol.gt.2.0*tset) goto 20
+      end do
+
+      ekin=zero
+      do i1=1,na
+      do i2=1,3
+      ekin=ekin+xmasat(i1)*vel(i2,i1)*vel(i2,i1)
+      end do
+      end do
+      ekin=0.50*ekin/convmd
+*     tempmd=2.0*ekin/(float(3*namov)*rgasc*xjouca/1.0d3)
+      if (mod(mdstep,nrep1).eq.0) then
+      close (75)
+      end if
+      end if
+      
+********************************************************************** 
+*                                                                    *
+*     Temperature control using Anderson's thermostat                *
+*     (Anderson, J. Chem. Phys. 1980,72,2384)                        *
+*                                                                    *
+********************************************************************** 
+      if (ncons.eq.4) then
+      hulp=(tstep/taut)
+      do i1=1,na
+      if (random(dseed).lt.hulp) then   !collision with bath
+      v0=sqrt(3.0*convmd*rgasc*tset/(1.0d3*caljou*xmasat(i1)))
+      sigma=sqrt(v0)
+      velnew=gauss(sigma,v0,dseed)
+      velold=sqrt(vel(1,i1)*vel(1,i1)+vel(2,i1)*vel(2,i1)+
+     $vel(3,i1)*vel(3,i1))
+      scale=velnew/velold
+      scale2=sqrt(scale)
+      do i2=1,3
+      vel(i2,i1)=scale2*vel(i2,i1)
+      end do
+      end if
+
+      end do
+
+      ekin=zero
+      do i1=1,na
+      do i2=1,3
+      ekin=ekin+xmasat(i1)*vel(i2,i1)*vel(i2,i1)
+      end do
+      end do
+      ekin=0.50*ekin/convmd
+
+      end if
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine tregime
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkconst.blk'
+      include 'cbkenergies.blk'
+      include 'cbktregime.blk'
+      include 'control.blk'
+      include 'small.blk'
+      dimension tsetcur(mtzone),ekinz(mtzone),tempmdz(mtzone),
+     $scaz(mtzone),scalez(mtzone)
+********************************************************************** 
+*                                                                    *
+*     Temperature control based on tregime.in                        *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In tregime'
+      call timer(65)
+      close (65)
+      end if
+
+      goto (100,500,200) ncons+1
+      stop 'Tregime: unknown temperature damping method'
+********************************************************************** 
+*                                                                    *
+*     Temperature control based on individual atoms 
+*                                                                    *
+********************************************************************** 
+  100 continue
+      ekin=zero
+      mdsteph=mdstep+nprevrun
+      do i1=1,ntrc
+      if (mdsteph.ge.nittc(i1)) itcur=i1
+      end do
+      do i1=1,nntreg(itcur)
+      tsetcur(i1)=tsettreg(itcur,i1)+(mdsteph-nittc(itcur))*
+     $dttreg(itcur,i1)
+      if (tsetcur(i1).lt.0.01) tsetcur(i1)=0.01
+      end do
+
+      do i1=1,na
+      ekinat=0
+      do i2=1,3
+      ekinat=ekinat+xmasat(i1)*vel(i2,i1)*vel(i2,i1)
+      end do
+      ekinat=0.50*ekinat/convmd
+      tempat=2.0*ekinat/(3.0*rgasc*xjouca/1.0d3)
+      ifound=0
+      do i2=1,nntreg(itcur)
+      if (i1.ge.ia1treg(itcur,i2).and.i1.le.ia2treg(itcur,i2)) then
+      tseth=tsetcur(i2)
+      tautz=1.0d-15*tdamptreg(itcur,i2)
+      ifound=1
+      end if
+      end do
+      if (ifound.eq.0) then
+      write (*,*)'Error in temperature regime:',itcur,' for atom:',i1
+      stop 'Wrong temperature regime; see log-file'
+      end if
+      sca1=1.0+(tstep/tautz)*(tseth/tempat-1.0)
+      if (sca1.lt.0.0) sca1=0.0
+      scale=sqrt(sca1)
+      do i2=1,3
+      vel(i2,i1)=vel(i2,i1)*scale
+      end do
+      end do
+      
+      do i1=1,nntreg(itcur)
+      ekinz(i1)=zero
+      nahu=ia2treg(itcur,i1)-ia1treg(itcur,i1)+1
+      do i2=ia1treg(itcur,i1),ia2treg(itcur,i1)
+      do i3=1,3
+      ekinz(i1)=ekinz(i1)+xmasat(i2)*vel(i3,i2)*vel(i3,i2)
+      ekin=ekin+xmasat(i2)*vel(i3,i2)*vel(i3,i2)
+      end do
+      end do
+      ekinz(i1)=0.50*ekinz(i1)/convmd
+      tempmdz(i1)=2.0*ekinz(i1)/(float(3*nahu)*rgasc*xjouca/1.0d3)
+      end do
+
+      ekin=0.50*ekin/convmd
+      tempmd=2.0*ekin/(float(3*namov)*rgasc*xjouca/1.0d3)
+      if (mod(mdstep,nrep1).eq.0) then
+      open (75,file='fort.75',status='unknown',access='append')
+      write (75,'(i8,21f8.2)') mdsteph,tempmd,(tempmdz(i1),
+     $tsetcur(i1),i1=1,nntreg(itcur))
+      close (75)
+      end if
+
+      return
+********************************************************************** 
+*                                                                    *
+*     Temperature control based on system temperatures               *
+*                                                                    *
+********************************************************************** 
+  200 continue
+      do i1=1,mtzone
+      ekinz(i1)=zero
+      end do
+      ekin=zero
+      do i1=1,ntrc
+      if (mdstep.ge.nittc(i1)) itcur=i1
+      end do
+      do i1=1,nntreg(itcur)
+      tsetcur(i1)=tsettreg(itcur,i1)+(mdstep-nittc(itcur))*
+     $dttreg(itcur,i1)
+      if (tsetcur(i1).lt.0.01) tsetcur(i1)=0.01
+      end do
+      
+      do i1=1,nntreg(itcur)
+      do i2=ia1treg(itcur,i1),ia2treg(itcur,i1)
+      do i3=1,3
+      ekinz(i1)=ekinz(i1)+xmasat(i2)*vel(i3,i2)*vel(i3,i2)
+      end do
+      end do
+
+      ekinz(i1)=0.50*ekinz(i1)/convmd
+      nahu=ia2treg(itcur,i1)-ia1treg(itcur,i1)+1
+      tautz=1.0d-15*tdamptreg(itcur,i1)
+      tempmdz(i1)=2.0*ekinz(i1)/(float(3*nahu)*rgasc*xjouca/1.0d3)
+      scaz(i1)=1.0+(tstep/tautz)*(tsetcur(i1)/tempmdz(i1)-1.0)
+      if (scaz(i1).lt.zero) scaz(i1)=zero
+      scalez(i1)=sqrt(scaz(i1))
+      if (scalez(i1).gt.2.0) scalez(i1)=2.0
+
+      ekinz(i1)=zero
+      do i2=ia1treg(itcur,i1),ia2treg(itcur,i1)
+      do i3=1,3
+      vel(i3,i2)=scalez(i1)*vel(i3,i2)
+      ekinz(i1)=ekinz(i1)+xmasat(i2)*vel(i3,i2)*vel(i3,i2)
+      ekin=ekin+xmasat(i2)*vel(i3,i2)*vel(i3,i2)
+      end do
+      end do
+      ekinz(i1)=0.50*ekinz(i1)/convmd
+      tempmdz(i1)=2.0*ekinz(i1)/(float(3*nahu)*rgasc*xjouca/1.0d3)
+      end do
+
+      ekin=0.50*ekin/convmd
+      tempmd=2.0*ekin/(float(3*namov)*rgasc*xjouca/1.0d3)
+      if (mod(mdstep,nrep1).eq.0) then
+      open (75,file='fort.75',status='unknown',access='append')
+      write (75,'(i8,21f8.2)') mdstep,tempmd,(tempmdz(i1),
+     $tsetcur(i1),i1=1,nntreg(itcur))
+      close (75)
+      end if
+      return
+
+  500 continue
+      stop 'Tregime: unknown temperature damping method'
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine vregime
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkdistan.blk'
+      include 'cbktregime.blk'
+      include 'cbkvregime.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'small.blk'
+      include 'cbkinit.blk'
+      dimension fc(nat,3)
+      character*5 qvtyp
+********************************************************************** 
+*                                                                    *
+*     Volume control based on vregime.in                             *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In vregime'
+      call timer(65)
+      close (65)
+      end if
+
+      mdsteph=mdstep+nprevrun
+
+      do i1=1,nvrc
+      if (mdsteph.ge.nitvc(i1)) ivcur=i1
+      end do
+
+      do i1=1,nnvreg(ivcur)
+
+      do i2=1,na
+      fc(i2,1)=c(i2,1)/tm11
+      fc(i2,2)=(c(i2,2)-tm21*fc(i2,1))/tm22
+      fc(i2,3)=(c(i2,3)-tm31*fc(i2,1)-tm32*fc(i2,2))/tm33
+      end do
+
+      qvtyp=qvtype(ivcur,i1)
+
+      if (qvtyp(1:1).eq.'a'.and.qvtyp(1:4).ne.'alfa') then
+      axis(1)=axis(1)+dvvreg(ivcur,i1)
+      end if
+      if (qvtyp(1:1).eq.'b'.and.qvtyp(1:4).ne.'beta') then
+      axis(2)=axis(2)+dvvreg(ivcur,i1)
+      end if
+      if (qvtyp(1:1).eq.'c') then
+      axis(3)=axis(3)+dvvreg(ivcur,i1)
+      end if
+      if (qvtyp(1:4).eq.'alfa') then
+      angle(1)=angle(1)+dvvreg(ivcur,i1)
+      end if
+      if (qvtyp(1:4).eq.'beta') then
+      angle(2)=angle(2)+dvvreg(ivcur,i1)
+      end if
+      if (qvtyp(1:5).eq.'gamma') then
+      angle(3)=angle(3)+dvvreg(ivcur,i1)
+      end if
+
+      axiss(1)=axis(1)
+      axiss(2)=axis(2)
+      axiss(3)=axis(3)
+      halfa=angle(1)*dgrrdn
+      hbeta=angle(2)*dgrrdn
+      hgamma=angle(3)*dgrrdn
+      sinalf=sin(halfa)
+      cosalf=cos(halfa)
+      sinbet=sin(hbeta)
+      cosbet=cos(hbeta)
+      cosphi=(cos(hgamma)-cosalf*cosbet)/(sinalf*sinbet)
+      if (cosphi.gt.1.0) cosphi=1.0
+      sinphi=sqrt(one-cosphi*cosphi)
+      tm11=axis(1)*sinbet*sinphi
+      tm21=axis(1)*sinbet*cosphi
+      tm31=axis(1)*cosbet
+      tm22=axis(2)*sinalf
+      tm32=axis(2)*cosalf
+      tm33=axis(3)
+      volume=tm11*tm22*tm33                
+
+      if (ivsca(ivcur,i1).eq.1) then  !rescale coordinates
+      do i2=1,na
+      c(i2,1)=fc(i2,1)*tm11
+      c(i2,2)=fc(i2,1)*tm21+fc(i2,2)*tm22
+      c(i2,3)=fc(i2,1)*tm31+fc(i2,2)*tm32+fc(i2,3)*tm33
+      end do
+      end if
+
+      end do
+
+      if (mod(mdstep,nrep1).eq.0) then
+      open (77,file='fort.77',status='unknown',access='append')
+      write (77,'(i8,21f8.2)') mdsteph,tm11*tm22*tm33,axis(1),axis(2),
+     $axis(3),angle(1),angle(2),angle(3)
+      close (77)
+      end if
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine eregime
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkcha.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkefield.blk'
+      include 'cbkenergies.blk'
+      include 'cbkeregime.blk'
+      include 'cbktregime.blk'
+      include 'control.blk'
+      dimension fc(nat,3)
+      character*5 qetyp
+********************************************************************** 
+*                                                                    *
+*     Electric field control based on eregime.in                     *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In eregime'
+      call timer(65)
+      close (65)
+      end if
+
+      mdsteph=mdstep+nprevrun
+
+      do i1=1,nerc
+      if (mdsteph.ge.nitec(i1)) iecur=i1
+      end do
+
+      ifieldx=0
+      ifieldy=0
+      ifieldz=0
+      vfieldx=zero
+      vfieldy=zero
+      vfieldz=zero
+
+      do i1=1,nnereg(iecur)
+      qetyp=qetype(iecur,i1)
+      if (qetyp(1:1).eq.'x') then
+      vfieldx=ereg(iecur,i1)
+      ifieldx=1
+      end if
+      if (qetyp(1:1).eq.'y') then
+      vfieldy=ereg(iecur,i1)
+      ifieldy=1
+      end if
+      if (qetyp(1:1).eq.'z') then
+      vfieldz=ereg(iecur,i1)
+      ifieldz=1
+      end if
+      end do
+
+      if (mod(mdstep,nrep1).eq.0) then
+      open (78,file='fort.78',status='unknown',access='append')
+      write (78,'(i8,3f10.6,4f12.2)') mdsteph,vfieldx,vfieldy,vfieldz,
+     $efi,efix,efiy,efiz
+      close (78)
+      end if
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine calcpres
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkenergies.blk'
+      include 'cbkinit.blk'
+      include 'cbkpres.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'small.blk'
+********************************************************************** 
+*                                                                    *
+*     Pressure calculation                                           *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In calpres'
+      call timer(65)
+      close (65)
+      end if
+
+      deda(1)=0.0
+      deda(2)=0.0
+      deda(3)=0.0
+      do i1=1,na
+      do i2=1,3
+      do ix=1,3
+      do iy=0,2
+      do iz=0,2
+      i3=ix+3*iy+9*iz
+      dxda=0.0
+      dyda=0.0
+      dzda=0.0
+      if (i2.eq.1.and.ix.ne.2) then
+      dxda=-float(ix-2)
+      end if
+      if (i2.eq.2.and.iy.ne.1) then
+      dyda=-float(iy-1)
+      end if
+      if (i2.eq.3.and.iz.ne.1) then
+      dzda=-float(iz-1)
+      end if
+      dedaxh=dxda*dcell(i2,i1,i3)
+      dedayh=dyda*dcell(i2,i1,i3)
+      dedazh=dzda*dcell(i2,i1,i3)
+      deda(1)=deda(1)+dedaxh
+      deda(2)=deda(2)+dedayh
+      deda(3)=deda(3)+dedazh
+      end do
+      end do
+      end do
+      end do
+      end do
+
+      cpres=1.0e-24*avognr*xjouca
+      volu=tm11*tm22*tm33
+      presx=-deda(1)/(tm22*tm33*cpres)+2.*ekin/(3.d0*volu*cpres)
+      presy=-deda(2)/(tm11*tm33*cpres)+2.*ekin/(3.d0*volu*cpres)
+      presz=-deda(3)/(tm11*tm22*cpres)+2.*ekin/(3.d0*volu*cpres) !GPa
+      presx=presx*1d+3
+      presy=presy*1d+3
+      presz=presz*1d+3 !in MPa
+      pressu=(presx+presy+presz)/3.d0
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine pdamp
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkdistan.blk'
+      include 'cbkpres.blk'
+      include 'cbktregime.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'cbkinit.blk'
+      dimension fc(nat,3)
+********************************************************************** 
+*                                                                    *
+*     Pressure control                                               *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In pdamp'
+      call timer(65)
+      close (65)
+      end if
+
+
+      third=one/three
+***********************************************************************
+*                                                                     *
+*     Conversion to fractional coordinates                            *
+*                                                                     *
+***********************************************************************
+*     do i1=1,na
+*     fc(i1,1)=c(i1,1)/tm11
+*     fc(i1,2)=(c(i1,2)-tm21*fc(i1,1))/tm22
+*     fc(i1,3)=(c(i1,3)-tm31*fc(i1,1)-tm32*fc(i1,2))/tm33
+*     end do
+ 
+      h1=tstep/taup
+      difg=1.01
+      difl=1.0/difg
+      scalex=(one+h1*(0.001*presx-pset))**third
+      if (scalex.gt.difg) scalex=difg
+      if (scalex.lt.difl) scalex=difl
+      if (inpt.eq.1) scalex=1.0
+      scaley=(one+h1*(0.001*presy-pset))**third
+      if (scaley.gt.difg) scaley=difg
+      if (scaley.lt.difl) scaley=difl
+      if (inpt.eq.2) scaley=1.0
+      scalez=(one+h1*(0.001*presz-pset))**third
+      if (inpt.eq.3) scalez=1.0
+      if (scalez.gt.difg) scalez=difg
+      if (scalez.lt.difl) scalez=difl
+ 
+      axis(1)=scalex*axis(1)
+      axis(2)=scaley*axis(2)
+      axis(3)=scalez*axis(3)
+ 
+      axiss(1)=axis(1)
+      axiss(2)=axis(2)
+      axiss(3)=axis(3)
+      halfa=angle(1)*dgrrdn
+      hbeta=angle(2)*dgrrdn
+      hgamma=angle(3)*dgrrdn
+      sinalf=sin(halfa)
+      cosalf=cos(halfa)
+      sinbet=sin(hbeta)
+      cosbet=cos(hbeta)
+      cosphi=(cos(hgamma)-cosalf*cosbet)/(sinalf*sinbet)
+      if (cosphi.gt.1.0) cosphi=1.0
+      sinphi=sqrt(one-cosphi*cosphi)
+      tm11=axis(1)*sinbet*sinphi
+      tm21=axis(1)*sinbet*cosphi
+      tm31=axis(1)*cosbet
+      tm22=axis(2)*sinalf
+      volume=tm11*tm22*tm33 
+
+      if (mod(mdstep,nrep1).eq.0) then
+      open (59,file='fort.59',status='unknown',access='append')
+      write (59,'(i8,20(1x,f12.6))')mdstep+nprevrun,axis(1),axis(2),
+     $axis(3),presx,presy,presz,1000.0*pset,volume
+      close (59)
+      end if
+**********************************************************************
+*                                                                    *
+*     Conversion to cartesian coordinates                            *
+*                                                                    *
+**********************************************************************
+*     do i1=1,na
+*     c(i1,1)=fc(i1,1)*tm11
+*     c(i1,2)=fc(i1,1)*tm21+fc(i1,2)*tm22
+*     c(i1,3)=fc(i1,1)*tm31+fc(i1,2)*tm32+fc(i1,3)*tm33
+*     end do
+     
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine encalc
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkcha.blk'
+      include 'cbkconst.blk'
+      include 'cbkd.blk'
+      include 'cbkdcell.blk'
+      include 'cbkenergies.blk'
+      include 'cbknmp.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'small.blk'
+********************************************************************** 
+*                                                                    *
+*     Calculate energy and first derivatives                         *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In encalc'
+      call timer(65)
+      close (65)
+      end if
+      estrc=0.0
+      do i1=1,na
+      do i2=1,3
+      d(i2,i1)=0.0
+      if (icpres.eq.1) then
+      do i3=1,27
+      dcell(i2,i1,i3)=0.0
+      end do
+      end if
+      end do
+      end do
+      eb=zero
+      ea=zero
+      elp=zero
+      emol=zero
+      ev=zero
+      ehb=zero
+      ecoa=zero
+      epen=zero
+      et=zero
+      eco=zero
+      eres=zero
+      eradbo=zero
+      efi=zero
+      if (icpres.eq.1) then
+**********************************************************************
+*                                                                    *
+*     Calculate minimum images for NPT                               *
+*                                                                    *
+**********************************************************************
+      do 30 i1=1,na-1
+      do 30 i2=i1+1,na
+      dx1=c(i1,1)-c(i2,1)
+      dy1=c(i1,2)-c(i2,2)
+      dz1=c(i1,3)-c(i2,3)
+      dismin=1e+10
+      do 35 k1=-1,1
+      do 35 k2=-1,1
+      do 35 k3=-1,1
+      a1=dx1+k1*tm11
+      a2=dy1+k1*tm21+k2*tm22
+      a3=dz1+k1*tm31+k2*tm32+k3*tm33
+      rr=sqrt(a1*a1+a2*a2+a3*a3)
+      if (rr.lt.dismin) then
+      dismin=rr
+      ixsav=k1
+      iysav=k2
+      izsav=k3
+      end if
+   35 continue
+      nmpx(i1,i2)=ixsav
+      nmpx(i2,i1)=-ixsav
+      nmpy(i1,i2)=iysav
+      nmpy(i2,i1)=-iysav
+      nmpz(i1,i2)=izsav
+      nmpz(i2,i1)=-izsav
+   30 continue
+      end if
+ 
+      do i1=1,na
+      nmpx(i1,i1)=0
+      nmpy(i1,i1)=0
+      nmpz(i1,i1)=0
+      end do
+
+      call boncor
+      call lonpar
+      call covbon
+      call ovcor
+
+      call srtang               !Determine valency angles
+      call srttor   !Determine torsion angles
+*     call srtoop   !Determine out of plane angles
+      call srthb    !Determine hydrogen bonds
+
+      call calval
+      call valang
+
+*     call oopang
+
+      call torang
+      call hbond
+      !print *, 'called hbond'
+      !print *, nchaud
+      if (mod(mdstep,nchaud).eq.0) then
+      !print *, 'calling charges'
+c      call charges
+      !print *, 'called charges'
+      end if
+
+      call nonbon
+      call efield
+
+      call restraint
+
+      pressu=0.0
+      if (icpres.eq.1) then
+      call calcpres
+      deda(1)=0.0
+      deda(2)=0.0
+      deda(3)=0.0
+      do i1=1,na
+      do i2=1,3
+      do ix=1,3
+      do iy=0,2
+      do iz=0,2
+      i3=ix+3*iy+9*iz
+      d(i2,i1)=d(i2,i1)+dcell(i2,i1,i3)
+      end do
+      end do
+      end do
+      end do
+      end do
+      end if
+
+      estrc=eb+ea+elp+ev+ecoa+emol+epen+et+ehb+eco+ew+ep+ncha2*ech+efi
+      if (estrc.gt.zero) return
+      if (estrc.le.zero) then
+      goto 10
+      else
+      write (*,*)mdstep
+      write (92,*)eb,ea,elp,ev,ecoa,emol,epen,eoop,et,eco,ew,
+     $ep,ech,eres,eradbo
+      stop 'Energy not a number'
+      end if
+
+   10 continue
+      return
+      end
+********************************************************************** 
+***********************************************************************
+
+      subroutine trarot1
+
+***********************************************************************
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkc.blk'
+      include 'cbkconst.blk'
+      include 'control.blk'
+      include 'small.blk'
+***********************************************************************
+*                                                                     *
+*    Remove translational or rotational kinetic energy.               *
+*                                                                     *
+***********************************************************************
+      DIMENSION VMC(3),ANGMOM(3),TENSOR(3,3),ANGVEL(3),XMC(3)
+
+      NSTART=1
+      NEND=NA
+***********************************************************************
+*                                                                     *
+*     Compute the position, the velocity of and angular momentum about*
+*     the centre of mass.                                             *
+*                                                                     *
+***********************************************************************
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In trarot1'
+      call timer(65)
+      close (65)
+      end if
+      DO 1 K=1,3
+      XMC(K)=0.0
+      VMC(K)=0.0
+    1 ANGMOM(K)=0.0
+      DO 3 K=NSTART,NEND
+      XMASSI=XMASAT(K)
+      cxh=c(k,1)
+      cyh=c(k,2)
+      czh=c(k,3)
+      XMC(1)=XMC(1)+CXH*XMASSI
+      XMC(2)=XMC(2)+CYH*XMASSI
+      XMC(3)=XMC(3)+CZH*XMASSI
+      DO 2 J=1,3
+    2 VMC(J)=VMC(J)+VEL(J,K)*XMASSI
+      ANGMOM(1)=ANGMOM(1)+(CYH*VEL(3,K)-CZH*VEL(2,K))*XMASSI
+      ANGMOM(2)=ANGMOM(2)+(CZH*VEL(1,K)-CXH*VEL(3,K))*XMASSI
+      ANGMOM(3)=ANGMOM(3)+(CXH*VEL(2,K)-CYH*VEL(1,K))*XMASSI
+    3 CONTINUE
+      EKTRAN=0.0
+      DO 4 K=1,3
+      XMC(K)=XMC(K)/XMASMD
+      VMC(K)=VMC(K)/XMASMD
+    4 EKTRAN=EKTRAN+VMC(K)*VMC(K)
+      EKTRAN=HALF*EKTRAN*XMASMD/CONVMD
+      ANGMOM(1)=ANGMOM(1)-(XMC(2)*VMC(3)-XMC(3)*VMC(2))*XMASMD
+      ANGMOM(2)=ANGMOM(2)-(XMC(3)*VMC(1)-XMC(1)*VMC(3))*XMASMD
+      ANGMOM(3)=ANGMOM(3)-(XMC(1)*VMC(2)-XMC(2)*VMC(1))*XMASMD
+
+***********************************************************************
+*                                                                     *
+*     Calculate and then invert the inertial tensor.                  *
+*                                                                     *
+***********************************************************************
+
+      XX=0.0
+      XY=0.0
+      XZ=0.0
+      YY=0.0
+      YZ=0.0
+      ZZ=0.0
+      DO 5 I=NSTART,NEND
+      XMASSI=XMASAT(I)
+      XDIFF=C(I,1)-XMC(1)
+      YDIFF=C(I,2)-XMC(2)
+      ZDIFF=C(I,3)-XMC(3)
+      XX=XX+XDIFF*XDIFF*XMASSI
+      XY=XY+XDIFF*YDIFF*XMASSI
+      XZ=XZ+XDIFF*ZDIFF*XMASSI
+      YY=YY+YDIFF*YDIFF*XMASSI
+      YZ=YZ+YDIFF*ZDIFF*XMASSI
+    5 ZZ=ZZ+ZDIFF*ZDIFF*XMASSI
+      TENSOR(1,1)=YY+ZZ
+      TENSOR(2,1)=-XY
+      TENSOR(3,1)=-XZ
+      TENSOR(1,2)=-XY
+      TENSOR(2,2)=XX+ZZ
+      TENSOR(3,2)=-YZ
+      TENSOR(1,3)=-XZ
+      TENSOR(2,3)=-YZ
+      TENSOR(3,3)=XX+YY
+      CALL INVMAT(3,3,TENSOR,3)
+
+***********************************************************************
+*                                                                     *
+*     Compute the angular velocity about the centre of mass.          *
+*                                                                     *
+***********************************************************************
+
+      EKROT=0.0
+      DO 7 I=1,3
+      ANGVEL(I)=0.0
+      DO 6 J=1,3
+    6 ANGVEL(I)=ANGVEL(I)+TENSOR(I,J)*ANGMOM(J)
+    7 EKROT=EKROT+ANGVEL(I)*ANGMOM(I)
+      EKROT=HALF*EKROT/CONVMD
+
+***********************************************************************
+*                                                                     *
+*     Eliminate rotation about the centre of mass.                    *
+*                                                                     *
+***********************************************************************
+
+      DO 9 I=NSTART,NEND
+      XDIFF=C(I,1)-XMC(1)
+      YDIFF=C(I,2)-XMC(2)
+      ZDIFF=C(I,3)-XMC(3)
+      VEL(1,I)=VEL(1,I)-ANGVEL(2)*ZDIFF+ANGVEL(3)*YDIFF
+      VEL(2,I)=VEL(2,I)-ANGVEL(3)*XDIFF+ANGVEL(1)*ZDIFF
+    9 VEL(3,I)=VEL(3,I)-ANGVEL(1)*YDIFF+ANGVEL(2)*XDIFF
+
+***********************************************************************
+*                                                                     *
+*     Eliminate translation of the centre of mass.                    *
+*                                                                     *
+***********************************************************************
+
+   10 DO 8 I=1,NA
+      DO 8 J=1,3
+    8 VEL(J,I)=VEL(J,I)-VMC(J)
+
+***********************************************************************
+*                                                                     *
+*     Remove the translation occured during the last 100 steps by back*
+*     translation of the entire sytem.                                *
+*                                                                     *
+***********************************************************************
+
+*     D1=CENTRE(1)-XMC(1)
+*     D2=CENTRE(2)-XMC(2)
+*     D3=CENTRE(3)-XMC(3)
+*     DO 11 K=1,NA
+*     C(K,1)=C(K,1)+D1
+*     C(K,2)=C(K,2)+D2
+*  11 C(K,3)=C(K,3)+D3
+
+      return
+      end
+
+***********************************************************************
+***********************************************************************
+
+      subroutine trarot2
+
+***********************************************************************
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkbo.blk'
+      include 'cbkc.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkdistan.blk'
+      include 'cbkenergies.blk'
+      include 'cbkia.blk'
+      include 'cbkrbo.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'small.blk'
+      dimension cmcent(nmolmax,3),natmol(nmolmax),fc(nat,3)
+      dimension rang(3)
+***********************************************************************
+*                                                                     *
+*     Translate atoms back to unit cell                               *
+*                                                                     *
+***********************************************************************
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In trarot2'
+      call timer(65)
+      close (65)
+      end if
+***********************************************************************
+*                                                                     *
+*     Conversion to fractional coordinates                            *
+*                                                                     *
+***********************************************************************
+      do i1=1,na
+      fc(i1,1)=c(i1,1)/tm11
+      fc(i1,2)=(c(i1,2)-tm21*fc(i1,1))/tm22
+      fc(i1,3)=(c(i1,3)-tm31*fc(i1,1)-tm32*fc(i1,2))/tm33
+      rang(1)=range/tm11
+      rang(2)=(range-tm21*rang(1))/tm22
+      rang(3)=(range-tm31*rang(1)-tm32*rang(2))/tm22
+      rangdis=(rang(1)+rang(2)+rang(3))/3.0
+      end do
+
+      if (itrans.eq.1.or.iortho.eq.0) then
+***********************************************************************
+*                                                                     *
+*     Simple back-translation                                         *
+*                                                                     *
+***********************************************************************
+      do i1=1,na
+      do i2=1,3
+      if (fc(i1,i2).lt.-rang(i2)) then
+      itrans2=int(fc(i1,i2))
+      fc(i1,i2)=fc(i1,i2)+1.0-itrans2
+      id(i1,i2)=id(i1,i2)-1.0+itrans2
+      end if
+      if (fc(i1,i2).gt.1.0+rang(i2)) then
+      itrans2=int(fc(i1,i2))
+      fc(i1,i2)=fc(i1,i2)-itrans2
+      id(i1,i2)=id(i1,i2)+itrans2
+      end if
+      end do
+      end do
+
+      end if
+
+      if (itrans.eq.2.or.itrans.eq.3) then
+***********************************************************************
+*                                                                     *
+*     Back translation based on molecular composition                 *
+*                                                                     *
+***********************************************************************
+      do i1=1,nmolo5
+      natmol(i1)=0
+      do i2=1,3
+      cmcent(i1,i2)=0.0
+      end do 
+      end do 
+      do i1=1,na
+      imol=iag(i1,3+mbond)
+      do i2=1,3
+      cmcent(imol,i2)=cmcent(imol,i2)+fc(i1,i2)
+      end do
+      natmol(imol)=natmol(imol)+1
+      end do
+      do i1=1,nmolo5
+      do i2=1,3
+      cmcent(i1,i2)=cmcent(i1,i2)/float(natmol(i1))
+      end do
+      end do
+      do i1=1,nmolo5
+      do i2=1,3
+      if (cmcent(i1,i2).gt.1.0+rang(i2)) then
+      open (58,file='fort.58',status='unknown',access='append')
+      write (58,*)'Iteration',mdstep,' Moved molecule number',i1
+      write (58,*)i2,-axis(i2)
+      close (58)
+      do i3=1,na
+      if (iag(i3,3+mbond).eq.i1) then
+      fc(i3,i2)=fc(i3,i2)-1.0
+      id(i3,i2)=id(i3,i2)+1.0
+      end if
+      end do
+      cmcent(i1,i2)=cmcent(i1,i2)-1.0
+      end if
+      if (cmcent(i1,i2).lt.-rang(i2)) then
+      open (58,file='fort.58',status='unknown',access='append')
+      write (58,*)'Iteration',mdstep,' Moved molecule number',i1
+      write (58,*)i2,axis(i2)
+      close (58)
+      do i3=1,na
+      if (iag(i3,3+mbond).eq.i1) then
+      fc(i3,i2)=fc(i3,i2)+1.0
+      id(i3,i2)=id(i3,i2)-1.0
+      end if
+      end do
+      cmcent(i1,i2)=cmcent(i1,i2)+1.0
+      end if
+      end do
+      end do
+***********************************************************************
+*                                                                     *
+*     Translate atoms on same bond to the same side of the unit cell  *
+*                                                                     *
+***********************************************************************
+      if (itrans.eq.3) then
+      do i1=1,nbon
+      j1=ib(i1,2)
+      j2=ib(i1,3)
+      if (bo(i1).gt.cutof3) then
+      do i2=1,3
+      dis=fc(j1,i2)-fc(j2,i2)
+      if (int(2.0*(abs(dis)-rangdis)).ne.0) then
+      tra2=1.0
+      if (int(2.0*dis).lt.0) tra2=-1.0
+      imol=iag(j1,3+mbond)
+      discen1=fc(j1,i2)-cmcent(imol,i2)
+      discen2=fc(j2,i2)-cmcent(imol,i2)
+      ihu1=int(2.0*discen1)
+      ihu2=int(2.0*discen2)
+ 
+      if (ihu1.ne.0.and.ihu2.eq.0) then
+      open (58,file='fort.58',status='unknown',access='append')
+      fc(j1,i2)=fc(j1,i2)-tra2
+      write (58,*)'Iteration',mdstep,' Moved atom number',j1
+      write (58,*)i2,j2,-tra2
+      close (58)
+      end if
+      if (ihu1.eq.0.and.ihu2.ne.0) then
+      open (58,file='fort.58',status='unknown',access='append')
+      fc(j2,i2)=fc(j2,i2)+tra2
+      write (58,*)'Iteration',mdstep,' Moved atom number',j2
+      write (58,*)i2,j2,tra2
+      close (58)
+      end if
+      if (ihu1.ne.0.and.ihu2.ne.0) then
+      open (58,file='fort.58',status='unknown',access='append')
+      fc(j2,i2)=fc(j2,i2)+tra2
+      write (58,*)'Iteration',mdstep,' Moved atom number',j2
+      write (58,*)i2,j2,tra2
+      close (58)
+      end if
+ 
+      end if
+      end do
+      end if
+      end do
+
+      end if
+      end if
+**********************************************************************
+*                                                                    *
+*     Conversion to cartesian coordinates                            *
+*                                                                    *
+**********************************************************************
+      do i1=1,na
+      c(i1,1)=fc(i1,1)*tm11
+      c(i1,2)=fc(i1,1)*tm21+fc(i1,2)*tm22
+      c(i1,3)=fc(i1,1)*tm31+fc(i1,2)*tm32+fc(i1,3)*tm33
+      cp(i1,1)=(fc(i1,1)+id(i1,1))*tm11
+      cp(i1,2)=(fc(i1,1)+id(i1,1))*tm21+(fc(i1,2)+id(i1,2))*tm22
+      cp(i1,3)=(fc(i1,1)+id(i1,1))*tm31+(fc(i1,2)+id(i1,2))*tm32+
+     $(fc(i1,3)+id(i1,3))*tm33
+      end do
+
+      RETURN
+
+      END
+***********************************************************************
+************************************************************************
+
+      subroutine inivel
+
+************************************************************************
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkconst.blk'
+      include 'cbkenergies.blk'
+      include 'control.blk'
+      include 'small.blk'
+************************************************************************
+*                                                                      *
+*     Initialize coordinates, velocities and accelerations             *
+*     of MD-system                                                     *
+*                                                                      *
+************************************************************************
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In inivel'
+      call timer(65)
+      close (65)
+      end if
+
+      ivels=0
+      call readtraj(ivels)
+   10 continue
+      if (ivels.eq.0.and.nrand.eq.1.and.na.gt.1) then
+************************************************************************
+*                                                                      *
+*     Random initial velocities                                        *
+*                                                                      *
+************************************************************************
+      sumx=0.0
+      sumy=0.0
+      sumz=0.0
+      do i1=1,na
+      xx=2.0*rand(0)-1.0
+      yy=2.0*rand(0)-1.0
+      zz=2.0*rand(0)-1.0
+      xyz=1/sqrt(xx*xx+yy*yy+zz*zz)
+      vel(1,i1)=xx/xyz
+      vel(2,i1)=yy/xyz
+      vel(3,i1)=zz/xyz
+      sumx=sumx+vel(1,i1)
+      sumy=sumy+vel(2,i1)
+      sumz=sumz+vel(3,i1)
+      end do
+      velsq=0.0
+      do i1=1,na
+      vel(1,i1)=vel(1,i1)-sumx/na
+      vel(2,i1)=vel(2,i1)-sumy/na
+      vel(3,i1)=vel(3,i1)-sumz/na
+      velsq=velsq+xmasat(i1)*(vel(1,i1)*vel(1,i1)+
+     $vel(2,i1)*vel(2,i1)+vel(3,i1)*vel(3,i1))
+      end do
+      velsq=0.0
+      do i1=1,na
+      ekinat=0.0
+      do i2=1,3
+      ekinat=ekinat+xmasat(i1)*vel(i2,i1)*vel(i2,i1)
+      end do
+      ekinat=0.50*ekinat/convmd
+      tempat=2.0*ekinat/(3.0*rgasc*xjouca/1.0d3)
+      factor=sqrt(tset/tempat)
+      vel(1,i1)=vel(1,i1)*factor
+      vel(2,i1)=vel(2,i1)*factor
+      vel(3,i1)=vel(3,i1)*factor
+      velsq=velsq+xmasat(i1)*(vel(1,i1)*vel(1,i1)+
+     $vel(2,i1)*vel(2,i1)+vel(3,i1)*vel(3,i1))
+      end do
+      ekin=half*velsq/convmd
+      tempmd=2.0*ekin/(float(3*namov)*rgasc*xjouca/1.0d3)
+      end if
+
+      return
+      end
+************************************************************************
+************************************************************************
+
+      subroutine invmat(NDIM1,NDIM2,RMAT,N1)
+
+************************************************************************
+*     Matrix inverse                                                   *
+*     N1=number of occupied elements                                   *
+*                                                                      *
+************************************************************************
+
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkc.blk'
+      include 'cbkconst.blk'
+      include 'cbkdistan.blk'
+      include 'control.blk'
+      include 'small.blk'
+
+      dimension rmat(ndim1,ndim2)
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In invmat'
+      call timer(65)
+      close (65)
+      end if
+      ONE=1.0D0
+      ZERO=0.0D0
+
+      DO 9 K=1,N1
+      DIAG=RMAT(K,K)
+      IF (DIAG.EQ.0.0) STOP' INVMAT'
+      RMAT(K,K)=ONE/DIAG
+*---RIJ---
+      DO 1 L=1,K-1
+    1 RMAT(K,L)=RMAT(K,L)/DIAG
+      DO 2 L=K+1,N1
+    2 RMAT(K,L)=RMAT(K,L)/DIAG
+*---INVERSIE STUK----
+      DO 3 M=1,K-1
+      DO 3 L=1,K-1
+    3 RMAT(M,L)=RMAT(M,L)-RMAT(M,K)*RMAT(K,L)
+      DO 4 M=K+1,N1
+      DO 4 L=1,K-1
+    4 RMAT(M,L)=RMAT(M,L)-RMAT(M,K)*RMAT(K,L)
+*---GEWONE KOLOM---
+      DO 5 M=1,K-1
+    5 RMAT(M,K)=-RMAT(M,K)/DIAG
+      DO 6 M=K+1,N1
+    6 RMAT(M,K)=-RMAT(M,K)/DIAG
+*---GEWONE STUK-----
+      DO 7 M=1,K-1
+      DO 7 L=K+1,N1
+    7 RMAT(M,L)=RMAT(M,L)+RMAT(M,K)*RMAT(K,L)*DIAG
+      DO 8 M=K+1,N1
+      DO 8 L=K+1,N1
+    8 RMAT(M,L)=RMAT(M,L)+RMAT(M,K)*RMAT(K,L)*DIAG
+*-----
+    9 CONTINUE
+
+      RETURN
+
+      END
+
+************************************************************************
+********************************************************************** 
+
+      subroutine centre
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkc.blk'
+      include 'cbkdistan.blk'
+      include 'control.blk'
+      include 'small.blk'
+      
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In centre'
+      call timer(65)
+      close (65)
+      end if
+********************************************************************** 
+*                                                                    *
+*     icentr=1: Place centre of mass at centre periodic box          *
+*     icentr=2: Place centre of mass at origin                       *
+*                                                                    *
+********************************************************************** 
+      if (icentr.gt.0) then
+      ccx=0.0
+      ccy=0.0
+      ccz=0.0
+      do i1=1,na
+      ccx=ccx+c(i1,1)*xmasat(i1)/xmasmd
+      ccy=ccy+c(i1,2)*xmasat(i1)/xmasmd
+      ccz=ccz+c(i1,3)*xmasat(i1)/xmasmd
+      end do
+      xt2=-ccx
+      yt2=-ccy
+      zt2=-ccz
+      if (icentr.eq.1) xt2=0.50*axis(1)-ccx
+      if (icentr.eq.1) yt2=0.50*axis(2)-ccy
+      if (icentr.eq.1) zt2=0.50*axis(3)-ccz
+      do i1=1,na
+      c(i1,1)=c(i1,1)+xt2
+      c(i1,2)=c(i1,2)+yt2
+      c(i1,3)=c(i1,3)+zt2
+      end do
+      end if
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine mdinit(tottime,sum1,sdev,sdeva,sum12,sumt,sump,
+     $sumtt,tmax,eaver,eav2,eav3,etot2,ediff)
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbklonpar.blk'
+      include 'control.blk'
+      include 'small.blk'
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In mdinit'
+      call timer(65)
+      close (65)
+      end if
+********************************************************************** 
+*                                                                    *
+*     Initialize MD simulation                                       *
+*                                                                    *
+********************************************************************** 
+      mdstep=0
+*     do i1=1,nbomax
+*     do i2=1,3
+*     do i3=1,2
+*     dbodc(i1,i2,i3)=0
+*     end do
+*     end do
+*     end do
+      do i1=1,na
+      vlp(i1)=0.0
+      do i2=1,3
+      vel(i2,i1)=0.0
+      accel(i2,i1)=0.0
+*     aold(i2,i1)=0.0
+      end do
+      end do
+
+      tempmd=tset
+      call inivel
+      if (nvel.eq.1) then
+      do i1=1,na
+      do i2=1,3
+      vel(i2,i1)=0.0
+      accel(i2,i1)=0.0
+*     aold(i2,i1)=0.0
+      end do
+      end do
+      end if
+
+      tottime=0.0
+      sum1=0.0
+      sdev=0.0
+      sdeva=0.0
+      sum12=0.0
+      sumt=0.0
+      sump=0.0
+      sumtt=0.0
+      tmax=0.0
+      eaver=0.0
+      eav2=0.0
+      eav3=0.0
+      etot2s=0.0
+      ediff=0.0
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine init
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkc.blk'
+      include 'cbkcha.blk'
+      include 'cbkconst.blk'
+      include 'cbkdcell.blk'
+      include 'cbkdistan.blk'
+      include 'cbkenergies.blk'
+      include 'cbkia.blk'
+      include 'cbkimove.blk'
+      include 'cbkinit.blk'
+      include 'cbktregime.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'opt.blk'
+      include 'small.blk'
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In init'
+      call timer(65)
+      close (65)
+      end if
+********************************************************************** 
+*                                                                    *
+*     Initialize variables                                           *
+*                                                                    *
+********************************************************************** 
+      convmd=4.184*1.0d26
+      pi=3.14159265
+      avognr=6.0221367d23
+      rdndgr=180.0/pi
+      dgrrdn=1.0/rdndgr
+      rgasc=8.314510
+      caljou=4.184
+      xjouca=1.0/caljou
+      ech=zero
+      zero=0.0
+      one=1.0
+      two=2.0
+      three=3.0
+      half=one/two
+      nzero=0
+      none=1
+      ntwo=2
+      nthree=3
+      invt=0
+      ndata2=0
+      iheatf=0
+      nradcount=0
+      itemp=1
+      xinh=zero
+      ifieldx=0
+      ifieldy=0
+      ifieldz=0
+      mdstep=0
+      kx=0
+      ky=0
+      kz=0
+      nit=0
+      nbon=0
+      angle(1)=90.0
+      angle(2)=90.0
+      angle(3)=90.0
+      axiss(1)=zero
+      axiss(2)=zero
+      axiss(3)=zero
+      do i1=1,nat
+      id(i1,1)=0
+      id(i1,2)=0
+      id(i1,3)=0
+      end do
+      icgeo=0
+      sumhe=zero
+      ustime=zero
+      systime=zero
+      vpmax=zero
+      vpmin=zero
+      read (35,*)dseed
+      iagain=0
+      do i1=1,nat
+      do i2=1,mbond+3
+      ia(i1,i2)=0
+      iag(i1,i2)=0
+      end do
+      end do
+
+      ioldchg=0
+      na=0
+      nrestra=0
+      nrestrav=0
+      nrestrat=0
+      nrestram=0
+      tset=tsetor
+      tm11=axis(1)
+      tm21=zero
+      tm31=zero
+      tm22=axis(2)
+      tm32=zero
+      tm33=axis(3)
+      qruid='NORMAL RUN'
+      do i1=1,nat
+      imove(i1)=1
+      end do
+
+********************************************************************** 
+*                                                                    *
+*     Write file headers                                             *
+*                                                                    *
+********************************************************************** 
+      open (71,file='fort.71',status='unknown',access='append')
+      write (71,10)
+      close (71)
+      open (73,file='fort.73',status='unknown',access='append')
+      write (73,20)
+      close (73)
+      if (ntrc.gt.0) then
+      open (75,file='fort.75',status='unknown',access='append')
+      write (75,30)
+      close (75)
+      end if
+      if (nmethod.eq.4) then
+      open (59,file='fort.59',status='unknown',access='append')
+      write (59,40)
+      close (59)
+      end if
+
+      return
+********************************************************************** 
+*                                                                    *
+*     Format part                                                    *
+*                                                                    *
+********************************************************************** 
+   10 format ('   Iter. Nmol    Epot         Ekin      Etot ',
+     $'       T(K)  Eaver(block) Eaver(total) Taver      Tmax   ',
+     $' Pres(MPa)   sdev(Epot)  sdev(Eaver)    Tset      Timestep',
+     $'    RMSG     Totaltime')
+   20 format ('  Iter.      Ebond       Eatom       Elp        Emol',
+     $'       Eval       Ecoa       Ehbo       Etors      Econj',
+     $'      Evdw      Ecoul    Echarge  Efield')
+   30 format ('   Iter.  Tsys    Tzone1  Tset1   Tzone2  Tset2')
+   40 format ('    Iter.     a             b          c        px',
+     $'(MPa)    py(MPa)      pz(MPa)     pset(MPa)  Volume ')
+      end
+********************************************************************** 
+**********************************************************************
+
+      double precision function gauss(sigma,v0,dseed)
+
+**********************************************************************
+      implicit double precision (a-h,o-z),integer (i-n)
+    1 vr1=2.0*random(dseed)-1.0
+      vr2=2.0*random(dseed)-1.0
+      r=vr1*vr1+vr2*vr2
+      if (r.ge.1.0) goto 1
+      fac=vr1*sqrt(-2.0*log(r)/r)
+      gauss=v0+sigma*fac
+      return
+      end
+**********************************************************************   
+**********************************************************************
+
+      double precision function random(dseed)
+
+**********************************************************************
+      implicit double precision (a-h,o-z),integer (i-n)
+      data d2p31m/2147483647.d0/
+      data d2p31/2147483711.d0/
+          dseed=dmod(16807.d0*dseed,d2p31m)
+          random=dseed/d2p31
+      return
+      END
+**********************************************************************   
+************************************************************************
+ 
+      subroutine timer(nunit)
+ 
+************************************************************************
+      include 'cbka.blk'
+      include 'cbkinit.blk'
+      real timear
+      real tarray(2)
+      call dtime (tarray,timear)
+      ustime=ustime+tarray(1)
+      systime=systime+tarray(2)
+      write (nunit,100)ustime,systime,ustime+systime
+      return
+  100 format ('User time:',f20.4,' System time:',f20.4,
+     $' Total time:',f20.4)
+      end
+************************************************************************
+************************************************************************
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@a16 21
+      program reac   
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkconst.blk'
+      include 'cbkd.blk'
+      include 'cbkenergies.blk'
+      include 'cbkeregime.blk'
+      include 'cbkimove.blk'
+      include 'cbkrestr.blk'
+      include 'cbksrtbon1.blk'
+      include 'cbktregime.blk'
+      include 'control.blk'
+      include 'opt.blk'
+      include 'small.blk'
+
+      write (*,*) 'TEST'
+      
+      call runit ()
+
+      end 
+********************************************************************** 
+@
+
+
+3.2.2.2
+log
+@Added modifications required for port to Cplant
+@
+text
+@d17 21
+@
+
+
+3.2.2.3
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@d882 1
+a882 1
+      call charges
+@
+
+
+3.2.2.4
+log
+@Finished optimized implementation of ReaxFF.
+Eliminates O(N^2) scaling of srttor and srtang.
+Also blanks out the ghost bonds that are not in dihedral
+with local atom.
+@
+text
+@d880 5
+@
+
+
+3.2.2.5
+log
+@Added and removed some nodefile diagnostics.
+@
+text
+@d1641 16
+a1656 16
+c      open (71,file='fort.71',status='unknown',access='append')
+c      write (71,10)
+c      close (71)
+c      open (73,file='fort.73',status='unknown',access='append')
+c      write (73,20)
+c      close (73)
+c      if (ntrc.gt.0) then
+c      open (75,file='fort.75',status='unknown',access='append')
+c      write (75,30)
+c      close (75)
+c      end if
+c      if (nmethod.eq.4) then
+c      open (59,file='fort.59',status='unknown',access='append')
+c      write (59,40)
+c      close (59)
+c      end if
+@
+
+
+3.2.2.6
+log
+@Cleaned up charge eequilibration, removed some FORTRAN allocations
+@
+text
+@d19 581
+d672 99
+d921 605
+d1676 28
+@
+
+
+3.2.2.7
+log
+@Added various things to make Grasp/REAXFF run on Blue Gene
+@
+text
+@d37 1
+a37 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d111 1
+a111 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d264 1
+a264 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d356 1
+a356 1
+Cc      open (71,file='fort.71',status='unknown',access='append')
+d359 1
+a359 1
+Cc      open (73,file='fort.73',status='unknown',access='append')
+d363 1
+a363 1
+Cc      open (75,file='fort.75',status='unknown',access='append')
+d368 1
+a368 1
+Cc      open (59,file='fort.59',status='unknown',access='append')
+d400 1
+a400 3
+      call dtime(tarray,timear)
+C      call dtime_(tarray,timear)
+
+@
+
+
+3.2.2.8
+log
+@Greatly reduced memory usage.
+@
+text
+@d101 1
+d140 40
+a179 40
+c$$$      if (icpres.eq.1) then
+c$$$**********************************************************************
+c$$$*                                                                    *
+c$$$*     Calculate minimum images for NPT                               *
+c$$$*                                                                    *
+c$$$**********************************************************************
+c$$$      do 30 i1=1,na-1
+c$$$      do 30 i2=i1+1,na
+c$$$      dx1=c(i1,1)-c(i2,1)
+c$$$      dy1=c(i1,2)-c(i2,2)
+c$$$      dz1=c(i1,3)-c(i2,3)
+c$$$      dismin=1e+10
+c$$$      do 35 k1=-1,1
+c$$$      do 35 k2=-1,1
+c$$$      do 35 k3=-1,1
+c$$$      a1=dx1+k1*tm11
+c$$$      a2=dy1+k1*tm21+k2*tm22
+c$$$      a3=dz1+k1*tm31+k2*tm32+k3*tm33
+c$$$      rr=sqrt(a1*a1+a2*a2+a3*a3)
+c$$$      if (rr.lt.dismin) then
+c$$$      dismin=rr
+c$$$      ixsav=k1
+c$$$      iysav=k2
+c$$$      izsav=k3
+c$$$      end if
+c$$$   35 continue
+c$$$      nmpx(i1,i2)=ixsav
+c$$$      nmpx(i2,i1)=-ixsav
+c$$$      nmpy(i1,i2)=iysav
+c$$$      nmpy(i2,i1)=-iysav
+c$$$      nmpz(i1,i2)=izsav
+c$$$      nmpz(i2,i1)=-izsav
+c$$$   30 continue
+c$$$      end if
+c$$$ 
+c$$$      do i1=1,na
+c$$$      nmpx(i1,i1)=0
+c$$$      nmpy(i1,i1)=0
+c$$$      nmpz(i1,i1)=0
+c$$$      end do
+d347 3
+a349 3
+c$$$      do i1=1,nat
+c$$$      imove(i1)=1
+c$$$      end do
+@
+
+
+3.2.2.9
+log
+@Removed version() from distribution
+@
+text
+@d399 2
+a400 2
+C      call dtime(tarray,timear)
+      call dtime_(tarray,timear)
+@
+
+
+3.2.2.10
+log
+@Added some error checking and some memory efficiency.
+@
+text
+@d399 1
+a399 1
+#ifdef _IBM
+a400 3
+#else
+      call dtime(tarray,timear)
+#endif
+@
+
+
+3.2.2.11
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@d22 9
+a30 9
+#include "cbka.blk"
+#include "cbkconst.blk"
+#include "cbkdcell.blk"
+#include "cbkenergies.blk"
+#include "cbkinit.blk"
+#include "cbkpres.blk"
+#include "cellcoord.blk"
+#include "control.blk"
+#include "small.blk"
+d94 10
+a103 10
+#include "cbka.blk"
+#include "cbkc.blk"
+#include "cbkcha.blk"
+#include "cbkconst.blk"
+#include "cbkd.blk"
+#include "cbkdcell.blk"
+#include "cbkenergies.blk"
+#include "cellcoord.blk"
+#include "control.blk"
+#include "small.blk"
+d245 16
+a260 16
+#include "cbka.blk"
+#include "cbkatomcoord.blk"
+#include "cbkc.blk"
+#include "cbkcha.blk"
+#include "cbkconst.blk"
+#include "cbkdcell.blk"
+#include "cbkdistan.blk"
+#include "cbkenergies.blk"
+#include "cbkia.blk"
+#include "cbkimove.blk"
+#include "cbkinit.blk"
+#include "cbktregime.blk"
+#include "cellcoord.blk"
+#include "control.blk"
+#include "opt.blk"
+#include "small.blk"
+d395 2
+a396 2
+#include "cbka.blk"
+#include "cbkinit.blk"
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

@@ -1,0 +1,351 @@
+head	4.3;
+access;
+symbols
+	PPPM_Crozier2:4.0.0.10
+	PPPM_Crozier:4.0
+	Root-of-PPPM_Crozier:4.0
+	Monaco:4.0.0.8
+	PreMonaco:4.0
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.1
+	P_MonacoTesting:3.1.0.6
+	InitialGraspTesting:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	cjkimme_version_merge_from_trunk_1:1.5.2.1
+	cjkimme_version:1.5.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.3
+date	2007.09.05.22.51.09;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2007.06.02.03.27.21;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.03.24.21.11.35;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2004.05.20.22.11.34;	author athomps;	state Exp;
+branches
+	1.5.2.1;
+next	1.4;
+
+1.4
+date	2004.04.28.21.59.53;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2004.01.28.20.36.51;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.01.15.20.13.23;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.11.03.23.33.51;	author athomps;	state Exp;
+branches;
+next	;
+
+1.5.2.1
+date	2004.09.13.23.05.46;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.3
+log
+@Reran most test problems using Apple laptop with 2.33 GHz Intel core 2 Duo
+@
+text
+@# Timestep 0
+# 
+# Unit cell lattice vectors:
+# 2.000000000 0.000000000 0.000000000
+# 0.000000000 2.000000000 0.000000000
+# 0.000000000 0.000000000 2.000000000
+# 
+# Unit cell origin:
+# -1.000000000 -1.000000000 -1.000000000
+# 
+# Number of particles 4
+# 
+# Particle positions 
+         3          A         13         0.3000000000         -1.000000000         0.000000000         -1.000000000
+         4          A         14         0.4000000000         0.000000000         -1.000000000         -1.000000000
+         1          A         11         0.1000000000         0.1000000000         0.000000000         0.000000000
+         2          A         12         0.2000000000         -1.000000000         -1.000000000         0.000000000
+# 
+# Timestep 10
+# 
+# Particle positions 
+         3          A         13         0.3000000000         0.9995644034         1.887379142e-19         -1.000000000
+         4          A         14         0.4000000000         0.0001909499148         -1.000000000         -1.000000000
+         1          A         11         0.1000000000         0.1006802432         -2.827599266e-20         6.206840597e-20
+         2          A         12         0.2000000000         0.9995644034         -1.000000000         -7.771561172e-20
+# 
+@
+
+
+4.2
+log
+@Added commands to control midpoint rule, iprune, ihb and hbcut
+@
+text
+@d22 1
+a22 1
+         3          A         13         0.3000000000         0.9995644034         2.864375404e-19         -1.000000000
+d24 2
+a25 2
+         1          A         11         0.1000000000         0.1006802432         -6.602357550e-20         9.537509671e-20
+         2          A         12         0.2000000000         0.9995644034         -1.000000000         -9.547918012e-20
+@
+
+
+4.1
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d14 4
+a17 4
+       1        A      11        0.1000000000        0.1000000000         0.000000000         0.000000000
+       2        A      12        0.2000000000        -1.000000000        -1.000000000         0.000000000
+       3        A      13        0.3000000000        -1.000000000         0.000000000        -1.000000000
+       4        A      14        0.4000000000         0.000000000        -1.000000000        -1.000000000
+d22 4
+a25 4
+       1        A      11        0.1000000000        0.1006802432    -7.181755191e-21     1.321859289e-20
+       2        A      12        0.2000000000        0.9995644034        -1.000000000    -1.221245327e-19
+       3        A      13        0.3000000000        0.9995644034     2.642330799e-19        -1.000000000
+       4        A      14        0.4000000000     0.0001909499148        -1.000000000        -1.000000000
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d14 2
+a17 2
+       1        A      11        0.1000000000        0.1000000000         0.000000000         0.000000000
+       2        A      12        0.2000000000        -1.000000000        -1.000000000         0.000000000
+d22 3
+a24 1
+       3        A      13        0.3000000000        0.9995644034     2.864375404e-19        -1.000000000
+a25 2
+       1        A      11        0.1000000000        0.1006802432    -6.602357550e-20     9.537509671e-20
+       2        A      12        0.2000000000        0.9995644034        -1.000000000    -9.547918012e-20
+@
+
+
+3.2
+log
+@Added a bunch of test case for mixing force fields
+@
+text
+@d9 1
+a9 1
+# -1.0000000000 -1.0000000000 -1.0000000000
+d14 2
+a17 2
+       3        A      13        0.3000000000        -1.000000000         0.000000000        -1.000000000
+       4        A      14        0.4000000000         0.000000000        -1.000000000        -1.000000000
+d22 1
+a22 3
+       1        A      11        0.1000000000        0.1006802432    -5.821731985e-20    -1.200428645e-20
+       2        A      12        0.2000000000        0.9995644034        -1.000000000     4.662936703e-20
+       3        A      13        0.3000000000        0.9995644034     3.042011087e-19        -1.000000000
+d24 2
+@
+
+
+3.1
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d9 1
+a9 1
+# -1.000000000 -1.000000000 -1.000000000
+d14 2
+a17 2
+       1        A      11        0.1000000000        0.1000000000         0.000000000         0.000000000
+       2        A      12        0.2000000000        -1.000000000        -1.000000000         0.000000000
+d22 4
+a25 4
+       3        A      13        0.3000000000        0.9995601411     7.993605777e-19        -1.000000000
+       4        A      14        0.4000000000     0.0001905246960        -1.000000000        -1.000000000
+       1        A      11        0.1000000000        0.1006891930     8.167078125e-20     1.969951979e-19
+       2        A      12        0.2000000000        0.9995601411        -1.000000000    -2.788880238e-18
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d9 1
+a9 1
+# -1.0000000000 -1.0000000000 -1.0000000000
+d22 1
+a22 1
+       3        A      13        0.3000000000        0.9995601411     7.793765633e-19        -1.000000000
+d24 2
+a25 2
+       1        A      11        0.1000000000        0.1006891930     6.890321647e-20     2.350897255e-19
+       2        A      12        0.2000000000        0.9995601411        -1.000000000    -2.682298827e-18
+@
+
+
+1.5
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@@
+
+
+1.5.2.1
+log
+@Adding Documentation and Testing directories to branch cjkimme_version
+@
+text
+@@
+
+
+1.4
+log
+@See previous checkin of source for info.
+@
+text
+@d1 2
+d4 3
+a6 3
+# 2 0 0
+# 0 2 0
+# 0 0 2
+d9 1
+a9 3
+# -1 -1 -1
+# 
+# Timestep 0
+a19 2
+# 
+# Number of particles 4
+@
+
+
+1.3
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d24 1
+a24 1
+       3        A      13        0.3000000000        0.9995601411     9.534040224e-20        -1.000000000
+d26 2
+a27 2
+       1        A      11        0.1000000000        0.1006891930     4.538036613e-20    -3.114175584e-19
+       2        A      12        0.2000000000        0.9995601411        -1.000000000     6.691869281e-19
+@
+
+
+1.2
+log
+@Finally got rid of all the sticky tags. I will never use the
+again! Also added README file to directory Testing.
+And I modified cut offs in testa, testb and testc so that
+they all do the same simulation.
+
+Finally, I put in a check that cut-off be less than
+half box-width for force fields not using neighbor list.
+
+(Still need to add this to threebody and external force fields)
+@
+text
+@d26 2
+a27 2
+       1        A      11        0.1000000000        0.1006891930     4.538036613e-20    -2.625677453e-19
+       2        A      12        0.2000000000        0.9995601411        -1.000000000     6.736278202e-19
+@
+
+
+1.1
+log
+@Pushed the examples down into directories.
+@
+text
+@d24 4
+a27 4
+       3        A      13        0.3000000000        0.9995601365     1.277450368e-19        -1.000000000
+       4        A      14        0.4000000000     0.0001904803819        -1.000000000        -1.000000000
+       1        A      11        0.1000000000        0.1006892466     6.097899963e-19     2.342570582e-18
+       2        A      12        0.2000000000        0.9995601365        -1.000000000     2.471356453e-18
+@
+

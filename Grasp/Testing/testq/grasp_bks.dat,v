@@ -1,0 +1,808 @@
+head	4.6;
+access;
+symbols
+	PPPM_Crozier2:4.2.0.2
+	PPPM_Crozier:4.2
+	Root-of-PPPM_Crozier:4.2
+	Monaco:4.1.0.2
+	PreMonaco:4.1
+	Recovery-2004-04-12:4.0
+	BRANCH:4.0.0.6
+	PMONACO:4.0.0.4
+	ROOT:4.0
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:1.3
+	REAX-2:1.1
+	P_MonacoTesting:1.1.0.6
+	InitialGraspTesting:1.1
+	P_Monaco:1.1.0.4
+	InitialGrasp:1.1
+	REAXFF:1.1.0.2;
+locks; strict;
+comment	@# @;
+
+
+4.6
+date	2006.12.12.18.03.39;	author athomps;	state Exp;
+branches;
+next	4.5;
+
+4.5
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.08.28.23.31.37;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.09.30.18.46.13;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.06.08.20.08.48;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.05.02.22.44.55;	author athomps;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.31;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2005.03.24.21.11.35;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.02.18.16.46.40;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.12.16.21.47.50;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.6
+log
+@More aftershocks from the ReaxFF upgrade
+@
+text
+@/Users/athomps/netapp/codes/Grasp/Testing/testq/grasp.out
+Clock tick = 0.0000010000 Seconds
+path_str is /Users/athomps/netapp/codes/Grasp/Testing/testq/
+PATH_MAX is 1024
+
+
+
+Entering Input::ReadInput()
+Opened /Users/athomps/netapp/codes/Grasp/Testing/testq/inp.dat for input
+units metal
+forcefield twobody twobody.in Exponential-Six
+forcefield ewald 1.0e-5 10.0
+box dimensions	19.7437613323	0.0000000000	0.0000000000 \
+			0.0000000000	17.0985988787	0.0000000000 \
+			0.0000000000	0.0000000000	21.7564043344
+box origin	0.0000000000	0.0000000000	0.0000000000
+neighbor none
+thermo 1
+dump particles 1
+dump velocities 1
+dump forces 1
+dump cfg 1
+nsteps 1
+conjugate gradient 100 100 5.0e-2 2.0e-2
+minimized particles type 2 Si O
+
+
+
+Entering Box::Setup()
+
+
+
+Entering ParticleTypeList::Setup()
+ntypes = 2
+Si 28.0860000000
+O 15.9990000000
+
+
+
+Reading Exponential-Six from file twobody.in
+Ewald arg_string is  1.0e-5 10.0
+Ewald precision is 0.0000100000
+Ewald cutoff is 10.0000000000
+  G vector = 0.3076938820
+
+
+
+Setting up force field class 0 called Exponential-Six
+
+id1 	 id2 	 type 	rcutsq 	 np	 p1      p2    ....   p_np  
+Si	Si	17	1.000e+08	8        0.000        0.000       -0.000        0.000        0.000        0.000        14.40       0.3077
+O	O	17	1.000e+08	8        3833.        1050.       -2.760        1389.        175.0        0.000        14.40       0.3077
+Si	O	17	1.000e+08	8    8.774e+04        801.2       -4.873    1.800e+04        133.5        0.000        14.40       0.3077
+
+
+
+Setting up force field class 4 called Long-Range
+
+
+
+Entering ParticleList::ReadConfig()
+Will not read an initial velocity file 
+Will not read an initial displacement file 
+Total particles read = 575
+Will minimize particles of type Si 0
+Will minimize particles of type O 1
+
+
+
+Entering Output::Setup()
+Actual 1d max vectors = 568 7 1687
+
+
+
+Entering FixList::Setup()
+****************************************************
+Error: Conjugate_Gradient::Setup
+The CG method is currently unavailable.
+****************************************************
+@
+
+
+4.5
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/Grasp_Reverse/Testing/testq/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/Grasp_Reverse/Testing/testq/
+d9 1
+a9 1
+Opened /Users/athomps/netapp/codes/Grasp_Reverse/Testing/testq/inp.dat for input
+@
+
+
+4.4
+log
+@Disabled conjugate gradient feature, until fixed
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/Grasp/Testing/testq/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/Grasp/Testing/testq/
+d9 1
+a9 1
+Opened /Users/athomps/netapp/codes/Grasp/Testing/testq/inp.dat for input
+@
+
+
+4.3
+log
+@Modified definition for NPT conserved energy and time constant
+@
+text
+@d9 1
+d76 4
+a79 259
+
+
+
+Entering Conjugate_Gradient::Setup()
+conjugate gradient 100 100 0.05000 0.02000
+
+
+--------------- Step         0 ---- CPU =      0.000 (sec) ---------------
+Exponential-Six:
+   Dispersion       =      -180.7405511600
+   Coulombic        =     -6869.0563557004
+Long-Range          =     -4142.0613610630
+Potential Energy    =    -11191.8582679234
+Kinetic Energy      =         0.0000000000
+Extended Energy     =         0.0000000000
+Total Energy        =    -11191.8582679234
+Pressure            =      -200.5702842163
+Temperature         =         0.0000000000
+Total Particles     =                  575
+Volume              =      7344.7587978954
+Minimizing 1725 degrees of freedom
+ Energy = -11191.8582679234 Res = 0.0429436589
+ Energy = -11191.8582679234 Res = 0.0429436589
+ Energy = -11191.8555678434 Res = 0.5738566050
+ Energy = -11191.8367779863 Res = 2.5491053680
+ Energy = -11191.8582679234 Res = 0.0429436589
+Directional derivative is -0.0429436589 f.max is 0.1224466424 
+ Energy = -11191.8584726555 Res = 0.0981465802
+Directional derivative is 0.0329428964 f.max is 0.1224466424 
+ Energy = -11191.8587644272 Res = 0.0234359943
+Directional derivative is 0.0000203128 f.max is 0.1224466424 
+ Energy = -11191.8587632090 Res = 0.0212807993
+Directional derivative is -0.0021187150 f.max is 0.1224466424 
+ Energy = -11191.8587644272 Res = 0.0234359943
+ Energy = -11191.8587644272 Res = 0.0234359943
+ Energy = -11191.8525824705 Res = 0.9547663163
+ Energy = -11191.8259485132 Res = 3.3994730735
+ Energy = -11191.8587644272 Res = 0.0234359943
+Directional derivative is -0.0234248992 f.max is 0.0589410896 
+ Energy = -11191.8582096132 Res = 0.1966498706
+Directional derivative is 0.0364157709 f.max is 0.0589410896 
+ Energy = -11191.8591512614 Res = 0.0219752225
+Directional derivative is 0.0000900467 f.max is 0.0589410896 
+ Energy = -11191.8591504288 Res = 0.0199276962
+Directional derivative is -0.0010789155 f.max is 0.0589410896 
+ Energy = -11191.8591512614 Res = 0.0219752225
+ Energy = -11191.8591512614 Res = 0.0219752225
+ Energy = -11191.8536817605 Res = 0.8313951012
+ Energy = -11191.8301927377 Res = 3.0444699983
+ Energy = -11191.8591512614 Res = 0.0219752225
+Directional derivative is -0.0218908210 f.max is 0.0626672964 
+ Energy = -11191.8586460369 Res = 0.1703279210
+Directional derivative is 0.0342957456 f.max is 0.0626672964 
+ Energy = -11191.8594856607 Res = 0.0183614531
+Directional derivative is 0.0001625698 f.max is 0.0626672964 
+ Energy = -11191.8594850583 Res = 0.0166759973
+Directional derivative is -0.0009227252 f.max is 0.0626672964 
+ Energy = -11191.8594856607 Res = 0.0183614531
+ Energy = -11191.8594856607 Res = 0.0183614531
+ Energy = -11191.8537690948 Res = 0.9408417833
+ Energy = -11191.8301346696 Res = 3.2478591355
+ Energy = -11191.8594856607 Res = 0.0183614531
+Directional derivative is -0.0182266117 f.max is 0.0536527812 
+ Energy = -11191.8589036585 Res = 0.2018792256
+Directional derivative is 0.0307068243 f.max is 0.0536527812 
+ Energy = -11191.8598028715 Res = 0.0212039890
+Directional derivative is 0.0000222843 f.max is 0.0536527812 
+ Energy = -11191.8598020024 Res = 0.0190168460
+Directional derivative is -0.0009533007 f.max is 0.0536527812 
+ Energy = -11191.8598028715 Res = 0.0212039890
+ Energy = -11191.8598028715 Res = 0.0212039890
+ Energy = -11191.8569394782 Res = 0.4199180104
+ Energy = -11191.8401229298 Res = 1.7740595141
+ Energy = -11191.8598028715 Res = 0.0212039890
+Directional derivative is -0.0211785348 f.max is 0.0735641858 
+ Energy = -11191.8598049748 Res = 0.0788946480
+Directional derivative is 0.0210689168 f.max is 0.0735641858 
+ Energy = -11191.8601622506 Res = 0.0145767534
+Directional derivative is 0.0000101142 f.max is 0.0735641858 
+ Energy = -11191.8601613614 Res = 0.0132097464
+Directional derivative is -0.0010460139 f.max is 0.0735641858 
+ Energy = -11191.8601622506 Res = 0.0145767534
+ Energy = -11191.8601622506 Res = 0.0145767534
+ Energy = -11191.8542018459 Res = 0.9264959188
+ Energy = -11191.8337532296 Res = 3.2087051408
+ Energy = -11191.8601622506 Res = 0.0145767534
+Directional derivative is -0.0145697367 f.max is 0.0568165791 
+ Energy = -11191.8593102834 Res = 0.1949681450
+Directional derivative is 0.0338762524 f.max is 0.0568165791 
+ Energy = -11191.8603553587 Res = 0.0105274817
+Directional derivative is -0.0000226171 f.max is 0.0568165791 
+ Energy = -11191.8603549107 Res = 0.0116317885
+Directional derivative is 0.0007033218 f.max is 0.0568165791 
+ Energy = -11191.8603553587 Res = 0.0105274817
+ Energy = -11191.8603553587 Res = 0.0105274817
+ Energy = -11191.8545424264 Res = 0.8688047250
+ Energy = -11191.8350844608 Res = 2.8717898722
+ Energy = -11191.8603553587 Res = 0.0105274817
+Directional derivative is -0.0105436568 f.max is 0.0443127652 
+ Energy = -11191.8594956293 Res = 0.1889464430
+Directional derivative is 0.0257618597 f.max is 0.0443127652 
+ Energy = -11191.8605275640 Res = 0.0107132373
+Directional derivative is 0.0000140421 f.max is 0.0443127652 
+ Energy = -11191.8605271543 Res = 0.0097051642
+Directional derivative is -0.0005116684 f.max is 0.0443127652 
+ Energy = -11191.8605275640 Res = 0.0107132373
+ Energy = -11191.8605275640 Res = 0.0107132373
+ Energy = -11191.8571629331 Res = 0.5188612388
+ Energy = -11191.8424793733 Res = 1.7880625581
+ Energy = -11191.8605275640 Res = 0.0107132373
+Directional derivative is -0.0106989161 f.max is 0.0487136706 
+ Energy = -11191.8602310936 Res = 0.1120188734
+Directional derivative is 0.0164126608 f.max is 0.0487136706 
+ Energy = -11191.8607425821 Res = 0.0139650418
+Directional derivative is 0.0000357042 f.max is 0.0487136706 
+ Energy = -11191.8607421137 Res = 0.0126690692
+Directional derivative is -0.0004959501 f.max is 0.0487136706 
+ Energy = -11191.8607425821 Res = 0.0139650418
+ Energy = -11191.8607425821 Res = 0.0139650418
+ Energy = -11191.8585185607 Res = 0.4152985282
+ Energy = -11191.8470137560 Res = 1.5544914930
+ Energy = -11191.8607425821 Res = 0.0139650418
+Directional derivative is -0.0139188599 f.max is 0.0739158154 
+ Energy = -11191.8606533310 Res = 0.0849290604
+Directional derivative is 0.0164638298 f.max is 0.0739158154 
+ Energy = -11191.8609567492 Res = 0.0141409319
+Directional derivative is 0.0001071857 f.max is 0.0739158154 
+ Energy = -11191.8609563811 Res = 0.0128293287
+Directional derivative is -0.0005805480 f.max is 0.0739158154 
+ Energy = -11191.8609567492 Res = 0.0141409319
+ Energy = -11191.8609567492 Res = 0.0141409319
+ Energy = -11191.8576225282 Res = 0.5074991555
+ Energy = -11191.8436297254 Res = 1.9299905013
+ Energy = -11191.8609567492 Res = 0.0141409319
+Directional derivative is -0.0140328431 f.max is 0.0688425939 
+ Energy = -11191.8606325820 Res = 0.1014933229
+Directional derivative is 0.0228868118 f.max is 0.0688425939 
+ Energy = -11191.8611493449 Res = 0.0096728063
+Directional derivative is 0.0000686517 f.max is 0.0688425939 
+ Energy = -11191.8611489608 Res = 0.0087910072
+Directional derivative is -0.0006263056 f.max is 0.0688425939 
+ Energy = -11191.8611493449 Res = 0.0096728063
+ Energy = -11191.8611493449 Res = 0.0096728063
+ Energy = -11191.8550550298 Res = 0.9502156703
+ Energy = -11191.8359879358 Res = 3.0449786343
+ Energy = -11191.8611493449 Res = 0.0096728063
+Directional derivative is -0.0096261759 f.max is 0.0432356809 
+ Energy = -11191.8601814185 Res = 0.2097987493
+Directional derivative is 0.0262489681 f.max is 0.0432356809 
+ Energy = -11191.8612987631 Res = 0.0102784563
+Directional derivative is 0.0000724408 f.max is 0.0432356809 
+ Energy = -11191.8612984495 Res = 0.0092727471
+Directional derivative is -0.0004539774 f.max is 0.0432356809 
+ Energy = -11191.8612987631 Res = 0.0102784563
+ Energy = -11191.8612987631 Res = 0.0102784563
+ Energy = -11191.8569977777 Res = 0.5774903271
+ Energy = -11191.8418016617 Res = 2.0369368620
+ Energy = -11191.8612987631 Res = 0.0102784563
+Directional derivative is -0.0102010898 f.max is 0.0515676923 
+ Energy = -11191.8607112178 Res = 0.1222690013
+Directional derivative is 0.0221280154 f.max is 0.0515676923 
+ Energy = -11191.8614509683 Res = 0.0080979463
+Directional derivative is 0.0001561655 f.max is 0.0515676923 
+ Energy = -11191.8614508269 Res = 0.0073795042
+Directional derivative is -0.0003498022 f.max is 0.0515676923 
+ Energy = -11191.8614509683 Res = 0.0080979463
+ Energy = -11191.8614509683 Res = 0.0080979463
+ Energy = -11191.8547040376 Res = 0.8345157015
+ Energy = -11191.8355160678 Res = 2.7128709322
+ Energy = -11191.8614509683 Res = 0.0080979463
+Directional derivative is -0.0079753677 f.max is 0.0393324620 
+ Energy = -11191.8602639032 Res = 0.1849957996
+Directional derivative is 0.0266404589 f.max is 0.0393324620 
+ Energy = -11191.8615641710 Res = 0.0062783439
+Directional derivative is 0.0001640787 f.max is 0.0393324620 
+ Energy = -11191.8615641310 Res = 0.0057484238
+Directional derivative is -0.0002271659 f.max is 0.0393324620 
+ Energy = -11191.8615641710 Res = 0.0062783439
+ Energy = -11191.8615641710 Res = 0.0062783439
+ Energy = -11191.8497699603 Res = 1.5615714774
+ Energy = -11191.8223539820 Res = 4.6942570235
+ Energy = -11191.8615641710 Res = 0.0062783439
+Directional derivative is -0.0061526205 f.max is 0.0294383206 
+ Energy = -11191.8591095969 Res = 0.3601205727
+Directional derivative is 0.0347329747 f.max is 0.0294383206 
+ Energy = -11191.8616393738 Res = 0.0046087049
+Directional derivative is 0.0001966022 f.max is 0.0294383206 
+ Energy = -11191.8616394357 Res = 0.0042094466
+Directional derivative is -0.0001062347 f.max is 0.0294383206 
+ Energy = -11191.8616391361 Res = 0.0038744121
+Directional derivative is -0.0003938315 f.max is 0.0294383206 
+ Energy = -11191.8616394357 Res = 0.0042094466
+ Energy = -11191.8616394357 Res = 0.0042094466
+ Energy = -11191.8444352758 Res = 2.1695187715
+ Energy = -11191.8075649475 Res = 6.2765666874
+ Energy = -11191.8616394357 Res = 0.0042094466
+Directional derivative is -0.0042750522 f.max is 0.0190896021 
+ Energy = -11191.8578710021 Res = 0.5128890287
+Directional derivative is 0.0328420087 f.max is 0.0190896021 
+ Energy = -11191.8617021306 Res = 0.0036864273
+Directional derivative is 0.0000777636 f.max is 0.0190896021 
+ Energy = -11191.8617020900 Res = 0.0033501187
+Directional derivative is -0.0001338899 f.max is 0.0190896021 
+
+ cg solver done f.max and min = 0.0190896021 -0.0143742505
+First time took 15
+ Energy = -11191.8617021306 Res = 0.0036864273
+ Energy = -11191.8424168023 Res = 2.1891911843
+ Energy = -11191.8109671533 Res = 6.2324766626
+ Energy = -11191.8617021306 Res = 0.0036864273
+Directional derivative is -0.0000777636 f.max is 0.0143742505 
+ Energy = -11191.8568753362 Res = 0.5204857302
+Directional derivative is 0.0368196860 f.max is 0.0143742505 
+ Energy = -11191.8617021529 Res = 0.0035589277
+Directional derivative is -0.0000003054 f.max is 0.0143742505 
+ Energy = -11191.8617021526 Res = 0.0035526867
+Directional derivative is 0.0000035676 f.max is 0.0143742505 
+
+ cg solver done f.max and min = 0.0143742505 -0.0190896021
+Second time took 1
+--------------- Step         1 ---- CPU =    23.6111 (sec) ---------------
+Exponential-Six:
+   Dispersion       =      -179.8667995370
+   Coulombic        =     -6869.9335464849
+Long-Range          =     -4142.0613561307
+Potential Energy    =    -11191.8617021526
+Kinetic Energy      =         0.0000000000
+Extended Energy     =         0.0000000000
+Total Energy        =    -11191.8617021526
+Pressure            =      -200.5702842163
+Temperature         =         0.0000000000
+
+
+
+Loop time: 23.6111340523 on 1 processors for 575 particles for 1 steps
+
+
+
+Breakdown of Average Loop Time by Task
+                       Seconds        % 
+          Force Time   23.5416     99.71
+          Neigh Time    0.0000      0.00
+           Comm Time    0.0007      0.00
+       Exchange Time    0.0000      0.00
+        Revcomm Time    0.0004      0.00
+        Barrier Time    0.0000      0.00
+          Other Time    0.0684      0.29
+          Total Time   23.6111    100.00
+
+
+
+Breakdown of Average Loop Time by Force Field
+Force Field         Force    (#)        Neighbor   (#)      
+Exponential-Six        20.0256 (   128) 
+Long-Range              3.5159 (   128) 
+
+
+
+Finished 
+@
+
+
+4.2
+log
+@Added prototype for Force_PPPM class
+@
+text
+@d24 1
+a24 2
+minimized particles type
+ Si O
+d295 1
+a295 1
+--------------- Step         1 ---- CPU =    25.5218 (sec) ---------------
+d309 1
+a309 1
+Loop time: 25.5217640400 on 1 processors for 575 particles for 1 steps
+d315 1
+a315 1
+          Force Time   25.4446     99.70
+d321 2
+a322 2
+          Other Time    0.0760      0.30
+          Total Time   25.5218    100.00
+d328 2
+a329 2
+Exponential-Six        21.7481 (   128) 
+Long-Range              3.6964 (   128) 
+@
+
+
+4.1
+log
+@Recovered from corruption that occurred on April 12, 2005.
+@
+text
+@d99 2
+a100 2
+ Energy = -11190.8778906775 Res = 169.0216606662
+ Energy = -11189.7671313955 Res = 220.1875063455
+d103 190
+a292 70
+ Energy = -11191.6366339579 Res = 34.3432066447
+Directional derivative is 0.9549550127 f.max is 0.1224466424 
+ Energy = -11191.8587621089 Res = 0.0205543908
+Directional derivative is -0.0029244001 f.max is 0.1224466424 
+ Energy = -11191.8587644138 Res = 0.0231772475
+Directional derivative is -0.0002201871 f.max is 0.1224466424 
+ Energy = -11191.8587634503 Res = 0.0256108907
+Directional derivative is 0.0019075366 f.max is 0.1224466424 
+ Energy = -11191.8587644138 Res = 0.0231772475
+ Energy = -11191.8587644138 Res = 0.0231772475
+ Energy = -11191.5301060630 Res = 40.3766931462
+ Energy = -11190.9292046517 Res = 100.7311397452
+ Energy = -11191.8587644138 Res = 0.0231772475
+Directional derivative is -0.0232949564 f.max is 0.0586120755 
+ Energy = -11191.7829033239 Res = 9.5369459065
+Directional derivative is 0.3277425241 f.max is 0.0586120755 
+ Energy = -11191.8591511828 Res = 0.0217028279
+Directional derivative is -0.0000562448 f.max is 0.0586120755 
+ Energy = -11191.8591503296 Res = 0.0239490611
+Directional derivative is 0.0010977052 f.max is 0.0586120755 
+ Energy = -11191.8591511828 Res = 0.0217028279
+ Energy = -11191.8591511828 Res = 0.0217028279
+ Energy = -11191.5334595566 Res = 38.9761879487
+ Energy = -11190.9246270646 Res = 103.3564249393
+ Energy = -11191.8591511828 Res = 0.0217028279
+Directional derivative is -0.0217556733 f.max is 0.0622177277 
+ Energy = -11191.7831672870 Res = 9.3589793754
+Directional derivative is 0.3257506389 f.max is 0.0622177277 
+ Energy = -11191.8594856694 Res = 0.0183736211
+Directional derivative is 0.0001720548 f.max is 0.0622177277 
+ Energy = -11191.8594850832 Res = 0.0166715287
+Directional derivative is -0.0009070064 f.max is 0.0622177277 
+ Energy = -11191.8594856694 Res = 0.0183736211
+ Energy = -11191.8594856694 Res = 0.0183736211
+ Energy = -11191.6157711087 Res = 30.7723687294
+ Energy = -11191.1422390967 Res = 85.2042711080
+ Energy = -11191.8594856694 Res = 0.0183736211
+Directional derivative is -0.0182277675 f.max is 0.0544752058 
+ Energy = -11191.8029763132 Res = 7.4760437343
+Directional derivative is 0.2442263296 f.max is 0.0544752058 
+ Energy = -11191.8598028322 Res = 0.0210100754
+Directional derivative is -0.0000329276 f.max is 0.0544752058 
+ Energy = -11191.8598020127 Res = 0.0233938032
+Directional derivative is 0.0009388683 f.max is 0.0544752058 
+ Energy = -11191.8598028322 Res = 0.0210100754
+ Energy = -11191.8598028322 Res = 0.0210100754
+ Energy = -11191.5727944274 Res = 29.6802820602
+ Energy = -11191.0255528179 Res = 80.2129403358
+ Energy = -11191.8598028322 Res = 0.0210100754
+Directional derivative is -0.0210468404 f.max is 0.0729881049 
+ Energy = -11191.7934005695 Res = 7.0859660849
+Directional derivative is 0.2868265369 f.max is 0.0729881049 
+ Energy = -11191.8601637298 Res = 0.0144418515
+Directional derivative is -0.0000729112 f.max is 0.0729881049 
+ Energy = -11191.8601629665 Res = 0.0159774810
+Directional derivative is 0.0009738058 f.max is 0.0729881049 
+
+ cg solver done f.max and min = 0.0165080750 -0.0190182711
+First time took 5
+ Energy = -11191.8601637298 Res = 0.0144418515
+ Energy = -11191.3932594909 Res = 81.4709235692
+ Energy = -11190.5787354527 Res = 218.3432289708
+ Energy = -11191.8601637298 Res = 0.0144418515
+Directional derivative is -0.0151649794 f.max is 0.0190182711 
+ Energy = -11191.7472939075 Res = 19.8648229689
+Directional derivative is 0.4666628188 f.max is 0.0190182711 
+ Energy = -11191.8602820000 Res = 0.0068252364
+Directional derivative is 0.0000824768 f.max is 0.0190182711 
+ Energy = -11191.8602817678 Res = 0.0062274736
+Directional derivative is -0.0006743006 f.max is 0.0190182711 
+d294 1
+a294 1
+ cg solver done f.max and min = 0.0086617577 -0.0122946313
+d296 1
+a296 1
+--------------- Step         1 ---- CPU =    11.5314 (sec) ---------------
+d298 4
+a301 4
+   Dispersion       =      -179.5688484687
+   Coulombic        =     -6870.2302571598
+Long-Range          =     -4142.0611761392
+Potential Energy    =    -11191.8602817678
+d304 1
+a304 1
+Total Energy        =    -11191.8602817678
+d310 1
+a310 1
+Loop time: 11.5313980579 on 1 processors for 575 particles for 1 steps
+d316 1
+a316 1
+          Force Time   11.5086     99.80
+d318 1
+a318 1
+           Comm Time    0.0002      0.00
+d320 1
+a320 1
+        Revcomm Time    0.0001      0.00
+d322 2
+a323 2
+          Other Time    0.0224      0.19
+          Total Time   11.5314    100.00
+d329 2
+a330 2
+Exponential-Six         9.8440 (    48) 
+Long-Range              1.6646 (    48) 
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d176 1
+a176 1
+--------------- Step         1 ---- CPU =     9.7150 (sec) ---------------
+d190 1
+a190 1
+Loop time: 9.7149939537 on 1 processors for 575 particles for 1 steps
+d196 1
+a196 1
+          Force Time    9.6884     99.73
+d201 3
+a203 3
+        Barrier Time    0.0006      0.01
+          Other Time    0.0257      0.26
+          Total Time    9.7150    100.00
+d209 2
+a210 2
+Exponential-Six         8.2749 (    48) 
+Long-Range              1.4135 (    48) 
+@
+
+
+1.3
+log
+@Added a bunch of test case for mixing force fields
+@
+text
+@d1 1
+a1 1
+/home/athomps/Grasp/Testing/testq/grasp.out
+d3 2
+a4 2
+path_str is /home/athomps/Grasp/Testing/testq/
+PATH_MAX is 4096
+d46 4
+d57 4
+d80 1
+a80 1
+conjugate gradient 100 100 0.05000000000 0.02000000000
+d100 1
+a100 1
+ Energy = -11189.7671313955 Res = 220.1875063456
+d113 2
+a114 2
+ Energy = -11191.5301060631 Res = 40.3766931463
+ Energy = -11190.9292046518 Res = 100.7311397456
+d125 2
+a126 2
+ Energy = -11191.5334595566 Res = 38.9761879488
+ Energy = -11190.9246270646 Res = 103.3564249394
+d149 2
+a150 2
+ Energy = -11191.5727944274 Res = 29.6802820603
+ Energy = -11191.0255528179 Res = 80.2129403363
+d153 1
+a153 1
+ Energy = -11191.7934005695 Res = 7.0859660850
+d163 2
+a164 2
+ Energy = -11191.3932594909 Res = 81.4709235695
+ Energy = -11190.5787354527 Res = 218.3432289711
+d167 1
+a167 1
+ Energy = -11191.7472939075 Res = 19.8648229690
+d176 1
+a176 1
+--------------- Step         1 ---- CPU =     9.9121 (sec) ---------------
+d190 1
+a190 1
+Loop time: 9.9120748999 on 1 processors for 575 particles
+d196 3
+a198 3
+          Force Time    9.8913     99.79
+          Neigh Time    0.0001      0.00
+           Comm Time    0.0003      0.00
+d201 3
+a203 3
+        Barrier Time    0.0003      0.00
+          Other Time    0.0199      0.20
+          Total Time    9.9121    100.00
+d209 2
+a210 2
+Exponential-Six         8.1610 (    48) 
+Long-Range              1.7285 (    48) 
+@
+
+
+1.2
+log
+@Added rcutmaxall to forcefieldlist.cpp
+@
+text
+@d1 1
+a1 1
+grasp.out
+d3 2
+a4 1
+path_str is 
+d92 1
+a92 1
+ Energy = -11189.7671313955 Res = 220.1875063455
+d105 2
+a106 2
+ Energy = -11191.5301060630 Res = 40.3766931462
+ Energy = -11190.9292046517 Res = 100.7311397452
+d117 2
+a118 2
+ Energy = -11191.5334595566 Res = 38.9761879487
+ Energy = -11190.9246270646 Res = 103.3564249393
+d141 2
+a142 2
+ Energy = -11191.5727944274 Res = 29.6802820602
+ Energy = -11191.0255528179 Res = 80.2129403358
+d145 1
+a145 1
+ Energy = -11191.7934005695 Res = 7.0859660849
+d155 2
+a156 2
+ Energy = -11191.3932594909 Res = 81.4709235692
+ Energy = -11190.5787354527 Res = 218.3432289708
+d159 1
+a159 1
+ Energy = -11191.7472939075 Res = 19.8648229689
+d168 1
+a168 1
+--------------- Step         1 ---- CPU =    10.0667 (sec) ---------------
+d182 1
+a182 1
+Loop time: 10.0667140484 on 1 processors for 575 particles
+d188 3
+a190 3
+          Force Time   10.0472     99.81
+          Neigh Time    0.0002      0.00
+           Comm Time    0.0002      0.00
+d192 4
+a195 4
+        Revcomm Time    0.0002      0.00
+        Barrier Time    0.0004      0.00
+          Other Time    0.0185      0.18
+          Total Time   10.0667    100.00
+d201 2
+a202 2
+Exponential-Six         8.5393 (    48) 
+Long-Range              1.5060 (    48) 
+@
+
+
+1.1
+log
+@Added BKS example to test suite
+@
+text
+@d1 1
+a1 1
+/Users/athomps/netapp/codes/Grasp/Testing/testq/grasp.out
+d3 1
+a3 1
+path_str is /Users/athomps/netapp/codes/Grasp/Testing/testq/
+d71 1
+a71 1
+conjugate gradient 100 100 0.05000 0.02000
+d167 1
+a167 1
+--------------- Step         1 ---- CPU =     9.7662 (sec) ---------------
+d181 1
+a181 1
+Loop time: 9.7662460804 on 1 processors for 575 particles
+d187 3
+a189 3
+          Force Time    9.7361     99.69
+          Neigh Time    0.0001      0.00
+           Comm Time    0.0004      0.00
+d191 4
+a194 4
+        Revcomm Time    0.0001      0.00
+        Barrier Time    0.0016      0.02
+          Other Time    0.0279      0.29
+          Total Time    9.7662    100.00
+d200 2
+a201 2
+Exponential-Six         8.3546 (    48) 
+Long-Range              1.3794 (    48) 
+@
+

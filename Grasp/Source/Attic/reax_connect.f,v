@@ -1,0 +1,2581 @@
+head	3.2;
+access;
+symbols
+	PreMonaco:3.2
+	REAX-2:3.2.2.9
+	REAXFF:3.2.0.2;
+locks; strict;
+comment	@c @;
+
+
+3.2
+date	2004.12.16.23.40.44;	author athomps;	state dead;
+branches
+	3.2.2.1;
+next	3.1;
+
+3.1
+date	2004.12.16.23.07.39;	author athomps;	state Exp;
+branches;
+next	;
+
+3.2.2.1
+date	2004.12.16.23.59.24;	author athomps;	state Exp;
+branches;
+next	3.2.2.2;
+
+3.2.2.2
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	3.2.2.3;
+
+3.2.2.3
+date	2005.01.07.22.51.01;	author athomps;	state Exp;
+branches;
+next	3.2.2.4;
+
+3.2.2.4
+date	2005.01.28.02.53.19;	author athomps;	state Exp;
+branches;
+next	3.2.2.5;
+
+3.2.2.5
+date	2005.01.29.02.15.37;	author athomps;	state Exp;
+branches;
+next	3.2.2.6;
+
+3.2.2.6
+date	2005.02.02.00.20.49;	author athomps;	state Exp;
+branches;
+next	3.2.2.7;
+
+3.2.2.7
+date	2005.02.03.21.40.18;	author athomps;	state Exp;
+branches;
+next	3.2.2.8;
+
+3.2.2.8
+date	2005.02.09.07.14.57;	author athomps;	state Exp;
+branches;
+next	3.2.2.9;
+
+3.2.2.9
+date	2005.02.10.01.50.42;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.2
+log
+@Removed files inadvertently added to main branch
+@
+text
+@********************************************************************** 
+********************************************************************** 
+
+      subroutine srtatom
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkatomcoord.blk'
+      include 'cbkff.blk'
+      include 'cbkia.blk'
+      include 'cbkqa.blk'
+      include 'control.blk'
+      include 'opt.blk'
+      include 'small.blk'
+********************************************************************** 
+*                                                                    *
+*     Determine atom types in system                                 *
+*                                                                    *
+********************************************************************** 
+*     Requires the following variables
+*     ndebug - opt.blk; determines whether to debug or not; everywhere
+*     xmasmd - cbka.blk; some sort of atmoic mass?; srtatom, reac.f
+*     molin - opt.blk; keeps info on?; srtatom
+*     nso - cbka.blk; number of atoms?; srtatom, inout.f
+*     nprob - cbka.blk; does?; connect.f, inout.f, reac.f
+*     nasort - cbka.blk; a sorting array; srtatom
+*     ia - cbka.blk; atom numbers?; poten.f, inout.f, connect.f, charges.f
+*     iag - cbka.blk; ; connect.f, inout.f, poten.f, reac.f
+*     xmasat - cbka.blk; does?; srtatom, reac.f
+*     amas - cbka.blk; ? ; srtatom, ffinpt, molanal, ovcor
+*     qa - cbka.blk; some sort of error statement variable?; srtatom, srtbon1, inout.f, radbo
+*     
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In srtatom'
+      call timer(65)
+      close (65)
+      end if
+
+      xmasmd=0.0
+      do i1=1,nso
+      molin(nprob,i1)=0
+      nasort(i1)=0
+      end do
+      do i1=1,na
+      ia(i1,1)=0
+      iag(i1,1)=0
+      do i2=1,nso
+      if (qa(i1).eq.qas(i2)) then
+      ia(i1,1)=i2
+      iag(i1,1)=i2
+      molin(nprob,i2)=molin(nprob,i2)+1
+      xmasat(i1)=amas(i2)
+      xmasmd=xmasmd+amas(i2)
+      nasort(i2)=nasort(i2)+1
+      end if
+      end do
+      if (ia(i1,1).eq.0) then
+      write (*,*)'Unknown atom type: ',qa(i1)
+      stop 'Unknown atom type'
+      end if
+      end do
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine intcor
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'control.blk'
+********************************************************************** 
+*                                                                    *
+*     Determine internal coordinates in molecule                     *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In intcor'
+      call timer(65)
+      close (65)
+      end if
+
+      call distan
+
+
+      if (mod(mdstep,nvlist).eq.0.and.mdstep.gt.1) then
+      call vlist
+      end if
+
+      call srtbon1
+
+*     call srtang
+*     call srttor
+
+********************************************************************** 
+*                                                                    *
+*     Determine changes in molecules                                 *
+*                                                                    *
+********************************************************************** 
+      call molec
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine molec
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkdcell.blk'
+      include 'cbkff.blk'
+      include 'cbkia.blk'
+      include 'cbkmolec.blk'
+      include 'cbknmolat.blk'
+      include 'control.blk'
+      include 'small.blk'
+      dimension nmolo2(nat),iseen(nmolmax),isee2(nmolmax)
+********************************************************************** 
+*                                                                    *
+*     Determine changes in molecules                                 *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In molec'
+      call timer(65)
+      close (65)
+      end if
+      npreac=0
+
+      do i1=1,nmolo
+      natmol=0
+      do i2=1,na
+      if (ia(i2,3+mbond).eq.i1) then
+      natmol=natmol+1
+      nmolat(i1,natmol+1)=i2
+      end if
+      end do
+      nmolat(i1,1)=natmol
+      end do
+
+      if (nmolo5.lt.nmolo5o) nradcount=0     !reset reaction counter
+      do i1=1,nmolo5
+      natmol=0
+      do i2=1,na
+      if (iag(i2,3+mbond).eq.i1) then
+      natmol=natmol+1
+      nmolat2(i1,natmol+1)=i2
+      end if
+      end do
+      nmolat2(i1,1)=natmol
+      end do
+      nmolo5o=nmolo5
+
+      do i1=nmolo+1,nmoloold
+      do i2=1,nmolat(i1,1)
+      nmolat(i1,1+i2)=0
+      end do
+      nmolat(i1,1)=0
+      end do
+
+      do i1=1,nmolo
+      elmol(i1)=0.0
+      do i2=1,nmolat(i1,1)
+      ihu=nmolat(i1,i2+1)
+      ity=ia(ihu,1)
+      elmol(i1)=elmol(i1)+stlp(ity)
+      end do
+      end do
+ 
+      do i1=1,nmolo5
+      elmol2(i1)=0.0
+      do i2=1,nmolat2(i1,1)
+      ihu=nmolat2(i1,i2+1)
+      ity=iag(ihu,1)
+      elmol2(i1)=elmol2(i1)+stlp(ity)
+      end do
+      end do
+ 
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine distan
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkconst.blk'
+      include 'cbkdistan.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+********************************************************************** 
+*                                                                    *
+*     Set up interatomic distance calculation                        *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In distan'
+      call timer(65)
+      close (65)
+      end if
+
+      iortho=1
+      if (qr.eq.'F'.or.qr.eq.'Y'.or.qr.eq.'3'.or.qr.eq.'5'.
+     $or.qr.eq.'P'.or.qr.eq.'B'.or.qr.eq.'S') then 
+      if (angle(1).ne.90.0.or.angle(2).ne.90.0.or.angle(3).ne.90.0) 
+     $iortho=0           !Non-orthogonal
+
+      halfa=angle(1)*dgrrdn
+      hbeta=angle(2)*dgrrdn
+      hgamma=angle(3)*dgrrdn
+      sinalf=sin(halfa)
+      cosalf=cos(halfa)
+      sinbet=sin(hbeta)
+      cosbet=cos(hbeta)
+      cosphi=(cos(hgamma)-cosalf*cosbet)/(sinalf*sinbet)
+      if (cosphi.gt.1.0) cosphi=1.0
+      sinphi=sqrt(one-cosphi*cosphi)
+      tm11=axis(1)*sinbet*sinphi
+      tm21=axis(1)*sinbet*cosphi
+      tm31=axis(1)*cosbet
+      tm22=axis(2)*sinalf
+      tm32=axis(2)*cosalf
+      tm33=axis(3)
+      end if
+      aaxh=sqrt(tm11*tm11+tm21*tm21+tm31*tm31)
+      baxh=sqrt(tm22*tm22+tm32*tm32)
+      caxh=tm33
+
+
+      return
+      end
+
+********************************************************************** 
+********************************************************************** 
+
+      subroutine dista2 (n1,n2,dista,dx,dy,dz)
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkdistan.blk'
+      include 'cellcoord.blk'
+********************************************************************** 
+*                                                                    *
+*     Determine interatomic distances                                *
+*                                                                    *
+********************************************************************** 
+*     if (ndebug.eq.1) then
+*     open (65,file='fort.65',status='unknown',access='append')
+*     write (65,*) 'In dista2'
+*     call timer(65)
+*     close (65)
+*     end if
+      
+      if (iortho.eq.1) then
+      dx=c(n1,1)-c(n2,1)
+      dy=c(n1,2)-c(n2,2)
+      dz=c(n1,3)-c(n2,3)
+      dx=dx-anint(dx/aaxh)*aaxh
+      dy=dy-anint(dy/baxh)*baxh
+      dz=dz-anint(dz/caxh)*caxh
+      dista=sqrt(dx*dx+dy*dy+dz*dz)
+
+      else
+
+      dismin=1e+10
+      do 10 k1=-1,1
+      dx=(c(n1,1)-c(n2,1)+k1*tm11)
+      do 10 k2=-1,1
+      dy=(c(n1,2)-c(n2,2)+k1*tm21+k2*tm22)
+      do 10 k3=-1,1
+      dz=(c(n1,3)-c(n2,3)+k1*tm31+k2*tm32+k3*tm33)
+      dis=sqrt(dx*dx+dy*dy+dz*dz)
+      if (dis.lt.dismin.and.dis.gt.0.001) then
+      dxmin=dx
+      dymin=dy
+      dzmin=dz
+      dismin=dis
+      end if
+   10 continue
+      dista=dismin
+      dx=dxmin
+      dy=dymin
+      dz=dzmin
+      
+      end if
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine vlist
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkc.blk'
+      include 'cbkch.blk'
+      include 'cbkdcell.blk'
+      include 'cbkff.blk'
+      include 'cbknvl.blk'
+      include 'cbknvlbo.blk'
+      include 'cbkpairs.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'small.blk'
+
+      dimension fc(nat,3)
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In vlist'
+      call timer(65)
+      close (65)
+      end if
+********************************************************************** 
+*                                                                    *
+*     Update Verlet list                                             *
+*                                                                    *
+********************************************************************** 
+      nvpair=0
+      nvlself=0
+      kxt=kx
+      kyt=ky
+      kzt=kz
+      if (kxt.eq.0) kxt=1
+      if (kyt.eq.0) kyt=1
+      if (kzt.eq.0) kzt=1
+
+      call trarot2  !Translate atoms back into unit cell
+
+      do 10 i1=1,na-1
+      do 10 i2=i1+1,na
+**********************************************************************
+*                                                                    *
+*     Construct periodic images for each interaction                 *
+*                                                                    *
+**********************************************************************
+      dx1=c(i1,1)-c(i2,1)
+      dy1=c(i1,2)-c(i2,2)
+      dz1=c(i1,3)-c(i2,3)
+      do 10 k1=-kxt,kxt
+      do 10 k2=-kyt,kyt
+      do 10 k3=-kzt,kzt
+      a1=dx1+k1*tm11
+      a2=dy1+k1*tm21+k2*tm22
+      a3=dz1+k1*tm31+k2*tm32+k3*tm33
+      rr=sqrt(a1*a1+a2*a2+a3*a3)
+      if (rr.lt.swb+vrange) then
+      nvpair=nvpair+1
+      nvl1(nvpair)=i1
+      nvl2(nvpair)=i2
+      nvlx(nvpair)=k1
+      nvly(nvpair)=k2
+      nvlz(nvpair)=k3
+      nvlbo(nvpair)=0
+      if (rr.lt.vlbora) nvlbo(nvpair)=1
+      end if
+   10 continue
+**********************************************************************
+*                                                                    *
+*     Add interaction of atoms with the corresponding atom           *
+*     in the surrounding periodic cells                              *
+*                                                                    *
+**********************************************************************
+      do 20 i1=1,na
+      do 20 k1=-kx,kx
+      do 20 k2=-ky,ky
+      do 20 k3=-kz,kz
+      if (k1.ne.0.or.k2.ne.0.or.k3.ne.0) then
+      a1=k1*tm11
+      a2=k1*tm21+k2*tm22
+      a3=k1*tm31+k2*tm32+k3*tm33
+      rr=sqrt(a1*a1+a2*a2+a3*a3)
+      if (rr.lt.swb+vrange) then
+      nvpair=nvpair+1
+      nvlself=nvlself+1
+      nvl1(nvpair)=i1
+      nvl2(nvpair)=i1
+      nvlx(nvpair)=k1
+      nvly(nvpair)=k2
+      nvlz(nvpair)=k3
+      nvlbo(nvpair)=0
+      if (rr.lt.vlbora) nvlbo(nvpair)=1
+      end if
+      end if
+   20 continue
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine srtbon1
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkabo.blk'
+      include 'cbkbo.blk'
+      include 'cbkbosi.blk'
+      include 'cbkbopi.blk'
+      include 'cbkbopi2.blk'
+      include 'cbkc.blk'
+      include 'cbkch.blk'
+      include 'cbkconst.blk'
+      include 'cbkdbopidc.blk'
+      include 'cbkdrdc.blk'
+      include 'cbkia.blk'
+      include 'cbknubon2.blk'
+      include 'cbknvl.blk'
+      include 'cbknvlbo.blk'
+      include 'cbkpairs.blk'
+      include 'cbkqa.blk'
+      include 'cbkrbo.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'small.blk'
+      include 'cbkdbodc.blk'
+      include 'cbksrtbon1.blk'
+      include 'cbkff.blk'
+      logical found
+********************************************************************** 
+*                                                                    *
+*     Determine connections within the molecule                      *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In srtbon1'
+      call timer(65)
+      close (65)
+      end if
+
+
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write(65,*) 'Nonself pairs srtbon1'
+      write(65,*) tm11,tm21,tm22,tm31,tm32,tm33
+      do ivl=1,nvpair-nvlself
+         i1=nvl1(ivl)
+         i2=nvl2(ivl)
+         ix=nvlx(ivl)
+         iy=nvly(ivl)
+         iz=nvlz(ivl)
+         dxm=c(i1,1)-c(i2,1)+ix*tm11
+         dym=c(i1,2)-c(i2,2)+ix*tm21+iy*tm22
+         dzm=c(i1,3)-c(i2,3)+ix*tm31+iy*tm32+iz*tm33
+         dis=sqrt(dxm*dxm+dym*dym+dzm*dzm)
+         write(65,*) i1,i2,ix,iy,iz,nvlbo(ivl),dis
+      end do
+
+      write(65,*) 'Self pairs srtbon1'
+      do ivl=nvpair-nvlself+1,nvpair
+         i1=nvl1(ivl)
+         i2=nvl2(ivl)
+         ix=nvlx(ivl)
+         iy=nvly(ivl)
+         iz=nvlz(ivl)
+         dxm=c(i1,1)-c(i2,1)+ix*tm11
+         dym=c(i1,2)-c(i2,2)+ix*tm21+iy*tm22
+         dzm=c(i1,3)-c(i2,3)+ix*tm31+iy*tm32+iz*tm33
+         dis=sqrt(dxm*dxm+dym*dym+dzm*dzm)
+         write(65,*) i1,ix,iy,iz,nvlbo(ivl),dis
+      end do
+      endif
+
+      do i1=1,na
+      abo(i1)=0.0d0
+      end do
+      nbon=0
+      nbon2=0
+      nsbmax=0
+      nsbma2=0
+
+      if (imolde.eq.0) then
+
+      nmolo=0
+      nmolo5=0
+      end if
+      if (imolde.eq.0) then
+      do i1=1,na
+      do i2=2,mbond+3
+      ia(i1,i2)=0
+      iag(i1,i2)=0
+      end do
+      end do
+     
+      else
+
+      do i1=1,na
+      do i2=2,mbond+2
+      ia(i1,i2)=0
+      iag(i1,i2)=0
+      end do
+      end do
+
+      end if
+
+      do i1=1,na
+      do i2=1,mbond
+      nubon1(i1,i2)=0
+      nubon2(i1,i2)=0
+      end do
+      end do
+ 
+*     do 10 ivl=1,nvpair
+      do 10 ivl=1,nvpair
+      if (nvlbo(ivl).eq.0) goto 10  !not in bond order range
+      i1=nvl1(ivl)
+      i2=nvl2(ivl)
+      ix=nvlx(ivl)
+      iy=nvly(ivl)
+      iz=nvlz(ivl)
+      dxm=c(i1,1)-c(i2,1)+ix*tm11
+      dym=c(i1,2)-c(i2,2)+ix*tm21+iy*tm22
+      dzm=c(i1,3)-c(i2,3)+ix*tm31+iy*tm32+iz*tm33
+      dis=sqrt(dxm*dxm+dym*dym+dzm*dzm)
+*     do 10 i1=1,na-1
+*     do 10 i2=i1+1,na
+*     call dista2(i1,i2,dis,dxm,dym,dzm)
+      nubon(i1,i2)=0
+      nubon(i2,i1)=0
+      ih1=ia(i1,1)
+      ih2=ia(i2,1)
+*     if (dis.gt.5.0*rob) goto 10
+      disdx=dxm/dis
+      disdy=dym/dis
+      disdz=dzm/dis
+      itype=0
+      if (ih1.gt.ih2) then
+      ih1=ia(i2,1)
+      ih2=ia(i1,1)
+      end if
+      do i3=1,nboty2
+      if (ih1.eq.nbs(i3,1).and.ih2.eq.nbs(i3,2)) itype=i3
+      end do
+      if (itype.eq.0.and.rat(ih1).gt.zero.and.rat(ih2).gt.zero) then
+      call mdsav(1,qfile(nprob))
+      write (*,*)qa(i1),'-',qa(i2),'Fatal: Unknown bond in molecule'
+      stop 
+      end if
+
+      rhulp=dis/rob1(ih1,ih2)
+ 
+********************************************************************** 
+*                                                                    *
+*     Determine bond orders                                          *
+*                                                                    *
+********************************************************************** 
+      rh2=zero
+      rh2p=zero
+      rh2pp=zero
+      ehulp=zero
+      ehulpp=zero
+      ehulppp=zero
+      bomh=bom(itype)
+      if (rapt(ih1).gt.zero.and.rapt(ih2).gt.zero) then
+      rhulp2=dis/rob2(ih1,ih2)
+      rh2p=rhulp2**ptp(itype)
+      ehulpp=bomh*exp(pdp(itype)*rh2p)
+      end if
+      if (vnq(ih1).gt.zero.and.vnq(ih2).gt.zero) then
+      rhulp3=dis/rob3(ih1,ih2)
+      rh2pp=rhulp3**popi(itype)
+      ehulppp=bomh*exp(pdo(itype)*rh2pp)
+      end if
+
+      if (rat(ih1).gt.zero.and.rat(ih2).gt.zero) then
+      rh2=rhulp**bop2(itype)
+      ehulp=bomh*(1.0+cutoff)*exp(bop1(itype)*rh2)
+      end if
+
+      bor=ehulp+ehulpp+ehulppp
+      borsi=ehulp
+      borpi=ehulpp
+      borpi2=ehulppp
+      dbordrob=bop2(itype)*bop1(itype)*rh2*(1.0/dis)*ehulp+
+     $ptp(itype)*pdp(itype)*rh2p*(1.0/dis)*ehulpp+
+     $popi(itype)*pdo(itype)*rh2pp*(1.0/dis)*ehulppp
+      dborsidrob=bop2(itype)*bop1(itype)*rh2*(1.0/dis)*ehulp
+      dborpidrob=ptp(itype)*pdp(itype)*rh2p*(1.0/dis)*ehulpp
+      dborpi2drob=popi(itype)*pdo(itype)*rh2pp*(1.0/dis)*ehulppp
+     
+      nbon2=nbon2+1
+      j1=i1
+      j2=i2
+
+********************************************************************** 
+*                                                                    *
+*     Determine bond orders                                          *
+*                                                                    *
+********************************************************************** 
+      if (bor.gt.cutoff) then
+      nbon=nbon+1
+      ib(nbon,1)=itype
+      ib(nbon,2)=j1
+      ib(nbon,3)=j2
+      ibsym(nbon)=ivl
+      drdc(nbon,1,1)=disdx
+      drdc(nbon,2,1)=disdy
+      drdc(nbon,3,1)=disdz
+      drdc(nbon,1,2)=-disdx
+      drdc(nbon,2,2)=-disdy
+      drdc(nbon,3,2)=-disdz
+      abo(i1)=abo(i1)+bor-cutoff
+      if (i1.ne.i2) abo(i2)=abo(i2)+bor-cutoff
+      bo(nbon)=bor-cutoff
+      bos(nbon)=bor-cutoff
+      bosi(nbon)=borsi-cutoff
+      bopi(nbon)=borpi
+      bopi2(nbon)=borpi2
+      rbo(nbon)=dis
+      dbodr(nbon)=dbordrob
+*     dbosidr(nbon)=dborsidrob
+      dbopidr(nbon)=dborpidrob
+      dbopi2dr(nbon)=dborpi2drob
+      dbodc(nbon,1,1)=dbodr(nbon)*drdc(nbon,1,1)
+      dbodc(nbon,2,1)=dbodr(nbon)*drdc(nbon,2,1)
+      dbodc(nbon,3,1)=dbodr(nbon)*drdc(nbon,3,1)
+      dbodc(nbon,1,2)=dbodr(nbon)*drdc(nbon,1,2)
+      dbodc(nbon,2,2)=dbodr(nbon)*drdc(nbon,2,2)
+      dbodc(nbon,3,2)=dbodr(nbon)*drdc(nbon,3,2)
+*     dbosidc(nbon,1,1)=dbosidr(nbon)*drdc(nbon,1,1)
+*     dbosidc(nbon,2,1)=dbosidr(nbon)*drdc(nbon,2,1)
+*     dbosidc(nbon,3,1)=dbosidr(nbon)*drdc(nbon,3,1)
+*     dbosidc(nbon,1,2)=dbosidr(nbon)*drdc(nbon,1,2)
+*     dbosidc(nbon,2,2)=dbosidr(nbon)*drdc(nbon,2,2)
+*     dbosidc(nbon,3,2)=dbosidr(nbon)*drdc(nbon,3,2)
+      dbopidc(nbon,1,1)=dbopidr(nbon)*drdc(nbon,1,1)
+      dbopidc(nbon,2,1)=dbopidr(nbon)*drdc(nbon,2,1)
+      dbopidc(nbon,3,1)=dbopidr(nbon)*drdc(nbon,3,1)
+      dbopidc(nbon,1,2)=dbopidr(nbon)*drdc(nbon,1,2)
+      dbopidc(nbon,2,2)=dbopidr(nbon)*drdc(nbon,2,2)
+      dbopidc(nbon,3,2)=dbopidr(nbon)*drdc(nbon,3,2)
+      dbopi2dc(nbon,1,1)=dbopi2dr(nbon)*drdc(nbon,1,1)
+      dbopi2dc(nbon,2,1)=dbopi2dr(nbon)*drdc(nbon,2,1)
+      dbopi2dc(nbon,3,1)=dbopi2dr(nbon)*drdc(nbon,3,1)
+      dbopi2dc(nbon,1,2)=dbopi2dr(nbon)*drdc(nbon,1,2)
+      dbopi2dc(nbon,2,2)=dbopi2dr(nbon)*drdc(nbon,2,2)
+      dbopi2dc(nbon,3,2)=dbopi2dr(nbon)*drdc(nbon,3,2)
+      ia(i1,2)=ia(i1,2)+1
+      if (i1.ne.i2) ia(i2,2)=ia(i2,2)+1
+      ia(i1,ia(i1,2)+2)=i2 
+      ia(i2,ia(i2,2)+2)=i1 
+      if (ia(i1,2).gt.nsbma2) nsbma2=ia(i1,2)
+      if (ia(i2,2).gt.nsbma2) nsbma2=ia(i2,2)
+      if (bor.gt.cutof3) then
+      iag(i1,2)=iag(i1,2)+1
+      iag(i2,2)=iag(i2,2)+1
+      iag(i1,iag(i1,2)+2)=i2 
+      iag(i2,iag(i2,2)+2)=i1 
+      nubon1(i1,iag(i1,2))=nbon
+      nubon1(i2,iag(i2,2))=nbon
+      if (iag(i1,2).gt.nsbmax) nsbmax=iag(i1,2)
+      if (iag(i2,2).gt.nsbmax) nsbmax=iag(i2,2)
+      end if
+      if (abs(de1(ib(nbon,1))).gt.-0.01) then
+      nubon2(i1,ia(i1,2))=nbon
+      nubon2(i2,ia(i2,2))=nbon
+      nubon(i1,i2)=nbon     !Only valid for non-periodic systems
+      nubon(i2,i1)=nbon
+      else
+      nbon=nbon-1      !Inorganics
+      end if
+      end if
+   10 continue
+
+      if (ndebug.eq.1) then
+      write(65,*) 'Total atom bond orders'
+      do i1=1,na
+         write(65,*) i1,ia(i1,1),ia(i1,2),abo(i1)
+      end do
+      close (65)
+      endif
+
+      if (nbon.gt.nbomax) then 
+      write (95,*)nbon,nbomax
+      stop 'Too many bonds; maybe wrong cell parameters'
+      end if
+********************************************************************** 
+*                                                                    *
+*     Sort molecules                                                 *
+*                                                                    *
+********************************************************************** 
+      if (imolde.eq.1) return    !fixed molecular definitions
+
+      FOUND=.FALSE.
+      DO 31 K1=1,NA
+      IF (IA(K1,3+mbond).EQ.0) FOUND=.TRUE.
+   31 IF (IA(K1,3+mbond).GT.NMOLO) NMOLO=IA(K1,3+mbond)
+      IF (.NOT.FOUND) GOTO 32
+************************************************************************
+*                                                                      *
+*     Molecule numbers are assigned. No restrictions are made for the  *
+*     sequence of the numbers in the connection table.                 *
+*                                                                      *
+************************************************************************
+      N3=1
+   34 N2=N3
+      NMOLO=NMOLO+1
+      if (nmolo.gt.nmolmax) then
+      write (*,*)nmolmax
+      write (*,*)'Too many molecules in system; increase nmolmax'
+      write (*,*)'nmolmax = ',nmolmax
+      write (*,*)'nmolo = ',nmolo
+      write (*,*)'n2 = ',n2
+      stop 'Too many molecules in system'
+      end if
+      IA(N2,3+mbond)=NMOLO
+   37 FOUND=.FALSE.
+      DO 36 N1=N2+1,NA
+      IF (IA(N1,3+mbond).NE.0) GOTO 36
+      DO 35 L=1,mbond
+      IF (IA(N1,l+2).EQ.0) GOTO 36
+      IF (IA(IA(N1,l+2),3+mbond).EQ.NMOLO) THEN
+      FOUND=.TRUE.
+      IA(N1,3+mbond)=NMOLO
+      GOTO 36
+      ENDIF
+   35 CONTINUE
+   36 CONTINUE
+      IF (FOUND) GOTO 37
+      DO 33 N3=N2+1,NA
+   33 IF (IA(N3,3+mbond).EQ.0) GOTO 34
+************************************************************************
+*                                                                      *
+*     The assigned or input molecule numbers are checked for their     *
+*     consistency.                                                     *
+*                                                                      *
+************************************************************************
+   32 FOUND=.FALSE.
+      DO 42 N1=1,NA
+      DO 41 L=1,mbond
+      IF (IA(N1,L+2).EQ.0) GOTO 42
+      IF (IA(IA(N1,L+2),3+mbond).NE.IA(N1,3+mbond)) THEN
+      FOUND=.TRUE.
+      ENDIF
+   41 CONTINUE
+   42 CONTINUE
+      IF (FOUND) THEN
+      write (7,1000)na,qmol
+      do i1=1,na
+      write (7,1100)i1,ia(i1,1),(ia(i1,2+i2),i2=1,nsbmax),
+     $ia(i1,3+mbond)
+      end do
+      write (7,*)tm11,tm22,tm33,angle(1),angle(2),angle(3)
+      STOP' Mol.nrs. not consistent; maybe wrong cell parameters'
+      end if
+********************************************************************** 
+*                                                                    *
+*     Sort molecules again                                           *
+*                                                                    *
+********************************************************************** 
+      FOUND=.FALSE.
+      DO 61 K1=1,NA
+      IF (IAG(K1,3+mbond).EQ.0) FOUND=.TRUE.
+   61 IF (IAG(K1,3+mbond).GT.NMOLO5) NMOLO5=IAG(K1,3+mbond)
+      IF (.NOT.FOUND) GOTO 62
+************************************************************************
+*                                                                      *
+*     Molecule numbers are assigned. No restrictions are made for the  *
+*     sequence of the numbers in the connection table.                 *
+*                                                                      *
+************************************************************************
+      N3=1
+   64 N2=N3
+      NMOLO5=NMOLO5+1
+      if (nmolo5.gt.nmolmax) stop 'Too many molecules in system'
+      IAG(N2,3+mbond)=NMOLO5
+   67 FOUND=.FALSE.
+      DO 66 N1=N2+1,NA
+      IF (IAG(N1,3+mbond).NE.0) GOTO 66
+      DO 65 L=1,mbond
+      IF (IAG(N1,l+2).EQ.0) GOTO 66
+      IF (IAG(IAG(N1,l+2),3+mbond).EQ.NMOLO5) THEN
+      FOUND=.TRUE.
+      IAG(N1,3+mbond)=NMOLO5
+      GOTO 66
+      ENDIF
+   65 CONTINUE
+   66 CONTINUE
+      IF (FOUND) GOTO 67
+      DO 63 N3=N2+1,NA
+   63 IF (IAG(N3,3+mbond).EQ.0) GOTO 64
+************************************************************************
+*                                                                      *
+*     The assigned or input molecule numbers are checked for their     *
+*     consistency.                                                     *
+*                                                                      *
+************************************************************************
+   62 FOUND=.FALSE.
+      DO 72 N1=1,NA
+      DO 71 L=1,mbond
+      IF (IAG(N1,L+2).EQ.0) GOTO 72
+      IF (IAG(IAG(N1,L+2),3+mbond).NE.IAG(N1,3+mbond)) THEN
+      FOUND=.TRUE.
+      ENDIF
+   71 CONTINUE
+   72 CONTINUE
+      IF (FOUND) THEN
+      write (7,1000)na,qmol
+      do i1=1,na
+      write (7,1100)i1,iag(i1,1),(iag(i1,2+i2),i2=1,nsbmax),
+     $iag(i1,3+mbond)
+      end do
+      write (7,*)tm11,tm22,tm33,angle(1),angle(2),angle(3)
+      STOP' Mol.nrs. not consistent; maybe wrong cell parameters'
+      ENDIF
+
+********************************************************************** 
+*                                                                    *
+*     Format part                                                    *
+*                                                                    *
+********************************************************************** 
+ 1000 format (i3,2x,a60)
+ 1100 format (8i3)
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine srtang
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkbo.blk'
+      include 'cbkff.blk'
+      include 'cbkia.blk'
+      include 'cbkrbo.blk'
+      include 'cbkvalence.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+      include 'small.blk'
+
+      dimension a(3),b(3),j(3)
+********************************************************************** 
+*                                                                    *
+*     Find valency angles in molecule                                *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In srtang'
+      call timer(65)
+      close (65)
+      end if
+      nval=0
+      if (nvaty.eq.0) return
+      do i1=1,nbon-1
+      k4=ib(i1,2)
+      k5=ib(i1,3)
+      if (bo(i1).lt.cutof2) goto 51
+      do i2=i1+1,nbon
+      iju=0
+      if (bo(i2).lt.cutof2) goto 50
+      if (bo(i1)*bo(i2).lt.0.001) goto 50
+      k7=ib(i2,2)
+      k8=ib(i2,3)
+
+      if (k4.eq.k7.and.k5.eq.k8.and.k4.ne.k8.and.k5.ne.k7) then
+      nval=nval+1
+      iv(nval,2)=k5
+      iv(nval,3)=k4
+      iv(nval,4)=k8
+      iv(nval,5)=i1
+      iv(nval,6)=i2
+      nval=nval+1
+      iv(nval,2)=k4
+      iv(nval,3)=k5
+      iv(nval,4)=k7
+      iv(nval,5)=i1
+      iv(nval,6)=i2
+      iju=2
+      end if
+      if (iju.eq.2) goto 50
+
+      if (k4.eq.k8.and.k5.eq.k7.and.k4.ne.k7.and.k5.ne.k8) then
+      nval=nval+1
+      iv(nval,2)=k5
+      iv(nval,3)=k4
+      iv(nval,4)=k7
+      iv(nval,5)=i1
+      iv(nval,6)=i2
+      nval=nval+1
+      iv(nval,2)=k4
+      iv(nval,3)=k5
+      iv(nval,4)=k8
+      iv(nval,5)=i1
+      iv(nval,6)=i2
+      iju=2
+      end if
+      if (iju.eq.2) goto 50
+
+      if (k4.eq.k7) then
+      nval=nval+1
+      iv(nval,2)=k5
+      iv(nval,3)=k4
+      iv(nval,4)=k8
+      iv(nval,5)=i1
+      iv(nval,6)=i2
+      iju=1
+      end if
+      if (iju.eq.1) goto 50
+
+      if (k4.eq.k8) then
+      nval=nval+1
+      iv(nval,2)=k5
+      iv(nval,3)=k4
+      iv(nval,4)=k7
+      iv(nval,5)=i1
+      iv(nval,6)=i2
+      iju=1
+      end if
+      if (iju.eq.1) goto 50
+
+      if (k5.eq.k7) then
+      nval=nval+1
+      iv(nval,2)=k4
+      iv(nval,3)=k5
+      iv(nval,4)=k8
+      iv(nval,5)=i1
+      iv(nval,6)=i2
+      iju=1
+      end if
+      if (iju.eq.1) goto 50
+
+      if (k5.eq.k8) then
+      nval=nval+1
+      iv(nval,2)=k4
+      iv(nval,3)=k5
+      iv(nval,4)=k7
+      iv(nval,5)=i1
+      iv(nval,6)=i2
+      iju=1
+      end if
+   50 continue
+      if (iju.gt.0) then
+**********************************************************************
+*                                                                    *
+*     Determine force field types of angles                          *
+*                                                                    *
+**********************************************************************
+      ity=0
+      ih1=ia(iv(nval,2),1)
+      ih2=ia(iv(nval,3),1)
+      ih3=ia(iv(nval,4),1)
+      if (ih3.lt.ih1) then
+      ih3=ia(iv(nval,2),1)
+      ih2=ia(iv(nval,3),1)
+      ih1=ia(iv(nval,4),1)
+      end if
+
+      do i3=1,nvaty
+      if (ih1.eq.nvs(i3,1).and.ih2.eq.nvs(i3,2).and.
+     $ih3.eq.nvs(i3,3)) ity=i3
+      end do
+
+      if (ity.eq.0.or.abs(vka(ity)).lt.0.001) then   !Valence angle does not exist in force field;ignore
+      nval=nval-1
+      ihul=0
+      else
+      iv(nval,1)=ity
+      ihul=1
+      end if
+
+      if (iju.eq.2) then
+      ity=0
+      ih1=ia(iv(nval-ihul,2),1)
+      ih2=ia(iv(nval-ihul,3),1)
+      ih3=ia(iv(nval-ihul,4),1)
+      if (ih3.lt.ih1) then
+      ih3=ia(iv(nval-ihul,2),1)
+      ih2=ia(iv(nval-ihul,3),1)
+      ih1=ia(iv(nval-ihul,4),1)
+      end if
+
+      do i3=1,nvaty
+      if (ih1.eq.nvs(i3,1).and.ih2.eq.nvs(i3,2).and.
+     $ih3.eq.nvs(i3,3)) ity=i3
+      end do
+
+      if (ity.eq.0.or.abs(vka(ity)).lt.0.001) then   !Valence angle does not exist in force field;ignore
+      if (ihul.eq.1) then
+      do i3=1,6
+      iv(nval-1,i3)=iv(nval,i3)
+      end do
+      end if
+      nval=nval-1
+      else
+      iv(nval-ihul,1)=ity
+      end if
+
+      end if
+
+      end if
+
+      end do
+   51 continue
+      end do
+
+      nbonop=0
+
+      if (nval.gt.nvamax) stop 'Too many valency angles'
+     
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine srttor
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkbo.blk'
+      include 'cbkia.blk'
+      include 'cbktorsion.blk'
+      include 'cbkvalence.blk'
+      include 'cellcoord.blk'
+      include 'control.blk'
+********************************************************************** 
+*                                                                    *
+*     Find torsion angles in molecule                                *
+*                                                                    *
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In srttor'
+      call timer(65)
+      close (65)
+      end if
+      ntor=0
+      if (ntoty.eq.0) return
+      do i1=1,nval-1
+      k2=iv(i1,2)
+      k3=iv(i1,3)
+      k3h=iv(i1,4)
+      k4=iv(i1,5)
+      k5=iv(i1,6)
+      do i2=i1+1,nval
+      k9=iv(i2,2)
+      k6=iv(i2,3)
+      k6h=iv(i2,4)
+      k7=iv(i2,5)
+      k8=iv(i2,6)
+      bopr=bo(k4)*bo(k5)*bo(k7)*bo(k8)
+      if (bopr.lt.0.000100) goto 61
+      nju=0
+      
+      if (k3.eq.k6) goto 60
+*     if (k3.eq.k6) then
+*     write (42,'(20i4)')k2,k3,k3h,k9,k6,k6h
+*     write (42,'(20i4)')nvlx(ibsym(k4)),nvly(ibsym(k4)),
+*    $nvlz(ibsym(k4))
+*     write (42,'(20i4)')nvlx(ibsym(k7)),nvly(ibsym(k7)),
+*    $nvlz(ibsym(k7))
+*     if ((k3.lt.k2).and.(k6.lt.k9)) goto 60
+*     if (nvlx(ibsym(k4)).eq.nvlx(ibsym(k7)).and.
+*    $nvly(ibsym(k4)).eq.nvly(ibsym(k7)).and.
+*    $nvlz(ibsym(k4)).eq.nvlz(ibsym(k7))) goto 60
+*     end if
+ 
+      if (k4.eq.k7.and.iv(i1,4).ne.iv(i2,4)) then
+      ntor=ntor+1
+      it(ntor,2)=iv(i1,4)
+      it(ntor,3)=iv(i1,3)
+      it(ntor,4)=iv(i1,2)
+      it(ntor,5)=iv(i2,4)
+      it(ntor,6)=iv(i1,6)
+      it(ntor,7)=iv(i1,5)
+      it(ntor,8)=iv(i2,6)
+      it(ntor,9)=i1
+      it(ntor,10)=i2
+      nju=1
+      end if
+      if (nju.eq.1) goto 60
+      if (k4.eq.k8.and.iv(i1,4).ne.iv(i2,2)) then
+      ntor=ntor+1
+      it(ntor,2)=iv(i1,4)
+      it(ntor,3)=iv(i1,3)
+      it(ntor,4)=iv(i1,2)
+      it(ntor,5)=iv(i2,2)
+      it(ntor,6)=iv(i1,6)
+      it(ntor,7)=iv(i1,5)
+      it(ntor,8)=iv(i2,5)
+      it(ntor,9)=i1
+      it(ntor,10)=i2
+      nju=1
+      end if
+      if (nju.eq.1) goto 60
+      if (k5.eq.k7.and.iv(i1,2).ne.iv(i2,4)) then
+      ntor=ntor+1
+      it(ntor,2)=iv(i1,2)
+      it(ntor,3)=iv(i1,3)
+      it(ntor,4)=iv(i1,4)
+      it(ntor,5)=iv(i2,4)
+      it(ntor,6)=iv(i1,5)
+      it(ntor,7)=iv(i1,6)
+      it(ntor,8)=iv(i2,6)
+      it(ntor,9)=i1
+      it(ntor,10)=i2
+      nju=1
+      end if
+      if (nju.eq.1) goto 60
+      if (k5.eq.k8.and.iv(i1,2).ne.iv(i2,2)) then
+      ntor=ntor+1
+      it(ntor,2)=iv(i1,2)
+      it(ntor,3)=iv(i1,3)
+      it(ntor,4)=iv(i1,4)
+      it(ntor,5)=iv(i2,2)
+      it(ntor,6)=iv(i1,5)
+      it(ntor,7)=iv(i1,6)
+      it(ntor,8)=iv(i2,5)
+      it(ntor,9)=i1
+      it(ntor,10)=i2
+      nju=1
+      end if
+   60 continue
+      if (nju.eq.1) then
+**********************************************************************
+*                                                                    *
+*     Determine force field types of torsion angles                  *
+*                                                                    *
+**********************************************************************
+*     write (41,'(20i4)')ntor,it(ntor,2),it(ntor,3),it(ntor,4),
+*    $it(ntor,5),it(ntor,6),it(ntor,7),it(ntor,8),it(ntor,9),
+*    $it(ntor,10),ibsym(it(ntor,6)),ibsym(it(ntor,7)),
+*    $ibsym(it(ntor,8))
+      ity=0
+      ih1=ia(it(ntor,2),1)
+      ih2=ia(it(ntor,3),1)
+      ih3=ia(it(ntor,4),1)
+      ih4=ia(it(ntor,5),1)
+      if (ih2.gt.ih3) then
+      ih1=ia(it(ntor,5),1)
+      ih2=ia(it(ntor,4),1)
+      ih3=ia(it(ntor,3),1)
+      ih4=ia(it(ntor,2),1)
+      end if
+      if (ih2.eq.ih3.and.ih4.lt.ih1) then
+      ih1=ia(it(ntor,5),1)
+      ih2=ia(it(ntor,4),1)
+      ih3=ia(it(ntor,3),1)
+      ih4=ia(it(ntor,2),1)
+      end if
+      do i3=1,ntoty
+      if (ih1.eq.nts(i3,1).and.ih2.eq.nts(i3,2).and.ih3.eq.nts(i3,3)
+     $.and.ih4.eq.nts(i3,4)) ity=i3
+      end do
+      if (ity.eq.0) then
+      do i3=1,ntoty
+      if (nts(i3,1).eq.0.and.ih2.eq.nts(i3,2).and.ih3.eq.nts(i3,3)
+     $.and.nts(i3,4).eq.0) ity=i3
+      end do
+      end if
+      if (ity.eq.0) then
+      ntor=ntor-1           !Torsion angle does not exist in force field: ignore
+      else
+      it(ntor,1)=ity
+      end if
+      end if
+
+   61 end do
+   62 end do
+      if (ntor.gt.ntomax) stop 'Too many torsion angles'
+
+      return
+      end
+********************************************************************** 
+********************************************************************** 
+
+      subroutine srtoop
+
+********************************************************************** 
+      include 'cbka.blk'
+      include 'cbkbo.blk'
+      include 'cbkrbo.blk'
+      include 'cbkvalence.blk'
+      include 'control.blk'
+      include 'small.blk'
+********************************************************************** 
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In srtoop'
+      call timer(65)
+      close (65)
+      end if
+**********************************************************************
+*                                                                    *
+*     Find out of plane angles in molecule                           *
+*                                                                    *
+**********************************************************************
+      noop=0
+      do i1=1,nval
+      k2=iv(i1,2)
+      k3=iv(i1,3)
+      k4=iv(i1,4)
+      k5=iv(i1,5)
+      k6=iv(i1,6)
+      do i2=1,nbon
+      k7=ib(i2,2)
+      k8=ib(i2,3)
+      if (bo(i2).gt.cutof2) then
+      if (k7.eq.k3.and.k8.ne.k4.and.k8.ne.k2) then
+      noop=noop+1 
+      ioop(noop,2)=k8
+      ioop(noop,3)=k3
+      ioop(noop,4)=k2
+      ioop(noop,5)=k4
+      ioop(noop,6)=i2
+      ioop(noop,7)=iv(i1,5)
+      ioop(noop,8)=iv(i1,6)
+      ioop(noop,9)=i1
+      end if
+      if (k8.eq.k3.and.k7.ne.k4.and.k7.ne.k2) then
+      noop=noop+1 
+      ioop(noop,2)=k7
+      ioop(noop,3)=k3
+      ioop(noop,4)=k2
+      ioop(noop,5)=k4
+      ioop(noop,6)=i2
+      ioop(noop,7)=iv(i1,5)
+      ioop(noop,8)=iv(i1,6)
+      ioop(noop,9)=i1
+      end if
+      end if
+      end do
+      end do
+      
+      do i1=1,noop
+      call caltor(ioop(i1,2),ioop(i1,3),ioop(i1,4),ioop(i1,5),hoop)
+      end do
+      
+********************************************************************** 
+      return
+      end
+**********************************************************************
+**********************************************************************
+
+      subroutine srthb
+
+**********************************************************************
+      include 'cbka.blk'
+      include 'cbkbo.blk'
+      include 'cbkconst.blk'
+      include 'cbkia.blk'
+      include 'cbkrbo.blk'
+      include 'cbksrthb.blk'
+      include 'control.blk'
+      include 'small.blk'
+**********************************************************************
+*                                                                    *
+*     Find hydrogen bonds in molecule                                *
+*                                                                    *
+**********************************************************************
+      if (ndebug.eq.1) then
+      open (65,file='fort.65',status='unknown',access='append')
+      write (65,*) 'In srthb'
+      call timer(65)
+      close (65)
+      end if
+      nhb=0
+**********************************************************************
+*                                                                    *
+*     Locate donor/acceptor bonds                                    *
+*                                                                    *
+**********************************************************************
+      do i1=1,nbon
+      j1=ib(i1,2)
+      j2=ib(i1,3)
+      ihhb1=nphb(ia(j1,1))
+      ihhb2=nphb(ia(j2,1))
+      if (ihhb1.gt.ihhb2) then
+      j1=ib(i1,3)
+      j2=ib(i1,2)
+      ihhb1=nphb(ia(j1,1))
+      ihhb2=nphb(ia(j2,1))
+      end if
+      if (ihhb1.eq.1.and.ihhb2.eq.2.and.bo(i1).gt.0.01) then
+      do i2=1,na
+      ity=ia(i2,1)
+      if (i2.ne.j1.and.i2.ne.j2) then
+      call dista2(j2,i2,dishb,dx,dy,dz)
+      if (nphb(ity).eq.2.and.dishb.lt.10.00) then
+**********************************************************************
+*                                                                    *
+*     Accept hydrogen bond and find hydrogen bond type               *
+*                                                                    *
+**********************************************************************
+      nhb=nhb+1
+      if (nhb.gt.nhbmax) then
+      write (65,*)nhb,nhbmax
+      stop 'Maximum number of hydrogen bonds exceeded'
+      end if
+      ihb(nhb,1)=0
+      ih1=ia(j2,1)
+      ih2=ia(j1,1)
+      ih3=ia(i2,1)
+      do i3=1,nhbty
+      if (ih1.eq.nhbs(i3,1).and.ih2.eq.nhbs(i3,2).and.ih3.eq.
+     $nhbs(i3,3)) ihb(nhb,1)=i3
+      end do
+      if (ihb(nhb,1).eq.0) then
+      write (*,*)'Warning: added hydrogen bond ',ih1,ih2,ih3
+      nhbty=nhbty+1
+      nhbs(nhbty,1)=ih1
+      nhbs(nhbty,2)=ih2
+      nhbs(nhbty,3)=ih3
+      nhbs(nhbty,3)=ih3
+      rhb(nhbty)=2.70
+      dehb(nhbty)=zero
+      vhb1(nhbty)=5.0
+      vhb2(nhbty)=20.0
+      ihb(nhb,1)=nhbty
+      end if
+      ihb(nhb,2)=j2
+      ihb(nhb,3)=j1
+      ihb(nhb,4)=i2
+      ihb(nhb,5)=i1
+      end if
+      end if
+      end do
+
+      end if
+      end do
+
+*     do i1=1,nhb
+*     write (65,'(5i6)')(ihb(i1,i2),i2=1,5)
+*     end do
+*     stop 'End of srthb'
+      return
+      end
+**********************************************************************
+@
+
+
+3.2.2.1
+log
+@I hope this is adds all the REAX files to the REAXFF branch
+@
+text
+@@
+
+
+3.2.2.2
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@a757 1
+*     This sort is on iag, enforces bond order cutoff                *
+@
+
+
+3.2.2.3
+log
+@Finished optimized implementation of ReaxFF.
+Eliminates O(N^2) scaling of srttor and srtang.
+Also blanks out the ghost bonds that are not in dihedral
+with local atom.
+@
+text
+@d69 41
+d262 1
+d271 124
+d416 1
+a427 2
+      integer nboncol(nbomax)
+
+d448 6
+a453 3
+         dxm=c(i1,1)-c(i2,1)
+         dym=c(i1,2)-c(i2,2)
+         dzm=c(i1,3)-c(i2,3)
+d462 6
+a467 3
+         dxm=c(i1,1)-c(i2,1)
+         dym=c(i1,2)-c(i2,2)
+         dzm=c(i1,3)-c(i2,3)
+d517 6
+a522 3
+      dxm=c(i1,1)-c(i2,1)
+      dym=c(i1,2)-c(i2,2)
+      dzm=c(i1,3)-c(i2,3)
+a673 94
+********************************************************************** 
+*                                                                    *
+*     Eliminate bonds that are not in dihedral with a local atom     *
+*                                                                    *
+********************************************************************** 
+
+      ntmp0 = 0
+      ntmp1 = 0
+      ntmp2 = 0
+      ntmp3 = 0
+      ntmp4 = 0
+      do i1 = 1,nbon
+         if (ib(i1,2).le.na_local) then
+            if (ib(i1,3).le.na_local) then
+               nboncol(i1) = 1
+               ntmp1 = ntmp1+1
+            else
+               nboncol(i1) = 2
+               ntmp2 = ntmp2+1
+            endif
+         else if (ib(i1,3).le.na_local) then
+            nboncol(i1) = 2
+            ntmp2 = ntmp2+1
+         else
+            nboncol(i1) = 0
+         endif
+      end do
+
+      do i1 = 1,nbon
+         if (nboncol(i1).eq.2) then
+            if (ib(i1,2).le.na_local) then
+               i3=ib(i1,3)
+            else
+               i3=ib(i1,2)
+            endif
+           
+            do i4 = 1,ia(i3,2)
+               i5=nubon2(i3,i4)
+               if (nboncol(i5).eq.0) then
+                  nboncol(i5)=3
+                  ntmp3 = ntmp3+1
+               endif
+            end do
+         endif
+      end do
+
+      do i1 = 1,nbon
+         if (nboncol(i1).eq.3) then
+* One end definitely has a bond of color 2
+* Find it and color bonds on other end 4
+            i3=ib(i1,2)
+            i3b=0
+            do i4 = 1,ia(i3,2)
+               i5=nubon2(i3,i4)
+               if (nboncol(i5).eq.2) then
+                  i3b=ib(i1,3)
+               endif
+            end do
+
+            if (i3b.eq.0) then
+               i3=ib(i1,3)
+               i3b=0
+               do i4 = 1,ia(i3,2)
+                  i5=nubon2(i3,i4)
+                  if (nboncol(i5).eq.2) then
+                     i3b=ib(i1,2)
+                  endif
+               end do
+            endif
+
+            if (i3b.eq.0) then
+               stop 'Could not find color 2 ffrom color 3 bond'
+            endif
+
+            do i4 = 1,ia(i3b,2)
+               i5=nubon2(i3b,i4)
+               if (nboncol(i5).eq.0) then
+                  nboncol(i5)=4
+                  ntmp4 = ntmp4+1
+               endif
+            end do
+           
+         endif
+      end do
+
+* Set the bond orders of excluded bonds to zero.
+
+      do i1 = 1,nbon
+         if (nboncol(i1).eq.0) then
+            bo(i1) = 0.0
+            ntmp0=ntmp0+1
+         endif
+      end do
+
+a825 188
+c$$$********************************************************************** 
+c$$$
+c$$$      subroutine srtang
+c$$$
+c$$$********************************************************************** 
+c$$$      include 'cbka.blk'
+c$$$      include 'cbkbo.blk'
+c$$$      include 'cbkff.blk'
+c$$$      include 'cbkia.blk'
+c$$$      include 'cbkrbo.blk'
+c$$$      include 'cbkvalence.blk'
+c$$$      include 'cellcoord.blk'
+c$$$      include 'control.blk'
+c$$$      include 'small.blk'
+c$$$
+c$$$      dimension a(3),b(3),j(3)
+c$$$********************************************************************** 
+c$$$*                                                                    *
+c$$$*     Find valency angles in molecule                                *
+c$$$*                                                                    *
+c$$$********************************************************************** 
+c$$$      if (ndebug.eq.1) then
+c$$$      open (65,file='fort.65',status='unknown',access='append')
+c$$$      write (65,*) 'In srtang'
+c$$$      call timer(65)
+c$$$      close (65)
+c$$$      end if
+c$$$      nval=0
+c$$$      if (nvaty.eq.0) return
+c$$$      do i1=1,nbon-1
+c$$$      k4=ib(i1,2)
+c$$$      k5=ib(i1,3)
+c$$$      if (bo(i1).lt.cutof2) goto 51
+c$$$      do i2=i1+1,nbon
+c$$$      iju=0
+c$$$      if (bo(i2).lt.cutof2) goto 50
+c$$$      if (bo(i1)*bo(i2).lt.0.001) goto 50
+c$$$      k7=ib(i2,2)
+c$$$      k8=ib(i2,3)
+c$$$
+c$$$      if (k4.eq.k7.and.k5.eq.k8.and.k4.ne.k8.and.k5.ne.k7) then
+c$$$      nval=nval+1
+c$$$      iv(nval,2)=k5
+c$$$      iv(nval,3)=k4
+c$$$      iv(nval,4)=k8
+c$$$      iv(nval,5)=i1
+c$$$      iv(nval,6)=i2
+c$$$      nval=nval+1
+c$$$      iv(nval,2)=k4
+c$$$      iv(nval,3)=k5
+c$$$      iv(nval,4)=k7
+c$$$      iv(nval,5)=i1
+c$$$      iv(nval,6)=i2
+c$$$      iju=2
+c$$$      end if
+c$$$      if (iju.eq.2) goto 50
+c$$$
+c$$$      if (k4.eq.k8.and.k5.eq.k7.and.k4.ne.k7.and.k5.ne.k8) then
+c$$$      nval=nval+1
+c$$$      iv(nval,2)=k5
+c$$$      iv(nval,3)=k4
+c$$$      iv(nval,4)=k7
+c$$$      iv(nval,5)=i1
+c$$$      iv(nval,6)=i2
+c$$$      nval=nval+1
+c$$$      iv(nval,2)=k4
+c$$$      iv(nval,3)=k5
+c$$$      iv(nval,4)=k8
+c$$$      iv(nval,5)=i1
+c$$$      iv(nval,6)=i2
+c$$$      iju=2
+c$$$      end if
+c$$$      if (iju.eq.2) goto 50
+c$$$
+c$$$      if (k4.eq.k7) then
+c$$$      nval=nval+1
+c$$$      iv(nval,2)=k5
+c$$$      iv(nval,3)=k4
+c$$$      iv(nval,4)=k8
+c$$$      iv(nval,5)=i1
+c$$$      iv(nval,6)=i2
+c$$$      iju=1
+c$$$      end if
+c$$$      if (iju.eq.1) goto 50
+c$$$
+c$$$      if (k4.eq.k8) then
+c$$$      nval=nval+1
+c$$$      iv(nval,2)=k5
+c$$$      iv(nval,3)=k4
+c$$$      iv(nval,4)=k7
+c$$$      iv(nval,5)=i1
+c$$$      iv(nval,6)=i2
+c$$$      iju=1
+c$$$      end if
+c$$$      if (iju.eq.1) goto 50
+c$$$
+c$$$      if (k5.eq.k7) then
+c$$$      nval=nval+1
+c$$$      iv(nval,2)=k4
+c$$$      iv(nval,3)=k5
+c$$$      iv(nval,4)=k8
+c$$$      iv(nval,5)=i1
+c$$$      iv(nval,6)=i2
+c$$$      iju=1
+c$$$      end if
+c$$$      if (iju.eq.1) goto 50
+c$$$
+c$$$      if (k5.eq.k8) then
+c$$$      nval=nval+1
+c$$$      iv(nval,2)=k4
+c$$$      iv(nval,3)=k5
+c$$$      iv(nval,4)=k7
+c$$$      iv(nval,5)=i1
+c$$$      iv(nval,6)=i2
+c$$$      iju=1
+c$$$      end if
+c$$$   50 continue
+c$$$      if (iju.gt.0) then
+c$$$**********************************************************************
+c$$$*                                                                    *
+c$$$*     Determine force field types of angles                          *
+c$$$*                                                                    *
+c$$$**********************************************************************
+c$$$      ity=0
+c$$$      ih1=ia(iv(nval,2),1)
+c$$$      ih2=ia(iv(nval,3),1)
+c$$$      ih3=ia(iv(nval,4),1)
+c$$$      if (ih3.lt.ih1) then
+c$$$      ih3=ia(iv(nval,2),1)
+c$$$      ih2=ia(iv(nval,3),1)
+c$$$      ih1=ia(iv(nval,4),1)
+c$$$      end if
+c$$$
+c$$$      do i3=1,nvaty
+c$$$      if (ih1.eq.nvs(i3,1).and.ih2.eq.nvs(i3,2).and.
+c$$$     $ih3.eq.nvs(i3,3)) ity=i3
+c$$$      end do
+c$$$
+c$$$      if (ity.eq.0.or.abs(vka(ity)).lt.0.001) then   !Valence angle does not exist in force field;ignore
+c$$$      nval=nval-1
+c$$$      ihul=0
+c$$$      else
+c$$$      iv(nval,1)=ity
+c$$$      ihul=1
+c$$$      end if
+c$$$
+c$$$      if (iju.eq.2) then
+c$$$      ity=0
+c$$$      ih1=ia(iv(nval-ihul,2),1)
+c$$$      ih2=ia(iv(nval-ihul,3),1)
+c$$$      ih3=ia(iv(nval-ihul,4),1)
+c$$$      if (ih3.lt.ih1) then
+c$$$      ih3=ia(iv(nval-ihul,2),1)
+c$$$      ih2=ia(iv(nval-ihul,3),1)
+c$$$      ih1=ia(iv(nval-ihul,4),1)
+c$$$      end if
+c$$$
+c$$$      do i3=1,nvaty
+c$$$      if (ih1.eq.nvs(i3,1).and.ih2.eq.nvs(i3,2).and.
+c$$$     $ih3.eq.nvs(i3,3)) ity=i3
+c$$$      end do
+c$$$
+c$$$      if (ity.eq.0.or.abs(vka(ity)).lt.0.001) then   !Valence angle does not exist in force field;ignore
+c$$$      if (ihul.eq.1) then
+c$$$      do i3=1,6
+c$$$      iv(nval-1,i3)=iv(nval,i3)
+c$$$      end do
+c$$$      end if
+c$$$      nval=nval-1
+c$$$      else
+c$$$      iv(nval-ihul,1)=ity
+c$$$      end if
+c$$$
+c$$$      end if
+c$$$
+c$$$      end if
+c$$$
+c$$$      end do
+c$$$   51 continue
+c$$$      end do
+c$$$
+c$$$      nbonop=0
+c$$$
+c$$$      if (nval.gt.nvamax) stop 'Too many valency angles'
+c$$$     
+c$$$      return
+c$$$      end
+c$$$********************************************************************** 
+a832 2
+      include 'cbknubon2.blk'
+      include 'cbknuval.blk'
+a852 6
+
+      do i1=1,nbon
+      nuvalna(i1)=0
+      nuvalnb(i1)=0
+      end do
+
+d855 5
+a859 9
+      do iindexatom=1,na
+      inumbonds=ia(iindexatom,2)
+      do jindexbond=1,inumbonds-1
+      jindexbondlist = nubon2(iindexatom,jindexbond)
+      if (bo(jindexbondlist).lt.cutof2) goto 51
+      k4=ib(jindexbondlist,2)
+      k5=ib(jindexbondlist,3)
+      do kindexbond=jindexbond+1,inumbonds
+      kindexbondlist = nubon2(iindexatom,kindexbond)
+d861 4
+a864 4
+      if (bo(kindexbondlist).lt.cutof2) goto 50
+      if (bo(jindexbondlist)*bo(kindexbondlist).lt.0.001) goto 50
+      k7=ib(kindexbondlist,2)
+      k8=ib(kindexbondlist,3)
+d871 2
+a872 2
+      iv(nval,5)=jindexbondlist
+      iv(nval,6)=kindexbondlist
+d877 2
+a878 2
+      iv(nval,5)=jindexbondlist
+      iv(nval,6)=kindexbondlist
+d888 2
+a889 2
+      iv(nval,5)=jindexbondlist
+      iv(nval,6)=kindexbondlist
+d894 2
+a895 2
+      iv(nval,5)=jindexbondlist
+      iv(nval,6)=kindexbondlist
+d905 2
+a906 2
+      iv(nval,5)=jindexbondlist
+      iv(nval,6)=kindexbondlist
+d916 2
+a917 2
+      iv(nval,5)=jindexbondlist
+      iv(nval,6)=kindexbondlist
+d927 2
+a928 2
+      iv(nval,5)=jindexbondlist
+      iv(nval,6)=kindexbondlist
+d938 2
+a939 2
+      iv(nval,5)=jindexbondlist
+      iv(nval,6)=kindexbondlist
+a969 18
+      if (iv(nval,2).lt.iv(nval,3)) then
+         nuvalna(jindexbondlist)=nuvalna(jindexbondlist)+1
+         nuvala(jindexbondlist,nuvalna(jindexbondlist),1)=kindexbondlist
+         nuvala(jindexbondlist,nuvalna(jindexbondlist),2)=nval
+      else
+         nuvalnb(jindexbondlist)=nuvalnb(jindexbondlist)+1
+         nuvalb(jindexbondlist,nuvalnb(jindexbondlist),1)=kindexbondlist
+         nuvalb(jindexbondlist,nuvalnb(jindexbondlist),2)=nval
+      endif
+      if (iv(nval,4).lt.iv(nval,3)) then
+         nuvalna(kindexbondlist)=nuvalna(kindexbondlist)+1
+         nuvala(kindexbondlist,nuvalna(kindexbondlist),1)=jindexbondlist
+         nuvala(kindexbondlist,nuvalna(kindexbondlist),2)=nval
+      else
+         nuvalnb(kindexbondlist)=nuvalnb(kindexbondlist)+1
+         nuvalb(kindexbondlist,nuvalnb(kindexbondlist),1)=jindexbondlist
+         nuvalb(kindexbondlist,nuvalnb(kindexbondlist),2)=nval
+      endif
+a996 18
+      if (iv(nval,2).lt.iv(nval,3)) then
+         nuvalna(jindexbondlist)=nuvalna(jindexbondlist)+1
+         nuvala(jindexbondlist,nuvalna(jindexbondlist),1)=kindexbondlist
+         nuvala(jindexbondlist,nuvalna(jindexbondlist),2)=nval
+      else
+         nuvalnb(jindexbondlist)=nuvalnb(jindexbondlist)+1
+         nuvalb(jindexbondlist,nuvalnb(jindexbondlist),1)=kindexbondlist
+         nuvalb(jindexbondlist,nuvalnb(jindexbondlist),2)=nval
+      endif
+      if (iv(nval,3).lt.iv(nval,4)) then
+         nuvalna(kindexbondlist)=nuvalna(kindexbondlist)+1
+         nuvala(kindexbondlist,nuvalna(kindexbondlist),1)=jindexbondlist
+         nuvala(kindexbondlist,nuvalna(kindexbondlist),2)=nval
+      else
+         nuvalnb(kindexbondlist)=nuvalnb(kindexbondlist)+1
+         nuvalb(kindexbondlist,nuvalnb(kindexbondlist),1)=jindexbondlist
+         nuvalb(kindexbondlist,nuvalnb(kindexbondlist),2)=nval
+      endif
+a1005 1
+      end do
+a1013 161
+c$$$********************************************************************** 
+c$$$
+c$$$      subroutine srttor
+c$$$
+c$$$********************************************************************** 
+c$$$      include 'cbka.blk'
+c$$$      include 'cbkbo.blk'
+c$$$      include 'cbkia.blk'
+c$$$      include 'cbktorsion.blk'
+c$$$      include 'cbkvalence.blk'
+c$$$      include 'cellcoord.blk'
+c$$$      include 'control.blk'
+c$$$********************************************************************** 
+c$$$*                                                                    *
+c$$$*     Find torsion angles in molecule                                *
+c$$$*                                                                    *
+c$$$********************************************************************** 
+c$$$      if (ndebug.eq.1) then
+c$$$      open (65,file='fort.65',status='unknown',access='append')
+c$$$      write (65,*) 'In srttor'
+c$$$      call timer(65)
+c$$$      close (65)
+c$$$      end if
+c$$$      ntor=0
+c$$$      if (ntoty.eq.0) return
+c$$$      do i1=1,nval-1
+c$$$      k2=iv(i1,2)
+c$$$      k3=iv(i1,3)
+c$$$      k3h=iv(i1,4)
+c$$$      k4=iv(i1,5)
+c$$$      k5=iv(i1,6)
+c$$$      do i2=i1+1,nval
+c$$$      k9=iv(i2,2)
+c$$$      k6=iv(i2,3)
+c$$$      k6h=iv(i2,4)
+c$$$      k7=iv(i2,5)
+c$$$      k8=iv(i2,6)
+c$$$      bopr=bo(k4)*bo(k5)*bo(k7)*bo(k8)
+c$$$      if (bopr.lt.0.000100) goto 61
+c$$$      nju=0
+c$$$      
+c$$$      if (k3.eq.k6) goto 60
+c$$$*     if (k3.eq.k6) then
+c$$$*     write (42,'(20i4)')k2,k3,k3h,k9,k6,k6h
+c$$$*     write (42,'(20i4)')nvlx(ibsym(k4)),nvly(ibsym(k4)),
+c$$$*    $nvlz(ibsym(k4))
+c$$$*     write (42,'(20i4)')nvlx(ibsym(k7)),nvly(ibsym(k7)),
+c$$$*    $nvlz(ibsym(k7))
+c$$$*     if ((k3.lt.k2).and.(k6.lt.k9)) goto 60
+c$$$*     if (nvlx(ibsym(k4)).eq.nvlx(ibsym(k7)).and.
+c$$$*    $nvly(ibsym(k4)).eq.nvly(ibsym(k7)).and.
+c$$$*    $nvlz(ibsym(k4)).eq.nvlz(ibsym(k7))) goto 60
+c$$$*     end if
+c$$$ 
+c$$$      if (k4.eq.k7.and.iv(i1,4).ne.iv(i2,4)) then
+c$$$      ntor=ntor+1
+c$$$      it(ntor,2)=iv(i1,4)
+c$$$      it(ntor,3)=iv(i1,3)
+c$$$      it(ntor,4)=iv(i1,2)
+c$$$      it(ntor,5)=iv(i2,4)
+c$$$      it(ntor,6)=iv(i1,6)
+c$$$      it(ntor,7)=iv(i1,5)
+c$$$      it(ntor,8)=iv(i2,6)
+c$$$      it(ntor,9)=i1
+c$$$      it(ntor,10)=i2
+c$$$      nju=1
+c$$$      end if
+c$$$      if (nju.eq.1) goto 60
+c$$$      if (k4.eq.k8.and.iv(i1,4).ne.iv(i2,2)) then
+c$$$      ntor=ntor+1
+c$$$      it(ntor,2)=iv(i1,4)
+c$$$      it(ntor,3)=iv(i1,3)
+c$$$      it(ntor,4)=iv(i1,2)
+c$$$      it(ntor,5)=iv(i2,2)
+c$$$      it(ntor,6)=iv(i1,6)
+c$$$      it(ntor,7)=iv(i1,5)
+c$$$      it(ntor,8)=iv(i2,5)
+c$$$      it(ntor,9)=i1
+c$$$      it(ntor,10)=i2
+c$$$      nju=1
+c$$$      end if
+c$$$      if (nju.eq.1) goto 60
+c$$$      if (k5.eq.k7.and.iv(i1,2).ne.iv(i2,4)) then
+c$$$      ntor=ntor+1
+c$$$      it(ntor,2)=iv(i1,2)
+c$$$      it(ntor,3)=iv(i1,3)
+c$$$      it(ntor,4)=iv(i1,4)
+c$$$      it(ntor,5)=iv(i2,4)
+c$$$      it(ntor,6)=iv(i1,5)
+c$$$      it(ntor,7)=iv(i1,6)
+c$$$      it(ntor,8)=iv(i2,6)
+c$$$      it(ntor,9)=i1
+c$$$      it(ntor,10)=i2
+c$$$      nju=1
+c$$$      end if
+c$$$      if (nju.eq.1) goto 60
+c$$$      if (k5.eq.k8.and.iv(i1,2).ne.iv(i2,2)) then
+c$$$      ntor=ntor+1
+c$$$      it(ntor,2)=iv(i1,2)
+c$$$      it(ntor,3)=iv(i1,3)
+c$$$      it(ntor,4)=iv(i1,4)
+c$$$      it(ntor,5)=iv(i2,2)
+c$$$      it(ntor,6)=iv(i1,5)
+c$$$      it(ntor,7)=iv(i1,6)
+c$$$      it(ntor,8)=iv(i2,5)
+c$$$      it(ntor,9)=i1
+c$$$      it(ntor,10)=i2
+c$$$      nju=1
+c$$$      end if
+c$$$   60 continue
+c$$$      if (nju.eq.1) then
+c$$$**********************************************************************
+c$$$*                                                                    *
+c$$$*     Determine force field types of torsion angles                  *
+c$$$*                                                                    *
+c$$$**********************************************************************
+c$$$*     write (41,'(20i4)')ntor,it(ntor,2),it(ntor,3),it(ntor,4),
+c$$$*    $it(ntor,5),it(ntor,6),it(ntor,7),it(ntor,8),it(ntor,9),
+c$$$*    $it(ntor,10),ibsym(it(ntor,6)),ibsym(it(ntor,7)),
+c$$$*    $ibsym(it(ntor,8))
+c$$$      ity=0
+c$$$      ih1=ia(it(ntor,2),1)
+c$$$      ih2=ia(it(ntor,3),1)
+c$$$      ih3=ia(it(ntor,4),1)
+c$$$      ih4=ia(it(ntor,5),1)
+c$$$      if (ih2.gt.ih3) then
+c$$$      ih1=ia(it(ntor,5),1)
+c$$$      ih2=ia(it(ntor,4),1)
+c$$$      ih3=ia(it(ntor,3),1)
+c$$$      ih4=ia(it(ntor,2),1)
+c$$$      end if
+c$$$      if (ih2.eq.ih3.and.ih4.lt.ih1) then
+c$$$      ih1=ia(it(ntor,5),1)
+c$$$      ih2=ia(it(ntor,4),1)
+c$$$      ih3=ia(it(ntor,3),1)
+c$$$      ih4=ia(it(ntor,2),1)
+c$$$      end if
+c$$$      do i3=1,ntoty
+c$$$      if (ih1.eq.nts(i3,1).and.ih2.eq.nts(i3,2).and.ih3.eq.nts(i3,3)
+c$$$     $.and.ih4.eq.nts(i3,4)) ity=i3
+c$$$      end do
+c$$$      if (ity.eq.0) then
+c$$$      do i3=1,ntoty
+c$$$      if (nts(i3,1).eq.0.and.ih2.eq.nts(i3,2).and.ih3.eq.nts(i3,3)
+c$$$     $.and.nts(i3,4).eq.0) ity=i3
+c$$$      end do
+c$$$      end if
+c$$$      if (ity.eq.0) then
+c$$$      ntor=ntor-1           !Torsion angle does not exist in force field: ignore
+c$$$      else
+c$$$      it(ntor,1)=ity
+c$$$      end if
+c$$$      end if
+c$$$
+c$$$   61 end do
+c$$$   62 end do
+c$$$      if (ntor.gt.ntomax) stop 'Too many torsion angles'
+c$$$
+c$$$      return
+c$$$      end
+c$$$********************************************************************** 
+a1023 1
+      include 'cbknuval.blk'
+a1025 1
+      include 'small.blk'
+d1039 2
+a1040 9
+
+      do iindexbondlist=1,nbon
+      if (bo(iindexbondlist).lt.cutof2) goto 61
+      inumbondsa=nuvalna(iindexbondlist)
+      inumbondsb=nuvalnb(iindexbondlist)
+      do jindexbond=1,inumbondsa
+      jindexbondlist = nuvala(iindexbondlist,jindexbond,1)
+      i1 = nuvala(iindexbondlist,jindexbond,2)
+      if (bo(jindexbondlist).lt.cutof2) goto 601
+d1042 1
+d1045 2
+a1046 4
+      do kindexbond=1,inumbondsb
+      kindexbondlist = nuvalb(iindexbondlist,kindexbond,1)
+      i2 = nuvalb(iindexbondlist,kindexbond,2)
+      if (bo(kindexbondlist).lt.cutof2) goto 602
+d1048 1
+a1050 1
+
+d1052 1
+a1052 1
+      if (bopr.lt.0.000100) goto 602
+a1167 2
+ 602  end do
+ 601  end do
+d1169 1
+@
+
+
+3.2.2.4
+log
+@Further pruned the ghost bond list
+@
+text
+@a339 2
+
+* Fist detect all bonds and create preliminary list
+d341 3
+a343 2
+      do 11 ivl=1,nvpair
+      if (nvlbo(ivl).eq.0) goto 11  !not in bond order range
+d350 5
+d357 1
+d406 11
+a416 1
+
+d430 43
+d477 12
+d498 1
+a498 1
+ 11   continue
+d585 1
+a585 10
+c$$$* Set the bond orders of excluded bonds to zero.
+c$$$
+c$$$      do i1 = 1,nbon
+c$$$         if (nboncol(i1).eq.0) then
+c$$$            bo(i1) = 0.0
+c$$$            ntmp0=ntmp0+1
+c$$$         endif
+c$$$      end do
+
+* Compact the list, removing all uncolored bonds
+a586 1
+      nbon_new = 0
+d589 1
+a590 5
+         else
+            nbon_new = nbon_new+1
+            ib(nbon_new,1) = ib(i1,1)
+            ib(nbon_new,2) = ib(i1,2)
+            ib(nbon_new,3) = ib(i1,3)
+a592 160
+      nbon = nbon_new
+
+      do i1=1,na
+      do i2=2,mbond+2
+      ia(i1,i2)=0
+      iag(i1,i2)=0
+      end do
+      end do
+
+* Generate full set of bond data structures
+
+      do 10 i0 = 1,nbon
+      i1 = ib(i0,2)
+      i2 = ib(i0,3)
+      dxm=c(i1,1)-c(i2,1)
+      dym=c(i1,2)-c(i2,2)
+      dzm=c(i1,3)-c(i2,3)
+      dis=sqrt(dxm*dxm+dym*dym+dzm*dzm)
+*     do 10 i1=1,na-1
+*     do 10 i2=i1+1,na
+*     call dista2(i1,i2,dis,dxm,dym,dzm)
+      nubon(i1,i2)=0
+      nubon(i2,i1)=0
+      ih1=ia(i1,1)
+      ih2=ia(i2,1)
+*     if (dis.gt.5.0*rob) goto 10
+      disdx=dxm/dis
+      disdy=dym/dis
+      disdz=dzm/dis
+      itype=0
+      if (ih1.gt.ih2) then
+      ih1=ia(i2,1)
+      ih2=ia(i1,1)
+      end if
+      do i3=1,nboty2
+      if (ih1.eq.nbs(i3,1).and.ih2.eq.nbs(i3,2)) itype=i3
+      end do
+      if (itype.eq.0.and.rat(ih1).gt.zero.and.rat(ih2).gt.zero) then
+      call mdsav(1,qfile(nprob))
+      write (*,*)qa(i1),'-',qa(i2),'Fatal: Unknown bond in molecule'
+      stop 
+      end if
+
+      rhulp=dis/rob1(ih1,ih2)
+ 
+********************************************************************** 
+*                                                                    *
+*     Determine bond orders                                          *
+*                                                                    *
+********************************************************************** 
+      rh2=zero
+      rh2p=zero
+      rh2pp=zero
+      ehulp=zero
+      ehulpp=zero
+      ehulppp=zero
+      bomh=bom(itype)
+      if (rapt(ih1).gt.zero.and.rapt(ih2).gt.zero) then
+      rhulp2=dis/rob2(ih1,ih2)
+      rh2p=rhulp2**ptp(itype)
+      ehulpp=bomh*exp(pdp(itype)*rh2p)
+      end if
+      if (vnq(ih1).gt.zero.and.vnq(ih2).gt.zero) then
+      rhulp3=dis/rob3(ih1,ih2)
+      rh2pp=rhulp3**popi(itype)
+      ehulppp=bomh*exp(pdo(itype)*rh2pp)
+      end if
+
+      if (rat(ih1).gt.zero.and.rat(ih2).gt.zero) then
+      rh2=rhulp**bop2(itype)
+      ehulp=bomh*(1.0+cutoff)*exp(bop1(itype)*rh2)
+      end if
+
+      bor=ehulp+ehulpp+ehulppp
+      borsi=ehulp
+      borpi=ehulpp
+      borpi2=ehulppp
+      dbordrob=bop2(itype)*bop1(itype)*rh2*(1.0/dis)*ehulp+
+     $ptp(itype)*pdp(itype)*rh2p*(1.0/dis)*ehulpp+
+     $popi(itype)*pdo(itype)*rh2pp*(1.0/dis)*ehulppp
+      dborsidrob=bop2(itype)*bop1(itype)*rh2*(1.0/dis)*ehulp
+      dborpidrob=ptp(itype)*pdp(itype)*rh2p*(1.0/dis)*ehulpp
+      dborpi2drob=popi(itype)*pdo(itype)*rh2pp*(1.0/dis)*ehulppp
+     
+      nbon2=nbon2+1
+      j1=i1
+      j2=i2
+
+********************************************************************** 
+*                                                                    *
+*     Determine bond orders                                          *
+*                                                                    *
+********************************************************************** 
+      ib(i0,1)=itype
+      ib(i0,2)=j1
+      ib(i0,3)=j2
+      ibsym(i0)=ivl
+      drdc(i0,1,1)=disdx
+      drdc(i0,2,1)=disdy
+      drdc(i0,3,1)=disdz
+      drdc(i0,1,2)=-disdx
+      drdc(i0,2,2)=-disdy
+      drdc(i0,3,2)=-disdz
+      abo(i1)=abo(i1)+bor-cutoff
+      if (i1.ne.i2) abo(i2)=abo(i2)+bor-cutoff
+      bo(i0)=bor-cutoff
+      bos(i0)=bor-cutoff
+      bosi(i0)=borsi-cutoff
+      bopi(i0)=borpi
+      bopi2(i0)=borpi2
+      rbo(i0)=dis
+      dbodr(i0)=dbordrob
+*     dbosidr(i0)=dborsidrob
+      dbopidr(i0)=dborpidrob
+      dbopi2dr(i0)=dborpi2drob
+      dbodc(i0,1,1)=dbodr(i0)*drdc(i0,1,1)
+      dbodc(i0,2,1)=dbodr(i0)*drdc(i0,2,1)
+      dbodc(i0,3,1)=dbodr(i0)*drdc(i0,3,1)
+      dbodc(i0,1,2)=dbodr(i0)*drdc(i0,1,2)
+      dbodc(i0,2,2)=dbodr(i0)*drdc(i0,2,2)
+      dbodc(i0,3,2)=dbodr(i0)*drdc(i0,3,2)
+*     dbosidc(i0,1,1)=dbosidr(i0)*drdc(i0,1,1)
+*     dbosidc(i0,2,1)=dbosidr(i0)*drdc(i0,2,1)
+*     dbosidc(i0,3,1)=dbosidr(i0)*drdc(i0,3,1)
+*     dbosidc(i0,1,2)=dbosidr(i0)*drdc(i0,1,2)
+*     dbosidc(i0,2,2)=dbosidr(i0)*drdc(i0,2,2)
+*     dbosidc(i0,3,2)=dbosidr(i0)*drdc(i0,3,2)
+      dbopidc(i0,1,1)=dbopidr(i0)*drdc(i0,1,1)
+      dbopidc(i0,2,1)=dbopidr(i0)*drdc(i0,2,1)
+      dbopidc(i0,3,1)=dbopidr(i0)*drdc(i0,3,1)
+      dbopidc(i0,1,2)=dbopidr(i0)*drdc(i0,1,2)
+      dbopidc(i0,2,2)=dbopidr(i0)*drdc(i0,2,2)
+      dbopidc(i0,3,2)=dbopidr(i0)*drdc(i0,3,2)
+      dbopi2dc(i0,1,1)=dbopi2dr(i0)*drdc(i0,1,1)
+      dbopi2dc(i0,2,1)=dbopi2dr(i0)*drdc(i0,2,1)
+      dbopi2dc(i0,3,1)=dbopi2dr(i0)*drdc(i0,3,1)
+      dbopi2dc(i0,1,2)=dbopi2dr(i0)*drdc(i0,1,2)
+      dbopi2dc(i0,2,2)=dbopi2dr(i0)*drdc(i0,2,2)
+      dbopi2dc(i0,3,2)=dbopi2dr(i0)*drdc(i0,3,2)
+      ia(i1,2)=ia(i1,2)+1
+      if (i1.ne.i2) ia(i2,2)=ia(i2,2)+1
+      ia(i1,ia(i1,2)+2)=i2 
+      ia(i2,ia(i2,2)+2)=i1 
+      if (ia(i1,2).gt.nsbma2) nsbma2=ia(i1,2)
+      if (ia(i2,2).gt.nsbma2) nsbma2=ia(i2,2)
+      if (bor.gt.cutof3) then
+      iag(i1,2)=iag(i1,2)+1
+      iag(i2,2)=iag(i2,2)+1
+      iag(i1,iag(i1,2)+2)=i2 
+      iag(i2,iag(i2,2)+2)=i1 
+      nubon1(i1,iag(i1,2))=i0
+      nubon1(i2,iag(i2,2))=i0
+      if (iag(i1,2).gt.nsbmax) nsbmax=iag(i1,2)
+      if (iag(i2,2).gt.nsbmax) nsbmax=iag(i2,2)
+      end if
+      nubon2(i1,ia(i1,2))=i0
+      nubon2(i2,ia(i2,2))=i0
+      nubon(i1,i2)=i0     !Only valid for non-periodic systems
+      nubon(i2,i1)=i0
+   10 continue
+a610 1
+      imolde = 1
+d667 2
+a668 2
+      write (7,1000)NA,qmol
+      do i1=1,NA
+d728 2
+a729 2
+      write (7,1000)NA,qmol
+      do i1=1,NA
+@
+
+
+3.2.2.5
+log
+@Added various things to make Grasp/REAXFF run on Blue Gene
+@
+text
+@d34 1
+a34 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d87 1
+a87 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d162 1
+a162 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d215 1
+a215 1
+C*     open (65,file='fort.65',status='unknown',access='append')
+d269 1
+a269 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d277 1
+a277 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d873 1
+a873 1
+Cc$$$      open (65,file='fort.65',status='unknown',access='append')
+d1063 1
+a1063 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d1294 1
+a1294 1
+Cc$$$      open (65,file='fort.65',status='unknown',access='append')
+d1457 1
+a1457 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d1622 1
+a1622 1
+C      open (65,file='fort.65',status='unknown',access='append')
+d1696 1
+a1696 1
+C      open (65,file='fort.65',status='unknown',access='append')
+@
+
+
+3.2.2.6
+log
+@Fixed bug in srtbon1 that allowed memory overflow.
+@
+text
+@a411 4
+      if (nbon.gt.nbomax) then 
+      write (95,*)nbon,nbomax
+      stop 'Too many bonds; maybe wrong cell parameters'
+      end if
+d501 1
+a501 1
+               stop 'Could not find color 2 from color 3 bond'
+d706 4
+@
+
+
+3.2.2.7
+log
+@Greatly reduced memory usage.
+@
+text
+@d365 1
+a365 1
+c$$$      call mdsav(1,qfile(nprob))
+d413 1
+a413 1
+      write (6,*)nbon,nbomax,ivl,nvpair
+d426 2
+d562 2
+d579 1
+a579 1
+c$$$      call mdsav(1,qfile(nprob))
+d698 2
+@
+
+
+3.2.2.8
+log
+@Added some error checking and some memory efficiency.
+@
+text
+@d261 1
+a261 2
+      integer nboncol(nboallmax)
+      integer iball(nboallmax,3)
+d305 1
+a305 1
+      nbonall=0
+d411 3
+a413 3
+      nbonall=nbonall+1
+      if (nbonall.gt.nboallmax) then 
+      write (6,*)nbonall,nboallmax,ivl,nvpair
+d416 3
+a418 4
+      iball(nbonall,1)=itype
+      iball(nbonall,2)=j1
+      iball(nbonall,3)=j2
+
+d420 1
+a420 13
+      if (ia(i1,2).gt.mbond) then 
+         write (6,*)ia(i1,2),mbond
+         stop 'Too many bonds on atom. Increase mbond'
+      end if
+
+      if (i1.ne.i2) then
+         ia(i2,2)=ia(i2,2)+1
+         if (ia(i2,2).gt.mbond) then 
+            write (6,*)ia(i2,2),mbond
+            stop 'Too many bonds on atom. Increase mbond'
+         end if
+      endif
+
+d423 3
+a425 3
+      if (abs(de1(iball(nbonall,1))).gt.-0.01) then
+      nubon2(i1,ia(i1,2))=nbonall
+      nubon2(i2,ia(i2,2))=nbonall
+d427 1
+a427 1
+      nbonall=nbonall-1      !Inorganics
+d443 3
+a445 3
+      do i1 = 1,nbonall
+         if (iball(i1,2).le.na_local) then
+            if (iball(i1,3).le.na_local) then
+d452 1
+a452 1
+         else if (iball(i1,3).le.na_local) then
+d460 1
+a460 1
+      do i1 = 1,nbonall
+d462 2
+a463 2
+            if (iball(i1,2).le.na_local) then
+               i3=iball(i1,3)
+d465 1
+a465 1
+               i3=iball(i1,2)
+d478 1
+a478 1
+      do i1 = 1,nbonall
+d482 1
+a482 1
+            i3=iball(i1,2)
+d487 1
+a487 1
+                  i3b=iball(i1,3)
+d492 1
+a492 1
+               i3=iball(i1,3)
+d497 1
+a497 1
+                     i3b=iball(i1,2)
+d519 1
+a519 1
+c$$$      do i1 = 1,nbonall
+d528 2
+a529 2
+      nbon = 0
+      do i1 = 1,nbonall
+d533 4
+a536 4
+            nbon = nbon+1
+            ib(nbon,1) = iball(i1,1)
+            ib(nbon,2) = iball(i1,2)
+            ib(nbon,3) = iball(i1,3)
+d539 1
+a539 5
+
+      if (nbon.gt.nbomax) then 
+      write (6,*)nbon,nbomax
+      stop 'Too many bonds; maybe wrong cell parameters'
+      end if
+@
+
+
+3.2.2.9
+log
+@Put array dimension parameters for C++ and fortran in a single header
+file called reax_defs.h. Switched all fortran include statements
+to cpp #include statements. Added new-lines to all *.blk files.
+@
+text
+@d7 8
+a14 8
+#include "cbka.blk"
+#include "cbkatomcoord.blk"
+#include "cbkff.blk"
+#include "cbkia.blk"
+#include "cbkqa.blk"
+#include "control.blk"
+#include "opt.blk"
+#include "small.blk"
+d72 8
+a79 8
+#include "cbka.blk"
+#include "cbkdcell.blk"
+#include "cbkff.blk"
+#include "cbkia.blk"
+#include "cbkmolec.blk"
+#include "cbknmolat.blk"
+#include "control.blk"
+#include "small.blk"
+d151 5
+a155 5
+#include "cbka.blk"
+#include "cbkconst.blk"
+#include "cbkdistan.blk"
+#include "cellcoord.blk"
+#include "control.blk"
+d205 4
+a208 4
+#include "cbka.blk"
+#include "cbkc.blk"
+#include "cbkdistan.blk"
+#include "cellcoord.blk"
+d237 23
+a259 23
+#include "cbka.blk"
+#include "cbkabo.blk"
+#include "cbkbo.blk"
+#include "cbkbosi.blk"
+#include "cbkbopi.blk"
+#include "cbkbopi2.blk"
+#include "cbkc.blk"
+#include "cbkch.blk"
+#include "cbkconst.blk"
+#include "cbkdbopidc.blk"
+#include "cbkdrdc.blk"
+#include "cbkia.blk"
+#include "cbknubon2.blk"
+#include "cbknvlbo.blk"
+#include "cbkpairs.blk"
+#include "cbkqa.blk"
+#include "cbkrbo.blk"
+#include "cellcoord.blk"
+#include "control.blk"
+#include "small.blk"
+#include "cbkdbodc.blk"
+#include "cbksrtbon1.blk"
+#include "cbkff.blk"
+d868 9
+a876 9
+c$$$#include "cbka.blk"
+c$$$#include "cbkbo.blk"
+c$$$#include "cbkff.blk"
+c$$$#include "cbkia.blk"
+c$$$#include "cbkrbo.blk"
+c$$$#include "cbkvalence.blk"
+c$$$#include "cellcoord.blk"
+c$$$#include "control.blk"
+c$$$#include "small.blk"
+d1056 11
+a1066 11
+#include "cbka.blk"
+#include "cbkbo.blk"
+#include "cbknubon2.blk"
+#include "cbknuval.blk"
+#include "cbkff.blk"
+#include "cbkia.blk"
+#include "cbkrbo.blk"
+#include "cbkvalence.blk"
+#include "cellcoord.blk"
+#include "control.blk"
+#include "small.blk"
+d1293 7
+a1299 7
+c$$$#include "cbka.blk"
+c$$$#include "cbkbo.blk"
+c$$$#include "cbkia.blk"
+c$$$#include "cbktorsion.blk"
+c$$$#include "cbkvalence.blk"
+c$$$#include "cellcoord.blk"
+c$$$#include "control.blk"
+d1454 9
+a1462 9
+#include "cbka.blk"
+#include "cbkbo.blk"
+#include "cbkia.blk"
+#include "cbktorsion.blk"
+#include "cbkvalence.blk"
+#include "cbknuval.blk"
+#include "cellcoord.blk"
+#include "control.blk"
+#include "small.blk"
+d1626 6
+a1631 6
+#include "cbka.blk"
+#include "cbkbo.blk"
+#include "cbkrbo.blk"
+#include "cbkvalence.blk"
+#include "control.blk"
+#include "small.blk"
+d1694 8
+a1701 8
+#include "cbka.blk"
+#include "cbkbo.blk"
+#include "cbkconst.blk"
+#include "cbkia.blk"
+#include "cbkrbo.blk"
+#include "cbksrthb.blk"
+#include "control.blk"
+#include "small.blk"
+@
+
+
+3.1
+log
+@Finally, this is the REAXFF branch, first pass
+@
+text
+@@
+

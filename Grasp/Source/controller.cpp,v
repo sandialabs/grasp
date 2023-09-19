@@ -1,0 +1,1817 @@
+head	4.10;
+access;
+symbols
+	ReverseComm_branch:4.6.0.2
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.2.2.0.2
+	Root-of-Monaco_Aidan:4.3.2.2
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.4
+	REAX-2:3.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.18.0.2
+	cjkimme_version_merge_from_trunk_1:2.10.2.3
+	cjkimme_version:2.10.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.10
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.03.12.04.00.03;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.08.26.02.04.29;	author athomps;	state Exp;
+branches
+	4.6.2.1;
+next	4.5;
+
+4.5
+date	2006.02.20.18.12.56;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.2.1
+	4.3.4.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.5;
+
+3.5
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.4;
+
+3.4
+date	2005.03.31.23.07.47;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.03.24.21.14.20;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.02.12.21.58.18;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches
+	3.1.6.1;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.07.22.20.52.32;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.07.13.21.21.16;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.13;
+
+2.13
+date	2004.03.20.00.15.37;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches
+	2.10.2.1;
+next	2.9;
+
+2.9
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.31.20.20.43;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.10.04.02.46.52;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+2.10.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.10.2.2;
+
+2.10.2.2
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.10.2.3;
+
+2.10.2.3
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	2.10.2.4;
+
+2.10.2.4
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.1.6.1
+date	2005.02.17.21.41.38;	author saubry;	state Exp;
+branches;
+next	3.1.6.2;
+
+3.1.6.2
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	3.1.6.3;
+
+3.1.6.3
+date	2005.04.07.16.13.44;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.2.1
+date	2005.05.03.21.44.53;	author athomps;	state Exp;
+branches;
+next	4.3.2.2;
+
+4.3.2.2
+date	2005.05.03.22.14.52;	author athomps;	state Exp;
+branches
+	4.3.2.2.2.1;
+next	;
+
+4.3.2.2.2.1
+date	2005.12.09.18.35.27;	author athomps;	state Exp;
+branches;
+next	4.3.2.2.2.2;
+
+4.3.2.2.2.2
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	4.3.2.2.2.3;
+
+4.3.2.2.2.3
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.2.2.2.4;
+
+4.3.2.2.2.4
+date	2006.02.06.19.15.25;	author athomps;	state Exp;
+branches;
+next	4.3.2.2.2.5;
+
+4.3.2.2.2.5
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.3.4.1
+date	2005.06.21.21.46.18;	author pscrozi;	state Exp;
+branches;
+next	4.3.4.2;
+
+4.3.4.2
+date	2005.06.22.17.44.58;	author pscrozi;	state Exp;
+branches;
+next	;
+
+4.6.2.1
+date	2006.09.07.19.49.27;	author athomps;	state Exp;
+branches;
+next	4.6.2.2;
+
+4.6.2.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.10
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <sstream>
+#include <time.h>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "controller.h"
+#include "constants.h"
+#include "stepper.h"
+#include "minimizer.h"
+#include "interfacial_minimizer.h"
+#include "grain_boundary_minimizer.h"
+#include "conjugate_gradient.h"
+#include "box.h"
+#include "particletypelist.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+#include "fix.h"
+#include "fixlist.h"
+#include "input.h"
+
+extern Log glog;
+extern Constants constants;
+
+Controller::Controller(int& argc, char* argv[], 
+            const bool& mpi_init_flag, const bool& mpi_finalize_flag) {
+  time_t time_tmp;
+
+  time_begin = time(&time_tmp);
+  comm = new Comm(argc,argv,mpi_init_flag,mpi_finalize_flag);
+  if (argc >= 2)
+    inp = new Input(argv[1]);
+  else
+    inp = new Input(NULL);
+  if (argc >= 3)
+    glog.prepend_path(argv[2]);
+  stepper = new Stepper;
+  b = new Box;
+  t = new ParticleTypeList;
+  p = new ParticleList;
+  ff = new ForceFieldList;
+  if (argc < 2)
+    outp = new Output(true);
+  else
+    outp = new Output(false);
+  fix_list = new FixList;
+  minimizer = NULL;
+  run_mode = run_dynamics;
+  timestep = 1.0;
+  nsteps = 0;
+}
+
+Controller::~Controller() {
+  delete comm;
+  delete inp;
+  delete stepper;
+  if (minimizer != NULL) {
+    delete minimizer;
+  }
+  delete b;
+  delete t;
+  delete p;
+  delete ff;
+  delete outp;
+  delete fix_list;
+}
+
+void Controller::Setup() {
+  bool Lenergy, Lvirial,Latomvirial;
+  double extended_energy;
+
+  glog.open_logfile_universe();
+  comm->open_nodefile();
+  inp->ReadInput(this,stepper,b,p,outp,ff,fix_list,comm);
+  // Need to do this again, in case Lnodefile was set in input deck.
+  comm->open_nodefile();
+  comm->Setup_World();
+  // Need to read input from world-specific file if nworlds > 1
+  if (comm->get_nworlds() > 1) {
+    inp->ReadInput(this,stepper,b,p,outp,ff,fix_list,comm);
+  }
+
+  constants.ApplyUnitsStyle(input_string_units_style);
+
+  timestep = timestep/constants.tfactor;
+  
+  b->Setup(comm);
+
+  t->Setup(comm);
+  ff->Setup(b,t,p,comm);
+  comm->Setup(b,ff);
+  p->Setup(b,t,outp,stepper,ff,comm);
+
+  outp->Setup(b,t,comm);
+
+  if (outp->Need_Thermo()) {
+    Lenergy = true;
+    Lvirial = true;
+  } else {
+    Lenergy = false;
+    Lvirial = false;
+  }
+
+  if (outp->Need_AtomVirial()) {
+    Latomvirial = true;
+  } else {
+    Latomvirial = false;
+  }
+
+
+  ff->NeighboringInitial(p,b,comm);
+  ff->ComputeForceInitial(Lenergy,Lvirial,Latomvirial,b,t,p,comm);
+  fix_list->Setup(b,t,comm);
+
+  switch(run_mode) {
+  case run_dynamics:
+    stepper->Setup(p,b,timestep,comm);
+    break;
+  case run_relax:
+    minimizer = new Minimizer;
+    minimizer->Setup(input_string_minimizer,comm);
+    break;
+  case run_interfacial_minimizer:
+    minimizer = new Interfacial_Minimizer;
+    minimizer->Setup(input_string_minimizer,comm);
+    break;
+  case run_conjugate_gradient:
+    minimizer = new Conjugate_Gradient;
+    minimizer->Setup(input_string_minimizer,comm);
+    break;
+  case run_grain_boundary_minimizer:
+    minimizer = new Grain_Boundary_Minimizer;
+    minimizer->Setup(input_string_minimizer,comm);
+    break;
+  }
+
+  extended_energy = stepper->ComputeExtendedEnergy(p,b);
+  outp->WriteOutput(0,p,b,t,comm,ff,fix_list,extended_energy,true,true,stepper);
+}
+
+void Controller::Run() {
+  if (run_mode == run_dynamics)
+    stepper->Run(nsteps,timestep,b,t,p,ff,outp,fix_list,comm);
+  else 
+    minimizer->Run(nsteps,timestep,b,t,p,ff,outp,fix_list,comm);
+}
+
+void Controller::Finish() {
+  time_t time_tmp;
+  outp->Finish(nsteps,ff,p,comm);
+  glog.get_logfile() << "\n\n\n";
+  glog.get_logfile() << "Finished " << endl;
+  glog.close_logfile_universe();  
+  time_end = time(&time_tmp);
+  if (comm->get_node_universe() == 0 ) {
+#ifndef NO_STDERR
+    cerr << 
+      "*********************************" << endl << 
+      "Successfully completed Grasp run " << endl << 
+      "Elapsed Time = " << time_end-time_begin << " secs" << endl <<
+      "*********************************" << endl;
+#endif
+  }
+}
+
+void Controller::input_minimize(const string& buf, const RunModes& input_mode)
+{
+  string str_tmp;
+
+  run_mode = input_mode;
+
+  input_string_minimizer = buf; 
+
+  glog.get_logfile() << buf << endl;
+  
+}
+
+void Controller::input_timestep(const string& buf)
+{
+  istringstream buf_in(buf);
+  buf_in >> timestep;
+  
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Controller::input_timestep:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << timestep << endl;
+
+  if (timestep < 0) {
+    glog.error("Controller::input_timestep:\n"
+	       "Invalid input parameter");
+    exit(0);
+  }
+
+}
+
+void Controller::input_nsteps(const string& buf)
+{
+  istringstream buf_in(buf);
+  buf_in >> nsteps;
+  
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Controller::input_nsteps:\n"
+	       "Read error in input file");
+    exit(0);
+  }
+  glog.get_logfile() << " " << nsteps << endl;
+
+  if (nsteps < 0) {
+    glog.error("Controller::input_nsteps:\n"
+	       "Invalid input parameter");
+    exit(0);
+  }
+}
+
+void Controller::input_units(const string& buf)
+{
+  string str_tmp;
+  istringstream buf_in(buf);
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Controller::input_units:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << str_tmp << endl;
+
+  input_string_units_style = str_tmp;
+}
+
+
+@
+
+
+4.9
+log
+@Added fix deformation command to allow box shape to be changed over time
+@
+text
+@d144 1
+a144 1
+  p->Setup(b,t,outp,comm);
+d190 1
+a190 1
+  outp->WriteOutput(0,p,b,t,comm,ff,fix_list,extended_energy,true,true);
+@
+
+
+4.8
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d140 1
+@
+
+
+4.7
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d143 1
+a143 1
+  p->Setup(b,t,comm);
+@
+
+
+4.6
+log
+@Added damping constant commands for Nose-Hoover barostats and thermostats
+@
+text
+@d121 1
+a121 2
+  bool Lenergy;
+  ForceFieldList::VirialStyles Lvirial;
+d149 1
+a149 1
+    Lvirial = ForceFieldList::all_particles;
+d152 1
+a152 1
+    Lvirial = ForceFieldList::none; 
+d155 7
+d163 1
+a163 1
+  ff->ComputeForceInitial(Lenergy,Lvirial,b,t,p,comm);
+@
+
+
+4.6.2.1
+log
+@Implemented ri*Fi pressure calc
+@
+text
+@d121 2
+a122 1
+  bool Lenergy, Lvirial;
+d150 1
+a150 1
+    Lvirial = true;
+d153 1
+a153 1
+    Lvirial = false;
+@
+
+
+4.6.2.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d121 1
+a121 1
+  bool Lenergy, Lvirial,Latomvirial;
+a154 7
+  if (outp->Need_AtomVirial()) {
+    Latomvirial = true;
+  } else {
+    Latomvirial = false;
+  }
+
+
+d156 1
+a156 1
+  ff->ComputeForceInitial(Lenergy,Lvirial,Latomvirial,b,t,p,comm);
+@
+
+
+4.5
+log
+@Fixed bug in reax_connect.F
+@
+text
+@d162 1
+a162 1
+    stepper->Setup(p,b,comm);
+@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@d101 2
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d123 1
+a123 1
+  glog.open_logfile();
+d128 6
+d194 3
+a196 3
+  glog.logfile << "\n\n\n";
+  glog.logfile << "Finished " << endl;
+  glog.close_logfile();  
+d198 1
+a198 1
+  if (comm->get_node() == 0 ) {
+d217 1
+a217 1
+  glog.logfile << buf << endl;
+d227 1
+a227 1
+    glog.logfile << endl;
+d231 1
+a231 1
+  glog.logfile << " " << timestep << endl;
+d247 1
+a247 1
+    glog.logfile << endl;
+d252 1
+a252 1
+  glog.logfile << " " << nsteps << endl;
+d268 1
+a268 1
+    glog.logfile << endl;
+d272 1
+a272 1
+  glog.logfile << " " << str_tmp << endl;
+@
+
+
+4.3.4.1
+log
+@Latest PPPM version
+@
+text
+@d134 1
+a134 1
+//  ff->Setup(b,t,p,comm);   // Crozier, 6/21/2005, moved down a few lines . . .
+d137 1
+a137 2
+  ff->Setup(b,t,p,comm);     // to here
+  
+@
+
+
+4.3.4.2
+log
+@latest version of PPPM
+@
+text
+@d134 1
+a134 1
+  ff->Setup(b,t,p,comm); 
+d137 2
+a138 1
+    
+@
+
+
+4.3.2.1
+log
+@First commit of new Monaco branch
+@
+text
+@a58 1
+#include "p_monaco.h"
+a73 2
+
+
+a89 1
+
+a93 2
+
+
+a99 1
+  montecarlo = NULL;
+a109 3
+  if (montecarlo != NULL) {
+    delete montecarlo;
+  }
+a115 1
+
+a129 1
+
+d137 1
+a159 4
+  case run_monte_carlo:
+	  montecarlo = new MonteCarlo;
+	  montecarlo->Setup(p,b,comm,ff);
+	  break;
+a180 2
+  else if (run_mode == run_monte_carlo)
+    montecarlo->Run(nsteps,timestep,b,t,p,ff,outp,fix_list,comm);
+a213 11
+void Controller::input_mc(const string& buf, const RunModes& input_mode)
+{
+  string str_tmp;
+
+  run_mode = input_mode;
+
+  input_string_mc = buf; 
+
+  glog.logfile << buf << endl;
+  
+}
+@
+
+
+4.3.2.2
+log
+@Added new files to Monaco branch.
+@
+text
+@d59 1
+a59 1
+#include "montecarlo.h"
+@
+
+
+4.3.2.2.2.1
+log
+@Tweaked Monaco branch
+@
+text
+@d172 3
+a174 3
+    montecarlo = new MonteCarlo;
+    montecarlo->Setup(p,b,comm,ff);
+    break;
+@
+
+
+4.3.2.2.2.2
+log
+@Bin Communication fixed
+@
+text
+@a171 6
+  // Important to delete all ghost particles before starting Monte Carlo run.
+  // Otherwise these may interfere with ghost particles created by ghost bins
+
+    p->ResetGhosts();
+    p->localptr_clear();
+
+@
+
+
+4.3.2.2.2.3
+log
+@Added EAM energy change calculation
+@
+text
+@d174 1
+a236 1
+
+@
+
+
+4.3.2.2.2.4
+log
+@Added in bin reallocation in montecarlo.cpp
+@
+text
+@a107 2
+  timestep = 1.0;
+  nsteps = 0;
+d141 1
+a208 6
+
+  ff->Neighboring(p, b, comm, false);  
+  ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+  outp->WriteOutput(nsteps,p,b,t,comm,ff,fix_list,0.0,
+		      false,false);
+
+@
+
+
+4.3.2.2.2.5
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d211 5
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+a58 1
+#include "p_monaco.h"
+a73 2
+
+
+a89 1
+
+a93 2
+
+
+a99 1
+  montecarlo = NULL;
+a109 3
+  if (montecarlo != NULL) {
+    delete montecarlo;
+  }
+a115 1
+
+d126 2
+d137 1
+a159 4
+  case run_monte_carlo:
+	  montecarlo = new MonteCarlo;
+	  montecarlo->Setup(p,b,comm,ff);
+	  break;
+a180 2
+  else if (run_mode == run_monte_carlo)
+    montecarlo->Run(nsteps,timestep,b,t,p,ff,outp,fix_list,comm);
+d187 1
+a187 1
+  outp->Finish(comm,ff,p);
+a213 11
+void Controller::input_mc(const string& buf, const RunModes& input_mode)
+{
+  string str_tmp;
+
+  run_mode = input_mode;
+
+  input_string_mc = buf; 
+
+  glog.logfile << buf << endl;
+  
+}
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+d43 1
+d59 2
+d77 1
+d82 2
+d90 1
+d101 3
+d110 1
+a120 2
+  // Need to do this again, in case Lnodefile was set in input deck.
+  comm->open_nodefile();
+a129 1
+
+d152 4
+d177 2
+d185 1
+a185 1
+  outp->Finish(nsteps,ff,p,comm);
+d212 11
+@
+
+
+3.5
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.4
+log
+@Modified the timing output slightly
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.3
+log
+@Added a bunch of tweaks to allow mixing of force fields.
+@
+text
+@d171 1
+a171 1
+  outp->Finish(comm,ff,p);
+@
+
+
+3.2
+log
+@Added a bunch of preprocessor flags to turn
+on and off various kinds of I/O
+@
+text
+@d110 2
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d175 1
+d181 1
+@
+
+
+3.1.6.1
+log
+@Implement energy change.
+Two ways are implemented:
+     -  brute force,
+     -  removal of the energy of atom before being boosted
+        and addition of the energy of the boosted atoms.
+Brute force is for every force field. Other method is for EAM only for now.
+
+
+Sylvie Aubry - 02-17-05
+@
+text
+@a29 2
+// Modified saubry (01-13-05)
+
+a42 1
+#include "p_monaco.h"
+a83 1
+  montecarlo = NULL;
+a93 3
+  if (montecarlo != NULL) {
+    delete montecarlo;
+  }
+a153 4
+  case run_p_monaco:
+    montecarlo = new MonteCarlo;
+    montecarlo->Setup(comm);
+    break;
+d163 2
+a164 4
+  else if (run_mode == run_p_monaco) 
+    montecarlo->Run(b,t,p,ff,comm);
+  else
+    minimizer->Run(nsteps,timestep,b,t,p,ff,outp,fix_list,comm);    
+a194 6
+
+void Controller::input_p_monaco(const RunModes& input_mode)
+{
+  run_mode = input_mode;
+}
+
+@
+
+
+3.1.6.2
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d30 2
+d45 1
+a45 1
+#include "montecarlo.h"
+a60 2
+
+
+a76 1
+
+a80 2
+
+
+a106 1
+
+d126 1
+a148 4
+  case run_monte_carlo:
+	  montecarlo = new MonteCarlo;
+	  montecarlo->Setup(p,b,comm,ff);
+	  break;
+d161 4
+d174 4
+a177 4
+  else if (run_mode == run_monte_carlo)
+    montecarlo->Run(nsteps,timestep,b,t,p,ff,outp,fix_list,comm);
+  else 
+    minimizer->Run(nsteps,timestep,b,t,p,ff,outp,fix_list,comm);
+a187 1
+#ifndef NO_STDERR
+a192 1
+#endif
+d207 3
+a209 1
+void Controller::input_mc(const string& buf, const RunModes& input_mode)
+a210 2
+  string str_tmp;
+
+a211 5
+
+  input_string_mc = buf; 
+
+  glog.logfile << buf << endl;
+  
+@
+
+
+3.1.6.3
+log
+@Correct small error.
+@
+text
+@d43 1
+a43 1
+#include "p_monaco.h"
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d43 3
+d67 6
+a72 1
+  inp = new Input;
+d78 4
+a81 1
+  outp = new Output;
+d103 2
+a104 1
+  bool Lenergy,Lvirial;
+d113 1
+a113 1
+
+d120 1
+a120 1
+  outp->Setup(b,comm);
+d124 1
+a124 1
+    Lvirial = true;
+d127 1
+a127 1
+    Lvirial = false;
+d142 12
+d161 1
+a161 2
+  switch(run_mode) {
+  case run_dynamics:
+d163 1
+a163 2
+    break;
+  case run_relax:
+a164 3
+    break;
+  }
+
+d183 1
+a183 1
+void Controller::input_minimize(const string& buf)
+d187 1
+a187 1
+  run_mode = run_relax;
+@
+
+
+2.18
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.17
+log
+@Updated header
+@
+text
+@d71 1
+a71 1
+
+d79 1
+a79 1
+  if (run_mode == run_relax) {
+@
+
+
+2.16
+log
+@Added status messages and timing info to controller.cpp
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.15
+log
+@Added NPT ensemble
+@
+text
+@d34 1
+d59 3
+d148 1
+d153 8
+d177 1
+a177 1
+  std::istringstream buf_in(buf);
+d197 1
+a197 1
+  std::istringstream buf_in(buf);
+d218 1
+a218 1
+  std::istringstream buf_in(buf);
+@
+
+
+2.14
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@a96 10
+  switch(run_mode) {
+  case run_dynamics:
+    stepper->Setup(comm);
+    break;
+  case run_relax:
+    minimizer = new Minimizer;
+    minimizer->Setup(input_string_minimizer,comm);
+    break;
+  }
+
+d103 1
+a103 1
+  outp->Setup(stepper,b,comm);
+d116 11
+@
+
+
+2.13
+log
+@Various
+@
+text
+@d88 1
+d126 2
+a127 1
+  outp->WriteOutput(0,p,b,t,comm,ff,fix_list,0);
+@
+
+
+2.12
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.11
+log
+@Added Ewald sum example
+@
+text
+@d161 1
+a161 1
+  stringstream buf_in(buf);
+d181 1
+a181 1
+  stringstream buf_in(buf);
+d202 1
+a202 1
+  stringstream buf_in(buf);
+@
+
+
+2.10
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d87 1
+d111 11
+d123 1
+a123 1
+  ff->ComputeForceInitial(b,t,p,comm);
+a124 1
+  outp->Setup(stepper,b,comm);
+@
+
+
+2.10.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@d59 1
+a59 4
+  if (argc >= 2)
+    inp = new Input(argv[1]);
+  else
+    inp = new Input(NULL);
+@
+
+
+2.10.2.2
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a40 3
+#include "interfacial_minimizer.h"
+#include "grain_boundary_minimizer.h"
+#include "conjugate_gradient.h"
+a62 2
+  if (argc >= 3)
+    glog.prepend_path(argv[2]);
+d78 1
+a78 1
+  if (run_mode != run_dynamics) {
+a105 12
+  case run_interfacial_minimizer:
+    minimizer = new Interfacial_Minimizer;
+    minimizer->Setup(input_string_minimizer,comm);
+    break;
+  case run_conjugate_gradient:
+    minimizer = new Conjugate_Gradient;
+    minimizer->Setup(input_string_minimizer,comm);
+    break;
+  case run_grain_boundary_minimizer:
+    minimizer = new Grain_Boundary_Minimizer;
+    minimizer->Setup(input_string_minimizer,comm);
+    break;
+d116 1
+a116 1
+  outp->Setup(stepper,b,t,comm);
+d121 2
+a122 1
+  if (run_mode == run_dynamics)
+d124 2
+a125 1
+  else 
+d127 3
+d139 1
+a139 1
+void Controller::input_minimize(const string& buf, const RunModes& input_mode)
+d143 1
+a143 1
+  run_mode = input_mode;
+@
+
+
+2.10.2.3
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a33 1
+#include <time.h>
+a60 3
+  time_t time_tmp;
+
+  time_begin = time(&time_tmp);
+d75 1
+a75 1
+  minimizer = NULL;
+d83 1
+a83 1
+  if (minimizer != NULL) {
+a94 2
+  bool Lenergy,Lvirial;
+  double extended_energy;
+a102 20
+  b->Setup(comm);
+  t->Setup(comm);
+  ff->Setup(b,t,p,comm);
+  comm->Setup(b,ff);
+  p->Setup(b,t,comm);
+
+  outp->Setup(b,t,comm);
+
+  if (outp->Need_Thermo()) {
+    Lenergy = true;
+    Lvirial = true;
+  } else {
+    Lenergy = false;
+    Lvirial = false;
+  }
+
+  ff->NeighboringInitial(p,b,comm);
+  ff->ComputeForceInitial(Lenergy,Lvirial,b,t,p,comm);
+  fix_list->Setup(b,t,comm);
+
+d105 1
+a105 1
+    stepper->Setup(p,b,comm);
+d125 10
+a134 2
+  extended_energy = stepper->ComputeExtendedEnergy(p,b);
+  outp->WriteOutput(0,p,b,t,comm,ff,fix_list,extended_energy,true,true);
+a144 1
+  time_t time_tmp;
+a148 8
+  time_end = time(&time_tmp);
+  if (comm->get_node() == 0 ) {
+    cerr << 
+      "*********************************" << endl << 
+      "Successfully completed Grasp run " << endl << 
+      "Elapsed Time = " << time_end-time_begin << " secs" << endl <<
+      "*********************************" << endl;
+  }
+d165 1
+a165 1
+  istringstream buf_in(buf);
+d185 1
+a185 1
+  istringstream buf_in(buf);
+d206 1
+a206 1
+  istringstream buf_in(buf);
+@
+
+
+2.10.2.4
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d99 1
+a99 2
+  bool Lenergy;
+  ForceFieldList::VirialStyles Lvirial;
+d119 1
+a119 1
+    Lvirial = ForceFieldList::all_particles;
+d122 1
+a122 1
+    Lvirial = ForceFieldList::none; 
+@
+
+
+2.9
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.8
+log
+@Removed Thermo class
+@
+text
+@d5 1
+a10 1
+#include "input.h"
+d23 1
+d28 3
+a30 2
+Controller::Controller(int& argc, char* argv[]) {
+  comm = new Comm(argc,argv);
+a32 1
+  minimizer = new Minimizer;
+d39 2
+d47 3
+a49 1
+  delete minimizer;
+a58 2
+  string str_tmp;
+  Fix::FixStyles fix_style;
+d62 4
+a65 11
+  inp->ReadInput(comm);
+  constants.ApplyUnitsStyle(inp->units_style);
+  str_tmp = inp->run_mode; 
+
+  if (str_tmp == "dynamics") {
+    run_mode = run_dynamics;
+  } else if (str_tmp == "relax") {
+    run_mode = run_relax;
+  } else {
+    glog.error("Constants::Setup: Invalid run_mode");
+  }
+d69 1
+a69 1
+    stepper->Setup(inp,comm);
+d72 2
+a73 1
+    minimizer->Setup(inp,comm);
+d77 3
+a79 3
+  b->Setup(inp,comm);
+  t->Setup(inp,comm);
+  ff->Setup(inp,b,t,p,comm);
+d81 1
+a81 1
+  p->Setup(inp,b,t,comm);
+d84 2
+a85 2
+  fix_list->Setup(inp,b,t,comm);
+  outp->Setup(inp,stepper,b,comm);
+d92 1
+a92 1
+    stepper->Run(b,t,p,ff,outp,fix_list,comm);
+d95 1
+a95 1
+    minimizer->Run(b,t,p,ff,outp,fix_list,comm);
+d107 70
+@
+
+
+2.7
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@a18 1
+#include "thermo.h"
+d21 3
+a35 1
+  thermo = new Thermo;
+d37 1
+a48 1
+  delete thermo;
+d50 1
+d55 1
+d82 1
+a82 1
+  ff->Setup(inp,b,t,p,thermo,comm);
+d84 1
+a84 1
+  p->Setup(inp,b,t,thermo,comm);
+d87 1
+a87 1
+  thermo->Setup(inp);
+d89 1
+a89 1
+  outp->WriteOutput(0,p,b,t,comm,ff,0);
+d95 1
+a95 1
+    stepper->Run(b,t,p,ff,thermo,outp,comm);
+d98 1
+a98 1
+    minimizer->Run(b,t,p,ff,thermo,outp,comm);
+@
+
+
+2.6
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d86 1
+a86 1
+  outp->WriteOutput(0,p,b,t,comm,ff);
+@
+
+
+2.5
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d9 1
+d16 1
+d23 1
+d52 2
+d57 11
+a67 1
+  run_mode = inp->run_mode; 
+@
+
+
+2.4
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d67 2
+a68 2
+  ff->Neighboring(p,b,comm);
+  ff->ComputeForce(true,b,t,p,comm);
+d71 1
+a71 1
+  outp->WriteOutput(0,p,b,t,comm,0);
+d87 2
+a88 1
+  outp->Finish(comm);
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d50 1
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d70 1
+a70 1
+  outp->WriteOutput(0,p,b,t,comm);
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@d11 1
+d19 2
+d26 1
+d39 1
+d49 1
+d51 10
+a60 1
+  stepper->Setup(inp,comm);
+d74 9
+a82 1
+  stepper->Run(b,t,p,ff,thermo,outp,comm);
+d87 2
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d1 2
+d6 1
+d17 1
+d19 2
+a20 1
+Controller::Controller() {
+d32 9
+d44 9
+a52 6
+  inp->ReadInput();
+  stepper->Setup(inp);
+  b->Setup(inp);
+  t->Setup(inp);
+  p->Setup(inp,b,t,thermo);
+  ff->Setup(inp,b,t,p,thermo);
+d54 2
+a55 2
+  outp->Setup(inp,stepper,b);
+  outp->WriteOutput(0,p,b);
+d59 1
+a59 1
+  stepper->Run(b,t,p,ff,thermo,outp);
+d63 1
+a63 1
+  outp->Finish();
+@
+

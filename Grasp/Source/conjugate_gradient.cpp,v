@@ -1,0 +1,1464 @@
+head	4.9;
+access;
+symbols
+	ReverseComm_branch:4.6.0.4
+	ADTools_branch:4.6.0.2
+	Monaco_Aidan:4.3.0.4
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.4.0.2
+	PPPM_Crozier:4.4
+	Root-of-PPPM_Crozier:4.4
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	BeforeREAXMerge:3.2
+	REAX-2:3.2
+	P_MonacoSource:3.2.0.6
+	GraspSource:3.2
+	P_Monaco:3.2.0.4
+	InitialGrasp:3.2
+	REAXFF:3.2.0.2
+	cjkimme_version_merge_from_trunk_1:1.1.2.2
+	cjkimme_version:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.9
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.11.09.20.13.51;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.04.05.22.52.02;	author athomps;	state Exp;
+branches
+	4.6.4.1;
+next	4.5;
+
+4.5
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2005.05.05.04.41.56;	author foiles;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.09.09.21.01.42;	author cjkimme;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	1.1.2.2;
+
+1.1.2.2
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	1.1.2.3;
+
+1.1.2.3
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+4.6.4.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.9
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "conjugate_gradient.h"
+#include "constants.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+
+/* Stuff from Numerical Recipes */
+#define EPS 1.e-10
+#define ZEPS 1.0e-10
+#define MOV3(a,b,c,d,e,f) (a) = (d); (b) = (e); (c) = (f);
+#define TAU 1.618034
+#define GLIMIT 100.0
+#define TINY 1.0e-20
+#define SHFT(a,b,c,d) (a) = (b); (b) = (c); (c) = (d);
+
+static double maxarg1, maxarg2;
+#define FMAX(a,b) (maxarg1 = (a),maxarg2 = (b),(maxarg1) > (maxarg2) ? (maxarg1) : maxarg2)
+
+#define SIGN(a,b) ((b) >= 0.0 ? fabs(a) : -fabs(a))
+
+
+
+Conjugate_Gradient::Conjugate_Gradient():
+  linesearch_x0(NULL),
+  linesearch_dir(NULL),
+  linesearch_x(NULL),
+  current_grad(NULL),
+  box(NULL),
+  t(NULL),
+  p(NULL),
+  ff(NULL),
+  comm(NULL)
+{
+  // nothin'
+  glog.error("Conjugate_Gradient::Setup\n"
+	     "The CG method is currently unavailable.");
+}
+
+Conjugate_Gradient::~Conjugate_Gradient() {
+  if (linesearch_x0)
+    delete linesearch_x0;
+  if (linesearch_x)
+    delete linesearch_x;
+  if (linesearch_dir)
+    delete linesearch_dir;
+  if (current_grad)
+    delete current_grad;
+}
+
+void Conjugate_Gradient::Setup(const string input_string,
+                Comm* commp) {
+
+  int node;
+  string str_tmp;
+
+  comm = commp;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering Conjugate_Gradient::Setup()" << endl;
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Conjugate_Gradient::Setup()" << endl;
+  }
+
+  glog.get_logfile() << "conjugate gradient";
+
+  // should read in max number of iterations, tolerances, etc.
+
+  std::stringstream buf_in(input_string);
+  buf_in >> max_cg_its;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in max_cg_its");
+  }
+  glog.get_logfile() << " " << max_cg_its;
+  buf_in >> max_ls_its;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in maximum number of line search iterations");
+  }
+  glog.get_logfile() << " " << max_ls_its;
+  buf_in >> line_search_tol;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in line search tolerance");
+  }
+  glog.get_logfile() << " " << line_search_tol;
+  buf_in >> max_cg_force;
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read max_cg_force");
+  }
+  glog.get_logfile() << " " << max_cg_force;
+  
+}
+
+void Conjugate_Gradient::Run(const int nsteps, const double timestep,
+           Box* bp, ParticleTypeList* tp,
+           ParticleList* pp, ForceFieldList* ffp,
+           Output* outpp, FixList* fix_listp, Comm* commp) {
+  double t0,t1,t2,t3;
+  bool Lmaxstep;
+  double timestepsq;
+
+  // initialize class members
+  box = bp;
+  t = tp;
+  p = pp;
+  ff = ffp;
+  comm = commp;
+
+  timestepsq = timestep;
+
+  t0 = MPI_Wtime();
+  // use nsteps as iteration maximum
+  int nmin = 3*p->get_nminimized();
+  valarray<double> r(nmin), f(nmin);
+  double energy;
+
+  glog.get_logfile() << "Minimizing " << nmin << " degrees of freedom\n";
+
+  if (linesearch_x0)
+    delete linesearch_x0;
+  linesearch_x0 = new valarray<double>(nmin);
+  if (linesearch_x)
+    delete linesearch_x;
+  linesearch_x = new valarray<double>(nmin);
+  if (linesearch_dir)
+    delete linesearch_dir;
+  linesearch_dir = new valarray<double>(nmin);
+  if (current_grad)
+    delete current_grad;
+  current_grad = new valarray<double>(nmin);
+
+  // initialize r
+  p->SaveMinimized(r);
+  EvaluateFunctionAndGradient(&energy, r, f);
+  for (int istep=1;istep<=nsteps;istep++) {
+  
+    int nits = NRMinimize(&energy, r, f); 
+
+    glog.get_logfile() << "First time took " << nits << "\n";
+
+    // restart it to verify minimum
+    nits = NRMinimize(&energy, r, f);
+
+    glog.get_logfile() << "Second time took " << nits << "\n";
+    
+    t1 = MPI_Wtime();
+    glog.timetotal = t1-t0;
+    outpp->WriteOutput(istep,p,box,t,comm,ff,fix_listp,0,false,false,
+		       NULL);
+
+  }
+
+}
+
+/* Evaluate interfacial energy at the point lastPoint + x * lastDirection  */
+void Conjugate_Gradient::EvaluateFunctionAndGradient(double* energy, valarray<double>& x, valarray<double>& force)
+{
+
+  ForceField* const* forcefields;
+  int node;
+  int nforcefields;
+  vector<double> tmp;
+  vector<double> e_ff;
+  int npieces;
+
+  node = comm->get_node();
+
+  // set coordinates
+  p->MoveMinimized(x);
+  ff->Neighboring(p, box, comm, false);
+  ff->ComputeForce(true,ForceFieldList::none,false,box,t,p,comm);
+  *energy = 0.;
+  forcefields = ff->get_forcefields();
+  nforcefields = ff->get_nforcefields();
+  for (int iff = 0;iff<nforcefields;iff++) {
+    ForceField* ffiff = forcefields[iff];
+    npieces = ffiff->get_npieces();
+    tmp = ffiff->get_energy();
+    e_ff.resize(npieces);
+    MPI_Allreduce(&tmp[0],&e_ff[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    if (node == 0) 
+      for (int ipiece=0;ipiece<npieces;ipiece++) 
+	 *energy += e_ff[ipiece];
+  }
+  MPI_Bcast(energy,1,MPI_DOUBLE,0,comm->get_world());
+  force = 0.;
+  p->SaveGradient(force);
+  double res = 0.;
+  for (int i = 0; i < force.size(); i++)
+    res += force[i]*force[i];
+  force *= -1.; // This line for ParaDyn CG Solver
+  if (node == 0)
+    glog.get_logfile() << " Energy = " << *energy << " Res = " << res << endl;
+}
+
+int Conjugate_Gradient::NRMinimize(double *energy, valarray<double>& x, valarray<double>& dx)
+{
+  int j, its, n = x.size();
+  double gg, gam, fp, dgg, fret;
+
+  valarray<double> g(n);
+  valarray<double> h(n);
+  fp = *energy;
+  dx *= -1.;
+  g = dx;
+  h = dx;
+  for (its = 1; its <= max_cg_its; its++) {
+    MinimizeAlongLine(&fret, x, dx);
+    if (dx.max() < max_cg_force && dx.min() > -max_cg_force) {
+      glog.get_logfile() << "\n cg solver done f.max and min = " << dx.max() << " " << dx.min() << "\n";
+      *energy = fret;
+      return its;
+    }
+    EvaluateFunctionAndGradient(energy, x, dx);
+    dgg = gg = 0.0;
+    for (j = 0; j < n; j++) {
+      gg += g[j]*g[j];
+      /* dgg += dx[j] * dx[j]; */ /* Fletcher-Reeves */
+      dgg += (dx[j] + g[j])*dx[j]; /* Polak-Ribiere */
+    }
+    if (gg == 0.0) {
+      glog.get_logfile() << " Encountered vanishing gradient. ";
+      return its;
+    }
+    gam = dgg/gg;
+    g = -dx;
+    h *= gam;
+    h += g;
+    dx = h;
+  }
+  glog.error("Too many iterations in frprmn");
+  return -1;
+}
+
+void Conjugate_Gradient::MinimizeAlongLine(double *energy, valarray<double>& x, 
+					   valarray<double>& dx)
+{
+  int j;
+  double xx, xmin, fx, fb, fa, bx, ax;
+  double current_grad_min,current_grad_max,current_xx_max;
+
+  *linesearch_x0 = x;
+  *linesearch_dir = dx;
+  *current_grad = dx;
+
+  ax = 0.0;
+  current_grad_min = current_grad->min();
+  current_grad_max = current_grad->max();
+  if (fabs(current_grad_min) > fabs(current_grad_max)) {
+    current_xx_max = 0.01/fabs(current_grad_min);
+  } else {
+    current_xx_max = 0.01/fabs(current_grad_max);
+  };
+  xx = 1.0;
+  if (xx > current_xx_max) xx = current_xx_max;
+  BracketMin(&ax, &xx, &bx, &fa, &fx, &fb);
+  *energy = FindMin(ax, xx, bx, line_search_tol, &xmin);
+  *linesearch_dir *= xmin;
+  x += *linesearch_dir;
+}
+
+void Conjugate_Gradient::BracketMin(double *ax, double *bx, double *cx, 
+				    double *fa, double *fb, double *fc)
+{
+  double ulim, u, r, q, fu, dum, df;
+
+  valarray<double> xi;
+
+  *linesearch_x = *linesearch_x0 + *ax * *linesearch_dir;
+  EvaluateFunctionAndGradient(fa, *linesearch_x, *current_grad);
+  *linesearch_x = *linesearch_x0 + *bx * *linesearch_dir;
+  EvaluateFunctionAndGradient(fb, *linesearch_x, *current_grad);
+  if (*fb > *fa) {
+    SHFT(dum, *ax, *bx, dum);
+    SHFT(dum, *fb, *fa, dum);
+  }
+  *cx = (*bx) + TAU*(*bx - *ax);
+  *linesearch_x = *linesearch_x0 + *cx * *linesearch_dir;
+  EvaluateFunctionAndGradient(fc, *linesearch_x, *current_grad);
+  while (*fb > *fc) {
+    r = (*bx - *ax)*(*fb - *fc);
+    q = (*bx - *cx)*(*fb - *fa);
+    u = (*bx) -((*bx - *cx)*q - (*bx - *ax)*r)/(2.0*SIGN(FMAX(fabs(q-r),TINY),
+							 q-r));
+    ulim = (*bx) + GLIMIT*(*cx - *bx);
+    if ((*bx - u)*(u - *cx) > 0.0) {
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      if (fu < *fc) {
+	*ax = *bx;
+	*bx = u;
+	*fa = *fb;
+	*fb = fu;
+	return;
+      } else if (fu > *fb) {
+	*cx = u;
+	*fc = fu;
+	return ;
+      }
+      u = (*cx) + TAU*(*cx - *bx);
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+    } else if ((*cx - u)*(u - ulim) > 0.0) {
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      if (fu < *fc) {
+	SHFT(*bx, *cx, u, *cx + TAU*(*cx - *bx));
+	*fb = *fc;
+	*fc = fu;
+	*linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+	EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      }
+    } else if ((u - ulim)*(ulim - *cx) >= 0.0) {
+      u = ulim;
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+    }
+    SHFT(*ax, *bx, *cx, u);
+    SHFT(*fa, *fb, *fc, fu);
+  }
+}
+
+double Conjugate_Gradient::FindMin(double ax, double bx, double cx,
+				   double tol, double *xmin)
+{
+  int iter, ok1, ok2;
+  double a, b, d, d1, d2, du, dv, dw, dx, e = 0.0;
+  double fu, fv, fw, fx, olde, tol1, tol2, u, u1, u2, v, w, x, xm;
+  
+  a = (ax < cx ? ax : cx);
+  b = (ax > cx ? ax : cx);
+  x = w = v = bx;
+  *linesearch_x = *linesearch_x0 + x * *linesearch_dir;
+  EvaluateFunctionAndGradient(&fx, *linesearch_x, *current_grad);
+  fw = fv = fx;
+  dx = DirectionalDerivative(*linesearch_dir,*current_grad);
+  dw = dv = dx;
+  // Initialize d unnecessarily to satisfy picky compilers
+  d = 0.0;
+  for (iter = 1; iter <= max_ls_its; iter++) {
+    xm = 0.5*(a+b);
+    tol1 = tol*fabs(x) + ZEPS;
+    tol2 = 2.0 * tol1;
+    if (fabs(x - xm) <= (tol2 - 0.5*(b-a))) {
+      *xmin = x;
+      return fx;
+    }
+    if (fabs(e) > tol1) {
+      d1 = 2.0*(b-a);
+      d2 = d1;
+      if (dw != dx)
+	d1 = (w-x)*dx/(dx - dw);
+      if (dv != dx)
+	d2 = (v-x)*dx/(dx - dv);
+      u1 = x + d1;
+      u2 = x + d2;
+      ok1 = (a - u1)*(u1 - b) > 0.0 && dx*d1 <= 0.0;
+      ok2 = (a - u2)*(u2 - b) > 0.0 && dx*d2 <= 0.0;
+      olde = e;
+      // this looks like uninitialized use of d, but it is not
+      e = d;
+      if (ok1 || ok2) {
+	if (ok1 && ok2) 
+	  d = (fabs(d1) < fabs(d2) ? d1 : d2);
+	else if (ok1)
+	  d = d1;
+	else 
+	  d = d2;
+	if (fabs(d) <= fabs(0.5 * olde)) {
+	  u = x + d;
+	  if (u - a < tol2 || b - u < tol2)
+	    d = SIGN(tol1, xm - x);
+	} else { 
+	  d = 0.5*(e = (dx >= 0.0 ?  a - x : b - x));
+	}
+      } else {
+	d = 0.5*(e = ( dx >= 0.0 ? a -x : b - x));
+      }
+    } else {
+      d = 0.5 * (e = ( dx >= 0.0 ? a - x : b - x));
+    }
+    if (fabs(d) >= tol1) { 
+      u = x + d;
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      du = DirectionalDerivative(*linesearch_dir,*current_grad);
+    } else {
+      u = x + SIGN(tol1, d);
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      du = DirectionalDerivative(*linesearch_dir,*current_grad);
+      if (fu > fx) {
+	*xmin = x;
+	return fx;
+      }
+    }
+    if (fu <= fx) {
+      if (u >= x) 
+	a = x;
+      else 
+	b = x;
+      MOV3(v, fv, dv, w, fw, dw);
+      MOV3(w, fw, dw, x, fx, dx);
+      MOV3(x, fx, dx, u, fu, du);
+    } else {
+      if (u < x) 
+	a = u;
+      else
+	b = u;
+      if (fu <= fw || w == x) {
+	MOV3(v, fv, dv, w, fw, dw);
+	MOV3(w, fw, dw, u, fu, du);
+      } else if (fu < fv || v == x || v == w) {
+	MOV3(v, fv, dv, u, fu, du);
+      }
+    }
+  }
+  glog.error("Too many iterations in routine dbrent");
+  return 0.0;
+}
+
+double Conjugate_Gradient::DirectionalDerivative(valarray<double>& df, valarray<double>& v) 
+{
+  double dfdotv = 0.0;
+  int n = df.size();
+
+  for (int i = 0; i < n; i++) 
+    dfdotv += df[i]*v[i];
+
+  glog.get_logfile() << "Directional derivative is " << dfdotv << " f.max is " << df.max() << " \n" ;
+  
+  return dfdotv;
+
+}
+@
+
+
+4.8
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@d220 2
+a221 1
+    outpp->WriteOutput(istep,p,box,t,comm,ff,fix_listp,0,false,false);
+@
+
+
+4.7
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d89 1
+a89 1
+  b(NULL),
+d112 1
+a112 1
+                Comm* comm) {
+d117 2
+d175 1
+a175 1
+  b = bp;
+d220 1
+a220 1
+    outpp->WriteOutput(istep,p,b,t,comm,ff,fix_listp,0,false,false);
+d241 2
+a242 2
+  ff->Neighboring(p, b, comm, false);
+  ff->ComputeForce(true,ForceFieldList::none,false,b,t,p,comm);
+d410 2
+d432 1
+@
+
+
+4.6
+log
+@Added Force_Reax::OutputReaxSizes()
+@
+text
+@d240 1
+a240 1
+  ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+@
+
+
+4.6.4.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d240 1
+a240 1
+  ff->ComputeForce(true,ForceFieldList::none,false,b,t,p,comm);
+@
+
+
+4.5
+log
+@Added multiple replica feature.
+@
+text
+@d96 2
+@
+
+
+4.4
+log
+@fix incorret value of GLIMIT
+fix allocation of current_grad
+implement limitation on the initial step size of line search
+will only work with neigh bin 1 1.0
+@
+text
+@d118 2
+a119 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Conjugate_Gradient::Setup()" << endl;
+d126 1
+a126 1
+  glog.logfile << "conjugate gradient";
+d133 1
+a133 1
+    glog.logfile << endl;
+d137 1
+a137 1
+  glog.logfile << " " << max_cg_its;
+d140 1
+a140 1
+    glog.logfile << endl;
+d144 1
+a144 1
+  glog.logfile << " " << max_ls_its;
+d147 1
+a147 1
+    glog.logfile << endl;
+d151 1
+a151 1
+  glog.logfile << " " << line_search_tol;
+d154 1
+a154 1
+    glog.logfile << endl;
+d158 1
+a158 1
+  glog.logfile << " " << max_cg_force;
+d185 1
+a185 1
+  glog.logfile << "Minimizing " << nmin << " degrees of freedom\n";
+d207 1
+a207 1
+    glog.logfile << "First time took " << nits << "\n";
+d212 1
+a212 1
+    glog.logfile << "Second time took " << nits << "\n";
+d261 1
+a261 1
+    glog.logfile << " Energy = " << *energy << " Res = " << res << endl;
+d278 1
+a278 1
+      glog.logfile << "\n cg solver done f.max and min = " << dx.max() << " " << dx.min() << "\n";
+d290 1
+a290 1
+      glog.logfile << " Encountered vanishing gradient. ";
+d495 1
+a495 1
+  glog.logfile << "Directional derivative is " << dfdotv << " f.max is " << df.max() << " \n" ;
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d73 1
+a73 1
+#define GLIMIT 1.0
+d105 2
+d196 3
+d261 1
+a261 1
+    glog.logfile << " Energy = " << *energy << " Res = " << res << "\n";
+d308 1
+d312 1
+a312 1
+  current_grad = &dx;
+d315 7
+d323 1
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: 8 January 2004
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 1
+a13 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d15 1
+a15 1
+//    Primary Author: Aidan P. Thompson
+d19 4
+a22 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a25 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.3
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.2
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d13 2
+a14 1
+//    Timestamp: 8 January 2004
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d102 4
+a105 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Conjugate_Gradient::Setup()" << endl;
+#endif
+@
+
+
+1.1
+log
+@file conjugate_gradient.cpp was initially added on branch cjkimme_version.
+@
+text
+@d1 467
+@
+
+
+1.1.2.1
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a0 472
+//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: 8 January 2004
+//
+//    Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//------------------------------------------------------------------------ 
+/////:EOH~
+
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <sstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "conjugate_gradient.h"
+#include "constants.h"
+#include "particlelist.h"
+#include "neighbor.h"
+#include "forcefield.h"
+#include "forcefieldlist.h"
+#include "output.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+extern Constants constants;
+
+
+/* Stuff from Numerical Recipes */
+#define EPS 1.e-10
+#define ZEPS 1.0e-10
+#define MOV3(a,b,c,d,e,f) (a) = (d); (b) = (e); (c) = (f);
+#define TAU 1.618034
+#define GLIMIT 1.0
+#define TINY 1.0e-20
+#define SHFT(a,b,c,d) (a) = (b); (b) = (c); (c) = (d);
+
+static double maxarg1, maxarg2;
+#define FMAX(a,b) (maxarg1 = (a),maxarg2 = (b),(maxarg1) > (maxarg2) ? (maxarg1) : maxarg2)
+
+#define SIGN(a,b) ((b) >= 0.0 ? fabs(a) : -fabs(a))
+
+
+
+Conjugate_Gradient::Conjugate_Gradient():
+  linesearch_x0(NULL),
+  linesearch_dir(NULL),
+  linesearch_x(NULL),
+  current_grad(NULL),
+  b(NULL),
+  t(NULL),
+  p(NULL),
+  ff(NULL),
+  comm(NULL)
+{
+  // nothin'
+}
+
+Conjugate_Gradient::~Conjugate_Gradient() {
+  if (linesearch_x0)
+    delete linesearch_x0;
+  if (linesearch_x)
+    delete linesearch_x;
+  if (linesearch_dir)
+    delete linesearch_dir;
+}
+
+void Conjugate_Gradient::Setup(const string input_string,
+                Comm* comm) {
+
+  int node;
+  string str_tmp;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Conjugate_Gradient::Setup()" << endl;
+  }
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Conjugate_Gradient::Setup()" << endl;
+#endif
+
+  glog.logfile << "conjugate gradient";
+
+  // should read in max number of iterations, tolerances, etc.
+
+  stringstream buf_in(input_string);
+  buf_in >> max_cg_its;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in max_cg_its");
+  }
+  glog.logfile << " " << max_cg_its;
+  buf_in >> tolerance;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in tolerance");
+  }
+  glog.logfile << " " << tolerance;
+  buf_in >> line_search_tol;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read in line search tolerance");
+  }
+  glog.logfile << " " << line_search_tol;
+  buf_in >> max_cg_force;
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Conjugate_Gradient::input_minimize:\n"
+  	       "Cannot read max_cg_force");
+  }
+  glog.logfile << " " << max_cg_force;
+  
+}
+
+void Conjugate_Gradient::Run(const int nsteps, const double timestep,
+           Box* bp, ParticleTypeList* tp,
+           ParticleList* pp, ForceFieldList* ffp,
+           Output* outpp, FixList* fix_listp, Comm* commp) {
+  double t0,t1,t2,t3;
+  bool Lmaxstep;
+  double timestepsq;
+
+  // initialize class members
+  b = bp;
+  t = tp;
+  p = pp;
+  ff = ffp;
+  comm = commp;
+
+  timestepsq = timestep;
+
+  p->SaveForce();
+
+  t0 = MPI_Wtime();
+  // use nsteps as iteration maximum
+  int nmin = 3*p->get_nminimized();
+  valarray<double> r(nmin), f(nmin);
+  double energy;
+
+  glog.logfile << "Minimizing " << nmin << " degrees of freedom\n";
+
+  if (linesearch_x0)
+    delete linesearch_x0;
+  linesearch_x0 = new valarray<double>(nmin);
+  if (linesearch_x)
+    delete linesearch_x;
+  linesearch_x = new valarray<double>(nmin);
+  if (linesearch_dir)
+    delete linesearch_dir;
+  linesearch_dir = new valarray<double>(nmin);
+
+  // initialize r
+  p->SaveMinimized(r);
+  EvaluateFunctionAndGradient(&energy, r, f);
+  for (int istep=1;istep<=nsteps;istep++) {
+  
+    int nits = NRMinimize(&energy, r, f); 
+
+    glog.logfile << "First time took " << nits << "\n";
+
+    // restart it to verify minimum
+    nits = NRMinimize(&energy, r, f);
+
+    glog.logfile << "Second time took " << nits << "\n";
+    
+    t1 = MPI_Wtime();
+    glog.timetotal = t1-t0;
+    outpp->WriteOutput(istep,p,b,t,comm,ff,fix_listp,0);
+
+  }
+
+}
+
+/* Evaluate interfacial energy at the point lastPoint + x * lastDirection  */
+void Conjugate_Gradient::EvaluateFunctionAndGradient(double* energy, valarray<double>& x, valarray<double>& force)
+{
+
+  ForceField* const* forcefields;
+  int node;
+  int nforcefields;
+  vector<double> tmp;
+  vector<double> e_ff;
+  int npieces;
+
+  node = comm->get_node();
+
+  // set coordinates
+  p->MoveMinimized(x);
+  ff->Neighboring(p, b, comm);
+  ff->ComputeForce(b,t,p,comm);
+  *energy = 0.;
+  forcefields = ff->get_forcefields();
+  nforcefields = ff->get_nforcefields();
+  for (int iff = 0;iff<nforcefields;iff++) {
+    ForceField* ffiff = forcefields[iff];
+    npieces = ffiff->get_npieces();
+    tmp = ffiff->get_energy();
+    e_ff.resize(npieces);
+    MPI_Allreduce(&tmp[0],&e_ff[0],npieces,MPI_DOUBLE,
+		  MPI_SUM,comm->get_world());
+    if (node == 0) 
+      for (int ipiece=0;ipiece<npieces;ipiece++) 
+	 *energy += e_ff[ipiece];
+  }
+  MPI_Bcast(energy,1,MPI_DOUBLE,0,comm->get_world());
+  force = 0.;
+  p->SaveGradient(force);
+  double res = 0.;
+  for (int i = 0; i < force.size(); i++)
+    res += force[i]*force[i];
+  force *= -1.; // This line for ParaDyn CG Solver
+  if (node == 0)
+    glog.logfile << " Energy = " << *energy << " Res = " << res << "\n";
+}
+
+int Conjugate_Gradient::NRMinimize(double *energy, valarray<double>& x, valarray<double>& dx)
+{
+  int ITMAX = 200;
+  int j, its, n = x.size();
+  double gg, gam, fp, dgg, fret;
+
+  valarray<double> g(n);
+  valarray<double> h(n);
+  fp = *energy;
+  dx *= -1.;
+  g = dx;
+  h = dx;
+  for (its = 1; its <= max_cg_its; its++) {
+    MinimizeAlongLine(&fret, x, dx);
+    if (.20*fabs(fret-*energy) <= tolerance*(fabs(fret)+fabs(*energy)+EPS)) {
+      if (dx.max() < max_cg_force && dx.min() > -max_cg_force) {
+	glog.logfile << "\n cg solver done f.max and min = " << dx.max() << " " << dx.min() << "\n";
+	*energy = fret;
+	return its;
+      }
+    }
+    EvaluateFunctionAndGradient(energy, x, dx);
+    dgg = gg = 0.0;
+    for (j = 0; j < n; j++) {
+      gg += g[j]*g[j];
+      /* dgg += dx[j] * dx[j]; */ /* Fletcher-Reeves */
+      dgg += (dx[j] + g[j])*dx[j]; /* Polak-Ribiere */
+    }
+    if (gg == 0.0) {
+      glog.logfile << " Encountered vanishing gradient. ";
+      return its;
+    }
+    gam = dgg/gg;
+    g = -dx;
+    h *= gam;
+    h += g;
+    dx = h;
+  }
+  glog.error("Too many iterations in frprmn");
+}
+
+void Conjugate_Gradient::MinimizeAlongLine(double *energy, valarray<double>& x, 
+					   valarray<double>& dx)
+{
+  int j;
+  double xx, xmin, fx, fb, fa, bx, ax;
+
+  *linesearch_x0 = x;
+  *linesearch_dir = dx;
+  current_grad = &dx;
+
+  ax = 0.0;
+  xx = 1.0;
+  BracketMin(&ax, &xx, &bx, &fa, &fx, &fb);
+  *energy = FindMin(ax, xx, bx, line_search_tol, &xmin);
+  *linesearch_dir *= xmin;
+  x += *linesearch_dir;
+}
+
+void Conjugate_Gradient::BracketMin(double *ax, double *bx, double *cx, 
+				    double *fa, double *fb, double *fc)
+{
+  double ulim, u, r, q, fu, dum, df;
+
+  valarray<double> xi;
+
+  *linesearch_x = *linesearch_x0 + *ax * *linesearch_dir;
+  EvaluateFunctionAndGradient(fa, *linesearch_x, *current_grad);
+  *linesearch_x = *linesearch_x0 + *bx * *linesearch_dir;
+  EvaluateFunctionAndGradient(fb, *linesearch_x, *current_grad);
+  if (*fb > *fa) {
+    SHFT(dum, *ax, *bx, dum);
+    SHFT(dum, *fb, *fa, dum);
+  }
+  *cx = (*bx) + TAU*(*bx - *ax);
+  *linesearch_x = *linesearch_x0 + *cx * *linesearch_dir;
+  EvaluateFunctionAndGradient(fc, *linesearch_x, *current_grad);
+  while (*fb > *fc) {
+    r = (*bx - *ax)*(*fb - *fc);
+    q = (*bx - *cx)*(*fb - *fa);
+    u = (*bx) -((*bx - *cx)*q - (*bx - *ax)*r)/(2.0*SIGN(FMAX(fabs(q-r),TINY),
+							 q-r));
+    ulim = (*bx) + GLIMIT*(*cx - *bx);
+    if ((*bx - u)*(u - *cx) > 0.0) {
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      if (fu < *fc) {
+	*ax = *bx;
+	*bx = u;
+	*fa = *fb;
+	*fb = fu;
+	return;
+      } else if (fu > *fb) {
+	*cx = u;
+	*fc = fu;
+	return ;
+      }
+      u = (*cx) + TAU*(*cx - *bx);
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+    } else if ((*cx - u)*(u - ulim) > 0.0) {
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      if (fu < *fc) {
+	SHFT(*bx, *cx, u, *cx + TAU*(*cx - *bx));
+	*fb = *fc;
+	*fc = fu;
+	*linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+	EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      }
+    } else if ((u - ulim)*(ulim - *cx) >= 0.0) {
+      u = ulim;
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+    }
+    SHFT(*ax, *bx, *cx, u);
+    SHFT(*fa, *fb, *fc, fu);
+  }
+}
+
+double Conjugate_Gradient::FindMin(double ax, double bx, double cx,
+				   double tol, double *xmin)
+{
+  int ITMAX = 100;
+  int iter, ok1, ok2;
+  double a, b, d, d1, d2, du, dv, dw, dx, e = 0.0;
+  double fu, fv, fw, fx, olde, tol1, tol2, u, u1, u2, v, w, x, xm;
+  
+  a = (ax < cx ? ax : cx);
+  b = (ax > cx ? ax : cx);
+  x = w = v = bx;
+  *linesearch_x = *linesearch_x0 + x * *linesearch_dir;
+  EvaluateFunctionAndGradient(&fx, *linesearch_x, *current_grad);
+  fw = fv = fx;
+  dx = DirectionalDerivative(*linesearch_dir,*current_grad);
+  dw = dv = dx;
+  for (iter = 1; iter <= ITMAX; iter++) {
+    xm = 0.5*(a+b);
+    tol1 = tol*fabs(x) + ZEPS;
+    tol2 = 2.0 * tol1;
+    if (fabs(x - xm) <= (tol2 - 0.5*(b-a))) {
+      *xmin = x;
+      return fx;
+    }
+    if (fabs(e) > tol1) {
+      d1 = 2.0*(b-a);
+      d2 = d1;
+      if (dw != dx)
+	d1 = (w-x)*dx/(dx - dw);
+      if (dv != dx)
+	d2 = (v-x)*dx/(dx - dv);
+      u1 = x + d1;
+      u2 = x + d2;
+      ok1 = (a - u1)*(u1 - b) > 0.0 && dx*d1 <= 0.0;
+      ok2 = (a - u2)*(u2 - b) > 0.0 && dx*d2 <= 0.0;
+      olde = e;
+      e = d;
+      if (ok1 || ok2) {
+	if (ok1 && ok2) 
+	  d = (fabs(d1) < fabs(d2) ? d1 : d2);
+	else if (ok1)
+	  d = d1;
+	else 
+	  d = d2;
+	if (fabs(d) <= fabs(0.5 * olde)) {
+	  u = x + d;
+	  if (u - a < tol2 || b - u < tol2)
+	    d = SIGN(tol1, xm - x);
+	} else { 
+	  d = 0.5*(e = (dx >= 0.0 ?  a - x : b - x));
+	}
+      } else {
+	d = 0.5*(e = ( dx >= 0.0 ? a -x : b - x));
+      }
+    } else {
+      d = 0.5 * (e = ( dx >= 0.0 ? a - x : b - x));
+    }
+    if (fabs(d) >= tol1) { 
+      u = x + d;
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      du = DirectionalDerivative(*linesearch_dir,*current_grad);
+    } else {
+      u = x + SIGN(tol1, d);
+      *linesearch_x = *linesearch_x0 + u * *linesearch_dir;
+      EvaluateFunctionAndGradient(&fu, *linesearch_x, *current_grad);
+      du = DirectionalDerivative(*linesearch_dir,*current_grad);
+      if (fu > fx) {
+	*xmin = x;
+	return fx;
+      }
+    }
+    if (fu <= fx) {
+      if (u >= x) 
+	a = x;
+      else 
+	b = x;
+      MOV3(v, fv, dv, w, fw, dw);
+      MOV3(w, fw, dw, x, fx, dx);
+      MOV3(x, fx, dx, u, fu, du);
+    } else {
+      if (u < x) 
+	a = u;
+      else
+	b = u;
+      if (fu <= fw || w == x) {
+	MOV3(v, fv, dv, w, fw, dw);
+	MOV3(w, fw, dw, u, fu, du);
+      } else if (fu < fv || v == x || v == w) {
+	MOV3(v, fv, dv, u, fu, du);
+      }
+    }
+  }
+  glog.error("Too many iterations in routine dbrent");
+  return 0.0;
+}
+
+double Conjugate_Gradient::DirectionalDerivative(valarray<double>& df, valarray<double>& v) 
+{
+  double dfdotv = 0.0;
+  int n = df.size();
+
+  for (int i = 0; i < n; i++) 
+    dfdotv += df[i]*v[i];
+
+  glog.logfile << "Directional derivative is " << dfdotv << " f.max is " << df.max() << " " ;
+  
+  return dfdotv;
+
+}
+@
+
+
+1.1.2.2
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d110 1
+a110 1
+  std::stringstream buf_in(input_string);
+d159 2
+d195 1
+a195 1
+    outpp->WriteOutput(istep,p,b,t,comm,ff,fix_listp,0,false,false);
+d216 2
+a217 2
+  ff->Neighboring(p, b, comm, false);
+  ff->ComputeForce(true,false,b,t,p,comm);
+@
+
+
+1.1.2.3
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d118 1
+a118 1
+  buf_in >> max_ls_its;
+d122 1
+a122 1
+  	       "Cannot read in maximum number of line search iterations");
+d124 1
+a124 1
+  glog.logfile << " " << max_ls_its;
+d215 1
+a215 1
+  ff->ComputeForce(true,ForceFieldList::none,b,t,p,comm);
+d243 1
+d255 6
+a260 4
+    if (dx.max() < max_cg_force && dx.min() > -max_cg_force) {
+      glog.logfile << "\n cg solver done f.max and min = " << dx.max() << " " << dx.min() << "\n";
+      *energy = fret;
+      return its;
+a279 1
+  return -1;
+d364 1
+d377 1
+a377 1
+  for (iter = 1; iter <= max_ls_its; iter++) {
+d466 1
+a466 1
+  glog.logfile << "Directional derivative is " << dfdotv << " f.max is " << df.max() << " \n" ;
+@
+
+

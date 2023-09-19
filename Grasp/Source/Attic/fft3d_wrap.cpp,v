@@ -1,0 +1,102 @@
+head	1.1;
+access;
+symbols
+	PPPM_Crozier2:1.1.0.2;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2005.06.20.22.21.43;	author pscrozi;	state dead;
+branches
+	1.1.2.1;
+next	;
+
+1.1.2.1
+date	2005.06.20.22.21.43;	author pscrozi;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@file fft3d_wrap.cpp was initially added on branch PPPM_Crozier2.
+@
+text
+@@
+
+
+1.1.2.1
+log
+@latest version of PPPM for Grasp
+@
+text
+@a0 62
+/* ----------------------------------------------------------------------
+   LAMMPS - Large-scale Atomic/Molecular Massively Parallel Simulator
+   www.cs.sandia.gov/~sjplimp/lammps.html
+   Steve Plimpton, sjplimp@@sandia.gov, Sandia National Laboratories
+
+   Copyright (2003) Sandia Corporation.  Under the terms of Contract
+   DE-AC04-94AL85000 with Sandia Corporation, the U.S. Government retains
+   certain rights in this software.  This software is distributed under 
+   the GNU General Public License.
+
+   See the README file in the top-level LAMMPS directory.
+------------------------------------------------------------------------- */
+
+#include <vector>
+#include <fstream>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "particle.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "fft3d_wrap.h"
+#include "comm.h"
+#include "log.h"
+extern Log glog;
+
+/* ---------------------------------------------------------------------- */
+
+FFT3d::FFT3d(MPI_Comm comm, int nfast, int nmid, int nslow,
+	     int in_ilo, int in_ihi, int in_jlo, int in_jhi,
+	     int in_klo, int in_khi,
+	     int out_ilo, int out_ihi, int out_jlo, int out_jhi,
+	     int out_klo, int out_khi,
+	     int scaled, int permute, int *nbuf)
+{
+  plan = fft_3d_create_plan(comm,nfast,nmid,nslow,
+			    in_ilo,in_ihi,in_jlo,in_jhi,in_klo,in_khi,
+			    out_ilo,out_ihi,out_jlo,out_jhi,out_klo,out_khi,
+			    scaled,permute,nbuf);
+  if (plan == NULL) glog.error("Could not create 3d FFT plan");
+}
+
+/* ---------------------------------------------------------------------- */
+
+FFT3d::~FFT3d()
+{
+  fft_3d_destroy_plan(plan);
+}
+
+/* ---------------------------------------------------------------------- */
+
+void FFT3d::compute(double *in, double *out, int flag)
+{
+  fft_3d((FFT_DATA *) in,(FFT_DATA *) out,flag,plan);
+}
+
+/* ---------------------------------------------------------------------- */
+
+void FFT3d::timing1d(double *in, int nsize, int flag)
+{
+  fft_1d_only((FFT_DATA *) in,nsize,flag,plan);
+}
+@
+

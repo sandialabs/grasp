@@ -1,0 +1,958 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.3.0.10
+	ADTools_branch:4.3.0.8
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.1
+	REAX-2:3.1
+	P_MonacoSource:3.1.0.6
+	GraspSource:3.1
+	P_Monaco:3.1.0.4
+	InitialGrasp:3.1
+	REAXFF:3.1.0.2
+	premerge_cjkimme_version:3.0
+	CRAY:2.5.0.2
+	cjkimme_version_merge_from_trunk_1:2.2.2.1
+	cjkimme_version:2.2.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.4
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2004.05.20.22.11.33;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2004.03.20.00.15.38;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.2.2.1;
+next	2.1;
+
+2.1
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.25.23.06.37;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.21.23.10.03;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.18.23.15.17;	author athomps;	state Exp;
+branches;
+next	;
+
+2.2.2.1
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	2.2.2.2;
+
+2.2.2.2
+date	2004.10.20.23.14.05;	author cjkimme;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCE_THREEBODY_INLINE_H
+#define FORCE_THREEBODY_INLINE_H
+
+#include <iostream>
+#include <math.h>
+
+// INLINE(inline) FUNCTION DEFINITIONS
+//
+// Inlining inner loop operations provides significant performance gain
+//
+
+inline void Force_Threebody::force_sw_cut(
+		       const double xi[],const double xj[],const double xk[], 
+		       double fj[],double fk[],
+                       const bool& Lenergy, const bool& Lvirial, 
+                       double& energy, double virial_j[], double virial_k[],
+		       const int& ientry) const
+{
+  /*
+    This is the threebody part of Stillinger-Weber forcefield.
+    This forcefield form is based on that of Stillinger & Weber,
+    Phys. Rev. B, v. 31, p. 5262, (1985).
+
+    The precomputed parameters stored in ff_params.params[] are as follows:
+
+    rcut = sigma*littlea;
+    params[0] = rcut;
+    params[1] = sigma*gamma;
+    params[2] = costheta;
+    params[3] = lambda*eps;
+    params[4] = 2.0*lambda*eps;
+    params[5] = rcut*rcut;
+    params[6] = powerp;
+    params[7] = powerq;
+    params[8] = sigma;
+    params[9] = biga*eps*powerp*bigb*pow(sigma,powerp);
+    params[10] = biga*eps*powerq*pow(sigma,powerq);
+    params[11] = biga*eps*bigb*pow(sigma,powerp+1);
+    params[12] = biga*eps*pow(sigma,powerq+1);
+    params[13] = biga*eps*bigb*pow(sigma,powerp);
+    params[14] = biga*eps*pow(sigma,powerq);
+
+  */
+  double rsq1,r1,rinvsq1,rainv1,gsrainv1,gsrainvsq1,expgsrainv1;
+  double rsq2,r2,rinvsq2,rainv2,gsrainv2,gsrainvsq2,expgsrainv2;
+  double rinv12,cs,delcs,delcssq,facexp,facrad,frad1,frad2;
+  double facang,facang12,csfacang,csfac1,csfac2;
+  double delr1[3],delr2[3];
+
+  rsq1 = vec3_distsq(xj,xi,delr1);
+  if (rsq1 <= param_list[ientry].params[5]) {
+    rsq2 = vec3_distsq(xk,xi,delr2);
+    if (rsq2 <= param_list[ientry].params[5] ) {
+      r1 = sqrt(rsq1);
+      rinvsq1 = 1.0/rsq1;
+      rainv1 = 1.0/(r1-param_list[ientry].params[0]);
+      gsrainv1 = param_list[ientry].params[1]*rainv1;
+      gsrainvsq1 = gsrainv1*rainv1/r1; 
+      expgsrainv1 = exp(gsrainv1);
+
+      r2 = sqrt(rsq2);
+      rinvsq2 = 1.0/rsq2;
+      rainv2 = 1.0/(r2-param_list[ientry].params[0]);
+      gsrainv2 = param_list[ientry].params[1]*rainv2;
+      gsrainvsq2 = gsrainv2*rainv2/r2; 
+      expgsrainv2 = exp(gsrainv2);
+
+      rinv12 = 1.0/(r1*r2);
+      cs = vec3_dot(delr1,delr2)*rinv12;
+      delcs = cs - param_list[ientry].params[2];
+      delcssq = delcs*delcs;
+
+      //Compute exponential factor
+      facexp = expgsrainv1*expgsrainv2;
+      //Compute facrad
+      facrad = param_list[ientry].params[3]*facexp*delcssq;
+      //Compute radial force/r on atom j
+      frad1 = facrad*gsrainvsq1;
+      //Compute radial force/r on atom k
+      frad2 = facrad*gsrainvsq2;
+      //Compute angular force factors
+      facang = param_list[ientry].params[4]*facexp*delcs;
+      facang12 = rinv12*facang;
+      csfacang = cs*facang;
+      //Compute force on atom j
+      csfac1 = rinvsq1*csfacang;
+      fj[0] = delr1[0]*(frad1+csfac1)-delr2[0]*facang12;
+      fj[1] = delr1[1]*(frad1+csfac1)-delr2[1]*facang12;
+      fj[2] = delr1[2]*(frad1+csfac1)-delr2[2]*facang12;
+      //Compute force on atom k
+      csfac2 = rinvsq2*csfacang;
+      fk[0] = delr2[0]*(frad2+csfac2)-delr1[0]*facang12;
+      fk[1] = delr2[1]*(frad2+csfac2)-delr1[1]*facang12;
+      fk[2] = delr2[2]*(frad2+csfac2)-delr1[2]*facang12;
+      if (Lenergy) {
+	energy = facrad;
+      }
+      if (Lvirial) {
+	virial_j[0] = fj[0]*delr1[0];virial_k[0] = fk[0]*delr2[0];
+	virial_j[1] = fj[1]*delr1[1];virial_k[1] = fk[1]*delr2[1];
+	virial_j[2] = fj[2]*delr1[2];virial_k[2] = fk[2]*delr2[2];
+	virial_j[3] = fj[0]*delr1[1];virial_k[3] = fk[0]*delr2[1];
+	virial_j[4] = fj[0]*delr1[2];virial_k[4] = fk[0]*delr2[2];
+	virial_j[5] = fj[1]*delr1[2];virial_k[5] = fk[1]*delr2[2];
+      }
+    } else {
+      fj[0] = 0.0;
+      fj[1] = 0.0;
+      fj[2] = 0.0;
+      fk[0] = 0.0;
+      fk[1] = 0.0;
+      fk[2] = 0.0;
+      if (Lenergy) {
+	energy = 0.0;
+      }
+      if (Lvirial) {
+	for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	  virial_j[ivirial] = virial_k[ivirial] = 0.0;
+	}
+      }
+    }
+  } else {
+    fj[0] = 0.0;
+    fj[1] = 0.0;
+    fj[2] = 0.0;
+    fk[0] = 0.0;
+    fk[1] = 0.0;
+    fk[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_j[ivirial] = virial_k[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+inline void Force_Threebody::force_sw_twobody_cut(
+		       const double xi[],const double xj[], 
+		       double fi[],
+                       const bool& Lenergy, const bool& Lvirial, 
+                       double& energy, double virial_ij[],
+                       const int& ientry) const
+{
+  /*
+    This is the twobody part of Stillinger-Weber.
+    See function Force_Threebody::force_sw_cut() above for
+    documentation
+  */
+
+  double rsq,r,rinvsq,rp,rq,rainv,rainvsq,expsrainv,virial_tmp;
+  double delr[3];
+
+  rsq = vec3_distsq(xi,xj,delr);
+  if (rsq <= param_list[ientry].params[5]) {
+    r = sqrt(rsq);
+    rinvsq = 1.0/rsq;
+    rp = pow(r,-param_list[ientry].params[6]);
+    rq = pow(r,-param_list[ientry].params[7]);
+    rainv = 1.0/(r-param_list[ientry].params[0]);
+    rainvsq = rainv*rainv*r; 
+    expsrainv = exp(param_list[ientry].params[8]*rainv);
+
+    virial_tmp = (param_list[ientry].params[9]*rp
+	     -param_list[ientry].params[10]*rq
+	    +(param_list[ientry].params[11]*rp
+	     -param_list[ientry].params[12]*rq)*rainvsq)*expsrainv;
+    virial_tmp*=rinvsq;
+
+    fi[0] = virial_tmp*delr[0];
+    fi[1] = virial_tmp*delr[1];
+    fi[2] = virial_tmp*delr[2];
+    if (Lenergy) {
+      energy = (param_list[ientry].params[13]*rp
+		-param_list[ientry].params[14]*rq)*expsrainv;
+    }
+    if (Lvirial) {
+      virial_ij[0] = virial_tmp*delr[0]*delr[0];
+      virial_ij[1] = virial_tmp*delr[1]*delr[1];
+      virial_ij[2] = virial_tmp*delr[2]*delr[2];
+      virial_ij[3] = virial_tmp*delr[0]*delr[1];
+      virial_ij[4] = virial_tmp*delr[0]*delr[2];
+      virial_ij[5] = virial_tmp*delr[1]*delr[2];
+    }
+
+  }  else {
+    fi[0] = 0.0;
+    fi[1] = 0.0;
+    fi[2] = 0.0;
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial_ij[ivirial] = 0.0;
+      }
+    }
+  }
+}
+
+inline void Force_Threebody::force_sw_cut_minimg(
+				   const Particle& pi,const Particle& pj,
+                                   const Particle& pk, 
+				   double fj[],double fk[],
+				   const bool& Lenergy, const bool& Lvirial, 
+				   double& energy, double virial_j[], double virial_k[],
+				   const int& ientry, const Box* b) const {
+  double xi[3],xj[3],xk[3];
+
+  pi.get_x(xi);
+  pj.get_x(xj);
+  pk.get_x(xk);
+
+  b->Minimg_Diff_Shift(xi,xj);
+  b->Minimg_Diff_Shift(xi,xk);
+
+  force_sw_cut(xi,xj,xk,fj,fk,Lenergy,Lvirial,energy,virial_j,virial_k,ientry);
+}
+
+inline void Force_Threebody::force_sw_twobody_cut_minimg(
+                                   const Particle& pi, const Particle& pj, 
+				   double fi[],
+				   const bool& Lenergy, const bool& Lvirial, 
+				   double& energy, double virial_ij[],
+				   const int& ientry, const Box* b) const {
+  double xi[3],xj[3];
+
+  pi.get_x(xi);
+  pj.get_x(xj);
+
+  b->Minimg_Diff_Shift(xi,xj);
+
+  force_sw_twobody_cut(xi,xj,fi,Lenergy,Lvirial,energy,virial_ij,ientry);
+}
+#endif
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d189 1
+a189 1
+                       double& energy, double virial[],
+d225 6
+a230 6
+      virial[0] = virial_tmp*delr[0]*delr[0];
+      virial[1] = virial_tmp*delr[1]*delr[1];
+      virial[2] = virial_tmp*delr[2]*delr[2];
+      virial[3] = virial_tmp*delr[0]*delr[1];
+      virial[4] = virial_tmp*delr[0]*delr[2];
+      virial[5] = virial_tmp*delr[1]*delr[2];
+d242 1
+a242 1
+	virial[ivirial] = 0.0;
+d271 1
+a271 1
+				   double& energy, double virial[],
+d280 1
+a280 1
+  force_sw_twobody_cut(xi,xj,fi,Lenergy,Lvirial,energy,virial,ientry);
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+@
+
+
+3.2
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.1
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d45 1
+a45 1
+                       double& energy, double virial[],
+d128 6
+a133 6
+	virial[0] = fj[0]*delr1[0]+fk[0]*delr2[0];
+	virial[1] = fj[1]*delr1[1]+fk[1]*delr2[1];
+	virial[2] = fj[2]*delr1[2]+fk[2]*delr2[2];
+	virial[3] = fj[0]*delr1[1]+fk[0]*delr2[1];
+	virial[4] = fj[0]*delr1[2]+fk[0]*delr2[2];
+	virial[5] = fj[1]*delr1[2]+fk[1]*delr2[2];
+d147 1
+a147 1
+	  virial[ivirial] = 0.0;
+d163 1
+a163 1
+	virial[ivirial] = 0.0;
+d237 1
+a237 1
+				   double& energy, double virial[],
+d248 1
+a248 1
+  force_sw_cut(xi,xj,xk,fj,fk,Lenergy,Lvirial,energy,virial,ientry);
+@
+
+
+2.5
+log
+@Updated header
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.4
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.3
+log
+@Various
+@
+text
+@d42 4
+a45 2
+		       double fj[],double fk[],double& energy,
+					const int& ientry) const
+d123 12
+a134 5
+
+      energy = facrad;
+
+    }  else {
+      energy = 0.0;
+d141 8
+d150 1
+a150 2
+  }  else {
+    energy = 0.0;
+d157 8
+a165 1
+  return ;
+d170 4
+a173 2
+		       double fi[],double& energy,
+					const int& ientry) const
+d181 1
+a181 1
+  double rsq,r,rinvsq,rp,rq,rainv,rainvsq,expsrainv,virial;
+d194 1
+a194 1
+    virial = (param_list[ientry].params[9]*rp
+d198 17
+a214 2
+    energy = (param_list[ientry].params[13]*rp
+	     -param_list[ientry].params[14]*rq)*expsrainv;
+a215 3
+    fi[0] = virial*delr[0]*rinvsq;
+    fi[1] = virial*delr[1]*rinvsq;
+    fi[2] = virial*delr[2]*rinvsq;
+a216 2
+    virial = 0.0;
+    energy = 0.0;
+d220 8
+a228 1
+  return ;
+d232 6
+a237 4
+				   const Particle& pi,const Particle& pj,const Particle& pk, 
+				   double fj[],double fk[],double& energy_ijk,
+				   const int& ientry, const Box* b) const
+{
+d247 1
+a247 1
+  force_sw_cut(xi,xj,xk,fj,fk,energy_ijk,ientry);
+d252 4
+a255 3
+				   double fi[],double& energy_ij,
+				   const int& ientry, const Box* b) const
+{
+d263 1
+a263 1
+  force_sw_twobody_cut(xi,xj,fi,energy_ij,ientry);
+@
+
+
+2.2
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+@
+
+
+2.2.2.1
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+d42 2
+a43 4
+		       double fj[],double fk[],
+                       const bool& Lenergy, const bool& Lvirial, 
+                       double& energy, double virial[],
+		       const int& ientry) const
+d121 5
+a125 12
+      if (Lenergy) {
+	energy = facrad;
+      }
+      if (Lvirial) {
+	virial[0] = fj[0]*delr1[0]+fk[0]*delr2[0];
+	virial[1] = fj[1]*delr1[1]+fk[1]*delr2[1];
+	virial[2] = fj[2]*delr1[2]+fk[2]*delr2[2];
+	virial[3] = fj[0]*delr1[1]+fk[0]*delr2[1];
+	virial[4] = fj[0]*delr1[2]+fk[0]*delr2[2];
+	virial[5] = fj[1]*delr1[2]+fk[1]*delr2[2];
+      }
+    } else {
+a131 8
+      if (Lenergy) {
+	energy = 0.0;
+      }
+      if (Lvirial) {
+	for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	  virial[ivirial] = 0.0;
+	}
+      }
+d133 2
+a134 1
+  } else {
+a140 8
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial[ivirial] = 0.0;
+      }
+    }
+d142 1
+d147 2
+a148 4
+		       double fi[],
+                       const bool& Lenergy, const bool& Lvirial, 
+                       double& energy, double virial[],
+                       const int& ientry) const
+d156 1
+a156 1
+  double rsq,r,rinvsq,rp,rq,rainv,rainvsq,expsrainv,virial_tmp;
+d169 1
+a169 1
+    virial_tmp = (param_list[ientry].params[9]*rp
+d173 2
+a174 17
+    virial_tmp*=rinvsq;
+
+    fi[0] = virial_tmp*delr[0];
+    fi[1] = virial_tmp*delr[1];
+    fi[2] = virial_tmp*delr[2];
+    if (Lenergy) {
+      energy = (param_list[ientry].params[13]*rp
+		-param_list[ientry].params[14]*rq)*expsrainv;
+    }
+    if (Lvirial) {
+      virial[0] = virial_tmp*delr[0]*delr[0];
+      virial[1] = virial_tmp*delr[1]*delr[1];
+      virial[2] = virial_tmp*delr[2]*delr[2];
+      virial[3] = virial_tmp*delr[0]*delr[1];
+      virial[4] = virial_tmp*delr[0]*delr[2];
+      virial[5] = virial_tmp*delr[1]*delr[2];
+    }
+d176 3
+d180 2
+a184 8
+    if (Lenergy) {
+      energy = 0.0;
+    }
+    if (Lvirial) {
+      for (int ivirial=0;ivirial<nvirial;ivirial++) {
+	virial[ivirial] = 0.0;
+      }
+    }
+d186 1
+d190 4
+a193 6
+				   const Particle& pi,const Particle& pj,
+                                   const Particle& pk, 
+				   double fj[],double fk[],
+				   const bool& Lenergy, const bool& Lvirial, 
+				   double& energy, double virial[],
+				   const int& ientry, const Box* b) const {
+d203 1
+a203 1
+  force_sw_cut(xi,xj,xk,fj,fk,Lenergy,Lvirial,energy,virial,ientry);
+d208 3
+a210 4
+				   double fi[],
+				   const bool& Lenergy, const bool& Lvirial, 
+				   double& energy, double virial[],
+				   const int& ientry, const Box* b) const {
+d218 1
+a218 1
+  force_sw_twobody_cut(xi,xj,fi,Lenergy,Lvirial,energy,virial,ientry);
+@
+
+
+2.2.2.2
+log
+@Fixing bug in particlelist.h that ruined parallel execution. Everything else
+is incidental checking in of the grain boundary minimizer which still does
+not handle interlayer relaxation correctly.
+@
+text
+@d44 1
+a44 1
+                       double& energy, double virial_j[], double virial_k[],
+d127 6
+a132 6
+	virial_j[0] = fj[0]*delr1[0];virial_k[0] = fk[0]*delr2[0];
+	virial_j[1] = fj[1]*delr1[1];virial_k[1] = fk[1]*delr2[1];
+	virial_j[2] = fj[2]*delr1[2];virial_k[2] = fk[2]*delr2[2];
+	virial_j[3] = fj[0]*delr1[1];virial_k[3] = fk[0]*delr2[1];
+	virial_j[4] = fj[0]*delr1[2];virial_k[4] = fk[0]*delr2[2];
+	virial_j[5] = fj[1]*delr1[2];virial_k[5] = fk[1]*delr2[2];
+d146 1
+a146 1
+	  virial_j[ivirial] = virial_k[ivirial] = 0.0;
+d162 1
+a162 1
+	virial_j[ivirial] = virial_k[ivirial] = 0.0;
+d236 1
+a236 1
+				   double& energy, double virial_j[], double virial_k[],
+d247 1
+a247 1
+  force_sw_cut(xi,xj,xk,fj,fk,Lenergy,Lvirial,energy,virial_j,virial_k,ientry);
+@
+
+
+2.1
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d192 1
+a192 1
+				   const int& ientry, const Box& b) const
+d200 2
+a201 2
+  b.Minimg_Diff_Shift(xi,xj);
+  b.Minimg_Diff_Shift(xi,xk);
+d209 1
+a209 1
+				   const int& ientry, const Box& b) const
+d216 1
+a216 1
+  b.Minimg_Diff_Shift(xi,xj);
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d1 28
+@
+
+
+1.3
+log
+@Added configuration output routine to Box.
+Added shifted origin to minimg routines.
+Cleaned up minimg routines to consistently
+Deal with following issues:
+	orthorhombic versus triclinic
+	inner-loop Minimig_Dist functions only perform single box shift,
+		as it is more efficient than general shift.
+	For this reason, standard Minimg_Pos function also only
+		performs single box shift, but also checks that
+		aparticles have not strayed too far.
+	Initial config may require more than single box shift, and
+		so for this we use Minimg_Full_pos.
+Treatment of equality conditions:
+	Positions on )0,1[ are mapped onto [0,1).
+	Positions on [0,1) are left alone.
+	Distances on )-1,1( should not occur
+	Distances on )-0.5,0.5( are mapped (-0.5,0.5).
+	Distances on [-0.5,0.5] are left alone.
+@
+text
+@@
+
+
+1.2
+log
+@Fixed a variety of bugs related to energy conservation.
+Add kinetic energy and temperature calculation.
+LJ and Stillinger-Weber forcefields fully tested against
+TOWHEE and energy conservation.
+@
+text
+@d18 1
+d20 3
+a22 2
+    Phys. Rev. B, 
+    The parameters stored in ff_params.params[] have the following meaning:
+d122 6
+d187 1
+a187 1
+  
+@
+
+
+1.1
+log
+@Created an abstract class Forcefield, with derived classes Force_Twobody
+and Force_Threebody.
+Implemented Stillinger-Weber forcefield within Force_Threebody.
+Unfortunately, the COSP neighboring method does not work for
+threebody forces, so we currently do not have neighbor lists
+for threebody interactions.  Probably need to use LAMMPS-like
+ghost atom method and standard neighbor list structures.
+@
+text
+@d17 23
+d84 2
+a85 2
+      fj[0] = delr1[1]*(frad1+csfac1)-delr2[1]*facang12;
+      fj[0] = delr1[2]*(frad1+csfac1)-delr2[2]*facang12;
+d89 2
+a90 2
+      fk[0] = delr2[1]*(frad2+csfac2)-delr1[1]*facang12;
+      fk[0] = delr2[2]*(frad2+csfac2)-delr1[2]*facang12;
+d132 1
+d163 1
+a163 1
+  
+@
+

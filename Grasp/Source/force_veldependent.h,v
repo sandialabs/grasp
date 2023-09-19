@@ -1,0 +1,202 @@
+head	4.4;
+access;
+symbols
+	ReverseComm_branch:4.1.0.2;
+locks; strict;
+comment	@ * @;
+
+
+4.4
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2007.05.30.05.41.46;	author athomps;	state Exp;
+branches;
+next	4.2;
+
+4.2
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2006.06.29.14.27.21;	author foiles;	state Exp;
+branches
+	4.1.2.1;
+next	;
+
+4.1.2.1
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.4
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+#ifndef FORCE_VELDEPENDENT_H
+#define FORCE_VELDEPENDENT_H
+
+// Data structure for velocity dependent force fields
+// Derived from ForceField base class.
+class Force_Veldependent: public ForceField {
+ public:
+  // List of allowable forcefield types. Several types
+  // can be used in a single simulation.
+  //
+  // nocut types do not use a force cut-off. Instead,
+  // forces are calculated between every pair.  The
+  // minimum image convention may be applied in zero, one,
+  // two or all directions, depending on the boundary
+  // conditions specified.
+  //
+  // Note: Any occurence of nocut types will prevent
+  // the use of neighbor lists for all atom pairs. 
+  // In this case, any force cut-offs must not exceed
+  // half the minimum box width.
+  //
+  // enum class for force field types
+  enum ForceFieldTypes { elec_drag , elec_drag_drift , elec_drag_smooth , elec_drag_smooth_drift };
+ private:
+  struct ff_params { ForceFieldTypes type;int np;double* params;};
+  //Array of ff_params created on input 
+  vector<ff_params> input_param_list;
+  //Array of ff_params created in SetupInteractions
+  int nentries;
+  vector<ff_params> param_list;
+  //1-D array of pointers to elements in input_param_list, 
+  // indexed by one particle types
+  int* input_param_index;
+  //1-D array of pointers to elements in param_list 
+  // indexed by two particle types
+  int* param_index;
+  // Array of veldependent force object id's, indexed by veldependent force type.
+ public:
+
+  Force_Veldependent(const string);
+  ~Force_Veldependent();
+
+  void SetupCutNeighSq(const double&, Comm*) {};
+
+  int get_entry(const int&, const int&) const;
+
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+		  const Box*, Comm*);
+  void ReadInteractions(Comm*);
+  void SetupInteractions(const Box*, const double&, Comm*);
+
+  void SetupNeighbor(const string&, const int&,const double&, 
+                        double&, double&, const Box*, Comm*);
+
+};
+
+// INLINE(inline) FUNCTION DEFINITIONS
+//
+// Inlining inner loop operations provides significant performance gain
+//
+
+#endif
+
+@
+
+
+4.3
+log
+@Implemented midpoint method for ReaxFF
+@
+text
+@a97 2
+  void Neighboring(ParticleList*, 
+			int*, const Box*, Comm*);
+@
+
+
+4.2
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d101 1
+a101 1
+                        double&, const Box*, Comm*);
+@
+
+
+4.1
+log
+@add the files for the veldependent forcefiled along with modifications
+in other files (vec3.h Makefile forcefield.h forcefieldlist.cpp ) needed to
+support the new forcefield
+@
+text
+@d92 2
+a93 1
+  void ApplyForce(const bool&, const bool&, ParticleList*, 
+@
+
+
+4.1.2.1
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@d92 1
+a92 2
+  void ApplyForce(const bool&, const bool&, const bool&, 
+		  ParticleList*, 
+@
+

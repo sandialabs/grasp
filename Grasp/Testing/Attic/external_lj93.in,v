@@ -1,0 +1,78 @@
+head	2.1;
+access;
+symbols
+	PreMonaco:2.1;
+locks; strict;
+comment	@# @;
+
+
+2.1
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.03.20.28.04;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.1
+log
+@Moved examples into subdirectories.
+@
+text
+@# This is a test problem for the lj93 type external field
+# It generates a set of periodic walls normal to the y direction
+# of type Yeehaw! and another set normal to the z direction of
+# type Heehaw!. It was chosen to work with a 2x2x2 periodic
+# box containing four atoms in the fcc positions.
+# Note the crazy positions of the "central" image walls.
+# These get shifted to the actual central box, so that all
+# interactions are calculated correctly.
+
+Yeehaw! self lj93_cut 100.5 2
+Yeehaw! A lj93_cut 0.2 0.3 0.6
+Yeehaw! B lj93_cut 0.4 0.3 0.6
+Heehaw! self lj93_cut_shift 101.55 3
+Heehaw! A lj93_cut_shift 0.1 0.2 1.46
+Heehaw! B lj93_cut_shift 0.2 0.2 1.46
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.1
+log
+@Implemented a new forcefield type: Class Force_External
+This is designed primarily for external force fields with
+simple geometric forms, such as the Lennard-Jones 9-3 wall,
+although it might also be used for a set of fixed atoms.
+
+Currently, the only types implemented are lj93_cut and lj93_cut_shift.
+These work for both arbitrary cut-off neighbor list and also
+within the minimum image convention (although this is not used
+by external force field with only truncated interactions.
+
+Periodic boundary conditions are applied in all directions.
+
+Initialization and output of velocities have also been added.
+@
+text
+@@
+

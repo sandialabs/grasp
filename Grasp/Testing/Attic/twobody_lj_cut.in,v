@@ -1,0 +1,92 @@
+head	2.1;
+access;
+symbols
+	PreMonaco:2.1;
+locks; strict;
+comment	@# @;
+
+
+2.1
+date	2003.11.03.23.24.21;	author athomps;	state dead;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.16;	author athomps;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.21.23.04.33;	author athomps;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.04.00.28.32;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.1
+log
+@Moved examples into subdirectories.
+@
+text
+@#
+#	Truncated Lennard-Jones interactions
+#	Mixing rule required for B/C interaction.
+#
+A   A   lj_cut  1.0 1.0  8.685
+A   B   lj_cut  1.5 15.0 8.685
+A   C   lj_cut  2.0 20.0 8.685
+B   B   lj_cut  2.0 20.0 8.685
+C   C   lj_cut  3.0 30.0 8.685
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.2
+log
+@Finally finished implementing Stillinger-Weber forcefield
+Increased number of examples to six. The LJ and SW force
+fields have been tested for energy conservation, and so are
+have high confidence.
+
+The first three are short MD runs using perturbed FCC LJ systems.
+The fourth is an energy evaluation of a dense tetrahedral
+Stillinger-Weber Silicon crystal, which matches a TOWHEE example
+to seven decimal places.
+The fifth and sixth are short MD runs using perturbed tetrahedral
+Stillinger-Weber Silicon.
+@
+text
+@@
+
+
+1.1
+log
+@
+
+Added new test runs to data set.
+@
+text
+@d1 9
+a9 5
+41   41   lj_cut  1.0 1.0  8.685
+41   42   lj_cut  1.5 15.0 8.685
+41   43   lj_cut  2.0 20.0 8.685
+42   42   lj_cut  2.0 20.0 8.685
+43   43   lj_cut  3.0 30.0 8.685
+@
+

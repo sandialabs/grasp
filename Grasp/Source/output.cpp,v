@@ -1,0 +1,7847 @@
+head	4.23;
+access;
+symbols
+	ReverseComm_branch:4.6.0.2
+	ADTools_branch:4.5.0.2
+	Monaco_Aidan:4.3.0.6
+	Root-of-Monaco_Aidan:4.3
+	PPPM_Crozier2:4.3.0.4
+	PPPM_Crozier:4.3
+	Root-of-PPPM_Crozier:4.3
+	Monaco:4.3.0.2
+	PreMonaco:4.3
+	Recovery-2004-04-12:4.0
+	BRANCH:4.1.0.4
+	PMONACO:4.1.0.2
+	ROOT:4.1
+	initial:4.0.0.2
+	pmonaco:4.0
+	Version_4_0:4.0
+	Version_3_0:3.0
+	BeforeREAXMerge:3.9
+	REAX-2:3.5.2.2
+	P_MonacoSource:3.6.0.4
+	GraspSource:3.6
+	P_Monaco:3.6.0.2
+	InitialGrasp:3.6
+	REAXFF:3.5.0.2
+	premerge_cjkimme_version:3.1
+	CRAY:2.24.0.2
+	cjkimme_version_merge_from_trunk_1:2.14.2.4
+	cjkimme_version:2.14.0.2;
+locks; strict;
+comment	@// @;
+
+
+4.23
+date	2008.03.08.00.25.44;	author athomps;	state Exp;
+branches;
+next	4.22;
+
+4.22
+date	2008.02.04.22.24.59;	author athomps;	state Exp;
+branches;
+next	4.21;
+
+4.21
+date	2007.11.15.21.31.40;	author athomps;	state Exp;
+branches;
+next	4.20;
+
+4.20
+date	2007.09.05.22.43.34;	author athomps;	state Exp;
+branches;
+next	4.19;
+
+4.19
+date	2007.05.31.23.18.09;	author athomps;	state Exp;
+branches;
+next	4.18;
+
+4.18
+date	2007.05.24.05.30.09;	author athomps;	state Exp;
+branches;
+next	4.17;
+
+4.17
+date	2007.05.24.05.10.39;	author athomps;	state Exp;
+branches;
+next	4.16;
+
+4.16
+date	2007.03.29.00.51.55;	author athomps;	state Exp;
+branches;
+next	4.15;
+
+4.15
+date	2007.03.28.19.12.19;	author athomps;	state Exp;
+branches;
+next	4.14;
+
+4.14
+date	2007.03.16.06.18.30;	author athomps;	state Exp;
+branches;
+next	4.13;
+
+4.13
+date	2007.02.15.04.41.38;	author athomps;	state Exp;
+branches;
+next	4.12;
+
+4.12
+date	2007.02.02.21.14.47;	author athomps;	state Exp;
+branches;
+next	4.11;
+
+4.11
+date	2007.01.30.18.46.16;	author athomps;	state Exp;
+branches;
+next	4.10;
+
+4.10
+date	2007.01.26.23.22.28;	author athomps;	state Exp;
+branches;
+next	4.9;
+
+4.9
+date	2007.01.16.21.56.22;	author athomps;	state Exp;
+branches;
+next	4.8;
+
+4.8
+date	2006.11.28.06.24.21;	author athomps;	state Exp;
+branches;
+next	4.7;
+
+4.7
+date	2006.11.09.20.13.52;	author athomps;	state Exp;
+branches;
+next	4.6;
+
+4.6
+date	2006.06.29.14.27.21;	author foiles;	state Exp;
+branches
+	4.6.2.1;
+next	4.5;
+
+4.5
+date	2006.02.15.18.11.59;	author foiles;	state Exp;
+branches;
+next	4.4;
+
+4.4
+date	2006.01.25.21.40.12;	author athomps;	state Exp;
+branches;
+next	4.3;
+
+4.3
+date	2005.05.03.16.28.27;	author athomps;	state Exp;
+branches
+	4.3.6.1;
+next	4.2;
+
+4.2
+date	2005.05.02.20.13.38;	author athomps;	state Exp;
+branches;
+next	4.1;
+
+4.1
+date	2005.04.12.22.26.04;	author saubry;	state Exp;
+branches;
+next	4.0;
+
+4.0
+date	2005.04.05.16.43.30;	author athomps;	state Exp;
+branches;
+next	3.10;
+
+3.10
+date	2005.04.02.00.37.56;	author athomps;	state Exp;
+branches;
+next	3.9;
+
+3.9
+date	2005.03.31.23.07.47;	author athomps;	state Exp;
+branches;
+next	3.8;
+
+3.8
+date	2005.03.01.21.48.52;	author foiles;	state Exp;
+branches;
+next	3.7;
+
+3.7
+date	2005.03.01.21.35.07;	author foiles;	state Exp;
+branches;
+next	3.6;
+
+3.6
+date	2005.01.11.16.06.05;	author athomps;	state Exp;
+branches
+	3.6.4.1;
+next	3.5;
+
+3.5
+date	2004.12.08.19.35.13;	author athomps;	state Exp;
+branches
+	3.5.2.1;
+next	3.4;
+
+3.4
+date	2004.11.24.23.39.28;	author athomps;	state Exp;
+branches;
+next	3.3;
+
+3.3
+date	2004.11.23.00.59.55;	author athomps;	state Exp;
+branches;
+next	3.2;
+
+3.2
+date	2004.10.22.22.30.16;	author cjkimme;	state Exp;
+branches;
+next	3.1;
+
+3.1
+date	2004.10.19.21.01.03;	author athomps;	state Exp;
+branches;
+next	3.0;
+
+3.0
+date	2004.09.22.17.56.49;	author athomps;	state Exp;
+branches;
+next	2.24;
+
+2.24
+date	2004.08.13.21.52.19;	author athomps;	state Exp;
+branches;
+next	2.23;
+
+2.23
+date	2004.08.02.21.10.26;	author athomps;	state Exp;
+branches;
+next	2.22;
+
+2.22
+date	2004.07.26.15.52.18;	author athomps;	state Exp;
+branches;
+next	2.21;
+
+2.21
+date	2004.07.21.17.46.50;	author athomps;	state Exp;
+branches;
+next	2.20;
+
+2.20
+date	2004.07.13.21.21.16;	author athomps;	state Exp;
+branches;
+next	2.19;
+
+2.19
+date	2004.05.20.22.11.34;	author athomps;	state Exp;
+branches;
+next	2.18;
+
+2.18
+date	2004.04.28.21.59.16;	author athomps;	state Exp;
+branches;
+next	2.17;
+
+2.17
+date	2004.03.20.00.15.39;	author athomps;	state Exp;
+branches;
+next	2.16;
+
+2.16
+date	2004.03.01.20.26.43;	author athomps;	state Exp;
+branches;
+next	2.15;
+
+2.15
+date	2004.03.01.18.13.34;	author athomps;	state Exp;
+branches;
+next	2.14;
+
+2.14
+date	2004.01.28.20.36.13;	author athomps;	state Exp;
+branches
+	2.14.2.1;
+next	2.13;
+
+2.13
+date	2004.01.09.19.01.08;	author athomps;	state Exp;
+branches;
+next	2.12;
+
+2.12
+date	2003.11.26.22.51.14;	author athomps;	state Exp;
+branches;
+next	2.11;
+
+2.11
+date	2003.10.31.20.20.43;	author athomps;	state Exp;
+branches;
+next	2.10;
+
+2.10
+date	2003.10.21.23.15.07;	author athomps;	state Exp;
+branches;
+next	2.9;
+
+2.9
+date	2003.10.20.22.05.45;	author athomps;	state Exp;
+branches;
+next	2.8;
+
+2.8
+date	2003.10.04.02.46.53;	author athomps;	state Exp;
+branches;
+next	2.7;
+
+2.7
+date	2003.09.23.23.33.34;	author athomps;	state Exp;
+branches;
+next	2.6;
+
+2.6
+date	2003.09.23.16.01.59;	author athomps;	state Exp;
+branches;
+next	2.5;
+
+2.5
+date	2003.09.19.23.35.18;	author athomps;	state Exp;
+branches;
+next	2.4;
+
+2.4
+date	2003.09.18.15.49.57;	author athomps;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2003.08.01.16.22.01;	author athomps;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	2003.07.22.22.27.41;	author athomps;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	2003.06.17.19.08.11;	author athomps;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	2003.04.24.17.19.15;	author athomps;	state Exp;
+branches;
+next	;
+
+2.14.2.1
+date	2004.02.18.01.12.40;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.2;
+
+2.14.2.2
+date	2004.05.14.16.12.58;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.3;
+
+2.14.2.3
+date	2004.09.09.21.01.42;	author cjkimme;	state Exp;
+branches;
+next	2.14.2.4;
+
+2.14.2.4
+date	2004.09.13.23.00.09;	author cjkimme;	state Exp;
+branches;
+next	;
+
+3.5.2.1
+date	2004.12.22.22.59.07;	author athomps;	state Exp;
+branches;
+next	3.5.2.2;
+
+3.5.2.2
+date	2005.01.04.00.23.00;	author athomps;	state Exp;
+branches;
+next	;
+
+3.6.4.1
+date	2005.04.07.00.04.52;	author saubry;	state Exp;
+branches;
+next	;
+
+4.3.6.1
+date	2005.12.19.17.57.04;	author athomps;	state Exp;
+branches;
+next	4.3.6.2;
+
+4.3.6.2
+date	2006.02.02.23.40.43;	author athomps;	state Exp;
+branches;
+next	4.3.6.3;
+
+4.3.6.3
+date	2006.02.15.21.34.48;	author athomps;	state Exp;
+branches;
+next	;
+
+4.6.2.1
+date	2006.11.08.04.18.38;	author athomps;	state Exp;
+branches;
+next	4.6.2.2;
+
+4.6.2.2
+date	2006.11.09.00.20.53;	author athomps;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+4.23
+log
+@Added color assignment for velocity add command
+@
+text
+@//-----------------------------------------------------------------------
+//
+//   G R A S P
+//   ____________
+//   \           \
+//    \ General   \
+//     \ Reactive  \
+//      \ Atomistic \
+//       \ Simulation\
+//        \ Program   \
+//         \___________\
+//
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+//
+//    Primary Author: Aidan P. Thompson
+//
+//    e-mail: athomps@@sandia.gov
+//   
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+//    for the United States Department of Energy under contract
+//    No. DE-AC04-94AL-85000.
+//
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+//----------------------------------------------------------------------- 
+/////:EOH~
+
+// The communication scheme for writing particle data is based 
+// on a FORTRAN 90 implementation by Steve Plimpton (LAMMPS 2001).
+//
+#include <string>
+#include <vector>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+using namespace std;
+#include "mpi.h"
+#include "grasp.h"
+#include "output.h"
+#include "box.h"
+#include "vec3.h"
+#include "box_inline.h"
+#include "particle.h"
+#include "particlelist.h"
+#include "particlelist_inline.h"
+#include "particletypelist.h"
+#include "neighbor.h"
+#include "forcefieldlist.h"
+#include "forcefield.h"
+#include "constants.h"
+#include "profile.h"
+#include "comm.h"
+#include "log.h"
+#include "fixlist.h"
+#include "machine.h"
+
+#ifdef USE_REAX
+#include "reax_fortran.h"
+#include "reax_params.h"
+#include "reax_cbkc.h"
+#include "reax_cbkia.h"
+#include "reax_cbkqa.h"
+#include "reax_cbkbo.h"
+#include "reax_cbkabo.h"
+#include "reax_cbkch.h"
+#include "reax_cbklonpar.h"
+#include "reax_cbknubon2.h"
+#include "reax_small.h"
+#include "reax_functions.h"
+#endif
+
+extern Log glog;
+extern Constants constants;
+
+#define FILENUMBER_WIDTH 5
+
+Output::Output(bool useDefaults) {
+  Ldump = false;
+  Ldumpvel = false;
+  Ldumpforce = false;
+  Ldumpcfg = false;
+  Ldumpxcfg = false;
+  Ldumpref = false;
+  Ldumpdisp = false; 
+  Lthermo = false;
+  Ldensity_profile = false;
+  Lrestart = false;
+  density_profile = NULL;
+  Ldumpvelconfig = false;
+  Ldumpvelcfg = false;
+  Ldumpenergyconfig = false;
+  Ldumpenergycfg = false;
+  Ldumpreaxbonds = false;
+  Ldumpreaxallbonds = false;
+  Ldumpalpha = false;
+  Ldumpstress = false;
+  Ldumpshift = false;
+  Lstresstensor = false;
+  Lsummomentum = false;
+  appendOutput = true;
+  defaultOutput = useDefaults;
+  dumpcfg_iter = 0;
+  dumpxcfg_iter = 0;
+  dumpvel_iter = 0;
+  dumpfrc_iter = 0;
+  dumpstress_iter = 0;
+  dumpfile_root = "outfile";
+  nstep_prev = 0;
+  formatstyle = fixed;
+}
+
+Output::~Output() {
+  if (density_profile != NULL) {
+    delete density_profile;
+  }
+}
+
+void Output::Setup(const Box* b, const ParticleTypeList* t, Comm* comm) {
+  int node;
+  string filename;
+
+  node = comm->get_node();
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Entering Output::Setup()" << endl;
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Output::Setup()" << endl;
+  }
+
+  /* handle filename extensions */
+  string appendix;
+  int appendNum = 0; 
+  if (!appendOutput)
+    toFileNumber(appendNum, appendix);
+
+  vfactor = 1.0/constants.tfactor;
+  ffactor = 1.0;
+  pfactor = 1.0/constants.pfactor;
+
+  if (Lthermo) {
+    thermo_skip = 0;
+  }
+    
+  if (Ldump) {
+    dump_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "config.out";
+      else
+	filename = dumpfile_root + ".cfg";
+      if (!appendOutput)
+	filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+      outfile.close(); 
+    }
+  }
+
+  if (Ldumpvel) {
+    dumpvel_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "vel.out";
+      else
+	filename = dumpfile_root + ".vel";
+      if (!appendOutput)
+        filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+      outfile.close(); 
+    }
+  }
+    
+  if (Ldumpforce) {
+    dumpforce_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "force.out";
+      else
+	filename = dumpfile_root + ".frc";
+      if (!appendOutput)
+	filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+      outfile.close(); 
+    }
+  }
+
+  if (Ldumpref) {
+    dumpref_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "refconfig.out";
+      else
+	filename = dumpfile_root + ".ref";
+      if (!appendOutput)
+        filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+      outfile.close(); 
+    }
+  }
+
+  if (Ldumpdisp) {
+    dumpdisp_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "dis.out";
+      else
+	filename = dumpfile_root + ".dis";
+      if (!appendOutput)
+        filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+      outfile.close(); 
+    }
+  }
+
+  if (Ldumpalpha) {
+    if (!(t->find_id(dumpalpha_str,dumpalpha_type))) 
+      glog.abort("Output::Setup"
+		 "Cannot find type "+dumpalpha_str);
+
+    dumpalpha_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "alpha.out";
+      else
+	filename = dumpfile_root + ".alf";
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag);
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+
+		   "Failed to open"+filename);
+      }
+      outfile.close(); 
+    }
+  }
+
+  if (Ldumpstress) {
+    dumpstress_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "stress.out";
+      else
+	filename = dumpfile_root + ".stress";
+      if (!appendOutput)
+        filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+      outfile.close(); 
+    }
+  }
+
+  if (Ldensity_profile) {
+    density_skip = 0;
+    density_profile->SetupBins(input_string_density_profile,b,comm);
+  }
+
+  if (Ldumpcfg) {
+    dumpcfg_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "cfg.out";
+      else
+	filename = dumpfile_root + ".cfg";
+      if (!appendOutput)
+        filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix; 
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+      outfile.close(); 
+    }
+  }
+
+  if (Ldumpxcfg) {
+    dumpxcfg_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "xcfg.out";
+      else
+	filename = dumpfile_root + ".x.cfg";
+      if (!appendOutput)
+        filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix; 
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+      outfile.close(); 
+    }
+  }
+
+  if (Lrestart) {
+    restart_skip = 0;
+  }
+
+  if (Ldumpvelconfig) {
+    if (!Ldump) {
+      glog.warning("Output::Setup:\n"
+		 "Ldumpvelconfig set but not Ldump");
+    }
+  }
+
+  if (Ldumpvelcfg) {
+    if (Ldumpcfg) {
+      glog.warning("Output::Setup:\n"
+		 "Ldumpvelcfg set but not Ldumpcfg");
+    }
+  }
+
+  if (Ldumpenergyconfig) {
+    if (!Ldump) {
+      glog.warning("Output::Setup:\n"
+                 "Ldumpenergyconfig set but not Ldump");
+    }
+  }
+ 
+  if (Ldumpenergycfg) {
+    if (Ldumpcfg) {
+      glog.warning("Output::Setup:\n"
+                 "Ldumpenergycfg set but not Ldumpcfg");
+    }
+  }
+ 
+  if (Ldumpreaxbonds) {
+    dumpreaxbond_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+        filename = "reaxbonds.out";
+      else 
+        filename = dumpfile_root + ".bnd";
+      if (!appendOutput)
+        filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag);
+      if (!outfile) {
+        glog.error("Output::Setup:\n"
+                   "Failed to open "+filename);
+      } 
+      outfile.close(); 
+    } 
+  } 
+
+  if (Ldumpreaxallbonds) {
+    dumpreaxallbond_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+        filename = "reaxallbonds.out";
+      else 
+        filename = dumpfile_root + ".abn";
+      if (!appendOutput)
+        filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag);
+      if (!outfile) {
+        glog.error("Output::Setup:\n"
+                   "Failed to open "+filename);
+      } 
+      outfile.close(); 
+    } 
+  } 
+}
+
+void Output::Finish(const int& nsteps, const ForceFieldList* fflist,
+		    const ParticleList* p, Comm* comm) {
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::Finish" << endl;
+  }
+
+  WriteTimings(nsteps,fflist,p,comm);
+ 
+  if (Ldensity_profile) {
+    density_profile->OutputProfile(comm);
+  }
+}
+
+void Output::WriteTimings(const int& nsteps, const ForceFieldList* fflist,
+			  const ParticleList* p, Comm* comm) {
+
+  ForceField* const* forcefields;
+  double tmplocal[7],tmpsum[7],ftmplocal[2],ftmpsum[2];
+  double timeforce,timeneigh,timecomm;
+  double timeexchange,timerevcomm,timetotal,timeother;
+  double timebarrier;
+  double ftimeforce,ftimeneigh;
+  int ff_classname;
+  int node,nprocs;
+  int nforcefields;
+  int nforce,ntimeneigh;
+  int nparticles_tot;
+  string str_tmp;
+  
+  node = comm->get_node();
+  nprocs = comm->get_nprocs();
+
+  tmplocal[0] = glog.timeforce;
+  tmplocal[1] = glog.timeneigh;
+  tmplocal[2] = glog.timecomm;
+  tmplocal[3] = glog.timeexchange;
+  tmplocal[4] = glog.timerevcomm;
+  tmplocal[5] = glog.timebarrier;
+  tmplocal[6] = glog.timetotal;
+  MPI_Allreduce(&tmplocal,&tmpsum,7,MPI_DOUBLE,MPI_SUM,comm->get_world());
+  timeforce = tmpsum[0];
+  timeneigh = tmpsum[1];
+  timecomm = tmpsum[2];
+  timeexchange = tmpsum[3];
+  timerevcomm = tmpsum[4];
+  timebarrier = tmpsum[5];
+  timetotal = tmpsum[6];
+  timeother = timetotal
+    -timeforce-timeneigh-timecomm-timeexchange-timerevcomm-timebarrier;
+
+  if (timetotal == 0.0) return;
+
+  nparticles_tot = p->get_nparticles_tot();
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Loop time: " << timetotal/nprocs << " on " << nprocs << 
+      " processors for " << nparticles_tot << " particles for " << 
+      nsteps << " steps" << endl;
+    glog.get_logfile() << "Nprocs = " << nprocs << " Tgrind = " << 
+      timetotal/(nparticles_tot*nsteps)  << endl;
+  }
+
+  if (node == 0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Breakdown of Average Loop Time by Task" << endl;  
+    glog.get_logfile() << setw(20) << "  " << setw(10) << "Seconds" << 
+      setw(10) << " % " << endl;
+    glog.get_logfile() << setw(20) << "Force Time";
+    glog.get_logfile() << setw(10) << setprecision(4) << 
+      timeforce/nprocs;
+    glog.get_logfile() << setw(10) << setprecision(2) << 
+      100.0*timeforce/timetotal << endl;  
+
+    glog.get_logfile() << setw(20) << "Neigh Time";
+    glog.get_logfile() << setw(10) << setprecision(4) << 
+      timeneigh/nprocs;
+    glog.get_logfile() << setw(10) << setprecision(2) << 
+      100.0*timeneigh/timetotal << endl;  
+
+    glog.get_logfile() << setw(20) << "Comm Time";
+    glog.get_logfile() << setw(10) << setprecision(4) << 
+      timecomm/nprocs;
+    glog.get_logfile() << setw(10) << setprecision(2) << 
+      100.0*timecomm/timetotal << endl;  
+
+    glog.get_logfile() << setw(20) << "Exchange Time";
+    glog.get_logfile() << setw(10) << setprecision(4) << 
+      timeexchange/nprocs;
+    glog.get_logfile() << setw(10) << setprecision(2) << 
+      100.0*timeexchange/timetotal << endl;  
+
+    glog.get_logfile() << setw(20) << "Revcomm Time";
+    glog.get_logfile() << setw(10) << setprecision(4) << 
+      timerevcomm/nprocs;
+    glog.get_logfile() << setw(10) << setprecision(2) << 
+      100.0*timerevcomm/timetotal << endl;  
+
+    glog.get_logfile() << setw(20) << "Barrier Time";
+    glog.get_logfile() << setw(10) << setprecision(4) << 
+      timebarrier/nprocs;
+    glog.get_logfile() << setw(10) << setprecision(2) << 
+      100.0*timebarrier/timetotal << endl;  
+
+    glog.get_logfile() << setw(20) << "Other Time";
+    glog.get_logfile() << setw(10) << setprecision(4) << 
+      timeother/nprocs;
+    glog.get_logfile() << setw(10) << setprecision(2) << 
+      100.0*timeother/timetotal << endl;  
+
+    glog.get_logfile() << setw(20) << "Total Time";
+    glog.get_logfile() << setw(10) << setprecision(4) << 
+      timetotal/nprocs;
+    glog.get_logfile() << setw(10) << setprecision(2) << 
+      100.0*timetotal/timetotal << endl;  
+  }
+
+  if (node==0) {
+    glog.get_logfile() << "\n\n\n";
+    glog.get_logfile() << "Breakdown of Average Loop Time by Force Field" 
+		 << endl;  
+    glog.get_logfile().setf(ios::left,ios::adjustfield);
+    glog.get_logfile() << setw(20) << "Force Field" << setw(20) << 
+      "Force    (#)" << setw(20) << "Neighbor   (#)" << endl;
+    glog.get_logfile().setf(ios::right,ios::adjustfield);
+  }
+
+  forcefields = fflist->get_forcefields();
+  nforcefields = fflist->get_nforcefields();
+  for (int iff = 0;iff<nforcefields;iff++) {
+    ForceField* ff = forcefields[iff];
+    ff_classname = ff->get_classname();
+    ftmplocal[0] = ff->get_timeforce();
+    if (ff->get_Lneighbor()) {
+      ftmplocal[1] = ff->neighbor->get_timeneigh();
+    } else {
+      ftmplocal[1] = 0.0;
+    }
+    MPI_Allreduce(&ftmplocal,&ftmpsum,2,MPI_DOUBLE,MPI_SUM,comm->get_world());
+    ftimeforce = ftmpsum[0];
+    ftimeneigh = ftmpsum[1];
+    if (node == 0) {
+      str_tmp = ff->get_label();
+      if (str_tmp.size() < 20) str_tmp.append(20-str_tmp.size(),' ');
+      glog.get_logfile() << setw(20) << str_tmp;
+      glog.get_logfile() << setw(10) << setprecision(4) << 
+	ftimeforce/nprocs  << " (" << setw(6) << 
+	ff->get_nforce() << ") ";
+      if (ff->get_Lneighbor()) {
+	glog.get_logfile() << setw(10) << setprecision(4) << 
+	  ftimeneigh/nprocs << " (" << setw(6) << 
+	  ff->neighbor->get_ntimeneigh() << ") ";
+      }
+      glog.get_logfile() << endl;
+    }
+  }
+}
+
+void Output::WriteOutput(int timestep, ParticleList* p,
+			 const Box* b, const ParticleTypeList* t,
+			 Comm* comm, 
+			 const ForceFieldList* fflist,
+			 const FixList* fix_list, const double& e_extended,
+			 const bool& Lvolume, const bool& Lnparticles,
+			 Stepper* stepper) {
+  double e_potential,v_potential,volume,v_ff;
+  double e_kinetic,v_kinetic,temperature;
+  ForceField* const* forcefields;
+  int ff_classname;
+  int node;
+  int nforcefields;
+  string str_tmp;
+  vector<string> label_piece;
+  vector<double> e_ff;
+  double pressure;
+  int npieces;
+  vector <double> k_virial(6),f_virial(6);
+  double pxx,pyy,pzz,pxy,pxz,pyz;
+  double psum_tot[3];
+
+  node = comm->get_node();
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entering Output::WriteOutput()" << endl;
+  }
+
+  // Purely to satisfy compiler uninitialized data checks
+  pxx = pyy = pzz = pxy = pxz = pyz = 0.0;
+
+  timestep+=nstep_prev;
+
+  if (Lthermo) {
+    if (thermo_skip++ % thermo_freq == 0) {
+      if (node == 0) {
+	glog.get_logfile().setf(ios::right,ios::adjustfield);
+	if (thermo_skip == 1) glog.get_logfile() << "\n\n\n";
+	glog.get_logfile() << "--------------- Step" << 
+	  setw(10) << timestep << " ---- "; 
+	glog.get_logfile().setf(ios::right,ios::adjustfield);
+	glog.get_logfile() <<  "CPU = " << 
+	  setw(10) << setprecision(4) << glog.timetotal << 
+	  " (sec) ---------------" << endl;
+      }
+
+      p->ComputeTemperature(comm);
+      temperature = p->get_temperature();
+      e_kinetic = p->get_kinetic_energy();
+      v_kinetic = p->get_kinetic_virial();
+
+      volume = b->get_volume();
+      v_potential = fflist->get_virial();
+      pressure = (v_potential+v_kinetic)/volume;
+      
+      if (Lstresstensor) {
+	p->ComputeKineticVirial(comm);
+	p->get_kinetic_virial(k_virial);
+	fflist->get_virial(f_virial);
+	pxx = (k_virial[0]+f_virial[0])/volume;
+	pyy = (k_virial[1]+f_virial[1])/volume;
+	pzz = (k_virial[2]+f_virial[2])/volume;
+	pxy = (k_virial[3]+f_virial[3])/volume;
+	pxz = (k_virial[4]+f_virial[4])/volume;
+	pyz = (k_virial[5]+f_virial[5])/volume;
+      }
+
+      if (Lsummomentum) {
+	p->SumMomentum(comm,psum_tot);
+      }
+
+      e_potential = 0.0;
+
+      glog.get_logfile() << setprecision(10);
+      glog.get_logfile().setf(ios::showpoint);
+      glog.get_logfile().setf(ios::fixed,ios::floatfield);
+      glog.get_logfile().setf(ios::left,ios::adjustfield);
+      forcefields = fflist->get_forcefields();
+      nforcefields = fflist->get_nforcefields();
+      for (int iff = 0;iff<nforcefields;iff++) {
+	ForceField* ff = forcefields[iff];
+	ff_classname = ff->get_classname();
+	npieces = ff->get_npieces();
+	e_ff = ff->get_energy();
+	if (node == 0) {
+	  if (npieces == 1) {
+	    e_potential+=e_ff[0];
+	    str_tmp = ff->get_label();
+	    if (str_tmp.size() < 20) str_tmp.append(20-str_tmp.size(),' ');
+	    glog.get_logfile() << setw(20) << str_tmp << setw(2) << "= "; 
+	    glog.get_logfile().setf(ios::right,ios::adjustfield);
+	    glog.get_logfile() <<  setw(20) << e_ff[0] << endl;
+	  } else {
+	    str_tmp = ff->get_label() + ":";
+	    glog.get_logfile() << str_tmp << '\n' ; 
+	    label_piece = ff->get_label_piece();
+	    for (int ipiece=0;ipiece<npieces;ipiece++) {
+	      e_potential+=e_ff[ipiece];
+	      str_tmp = "   " + label_piece[ipiece];
+	      if (str_tmp.size() < 20) str_tmp.append(20-str_tmp.size(),' ');
+	      glog.get_logfile() << setw(20) << str_tmp << setw(2) << "= "; 
+	      glog.get_logfile().setf(ios::right,ios::adjustfield);
+	      glog.get_logfile() <<  setw(20) << e_ff[ipiece] << endl;
+	    }
+	  }
+	}
+      }
+
+      if (node == 0) {
+	glog.get_logfile().setf(ios::left,ios::adjustfield);
+	glog.get_logfile() << setw(20) << "Potential Energy" << "= ";
+	glog.get_logfile().setf(ios::right,ios::adjustfield);
+	glog.get_logfile() << setw(20) << e_potential << endl;
+
+	glog.get_logfile().setf(ios::left,ios::adjustfield);
+	glog.get_logfile() << setw(20) << "Kinetic Energy" << "= ";
+	glog.get_logfile().setf(ios::right,ios::adjustfield);
+	glog.get_logfile() << setw(20) << e_kinetic << endl;
+
+	glog.get_logfile().setf(ios::left,ios::adjustfield);
+	glog.get_logfile() << setw(20) << "Extended Energy" << "= ";
+	glog.get_logfile().setf(ios::right,ios::adjustfield);
+	glog.get_logfile() << setw(20) << e_extended << endl;
+	glog.get_logfile().setf(ios::left,ios::adjustfield);
+	glog.get_logfile() << setw(20) << "Total Energy" << "= ";
+	glog.get_logfile().setf(ios::right,ios::adjustfield);
+	glog.get_logfile() << setw(20) << 
+	  e_potential+e_kinetic+e_extended << endl;
+
+	glog.get_logfile().setf(ios::left,ios::adjustfield);
+	glog.get_logfile() << setw(20) << "Pressure" << "= ";
+	glog.get_logfile().setf(ios::right,ios::adjustfield);
+	glog.get_logfile() << setw(20) << 
+	  pfactor*pressure << endl;
+	if (Lstresstensor) {
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Pxx" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << 
+	    pfactor*pxx << endl;
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Pyy" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << 
+	    pfactor*pyy << endl;
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Pzz" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << 
+	    pfactor*pzz << endl;
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Pxy" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << 
+	    pfactor*pxy << endl;
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Pxz" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << 
+	    pfactor*pxz << endl;
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Pyz" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << 
+	    pfactor*pyz << endl;
+	}
+
+	if (Lsummomentum) {
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Lx" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << 
+	    vfactor*psum_tot[0] << endl;
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Ly" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << 
+	    vfactor*psum_tot[1] << endl;
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Lz" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << 
+	    vfactor*psum_tot[2] << endl;
+	}
+
+	glog.get_logfile().setf(ios::left,ios::adjustfield);
+	glog.get_logfile() << setw(20) << "Temperature" << "= ";
+	glog.get_logfile().setf(ios::right,ios::adjustfield);
+	glog.get_logfile() << setw(20) << temperature << endl;
+
+	if (Lnparticles) {
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Total Particles" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << p->get_nparticles_tot() 
+		       << endl;
+	}
+
+	if (Lvolume) {
+	  double uc_lva[3],uc_lvb[3],uc_lvc[3];
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "Volume" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << volume << endl;
+	  b->get_lv(uc_lva,uc_lvb,uc_lvc);
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "A Vector Norm" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << vec3_norm(uc_lva) << endl;
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "B Vector Norm" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << vec3_norm(uc_lvb) << endl;
+	  glog.get_logfile().setf(ios::left,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << "C Vector Norm" << "= ";
+	  glog.get_logfile().setf(ios::right,ios::adjustfield);
+	  glog.get_logfile() << setw(20) << vec3_norm(uc_lvc) << endl;
+	}
+
+      }
+      fix_list->Output(p,b,comm);
+    }
+  }
+
+  if (Ldumpalpha) {
+    if (dumpalpha_skip++ % dumpalpha_freq == 0) {
+            
+      double alpha = p->ComputeAlphaType(dumpalpha_type,comm);
+
+      if (node == 0) {
+	string filename(dumpfile_root + ".alf");
+	filename = glog.path_str + filename + glog.world_suffix;
+        ofstream outfile;
+	outfile.open(filename.c_str(),std::ios::app); 
+	if (!outfile) {
+	  glog.error("Output::WriteOutput:\n"
+		     "Failed to open "+filename);
+	}
+	if (formatstyle == scientific) {
+	  outfile.setf(ios::scientific);
+	  outfile << setprecision(6);
+	} else if (formatstyle == fixed) {
+	  outfile.setf(ios::showpoint);
+	  outfile << setprecision(10);
+	}
+	outfile << "# Timestep " << timestep << "\n";
+	outfile << " " << alpha << "\n";
+        outfile.close();
+      }
+    }
+  }
+
+  if (Ldump) {
+    if (dump_skip++ % dump_freq == 0) {
+      dump_skip = 1;
+      OutputParticles(timestep,p,t,comm,Lvolume,Lnparticles,b);
+    }
+  }
+  
+  if (Ldumpcfg) {
+    if (dumpcfg_skip++ % dumpcfg_freq == 0) {
+      dumpcfg_skip = 1;
+      OutputCfg(timestep,p,t,b,comm);
+    }
+  }
+
+  if (Ldumpxcfg) {
+    if (dumpxcfg_skip++ % dumpxcfg_freq == 0) {
+      dumpxcfg_skip = 1;
+      OutputExtendedCfg(timestep,p,t,b,comm);
+    }
+  }
+    
+
+  if (Ldumpvel) {
+    if (dumpvel_skip++ % dumpvel_freq == 0) {
+      dumpvel_skip = 1;
+      OutputVelocities(timestep,p,comm);
+    }
+  }
+
+  if (Ldumpforce) {
+    if (dumpforce_skip++ % dumpforce_freq == 0) {
+      dumpforce_skip = 1;
+      OutputForces(timestep,p,comm);
+    }
+  }
+
+  if (Ldumpref) {
+    if (dumpref_skip++ % dumpref_freq == 0) {
+      dumpref_skip = 1;
+      OutputRefConfig(timestep,p,t,comm);
+    }
+  }
+
+  if (Ldumpdisp) {
+    if (dumpdisp_skip++ % dumpdisp_freq == 0) {
+      dumpdisp_skip = 1;
+      OutputDisplacements(timestep,p,comm);
+    }
+  }
+  
+  if (Ldensity_profile) {
+    if (density_skip++ % density_freq == 0) {
+      density_skip = 1;
+      density_profile->SampleDensity(p->get_nparticles(),
+	       p->get_particles(),b->get_Lorthorhombic(),comm);
+    }
+  }
+  
+  if (Lrestart) {
+    if (restart_skip++ % restart_freq == 0) {
+      restart_skip = 1;
+      p->OutputRestart(b,timestep,stepper,comm);
+    }
+  }
+  
+  if (Ldumpstress) {
+    if (dumpstress_skip++ % dumpstress_freq == 0) {
+      dumpstress_skip = 1;
+      OutputAtomStress(timestep,p,comm);
+    }
+  }
+
+  if (Ldumpreaxbonds) {
+    if (dumpreaxbond_skip++ % dumpreaxbond_freq == 0) {
+      dumpreaxbond_skip = 1;
+      OutputReaxBondOrders(timestep,p,t,comm);
+    }
+  }
+ 
+  if (Ldumpreaxallbonds) {
+    if (dumpreaxallbond_skip++ % dumpreaxallbond_freq == 0) {
+      dumpreaxallbond_skip = 1;
+      OutputReaxAllBondOrders(timestep,p,t,comm);
+    }
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exiting Output::WriteOutput()" << endl;
+  }
+
+}
+
+void Output::OutputParticles(const int& timestep, ParticleList* p,
+			     const ParticleTypeList* t, Comm* comm,
+			     const bool& Lvolume, const bool& Lnparticles,
+			     const Box* b) {
+    // Note: particles are not reset within periodic box,
+    // as this would upset neighbor lists
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  string mydelim;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputParticles" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "config.out";
+    else
+      filename = dumpfile_root + ".cfg";
+    string appendNumber;
+    if (!appendOutput) 
+      filename = filename + toFileNumber(dumpcfg_iter,appendNumber);
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputParticles:\n"
+		 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::scientific);
+      outfile << setprecision(6);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile << setprecision(10);
+    }
+
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    if (Lvolume) {
+      double uc_lva[3],uc_lvb[3],uc_lvc[3],uc_origin[3];
+      b->get_lv(uc_lva,uc_lvb,uc_lvc);
+      outfile << "# Unit cell lattice vectors:" << "\n";
+      outfile << "# " << uc_lva[0] << " " << uc_lva[1] 
+	      << " " << uc_lva[2] << "\n";
+      outfile << "# " << uc_lvb[0] << " " << uc_lvb[1] 
+	      << " " << uc_lvb[2] << "\n";
+      outfile << "# " << uc_lvc[0] << " " << uc_lvc[1] 
+	      << " " << uc_lvc[2] << "\n";
+      outfile << "# " << "\n";
+      b->get_o_user(uc_origin);
+      outfile << "# Unit cell origin:" << "\n";
+      outfile << "# " << uc_origin[0] << " " 
+	      << uc_origin[1] << " " 
+	      << uc_origin[2] << "\n";
+      outfile << "# " << "\n";
+    }
+    if (Lnparticles) {
+      outfile << "# Number of particles " << nparticles_tot << "\n";
+      outfile << "# " << "\n";
+    }
+    outfile << "# Particle positions " << "\n";
+  }
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 7
+
+  iperatom = 7;
+  if (Ldumpshift) {
+    iperatom += 3;
+  }
+  if (Ldumpvelconfig) {
+    iperatom += 3;
+  }
+  if (Ldumpenergyconfig) {
+    iperatom += 1;
+  }
+
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,comm->get_world());
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j++] = p_pnt->get_tag(); 
+    buf[j++] = p_pnt->get_type(); 
+    buf[j++] = p_pnt->get_color(); 
+    buf[j++] = p_pnt->get_charge(); 
+    p_pnt->get_x(&buf[j]);
+    j+=3;
+    if (Ldumpshift) {
+      p_pnt->get_shift(&buf[j]);
+      j+=3;
+    }
+    if (Ldumpvelconfig) {
+      p_pnt->get_v(&buf[j]);
+      j+=3;
+    }
+    if (Ldumpenergyconfig) {
+      buf[j++] = p_pnt->get_phi();
+    } 
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	outfile << mydelim << p->get_usertag(nint(buf[j++]));
+	  // Need to add a blank to get reasonable spacing
+	  // setw gets ignored if id is single character
+	outfile << mydelim << " " << t->get_id(nint(buf[j++]));
+	outfile << mydelim << nint(buf[j++]);
+	outfile << mydelim << buf[j++]; 
+	outfile << mydelim << buf[j++]; 
+	outfile << mydelim << buf[j++]; 
+	outfile << mydelim << buf[j++]; 
+	if (Ldumpshift) {
+	  outfile << mydelim << nint(buf[j++]);
+	  outfile << mydelim << nint(buf[j++]);
+	  outfile << mydelim << nint(buf[j++]);
+	}
+	if (Ldumpvelconfig) {
+	  outfile << mydelim << buf[j++]/constants.tfactor;
+	  outfile << mydelim << buf[j++]/constants.tfactor;
+	  outfile << mydelim << buf[j++]/constants.tfactor;
+	}
+	if (Ldumpenergyconfig) {
+	  outfile << mydelim << buf[j++];
+	}
+	outfile << "\n";
+      }
+    }  
+  } else {
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputParticles" << endl;
+  }
+}
+
+void Output::OutputCfg(const int& timestep, ParticleList* p,
+		       const ParticleTypeList* t, 
+		       const Box* b, Comm* comm) {
+    // Note: particles are not reset within periodic box,
+    // as this would upset neighbor lists
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  int itype;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  double uc_lva[3],uc_lvb[3],uc_lvc[3];
+  double rtmp[3],vtmp[3];
+  string mydelim;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputCfg" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+
+  b->get_lv(uc_lva,uc_lvb,uc_lvc);
+ 
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "cfg.out";
+    else
+      filename = dumpfile_root + ".cfg";
+    string appendNumber;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpcfg_iter, appendNumber);
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputCfg:\n"
+		 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::scientific);
+      outfile << setprecision(6);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile << setprecision(10);
+    }
+
+    outfile << "Number of particles = " << nparticles_tot << "\n";
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "A = 1.0 Angstrom " << "\n";
+    outfile << "H0(1,1) = " << uc_lva[0] << " A" << "\n";
+    outfile << "H0(1,2) = " << uc_lva[1] << " A" << "\n";
+    outfile << "H0(1,3) = " << uc_lva[2] << " A" << "\n";
+    outfile << "H0(2,1) = " << uc_lvb[0] << " A" << "\n";
+    outfile << "H0(2,2) = " << uc_lvb[1] << " A" << "\n";
+    outfile << "H0(2,3) = " << uc_lvb[2] << " A" << "\n";
+    outfile << "H0(3,1) = " << uc_lvc[0] << " A" << "\n";
+    outfile << "H0(3,2) = " << uc_lvc[1] << " A" << "\n";
+    outfile << "H0(3,3) = " << uc_lvc[2] << " A" << "\n";
+    outfile << "# " << "\n";
+  }
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom
+
+  iperatom = 4;
+  if (Ldumpvelcfg) {
+    iperatom += 3;
+  }
+
+  if (Ldumpenergycfg) {
+    iperatom += 1;
+  }
+
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,comm->get_world());
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_type(); 
+    p_pnt->get_x(rtmp);
+    b->Fractional(rtmp,&buf[j+1]);
+    if (Ldumpvelcfg) {
+      p_pnt->get_v(&buf[j+4]);
+    }
+    if (Ldumpenergycfg) {
+      buf[j+iperatom-1] = p_pnt->get_phi();
+    }
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	itype = nint(buf[j]);
+	outfile << mydelim << t->get_type_mass(itype);
+	  // Need to add a blank to get reasonable spacing
+	  // setw gets ignored if id is single character
+	outfile << setw(8) << " " << t->get_id(itype) 
+		<< mydelim << buf[j+1] 
+		<< mydelim << buf[j+2] 
+		<< mydelim << buf[j+3];
+	if (Ldumpvelcfg) {
+	  outfile << mydelim << buf[j+4]/constants.tfactor
+		  << mydelim << buf[j+5]/constants.tfactor
+		  << mydelim << buf[j+6]/constants.tfactor;
+	} else {
+	  outfile << " 0 0 0 ";
+	}
+	if (Ldumpenergycfg) {
+	  outfile << mydelim << buf[j+iperatom-1];
+	}
+	outfile << "\n";
+	j+=iperatom;
+      }
+    }  
+  } else {
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputCfg" << endl;
+  }
+}
+
+void Output::OutputExtendedCfg(const int& timestep, ParticleList* p,
+		       const ParticleTypeList* t, 
+		       const Box* b, Comm* comm) {
+    // Note: particles are not reset within periodic box,
+    // as this would upset neighbor lists
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  int itype;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  double uc_lva[3],uc_lvb[3],uc_lvc[3];
+  double rtmp[3];
+  string mydelim;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputExtendedCfg" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+
+  b->get_lv(uc_lva,uc_lvb,uc_lvc);
+ 
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "xcfg.out";
+    else
+      filename = dumpfile_root + ".x.cfg";
+    string appendNumber;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpxcfg_iter, appendNumber);
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputExtendedCfg:\n"
+		 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::scientific);
+      outfile << setprecision(6);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile << setprecision(10);
+    }
+
+    outfile << "Number of particles = " << nparticles_tot << "\n";
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "A = 1.0 Angstrom " << "\n";
+    outfile << "H0(1,1) = " << uc_lva[0] << " A" << "\n";
+    outfile << "H0(1,2) = " << uc_lva[1] << " A" << "\n";
+    outfile << "H0(1,3) = " << uc_lva[2] << " A" << "\n";
+    outfile << "H0(2,1) = " << uc_lvb[0] << " A" << "\n";
+    outfile << "H0(2,2) = " << uc_lvb[1] << " A" << "\n";
+    outfile << "H0(2,3) = " << uc_lvb[2] << " A" << "\n";
+    outfile << "H0(3,1) = " << uc_lvc[0] << " A" << "\n";
+    outfile << "H0(3,2) = " << uc_lvc[1] << " A" << "\n";
+    outfile << "H0(3,3) = " << uc_lvc[2] << " A" << "\n";
+    outfile << "# " << "\n";
+    outfile << "entry_count = 13" << "\n";//3 pos, 3 vel, 3 disp, 3 ref, 1 energy
+    outfile << "auxiliary[0] = u_1 A" << "\n";
+    outfile << "auxiliary[1] = u_2 A" << "\n";
+    outfile << "auxiliary[2] = u_3 A" << "\n";
+    outfile << "auxiliary[3] = X_1 A" << "\n";
+    outfile << "auxiliary[4] = X_2 A" << "\n";
+    outfile << "auxiliary[5] = X_3 A" << "\n";
+    outfile << "auxiliary[6] = phi eV"<< "\n";
+  }
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 7
+
+  iperatom = 14;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,comm->get_world());
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_type(); 
+    p_pnt->get_x(rtmp);
+    b->Fractional(rtmp,&buf[j+1]);
+    p_pnt->get_v(rtmp);
+    b->FractionalVelocity(rtmp,&buf[j+4]);
+    p_pnt->get_X(rtmp);
+    b->Fractional(rtmp,&buf[j+10]);
+    buf[j+7] = buf[j+1] - buf[j+10]; // compute displacements in scaled coords
+    buf[j+8] = buf[j+2] - buf[j+11];
+    buf[j+9] = buf[j+3] - buf[j+12];
+    buf[j+13] = p_pnt->get_phi();
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+//       int curtype = nint(buf[0]);
+//       outfile << mydelim << t->get_type_mass(nint(buf[0])) << "\n";
+//       outfile << mydelim << t->get_id(nint(buf[0])) << "\n"; 
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	itype = nint(buf[j]);
+	outfile << mydelim << t->get_type_mass(itype) << "\n";
+	// Need to add a blank to get reasonable spacing
+	// mydelim << " " << t->get_id(itype) << "\n";
+//         if (itype != curtype) {
+// 	  curtype = itype;
+// 	  outfile << mydelim << t->get_type_mass(itype) << "\n";
+// 	  // Need to add a blank to get reasonable spacing
+// 	  // mydelim << " " << t->get_id(itype) << "\n";
+// 	}
+
+        outfile	<< mydelim << buf[j+1] 
+		<< mydelim << buf[j+2] 
+		<< mydelim << buf[j+3]
+	        << mydelim << buf[j+4]
+	        << mydelim << buf[j+5] 
+		<< mydelim << buf[j+6] 
+		<< mydelim << buf[j+7]
+	        << mydelim << buf[j+8]
+                << mydelim << buf[j+9] 
+		<< mydelim << buf[j+10] 
+		<< mydelim << buf[j+11]
+	        << mydelim << buf[j+12] 
+		<< mydelim << buf[j+13]
+	        << "\n";
+	j+=iperatom;
+      }
+    }  
+  } else {
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputExtenededCfg" << endl;
+  }
+
+}
+
+void Output::OutputVelocities(const int& timestep, ParticleList* p, 
+			      Comm* comm) {
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  string mydelim;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputVelocities" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "vel.out";
+    else
+      filename = dumpfile_root + ".vel";
+    string appendNumber;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpvel_iter, appendNumber);
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputParticles:\n"
+		 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::scientific);
+      outfile << setprecision(6);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile << setprecision(10);
+    }
+
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Number of particles " << nparticles_tot << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Particle velocities " << "\n";
+  }
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 4
+
+  iperatom = 4;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_tag(); 
+    p_pnt->get_v(&buf[j+1]);
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	outfile << mydelim << p->get_usertag(nint(buf[j])) 
+	    << mydelim << buf[j+1]*vfactor 
+            << mydelim << buf[j+2]*vfactor
+            << mydelim << buf[j+3]*vfactor << "\n";
+	j+=iperatom;
+      }
+    }  
+  } else {
+
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+    
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputVelocities" << endl;
+  }
+
+}
+
+
+void Output::OutputForces(const int& timestep, ParticleList* p, 
+			      Comm* comm) {
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  string mydelim;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputForces" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "force.out";
+    else
+      filename = dumpfile_root + ".frc";
+    string appendNumber;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpfrc_iter, appendNumber);
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputParticles:\n"
+		 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::scientific);
+      outfile << setprecision(6);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile << setprecision(20);
+    }
+
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Number of particles " << nparticles_tot << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Particle forces " << "\n";
+  }
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 4
+
+  iperatom = 4;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_tag(); 
+    p_pnt->get_f(&buf[j+1]);
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	outfile << mydelim << p->get_usertag(nint(buf[j]))  
+	    << mydelim << buf[j+1]*ffactor 
+            << mydelim << buf[j+2]*ffactor
+            << mydelim << buf[j+3]*ffactor << "\n";
+	j+=iperatom;
+      }
+    }  
+  } else {
+
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+    
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputForces" << endl;
+  }
+
+}
+
+void Output::OutputRefConfig(const int& timestep, ParticleList* p,
+			     const ParticleTypeList* t, Comm* comm) {
+    // Note: particles are not reset within periodic box,
+    // as this would upset neighbor lists
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  string mydelim;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputParticles" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "refconfig.out";
+    else
+      filename = dumpfile_root + ".ref";
+    string appendNumber;
+    if (!appendOutput) 
+      filename = filename + toFileNumber(dumpref_iter,appendNumber);
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputParticles:\n"
+		 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::scientific);
+      outfile << setprecision(6);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile << setprecision(10);
+    }
+
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Number of particles " << nparticles_tot << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Particle positions " << "\n";
+  }
+
+  //This section of code was translated from f90 LAMMPS 2001
+  //c LAMMPS 2001 - Molecular Dynamics Simulator, Copyright 1998-2001
+  //c Authored by Steve Plimpton
+  //c   (505) 845-7873, sjplimp@@cs.sandia.gov
+  //c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM 87185-1111
+  //c See the README file for more information
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 7
+
+  iperatom = 8;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,comm->get_world());
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_tag(); 
+    buf[j+1] = p_pnt->get_type(); 
+    buf[j+2] = p_pnt->get_color(); 
+    buf[j+3] = p_pnt->get_charge(); 
+    p_pnt->get_X(&buf[j+4]);
+    buf[j+7] = p_pnt->get_phi();
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	outfile << mydelim << p->get_usertag(nint(buf[j])) 
+	  // Need to add a blank to get reasonable spacing
+	  // mydelim << " " << t->get_id(nint(buf[j+1])) 
+		<< mydelim << nint(buf[j+2]) 
+		<< mydelim << buf[j+3] 
+		<< mydelim << buf[j+4] 
+		<< mydelim << buf[j+5]
+		<< mydelim << buf[j+6] 
+		<< mydelim << buf[j+7] << "\n";
+	j+=iperatom;
+      }
+    }  
+  } else {
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputParticles" << endl;
+  }
+
+}
+
+void Output::OutputDisplacements(const int& timestep, ParticleList* p, 
+			      Comm* comm) {
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  string mydelim;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::Displacements" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "dis.out";
+    else
+      filename = dumpfile_root + ".dis";
+    string appendNumber;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpdisp_iter, appendNumber);
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputDisplacements:\n"
+		 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::scientific);
+      outfile << setprecision(6);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile << setprecision(10);
+    }
+
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Number of particles " << nparticles_tot << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Particle displacements " << "\n";
+  }
+
+  //This section of code was translated from f90 LAMMPS 2001
+  //c LAMMPS 2001 - Molecular Dynamics Simulator, Copyright 1998-2001
+  //c Authored by Steve Plimpton
+  //c   (505) 845-7873, sjplimp@@cs.sandia.gov
+  //c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM 87185-1111
+  //c See the README file for more information
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 4
+
+  iperatom = 5;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_tag(); 
+    p_pnt->get_u(&buf[j+1]);
+    buf[j+4] = p_pnt->get_phi();
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	outfile << mydelim << p->get_usertag(nint(buf[j])) 
+	    << mydelim << buf[j+1] 
+            << mydelim << buf[j+2]
+            << mydelim << buf[j+3] 
+	    << mydelim << buf[j+4] << "\n";
+	j+=iperatom;
+      }
+    }  
+  } else {
+
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+    
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputDisplacements" << endl;
+  }
+
+}
+
+void Output::OutputAtomStress(const int& timestep, ParticleList* p,
+			      Comm* comm) {
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  double wpot[6];
+  vector <double> wkin(6);
+  string mydelim;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputAtomStress" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "stress.out";
+    else
+      filename = dumpfile_root + ".stress";
+    string appendNumber;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpstress_iter, appendNumber);
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputAtomStress:\n"
+		 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::scientific);
+      outfile << setprecision(6);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile << setprecision(10);
+    }
+
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Number of particles " << nparticles_tot << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Particle stress (times system volume) " << "\n";
+  }
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 4
+
+  iperatom = 7;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_tag(); 
+    p_pnt->get_virial(wpot);
+    p_pnt->get_mvsq(wkin);
+    buf[j+1] = wpot[0]+wkin[0];
+    buf[j+2] = wpot[1]+wkin[1];
+    buf[j+3] = wpot[2]+wkin[2];
+    buf[j+4] = wpot[3]+wkin[3];
+    buf[j+5] = wpot[4]+wkin[4];
+    buf[j+6] = wpot[5]+wkin[5];
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	outfile << mydelim << p->get_usertag(nint(buf[j])) 
+	    << mydelim << buf[j+1]*pfactor
+            << mydelim << buf[j+2]*pfactor
+            << mydelim << buf[j+3]*pfactor
+            << mydelim << buf[j+4]*pfactor
+            << mydelim << buf[j+5]*pfactor
+            << mydelim << buf[j+6]*pfactor
+		<< "\n";
+
+	j+=iperatom;
+      }
+    }  
+  } else {
+
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+    
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputAtomStress" << endl;
+  }
+
+}
+
+void Output::set_nstep_prev(int timestep_in)
+{
+  nstep_prev = timestep_in;
+}
+ 
+void Output::input_density_profile(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> density_freq;
+  getline(buf_in,input_string_density_profile);
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_density_profile:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << density_freq << input_string_density_profile << endl;
+
+  if (density_freq <= 0) {
+    glog.error("Output::input_density_profile:\n"
+	  "Invalid input parameter");
+  }
+
+  density_profile = new Profile;
+  Ldensity_profile = true;
+}
+
+void Output::input_thermo(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> thermo_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_thermo:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << thermo_freq << endl;
+
+  if (thermo_freq <= 0) {
+    glog.error("Output::input_thermo:\n"
+	       "Invalid input parameter");
+  }
+
+  Lthermo = true;
+}
+
+void Output::input_dumpfile_root(const string& buf)
+{
+  std::stringstream buf_in(buf);
+  buf_in >> dumpfile_root;   
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dumpfile_root:\n"
+               "Read error in input file");
+  }
+  
+  glog.get_logfile() << " " << dumpfile_root << endl;
+
+  appendOutput = false;
+
+}
+
+void Output::input_dump_mode(const string& buf)
+{
+  std::stringstream buf_in(buf);
+  string strtmp;
+  buf_in >> strtmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_mode:\n"
+		"Read error in input file");
+  }
+
+  if (strtmp == "app")
+	appendOutput = true;
+  else
+    if (strtmp == "trunc")
+	appendOutput = false;
+    else {
+      glog.get_logfile() << endl;
+      glog.error("Output::input_dump_mode:\n"
+		 "invalid dump mode");
+    }
+
+  if (appendOutput)
+     glog.get_logfile() << " Will append output" << endl;
+  else
+     glog.get_logfile() << " Will output to separate files" << endl;
+
+}
+         
+
+void Output::input_dump_particles(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> dump_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_particles:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << dump_freq << endl;
+
+  if (dump_freq <= 0) {
+    glog.error("Output::input_dump_particles:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldump = true;
+}
+
+void Output::input_dump_velocities(const string& buf) {
+  string str_tmp;
+  std::istringstream buf_in(buf);
+  buf_in >> str_tmp;
+
+  if (str_tmp == "config") {
+    Ldumpvelconfig = true;
+    glog.get_logfile() << " " << str_tmp << endl;
+  } else if (str_tmp == "cfg") {
+    Ldumpvelcfg = true;
+    glog.get_logfile() << " " << str_tmp << endl;
+  } else {
+    std::istringstream buf_in_tmp(str_tmp);
+    buf_in_tmp >> dumpvel_freq;
+
+    glog.get_logfile() << " " << dumpvel_freq << endl;
+
+    if (dumpvel_freq <= 0) {
+      glog.error("Output::input_dump_velocities:\n"
+		 "Invalid input parameter");
+    }
+    
+    Ldumpvel = true;
+  }
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_velocities:\n"
+	       "Read error in input file");
+  }
+}
+
+void Output::input_dump_shift(const string& buf) {
+  Ldumpshift = true;
+  glog.get_logfile() << endl;
+}
+
+void Output::input_dump_cfg(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> dumpcfg_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_cfg:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpcfg_freq << endl;
+
+  if (dumpcfg_freq <= 0) {
+    glog.error("Output::input_dump_cfg:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpcfg = true;
+}
+
+void Output::input_dump_extended_cfg(const string& buf)
+{
+  std::stringstream buf_in(buf);
+  buf_in >> dumpxcfg_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_extended_cfg:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpxcfg_freq << endl;
+
+  if (dumpxcfg_freq <= 0) {
+    glog.error("Output::input_dump_extended_cfg:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpxcfg = true;
+}
+
+void Output::input_dump_forces(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> dumpforce_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_forces:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpforce_freq << endl;
+
+  if (dumpforce_freq <= 0) {
+    glog.error("Output::input_dump_forces:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpforce = true;
+}
+
+void Output::input_dump_ref_config(const string& buf)
+{
+  std::stringstream buf_in(buf);
+  buf_in >> dumpref_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_refcfg:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpref_freq << endl;
+
+  if (dumpref_freq <= 0) {
+    glog.error("Output::input_dump_displacements:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpref = true;
+}
+
+void Output::input_dump_displacements(const string& buf)
+{
+  std::stringstream buf_in(buf);
+  buf_in >> dumpdisp_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_displacements:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpdisp_freq << endl;
+
+  if (dumpdisp_freq <= 0) {
+    glog.error("Output::input_dump_displacements:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpdisp = true;
+}
+
+void Output::input_dump_alpha(const string& buf)
+{
+  std::stringstream buf_in(buf);
+  buf_in >> dumpalpha_freq >> dumpalpha_str;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_alpha:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpalpha_freq << " " << dumpalpha_str << endl;
+
+  if (dumpalpha_freq <= 0) {
+    glog.error("Output::input_dump_alpha:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpalpha = true;
+}
+
+/* private */
+/* generates number to append to output file. Increments iter */
+string& Output::toFileNumber(int& iter, string& appendString)
+{
+  ostringstream ost;
+  ost.fill('0');
+  ost.width(FILENUMBER_WIDTH);
+  
+  //double fAppend(double(iter)/10000.);
+  //iter++;
+  ost << iter++;
+  appendString = "." + ost.str();
+
+  return appendString;
+}
+
+void Output::input_dump_restart(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> restart_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_restart:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << restart_freq << endl;
+
+  if (restart_freq <= 0) {
+    glog.error("Output::input_restart:\n"
+	       "Invalid input parameter");
+  }
+  Lrestart = true;
+}
+
+void Output::input_dump_atom_stress(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> dumpstress_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_atom_stress:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpstress_freq << endl;
+
+  if (dumpstress_freq <= 0) {
+    glog.error("Output::input_dump_atom_stress:\n"
+	       "Invalid input parameter");
+  }
+  Ldumpstress = true;
+}
+
+void Output::input_dump_energies(const string& buf) {
+  string str_tmp;
+  std::istringstream buf_in(buf);
+  buf_in >> str_tmp;
+ 
+  if (str_tmp == "config") {
+    Ldumpenergyconfig = true;
+    glog.get_logfile() << " " << str_tmp << endl;
+  } else if (str_tmp == "cfg") {
+    Ldumpenergycfg = true;
+    glog.get_logfile() << " " << str_tmp << endl;
+  } else {
+    glog.error("Output::input_dump_energies:\n"
+                 "Invalid input parameter");
+  }
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_energies:\n"
+               "Read error in input file");
+  }
+}
+ 
+bool Output::Need_Thermo() {
+  bool Ltmp;
+
+  Ltmp = false;
+
+  if (Lthermo) {
+    if (thermo_skip % thermo_freq == 0) {
+      Ltmp = true;
+    }
+  }
+
+  return Ltmp;
+}
+
+bool Output::Need_AtomVirial() {
+  bool Ltmp;
+
+  Ltmp = false;
+
+  if (Ldumpstress) {
+    if (dumpstress_skip % dumpstress_freq == 0) {
+      Ltmp = true;
+    }
+  }
+
+  return Ltmp;
+}
+
+void Output::input_dump_reax_bonds(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> dumpreaxbond_freq;
+ 
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_reax_bonds:\n"
+               "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpreaxbond_freq << endl;
+ 
+  if (dumpreaxbond_freq <= 0) {
+    glog.error("Output::input_dump_reax_bonds:\n"
+               "Invalid input parameter");
+  }
+ 
+  Ldumpreaxbonds = true;
+}
+ 
+void Output::input_dump_reax_allbonds(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> dumpreaxallbond_freq;
+ 
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_reax_allbonds:\n"
+               "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpreaxallbond_freq << endl;
+ 
+  if (dumpreaxallbond_freq <= 0) {
+    glog.error("Output::input_dump_reax_allbonds:\n"
+               "Invalid input parameter");
+  }
+ 
+  Ldumpreaxallbonds = true;
+}
+ 
+void Output::input_nstep_prev(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> nstep_prev;
+ 
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_nstep_prev:\n"
+               "Read error in input file");
+  }
+  glog.get_logfile() << " " << nstep_prev << endl;
+ 
+  if (nstep_prev < 0) {
+    glog.error("Output::input_nstep_prev:\n"
+               "Invalid input parameter");
+  }
+}
+ 
+void Output::input_stress_tensor(const string& buf)
+{
+  Lstresstensor = true;
+  glog.get_logfile() << endl;
+}
+ 
+void Output::input_sum_momentum(const string& buf)
+{
+  Lsummomentum = true;
+  glog.get_logfile() << endl;
+}
+ 
+void Output::input_format_style(const string& buf)
+{
+  string str_tmp;
+  std::istringstream buf_in(buf);
+  
+  buf_in >> str_tmp;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_format_style:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << str_tmp;
+
+  if (str_tmp == "scientific") {
+    formatstyle = scientific;
+
+  } else if (str_tmp == "fixed") {
+    formatstyle = fixed;
+  } else {
+    glog.error("Output::input_format_style:\n"
+	       "Unrecognized format style");
+  }
+
+  glog.get_logfile() << endl;
+
+}
+ 
+#ifdef USE_REAX
+void Output::OutputReaxBondOrders(const int& timestep, ParticleList* p,
+                             const ParticleTypeList* t, Comm* comm) {
+  int nparticles,nparticles_tot,nbuf,nbuf_local,most,j;
+  int ii,jn,mbond,numbonds,nsbmax,nsbmax_most;
+  double cutof3;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  string mydelim;
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputReaxBondOrders" << endl;
+  }
+ 
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+ 
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+//  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+ 
+  mbond = ReaxParams::mbond;
+  FORTRAN(getnsbmax,GETNSBMAX)(&nsbmax);
+  FORTRAN(getcutof3,GETCUTOF3)(&cutof3);
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  MPI_Allreduce(&nsbmax,&nsbmax_most,1,MPI_INT,MPI_MAX,world);
+ 
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "reaxbonds.out";
+    else
+      filename = dumpfile_root + ".bnd";
+    string appendNumber;
+    filename = glog.path_str + filename;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpreaxbond_iter, appendNumber);
+    filename = filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag);
+    if (!outfile) {
+      glog.error("Output::OutputReaxBondOrders:\n"
+                 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::showpoint);
+      outfile.setf(ios::fixed,ios::floatfield);
+      outfile << setprecision(3);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile.setf(ios::fixed,ios::floatfield);
+      outfile << setprecision(3);
+    }
+
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Number of particles " << nparticles_tot << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Max.number of bonds per atom "  << nsbmax_most
+                << " (with coarse bond order cutoff " << cutof3 << ")" << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Particle connection table and bond orders " << "\n";
+  }
+ 
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // nbuf_local = size of local buffer for table of atom bonds
+ 
+  nbuf = 1+(2*nsbmax_most+7)*most;
+  buf.resize(nbuf);
+ 
+  j = 2;
+  jn = ReaxParams::nat;
+  buf[0] = nparticles;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j-1] = p_pnt->get_tag();                       //atom tag
+    buf[j+0] = FORTRAN(cbkia,CBKIA).iag[iparticle];    //atom type
+    buf[j+1] = FORTRAN(cbkia,CBKIA).iag[iparticle+jn]; //no.bonds
+    int k;
+    numbonds = nint(buf[j+1]);
+// connection table based on coarse bond order cutoff (> cutof3)
+    for (k=2;k<2+numbonds;k++) {
+      ii = FORTRAN(cbkia,CBKIA).iag[iparticle+jn*k];
+      buf[j+k] = FORTRAN(cbkc,CBKC).itag[ii-1];
+    }
+    buf[j+k]=FORTRAN(cbkia,CBKIA).iag[iparticle+jn*(mbond+2)]; //molec.id
+    j+=(3+numbonds);
+// bond orders (> cutof3)
+        for (k=0;k<numbonds;k++) {
+          ii = FORTRAN(cbknubon2,CBKNUBON2).nubon1[iparticle+jn*k];
+      buf[j+k] = FORTRAN(cbkbo,CBKBO).bo[ii-1];
+    }
+// sum of bond orders (abo), no. of lone pairs (vlp), charge (ch)
+        buf[j+k] = FORTRAN(cbkabo,CBKABO).abo[iparticle];
+    buf[j+k+1] = FORTRAN(cbklonpar,CBKLONPAR).vlp[iparticle];
+//    buf[j+k+2] = FORTRAN(cbkch,CBKCH).ch[iparticle];
+    buf[j+k+2] = p_pnt->get_charge();
+        j+=(4+numbonds);
+  }
+  nbuf_local = j-1;
+ 
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+ 
+  if (node == 0) {
+ 
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+          nlocal_tmp = nparticles;
+      } else {
+          MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+//        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+          nlocal_tmp = nint(buf[0]);
+      }
+ 
+      j = 2;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+// print atom tag, atom type, no.bonds
+          outfile << mydelim << p->get_usertag(nint(buf[j-1]))
+                  << mydelim << nint(buf[j+0])
+                      << mydelim << nint(buf[j+1]);
+      int k;
+      numbonds = nint(buf[j+1]);
+      if (numbonds > nsbmax_most) {
+      glog.error("Output::OutputReaxBondOrders:\n"
+               "numbonds > nsbmax_most");
+      }
+// print connection table
+      for (k=2;k<2+numbonds;k++) {
+    outfile << mydelim << p->get_usertag(nint(buf[j+k]));
+      }
+    outfile << mydelim << nint(buf[j+k]);
+          j+=(3+numbonds);
+// print bond orders
+      for (k=0;k<numbonds;k++) {
+    outfile << mydelim << buf[j+k];
+      }
+// print sum of bond orders, no. of lone pairs, charge
+    outfile << mydelim << buf[j+k]
+            << mydelim << buf[j+k+1]
+            << mydelim << buf[j+k+2] << "\n";
+          j+=(4+numbonds);
+      }
+    }
+  } else {
+ 
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],nbuf_local,MPI_DOUBLE,0,0,world);
+ 
+  }
+ 
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close();
+  }
+ 
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputReaxBondOrders" << endl;
+  }
+ 
+}
+ 
+void Output::OutputReaxAllBondOrders(const int& timestep, ParticleList* p,
+                             const ParticleTypeList* t, Comm* comm) {
+  int nparticles,nparticles_tot,nbuf,nbuf_local,most,j;
+  int ii,jn,mbond,numbonds,nsbma2,nsbma2_most;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  string mydelim;
+ 
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputReaxAllBondOrders" << endl;
+  }
+ 
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+ 
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+//  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+ 
+  mbond = ReaxParams::mbond;
+  FORTRAN(getnsbma2,GETNSBMA2)(&nsbma2);
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  MPI_Allreduce(&nsbma2,&nsbma2_most,1,MPI_INT,MPI_MAX,world);
+ 
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "reaxallbonds.out";
+    else
+      filename = dumpfile_root + ".abn";
+    string appendNumber;
+    filename = glog.path_str + filename;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpreaxallbond_iter, appendNumber);
+    outfile.open(filename.c_str(),openflag);
+    if (!outfile) {
+      glog.error("Output::OutputReaxAllBondOrders:\n"
+                 "Failed to open "+filename);
+    }
+    if (formatstyle == scientific) {
+      mydelim = " ";
+      outfile.setf(ios::showpoint);
+      outfile.setf(ios::fixed,ios::floatfield);
+      outfile << setprecision(3);
+    } else if (formatstyle == fixed) {
+      mydelim = "         ";
+      outfile.setf(ios::showpoint);
+      outfile.setf(ios::fixed,ios::floatfield);
+      outfile << setprecision(3);
+    }
+
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Number of particles " << nparticles_tot << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Max.number of bonds per atom "  << nsbma2_most << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Particle connection table and bond orders " << "\n";
+  }
+ 
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // nbuf_local = size of local buffer for table of atom bonds
+ 
+  nbuf = 1+(2*nsbma2_most+7)*most;
+  buf.resize(nbuf);
+ 
+  j = 2;
+  jn = ReaxParams::nat;
+  buf[0] = nparticles;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j-1] = p_pnt->get_tag();                       //atom tag
+    buf[j+0] = FORTRAN(cbkia,CBKIA).ia[iparticle];     //atom type
+    buf[j+1] = FORTRAN(cbkia,CBKIA).ia[iparticle+jn];  //no.bonds
+    int k;
+    numbonds = nint(buf[j+1]);
+// connection table
+    for (k=2;k<2+numbonds;k++) {
+      ii = FORTRAN(cbkia,CBKIA).ia[iparticle+jn*k];
+      buf[j+k] = FORTRAN(cbkc,CBKC).itag[ii-1];
+    }
+    buf[j+k]=FORTRAN(cbkia,CBKIA).ia[iparticle+jn*(mbond+2)];  //molec.id
+    j+=(3+numbonds);
+// bond orders
+        for (k=0;k<numbonds;k++) {
+          ii = FORTRAN(cbknubon2,CBKNUBON2).nubon2[iparticle+jn*k];
+      buf[j+k] = FORTRAN(cbkbo,CBKBO).bo[ii-1];
+    }
+// sum of bond orders (abo), no. of lone pairs (vlp), charge (ch)
+        buf[j+k] = FORTRAN(cbkabo,CBKABO).abo[iparticle];
+    buf[j+k+1] = FORTRAN(cbklonpar,CBKLONPAR).vlp[iparticle];
+//    buf[j+k+2] = FORTRAN(cbkch,CBKCH).ch[iparticle];
+    buf[j+k+2] = p_pnt->get_charge();
+        j+=(4+numbonds);
+  }
+  nbuf_local = j-1;
+ 
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+ 
+  if (node == 0) {
+ 
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+          nlocal_tmp = nparticles;
+      } else {
+          MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+//        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+          nlocal_tmp = nint(buf[0]);
+      }
+ 
+      j = 2;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+// print atom tag, atom type, no.bonds
+          outfile << mydelim << p->get_usertag(nint(buf[j-1]))
+                  << mydelim << nint(buf[j+0])
+                      << mydelim << nint(buf[j+1]);
+      int k;
+      numbonds = nint(buf[j+1]);
+      if (numbonds > nsbma2_most) {
+      glog.error("Output::OutputReaxAllBondOrders:\n"
+               "numbonds > nsbma2_most");
+      }
+// print connection table
+      for (k=2;k<2+numbonds;k++) {
+    outfile << mydelim << p->get_usertag(nint(buf[j+k]));
+      }
+    outfile << mydelim << nint(buf[j+k]);
+          j+=(3+numbonds);
+// print bond orders
+      for (k=0;k<numbonds;k++) {
+    outfile << mydelim << buf[j+k];
+      }
+// print sum of bond orders, no. of lone pairs, charge
+    outfile << mydelim << buf[j+k]
+            << mydelim << buf[j+k+1]
+            << mydelim << buf[j+k+2] << "\n";
+          j+=(4+numbonds);
+      }
+    }
+  } else {
+ 
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],nbuf_local,MPI_DOUBLE,0,0,world);
+ 
+  }
+ 
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close();
+  }
+ 
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputReaxAllBondOrders" << endl;
+  }
+ 
+}
+#endif
+@
+
+
+4.22
+log
+@Added thermostat/barostat extended variables to restart file.
+@
+text
+@d1633 1
+a1633 1
+      outfile << setprecision(10);
+@
+
+
+4.21
+log
+@Added 'output sum momentum' command
+@
+text
+@d600 2
+a601 1
+			 const bool& Lvolume, const bool& Lnparticles) {
+d908 1
+a908 1
+      p->OutputRestart(b,timestep,comm);
+@
+
+
+4.20
+log
+@Fixed midpoint bug and eliminated all osx_serial_debug warnings (-Wuninitialized, -Wshadow, ...)
+@
+text
+@d119 1
+d614 1
+d661 4
+d761 18
+d2540 6
+@
+
+
+4.19
+log
+@Added grind time to output.cpp
+@
+text
+@d459 1
+a459 1
+  int iff,ff_classname;
+d603 1
+a603 1
+  int iff,ff_classname;
+d620 3
+@
+
+
+4.18
+log
+@Fixed unnecessary endl's
+@
+text
+@d495 2
+@
+
+
+4.17
+log
+@Added command dump format style
+@
+text
+@d2605 4
+a2608 4
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# Number of particles " << nparticles_tot << endl;
+    outfile << "# " << endl;
+d2610 3
+a2612 3
+                << " (with coarse bond order cutoff " << cutof3 << ")" << endl;
+    outfile << "# " << endl;
+    outfile << "# Particle connection table and bond orders " << endl;
+d2694 1
+a2694 1
+            << mydelim << buf[j+k+2] << endl;
+d2778 7
+a2784 7
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# Number of particles " << nparticles_tot << endl;
+    outfile << "# " << endl;
+    outfile << "# Max.number of bonds per atom "  << nsbma2_most << endl;
+    outfile << "# " << endl;
+    outfile << "# Particle connection table and bond orders " << endl;
+d2866 1
+a2866 1
+            << mydelim << buf[j+k+2] << endl;
+@
+
+
+4.16
+log
+@fixed error in OutputReaxbonds()
+@
+text
+@d128 2
+a129 1
+  }
+d182 1
+a182 1
+
+d203 1
+d224 1
+d245 1
+d266 1
+d290 1
+d311 1
+d337 1
+d358 1
+d411 1
+d432 1
+d803 7
+a809 2
+	outfile.setf(ios::showpoint);
+	outfile << setprecision(10);
+d924 1
+d956 10
+a965 2
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+d1052 1
+a1052 1
+	outfile << setw(8) << p->get_usertag(nint(buf[j++]));
+d1055 6
+a1060 6
+	outfile << setw(8) << " " << t->get_id(nint(buf[j++]));
+	outfile << setw(8) << nint(buf[j++]);
+	outfile << setw(20) << buf[j++]; 
+	outfile << setw(20) << buf[j++]; 
+	outfile << setw(20) << buf[j++]; 
+	outfile << setw(20) << buf[j++]; 
+d1062 3
+a1064 3
+	  outfile << setw(20) << nint(buf[j++]);
+	  outfile << setw(20) << nint(buf[j++]);
+	  outfile << setw(20) << nint(buf[j++]);
+d1067 3
+a1069 3
+	  outfile << setw(20) << buf[j++]/constants.tfactor;
+	  outfile << setw(20) << buf[j++]/constants.tfactor;
+	  outfile << setw(20) << buf[j++]/constants.tfactor;
+d1072 1
+a1072 1
+	  outfile << setw(20) << buf[j++];
+d1108 1
+d1142 10
+a1151 2
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+d1219 1
+a1219 1
+	outfile << setw(8) << t->get_type_mass(itype);
+d1223 3
+a1225 3
+		<< setw(20) << buf[j+1] 
+		<< setw(20) << buf[j+2] 
+		<< setw(20) << buf[j+3];
+d1227 3
+a1229 3
+	  outfile << setw(20) << buf[j+4]/constants.tfactor
+		  << setw(20) << buf[j+5]/constants.tfactor
+		  << setw(20) << buf[j+6]/constants.tfactor;
+d1234 1
+a1234 1
+	  outfile << setw(20) << buf[j+iperatom-1];
+d1272 1
+d1306 10
+a1315 2
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+d1383 2
+a1384 2
+//       outfile << setw(8) << t->get_type_mass(nint(buf[0])) << "\n";
+//       outfile << setw(8) << t->get_id(nint(buf[0])) << "\n"; 
+d1389 1
+a1389 1
+	outfile << setw(8) << t->get_type_mass(itype) << "\n";
+d1391 1
+a1391 2
+	// setw gets ignored if id is single character
+	outfile << setw(8) << " " << t->get_id(itype) << "\n";
+d1394 1
+a1394 1
+// 	  outfile << setw(8) << t->get_type_mass(itype) << "\n";
+d1396 1
+a1396 2
+// 	  // setw gets ignored if id is single character
+//  	  outfile << setw(8) << " " << t->get_id(itype) << "\n";
+d1399 13
+a1411 13
+        outfile	<< setw(20) << buf[j+1] 
+		<< setw(20) << buf[j+2] 
+		<< setw(20) << buf[j+3]
+	        << setw(20) << buf[j+4]
+	        << setw(20) << buf[j+5] 
+		<< setw(20) << buf[j+6] 
+		<< setw(20) << buf[j+7]
+	        << setw(20) << buf[j+8]
+                << setw(20) << buf[j+9] 
+		<< setw(20) << buf[j+10] 
+		<< setw(20) << buf[j+11]
+	        << setw(20) << buf[j+12] 
+		<< setw(20) << buf[j+13]
+d1443 1
+d1475 10
+a1484 2
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+d1527 4
+a1530 4
+	outfile << setw(8) << p->get_usertag(nint(buf[j])) 
+	    << setw(20) << buf[j+1]*vfactor 
+            << setw(20) << buf[j+2]*vfactor
+            << setw(20) << buf[j+3]*vfactor << "\n";
+d1564 1
+a1564 1
+
+d1596 10
+a1605 2
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+d1648 4
+a1651 4
+	outfile << setw(8) << p->get_usertag(nint(buf[j]))  
+	    << setw(20) << buf[j+1]*ffactor 
+            << setw(20) << buf[j+2]*ffactor
+            << setw(20) << buf[j+3]*ffactor << "\n";
+d1685 1
+d1717 10
+a1726 2
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+d1780 1
+a1780 1
+	outfile << setw(8) << p->get_usertag(nint(buf[j])) 
+d1782 7
+a1788 8
+	  // setw gets ignored if id is single character
+		<< setw(8) << " " << t->get_id(nint(buf[j+1])) 
+		<< setw(8) << nint(buf[j+2]) 
+		<< setw(20) << buf[j+3] 
+		<< setw(20) << buf[j+4] 
+		<< setw(20) << buf[j+5]
+		<< setw(20) << buf[j+6] 
+		<< setw(20) << buf[j+7] << "\n";
+d1819 1
+d1851 10
+a1860 2
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+d1911 5
+a1915 5
+	outfile << setw(8) << p->get_usertag(nint(buf[j])) 
+	    << setw(20) << buf[j+1] 
+            << setw(20) << buf[j+2]
+            << setw(20) << buf[j+3] 
+	    << setw(20) << buf[j+4] << "\n";
+d1950 1
+d1982 10
+a1991 2
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+d2041 7
+a2047 7
+	outfile << setw(8) << p->get_usertag(nint(buf[j])) 
+	    << setw(20) << buf[j+1]*pfactor
+            << setw(20) << buf[j+2]*pfactor
+            << setw(20) << buf[j+3]*pfactor
+            << setw(20) << buf[j+4]*pfactor
+            << setw(20) << buf[j+5]*pfactor
+            << setw(20) << buf[j+6]*pfactor
+d2511 28
+d2553 2
+a2554 1
+ 
+d2593 12
+a2604 2
+    outfile.setf(ios::showpoint);
+    outfile << fixed << setprecision(3);
+d2672 3
+a2674 3
+          outfile << setw(8) << p->get_usertag(nint(buf[j-1]))
+                  << setw(8) << nint(buf[j+0])
+                      << setw(8) << nint(buf[j+1]);
+d2683 1
+a2683 1
+    outfile << setw(8) << p->get_usertag(nint(buf[j+k]));
+d2685 1
+a2685 1
+    outfile << setw(8) << nint(buf[j+k]);
+d2689 1
+a2689 1
+    outfile << setw(7) << buf[j+k];
+d2692 3
+a2694 3
+    outfile << setw(7) << buf[j+k]
+            << setw(7) << buf[j+k+1]
+            << setw(7) << buf[j+k+2] << endl;
+d2728 1
+d2766 12
+a2777 2
+    outfile.setf(ios::showpoint);
+    outfile << fixed << setprecision(3);
+d2844 3
+a2846 3
+          outfile << setw(8) << p->get_usertag(nint(buf[j-1]))
+                  << setw(8) << nint(buf[j+0])
+                      << setw(8) << nint(buf[j+1]);
+d2855 1
+a2855 1
+    outfile << setw(8) << p->get_usertag(nint(buf[j+k]));
+d2857 1
+a2857 1
+    outfile << setw(8) << nint(buf[j+k]);
+d2861 1
+a2861 1
+    outfile << setw(7) << buf[j+k];
+d2864 3
+a2866 3
+    outfile << setw(7) << buf[j+k]
+            << setw(7) << buf[j+k+1]
+            << setw(7) << buf[j+k+2] << endl;
+@
+
+
+4.15
+log
+@Fixed worlds + reaxbond bug
+@
+text
+@d2526 1
+a2526 1
+        j+=(6+numbonds);
+d2572 1
+a2572 1
+          j+=(6+numbonds);
+d2687 1
+a2687 1
+        j+=(6+numbonds);
+d2733 1
+a2733 1
+          j+=(6+numbonds);
+@
+
+
+4.14
+log
+@Added commands to carry box dimensions in restart file and to output stress tensor
+@
+text
+@d2474 1
+@
+
+
+4.13
+log
+@Added non-periodic BC, constant velocity vector, slabwise temperature rescale fix
+@
+text
+@d118 1
+d598 2
+d629 12
+a640 5
+      // If virial turned off, turn off pressure
+      if (v_potential == double_nan) {
+	pressure = double_nan;
+      } else {
+	pressure = (v_potential+v_kinetic)/volume;
+d700 1
+d702 7
+a708 3
+	// If virial turned off, do not report pressure
+	if (v_potential != double_nan) {
+	  glog.get_logfile() << setw(20) << "Pressure" << "= ";
+d711 26
+a736 1
+	    pfactor*pressure << endl;
+d738 1
+d862 1
+a862 1
+      p->OutputRestart(timestep,comm);
+d2421 6
+@
+
+
+4.12
+log
+@Fixed up some more things related to image shift values
+@
+text
+@d364 1
+a364 1
+    if (!Ldumpcfg) {
+d378 1
+a378 1
+    if (!Ldumpcfg) {
+d600 4
+d845 5
+d1298 3
+a1300 3
+      int curtype = nint(buf[0]);
+      outfile << setw(8) << t->get_type_mass(nint(buf[0])) << "\n";
+      outfile << setw(8) << t->get_id(nint(buf[0])) << "\n"; 
+d1305 12
+a1316 7
+        if (itype != curtype) {
+	  curtype = itype;
+	  outfile << setw(8) << t->get_type_mass(itype) << "\n";
+	  // Need to add a blank to get reasonable spacing
+	  // setw gets ignored if id is single character
+ 	  outfile << setw(8) << " " << t->get_id(itype) << "\n";
+	}
+@
+
+
+4.11
+log
+@Fixed bugs in new I/O Particle scheme
+@
+text
+@d977 1
+a977 2
+	outfile << setw(8) << p->get_usertag(nint(buf[j]));
+	  j++;
+d980 2
+a981 4
+	outfile << setw(8) << " " << t->get_id(nint(buf[j]));
+	j++;
+	outfile << setw(8) << nint(buf[j]);
+	j++;
+d987 3
+a989 6
+	  outfile << setw(20) << nint(buf[j]);
+	  j++;
+	  outfile << setw(20) << nint(buf[j]);
+	  j++;
+	  outfile << setw(20) << nint(buf[j]);
+	  j++;
+@
+
+
+4.10
+log
+@Added periodic shift tracking and added timestep to restart
+@
+text
+@d985 4
+a988 4
+	outfile << setw(20) << buf[j++] 
+		<< setw(20) << buf[j++] 
+		<< setw(20) << buf[j++]
+		<< setw(20) << buf[j++];
+d998 3
+a1000 3
+	  outfile << setw(20) << buf[j++]/constants.tfactor
+		  << setw(20) << buf[j++]/constants.tfactor
+		  << setw(20) << buf[j++]/constants.tfactor;
+@
+
+
+4.9
+log
+@Added nstep_prev command.
+@
+text
+@d117 1
+d817 1
+a817 1
+      p->OutputRestart(comm);
+d923 3
+d940 10
+a949 5
+    buf[j] = p_pnt->get_tag(); 
+    buf[j+1] = p_pnt->get_type(); 
+    buf[j+2] = p_pnt->get_color(); 
+    buf[j+3] = p_pnt->get_charge(); 
+    p_pnt->get_x(&buf[j+4]);
+d951 2
+a952 1
+      p_pnt->get_v(&buf[j+7]);
+d955 1
+a955 1
+      buf[j+iperatom-1] = p_pnt->get_phi();
+a956 1
+    j+=iperatom;
+d977 2
+a978 1
+	outfile << setw(8) << p->get_usertag(nint(buf[j]))
+d981 16
+a996 6
+	  << setw(8) << " " << t->get_id(nint(buf[j+1])) 
+		<< setw(8) << nint(buf[j+2]) 
+		<< setw(20) << buf[j+3] 
+		<< setw(20) << buf[j+4] 
+		<< setw(20) << buf[j+5]
+		<< setw(20) << buf[j+6];
+d998 3
+a1000 3
+	  outfile << setw(20) << buf[j+7]/constants.tfactor
+		  << setw(20) << buf[j+8]/constants.tfactor
+		  << setw(20) << buf[j+9]/constants.tfactor;
+d1003 1
+a1003 1
+	  outfile << setw(20) << buf[j+iperatom-1];
+a1005 1
+	j+=iperatom;
+d1938 5
+d2085 5
+@
+
+
+4.8
+log
+@Added atom energy and bonding output for ReaxFF
+@
+text
+@d125 1
+d579 1
+a579 1
+void Output::WriteOutput(const int& timestep, ParticleList* p,
+d599 2
+d2325 18
+@
+
+
+4.7
+log
+@Merged ReverseComm_branch back into main branch
+@
+text
+@d77 15
+d111 4
+d367 54
+d824 13
+d922 3
+d941 3
+d979 3
+d1077 4
+d1094 3
+d1129 1
+a1129 2
+		  << setw(20) << buf[j+6]/constants.tfactor
+	          << "\n";
+d1131 4
+a1134 1
+	  outfile << " 0 0 0 " << "\n";
+d1136 1
+d2232 22
+d2282 366
+@
+
+
+4.6
+log
+@add the files for the veldependent forcefiled along with modifications
+in other files (vec3.h Makefile forcefield.h forcefieldlist.cpp ) needed to
+support the new forcefield
+@
+text
+@d97 1
+d104 1
+d266 20
+d744 7
+a1071 1
+
+d1116 1
+a1116 1
+    outfile << "entry_count = 13" << "\n";//3 pos,3 vel,3 disp,3 ref,1 energy 
+d1686 125
+d2108 19
+d2141 14
+@
+
+
+4.6.2.1
+log
+@Added atom stress for ReaxFF
+@
+text
+@a96 1
+  Ldumpstress = false;
+a102 1
+  dumpstress_iter = 0;
+a263 20
+  if (Ldumpstress) {
+    dumpstress_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      if (defaultOutput)
+	filename = "stress.out";
+      else
+	filename = dumpfile_root + ".stress";
+      if (!appendOutput)
+        filename = filename + appendix;
+      filename = glog.path_str + filename + glog.world_suffix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+    }
+  }
+
+a721 7
+  if (Ldumpstress) {
+    if (dumpstress_skip++ % dumpstress_freq == 0) {
+      dumpstress_skip = 1;
+      OutputAtomStress(timestep,p,comm);
+    }
+  }
+
+d1043 1
+d1088 1
+a1088 1
+    outfile << "entry_count = 13" << "\n";//3 pos, 3 vel, 3 disp, 3 ref, 1 energy
+a1657 125
+void Output::OutputAtomStress(const int& timestep, ParticleList* p,
+			      Comm* comm) {
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  double wpot[6];
+  vector <double> wkin(6);
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Entered Output::OutputAtomStress" << endl;
+  }
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    if (defaultOutput)
+      filename = "stress.out";
+    else
+      filename = dumpfile_root + ".stress";
+    string appendNumber;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpstress_iter, appendNumber);
+    filename = glog.path_str + filename + glog.world_suffix;
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputAtomStress:\n"
+		 "Failed to open "+filename);
+    }
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+    outfile << "# Timestep " << timestep << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Number of particles " << nparticles_tot << "\n";
+    outfile << "# " << "\n";
+    outfile << "# Particle stress (times system volume) " << "\n";
+  }
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 4
+
+  iperatom = 7;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_tag(); 
+    p_pnt->get_virial(wpot);
+    p_pnt->get_mvsq(wkin);
+    buf[j+1] = wpot[0]+wkin[0];
+    buf[j+2] = wpot[1]+wkin[1];
+    buf[j+3] = wpot[2]+wkin[2];
+    buf[j+4] = wpot[3]+wkin[3];
+    buf[j+5] = wpot[4]+wkin[4];
+    buf[j+6] = wpot[5]+wkin[5];
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	outfile << setw(8) << p->get_usertag(nint(buf[j])) 
+	    << setw(20) << buf[j+1]*pfactor
+            << setw(20) << buf[j+2]*pfactor
+            << setw(20) << buf[j+3]*pfactor
+            << setw(20) << buf[j+4]*pfactor
+            << setw(20) << buf[j+5]*pfactor
+            << setw(20) << buf[j+6]*pfactor
+		<< "\n";
+
+	j+=iperatom;
+      }
+    }  
+  } else {
+
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+    
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+
+  if (comm->get_Lnodefile()) {
+    comm->get_nodefile() << "Exited Output::OutputAtomStress" << endl;
+  }
+
+}
+
+a1954 19
+void Output::input_dump_atom_stress(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> dumpstress_freq;
+
+  if (buf_in.fail()) {
+    glog.get_logfile() << endl;
+    glog.error("Output::input_dump_atom_stress:\n"
+	       "Read error in input file");
+  }
+  glog.get_logfile() << " " << dumpstress_freq << endl;
+
+  if (dumpstress_freq <= 0) {
+    glog.error("Output::input_dump_atom_stress:\n"
+	       "Invalid input parameter");
+  }
+  Ldumpstress = true;
+}
+
+@
+
+
+4.6.2.2
+log
+@Finished adding atomic virial for ReaxFF force field
+@
+text
+@a2140 14
+bool Output::Need_AtomVirial() {
+  bool Ltmp;
+
+  Ltmp = false;
+
+  if (Ldumpstress) {
+    if (dumpstress_skip % dumpstress_freq == 0) {
+      Ltmp = true;
+    }
+  }
+
+  return Ltmp;
+}
+
+@
+
+
+4.5
+log
+@replaced endl with "\n" during output of particle data to improve i/o performance
+@
+text
+@d609 1
+d614 13
+@
+
+
+4.4
+log
+@Added multiple replica feature.
+@
+text
+@d636 2
+a637 2
+	outfile << "# Timestep " << timestep << endl;
+	outfile << " " << alpha << endl;
+d758 2
+a759 2
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+d763 1
+a763 1
+      outfile << "# Unit cell lattice vectors:" << endl;
+d765 1
+a765 1
+	      << " " << uc_lva[2] << endl;
+d767 1
+a767 1
+	      << " " << uc_lvb[2] << endl;
+d769 2
+a770 2
+	      << " " << uc_lvc[2] << endl;
+      outfile << "# " << endl;
+d772 1
+a772 1
+      outfile << "# Unit cell origin:" << endl;
+d775 2
+a776 2
+	      << uc_origin[2] << endl;
+      outfile << "# " << endl;
+d779 2
+a780 2
+      outfile << "# Number of particles " << nparticles_tot << endl;
+      outfile << "# " << endl;
+d782 1
+a782 1
+    outfile << "# Particle positions " << endl;
+d844 1
+a844 1
+	outfile << endl;
+d914 14
+a927 14
+    outfile << "Number of particles = " << nparticles_tot << endl;
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "A = 1.0 Angstrom " << endl;
+    outfile << "H0(1,1) = " << uc_lva[0] << " A" << endl;
+    outfile << "H0(1,2) = " << uc_lva[1] << " A" << endl;
+    outfile << "H0(1,3) = " << uc_lva[2] << " A" << endl;
+    outfile << "H0(2,1) = " << uc_lvb[0] << " A" << endl;
+    outfile << "H0(2,2) = " << uc_lvb[1] << " A" << endl;
+    outfile << "H0(2,3) = " << uc_lvb[2] << " A" << endl;
+    outfile << "H0(3,1) = " << uc_lvc[0] << " A" << endl;
+    outfile << "H0(3,2) = " << uc_lvc[1] << " A" << endl;
+    outfile << "H0(3,3) = " << uc_lvc[2] << " A" << endl;
+    outfile << "# " << endl;
+d985 1
+a985 1
+	          << endl;
+d987 1
+a987 1
+	  outfile << " 0 0 0 " << endl;
+d1060 22
+a1081 22
+    outfile << "Number of particles = " << nparticles_tot << endl;
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "A = 1.0 Angstrom " << endl;
+    outfile << "H0(1,1) = " << uc_lva[0] << " A" << endl;
+    outfile << "H0(1,2) = " << uc_lva[1] << " A" << endl;
+    outfile << "H0(1,3) = " << uc_lva[2] << " A" << endl;
+    outfile << "H0(2,1) = " << uc_lvb[0] << " A" << endl;
+    outfile << "H0(2,2) = " << uc_lvb[1] << " A" << endl;
+    outfile << "H0(2,3) = " << uc_lvb[2] << " A" << endl;
+    outfile << "H0(3,1) = " << uc_lvc[0] << " A" << endl;
+    outfile << "H0(3,2) = " << uc_lvc[1] << " A" << endl;
+    outfile << "H0(3,3) = " << uc_lvc[2] << " A" << endl;
+    outfile << "# " << endl;
+    outfile << "entry_count = 13" << endl;//3 pos,3 vel,3 disp,3 ref,1 energy 
+    outfile << "auxiliary[0] = u_1 A" << endl;
+    outfile << "auxiliary[1] = u_2 A" << endl;
+    outfile << "auxiliary[2] = u_3 A" << endl;
+    outfile << "auxiliary[3] = X_1 A" << endl;
+    outfile << "auxiliary[4] = X_2 A" << endl;
+    outfile << "auxiliary[5] = X_3 A" << endl;
+    outfile << "auxiliary[6] = phi eV"<< endl;
+d1127 2
+a1128 2
+      outfile << setw(8) << t->get_type_mass(nint(buf[0])) << endl;
+      outfile << setw(8) << t->get_id(nint(buf[0])) << endl; 
+d1135 1
+a1135 1
+	  outfile << setw(8) << t->get_type_mass(itype) << endl;
+d1138 1
+a1138 1
+ 	  outfile << setw(8) << " " << t->get_id(itype) << endl;
+d1153 1
+a1153 1
+	        << endl;
+d1217 5
+a1221 5
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# Number of particles " << nparticles_tot << endl;
+    outfile << "# " << endl;
+    outfile << "# Particle velocities " << endl;
+d1262 1
+a1262 1
+            << setw(20) << buf[j+3]*vfactor << endl;
+d1330 5
+a1334 5
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# Number of particles " << nparticles_tot << endl;
+    outfile << "# " << endl;
+    outfile << "# Particle forces " << endl;
+d1375 1
+a1375 1
+            << setw(20) << buf[j+3]*ffactor << endl;
+d1442 5
+a1446 5
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# Number of particles " << nparticles_tot << endl;
+    outfile << "# " << endl;
+    outfile << "# Particle positions " << endl;
+d1504 1
+a1504 1
+		<< setw(20) << buf[j+7] << endl;
+d1568 5
+a1572 5
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# Number of particles " << nparticles_tot << endl;
+    outfile << "# " << endl;
+    outfile << "# Particle displacements " << endl;
+d1622 1
+a1622 1
+	    << setw(20) << buf[j+4] << endl;
+@
+
+
+4.3
+log
+@Fixed glitch in header.
+@
+text
+@d82 1
+a82 8
+Output::Output(bool useDefaults):
+  dumpcfg_iter(0),
+  dumpxcfg_iter(0),
+  dumpvel_iter(0),
+  dumpfrc_iter(0),
+  dumpfile_root("outfile")
+  
+{
+d99 6
+a104 1
+}
+d119 2
+a120 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Entering Output::Setup()" << endl;
+a148 1
+      filename = glog.path_str + filename;
+d151 1
+a169 1
+      filename = glog.path_str + filename;
+d172 1
+a189 1
+      filename = glog.path_str + filename;
+d192 1
+a209 1
+      filename = glog.path_str + filename;
+d212 1
+a229 1
+      filename = glog.path_str + filename;
+d232 1
+d254 1
+a254 1
+      filename = glog.path_str + filename;
+a277 1
+      filename = glog.path_str + filename; 
+d280 1
+a297 1
+      filename = glog.path_str + filename; 
+d300 1
+d382 2
+a383 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Loop time: " << timetotal/nprocs << " on " << nprocs << 
+d389 3
+a391 3
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Breakdown of Average Loop Time by Task" << endl;  
+    glog.logfile << setw(20) << "  " << setw(10) << "Seconds" << 
+d393 2
+a394 2
+    glog.logfile << setw(20) << "Force Time";
+    glog.logfile << setw(10) << setprecision(4) << 
+d396 1
+a396 1
+    glog.logfile << setw(10) << setprecision(2) << 
+d399 2
+a400 2
+    glog.logfile << setw(20) << "Neigh Time";
+    glog.logfile << setw(10) << setprecision(4) << 
+d402 1
+a402 1
+    glog.logfile << setw(10) << setprecision(2) << 
+d405 2
+a406 2
+    glog.logfile << setw(20) << "Comm Time";
+    glog.logfile << setw(10) << setprecision(4) << 
+d408 1
+a408 1
+    glog.logfile << setw(10) << setprecision(2) << 
+d411 2
+a412 2
+    glog.logfile << setw(20) << "Exchange Time";
+    glog.logfile << setw(10) << setprecision(4) << 
+d414 1
+a414 1
+    glog.logfile << setw(10) << setprecision(2) << 
+d417 2
+a418 2
+    glog.logfile << setw(20) << "Revcomm Time";
+    glog.logfile << setw(10) << setprecision(4) << 
+d420 1
+a420 1
+    glog.logfile << setw(10) << setprecision(2) << 
+d423 2
+a424 2
+    glog.logfile << setw(20) << "Barrier Time";
+    glog.logfile << setw(10) << setprecision(4) << 
+d426 1
+a426 1
+    glog.logfile << setw(10) << setprecision(2) << 
+d429 2
+a430 2
+    glog.logfile << setw(20) << "Other Time";
+    glog.logfile << setw(10) << setprecision(4) << 
+d432 1
+a432 1
+    glog.logfile << setw(10) << setprecision(2) << 
+d435 2
+a436 2
+    glog.logfile << setw(20) << "Total Time";
+    glog.logfile << setw(10) << setprecision(4) << 
+d438 1
+a438 1
+    glog.logfile << setw(10) << setprecision(2) << 
+d443 2
+a444 2
+    glog.logfile << "\n\n\n";
+    glog.logfile << "Breakdown of Average Loop Time by Force Field" 
+d446 2
+a447 2
+    glog.logfile.setf(ios::left,ios::adjustfield);
+    glog.logfile << setw(20) << "Force Field" << setw(20) << 
+d449 1
+a449 1
+    glog.logfile.setf(ios::right,ios::adjustfield);
+d469 2
+a470 2
+      glog.logfile << setw(20) << str_tmp;
+      glog.logfile << setw(10) << setprecision(4) << 
+d474 1
+a474 1
+	glog.logfile << setw(10) << setprecision(4) << 
+d478 1
+a478 1
+      glog.logfile << endl;
+d506 3
+a508 3
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	if (thermo_skip == 1) glog.logfile << "\n\n\n";
+	glog.logfile << "--------------- Step" << 
+d510 2
+a511 2
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	glog.logfile <<  "CPU = " << 
+d532 4
+a535 4
+      glog.logfile << setprecision(10);
+      glog.logfile.setf(ios::showpoint);
+      glog.logfile.setf(ios::fixed,ios::floatfield);
+      glog.logfile.setf(ios::left,ios::adjustfield);
+d548 3
+a550 3
+	    glog.logfile << setw(20) << str_tmp << setw(2) << "= "; 
+	    glog.logfile.setf(ios::right,ios::adjustfield);
+	    glog.logfile <<  setw(20) << e_ff[0] << endl;
+d553 1
+a553 1
+	    glog.logfile << str_tmp << '\n' ; 
+d559 3
+a561 3
+	      glog.logfile << setw(20) << str_tmp << setw(2) << "= "; 
+	      glog.logfile.setf(ios::right,ios::adjustfield);
+	      glog.logfile <<  setw(20) << e_ff[ipiece] << endl;
+d568 18
+a585 18
+	glog.logfile.setf(ios::left,ios::adjustfield);
+	glog.logfile << setw(20) << "Potential Energy" << "= ";
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	glog.logfile << setw(20) << e_potential << endl;
+
+	glog.logfile.setf(ios::left,ios::adjustfield);
+	glog.logfile << setw(20) << "Kinetic Energy" << "= ";
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	glog.logfile << setw(20) << e_kinetic << endl;
+
+	glog.logfile.setf(ios::left,ios::adjustfield);
+	glog.logfile << setw(20) << "Extended Energy" << "= ";
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	glog.logfile << setw(20) << e_extended << endl;
+	glog.logfile.setf(ios::left,ios::adjustfield);
+	glog.logfile << setw(20) << "Total Energy" << "= ";
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	glog.logfile << setw(20) << 
+d587 1
+a587 1
+	glog.logfile.setf(ios::left,ios::adjustfield);
+d590 3
+a592 3
+	  glog.logfile << setw(20) << "Pressure" << "= ";
+	  glog.logfile.setf(ios::right,ios::adjustfield);
+	  glog.logfile << setw(20) << 
+d595 4
+a598 4
+	glog.logfile.setf(ios::left,ios::adjustfield);
+	glog.logfile << setw(20) << "Temperature" << "= ";
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	glog.logfile << setw(20) << temperature << endl;
+d601 4
+a604 4
+	  glog.logfile.setf(ios::left,ios::adjustfield);
+	  glog.logfile << setw(20) << "Total Particles" << "= ";
+	  glog.logfile.setf(ios::right,ios::adjustfield);
+	  glog.logfile << setw(20) << p->get_nparticles_tot() 
+d609 4
+a612 4
+	  glog.logfile.setf(ios::left,ios::adjustfield);
+	  glog.logfile << setw(20) << "Volume" << "= ";
+	  glog.logfile.setf(ios::right,ios::adjustfield);
+	  glog.logfile << setw(20) << volume << endl;
+d627 1
+a627 1
+	filename = glog.path_str + filename;
+a747 1
+    filename = glog.path_str + filename;
+d750 1
+a903 1
+    filename = glog.path_str + filename;
+d906 1
+a1049 1
+    filename = glog.path_str + filename;
+d1052 1
+a1206 1
+    filename = glog.path_str + filename;
+d1209 1
+a1319 1
+    filename = glog.path_str + filename;
+d1322 1
+a1431 1
+    filename = glog.path_str + filename;
+d1434 1
+a1557 1
+    filename = glog.path_str + filename;
+d1560 1
+d1651 1
+a1651 1
+    glog.logfile << endl;
+d1655 1
+a1655 1
+  glog.logfile << " " << density_freq << input_string_density_profile << endl;
+d1672 1
+a1672 1
+    glog.logfile << endl;
+d1676 1
+a1676 1
+  glog.logfile << " " << thermo_freq << endl;
+d1692 1
+a1692 1
+    glog.logfile << endl;
+d1697 1
+a1697 1
+  glog.logfile << " " << dumpfile_root << endl;
+d1710 1
+a1710 1
+    glog.logfile << endl;
+d1721 1
+a1721 1
+      glog.logfile << endl;
+d1727 1
+a1727 1
+     glog.logfile << " Will append output" << endl;
+d1729 1
+a1729 1
+     glog.logfile << " Will output to separate files" << endl;
+d1740 1
+a1740 1
+    glog.logfile << endl;
+d1744 1
+a1744 1
+  glog.logfile << " " << dump_freq << endl;
+d1761 1
+a1761 1
+    glog.logfile << " " << str_tmp << endl;
+d1764 1
+a1764 1
+    glog.logfile << " " << str_tmp << endl;
+d1769 1
+a1769 1
+    glog.logfile << " " << dumpvel_freq << endl;
+d1780 1
+a1780 1
+    glog.logfile << endl;
+d1792 1
+a1792 1
+    glog.logfile << endl;
+d1796 1
+a1796 1
+  glog.logfile << " " << dumpcfg_freq << endl;
+d1812 1
+a1812 1
+    glog.logfile << endl;
+d1816 1
+a1816 1
+  glog.logfile << " " << dumpxcfg_freq << endl;
+d1832 1
+a1832 1
+    glog.logfile << endl;
+d1836 1
+a1836 1
+  glog.logfile << " " << dumpforce_freq << endl;
+d1852 1
+a1852 1
+    glog.logfile << endl;
+d1856 1
+a1856 1
+  glog.logfile << " " << dumpref_freq << endl;
+d1872 1
+a1872 1
+    glog.logfile << endl;
+d1876 1
+a1876 1
+  glog.logfile << " " << dumpdisp_freq << endl;
+d1892 1
+a1892 1
+    glog.logfile << endl;
+d1896 1
+a1896 1
+  glog.logfile << " " << dumpalpha_freq << " " << dumpalpha_str << endl;
+d1928 1
+a1928 1
+    glog.logfile << endl;
+d1932 1
+a1932 1
+  glog.logfile << " " << restart_freq << endl;
+@
+
+
+4.3.6.1
+log
+@Bin Communication fixed
+@
+text
+@d712 1
+a712 1
+void Output::OutputParticles(const int& timestep, const ParticleList* p,
+d802 1
+a802 1
+    const Particle* p_pnt = p->get_particle_readonly(iparticle);
+@
+
+
+4.3.6.2
+log
+@Added EAM energy change calculation
+@
+text
+@a795 6
+  bool Ldumprhoconfig = true;
+
+  if (Ldumprhoconfig) {
+    iperatom += 1;
+  }
+
+a810 3
+    if (Ldumprhoconfig) {
+      buf[j+iperatom-1] = p_pnt->get_rho();
+    }
+a845 3
+	if (Ldumprhoconfig) {
+	  outfile << setw(20) << buf[j+iperatom-1];
+	}
+d1076 1
+a1076 1
+    outfile << "entry_count = 13" << endl;//3 pos,3 vel,3 disp,3 ref,1 energy,
+d1090 1
+a1090 1
+  iperatom = 15;
+@
+
+
+4.3.6.3
+log
+@Improved performance of MC moves and turned on periodic output
+@
+text
+@d490 1
+a490 2
+			 const bool& Lvolume, const bool& Lnparticles,
+			 const bool& Lforce) {
+d506 1
+a506 1
+    if (thermo_skip++ % thermo_freq == 0 || Lforce) {
+d623 1
+a623 1
+    if (dumpalpha_skip++ % dumpalpha_freq == 0 || Lforce) {
+d646 1
+a646 1
+    if (dump_skip++ % dump_freq == 0 || Lforce) {
+d653 1
+a653 1
+    if (dumpcfg_skip++ % dumpcfg_freq == 0 || Lforce) {
+d660 1
+a660 1
+    if (dumpxcfg_skip++ % dumpxcfg_freq == 0 || Lforce) {
+d668 1
+a668 1
+    if (dumpvel_skip++ % dumpvel_freq == 0 || Lforce) {
+d675 1
+a675 1
+    if (dumpforce_skip++ % dumpforce_freq == 0 || Lforce) {
+d682 1
+a682 1
+    if (dumpref_skip++ % dumpref_freq == 0 || Lforce) {
+d689 1
+a689 1
+    if (dumpdisp_skip++ % dumpdisp_freq == 0 || Lforce) {
+d696 1
+a696 1
+    if (density_skip++ % density_freq == 0 || Lforce) {
+d704 1
+a704 1
+    if (restart_skip++ % restart_freq == 0 || Lforce) {
+@
+
+
+4.2
+log
+@Recovered from corruption on April 12, 1005
+@
+text
+@d43 1
+a43 1
+//------------------------------------------------------------------------ 
+@
+
+
+4.1
+log
+@Create new branch.
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+d75 2
+a122 1
+    glog.logfile << setprecision(10);
+d330 2
+a331 2
+void Output::Finish(Comm* comm, const ForceFieldList* fflist,
+		    const ParticleList* p) {
+d336 1
+a336 1
+  WriteTimings(comm,fflist,p);
+d343 2
+a344 2
+void Output::WriteTimings(Comm* comm, const ForceFieldList* fflist,
+			  const ParticleList* p) {
+d386 2
+a387 1
+      " processors for " << nparticles_tot << " particles" << "\n";
+d392 1
+a392 1
+    glog.logfile << "Breakdown of Average Loop Time by Task" << "\n";  
+d394 1
+a394 1
+      setw(10) << " % " << "\n";
+d399 1
+a399 1
+      100.0*timeforce/timetotal << "\n";  
+d405 1
+a405 1
+      100.0*timeneigh/timetotal << "\n";  
+d411 1
+a411 1
+      100.0*timecomm/timetotal << "\n";  
+d417 1
+a417 1
+      100.0*timeexchange/timetotal << "\n";  
+d423 1
+a423 1
+      100.0*timerevcomm/timetotal << "\n";  
+d429 1
+a429 1
+      100.0*timebarrier/timetotal << "\n";  
+d435 1
+a435 1
+      100.0*timeother/timetotal << "\n";  
+d447 1
+a447 1
+		 << "\n";  
+d525 7
+a531 1
+      pressure = (v_potential+v_kinetic)/volume;
+d573 1
+a573 1
+	glog.logfile << setw(20) << e_potential << "\n";
+d578 1
+a578 1
+	glog.logfile << setw(20) << e_kinetic << "\n";
+d583 1
+a583 1
+	glog.logfile << setw(20) << e_extended << "\n";
+d588 1
+a588 1
+	  e_potential+e_kinetic+e_extended << "\n";
+d590 7
+a596 5
+	glog.logfile << setw(20) << "Pressure" << "= ";
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	glog.logfile << setw(20) << 
+	  pfactor*pressure << "\n";
+
+d638 1
+a638 1
+	outfile << "# Timestep " << timestep << "\n";
+d760 1
+a760 1
+    outfile << "# Timestep " << timestep << "\n";
+d765 1
+a765 1
+      outfile << "# Unit cell lattice vectors:" << "\n";
+d767 1
+a767 1
+	      << " " << uc_lva[2] << "\n";
+d769 1
+a769 1
+	      << " " << uc_lvb[2] << "\n";
+d771 2
+a772 2
+	      << " " << uc_lvc[2] << "\n";
+      outfile << "# " << "\n";
+d774 1
+a774 1
+      outfile << "# Unit cell origin:" << "\n";
+d777 1
+a777 1
+	      << uc_origin[2] << "\n";
+d781 1
+a781 1
+      outfile << "# Number of particles " << nparticles_tot << "\n";
+d846 1
+a846 1
+	outfile << "\n";
+a848 1
+      outfile << flush;
+d989 1
+a989 1
+	  outfile << " 0 0 0 " << "\n";
+a992 1
+      outfile << flush;
+a1645 14
+int Output::nint(const double& r) const {
+  int i;
+
+  i = 0;
+
+  if (r>0.0) {
+    i = static_cast<int>(r+0.5);
+  } else if (r<0.0) {
+    i = static_cast<int>(r-0.5);
+  }
+
+  return i;
+}
+
+@
+
+
+4.0
+log
+@This is version 4.0
+@
+text
+@d13 2
+a14 2
+//    Timestamp: April 1, 2005
+//    Version: 4.0
+d16 1
+a16 1
+//    Primary Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2005) Sandia National Laboratories
+//
+//    Sandia National Laboratories is a multiprogram laboratory 
+//    operated by Sandia Corporation, a Lockheed Martin company,
+a26 16
+//    Under the terms of Contract DE-AC04-94AL85000 with Sandia 
+//    Corporation, the U.S. Government retains certain rights in 
+//    this software.
+//
+//    This software is distributed under the terms of the GNU Public 
+//    License (GPL). For a copy of the GPL see the file 
+//    Grasp/Documentation/LICENSE or visit the GNU website at 
+//    http://www.gnu.org/copyleft/gpl.html. Briefly, the GPL 
+//    entitles you to use the software, modify it and redistribute it. 
+//    The main thing you can not do is apply any other licensing 
+//    terms to the software. Also, if any part of this sofware is added 
+//    to other software, then that software must also be released under 
+//    the GPL.
+//
+//    This software comes with no warranty of any kind. 
+//
+a58 2
+#include "machine.h"
+
+d105 1
+d313 2
+a314 2
+void Output::Finish(const int& nsteps, const ForceFieldList* fflist,
+		    const ParticleList* p, Comm* comm) {
+d319 1
+a319 1
+  WriteTimings(nsteps,fflist,p,comm);
+d326 2
+a327 2
+void Output::WriteTimings(const int& nsteps, const ForceFieldList* fflist,
+			  const ParticleList* p, Comm* comm) {
+d369 1
+a369 2
+      " processors for " << nparticles_tot << " particles for " << 
+      nsteps << " steps" << endl;
+d374 1
+a374 1
+    glog.logfile << "Breakdown of Average Loop Time by Task" << endl;  
+d376 1
+a376 1
+      setw(10) << " % " << endl;
+d381 1
+a381 1
+      100.0*timeforce/timetotal << endl;  
+d387 1
+a387 1
+      100.0*timeneigh/timetotal << endl;  
+d393 1
+a393 1
+      100.0*timecomm/timetotal << endl;  
+d399 1
+a399 1
+      100.0*timeexchange/timetotal << endl;  
+d405 1
+a405 1
+      100.0*timerevcomm/timetotal << endl;  
+d411 1
+a411 1
+      100.0*timebarrier/timetotal << endl;  
+d417 1
+a417 1
+      100.0*timeother/timetotal << endl;  
+d429 1
+a429 1
+		 << endl;  
+d507 1
+a507 7
+      // If virial turned off, turn off pressure
+      if (v_potential == double_nan) {
+	pressure = double_nan;
+      } else {
+	pressure = (v_potential+v_kinetic)/volume;
+      }
+
+d549 1
+a549 1
+	glog.logfile << setw(20) << e_potential << endl;
+d554 1
+a554 1
+	glog.logfile << setw(20) << e_kinetic << endl;
+d559 1
+a559 1
+	glog.logfile << setw(20) << e_extended << endl;
+d564 1
+a564 1
+	  e_potential+e_kinetic+e_extended << endl;
+d566 5
+a570 7
+	// If virial turned off, do not report pressure
+	if (v_potential != double_nan) {
+	  glog.logfile << setw(20) << "Pressure" << "= ";
+	  glog.logfile.setf(ios::right,ios::adjustfield);
+	  glog.logfile << setw(20) << 
+	    pfactor*pressure << endl;
+	}
+d612 1
+a612 1
+	outfile << "# Timestep " << timestep << endl;
+d734 1
+a734 1
+    outfile << "# Timestep " << timestep << endl;
+d739 1
+a739 1
+      outfile << "# Unit cell lattice vectors:" << endl;
+d741 1
+a741 1
+	      << " " << uc_lva[2] << endl;
+d743 1
+a743 1
+	      << " " << uc_lvb[2] << endl;
+d745 2
+a746 2
+	      << " " << uc_lvc[2] << endl;
+      outfile << "# " << endl;
+d748 1
+a748 1
+      outfile << "# Unit cell origin:" << endl;
+d751 1
+a751 1
+	      << uc_origin[2] << endl;
+d755 1
+a755 1
+      outfile << "# Number of particles " << nparticles_tot << endl;
+d820 1
+a820 1
+	outfile << endl;
+d823 1
+d964 1
+a964 1
+	  outfile << " 0 0 0 " << endl;
+d968 1
+d1622 14
+@
+
+
+3.10
+log
+@Merged REAX version with main version
+@
+text
+@d16 1
+a16 1
+//    Author: Aidan P. Thompson
+d20 4
+a23 4
+//    Copyright (2004) Sandia National Laboratories
+//   
+//    Sandia is a multiprogram laboratory operated by 
+//    Sandia Corporation, a Lockheed Martin company,
+d27 16
+@
+
+
+3.9
+log
+@Modified the timing output slightly
+@
+text
+@d13 2
+a14 2
+//    Timestamp: September 22, 2004
+//    Version: 3.0
+d59 2
+d509 7
+a515 1
+      pressure = (v_potential+v_kinetic)/volume;
+a572 1
+
+d574 7
+a580 5
+	glog.logfile << setw(20) << "Pressure" << "= ";
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	glog.logfile << setw(20) << 
+	  pfactor*pressure << endl;
+
+a1940 14
+int Output::nint(const double& r) const {
+  int i;
+
+  i = 0;
+
+  if (r>0.0) {
+    i = static_cast<int>(r+0.5);
+  } else if (r<0.0) {
+    i = static_cast<int>(r-0.5);
+  }
+
+  return i;
+}
+
+@
+
+
+3.8
+log
+@get rid of more endl
+@
+text
+@a104 1
+    glog.logfile << setprecision(10);
+d312 2
+a313 2
+void Output::Finish(Comm* comm, const ForceFieldList* fflist,
+		    const ParticleList* p) {
+d318 1
+a318 1
+  WriteTimings(comm,fflist,p);
+d325 2
+a326 2
+void Output::WriteTimings(Comm* comm, const ForceFieldList* fflist,
+			  const ParticleList* p) {
+d368 2
+a369 1
+      " processors for " << nparticles_tot << " particles" << "\n";
+d374 1
+a374 1
+    glog.logfile << "Breakdown of Average Loop Time by Task" << "\n";  
+d376 1
+a376 1
+      setw(10) << " % " << "\n";
+d381 1
+a381 1
+      100.0*timeforce/timetotal << "\n";  
+d387 1
+a387 1
+      100.0*timeneigh/timetotal << "\n";  
+d393 1
+a393 1
+      100.0*timecomm/timetotal << "\n";  
+d399 1
+a399 1
+      100.0*timeexchange/timetotal << "\n";  
+d405 1
+a405 1
+      100.0*timerevcomm/timetotal << "\n";  
+d411 1
+a411 1
+      100.0*timebarrier/timetotal << "\n";  
+d417 1
+a417 1
+      100.0*timeother/timetotal << "\n";  
+d429 1
+a429 1
+		 << "\n";  
+d549 1
+a549 1
+	glog.logfile << setw(20) << e_potential << "\n";
+d554 1
+a554 1
+	glog.logfile << setw(20) << e_kinetic << "\n";
+d559 1
+a559 1
+	glog.logfile << setw(20) << e_extended << "\n";
+d564 2
+a565 1
+	  e_potential+e_kinetic+e_extended << "\n";
+d570 1
+a570 1
+	  pfactor*pressure << "\n";
+d613 1
+a613 1
+	outfile << "# Timestep " << timestep << "\n";
+d735 1
+a735 1
+    outfile << "# Timestep " << timestep << "\n";
+d740 1
+a740 1
+      outfile << "# Unit cell lattice vectors:" << "\n";
+d742 1
+a742 1
+	      << " " << uc_lva[2] << "\n";
+d744 1
+a744 1
+	      << " " << uc_lvb[2] << "\n";
+d746 2
+a747 2
+	      << " " << uc_lvc[2] << "\n";
+      outfile << "# " << "\n";
+d749 1
+a749 1
+      outfile << "# Unit cell origin:" << "\n";
+d752 1
+a752 1
+	      << uc_origin[2] << "\n";
+d756 1
+a756 1
+      outfile << "# Number of particles " << nparticles_tot << "\n";
+d821 1
+a821 1
+	outfile << "\n";
+a823 1
+      outfile << flush;
+d964 1
+a964 1
+	  outfile << " 0 0 0 " << "\n";
+a967 1
+      outfile << flush;
+a1620 14
+int Output::nint(const double& r) const {
+  int i;
+
+  i = 0;
+
+  if (r>0.0) {
+    i = static_cast<int>(r+0.5);
+  } else if (r<0.0) {
+    i = static_cast<int>(r-0.5);
+  }
+
+  return i;
+}
+
+d1932 14
+@
+
+
+3.7
+log
+@change some endl to "\n" to avoid flushing the buffer
+@
+text
+@d964 1
+a964 1
+	  outfile << " 0 0 0 " << endl;
+d968 1
+@
+
+
+3.6
+log
+@Fixed two bugs in nph_anisotropic integration scheme that
+were causing the wrong dynamics. The scheme now conserves
+the pseudohamiltonian well.
+@
+text
+@d369 1
+a369 1
+      " processors for " << nparticles_tot << " particles" << endl;
+d374 1
+a374 1
+    glog.logfile << "Breakdown of Average Loop Time by Task" << endl;  
+d376 1
+a376 1
+      setw(10) << " % " << endl;
+d381 1
+a381 1
+      100.0*timeforce/timetotal << endl;  
+d387 1
+a387 1
+      100.0*timeneigh/timetotal << endl;  
+d393 1
+a393 1
+      100.0*timecomm/timetotal << endl;  
+d399 1
+a399 1
+      100.0*timeexchange/timetotal << endl;  
+d405 1
+a405 1
+      100.0*timerevcomm/timetotal << endl;  
+d411 1
+a411 1
+      100.0*timebarrier/timetotal << endl;  
+d417 1
+a417 1
+      100.0*timeother/timetotal << endl;  
+d429 1
+a429 1
+		 << endl;  
+d549 1
+a549 1
+	glog.logfile << setw(20) << e_potential << endl;
+d554 1
+a554 1
+	glog.logfile << setw(20) << e_kinetic << endl;
+d559 1
+a559 1
+	glog.logfile << setw(20) << e_extended << endl;
+d564 1
+a564 1
+	  e_potential+e_kinetic+e_extended << endl;
+d569 1
+a569 1
+	  pfactor*pressure << endl;
+d612 1
+a612 1
+	outfile << "# Timestep " << timestep << endl;
+d734 1
+a734 1
+    outfile << "# Timestep " << timestep << endl;
+d739 1
+a739 1
+      outfile << "# Unit cell lattice vectors:" << endl;
+d741 1
+a741 1
+	      << " " << uc_lva[2] << endl;
+d743 1
+a743 1
+	      << " " << uc_lvb[2] << endl;
+d745 2
+a746 2
+	      << " " << uc_lvc[2] << endl;
+      outfile << "# " << endl;
+d748 1
+a748 1
+      outfile << "# Unit cell origin:" << endl;
+d751 1
+a751 1
+	      << uc_origin[2] << endl;
+d755 1
+a755 1
+      outfile << "# Number of particles " << nparticles_tot << endl;
+d820 1
+a820 1
+	outfile << endl;
+d823 1
+@
+
+
+3.6.4.1
+log
+@Fusion of ALex and Sylvie's versions.
+Implementation of bins.
+Add energy change.
+
+saubry (04-06-05)
+@
+text
+@d369 1
+a369 1
+      " processors for " << nparticles_tot << " particles" << "\n";
+d374 1
+a374 1
+    glog.logfile << "Breakdown of Average Loop Time by Task" << "\n";  
+d376 1
+a376 1
+      setw(10) << " % " << "\n";
+d381 1
+a381 1
+      100.0*timeforce/timetotal << "\n";  
+d387 1
+a387 1
+      100.0*timeneigh/timetotal << "\n";  
+d393 1
+a393 1
+      100.0*timecomm/timetotal << "\n";  
+d399 1
+a399 1
+      100.0*timeexchange/timetotal << "\n";  
+d405 1
+a405 1
+      100.0*timerevcomm/timetotal << "\n";  
+d411 1
+a411 1
+      100.0*timebarrier/timetotal << "\n";  
+d417 1
+a417 1
+      100.0*timeother/timetotal << "\n";  
+d429 1
+a429 1
+		 << "\n";  
+d549 1
+a549 1
+	glog.logfile << setw(20) << e_potential << "\n";
+d554 1
+a554 1
+	glog.logfile << setw(20) << e_kinetic << "\n";
+d559 1
+a559 1
+	glog.logfile << setw(20) << e_extended << "\n";
+d564 1
+a564 1
+	  e_potential+e_kinetic+e_extended << "\n";
+d569 1
+a569 1
+	  pfactor*pressure << "\n";
+d612 1
+a612 1
+	outfile << "# Timestep " << timestep << "\n";
+d734 1
+a734 1
+    outfile << "# Timestep " << timestep << "\n";
+d739 1
+a739 1
+      outfile << "# Unit cell lattice vectors:" << "\n";
+d741 1
+a741 1
+	      << " " << uc_lva[2] << "\n";
+d743 1
+a743 1
+	      << " " << uc_lvb[2] << "\n";
+d745 2
+a746 2
+	      << " " << uc_lvc[2] << "\n";
+      outfile << "# " << "\n";
+d748 1
+a748 1
+      outfile << "# Unit cell origin:" << "\n";
+d751 1
+a751 1
+	      << uc_origin[2] << "\n";
+d755 1
+a755 1
+      outfile << "# Number of particles " << nparticles_tot << "\n";
+d820 1
+a820 1
+	outfile << "\n";
+a822 1
+      outfile << flush;
+d963 1
+a963 1
+	  outfile << " 0 0 0 " << "\n";
+a966 1
+      outfile << flush;
+@
+
+
+3.5
+log
+@Fixed uninitialized value in output.cpp and switched CC to c++ in STUBS/Makefile
+@
+text
+@d105 1
+@
+
+
+3.5.2.1
+log
+@Completed prototype of parallel ReaxFF in GRASP, including charge equilibration
+@
+text
+@d1619 14
+@
+
+
+3.5.2.2
+log
+@Added energies to Reax code, added kcal unit style and added
+the example testrdx to Makefile.testing
+@
+text
+@d564 5
+a568 6
+
+	// glog.logfile.setf(ios::left,ios::adjustfield);
+	// glog.logfile << setw(20) << "Pressure" << "= ";
+	// glog.logfile.setf(ios::right,ios::adjustfield);
+	// glog.logfile << setw(20) << 
+	//   pfactor*pressure << endl;
+@
+
+
+3.4
+log
+@Added a ForceTwobody exp6 example (BKS SiO2) to the
+test suite.
+@
+text
+@d85 1
+@
+
+
+3.3
+log
+@Redid Force_Twobody class to better handle many different variants.
+Added in new for of exp6 that is required for BKS force field.
+@
+text
+@d1367 1
+@
+
+
+3.2
+log
+@Merging branch cjkimme_version with the trunk. testh and testi are kind
+of questionable, but everything else looks ok.
+@
+text
+@d105 3
+a107 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entering Output::Setup()" << endl;
+#endif
+d313 3
+a315 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::Finish" << endl;
+#endif
+d699 4
+a702 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::OutputParticles" << endl;
+#endif
+d831 3
+a833 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputParticles" << endl;
+#endif
+d853 4
+a856 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::OutputCfg" << endl;
+#endif
+d975 4
+a978 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputCfg" << endl;
+#endif
+d998 5
+a1002 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::OutputExtendedCfg" << endl;
+#endif
+d1140 5
+a1144 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputExtenededCfg" << endl;
+#endif
+d1158 5
+a1162 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::OutputVelocities" << endl;
+#endif
+d1251 5
+a1255 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputVelocities" << endl;
+#endif
+d1271 5
+a1275 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::OutputForces" << endl;
+#endif
+d1364 3
+a1366 1
+  comm->get_nodefile() << "Exited Output::OutputForces" << endl;
+d1382 4
+a1385 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::OutputParticles" << endl;
+#endif
+d1490 5
+a1494 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputParticles" << endl;
+#endif
+d1508 5
+a1512 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::Displacements" << endl;
+#endif
+d1610 5
+a1614 3
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputDisplacements" << endl;
+#endif
+@
+
+
+3.1
+log
+@Added ability to read velocities from the config.in file
+and write velocities to the config.out and cfg.out files.
+@
+text
+@d62 10
+a71 1
+Output::Output() {
+d76 3
+d85 2
+d95 1
+a95 1
+void Output::Setup(const Box* b, Comm* comm) {
+d105 3
+d109 5
+a113 1
+  comm->get_nodefile() << "Entering Output::Setup()" << endl;
+d128 4
+a131 1
+      filename = "config.out";
+d133 2
+d149 4
+a152 1
+      filename = "vel.out";
+d154 2
+d169 44
+a212 1
+      filename = "force.out";
+d214 2
+d224 23
+d257 27
+a283 2
+      filename = "cfg.out";
+      filename = glog.path_str + filename;
+d313 1
+d315 1
+d594 23
+d630 9
+a638 1
+  
+d652 14
+d699 1
+a699 1
+
+d701 1
+d712 9
+a720 2
+    openflag = std::ios::app;
+    filename = "config.out";
+d722 2
+d830 1
+d832 1
+d852 1
+a852 1
+
+d854 1
+d867 9
+a875 2
+    openflag = std::ios::app;
+    filename = "cfg.out";
+d877 2
+d973 1
+d975 163
+d1151 1
+a1151 1
+
+d1153 1
+a1153 1
+
+d1163 9
+a1171 2
+    openflag = std::ios::app;
+    filename = "vel.out";
+d1173 2
+d1242 1
+d1244 1
+d1260 1
+d1262 1
+a1262 1
+
+d1272 9
+a1280 2
+    openflag = std::ios::app;
+    filename = "force.out";
+d1282 2
+d1354 241
+d1651 48
+d1771 20
+d1811 76
+d1919 1
+@
+
+
+3.0
+log
+@Created a new version number, GRASP 3.0
+@
+text
+@d71 2
+d172 13
+d582 4
+d598 3
+d630 7
+a636 1
+		<< setw(20) << buf[j+6] << endl;
+d668 1
+a668 1
+  double rtmp[3];
+d711 1
+a711 1
+  // iperatom = number of datums per atom = 7
+d714 4
+d728 3
+d735 1
+a735 1
+  //c  all other nodes wait for ping, send buffer to node 0
+d759 9
+a767 2
+		<< setw(20) << buf[j+3] 
+	        << " 0 0 0 " << endl;
+d1052 2
+a1053 2
+void Output::input_dump_velocities(const string& buf)
+{
+d1055 21
+a1075 1
+  buf_in >> dumpvel_freq;
+a1081 8
+  glog.logfile << " " << dumpvel_freq << endl;
+
+  if (dumpvel_freq <= 0) {
+    glog.error("Output::input_dump_velocities:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpvel = true;
+@
+
+
+2.24
+log
+@Did some memory clean up, to satisfy valgrind
+@
+text
+@d13 2
+a14 1
+//    Timestamp: July 26, 2004
+@
+
+
+2.23
+log
+@Finalized addition of RUNDIR variable to fix problem on liberty
+and added in the Barrier timing category to avoid spurious
+attributions of waiting times to Other.
+@
+text
+@d69 7
+d146 1
+@
+
+
+2.22
+log
+@Updated header
+@
+text
+@d181 1
+d198 3
+a200 2
+  tmplocal[5] = glog.timetotal;
+  MPI_Allreduce(&tmplocal,&tmpsum,6,MPI_DOUBLE,MPI_SUM,comm->get_world());
+d206 2
+a207 1
+  timetotal = tmpsum[5];
+d209 1
+a209 1
+    -timeforce-timeneigh-timecomm-timeexchange-timerevcomm;
+d254 6
+@
+
+
+2.21
+log
+@Added anisotropic style to pressure control,
+and included in Tersoff example testp.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 1 March 2004
+@
+
+
+2.20
+log
+@Added NPT ensemble
+@
+text
+@a398 1
+
+@
+
+
+2.19
+log
+@Added NPT ensemble. Noy sure if it is working
+yet, and need to update documentation.
+@
+text
+@d71 1
+a71 1
+void Output::Setup(Stepper* stepper, const Box* b, Comm* comm) {
+a404 1
+
+@
+
+
+2.18
+log
+@Added force_ewald.
+Moved eam data from Particle into Force_Eam.
+Added some fast version of LJ forces.
+Eliminated redundant reneighboring on first timestep.
+This caused epsilon changes in some forces.
+@
+text
+@d71 1
+a71 2
+void Output::Setup(Stepper* stepper, const Box* b,
+		   Comm* comm) {
+d86 1
+a104 16
+      double uc_lva[3],uc_lvb[3],uc_lvc[3],uc_origin[3];
+      b->get_lv(uc_lva,uc_lvb,uc_lvc);
+      outfile << "# Unit cell lattice vectors:" << endl;
+      outfile << "# " << uc_lva[0] << " " << uc_lva[1] 
+	      << " " << uc_lva[2] << endl;
+      outfile << "# " << uc_lvb[0] << " " << uc_lvb[1] 
+	      << " " << uc_lvb[2] << endl;
+      outfile << "# " << uc_lvc[0] << " " << uc_lvc[1] 
+	      << " " << uc_lvc[2] << endl;
+      outfile << "# " << endl;
+      b->get_o_user(uc_origin);
+      outfile << "# Unit cell origin:" << endl;
+      outfile << "# " << uc_origin[0] << " " 
+	      << uc_origin[1] << " " 
+	      << uc_origin[2] << endl;
+      outfile << "# " << endl;
+d310 4
+a313 3
+			 const FixList* fix_list, const double& e_extended) {
+  double e_potential;
+  double e_kinetic,temperature;
+d321 1
+d342 1
+d344 3
+d389 1
+d394 1
+d399 1
+d405 7
+d416 16
+a431 5
+	glog.logfile.setf(ios::left,ios::adjustfield);
+	glog.logfile << setw(20) << "Total Particles" << "= ";
+	glog.logfile.setf(ios::right,ios::adjustfield);
+	glog.logfile << setw(20) << p->get_nparticles_tot() 
+		     << endl;
+d440 1
+a440 1
+      OutputParticles(timestep,p,t,comm);
+d483 3
+a485 1
+			     const ParticleTypeList* t, Comm* comm) {
+d521 22
+a542 2
+    outfile << "# Number of particles " << nparticles_tot << endl;
+    outfile << "# " << endl;
+@
+
+
+2.17
+log
+@Various
+@
+text
+@d285 4
+a288 2
+    glog.logfile << setw(20) << "  " << setw(10) << "Force" << 
+      setw(10) << "Neighbor" << endl;
+d310 8
+a317 3
+	ftimeforce/nprocs;
+      glog.logfile << setw(10) << setprecision(4) << 
+	ftimeneigh/nprocs << endl;
+@
+
+
+2.16
+log
+@Fixed nameclash for stringstream class
+@
+text
+@d13 1
+a13 1
+//    Timestamp: 8 January 2004
+d68 1
+d172 5
+d455 7
+d544 1
+a544 1
+	outfile << setw(8) << p->get_usertag(nint(buf[j])) 
+d547 1
+a547 1
+		<< setw(8) << " " << t->get_id(nint(buf[j+1])) 
+d1012 19
+@
+
+
+2.15
+log
+@Added Ewald sum example
+@
+text
+@d881 1
+a881 1
+  stringstream buf_in(buf);
+d903 1
+a903 1
+  stringstream buf_in(buf);
+d923 1
+a923 1
+  stringstream buf_in(buf);
+d943 1
+a943 1
+  stringstream buf_in(buf);
+d963 1
+a963 1
+  stringstream buf_in(buf);
+d983 1
+a983 1
+  stringstream buf_in(buf);
+@
+
+
+2.14
+log
+@The primary change is the addition of the embedded atom method (EAM)
+This is contained in the class Force_Eam. An example is contained
+in the directory Testing/testl.
+
+I also tweaked various parts of the code:
+-Added epsilon shift to unit cell origin to avoid
+pathologies associated with origin at zero
+-Changed ndof from 3n to 3n-3
+-Implemented localptr usertag arrays in class ParticleList
+This enables user to pick whatever integer tags they want for
+atoms, but the code generates internal tags 0,1,....nparticles_tot-1.
+-Random velocities are now generated for all nparticles_tot particles,
+but only assigned to local particles, so that velocity assignments
+are independent of number of processors used.
+-I got rid of the dreaded COSP neighboring scheme
+-I added an example of Nose-Hoover thermostat in testm
+-I added a warning for when force field type has no particle type match.
+@
+text
+@d29 3
+a320 1
+  vector<double> tmp;
+d356 1
+a356 4
+	tmp = ff->get_energy();
+	e_ff.resize(npieces);
+	MPI_Allreduce(&tmp[0],&e_ff[0],npieces,MPI_DOUBLE,
+		      MPI_SUM,comm->get_world());
+a492 7
+  //This section of code was translated from f90 LAMMPS 2001
+  //c LAMMPS 2001 - Molecular Dynamics Simulator, Copyright 1998-2001
+  //c Authored by Steve Plimpton
+  //c   (505) 845-7873, sjplimp@@cs.sandia.gov
+  //c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM 87185-1111
+  //c See the README file for more information
+
+a611 7
+  //This section of code was translated from f90 LAMMPS 2001
+  //c LAMMPS 2001 - Molecular Dynamics Simulator, Copyright 1998-2001
+  //c Authored by Steve Plimpton
+  //c   (505) 845-7873, sjplimp@@cs.sandia.gov
+  //c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM 87185-1111
+  //c See the README file for more information
+
+a711 7
+  //This section of code was translated from f90 LAMMPS 2001
+  //c LAMMPS 2001 - Molecular Dynamics Simulator, Copyright 1998-2001
+  //c Authored by Steve Plimpton
+  //c   (505) 845-7873, sjplimp@@cs.sandia.gov
+  //c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM 87185-1111
+  //c See the README file for more information
+
+a808 7
+  //This section of code was translated from f90 LAMMPS 2001
+  //c LAMMPS 2001 - Molecular Dynamics Simulator, Copyright 1998-2001
+  //c Authored by Steve Plimpton
+  //c   (505) 845-7873, sjplimp@@cs.sandia.gov
+  //c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM 87185-1111
+  //c See the README file for more information
+
+d1001 13
+@
+
+
+2.14.2.1
+log
+@Adding read in of initial configuration from arbitrary filename with "read atoms
+<filename>". Adding read in of initial velocities with "read velocities <filename>"
+command and "dumpfile root <prefix>" command to change the default prefix for output
+files. #ifdefs are around output to nodefiles.
+@
+text
+@d58 1
+a58 6
+Output::Output():
+  dumpcfg_iter(0),
+  dumpvel_iter(0),
+  dumpfrc_iter(0),
+  dumpfile_root("outfile")
+{
+d78 1
+a78 1
+#ifdef USE_NODEFILES
+a79 1
+#endif
+d93 1
+a93 1
+      filename = dumpfile_root + ".cfg";
+d125 1
+a125 1
+      filename = dumpfile_root + ".vel";
+d140 1
+a140 1
+      filename = dumpfile_root + ".frc";
+d159 1
+a159 1
+      filename = dumpfile_root + "cfg";
+a171 1
+#ifdef USE_NODEFILES
+a172 1
+#endif
+d465 1
+a465 1
+#ifdef USE_NODEFILES
+a466 1
+#endif
+d478 2
+a479 3
+    filename = dumpfile_root + ".cfg";
+    string appendNumber;
+    filename = glog.path_str + filename + toFileNumber(dumpcfg_iter,appendNumber);
+a559 1
+#ifdef USE_NODEFILES
+a560 1
+#endif
+d580 1
+a580 1
+#ifdef USE_NODEFILES
+a581 1
+#endif
+d595 2
+a596 3
+    filename = dumpfile_root + "cfg";
+    string appendNumber;
+    filename = glog.path_str + filename + toFileNumber(dumpcfg_iter, appendNumber);
+a683 1
+#ifdef USE_NODEFILES
+a684 1
+#endif
+d698 1
+a698 1
+#ifdef USE_NODEFILES
+d700 1
+a700 1
+#endif
+d711 2
+a712 3
+    filename = dumpfile_root + "vel";
+    string appendNumber;
+    filename = glog.path_str + filename + toFileNumber(dumpvel_iter, appendNumber);
+a786 1
+#ifdef USE_NODEFILES
+a787 1
+#endif
+a802 1
+#ifdef USE_NODEFILES
+d804 1
+a804 1
+#endif
+d815 2
+a816 3
+    filename = dumpfile_root + "frc";
+    string appendNumber;
+    filename = glog.path_str + filename + toFileNumber(dumpfrc_iter, appendNumber);
+a949 15
+void Output::input_dumpfile_root(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> dumpfile_root;   
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Output::input_dumpfile_root:\n"
+               "Read error in input file");
+  }
+  
+  glog.logfile << " " << dumpfile_root << endl;
+
+}
+
+a1029 15
+/* private */
+/* generates number to append to output file. Increments iter */
+string& Output::toFileNumber(int& iter, string& appendString)
+{
+  ostringstream ost;
+  ost.fill('0');
+  ost.width(5);
+  
+  //double fAppend(double(iter)/10000.);
+  //iter++;
+  ost << iter++;
+  appendString = "." + ost.str();
+
+  return appendString;
+}
+@
+
+
+2.14.2.2
+log
+@Keeping track of displacements for each particle.
+@
+text
+@a57 2
+#define FILENUMBER_WIDTH 5
+
+a62 1
+  
+a67 1
+  Ldumpdisp = false; 
+a69 1
+  appendOutput = false;
+a86 6
+  /* handle filename extensions */
+  string appendix;
+  int appendNum = 0; 
+  if (!appendOutput)
+    toFileNumber(appendNum, appendix);
+
+a100 2
+      if (!appendOutput)
+	filename = filename + appendix;
+a132 2
+      if (!appendOutput)
+        filename = filename + appendix;
+a147 19
+      if (!appendOutput)
+	filename = filename + appendix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+    }
+  }
+
+   if (Ldumpdisp) {
+    dumpdisp_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      filename = dumpfile_root + ".dis";
+      filename = glog.path_str + filename;
+      if (!appendOutput)
+        filename = filename + appendix;
+d166 1
+a166 3
+      filename = glog.path_str + filename; 
+      if (!appendOutput)
+        filename = filename + appendix;
+a448 7
+
+  if (Ldumpdisp) {
+    if (dumpdisp_skip++ % dumpdisp_freq == 0) {
+      dumpdisp_skip = 1;
+      OutputDisplacements(timestep,p,comm);
+    }
+  }
+d486 1
+a486 4
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+d489 1
+a489 3
+    filename = glog.path_str + filename;
+    if (!appendOutput) 
+      filename = filename + toFileNumber(dumpcfg_iter,appendNumber);
+d607 1
+a607 4
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+d610 1
+a610 3
+    filename = glog.path_str + filename;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpcfg_iter, appendNumber);
+d726 2
+a727 5
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    filename = dumpfile_root + ".vel";
+d729 1
+a729 3
+    filename = glog.path_str + filename;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpvel_iter, appendNumber);
+d834 1
+a834 4
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+d837 1
+a837 3
+    filename = glog.path_str + filename;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpfrc_iter, appendNumber);
+a914 111
+void Output::OutputDisplacements(const int& timestep, ParticleList* p, 
+			      Comm* comm) {
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::Displacements" << endl;
+#endif
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    filename = dumpfile_root + ".dis";
+    string appendNumber;
+    filename = glog.path_str + filename;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpdisp_iter, appendNumber);
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputDisplacements:\n"
+		 "Failed to open "+filename);
+    }
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# Number of particles " << nparticles_tot << endl;
+    outfile << "# " << endl;
+    outfile << "# Particle displacements " << endl;
+  }
+
+  //This section of code was translated from f90 LAMMPS 2001
+  //c LAMMPS 2001 - Molecular Dynamics Simulator, Copyright 1998-2001
+  //c Authored by Steve Plimpton
+  //c   (505) 845-7873, sjplimp@@cs.sandia.gov
+  //c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM 87185-1111
+  //c See the README file for more information
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 4
+
+  iperatom = 4;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_tag(); 
+    p_pnt->get_u(&buf[j+1]);
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	outfile << setw(8) << p->get_usertag(nint(buf[j])) 
+	    << setw(20) << buf[j+1] 
+            << setw(20) << buf[j+2]
+            << setw(20) << buf[j+3] << endl;
+	j+=iperatom;
+      }
+    }  
+  } else {
+
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+    
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputDisplacements" << endl;
+#endif
+}
+
+a985 31
+void Output::input_dump_mode(const string& buf)
+{
+  stringstream buf_in(buf);
+  string strtmp;
+  buf_in >> strtmp;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Output::input_dump_mode:\n"
+		"Read error in input file");
+  }
+
+  if (strtmp == "app")
+	appendOutput = true;
+  else
+    if (strtmp == "trunc")
+	appendOutput = false;
+    else {
+      glog.logfile << endl;
+      glog.error("Output::input_dump_mode:\n"
+		 "invalid dump mode");
+    }
+
+  if (appendOutput)
+     glog.logfile << " Will append output" << endl;
+  else
+     glog.logfile << " Will output to separate files" << endl;
+
+}
+         
+
+a1065 20
+void Output::input_dump_displacements(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> dumpdisp_freq;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Output::input_dump_displacements:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << dumpdisp_freq << endl;
+
+  if (dumpdisp_freq <= 0) {
+    glog.error("Output::input_dump_displacements:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpdisp = true;
+}
+
+d1072 1
+a1072 1
+  ost.width(FILENUMBER_WIDTH);
+@
+
+
+2.14.2.3
+log
+@Committing changes to branch cjkimme_version before trying to merge changes
+to the main branch onto branch cjkimme_version. Adding classes
+for conjugate_gradient minimization along with two derived classes. One
+is interfacial_minimizer which minimizes with respect to rigid translations
+of groups of atoms. The other is grain_boundary_minimizer which minimizes
+the zero temperature energy of a grain boundary allowing interlayer relaxation normal to the gb.
+@
+text
+@a61 1
+  dumpxcfg_iter(0),
+a70 2
+  Ldumpxcfg = false;
+  Ldumpref = false;
+d77 1
+a77 1
+void Output::Setup(Stepper* stepper, const Box* b, const ParticleTypeList* t,
+d173 1
+a173 18
+  if (Ldumpref) {
+    dumpref_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      filename = dumpfile_root + ".ref";
+      filename = glog.path_str + filename;
+      if (!appendOutput)
+        filename = filename + appendix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+    }
+  }
+
+  if (Ldumpdisp) {
+a189 20
+  if (Ldumpalpha) {
+    if (!(t->find_id(dumpalpha_str,dumpalpha_type))) 
+      glog.abort("Output::Setup"
+		 "Cannot find type "+dumpalpha_str);
+
+    dumpalpha_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      filename = dumpfile_root + ".alf";
+      filename = glog.path_str + filename;
+      ofstream outfile(filename.c_str(),openflag);
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+
+		   "Failed to open"+filename);
+      }
+    }
+  }
+
+d199 1
+a199 18
+      filename = dumpfile_root + ".cfg";
+      filename = glog.path_str + filename; 
+      if (!appendOutput)
+        filename = filename + appendix;
+      ofstream outfile(filename.c_str(),openflag); 
+      if (!outfile) {
+	glog.error("Output::Setup:\n"
+		   "Failed to open "+filename);
+      }
+    }
+  }
+
+  if (Ldumpxcfg) {
+    dumpxcfg_skip = 0;
+    if (node == 0) {
+      std::ios::openmode openflag;
+      openflag = std::ios::trunc;
+      filename = dumpfile_root + ".x.cfg";
+a457 23
+  if (Ldumpalpha) {
+    if (dumpalpha_skip++ % dumpalpha_freq == 0) {
+            
+      double alpha = p->ComputeAlphaType(dumpalpha_type,comm);
+
+      if (node == 0) {
+	string filename(dumpfile_root + ".alf");
+	filename = glog.path_str + filename;
+        ofstream outfile;
+	outfile.open(filename.c_str(),std::ios::app); 
+	if (!outfile) {
+	  glog.error("Output::WriteOutput:\n"
+		     "Failed to open "+filename);
+	}
+	outfile.setf(ios::showpoint);
+	outfile << setprecision(10);
+	outfile << "# Timestep " << timestep << endl;
+	outfile << " " << alpha << endl;
+        outfile.close();
+      }
+    }
+  }
+
+d471 1
+a471 9
+
+  if (Ldumpxcfg) {
+    if (dumpxcfg_skip++ % dumpxcfg_freq == 0) {
+      dumpxcfg_skip = 1;
+      OutputExtendedCfg(timestep,p,t,b,comm);
+    }
+  }
+    
+
+a485 7
+  if (Ldumpref) {
+    if (dumpref_skip++ % dumpref_freq == 0) {
+      dumpref_skip = 1;
+      OutputRefConfig(timestep,p,t,comm);
+    }
+  }
+
+d659 1
+a659 1
+    filename = dumpfile_root + ".cfg";
+a755 166
+void Output::OutputExtendedCfg(const int& timestep, ParticleList* p,
+		       const ParticleTypeList* t, 
+		       const Box* b, Comm* comm) {
+    // Note: particles are not reset within periodic box,
+    // as this would upset neighbor lists
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  int itype;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+  double uc_lva[3],uc_lvb[3],uc_lvc[3];
+  double rtmp[3];
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::OutputExtendedCfg" << endl;
+#endif
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+
+  b->get_lv(uc_lva,uc_lvb,uc_lvc);
+ 
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    filename = dumpfile_root + ".x.cfg";
+    string appendNumber;
+    filename = glog.path_str + filename;
+    if (!appendOutput)
+      filename = filename + toFileNumber(dumpxcfg_iter, appendNumber);
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputExtendedCfg:\n"
+		 "Failed to open "+filename);
+    }
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+    outfile << "Number of particles = " << nparticles_tot << endl;
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "A = 1.0 Angstrom " << endl;
+    outfile << "H0(1,1) = " << uc_lva[0] << " A" << endl;
+    outfile << "H0(1,2) = " << uc_lva[1] << " A" << endl;
+    outfile << "H0(1,3) = " << uc_lva[2] << " A" << endl;
+    outfile << "H0(2,1) = " << uc_lvb[0] << " A" << endl;
+    outfile << "H0(2,2) = " << uc_lvb[1] << " A" << endl;
+    outfile << "H0(2,3) = " << uc_lvb[2] << " A" << endl;
+    outfile << "H0(3,1) = " << uc_lvc[0] << " A" << endl;
+    outfile << "H0(3,2) = " << uc_lvc[1] << " A" << endl;
+    outfile << "H0(3,3) = " << uc_lvc[2] << " A" << endl;
+    outfile << "# " << endl;
+    outfile << "entry_count = 13" << endl;//3 pos,3 vel,3 disp,3 ref,1 energy 
+    outfile << "auxiliary[0] = u_1 A" << endl;
+    outfile << "auxiliary[1] = u_2 A" << endl;
+    outfile << "auxiliary[2] = u_3 A" << endl;
+    outfile << "auxiliary[3] = X_1 A" << endl;
+    outfile << "auxiliary[4] = X_2 A" << endl;
+    outfile << "auxiliary[5] = X_3 A" << endl;
+    outfile << "auxiliary[6] = phi eV"<< endl;
+  }
+
+  //This section of code was translated from f90 LAMMPS 2001
+  //c LAMMPS 2001 - Molecular Dynamics Simulator, Copyright 1998-2001
+  //c Authored by Steve Plimpton
+  //c   (505) 845-7873, sjplimp@@cs.sandia.gov
+  //c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM 87185-1111
+  //c See the README file for more information
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 7
+
+  iperatom = 14;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,comm->get_world());
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_type(); 
+    p_pnt->get_x(rtmp);
+    b->Fractional(rtmp,&buf[j+1]);
+    p_pnt->get_v(rtmp);
+    b->FractionalVelocity(rtmp,&buf[j+4]);
+    p_pnt->get_X(rtmp);
+    b->Fractional(rtmp,&buf[j+10]);
+    buf[j+7] = buf[j+1] - buf[j+10]; // compute displacements in scaled coords
+    buf[j+8] = buf[j+2] - buf[j+11];
+    buf[j+9] = buf[j+3] - buf[j+12];
+    buf[j+13] = p_pnt->get_phi();
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      int curtype = nint(buf[0]);
+      outfile << setw(8) << t->get_type_mass(nint(buf[0])) << endl;
+      outfile << setw(8) << t->get_id(nint(buf[0])) << endl; 
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	itype = nint(buf[j]);
+        if (itype != curtype) {
+	  curtype = itype;
+	  outfile << setw(8) << t->get_type_mass(itype) << endl;
+	  // Need to add a blank to get reasonable spacing
+	  // setw gets ignored if id is single character
+ 	  outfile << setw(8) << " " << t->get_id(itype) << endl;
+	}
+        outfile	<< setw(20) << buf[j+1] 
+		<< setw(20) << buf[j+2] 
+		<< setw(20) << buf[j+3]
+	        << setw(20) << buf[j+4]
+	        << setw(20) << buf[j+5] 
+		<< setw(20) << buf[j+6] 
+		<< setw(20) << buf[j+7]
+	        << setw(20) << buf[j+8]
+                << setw(20) << buf[j+9] 
+		<< setw(20) << buf[j+10] 
+		<< setw(20) << buf[j+11]
+	        << setw(20) << buf[j+12] 
+		<< setw(20) << buf[j+13]
+	        << endl;
+	j+=iperatom;
+      }
+    }  
+  } else {
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputExtenededCfg" << endl;
+#endif
+}
+
+d896 1
+a896 1
+    filename = dumpfile_root + ".frc";
+a977 122
+void Output::OutputRefConfig(const int& timestep, ParticleList* p,
+			     const ParticleTypeList* t, Comm* comm) {
+    // Note: particles are not reset within periodic box,
+    // as this would upset neighbor lists
+  int nparticles,nparticles_tot,nbuf,iperatom,most,j;
+  vector<double> buf;
+  Particle* p_pnt;
+  int node,nprocs,nlocal_tmp,itmp;
+  MPI_Comm world;
+  MPI_Request irequest;
+  MPI_Status istatus;
+  ofstream outfile;
+  string filename;
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Entered Output::OutputParticles" << endl;
+#endif
+
+  node = comm->get_node();
+  world = comm->get_world();
+  nprocs = comm->get_nprocs();
+
+  nparticles = p->get_nparticles();
+  nparticles_tot = p->get_nparticles_tot();
+
+  if (node == 0) {
+    std::ios::openmode openflag;
+    if (appendOutput)
+      openflag = std::ios::app;
+    else
+      openflag = std::ios::trunc;
+    filename = dumpfile_root + ".ref";
+    string appendNumber;
+    filename = glog.path_str + filename;
+    if (!appendOutput) 
+      filename = filename + toFileNumber(dumpref_iter,appendNumber);
+    outfile.open(filename.c_str(),openflag); 
+    if (!outfile) {
+      glog.error("Output::OutputParticles:\n"
+		 "Failed to open "+filename);
+    }
+    outfile.setf(ios::showpoint);
+    outfile << setprecision(10);
+    outfile << "# Timestep " << timestep << endl;
+    outfile << "# " << endl;
+    outfile << "# Number of particles " << nparticles_tot << endl;
+    outfile << "# " << endl;
+    outfile << "# Particle positions " << endl;
+  }
+
+  //This section of code was translated from f90 LAMMPS 2001
+  //c LAMMPS 2001 - Molecular Dynamics Simulator, Copyright 1998-2001
+  //c Authored by Steve Plimpton
+  //c   (505) 845-7873, sjplimp@@cs.sandia.gov
+  //c   Dept 9221, MS 1111, Sandia National Labs, Albuquerque, NM 87185-1111
+  //c See the README file for more information
+
+  // allocate a temporary buffer for the snapshot info
+  // big enough for largest number of atoms on any one proc
+  // iperatom = number of datums per atom = 7
+
+  iperatom = 8;
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,comm->get_world());
+  nbuf = iperatom*most;
+  buf.resize(nbuf);
+
+  j = 0;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    buf[j] = p_pnt->get_tag(); 
+    buf[j+1] = p_pnt->get_type(); 
+    buf[j+2] = p_pnt->get_color(); 
+    buf[j+3] = p_pnt->get_charge(); 
+    p_pnt->get_X(&buf[j+4]);
+    buf[j+7] = p_pnt->get_phi();
+    j+=iperatom;
+  }
+
+  //c node 0 pings each node, receives their buffer, writes to file
+  //c  all other nodes wait for ping, send buffer to node 0
+
+  if (node == 0) {
+
+    for (int inode = 0;inode<nprocs;inode++) {
+      if (inode == 0) {
+	nlocal_tmp = nparticles;
+      } else {
+	MPI_Irecv(&buf[0],nbuf,MPI_DOUBLE,inode,0,world,&irequest);
+        MPI_Send(&itmp,0,MPI_INT,inode,0,world);
+        MPI_Wait(&irequest,&istatus);
+        MPI_Get_count(&istatus,MPI_DOUBLE,&nlocal_tmp);
+	nlocal_tmp = nlocal_tmp/iperatom;
+      }
+
+      j = 0;
+      for (int iparticle=0;iparticle<nlocal_tmp;iparticle++) {
+	outfile << setw(8) << p->get_usertag(nint(buf[j])) 
+	  // Need to add a blank to get reasonable spacing
+	  // setw gets ignored if id is single character
+		<< setw(8) << " " << t->get_id(nint(buf[j+1])) 
+		<< setw(8) << nint(buf[j+2]) 
+		<< setw(20) << buf[j+3] 
+		<< setw(20) << buf[j+4] 
+		<< setw(20) << buf[j+5]
+		<< setw(20) << buf[j+6] 
+		<< setw(20) << buf[j+7] << endl;
+	j+=iperatom;
+      }
+    }  
+  } else {
+    MPI_Recv(&itmp,0,MPI_INT,0,0,world,&istatus);
+    MPI_Rsend(&buf[0],iperatom*nparticles,MPI_DOUBLE,0,0,world);
+  }
+
+  if (node == 0 ) {
+    outfile << "# " << endl;
+    outfile.close(); 
+  }
+#ifdef USE_NODEFILES
+  comm->get_nodefile() << "Exited Output::OutputParticles" << endl;
+#endif
+}
+
+d1035 1
+a1035 1
+  iperatom = 5;
+a1044 1
+    buf[j+4] = p_pnt->get_phi();
+d1069 1
+a1069 2
+            << setw(20) << buf[j+3] 
+	    << setw(20) << buf[j+4] << endl;
+a1250 20
+void Output::input_dump_extended_cfg(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> dumpxcfg_freq;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Output::input_dump_extended_cfg:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << dumpxcfg_freq << endl;
+
+  if (dumpxcfg_freq <= 0) {
+    glog.error("Output::input_dump_extended_cfg:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpxcfg = true;
+}
+
+a1270 20
+void Output::input_dump_ref_config(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> dumpref_freq;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Output::input_dump_refcfg:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << dumpref_freq << endl;
+
+  if (dumpref_freq <= 0) {
+    glog.error("Output::input_dump_displacements:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpref = true;
+}
+
+a1288 20
+}
+
+void Output::input_dump_alpha(const string& buf)
+{
+  stringstream buf_in(buf);
+  buf_in >> dumpalpha_freq >> dumpalpha_str;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Output::input_dump_alpha:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << dumpalpha_freq << " " << dumpalpha_str << endl;
+
+  if (dumpalpha_freq <= 0) {
+    glog.error("Output::input_dump_alpha:\n"
+	       "Invalid input parameter");
+  }
+
+  Ldumpalpha = true;
+@
+
+
+2.14.2.4
+log
+@Committing merge of main trunk onto branch cjkimme_version.
+@
+text
+@d13 1
+a13 1
+//    Timestamp: July 26, 2004
+a28 3
+// The communication scheme for writing particle data is based 
+// on a FORTRAN 90 implementation by Steve Plimpton (LAMMPS 2001).
+//
+a77 8
+  Lrestart = false;
+  density_profile = NULL;
+}
+
+Output::~Output() {
+  if (density_profile != NULL) {
+    delete density_profile;
+  }
+d80 2
+a81 1
+void Output::Setup(const Box* b, const ParticleTypeList* t, Comm* comm) {
+a102 1
+  pfactor = 1.0/constants.pfactor;
+d123 16
+a230 1
+    density_skip = 0;
+a266 5
+
+  if (Lrestart) {
+    restart_skip = 0;
+  }
+
+a288 1
+  double timebarrier;
+d305 2
+a306 3
+  tmplocal[5] = glog.timebarrier;
+  tmplocal[6] = glog.timetotal;
+  MPI_Allreduce(&tmplocal,&tmpsum,7,MPI_DOUBLE,MPI_SUM,comm->get_world());
+d312 1
+a312 2
+  timebarrier = tmpsum[5];
+  timetotal = tmpsum[6];
+d314 1
+a314 1
+    -timeforce-timeneigh-timecomm-timeexchange-timerevcomm-timebarrier;
+a359 6
+    glog.logfile << setw(20) << "Barrier Time";
+    glog.logfile << setw(10) << setprecision(4) << 
+      timebarrier/nprocs;
+    glog.logfile << setw(10) << setprecision(2) << 
+      100.0*timebarrier/timetotal << endl;  
+
+d377 2
+a378 4
+    glog.logfile.setf(ios::left,ios::adjustfield);
+    glog.logfile << setw(20) << "Force Field" << setw(20) << 
+      "Force    (#)" << setw(20) << "Neighbor   (#)" << endl;
+    glog.logfile.setf(ios::right,ios::adjustfield);
+d400 3
+a402 8
+	ftimeforce/nprocs  << " (" << setw(6) << 
+	ff->get_nforce() << ") ";
+      if (ff->get_Lneighbor()) {
+	glog.logfile << setw(10) << setprecision(4) << 
+	  ftimeneigh/nprocs << " (" << setw(6) << 
+	  ff->neighbor->get_ntimeneigh() << ") ";
+      }
+      glog.logfile << endl;
+d411 3
+a413 4
+			 const FixList* fix_list, const double& e_extended,
+			 const bool& Lvolume, const bool& Lnparticles) {
+  double e_potential,v_potential,volume,v_ff;
+  double e_kinetic,v_kinetic,temperature;
+d419 1
+a421 1
+  double pressure;
+a441 1
+      v_kinetic = p->get_kinetic_virial();
+a442 3
+      volume = b->get_volume();
+      v_potential = fflist->get_virial();
+      pressure = (v_potential+v_kinetic)/volume;
+d455 4
+a458 1
+	e_ff = ff->get_energy();
+a487 1
+
+a491 1
+
+d502 1
+a502 1
+	glog.logfile << setw(20) << "Pressure" << "= ";
+d504 1
+a504 3
+	glog.logfile << setw(20) << 
+	  pfactor*pressure << endl;
+
+d506 1
+a506 1
+	glog.logfile << setw(20) << "Temperature" << "= ";
+d508 2
+a509 17
+	glog.logfile << setw(20) << temperature << endl;
+
+	if (Lnparticles) {
+	  glog.logfile.setf(ios::left,ios::adjustfield);
+	  glog.logfile << setw(20) << "Total Particles" << "= ";
+	  glog.logfile.setf(ios::right,ios::adjustfield);
+	  glog.logfile << setw(20) << p->get_nparticles_tot() 
+		       << endl;
+	}
+
+	if (Lvolume) {
+	  glog.logfile.setf(ios::left,ios::adjustfield);
+	  glog.logfile << setw(20) << "Volume" << "= ";
+	  glog.logfile.setf(ios::right,ios::adjustfield);
+	  glog.logfile << setw(20) << volume << endl;
+	}
+
+d541 1
+a541 1
+      OutputParticles(timestep,p,t,comm,Lvolume,Lnparticles,b);
+a595 7
+  if (Lrestart) {
+    if (restart_skip++ % restart_freq == 0) {
+      restart_skip = 1;
+      p->OutputRestart(comm);
+    }
+  }
+  
+d599 1
+a599 3
+			     const ParticleTypeList* t, Comm* comm,
+			     const bool& Lvolume, const bool& Lnparticles,
+			     const Box* b) {
+d642 2
+a643 22
+    if (Lvolume) {
+      double uc_lva[3],uc_lvb[3],uc_lvc[3],uc_origin[3];
+      b->get_lv(uc_lva,uc_lvb,uc_lvc);
+      outfile << "# Unit cell lattice vectors:" << endl;
+      outfile << "# " << uc_lva[0] << " " << uc_lva[1] 
+	      << " " << uc_lva[2] << endl;
+      outfile << "# " << uc_lvb[0] << " " << uc_lvb[1] 
+	      << " " << uc_lvb[2] << endl;
+      outfile << "# " << uc_lvc[0] << " " << uc_lvc[1] 
+	      << " " << uc_lvc[2] << endl;
+      outfile << "# " << endl;
+      b->get_o_user(uc_origin);
+      outfile << "# Unit cell origin:" << endl;
+      outfile << "# " << uc_origin[0] << " " 
+	      << uc_origin[1] << " " 
+	      << uc_origin[2] << endl;
+      outfile << "# " << endl;
+    }
+    if (Lnparticles) {
+      outfile << "# Number of particles " << nparticles_tot << endl;
+      outfile << "# " << endl;
+    }
+d647 7
+d692 1
+a692 1
+	outfile << setw(8) << p->get_usertag(nint(buf[j]))
+d695 1
+a695 1
+	  << setw(8) << " " << t->get_id(nint(buf[j+1])) 
+d782 7
+d1063 7
+d1176 7
+d1490 1
+a1490 1
+  std::istringstream buf_in(buf);
+d1512 1
+a1512 1
+  std::istringstream buf_in(buf);
+d1532 1
+a1532 1
+  std::stringstream buf_in(buf);
+d1547 1
+a1547 1
+  std::stringstream buf_in(buf);
+d1578 1
+a1578 1
+  std::istringstream buf_in(buf);
+d1598 1
+a1598 1
+  std::istringstream buf_in(buf);
+d1618 1
+a1618 1
+  std::istringstream buf_in(buf);
+d1638 1
+a1638 1
+  std::stringstream buf_in(buf);
+d1658 1
+a1658 1
+  std::istringstream buf_in(buf);
+d1678 1
+a1678 1
+  std::stringstream buf_in(buf);
+d1698 1
+a1698 1
+  std::stringstream buf_in(buf);
+d1718 1
+a1718 1
+  std::stringstream buf_in(buf);
+a1749 33
+}
+
+void Output::input_dump_restart(const string& buf)
+{
+  std::istringstream buf_in(buf);
+  buf_in >> restart_freq;
+
+  if (buf_in.fail()) {
+    glog.logfile << endl;
+    glog.error("Output::input_restart:\n"
+	       "Read error in input file");
+  }
+  glog.logfile << " " << restart_freq << endl;
+
+  if (restart_freq <= 0) {
+    glog.error("Output::input_restart:\n"
+	       "Invalid input parameter");
+  }
+  Lrestart = true;
+}
+
+bool Output::Need_Thermo() {
+  bool Ltmp;
+
+  Ltmp = false;
+
+  if (Lthermo) {
+    if (thermo_skip % thermo_freq == 0) {
+      Ltmp = true;
+    }
+  }
+
+  return Ltmp;
+@
+
+
+2.13
+log
+@Added a Perl script to Header.pl to prepend a header contained in
+header.txt to source fiels, using
+
+Header.pl *.pl *.cpp *.h M*[^~]
+@
+text
+@d111 1
+a111 1
+      b->get_o(uc_origin);
+d539 1
+a539 1
+	outfile << setw(8) << nint(buf[j]) 
+d769 1
+a769 1
+	outfile << setw(8) << nint(buf[j]) 
+d873 1
+a873 1
+	outfile << setw(8) << nint(buf[j]) 
+@
+
+
+2.12
+log
+@Gutted the class Input, so that it is now a generic wrapper.
+All the detailed treatment of each command is pushed down into
+the relevant classes.
+@
+text
+@d1 28
+@
+
+
+2.11
+log
+@Removed Thermo class
+@
+text
+@a10 1
+#include "input.h"
+d31 6
+d39 1
+a39 1
+void Output::Setup(const Input* inp, Stepper* stepper, const Box* b,
+d46 7
+a55 1
+  Lthermo = inp->Lthermo;
+a56 1
+    thermo_freq = inp->thermo_freq;
+a59 1
+  Ldump = inp->Ldump;
+a60 1
+    dump_freq = inp->dump_freq;
+a91 1
+  Ldumpvel = inp->Ldumpvel;
+a92 1
+    dumpvel_freq = inp->dumpvel_freq;
+a106 1
+  Ldumpforce = inp->Ldumpforce;
+a107 1
+    dumpforce_freq = inp->dumpforce_freq;
+a121 1
+  Ldensity_profile = inp->Ldensity_profile;
+d123 1
+a123 5
+    density_profile = new Profile;
+    density_freq = inp->density_freq;
+    density_skip = 0;
+    density_profile->SetupBins(inp->density_nbins,
+			       inp->density_iaxis,b,comm);
+a125 1
+  Ldumpcfg = inp->Ldumpcfg;
+a126 1
+    dumpcfg_freq = inp->dumpcfg_freq;
+d879 123
+@
+
+
+2.10
+log
+@Made some changes to the file opening error checking.
+Created a Makefile specially for Cplant
+@
+text
+@d27 1
+d285 1
+a285 1
+			 const double& e_extended) {
+d340 1
+a340 1
+	    glog.logfile <<  setw(20) << e_ff[0] << " kJ/mol" << endl;
+d351 1
+a351 1
+	      glog.logfile <<  setw(20) << e_ff[ipiece] << " kJ/mol" << endl;
+d361 1
+a361 1
+	glog.logfile << setw(20) << e_potential << " kJ/mol" << endl;
+d365 1
+a365 1
+	glog.logfile << setw(20) << e_kinetic << " kJ/mol" << endl;
+d369 1
+a369 1
+	glog.logfile << setw(20) << e_extended << " kJ/mol" << endl;
+d374 1
+a374 1
+	  e_potential+e_kinetic+e_extended << " kJ/mol" << endl;
+d378 1
+a378 1
+	glog.logfile << setw(20) << temperature << " K" << endl;
+d385 1
+@
+
+
+2.9
+log
+@Cleaned up various things, especially treatment of constants
+and input strings.
+@
+text
+@d189 2
+@
+
+
+2.8
+log
+@Fized up the output a little mor.
+Standardized the method for treating enum option lists
+Created the Constants class
+@
+text
+@d7 1
+d14 2
+d125 17
+d167 1
+a167 1
+  int nparticles;
+d179 1
+a179 1
+  MPI_Allreduce(&tmplocal,&tmpsum,7,MPI_DOUBLE,MPI_SUM,comm->get_world());
+d189 1
+a189 1
+  nparticles = p->get_nparticles();
+d193 1
+a193 1
+      " processors for " << nparticles << " particles" << endl;
+d281 2
+a282 1
+			 const ForceFieldList* fflist) {
+d364 4
+d371 1
+a371 1
+	  e_potential+e_kinetic << " kJ/mol" << endl;
+d376 5
+d392 7
+d444 1
+a444 2
+  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,
+		MPI_SUM,world);
+d532 124
+@
+
+
+2.7
+log
+@Fixed up the output log immensely.  Fixed some bugs in the
+rescale thermostat.
+@
+text
+@d17 1
+a19 1
+#include "neighbor.h"
+d25 1
+d37 2
+a38 13
+  switch(inp->units_style) {
+  case (real_units):
+    vfactor = 1.0/tfactor_real;
+    ffactor = 1.0;
+    break;
+  case (reduced_units):
+    vfactor = 1.0/tfactor_reduced;
+    ffactor = 1.0;
+    break;
+  default:
+    glog.error("Output::Setup:\n"
+	       "Invalid units_style");
+  }
+a148 1
+  MPI_Comm world;
+a151 1
+  world = comm->get_world();
+d159 1
+a159 1
+  MPI_Allreduce(&tmplocal,&tmpsum,7,MPI_DOUBLE,MPI_SUM,world);
+d238 6
+a243 2
+    ftmplocal[1] = ff->neighbor->get_timeneigh();
+    MPI_Allreduce(&ftmplocal,&ftmpsum,2,MPI_DOUBLE,MPI_SUM,world);
+d262 1
+a262 1
+  double tmp,e_potential,e_ff;
+a267 1
+  MPI_Comm world;
+d269 5
+a273 1
+  
+a274 1
+  world = comm->get_world();
+d304 1
+d306 3
+a308 2
+	MPI_Allreduce(&tmp,&e_ff,1,MPI_DOUBLE,MPI_SUM,world);
+	e_potential+=e_ff;
+d310 20
+a329 5
+	  str_tmp = ff->get_label();
+	  if (str_tmp.size() < 20) str_tmp.append(20-str_tmp.size(),' ');
+	  glog.logfile << setw(20) << str_tmp << setw(2) << "= "; 
+	  glog.logfile.setf(ios::right,ios::adjustfield);
+	  glog.logfile <<  setw(15) << e_ff << " kJ/mol" << endl;
+d337 1
+a337 1
+	glog.logfile << setw(15) << e_potential << " kJ/mol" << endl;
+d341 1
+a341 1
+	glog.logfile << setw(15) << e_kinetic << " kJ/mol" << endl;
+d345 1
+a345 1
+	glog.logfile << setw(15) << 
+d350 1
+a350 1
+	glog.logfile << setw(15) << temperature << " K" << endl;
+d407 2
+a408 1
+  MPI_Allreduce(&nparticles,&nparticles_tot,1,MPI_INT,MPI_SUM,world);
+d441 1
+a441 1
+  MPI_Allreduce(&nparticles,&most,1,MPI_INT,MPI_MAX,world);
+@
+
+
+2.6
+log
+@Redoing temperature functions. Not finished yet.
+@
+text
+@a692 65
+/*
+void Output::OutputThermo() 
+{
+  ComputeTemperature();
+  switch(units_style) {
+  case real_units:
+    glog.logfile << endl;
+    glog.logfile << setprecision(10) << "Temperature [K] = " << temp_current << endl;
+    glog.logfile << setprecision(10) << "Kinetic Energy [kJ/mol/particle] = " << 
+      e_kinetic/nparticles << endl;
+    glog.logfile << setprecision(10) << "Potential Energy [kJ/mol/particle] = " << 
+      e_potential/nparticles <<  endl;
+    glog.logfile << setprecision(10) << "Total Energy [kJ/mol/particle] = " << 
+      (e_potential+e_kinetic)/nparticles << endl;
+    glog.logfile << setprecision(6);
+    if (Linit) {
+      e_potential_init = e_potential;
+      e_kinetic_init = e_kinetic;
+    } else {
+      glog.logfile << "Change in Kinetic Energy [kJ/mol/particle] = " << 
+	(e_kinetic-e_kinetic_init)/nparticles << endl;
+      glog.logfile << "Change in Potential Energy [kJ/mol/particle] = " << 
+	(e_potential-e_potential_init)/nparticles << endl;
+      glog.logfile << "Change in Total Energy [kJ/mol/particle] = " << 
+	((e_potential-e_potential_init) + 
+	 (e_kinetic-e_kinetic_init))/nparticles << endl;
+      glog.logfile << "Error in Total Energy [%] = " << 
+	100.0*((e_potential-e_potential_init) + 
+	       (e_kinetic-e_kinetic_init))/e_kinetic << endl;
+    }
+    break;
+  case reduced_units:
+    glog.logfile << endl;
+    glog.logfile << setprecision(10) << "Temperature [epsilon] = " << temp_current << endl;
+    glog.logfile << setprecision(10) << "Kinetic Energy [epsilon] = " << 
+      e_kinetic/nparticles << endl;
+    glog.logfile << setprecision(10) << "Potential Energy [epsilon] = " << 
+      e_potential/nparticles <<  endl;
+    glog.logfile << setprecision(10) << "Total Energy [epsilon] = " << 
+      (e_potential+e_kinetic)/nparticles << endl;
+    glog.logfile << setprecision(6);
+    if (Linit) {
+      e_potential_init = e_potential;
+      e_kinetic_init = e_kinetic;
+    } else {
+      glog.logfile << "Change in Kinetic Energy [epsilon] = " << 
+	(e_kinetic-e_kinetic_init)/nparticles << endl;
+      glog.logfile << "Change in Potential Energy [epsilon] = " << 
+	(e_potential-e_potential_init)/nparticles << endl;
+      glog.logfile << "Change in Total Energy [epsilon] = " << 
+	((e_potential-e_potential_init) + 
+	 (e_kinetic-e_kinetic_init))/nparticles << endl;
+      glog.logfile << "Error in Total Energy [%] = " << 
+	100.0*((e_potential-e_potential_init) + 
+	       (e_kinetic-e_kinetic_init))/e_kinetic << endl;
+    }
+    break;
+  default:
+    glog.error("Output::OutputThermo:\n"
+		 "Invalid units style");
+  }
+}
+*/
+
+
+@
+
+
+2.5
+log
+@Reworked a lot of the output to make it cleaner and more consistent.
+Improved the timers.
+@
+text
+@d271 1
+a278 1
+
+d286 1
+d295 4
+d301 1
+a301 1
+      glog.logfile << setprecision(4);
+a321 1
+      glog.logfile.setf(ios::left,ios::adjustfield);
+d323 9
+d334 6
+a339 1
+	glog.logfile << setw(15) << e_potential << " kJ/mol" << endl;
+@
+
+
+2.4
+log
+@Fixed a couple more bugs to get neighbor binning working.
+No more known round-off problems exist.
+@
+text
+@d17 3
+d50 6
+d71 1
+a71 1
+      double x_tmp[3],uc_lva[3],uc_lvb[3],uc_lvc[3],uc_origin[3];
+a94 1
+      double v_tmp[3];
+d134 2
+a135 1
+void Output::Finish(Comm* comm) {
+d137 3
+d145 121
+d268 5
+a272 1
+			 Comm* comm, const float& telapse) {
+d274 4
+d280 36
+d317 7
+a323 2
+  if (node == 0) {
+    glog.logfile << "Elapse Time is " << telapse << endl;
+@
+
+
+2.3
+log
+@This version does not work.  It contains the beginnings of the
+neighbor binning scheme. I want to save it before I attempt
+to combine local and ghost atoms in one list.
+@
+text
+@d29 1
+d54 3
+a56 1
+      ofstream outfile("config.out",openflag); 
+d59 1
+a59 1
+		   "Failed to open config.out");
+d89 3
+a91 1
+      ofstream outfile("vel.out",openflag); 
+d94 1
+a94 1
+		   "Failed to open vel.out");
+d106 3
+a108 1
+      ofstream outfile("force.out",openflag); 
+d111 1
+a111 1
+		   "Failed to open force.out");
+d187 1
+d201 3
+a203 1
+    outfile.open("config.out",openflag); 
+d206 1
+a206 1
+		 "Failed to open config.out");
+d296 1
+d310 3
+a312 1
+    outfile.open("vel.out",openflag); 
+d314 2
+a315 2
+      glog.error("Output::OutputVelocities:\n"
+		 "Failed to open vel.out");
+d400 1
+d414 3
+a416 1
+    outfile.open("force.out",openflag); 
+d418 2
+a419 2
+      glog.error("Output::OutputForces:\n"
+		 "Failed to open force.out");
+@
+
+
+2.2
+log
+@Improved treament of log and error messages using new class Log.
+Added minimization class Minimizer (currently only steepest descent).
+Implemented Nsq neighboring for threebody forcefields.
+Reinstated density profiles.
+@
+text
+@d128 8
+a135 1
+			 Comm* comm) {
+@
+
+
+2.1
+log
+@This is a lot of stuff.  Basically, the code is now parallel,
+but it is only tested for the force field twobody_lj_cut.
+
+The parallelization scheme is based on Steve Plimptons Comm class.
+@
+text
+@a7 1
+extern ofstream logfile;
+d18 1
+d20 2
+d42 2
+a43 2
+    logfile << "Error: invalid units_style" << endl;
+    exit(0);
+d55 2
+a56 2
+	logfile << "Failed to open config.out" << endl;
+	exit(0);
+d88 2
+a89 2
+	logfile << "Failed to open vel.out" << endl;
+	exit(0);
+d103 2
+a104 2
+	logfile << "Failed to open force.out" << endl;
+	exit(0);
+d108 9
+d121 3
+d151 8
+d188 2
+a189 2
+      logfile << "Failed to open config.out" << endl;
+      exit(0);
+d294 2
+a295 2
+      logfile << "Failed to open vel.out" << endl;
+      exit(0);
+d395 2
+a396 2
+      logfile << "Failed to open force.out" << endl;
+      exit(0);
+d469 1
+d471 1
+a471 34
+void Output::OutputForces(const int& timestep, ParticleList* p,
+			  Comm* comm) {
+  double f_tmp[3];
+  int nparticles;
+  Particle* p_pnt;
+
+  std::ios::openmode openflag;
+  openflag = std::ios::app;
+  ofstream outfile("force.out",openflag); 
+  if (!outfile) {
+    logfile << "Failed to open force.out" << endl;
+    exit(0);
+  }
+  outfile.setf(ios::showpoint);
+  outfile << setprecision(10);
+  outfile << "# Timestep " << timestep << endl;
+  outfile << "# " << endl;
+  nparticles = p->get_nparticles();
+  outfile << "# Number of particles " << nparticles << endl;
+  outfile << "# " << endl;
+  outfile << "# Particle forces " << endl;
+  for (int iparticle=0;iparticle<nparticles;iparticle++) {
+    p_pnt = p->get_particle(iparticle);
+    p_pnt->get_f(f_tmp);
+
+    outfile << setw(8) << p_pnt->get_tag() 
+	    << setw(20) << f_tmp[0]*ffactor 
+            << setw(20) << f_tmp[1]*ffactor
+            << setw(20) << f_tmp[2]*ffactor << endl;
+  }
+  outfile << "# " << endl;
+}
+*/
+/*void Output::OutputThermo() 
+d476 3
+a478 3
+    logfile << endl;
+    logfile << setprecision(10) << "Temperature [K] = " << temp_current << endl;
+    logfile << setprecision(10) << "Kinetic Energy [kJ/mol/particle] = " << 
+d480 1
+a480 1
+    logfile << setprecision(10) << "Potential Energy [kJ/mol/particle] = " << 
+d482 1
+a482 1
+    logfile << setprecision(10) << "Total Energy [kJ/mol/particle] = " << 
+d484 1
+a484 1
+    logfile << setprecision(6);
+d489 1
+a489 1
+      logfile << "Change in Kinetic Energy [kJ/mol/particle] = " << 
+d491 1
+a491 1
+      logfile << "Change in Potential Energy [kJ/mol/particle] = " << 
+d493 1
+a493 1
+      logfile << "Change in Total Energy [kJ/mol/particle] = " << 
+d496 1
+a496 1
+      logfile << "Error in Total Energy [%] = " << 
+d502 3
+a504 3
+    logfile << endl;
+    logfile << setprecision(10) << "Temperature [epsilon] = " << temp_current << endl;
+    logfile << setprecision(10) << "Kinetic Energy [epsilon] = " << 
+d506 1
+a506 1
+    logfile << setprecision(10) << "Potential Energy [epsilon] = " << 
+d508 1
+a508 1
+    logfile << setprecision(10) << "Total Energy [epsilon] = " << 
+d510 1
+a510 1
+    logfile << setprecision(6);
+d515 1
+a515 1
+      logfile << "Change in Kinetic Energy [epsilon] = " << 
+d517 1
+a517 1
+      logfile << "Change in Potential Energy [epsilon] = " << 
+d519 1
+a519 1
+      logfile << "Change in Total Energy [epsilon] = " << 
+d522 1
+a522 1
+      logfile << "Error in Total Energy [%] = " << 
+d528 2
+a529 2
+    logfile << "Error: invalid units style" << endl;
+    exit(0);
+@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@d8 2
+d17 1
+d19 1
+d24 5
+a28 1
+void Output::Setup(const Input* inp, Stepper* stepper, const Box* b) {
+d33 1
+d37 1
+d40 1
+a40 1
+    cout << "Error: invalid units_style" << endl;
+a45 1
+    double x_tmp[3],uc_lva[3],uc_lvb[3],uc_lvc[3],uc_origin[3];
+d48 25
+a72 6
+    std::ios::openmode openflag;
+    openflag = std::ios::trunc;
+    ofstream outfile("config.out",openflag); 
+    if (!outfile) {
+      cout << "Failed to open config.out" << endl;
+      exit(0);
+a73 15
+    b->get_lv(uc_lva,uc_lvb,uc_lvc);
+    outfile << "# Unit cell lattice vectors:" << endl;
+    outfile << "# " << uc_lva[0] << " " << uc_lva[1] 
+	    << " " << uc_lva[2] << endl;
+    outfile << "# " << uc_lvb[0] << " " << uc_lvb[1] 
+	    << " " << uc_lvb[2] << endl;
+    outfile << "# " << uc_lvc[0] << " " << uc_lvc[1] 
+	    << " " << uc_lvc[2] << endl;
+    outfile << "# " << endl;
+    b->get_o(uc_origin);
+    outfile << "# Unit cell origin:" << endl;
+    outfile << "# " << uc_origin[0] << " " 
+	    << uc_origin[1] << " " 
+	    << uc_origin[2] << endl;
+    outfile << "# " << endl;
+a77 1
+    double v_tmp[3];
+d80 24
+a103 6
+    std::ios::openmode openflag;
+    openflag = std::ios::trunc;
+    ofstream outfile("vel.out",openflag); 
+    if (!outfile) {
+      cout << "Failed to open vel.out" << endl;
+      exit(0);
+d108 2
+a109 1
+void Output::Finish() {
+d113 3
+a115 1
+			 const Box* b) {
+d119 1
+a119 1
+      OutputParticles(timestep,p);
+d122 1
+d126 8
+a133 1
+      OutputVelocities(timestep,p);
+d136 1
+d139 2
+a140 1
+void Output::OutputParticles(const int& timestep, ParticleList* p) {
+d143 2
+a144 2
+  double x_tmp[3];
+  int nparticles;
+d146 47
+d194 49
+a242 6
+  std::ios::openmode openflag;
+  openflag = std::ios::app;
+  ofstream outfile("config.out",openflag); 
+  if (!outfile) {
+    cout << "Failed to open config.out" << endl;
+    exit(0);
+d244 20
+a263 4
+  outfile.setf(ios::showpoint);
+  outfile << setprecision(10);
+  outfile << "# Timestep " << timestep << endl;
+  outfile << "# " << endl;
+d265 36
+a300 3
+  outfile << "# Number of particles " << nparticles << endl;
+  outfile << "# " << endl;
+  outfile << "# Particle positions " << endl;
+d303 40
+a342 10
+    p_pnt->get_x(x_tmp);
+    outfile << setw(8) << p_pnt->get_tag() 
+      // Need to add a blank to get reasonable spacing
+      // setw gets ignored if id is single character
+            << setw(8) << " " << p_pnt->get_id() 
+            << setw(8) << p_pnt->get_color() 
+            << setw(20) << p_pnt->get_charge() 
+	    << setw(20) << x_tmp[0] 
+            << setw(20) << x_tmp[1]
+            << setw(20) << x_tmp[2] << endl;
+d344 1
+a344 1
+  outfile << "# " << endl;
+d347 104
+a450 2
+void Output::OutputVelocities(const int& timestep, ParticleList* p) {
+  double v_tmp[3];
+d456 1
+a456 1
+  ofstream outfile("vel.out",openflag); 
+d458 1
+a458 1
+    cout << "Failed to open vel.out" << endl;
+d468 1
+a468 1
+  outfile << "# Particle velocities " << endl;
+d471 1
+a471 1
+    p_pnt->get_v(v_tmp);
+d474 3
+a476 3
+	    << setw(20) << v_tmp[0]*vfactor 
+            << setw(20) << v_tmp[1]*vfactor
+            << setw(20) << v_tmp[2]*vfactor << endl;
+d480 2
+a481 3
+
+/*
+void Output::OutputThermo() 
+d486 3
+a488 3
+    cout << endl;
+    cout << setprecision(10) << "Temperature [K] = " << temp_current << endl;
+    cout << setprecision(10) << "Kinetic Energy [kJ/mol/particle] = " << 
+d490 1
+a490 1
+    cout << setprecision(10) << "Potential Energy [kJ/mol/particle] = " << 
+d492 1
+a492 1
+    cout << setprecision(10) << "Total Energy [kJ/mol/particle] = " << 
+d494 1
+a494 1
+    cout << setprecision(6);
+d499 1
+a499 1
+      cout << "Change in Kinetic Energy [kJ/mol/particle] = " << 
+d501 1
+a501 1
+      cout << "Change in Potential Energy [kJ/mol/particle] = " << 
+d503 1
+a503 1
+      cout << "Change in Total Energy [kJ/mol/particle] = " << 
+d506 1
+a506 1
+      cout << "Error in Total Energy [%] = " << 
+d512 3
+a514 3
+    cout << endl;
+    cout << setprecision(10) << "Temperature [epsilon] = " << temp_current << endl;
+    cout << setprecision(10) << "Kinetic Energy [epsilon] = " << 
+d516 1
+a516 1
+    cout << setprecision(10) << "Potential Energy [epsilon] = " << 
+d518 1
+a518 1
+    cout << setprecision(10) << "Total Energy [epsilon] = " << 
+d520 1
+a520 1
+    cout << setprecision(6);
+d525 1
+a525 1
+      cout << "Change in Kinetic Energy [epsilon] = " << 
+d527 1
+a527 1
+      cout << "Change in Potential Energy [epsilon] = " << 
+d529 1
+a529 1
+      cout << "Change in Total Energy [epsilon] = " << 
+d532 1
+a532 1
+      cout << "Error in Total Energy [%] = " << 
+d538 1
+a538 1
+    cout << "Error: invalid units style" << endl;
+d544 14
+@
+
